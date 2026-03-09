@@ -37,33 +37,10 @@ import { CTAButton } from "@/components/ui/CTAButton";
 import { TechBadge } from "@/components/ui/TechBadge";
 import { CTASection } from "@/components/sections/CTASection";
 
-// Icon registry — add any icon used in capabilities here
 const ICON_MAP: Record<string, React.ElementType> = {
-  Brain,
-  Mic,
-  Search,
-  Shield,
-  Code,
-  FileSearch,
-  Server,
-  Zap,
-  Package,
-  Lock,
-  RefreshCw,
-  Database,
-  Layers,
-  Layout,
-  GitBranch,
-  Network,
-  BarChart2,
-  Cpu,
-  Cloud,
-  Activity,
-  ScanSearch,
-  Link2,
-  TrendingUp,
-  GitMerge,
-  BrainCircuit,
+  Brain, Mic, Search, Shield, Code, FileSearch, Server, Zap, Package, Lock,
+  RefreshCw, Database, Layers, Layout, GitBranch, Network, BarChart2, Cpu,
+  Cloud, Activity, ScanSearch, Link2, TrendingUp, GitMerge, BrainCircuit,
 };
 
 export interface Capability {
@@ -94,10 +71,7 @@ function FAQAccordion({ items }: { items: FAQ[] }) {
   return (
     <div className="space-y-3">
       {items.map((item, i) => (
-        <div
-          key={i}
-          className="bg-[#161B22] border border-[#30363D] rounded-xl overflow-hidden"
-        >
+        <div key={i} className="bg-[#161B22] border border-[#30363D] rounded-xl overflow-hidden">
           <button
             onClick={() => setOpen(open === i ? null : i)}
             className="w-full flex items-center justify-between px-5 py-4 text-left text-[#E6EDF3] font-dm font-medium text-sm hover:text-[#00B4D8] transition-colors"
@@ -121,7 +95,7 @@ function FAQAccordion({ items }: { items: FAQ[] }) {
 }
 
 export function ServicePageLayout({
-  eyebrow = "Servizi",
+  eyebrow = "Services",
   title,
   intro,
   tech,
@@ -164,11 +138,7 @@ export function ServicePageLayout({
                 <TechBadge key={t} label={t} />
               ))}
             </div>
-            <CTAButton
-              label="Parliamo del tuo progetto →"
-              href="/contact"
-              variant="primary"
-            />
+            <CTAButton label="Let's discuss your project →" href="/contact" variant="primary" />
           </motion.div>
         </div>
       </section>
@@ -177,7 +147,7 @@ export function ServicePageLayout({
       <section className="py-20 md:py-28 bg-[#161B22]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <SectionHeader eyebrow="Capabilities" title="Cosa costruiamo" />
+            <SectionHeader eyebrow="Capabilities" title="What we build" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((cap, i) => {
@@ -195,9 +165,7 @@ export function ServicePageLayout({
                     <div className="w-10 h-10 rounded-lg bg-[rgba(0,180,216,0.08)] border border-[rgba(0,180,216,0.2)] flex items-center justify-center flex-shrink-0">
                       <IconComponent size={20} className="text-[#00B4D8]" />
                     </div>
-                    <h3 className="font-dm font-semibold text-[#E6EDF3] text-sm">
-                      {cap.name}
-                    </h3>
+                    <h3 className="font-dm font-semibold text-[#E6EDF3] text-sm">{cap.name}</h3>
                   </div>
                   <p className="text-[#7D8FA3] text-sm leading-relaxed">{cap.desc}</p>
                 </motion.div>
@@ -211,7 +179,7 @@ export function ServicePageLayout({
       <section className="py-20 md:py-28 bg-[#0D1117]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <SectionHeader eyebrow="FAQ" title="Domande frequenti" />
+            <SectionHeader eyebrow="FAQ" title="Frequently asked questions" />
           </div>
           <div className="max-w-3xl">
             <FAQAccordion items={faqs} />
