@@ -38,8 +38,7 @@ export function Hero() {
             animate="visible"
             className="font-syne text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#E6EDF3] leading-[1.05] tracking-tight mb-6"
           >
-            Where AI meets
-            <br />
+            Where AI meets <br />
             <span className="text-[#00B4D8] glow-cyan-text">Enterprise</span>
             <br />
             Architecture
@@ -53,8 +52,8 @@ export function Hero() {
             animate="visible"
             className="text-[#7D8FA3] text-lg md:text-xl max-w-2xl leading-relaxed mb-10"
           >
-            Progettiamo infrastrutture AI-ready, piattaforme dati e sistemi
-            multi-agente per aziende che non possono permettersi l&apos;ordinario.
+            We design AI-ready infrastructure, data platforms, and multi-agent systems
+            for organisations that cannot afford to get it wrong.
           </motion.p>
 
           {/* CTAs */}
@@ -66,7 +65,7 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <CTAButton label="Nexus MDS Core →" href="/platform" variant="primary" />
-            <CTAButton label="Vedi i servizi" href="/#services" variant="secondary" />
+            <CTAButton label="View services" href="/#services" variant="secondary" />
           </motion.div>
         </div>
       </div>
