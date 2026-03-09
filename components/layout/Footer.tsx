@@ -130,10 +130,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-[#30363D] flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[#7D8FA3] text-xs font-mono">
+          <p className="text-[#7D8FA3] text-[10px] sm:text-xs font-mono text-center sm:text-left">
             © {new Date().getFullYear()} Dynamics Consulting — Corrado Patierno — P.IVA 10651160961
           </p>
-          <p className="text-[#7D8FA3] text-xs font-mono">
+          <p className="text-[#7D8FA3] text-[10px] sm:text-xs font-mono text-center sm:text-right">
             Milano, Italy · GDPR Compliant · AI Act Ready · EU Data Residency
           </p>
         </div>

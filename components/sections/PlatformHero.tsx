@@ -19,7 +19,7 @@ export function PlatformHero() {
               PROPRIETARY PLATFORM
             </p>
           </div>
-          <h1 className="font-syne text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#E6EDF3] leading-[1.05] tracking-tight mb-6">
+          <h1 className="font-syne text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#E6EDF3] leading-[1.05] tracking-tight mb-6">
             Nexus MDS Core
           </h1>
           <p className="text-[#7D8FA3] text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">

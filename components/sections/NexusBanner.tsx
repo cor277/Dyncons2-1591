@@ -25,7 +25,7 @@ export function NexusBanner() {
                   PROPRIETARY PRODUCT
                 </span>
               </div>
-              <h2 className="font-syne text-3xl md:text-4xl font-extrabold text-[#E6EDF3] mb-4">
+              <h2 className="font-syne text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#E6EDF3] mb-4">
                 Nexus MDS Core
               </h2>
               <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-6">

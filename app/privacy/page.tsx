@@ -87,7 +87,7 @@ export default function PrivacyPage() {
 
           <h3>2.4 Cookies and local storage</h3>
           <p>We use the following client-side storage:</p>
-          <table>
+          <div className="overflow-x-auto -mx-2 px-2"><table>
             <thead>
               <tr>
                 <th>Name</th>
@@ -107,7 +107,7 @@ export default function PrivacyPage() {
                 <td>Until cleared by you or policy version update</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
           <p>
             We do not use tracking cookies, advertising cookies, or third-party
             profiling cookies.
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
 
           {/* ── 3. LEGAL BASIS ──────────────────────────────────── */}
           <h2>3. Legal basis for processing</h2>
-          <table>
+          <div className="overflow-x-auto -mx-2 px-2"><table>
             <thead>
               <tr>
                 <th>Processing activity</th>
@@ -150,7 +150,7 @@ export default function PrivacyPage() {
                 </td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
 
           {/* ── 4. CONSENT MECHANISM ──────────────────────────── */}
           <h2>4. Consent mechanism and records</h2>
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
 
           {/* ── 5. DATA RETENTION ──────────────────────────────── */}
           <h2>5. Data retention</h2>
-          <table>
+          <div className="overflow-x-auto -mx-2 px-2"><table>
             <thead>
               <tr>
                 <th>Data category</th>
@@ -227,7 +227,7 @@ export default function PrivacyPage() {
                 </td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
 
           {/* ── 6. DATA SHARING & PROCESSORS ───────────────────── */}
           <h2>6. Data sharing and sub-processors</h2>
@@ -236,7 +236,7 @@ export default function PrivacyPage() {
             only with the following categories of processors, all bound by Data
             Processing Agreements (DPAs):
           </p>
-          <table>
+          <div className="overflow-x-auto -mx-2 px-2"><table>
             <thead>
               <tr>
                 <th>Processor category</th>
@@ -261,7 +261,7 @@ export default function PrivacyPage() {
                 <td>USA (see Section 7)</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
 
           {/* ── 7. INTERNATIONAL TRANSFERS ──────────────────────── */}
           <h2>7. International data transfers</h2>

@@ -24,7 +24,7 @@ export function CTASection({
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-syne text-4xl md:text-5xl font-extrabold text-[#E6EDF3] mb-6">
+          <h2 className="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#E6EDF3] mb-6">
             {title}
           </h2>
           <p className="text-[#7D8FA3] text-lg max-w-xl mx-auto mb-10 leading-relaxed">

@@ -19,7 +19,7 @@ export function SectionHeader({
         </p>
       )}
       <h2
-        className="font-syne text-3xl md:text-4xl lg:text-5xl font-bold text-[#E6EDF3] leading-[1.1] tracking-tight"
+        className="font-syne text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#E6EDF3] leading-[1.1] tracking-tight"
       >
         {title}
       </h2>

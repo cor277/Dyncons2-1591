@@ -25,7 +25,7 @@ export function Hero() {
             className="flex items-center gap-2 mb-6"
           >
             <span className="live-dot" />
-            <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase">
+            <p className="text-[#00B4D8] text-[10px] sm:text-xs font-mono font-medium tracking-[0.1em] sm:tracking-[0.15em] uppercase">
               AI SOLUTION ARCHITECT · ENTERPRISE INFRASTRUCTURE
             </p>
           </motion.div>
@@ -36,7 +36,7 @@ export function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="font-syne text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#E6EDF3] leading-[1.05] tracking-tight mb-6"
+            className="font-syne text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#E6EDF3] leading-[1.05] tracking-tight mb-6"
           >
             Where AI meets <br />
             <span className="text-[#00B4D8] glow-cyan-text">Enterprise</span>

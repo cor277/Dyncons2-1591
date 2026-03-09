@@ -23,6 +23,7 @@
 html {
   scroll-behavior: smooth;
   background-color: #0D1117;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
   color: #E6EDF3;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ─── Constellation hero background ─────────────────────── */
