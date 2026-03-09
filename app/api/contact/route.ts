@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: "Dynamics Consulting Website <onboarding@resend.dev>",
+      from: "Dynamics Consulting Website <noreply@dynamicsconsulting.it>",
       to: ["info@dynamicsconsulting.it"],
       reply_to: email,
       subject: `New contact from ${name}${company ? ` (${company})` : ""}`,
