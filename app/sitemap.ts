@@ -1,10 +1,9 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://dynamicsconsulting.it";
+const BASE_URL = "https://www.dynamicsconsulting.it";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-
   const staticRoutes = [
     { url: `${BASE_URL}/`, priority: 1.0, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/platform`, priority: 0.9, changeFrequency: "monthly" as const },
@@ -24,7 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/contact`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/privacy`, priority: 0.3, changeFrequency: "yearly" as const },
   ];
-
   return staticRoutes.map((route) => ({
     url: route.url,
     lastModified: now,
