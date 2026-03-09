@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services/automation`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/services/blockchain`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/case-studies`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/case-studies/eldy`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/case-studies/humania-care`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/case-studies/federfarma`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/case-studies/dynamics-data`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/about`, priority: 0.7, changeFrequency: "monthly" as const },
