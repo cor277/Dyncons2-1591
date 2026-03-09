@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://dynamicsconsulting.it/sitemap.xml",
-    host: "https://dynamicsconsulting.it",
+    sitemap: "https://www.dynamicsconsulting.it/sitemap.xml",
+    host: "https://www.dynamicsconsulting.it",
   };
 }
