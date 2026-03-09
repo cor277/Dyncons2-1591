@@ -8,9 +8,16 @@ const nextConfig = {
     remotePatterns: [],
   },
 
-  // Silence the "use client" + server component warning for library code
-  experimental: {
-    // serverComponentsExternalPackages: [],
+  // Redirect non-www to www for canonical SEO
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "dynamicsconsulting.it" }],
+        destination: "https://www.dynamicsconsulting.it/:path*",
+        permanent: true,
+      },
+    ];
   },
 
   // Ensure trailing-slash consistency
