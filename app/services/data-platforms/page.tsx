@@ -2,23 +2,13 @@ import type { Metadata } from "next";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Modern Data Platforms & RAG Architecture",
-  description:
-    "Data lakehouse con Apache Iceberg, virtualizzazione dati Dremio e Teiid, RAG pipeline su Weaviate. Integrazione Dynamics 365 event-driven con Azure Event Grid.",
-  keywords: [
-    "data lakehouse",
-    "Apache Iceberg",
-    "Dremio data virtualization",
-    "Weaviate RAG",
-    "Dynamics 365 data modernization",
-    "Zero-ETL",
-  ],
-  alternates: {
-    canonical: "https://www.dynamicsconsulting.it/services/data-platforms",
-  },
+  title: "Modern Data Platforms & RAG Architecture | Dynamics Consulting",
+  description: "Data lakehouse with Apache Iceberg, Dremio data virtualisation, and Weaviate RAG pipelines. Event-driven Dynamics 365 integration. Zero-ETL for regulated industries.",
+  keywords: ["data lakehouse", "Apache Iceberg", "Dremio data virtualization", "Weaviate RAG", "Dynamics 365 data modernization", "Zero-ETL"],
+  alternates: { canonical: "https://www.dynamicsconsulting.it/services/data-platforms" },
   openGraph: {
     title: "Modern Data Platforms & RAG | Dynamics Consulting",
-    description: "Data lakehouse ACID, Zero-ETL, RAG pipeline production-ready.",
+    description: "ACID data lakehouse, Zero-ETL, production-ready RAG pipelines.",
   },
 };
 
@@ -28,18 +18,18 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Cos'è l'approccio Zero-ETL e quando conviene?",
+      name: "What is Zero-ETL and when does it make sense?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Zero-ETL significa interrogare i dati direttamente alla fonte tramite data virtualization (Dremio, Teiid) invece di copiarli in un warehouse. Conviene quando i dati cambiano frequentemente, lo storage è costoso o la latenza di replica è inaccettabile. Non è adatto per analytics pesanti su volumi enormi.",
+        text: "Zero-ETL means querying data directly at the source via data virtualisation (Dremio, Teiid) instead of copying it into a warehouse. It makes sense when data changes frequently, storage is costly, or replication latency is unacceptable. It is not suitable for heavy analytics on very large volumes.",
       },
     },
     {
       "@type": "Question",
-      name: "Come si esporta Dynamics 365 F&O verso un data lake moderno?",
+      name: "How do you export Dynamics 365 F&O to a modern data lake?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Il percorso consigliato è: Synapse Link per l'export incrementale da D365 F&O → pipeline n8n o Azure Data Factory per trasformazione → Apache Iceberg come formato di storage con ACID transactions. Questo permette analytics real-time senza impattare le performance dell'ERP.",
+        text: "The recommended path is: Synapse Link for incremental export from D365 F&O, then an n8n or Azure Data Factory pipeline for transformation, then Apache Iceberg as the storage format with ACID transactions. This enables real-time analytics without impacting ERP performance.",
       },
     },
   ],
@@ -48,58 +38,46 @@ const faqSchema = {
 const capabilities: Capability[] = [
   {
     iconName: "Database",
-    name: "Data Lakehouse ACID",
-    desc: "Pipeline Dynamics 365 F&O → Synapse Link → Apache Iceberg. Transazionalità ACID sul data lake, time travel, schema evolution.",
+    name: "ACID Data Lakehouse",
+    desc: "Dynamics 365 F&O pipeline to Synapse Link to Apache Iceberg. ACID transactions on the data lake, time travel, schema evolution.",
   },
   {
     iconName: "Layers",
-    name: "Zero-ETL Virtualization",
-    desc: "Dremio e Teiid per interrogare sorgenti eterogenee senza spostare dati. Query federate su Dynamics, PostgreSQL, S3 in un'unica vista.",
+    name: "Zero-ETL Virtualisation",
+    desc: "Dremio and Teiid to query heterogeneous sources without moving data. Federated queries across Dynamics, PostgreSQL, and S3 in a single view.",
   },
   {
     iconName: "Zap",
     name: "Event-Driven ERP",
-    desc: "Azure Event Grid + n8n: Dynamics 365 da silos passivo a motore di eventi real-time. Reazione istantanea a create/update/delete.",
+    desc: "Azure Event Grid and n8n: Dynamics 365 transitions from passive silo to real-time event engine. Instant reaction to create, update, and delete events.",
   },
   {
     iconName: "Search",
-    name: "RAG Pipeline Completa",
-    desc: "Ingestion → semantic chunking → embedding → Weaviate → retrieval → LLM. Production-ready con deduplication e cursor pagination su larga scala.",
+    name: "Full RAG Pipeline",
+    desc: "Ingestion, semantic chunking, embedding, Weaviate, retrieval, LLM. Production-ready with deduplication and cursor pagination at scale.",
   },
   {
     iconName: "Layout",
     name: "Low-Code Data Admin",
-    desc: "Budibase + Weaviate: interfacce amministrative su vector DB con paginazione cursor-based su dataset >10,000 record. Senza codice custom.",
+    desc: "Budibase and Weaviate: administrative interfaces on vector DB with cursor-based pagination on datasets exceeding 10,000 records. No custom code.",
   },
   {
     iconName: "GitBranch",
     name: "Data Hub Pattern",
-    desc: "Directus come API data hub + Budibase come layer UI/automazioni. Trigger consapevoli a livello applicazione vs database per massima flessibilità.",
+    desc: "Directus as API data hub with Budibase as the UI and automation layer. Application-level triggers versus database triggers for maximum flexibility.",
   },
 ];
 
-const tech = [
-  "Apache Iceberg",
-  "Weaviate",
-  "Dremio",
-  "Teiid",
-  "PostgreSQL",
-  "EventStoreDB",
-  "MinIO",
-  "n8n",
-  "Azure Event Grid",
-  "Directus",
-  "Budibase",
-];
+const tech = ["Apache Iceberg", "Weaviate", "Dremio", "Teiid", "PostgreSQL", "EventStoreDB", "MinIO", "n8n", "Azure Event Grid", "Directus", "Budibase"];
 
 const faqs = [
   {
-    q: "Cos'è l'approccio Zero-ETL e quando conviene?",
-    a: "Zero-ETL significa interrogare i dati direttamente alla fonte tramite data virtualization (Dremio, Teiid) invece di copiarli in un warehouse. Conviene quando i dati cambiano frequentemente, lo storage è costoso o la latenza di replica è inaccettabile. Non è adatto per analytics pesanti su volumi enormi.",
+    q: "What is Zero-ETL and when does it make sense?",
+    a: "Zero-ETL means querying data directly at the source via data virtualisation (Dremio, Teiid) instead of copying it into a warehouse. It makes sense when data changes frequently, storage is costly, or replication latency is unacceptable.",
   },
   {
-    q: "Come si esporta Dynamics 365 F&O verso un data lake moderno?",
-    a: "Il percorso consigliato è: Synapse Link per l'export incrementale da D365 F&O → pipeline n8n o Azure Data Factory per trasformazione → Apache Iceberg come formato di storage con ACID transactions. Questo permette analytics real-time senza impattare le performance dell'ERP.",
+    q: "How do you export Dynamics 365 F&O to a modern data lake?",
+    a: "The recommended path: Synapse Link for incremental export from D365 F&O, then n8n or Azure Data Factory for transformation, then Apache Iceberg as the storage format with ACID transactions. Real-time analytics without impacting ERP performance.",
   },
 ];
 
@@ -107,7 +85,7 @@ export default function DataPlatformsPage() {
   return (
     <ServicePageLayout
       title="Modern Data Platforms & RAG"
-      intro="Da ERP silos a motore di eventi. Data lakehouse ACID. Zero-ETL."
+      intro="From ERP silos to an event engine. ACID data lakehouse. Zero-ETL."
       tech={tech}
       capabilities={capabilities}
       faqs={faqs}
