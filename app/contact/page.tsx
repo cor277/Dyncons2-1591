@@ -235,11 +235,16 @@ export default function ContactPage() {
                       I have read and accept the{" "}
                       <a href="/privacy" target="_blank" rel="noopener noreferrer" className="underline text-[#00B4D8] hover:text-[#E6EDF3]">
                         Privacy Policy
-                      </a>
-                      . I consent to the processing of my personal data (name, email, company, and message content) for the purpose of responding to my enquiry, as described in the policy. I understand I can withdraw my consent at any time by contacting{" "}
+                      </a>{" "}
+                      (Art. 6(1)(a) GDPR). I consent to the processing of my personal data
+                      (name, email, company, message content) for the sole purpose of responding
+                      to my enquiry. Data is retained for 24 months and may be shared with
+                      sub-processors as described in the policy. I understand I can withdraw
+                      consent at any time by contacting{" "}
                       <a href="mailto:privacy@dynamicsconsulting.it" className="underline text-[#00B4D8] hover:text-[#E6EDF3]">
                         privacy@dynamicsconsulting.it
-                      </a>.
+                      </a>{" "}
+                      without affecting the lawfulness of prior processing.
                       <span className="text-red-500"> *</span>
                     </label>
                   </div>

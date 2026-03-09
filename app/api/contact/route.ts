@@ -55,10 +55,13 @@ export async function POST(req: NextRequest) {
             </tr>
           </table>
           <div style="margin-top: 24px; padding: 16px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
-            <p style="margin: 0 0 8px 0; font-weight: 600; color: #475569; font-size: 12px;">GDPR Consent Record</p>
-            <p style="margin: 0; color: #64748b; font-size: 12px;">Privacy consent given: Yes</p>
+            <p style="margin: 0 0 8px 0; font-weight: 600; color: #475569; font-size: 12px;">GDPR Consent Record (Art. 7(1))</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">Explicit consent given: Yes (checkbox)</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">Legal basis: Art. 6(1)(a) GDPR</p>
             <p style="margin: 0; color: #64748b; font-size: 12px;">Consent timestamp: ${consentTimestamp || new Date().toISOString()}</p>
-            <p style="margin: 0; color: #64748b; font-size: 12px;">IP-based consent (no cookies)</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">Policy version: 2026-03-09-v2</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">Purpose: Responding to contact enquiry</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">Retention: 24 months</p>
           </div>
           <p style="margin-top: 12px; color: #94a3b8; font-size: 12px;">
             Sent from the contact form at dynamicsconsulting.it
