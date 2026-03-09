@@ -1,130 +1,66 @@
-import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
 import type { Metadata } from "next";
+import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Enterprise Integration | Dynamics Consulting",
-  description:
-    "API-led connectivity, middleware modernisation, and real-time event streaming. We connect your enterprise systems so every team works from a single source of truth.",
-  alternates: { canonical: "https://dynamicsconsulting.it/services/enterprise-integration" },
+  title: "Enterprise Integration & Modernisation | Dynamics Consulting",
+  description: "ESB migration, event sourcing, legacy modernisation and microservices architecture for complex enterprise environments. Talend, Azure Integration, n8n.",
+  alternates: { canonical: "https://www.dynamicsconsulting.it/services/enterprise-integration" },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What integration patterns do you support?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We implement REST, GraphQL, SOAP, gRPC, and event-driven architectures using brokers such as Kafka and RabbitMQ. Pattern selection depends on latency, volume, and transactional requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you integrate legacy on-premise systems?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We use adapter patterns and lightweight agents to bridge legacy ERP, mainframe, and proprietary systems with modern cloud APIs, enabling incremental modernisation without a big-bang migration.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you handle data consistency across distributed systems?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We apply saga patterns for long-running transactions, outbox patterns for reliable event publishing, and idempotency keys to guarantee exactly-once semantics where the business requires it.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide API governance and documentation?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Every integration we deliver ships with OpenAPI specifications, versioning policies, consumer-driven contract tests, and a developer portal so internal teams can self-serve.",
-      },
-    },
-  ],
-};
+const capabilities: Capability[] = [
+  {
+    iconName: "Network",
+    name: "ESB & Middleware Migration",
+    desc: "Migration from Talend ESB, BizTalk, MuleSoft, and Karaf to modern lightweight integration stacks. Pattern preservation with architecture modernisation.",
+  },
+  {
+    iconName: "GitBranch",
+    name: "Event Sourcing",
+    desc: "EventStoreDB and Kafka for immutable audit logs, temporal queries and event replay. GDPR-compliant with selective projection deletion.",
+  },
+  {
+    iconName: "RefreshCw",
+    name: "Legacy Modernisation",
+    desc: "Incremental strangler-fig migration of long-lived systems. AI-assisted reverse engineering of codebases and automated documentation.",
+  },
+  {
+    iconName: "Zap",
+    name: "API Gateway & APISIX",
+    desc: "Rate limiting, JWT validation, CORS, plugin architecture. APISIX as sovereign API gateway for on-premise and hybrid deployments.",
+  },
+  {
+    iconName: "Link2",
+    name: "Dynamics 365 Integration",
+    desc: "Bidirectional connectors between Dynamics 365 CE, F&O, and external systems. Webhook patterns, Power Automate, Logic Apps, and custom middleware.",
+  },
+  {
+    iconName: "Server",
+    name: "n8n Workflow Orchestration",
+    desc: "Self-hosted n8n for workflow automation, document ingestion pipelines, and human-in-the-loop AI orchestration with full audit trail.",
+  },
+];
+
+const tech = ["n8n", "APISIX", "Talend ESB", "EventStoreDB", "Kafka", "Azure Logic Apps", "Dynamics 365", "RabbitMQ"];
+
+const faqs = [
+  {
+    q: "When does it make sense to replace a legacy ESB rather than extend it?",
+    a: "When maintenance cost exceeds the cost of migration, when the ESB is a delivery bottleneck, or when it cannot support event-driven patterns. We evaluate both paths before recommending either.",
+  },
+  {
+    q: "Can you integrate Dynamics 365 with on-premise systems without Azure?",
+    a: "Yes. We use self-hosted middleware (n8n, APISIX, custom connectors) to bridge Dynamics 365 with on-premise systems, avoiding dependency on Azure PaaS services.",
+  },
+];
 
 export default function EnterpriseIntegrationPage() {
   return (
     <ServicePageLayout
-      title="Enterprise Integration"
-      intro="Modern enterprises run dozens of platforms — ERP, CRM, e-commerce, analytics, IoT. We design and build the integration layer that connects them, eliminating data silos and enabling real-time operational intelligence."
-      tech={[
-        "Apache Kafka",
-        "RabbitMQ",
-        "MuleSoft",
-        "Azure Service Bus",
-        "AWS EventBridge",
-        "Kong Gateway",
-        "Apigee",
-        "WSO2",
-        "Node.js",
-        "Python",
-        "gRPC",
-        "OpenAPI 3",
-        "AsyncAPI",
-        "Terraform",
-      ]}
-      capabilities={[
-        {
-          iconName: "Network",
-          name: "API-Led Connectivity",
-          desc:
-            "We architect three-tier API layers — system, process, and experience — so teams can compose new digital products without duplicating integration logic.",
-        },
-        {
-          iconName: "RefreshCw",
-          name: "Event-Driven Architecture",
-          desc:
-            "Kafka and cloud-native brokers form the backbone of your event mesh, enabling sub-second data propagation across microservices and third-party systems.",
-        },
-        {
-          iconName: "GitMerge",
-          name: "Middleware Modernisation",
-          desc:
-            "Legacy ESBs replaced or incrementally strangled with lightweight, observable integration runtimes that cost less to run and far less to change.",
-        },
-        {
-          iconName: "Shield",
-          name: "API Security & Governance",
-          desc:
-            "OAuth 2.0, mTLS, rate limiting, and consumer contracts enforced at the gateway — not scattered across services — with a centralised developer portal.",
-        },
-        {
-          iconName: "Database",
-          name: "Data Synchronisation",
-          desc:
-            "Change-data-capture pipelines keep operational databases and analytical stores in sync with millisecond latency and zero data loss guarantees.",
-        },
-        {
-          iconName: "Layers",
-          name: "Integration Testing & Observability",
-          desc:
-            "Contract testing with Pact, distributed tracing with OpenTelemetry, and integration dashboards so you know the health of every flow before customers do.",
-        },
-      ]}
-      faqs={[
-        {
-          q: "What integration patterns do you support?",
-          a: "We implement REST, GraphQL, SOAP, gRPC, and event-driven architectures using brokers such as Kafka and RabbitMQ. Pattern selection depends on latency, volume, and transactional requirements.",
-        },
-        {
-          q: "Can you integrate legacy on-premise systems?",
-          a: "Yes. We use adapter patterns and lightweight agents to bridge legacy ERP, mainframe, and proprietary systems with modern cloud APIs, enabling incremental modernisation without a big-bang migration.",
-        },
-        {
-          q: "How do you handle data consistency across distributed systems?",
-          a: "We apply saga patterns for long-running transactions, outbox patterns for reliable event publishing, and idempotency keys to guarantee exactly-once semantics where the business requires it.",
-        },
-        {
-          q: "Do you provide API governance and documentation?",
-          a: "Absolutely. Every integration we deliver ships with OpenAPI specifications, versioning policies, consumer-driven contract tests, and a developer portal so internal teams can self-serve.",
-        },
-      ]}
-      faqSchema={faqSchema}
+      title="Enterprise Integration & Modernisation"
+      intro="Complex integrations, legacy modernisation, and event-driven architectures for organisations that cannot afford to stop and rebuild."
+      tech={tech}
+      capabilities={capabilities}
+      faqs={faqs}
     />
   );
 }
