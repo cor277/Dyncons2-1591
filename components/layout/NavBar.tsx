@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react";
 import { clsx } from "clsx";
 
 const navLinks = [
-  { label: "Piattaforma", href: "/platform" },
-  { label: "Servizi", href: "/#services" },
+  { label: "Platform", href: "/platform" },
+  { label: "Services", href: "/#services" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/about" },
   { label: "Research", href: "/research" },
@@ -74,7 +74,7 @@ export function NavBar() {
             href="/contact"
             className="hidden md:inline-flex items-center px-4 py-2 bg-[#00B4D8] text-[#0D1117] rounded-lg text-sm font-semibold hover:bg-[#00c8f0] transition-all duration-200 shadow-[0_0_15px_rgba(0,180,216,0.3)]"
           >
-            Parliamo →
+            Let&apos;s talk →
           </Link>
 
           {/* Mobile hamburger */}
@@ -112,7 +112,7 @@ export function NavBar() {
                 onClick={() => setMobileOpen(false)}
                 className="mt-3 text-center px-4 py-3 bg-[#00B4D8] text-[#0D1117] rounded-lg text-sm font-semibold"
               >
-                Parliamo →
+                Let&apos;s talk →
               </Link>
             </div>
           </motion.div>
