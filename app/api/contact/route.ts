@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 export async function POST(req: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY ?? "placeholder");
-
   try {
     const { name, email, company, projectType, source, message, privacyConsent, consentTimestamp } = await req.json();
 
@@ -20,6 +18,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
     }
 
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not configured");
+      return NextResponse.json({ error: "Email service not configured" }, { status: 503 });
+    }
+
+    const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
       from: "Dynamics Consulting Website <onboarding@resend.dev>",
       to: ["info@dynamicsconsulting.it"],
