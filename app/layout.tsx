@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { PrivacyBanner } from "@/components/ui/PrivacyBanner";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -143,6 +144,7 @@ export default function RootLayout({
       </head>
       <body className="font-dm bg-[#0D1117] text-[#E6EDF3] antialiased">
         {children}
+        <PrivacyBanner />
       </body>
     </html>
   );
