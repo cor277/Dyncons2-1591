@@ -10,9 +10,9 @@ interface CTASectionProps {
 }
 
 export function CTASection({
-  title = "Parliamo del tuo progetto",
-  subtitle = "Hai un progetto AI, un'infrastruttura da modernizzare o un ERP da connettere al futuro? Scrivimi.",
-  ctaLabel = "Inizia la conversazione →",
+  title = "Let's talk about your project",
+  subtitle = "AI infrastructure to build, a legacy system to modernise, or an ERP to connect to the future? Get in touch.",
+  ctaLabel = "Start the conversation →",
   ctaHref = "/contact",
 }: CTASectionProps) {
   return (
