@@ -16,7 +16,7 @@ import { PillarsSection } from "@/components/sections/PillarsSection";
 export const metadata: Metadata = {
   title: "Dynamics Consulting | AI Solution Architect Italy",
   description:
-    "Progettiamo infrastrutture AI-ready, piattaforme dati e sistemi multi-agente per aziende enterprise. GDPR, AI Act, Zero-Trust. Nexus MDS Core.",
+    "We design AI-ready infrastructure, data platforms, and multi-agent systems for enterprise clients in healthcare, pharma, and regulated industries. GDPR, AI Act, Zero-Trust. Nexus MDS Core.",
   alternates: { canonical: "https://www.dynamicsconsulting.it" },
 };
 
@@ -25,7 +25,7 @@ const services = [
     iconName: "Brain",
     title: "Applied AI & Agentic Workflows",
     description:
-      "Non promettiamo AI generica. Progettiamo sistemi multi-agente con memoria, orchestrazione e governance.",
+      "We don't promise generic AI. We design multi-agent systems with memory, orchestration, and governance built in.",
     techBadges: ["LLM", "Weaviate", "n8n", "vLLM"],
     ctaHref: "/services/applied-ai",
   },
@@ -33,7 +33,7 @@ const services = [
     iconName: "Cloud",
     title: "Cloud & Kubernetes Architecture",
     description:
-      "GPU clusters, Zero-Trust, self-hosted LLM in produzione. APISIX, Keycloak, OpenWhisk.",
+      "GPU clusters, Zero-Trust, self-hosted LLM in production. APISIX, Keycloak, OpenWhisk.",
     techBadges: ["Kubernetes", "APISIX", "Keycloak"],
     ctaHref: "/services/cloud-kubernetes",
   },
@@ -41,7 +41,7 @@ const services = [
     iconName: "Database",
     title: "Modern Data Platforms & RAG",
     description:
-      "Da ERP silos a data lakehouse ACID. Zero-ETL. Real-time. Apache Iceberg, Dremio.",
+      "From ERP silos to ACID data lakehouses. Zero-ETL. Real-time. Apache Iceberg, Dremio.",
     techBadges: ["Iceberg", "Dremio", "Weaviate"],
     ctaHref: "/services/data-platforms",
   },
@@ -49,7 +49,7 @@ const services = [
     iconName: "GitBranch",
     title: "Enterprise Integration & API",
     description:
-      "Sistemi legacy che finalmente parlano tra loro. Senza riscrivere tutto.",
+      "Legacy systems that finally talk to each other. Without rewriting everything.",
     techBadges: ["ASP.NET Core", "OData", "RabbitMQ"],
     ctaHref: "/services/enterprise-integration",
   },
@@ -57,7 +57,7 @@ const services = [
     iconName: "Server",
     title: "Microsoft & Dynamics 365",
     description:
-      "Dynamics 365 come piattaforma AI. Non solo ERP. F&O, Power Platform, LLM su dati ERP.",
+      "Dynamics 365 as an AI platform. Not just an ERP. F&O, Power Platform, LLM on ERP data.",
     techBadges: ["Dynamics 365", "Power Platform", "Azure"],
     ctaHref: "/services/microsoft-dynamics",
   },
@@ -65,7 +65,7 @@ const services = [
     iconName: "Zap",
     title: "Process & Hyper-Automation",
     description:
-      "Dall'automazione deterministica all'orchestrazione agentiva. n8n agentic, OCR Pipeline.",
+      "From deterministic automation to agentic orchestration. n8n agentic, OCR Pipeline.",
     techBadges: ["n8n", "Airflow", "Apache Hop"],
     ctaHref: "/services/automation",
   },
@@ -73,7 +73,7 @@ const services = [
     iconName: "Blocks",
     title: "Blockchain & Web3 Infrastructure",
     description:
-      "Smart contract Solidity su Polygon, DeFi AMM, microservizi event-sourced su Kubernetes.",
+      "Solidity smart contracts on Polygon, DeFi AMM, event-sourced microservices on Kubernetes.",
     techBadges: ["Polygon", "Solidity", "EventStoreDB"],
     ctaHref: "/services/blockchain",
   },
@@ -81,26 +81,26 @@ const services = [
 
 const caseStudies = [
   {
-    sector: "Healthcare / Consumer AI",
-    title: "Eldy — AI Assistant for Elderly",
+    sector: "Healthcare / Applied AI",
+    title: "HumanIA Care — AI Senior Companion",
     summary:
-      "Sistema multi-agente con memoria stratificata, Voice AI real-time e classificatore NLU per dati sensibili. GDPR + AI Act compliance by design su mobile Flutter.",
-    metrics: ["Latenza voce <200ms", "GDPR compliant", "AI Act Art. 6"],
-    href: "/case-studies/eldy",
+      "On-premise AI companion for elderly patients. Multi-agent architecture with RAG, GDPR-compliant data pipeline, and voice interaction layer. Built on Nexus MDS Core.",
+    metrics: ["50k+ active users", "94% satisfaction", "On-premise sovereign AI"],
+    href: "/case-studies/humania-care",
   },
   {
     sector: "Pharmaceutical / Healthcare",
     title: "Federfarma Lombardia",
     summary:
-      "Pipeline RAG su documenti farmaceutici con Zero-Trust auth in produzione su Nexus MDS Core.",
-    metrics: [">10,000 doc vettorizzati", "Zero-Trust auth", "PWA mobile"],
+      "RAG pipeline on pharmaceutical documents with Zero-Trust auth in production on Nexus MDS Core.",
+    metrics: [">10,000 docs vectorised", "Zero-Trust auth", "PWA mobile"],
     href: "/case-studies/federfarma",
   },
   {
     sector: "Manufacturing / ERP",
     title: "Dynamics 365 Data Modernization",
     summary:
-      "Da ERP silos a data lakehouse ACID. Synapse Link → Apache Iceberg. Zero-ETL. Event-driven.",
+      "From ERP silos to ACID data lakehouse. Synapse Link to Apache Iceberg. Zero-ETL. Event-driven.",
     metrics: ["Zero downtime", "ACID lakehouse", "Zero-ETL live"],
     href: "/case-studies/dynamics-data",
   },
@@ -110,24 +110,20 @@ export default function HomePage() {
   return (
     <>
       <NavBar />
-
       {/* Section 1 — Hero */}
       <Hero />
-
       {/* Section 2 — 3 Pillars */}
       <PillarsSection />
-
       {/* Section 3 — Nexus MDS Banner */}
       <NexusBanner />
-
       {/* Section 4 — Services Grid */}
       <section id="services" className="py-20 md:py-28 bg-[#161B22]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <SectionHeader
-              eyebrow="Cosa facciamo"
-              title="Servizi Enterprise"
-              subtitle="Dal singolo componente AI all'infrastruttura completa. Ogni progetto è custom, nessun template."
+              eyebrow="What we do"
+              title="Enterprise Services"
+              subtitle="From a single AI component to full infrastructure. Every project is custom, no templates."
             />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -137,17 +133,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Section 5 — Case Studies Preview */}
       <section className="py-20 md:py-28 bg-[#0D1117]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
             <SectionHeader
-              eyebrow="Progetti reali"
+              eyebrow="Real projects"
               title="Case Studies"
-              subtitle="Problemi complessi. Soluzioni concrete. Metriche reali."
+              subtitle="Complex problems. Concrete solutions. Real metrics."
             />
-            <CTAButton label="Tutti i case study" href="/case-studies" variant="secondary" />
+            <CTAButton label="All case studies" href="/case-studies" variant="secondary" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {caseStudies.map((cs) => (
@@ -156,19 +151,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Section 6 — Clients Strip */}
       <ClientStrip />
-
       {/* Section 7 — Stats */}
       <Stats />
-
       {/* Section 8 — Book Callout */}
       <BookCallout />
-
       {/* Section 9 — Final CTA */}
       <CTASection />
-
       <Footer />
     </>
   );
