@@ -48,9 +48,21 @@ export default function PrivacyPage() {
 
           <h2>3. Legal basis for processing</h2>
           <p>
-            Contact form data is processed on the basis of our legitimate interest in responding to
-            business enquiries (Article 6(1)(f) GDPR). Newsletter subscriptions are processed on
-            the basis of your explicit consent (Article 6(1)(a) GDPR).
+            Contact form data is processed on the basis of your explicit consent (Article 6(1)(a)
+            GDPR), which you provide by checking the consent checkbox before submitting the form.
+            You may withdraw your consent at any time by contacting us at{" "}
+            <a href="mailto:privacy@dynamicsconsulting.it">privacy@dynamicsconsulting.it</a>.
+            Withdrawal does not affect the lawfulness of processing carried out before the
+            withdrawal. Newsletter subscriptions are also processed on the basis of your explicit
+            consent (Article 6(1)(a) GDPR).
+          </p>
+
+          <h2>3a. Consent record</h2>
+          <p>
+            When you submit the contact form, we record the following as proof of consent: the
+            timestamp of your submission, the version of the privacy policy accepted, and the data
+            fields you consented to share. This record is retained for the duration of the data
+            retention period described below.
           </p>
 
           <h2>4. Data retention</h2>

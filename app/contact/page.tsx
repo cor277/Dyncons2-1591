@@ -18,6 +18,7 @@ export default function ContactPage() {
     source: "",
     message: "",
   });
+  const [privacyConsent, setPrivacyConsent] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleChange = (
@@ -33,11 +34,16 @@ export default function ContactPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          privacyConsent,
+          consentTimestamp: new Date().toISOString(),
+        }),
       });
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", company: "", projectType: "", source: "", message: "" });
+        setPrivacyConsent(false);
       } else {
         setStatus("error");
       }
@@ -215,6 +221,29 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {/* GDPR consent checkbox */}
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="privacyConsent"
+                      checked={privacyConsent}
+                      onChange={(e) => setPrivacyConsent(e.target.checked)}
+                      required
+                      className="mt-1 h-4 w-4 shrink-0 rounded border-[#30363D] bg-[#161B22] text-[#00B4D8] focus:ring-[#00B4D8] focus:ring-offset-0 accent-[#00B4D8] cursor-pointer"
+                    />
+                    <label htmlFor="privacyConsent" className="text-xs text-[#7D8FA3] leading-relaxed cursor-pointer select-none">
+                      I have read and accept the{" "}
+                      <a href="/privacy" target="_blank" rel="noopener noreferrer" className="underline text-[#00B4D8] hover:text-[#E6EDF3]">
+                        Privacy Policy
+                      </a>
+                      . I consent to the processing of my personal data (name, email, company, and message content) for the purpose of responding to my enquiry, as described in the policy. I understand I can withdraw my consent at any time by contacting{" "}
+                      <a href="mailto:privacy@dynamicsconsulting.it" className="underline text-[#00B4D8] hover:text-[#E6EDF3]">
+                        privacy@dynamicsconsulting.it
+                      </a>.
+                      <span className="text-red-500"> *</span>
+                    </label>
+                  </div>
+
                   {status === "error" && (
                     <p className="text-sm text-red-500">
                       Something went wrong. Please try again or write to me directly via email.
@@ -223,19 +252,11 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    disabled={status === "loading"}
+                    disabled={status === "loading" || !privacyConsent}
                     className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm tracking-wide transition-all duration-200 bg-[#00B4D8] text-[#0D1117] hover:bg-[#00C8F0] shadow-[0_0_20px_rgba(0,180,216,0.3)] hover:shadow-[0_0_30px_rgba(0,180,216,0.5)] disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {status === "loading" ? "Sending…" : "Send message"}
                   </button>
-
-                  <p className="text-xs text-[#7D8FA3] text-center">
-                    By submitting this form you accept our{" "}
-                    <a href="/privacy" className="underline hover:text-[#E6EDF3]">
-                      privacy policy
-                    </a>
-                    .
-                  </p>
                 </form>
               )}
             </div>

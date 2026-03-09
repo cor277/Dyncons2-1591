@@ -5,10 +5,14 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY ?? "placeholder");
 
   try {
-    const { name, email, company, projectType, source, message } = await req.json();
+    const { name, email, company, projectType, source, message, privacyConsent, consentTimestamp } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: "Required fields missing" }, { status: 400 });
+    }
+
+    if (!privacyConsent) {
+      return NextResponse.json({ error: "Privacy consent is required" }, { status: 400 });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -50,7 +54,13 @@ export async function POST(req: NextRequest) {
               <td style="padding: 10px 0; color: #0f172a; white-space: pre-wrap;">${message}</td>
             </tr>
           </table>
-          <p style="margin-top: 24px; color: #94a3b8; font-size: 12px;">
+          <div style="margin-top: 24px; padding: 16px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <p style="margin: 0 0 8px 0; font-weight: 600; color: #475569; font-size: 12px;">GDPR Consent Record</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">Privacy consent given: Yes</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">Consent timestamp: ${consentTimestamp || new Date().toISOString()}</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">IP-based consent (no cookies)</p>
+          </div>
+          <p style="margin-top: 12px; color: #94a3b8; font-size: 12px;">
             Sent from the contact form at dynamicsconsulting.it
           </p>
         </div>
