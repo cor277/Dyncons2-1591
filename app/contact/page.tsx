@@ -54,14 +54,14 @@ export default function ContactPage() {
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">
-              Contatti
+              Contact
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#E6EDF3]">
-              Parliamo del tuo progetto
+              Let&apos;s talk about your project
             </h1>
             <p className="text-lg text-[#7D8FA3] max-w-xl mx-auto">
-              Che tu abbia un brief definito o un problema da risolvere, sono disponibile a
-              esplorare insieme le possibilità. Nessun impegno, nessuna pressione commerciale.
+              Whether you have a defined brief or a problem to solve, I&apos;m available to
+              explore possibilities together. No commitment, no sales pressure.
             </p>
           </div>
         </section>
@@ -71,10 +71,10 @@ export default function ContactPage() {
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-14">
             {/* Left — info */}
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-6">Scrivimi</h2>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-6">Write to me</h2>
               <p className="text-[#7D8FA3] leading-relaxed mb-10">
-                Compila il modulo e ti rispondo entro un giorno lavorativo. Per esigenze urgenti
-                puoi anche contattarmi direttamente ai recapiti qui sotto.
+                Fill out the form and I&apos;ll reply within one business day. For urgent needs,
+                you can also contact me directly using the details below.
               </p>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -96,7 +96,7 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5 text-[#00B4D8]" />
                   </div>
                   <div>
-                    <div className="font-semibold text-[#E6EDF3] text-sm mb-1">Telefono</div>
+                    <div className="font-semibold text-[#E6EDF3] text-sm mb-1">Phone</div>
                     <a
                       href="tel:+393407253246"
                       className="text-[#00B4D8] hover:underline text-sm"
@@ -104,7 +104,7 @@ export default function ContactPage() {
                       +39 3407253246
                     </a>
                     <p className="text-[#7D8FA3] text-xs mt-1">
-                      SMS o WhatsApp preferito — evito le chiamate a freddo
+                      SMS or WhatsApp preferred — I avoid cold calls
                     </p>
                   </div>
                 </div>
@@ -116,9 +116,9 @@ export default function ContactPage() {
               {status === "success" ? (
                 <div className="rounded-2xl bg-[#00B4D8]/10 border border-[#00B4D8]/30 p-10 text-center">
                   <div className="text-4xl mb-4">✅</div>
-                  <h3 className="text-xl font-bold text-[#E6EDF3] mb-2">Messaggio inviato!</h3>
+                  <h3 className="text-xl font-bold text-[#E6EDF3] mb-2">Message sent!</h3>
                   <p className="text-[#7D8FA3]">
-                    Grazie per avermi contattato. Ti rispondo entro un giorno lavorativo.
+                    Thank you for reaching out. I&apos;ll reply within one business day.
                   </p>
                 </div>
               ) : (
@@ -126,14 +126,14 @@ export default function ContactPage() {
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className={labelClass}>
-                        Nome <span className="text-red-500">*</span>
+                        Name <span className="text-red-500">*</span>
                       </label>
                       <input
                         required
                         name="name"
                         value={form.name}
                         onChange={handleChange}
-                        placeholder="Il tuo nome"
+                        placeholder="Your name"
                         className={inputClass}
                       />
                     </div>
@@ -147,32 +147,32 @@ export default function ContactPage() {
                         name="email"
                         value={form.email}
                         onChange={handleChange}
-                        placeholder="tu@azienda.com"
+                        placeholder="you@company.com"
                         className={inputClass}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className={labelClass}>Azienda</label>
+                    <label className={labelClass}>Company</label>
                     <input
                       name="company"
                       value={form.company}
                       onChange={handleChange}
-                      placeholder="Nome dell&apos;azienda"
+                      placeholder="Company name"
                       className={inputClass}
                     />
                   </div>
 
                   <div>
-                    <label className={labelClass}>Tipo di progetto</label>
+                    <label className={labelClass}>Project type</label>
                     <select
                       name="projectType"
                       value={form.projectType}
                       onChange={handleChange}
                       className={inputClass}
                     >
-                      <option value="">— seleziona —</option>
+                      <option value="">— select —</option>
                       <option value="Applied AI">Applied AI</option>
                       <option value="Cloud / Kubernetes">Cloud / Kubernetes</option>
                       <option value="Data Platform">Data Platform</option>
@@ -180,29 +180,29 @@ export default function ContactPage() {
                       <option value="Automation">Automation</option>
                       <option value="Blockchain">Blockchain</option>
                       <option value="Nexus MDS Core">Nexus MDS Core</option>
-                      <option value="Altro">Altro</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className={labelClass}>Come hai trovato Dynamics Consulting</label>
+                    <label className={labelClass}>How did you find Dynamics Consulting</label>
                     <select
                       name="source"
                       value={form.source}
                       onChange={handleChange}
                       className={inputClass}
                     >
-                      <option value="">— seleziona —</option>
+                      <option value="">— select —</option>
                       <option value="LinkedIn">LinkedIn</option>
                       <option value="Google">Google</option>
-                      <option value="Passaparola">Passaparola</option>
-                      <option value="Altro">Altro</option>
+                      <option value="Word of mouth">Word of mouth</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
                   <div>
                     <label className={labelClass}>
-                      Messaggio <span className="text-red-500">*</span>
+                      Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       required
@@ -210,14 +210,14 @@ export default function ContactPage() {
                       value={form.message}
                       onChange={handleChange}
                       rows={5}
-                      placeholder="Descrivimi il tuo progetto o la sfida che vuoi affrontare..."
+                      placeholder="Tell me about your project or the challenge you want to tackle..."
                       className={inputClass + " resize-none"}
                     />
                   </div>
 
                   {status === "error" && (
                     <p className="text-sm text-red-500">
-                      Qualcosa è andato storto. Riprova o scrivimi direttamente via email.
+                      Something went wrong. Please try again or write to me directly via email.
                     </p>
                   )}
 
@@ -226,11 +226,11 @@ export default function ContactPage() {
                     disabled={status === "loading"}
                     className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm tracking-wide transition-all duration-200 bg-[#00B4D8] text-[#0D1117] hover:bg-[#00C8F0] shadow-[0_0_20px_rgba(0,180,216,0.3)] hover:shadow-[0_0_30px_rgba(0,180,216,0.5)] disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    {status === "loading" ? "Invio in corso…" : "Invia messaggio"}
+                    {status === "loading" ? "Sending…" : "Send message"}
                   </button>
 
                   <p className="text-xs text-[#7D8FA3] text-center">
-                    Inviando il modulo accetti la nostra{" "}
+                    By submitting this form you accept our{" "}
                     <a href="/privacy" className="underline hover:text-[#E6EDF3]">
                       privacy policy
                     </a>

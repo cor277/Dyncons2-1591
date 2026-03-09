@@ -22,15 +22,15 @@ export function NexusBanner() {
               <div className="flex items-center gap-2 mb-4">
                 <span className="live-dot" />
                 <span className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase">
-                  PRODOTTO PROPRIETARIO
+                  PROPRIETARY PRODUCT
                 </span>
               </div>
               <h2 className="font-syne text-3xl md:text-4xl font-extrabold text-[#E6EDF3] mb-4">
                 Nexus MDS Core
               </h2>
               <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-6">
-                La piattaforma enterprise AI self-hosted. ~16 servizi Docker orchestrati.
-                GDPR-ready. Zero-Trust. Deployabile su Kubernetes o bare-metal.
+                The enterprise AI self-hosted platform. ~16 orchestrated Docker services.
+                GDPR-ready. Zero-Trust. Deployable on Kubernetes or bare-metal.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["GDPR", "AI Act Ready", "ISO 27001 Ready", "EU Data Residency"].map((b) => (
@@ -40,7 +40,7 @@ export function NexusBanner() {
             </div>
             <div className="flex-shrink-0">
               <CTAButton
-                label="Scopri la piattaforma →"
+                label="Discover the platform →"
                 href="/platform"
                 variant="primary"
               />

@@ -46,19 +46,19 @@ const useCases = [
   {
     title: "Healthcare & Pharma",
     description:
-      "Pipeline RAG su documenti clinici e farmaceutici. Autenticazione GDPR-compliant. Già in produzione su Federfarma Lombardia e CureSicure.",
+      "RAG pipeline on clinical and pharmaceutical documents. GDPR-compliant authentication. Already in production for Federfarma Lombardia and CureSicure.",
     badges: ["GDPR", "OCR Pipeline", "Vector Search"],
   },
   {
     title: "Enterprise B2B",
     description:
-      "Copilot interno su dati ERP, automazione workflow aziendali, integrazione event-driven con sistemi legacy.",
+      "Internal copilot on ERP data, enterprise workflow automation, event-driven integration with legacy systems.",
     badges: ["Dynamics 365", "LLM", "Event-Driven"],
   },
   {
     title: "Regulated Industries",
     description:
-      "Infrastruttura AI Act-ready con data residency EU, audit trail immutabile, zero dependency cloud pubblica.",
+      "AI Act-ready infrastructure with EU data residency, immutable audit trail, zero public cloud dependency.",
     badges: ["AI Act", "EU Data Residency", "ISO 27001 Ready"],
   },
 ];
@@ -78,7 +78,7 @@ export default function PlatformPage() {
       <section className="py-12 bg-[#0D1117] border-t border-[#30363D]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mb-6 text-center">
-            Compliance &amp; Certificazioni
+            Compliance &amp; Certifications
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {["GDPR", "AI Act Ready", "ISO 27001 Ready", "EU Data Residency"].map((b) => (
@@ -94,7 +94,7 @@ export default function PlatformPage() {
           <div className="mb-12">
             <SectionHeader
               eyebrow="Use cases"
-              title="Pensato per industrie regolamentate"
+              title="Designed for regulated industries"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -121,9 +121,9 @@ export default function PlatformPage() {
       </section>
 
       <CTASection
-        title="Pronto a vedere Nexus in azione?"
-        subtitle="Mostriamo come si deploya in produzione su Kubernetes o bare-metal, con tutti i 16 servizi attivi."
-        ctaLabel="Richiedi una demo →"
+        title="Ready to see Nexus in action?"
+        subtitle="We show how it deploys in production on Kubernetes or bare-metal, with all 16 services active."
+        ctaLabel="Request a demo →"
         ctaHref="/contact"
       />
       <Footer />

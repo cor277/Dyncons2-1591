@@ -4,7 +4,7 @@ import { ServicePageLayout, type Capability } from "@/components/sections/Servic
 export const metadata: Metadata = {
   title: "Cloud & Kubernetes Architecture | Dynamics Consulting",
   description:
-    "Cluster Kubernetes CPU/GPU su AKS, GCP, Hetzner. API Gateway APISIX con Zero-Trust. Serverless AI con OpenWhisk. Self-hosted LLM deployment.",
+    "Kubernetes CPU/GPU clusters on AKS, GCP, Hetzner. APISIX API Gateway with Zero-Trust. Serverless AI with OpenWhisk. Self-hosted LLM deployment.",
   keywords: [
     "Kubernetes architect",
     "GPU cluster AI",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Cloud & Kubernetes Architecture | Dynamics Consulting",
-    description: "Infrastrutture AI-ready. GPU orchestration. Zero-Trust by default.",
+    description: "AI-ready infrastructure. GPU orchestration. Zero-Trust by default.",
   },
 };
 
@@ -28,18 +28,18 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Come si deploya un LLM su Kubernetes in modo sicuro?",
+      name: "How do you securely deploy an LLM on Kubernetes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Il deployment sicuro di un LLM su Kubernetes richiede: namespace isolati, network policies, autenticazione OIDC via Keycloak, rate-limiting a livello APISIX e GPU node pool dedicato. Nexus MDS Core implementa questo stack in configurazione single-command.",
+        text: "Secure LLM deployment on Kubernetes requires: isolated namespaces, network policies, OIDC authentication via Keycloak, rate-limiting at APISIX level, and a dedicated GPU node pool. Nexus MDS Core implements this stack in a single-command configuration.",
       },
     },
     {
       "@type": "Question",
-      name: "Qual è la differenza tra AKS, GCP GKE e Hetzner per AI workloads?",
+      name: "What is the difference between AKS, GCP GKE, and Hetzner for AI workloads?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "AKS e GKE offrono integrazione nativa con servizi cloud (storage, IAM, monitoring) ma a costi elevati per GPU. Hetzner bare-metal offre GPU H100/A100 a costi 3-5x inferiori ma richiede gestione infrastruttura. La scelta dipende da budget, compliance (EU data residency) e capacità operative del team.",
+        text: "AKS and GKE offer native integration with cloud services (storage, IAM, monitoring) but at high GPU costs. Hetzner bare-metal offers H100/A100 GPUs at 3-5x lower costs but requires infrastructure management. The choice depends on budget, compliance (EU data residency), and team operational capacity.",
       },
     },
   ],
@@ -49,32 +49,32 @@ const capabilities: Capability[] = [
   {
     iconName: "Server",
     name: "GPU Orchestration",
-    desc: "Cluster Kubernetes con runtime custom per AI workloads su AKS, GCP e Hetzner bare-metal. Sizing ottimizzato per LLM inference.",
+    desc: "Kubernetes cluster with custom runtime for AI workloads on AKS, GCP, and Hetzner bare-metal. Sizing optimized for LLM inference.",
   },
   {
     iconName: "Shield",
     name: "API Gateway APISIX",
-    desc: "Plugin JWT, rate-limiting per chiamate LLM, routing multi-tenant, CORS gestito a livello gateway. Layer di sicurezza prima del codice.",
+    desc: "JWT plugins, rate-limiting for LLM calls, multi-tenant routing, CORS managed at gateway level. Security layer before code.",
   },
   {
     iconName: "Zap",
     name: "Serverless AI",
-    desc: "Apache OpenWhisk su Kubernetes per workload AI intermittenti: scale-to-zero, GPU tasks, image processing, inferenza batch.",
+    desc: "Apache OpenWhisk on Kubernetes for intermittent AI workloads: scale-to-zero, GPU tasks, image processing, batch inference.",
   },
   {
     iconName: "Package",
     name: "Full Stack Deploy",
-    desc: "Redis, RabbitMQ, MinIO, Grafana, Velero, Airflow, n8n — stack completo orchestrato con CI/CD multi-ambiente.",
+    desc: "Redis, RabbitMQ, MinIO, Grafana, Velero, Airflow, n8n — complete stack orchestrated with multi-environment CI/CD.",
   },
   {
     iconName: "Lock",
     name: "Zero-Trust Security",
-    desc: "Keycloak + APISIX come security layer integrato. Nessun servizio esposto senza autenticazione. Adatto a dati sanitari e finanziari.",
+    desc: "Keycloak + APISIX as integrated security layer. No service exposed without authentication. Suitable for healthcare and financial data.",
   },
   {
     iconName: "RefreshCw",
     name: "Disaster Recovery",
-    desc: "Velero per backup automatico Kubernetes. Strategie multi-region su cloud EU per business continuity.",
+    desc: "Velero for automatic Kubernetes backup. Multi-region strategies on EU cloud for business continuity.",
   },
 ];
 
@@ -93,12 +93,12 @@ const tech = [
 
 const faqs = [
   {
-    q: "Come si deploya un LLM su Kubernetes in modo sicuro?",
-    a: "Il deployment sicuro di un LLM su Kubernetes richiede: namespace isolati, network policies, autenticazione OIDC via Keycloak, rate-limiting a livello APISIX e GPU node pool dedicato. Nexus MDS Core implementa questo stack in configurazione single-command.",
+    q: "How do you securely deploy an LLM on Kubernetes?",
+    a: "Secure LLM deployment on Kubernetes requires: isolated namespaces, network policies, OIDC authentication via Keycloak, rate-limiting at APISIX level, and a dedicated GPU node pool. Nexus MDS Core implements this stack in a single-command configuration.",
   },
   {
-    q: "Qual è la differenza tra AKS, GCP GKE e Hetzner per AI workloads?",
-    a: "AKS e GKE offrono integrazione nativa con servizi cloud (storage, IAM, monitoring) ma a costi elevati per GPU. Hetzner bare-metal offre GPU H100/A100 a costi 3-5x inferiori ma richiede gestione infrastruttura. La scelta dipende da budget, compliance (EU data residency) e capacità operative del team.",
+    q: "What is the difference between AKS, GCP GKE, and Hetzner for AI workloads?",
+    a: "AKS and GKE offer native integration with cloud services (storage, IAM, monitoring) but at high GPU costs. Hetzner bare-metal offers H100/A100 GPUs at 3-5x lower costs but requires infrastructure management. The choice depends on budget, compliance (EU data residency), and team operational capacity.",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function CloudKubernetesPage() {
   return (
     <ServicePageLayout
       title="Cloud & Kubernetes Architecture"
-      intro="Infrastrutture AI-ready. GPU orchestration. Zero-Trust by default."
+      intro="AI-ready infrastructure. GPU orchestration. Zero-Trust by default."
       tech={tech}
       capabilities={capabilities}
       faqs={faqs}

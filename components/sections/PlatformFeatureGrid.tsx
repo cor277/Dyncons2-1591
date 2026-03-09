@@ -9,42 +9,42 @@ const features = [
     title: "AI Inference",
     tech: "vLLM, OpenWebUI, GPU-ready",
     description:
-      "LLM locali in produzione, nessun dato fuori dal perimetro. Modelli open-source (LLaMA, Mistral, DeepSeek) su GPU dedicata.",
+      "Local LLMs in production, no data outside the perimeter. Open-source models (LLaMA, Mistral, DeepSeek) on dedicated GPU.",
   },
   {
     icon: Shield,
     title: "Zero-Trust Auth",
     tech: "Keycloak OIDC/PKCE, APISIX, JWT",
     description:
-      "Autenticazione enterprise per ogni layer dell'architettura. Nessun servizio esposto senza autenticazione OIDC.",
+      "Enterprise authentication for every architecture layer. No service exposed without OIDC authentication.",
   },
   {
     icon: Search,
     title: "Vector Search & RAG",
     tech: "Weaviate, semantic chunking",
     description:
-      "Pipeline RAG production-ready su documenti aziendali. Cursor-based pagination su dataset >10,000 documenti.",
+      "Production-ready RAG pipeline on enterprise documents. Cursor-based pagination on datasets with >10,000 documents.",
   },
   {
     icon: GitBranch,
     title: "Workflow Engine",
     tech: "n8n agentic, Airflow, Apache Hop",
     description:
-      "Orchestrazione processi con LLM decision-making. Dall'automazione deterministica all'orchestrazione agentiva.",
+      "Process orchestration with LLM decision-making. From deterministic automation to agentic orchestration.",
   },
   {
     icon: Database,
     title: "Enterprise Storage",
     tech: "MinIO S3, PostgreSQL, Dremio",
     description:
-      "Storage compatibile AWS S3, query federate su sorgenti eterogenee, data virtualization Zero-ETL.",
+      "AWS S3-compatible storage, federated queries on heterogeneous sources, Zero-ETL data virtualization.",
   },
   {
     icon: Activity,
     title: "Observability",
     tech: "Grafana, Uptime Kuma, Velero",
     description:
-      "Monitoring real-time, alert, backup Kubernetes automatizzato. SLA garantiti con disaster recovery.",
+      "Real-time monitoring, alerts, automated Kubernetes backup. Guaranteed SLAs with disaster recovery.",
   },
 ];
 
@@ -54,9 +54,9 @@ export function PlatformFeatureGrid() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <SectionHeader
-            eyebrow="Architettura"
+            eyebrow="Architecture"
             title="~16 servizi orchestrati"
-            subtitle="Ogni componente è progettato per ambienti GDPR-compliant e AI Act-ready. Nessuna dipendenza cloud pubblica."
+            subtitle="Every component is designed for GDPR-compliant and AI Act-ready environments. No public cloud dependencies."
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

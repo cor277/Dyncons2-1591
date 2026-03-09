@@ -4,9 +4,9 @@ import { motion, useInView } from "framer-motion";
 
 const stats = [
   { value: 16, suffix: "+", label: "Docker Services in Nexus MDS Core" },
-  { value: 10000, suffix: "+", label: "Documenti farmaceutici processati" },
-  { value: 5, suffix: "+", label: "Settori enterprise serviti" },
-  { value: 3, suffix: "", label: "Piattaforme healthcare deployate" },
+  { value: 10000, suffix: "+", label: "Pharmaceutical documents processed" },
+  { value: 5, suffix: "+", label: "Enterprise sectors served" },
+  { value: 3, suffix: "", label: "Healthcare platforms deployed" },
 ];
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {
@@ -33,7 +33,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
   return (
     <span ref={ref}>
-      {count.toLocaleString("it-IT")}
+      {count.toLocaleString("en-US")}
       {suffix}
     </span>
   );

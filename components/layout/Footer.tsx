@@ -55,7 +55,7 @@ export function Footer() {
           {/* Col 2 — Services */}
           <div>
             <h4 className="font-dm font-semibold text-[#E6EDF3] text-xs uppercase tracking-widest mb-4">
-              Servizi
+              Services
             </h4>
             <ul className="space-y-2">
               {services.map((s) => (
@@ -93,7 +93,7 @@ export function Footer() {
           {/* Col 4 — Contact */}
           <div>
             <h4 className="font-dm font-semibold text-[#E6EDF3] text-xs uppercase tracking-widest mb-4">
-              Contatti
+              Contact
             </h4>
             <ul className="space-y-3">
               <li>
@@ -124,7 +124,7 @@ export function Footer() {
               href="/contact"
               className="mt-5 inline-flex items-center gap-1.5 px-4 py-2 border border-[#30363D] hover:border-[#00B4D8] text-[#E6EDF3] hover:text-[#00B4D8] rounded-lg text-sm font-medium transition-all duration-200"
             >
-              Inizia una conversazione
+              Start a conversation
             </Link>
           </div>
         </div>

@@ -42,7 +42,7 @@ export function CaseStudyCard({
         href={href}
         className="text-[#00B4D8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200"
       >
-        Leggi il case study →
+        Read the case study →
       </Link>
     </motion.div>
   );

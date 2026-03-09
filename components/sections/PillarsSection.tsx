@@ -6,17 +6,17 @@ const pillars = [
   {
     icon: Brain,
     title: "AI Systems",
-    desc: "Agenti, RAG, Voice AI. Memoria, orchestrazione, governance.",
+    desc: "Agents, RAG, Voice AI. Memory, orchestration, governance.",
   },
   {
     icon: Cloud,
     title: "Cloud & Kubernetes",
-    desc: "GPU clusters, Zero-Trust, self-hosted LLM in produzione.",
+    desc: "GPU clusters, Zero-Trust, self-hosted LLM in production.",
   },
   {
     icon: Database,
     title: "Data Platforms",
-    desc: "Da ERP silos a data lakehouse ACID. Zero-ETL. Real-time.",
+    desc: "From ERP silos to ACID data lakehouse. Zero-ETL. Real-time.",
   },
 ];
 

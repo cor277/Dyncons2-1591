@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Dynamics Consulting",
   },
   description:
-    "Progettiamo infrastrutture AI-ready, piattaforme dati e sistemi multi-agente per aziende enterprise. GDPR, AI Act, Zero-Trust. Nexus MDS Core.",
+    "We design AI-ready infrastructure, data platforms, and multi-agent systems for enterprise companies. GDPR, AI Act, Zero-Trust. Nexus MDS Core.",
   keywords: [
     "AI Solution Architect",
     "Kubernetes Architect",
@@ -47,12 +47,12 @@ export const metadata: Metadata = {
   creator: "Corrado Patierno",
   openGraph: {
     type: "website",
-    locale: "it_IT",
+    locale: "en_US",
     url: "https://www.dynamicsconsulting.it",
     siteName: "Dynamics Consulting",
     title: "Dynamics Consulting | AI Solution Architect Italy",
     description:
-      "Infrastrutture AI-ready, piattaforme dati e sistemi multi-agente per enterprise. GDPR, AI Act, Zero-Trust.",
+      "AI-ready infrastructure, data platforms, and multi-agent systems for enterprise. GDPR, AI Act, Zero-Trust.",
     images: [
       {
         url: "/og-image.png",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dynamics Consulting | AI Solution Architect",
     description:
-      "Infrastrutture AI-ready, piattaforme dati e sistemi multi-agente per enterprise.",
+      "AI-ready infrastructure, data platforms, and multi-agent systems for enterprise.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -132,7 +132,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="it"
+      lang="en"
       className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable} dark`}
     >
       <head>

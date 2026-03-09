@@ -16,7 +16,7 @@ export function PlatformHero() {
           <div className="flex items-center gap-2 mb-4">
             <span className="live-dot" />
             <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase">
-              PIATTAFORMA PROPRIETARIA
+              PROPRIETARY PLATFORM
             </p>
           </div>
           <h1 className="font-syne text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#E6EDF3] leading-[1.05] tracking-tight mb-6">
@@ -33,8 +33,8 @@ export function PlatformHero() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <CTAButton label="Richiedi una demo →" href="/contact" variant="primary" />
-            <CTAButton label="Vedi i servizi" href="/#services" variant="secondary" />
+            <CTAButton label="Request a demo →" href="/contact" variant="primary" />
+            <CTAButton label="View services" href="/#services" variant="secondary" />
           </div>
         </motion.div>
       </div>

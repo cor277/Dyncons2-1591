@@ -13,7 +13,7 @@ export function ClientStrip() {
   return (
     <section className="py-12 bg-[#161B22] border-y border-[#30363D] overflow-hidden">
       <p className="text-center text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mb-8">
-        Clienti &amp; Partner
+        Clients &amp; Partners
       </p>
       <div className="overflow-hidden">
         <div className="marquee-track">

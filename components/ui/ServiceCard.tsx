@@ -67,7 +67,7 @@ export function ServiceCard({
         href={ctaHref}
         className="text-[#00B4D8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200"
       >
-        Scopri di più →
+        Learn more →
       </Link>
     </motion.div>
   );
