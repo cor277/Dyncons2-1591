@@ -29,7 +29,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/it/ai-sanitaria-on-premise`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/it/consulenza-ai-farmaceutico`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/it/sovereign-ai-italia`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/research/on-premise-ai`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/research/rag-vs-fine-tuning`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/research/governing-ai-outputs`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/research/lakehouse-not-enough`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/research/ai-reverse-engineering`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/research/legge-132-2025`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/research/event-sourcing`, priority: 0.7, changeFrequency: "yearly" as const },
   ];
   return staticRoutes.map((route) => ({
     url: route.url,

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    slug: "#",
+    slug: "/research/on-premise-ai",
     date: "March 2026",
     tag: "Sovereign AI",
     title: "Why on-premise AI is not a step backward",
@@ -21,7 +21,7 @@ const posts = [
       "The narrative that cloud-native equals modern is wrong for regulated industries. Here is the architectural and governance case for sovereign, on-premise AI infrastructure in healthcare and pharma.",
   },
   {
-    slug: "#",
+    slug: "/research/rag-vs-fine-tuning",
     date: "February 2026",
     tag: "Applied AI",
     title: "RAG vs fine-tuning: a pragmatic guide for enterprise AI teams",
@@ -29,7 +29,7 @@ const posts = [
       "A decision framework for choosing between retrieval-augmented generation and fine-tuning, based on data freshness, inference cost, latency requirements, and the risk profile of your use case.",
   },
   {
-    slug: "#",
+    slug: "/research/governing-ai-outputs",
     date: "January 2026",
     tag: "AI Governance",
     title: "Governing AI outputs in regulated industries: a technical playbook",
@@ -37,7 +37,7 @@ const posts = [
       "Healthcare, pharma, and public sector AI deployments require more than guardrails. Audit logging, output validation, human-in-the-loop patterns, and model card requirements from production deployments.",
   },
   {
-    slug: "#",
+    slug: "/research/lakehouse-not-enough",
     date: "December 2025",
     tag: "Data Platforms",
     title: "The lakehouse is not enough: why operational and analytical data need different treatment",
@@ -45,7 +45,7 @@ const posts = [
       "Lakehouses excel at analytical workloads but struggle with the transactional guarantees and schema evolution pace of operational systems. How to architect for both without rebuilding everything.",
   },
   {
-    slug: "#",
+    slug: "/research/ai-reverse-engineering",
     date: "November 2025",
     tag: "Legacy Modernisation",
     title: "AI-assisted reverse engineering of legacy platforms: lessons from the field",
@@ -61,7 +61,7 @@ const posts = [
       "La Legge n. 132 del 23 settembre 2025 è la prima normativa organica italiana sull'intelligenza artificiale. Per le organizzazioni in ambito sanitario e farmaceutico, introduce obblighi specifici su governance, data residency e uso secondario dei dati.",
   },
   {
-    slug: "#",
+    slug: "/research/event-sourcing",
     date: "October 2025",
     tag: "Enterprise Integration",
     title: "Event sourcing in practice: lessons from five production systems",
