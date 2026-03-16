@@ -107,6 +107,14 @@ const caseStudies = [
     href: "/case-studies/nespresso",
   },
   {
+    sector: "Legacy Modernisation / AI Dev",
+    title: "IATP — AI-Driven Reverse Engineering",
+    summary:
+      "AI-powered reverse engineering of a legacy platform via RAG on Nexus, auto-generated analysis docs, and full AI-driven dev pipeline with Antigravity, Trae, MCP servers, and Comet testing.",
+    metrics: ["RAG reverse engineering", "MCP DevOps pipeline", "AI-driven testing"],
+    href: "/case-studies/iatp",
+  },
+  {
     sector: "Healthcare / Applied AI",
     title: "HumanIA Care — AI Senior Companion",
     summary:

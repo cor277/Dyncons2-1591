@@ -52,6 +52,19 @@ const cases = [
     ],
   },
   {
+    slug: "iatp",
+    client: "IATP",
+    tag: "Legacy Modernisation · AI-Driven Development",
+    headline: "AI-driven reverse engineering and autonomous development pipeline",
+    summary:
+      "AI-powered reverse engineering of a legacy platform with RAG-based analysis document generation via Nexus MDS Core. Full AI-driven dev pipeline: Antigravity, Trae, MCP servers for DevOps, and Comet for AI-driven testing.",
+    metrics: [
+      { value: "RAG", label: "Intelligent doc generation" },
+      { value: "MCP", label: "DevOps orchestration" },
+      { value: "End-to-end", label: "AI-driven pipeline" },
+    ],
+  },
+  {
     slug: "humania-care",
     client: "HumanIA Care",
     tag: "Applied AI · Healthcare",

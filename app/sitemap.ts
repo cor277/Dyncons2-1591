@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/case-studies/sorgenia`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/case-studies/nespresso`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/case-studies/dynamics-crm`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/case-studies/iatp`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/about`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/research`, priority: 0.7, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/contact`, priority: 0.8, changeFrequency: "monthly" as const },
