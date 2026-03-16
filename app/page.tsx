@@ -15,9 +15,9 @@ import { PillarsSection } from "@/components/sections/PillarsSection";
 import { DigitalTwinSection } from "@/components/sections/DigitalTwinSection";
 
 export const metadata: Metadata = {
-  title: "Dynamics Consulting | Sovereign AI Infrastructure for Healthcare & Pharma Italy",
+  title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
   description:
-    "We build on-premise AI platforms for healthcare and pharma organisations that cannot afford data sovereignty risk. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant. Already in production at Federfarma Lombardia.",
+    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
   alternates: { canonical: "https://www.dynamicsconsulting.it" },
 };
 
@@ -91,6 +91,22 @@ const caseStudies = [
     href: "/case-studies/federfarma",
   },
   {
+    sector: "Energy / CRM",
+    title: "Sorgenia — Dynamics Marketing",
+    summary:
+      "Dynamics 365 Marketing implementation for Italy's leading green energy provider. Customer journey orchestration and campaign automation at scale.",
+    metrics: ["200k+ contacts managed", "D365 Marketing", "Multi-channel journeys"],
+    href: "/case-studies/sorgenia",
+  },
+  {
+    sector: "FMCG / Enterprise Programme",
+    title: "Nespresso Intervallo — ATOS",
+    summary:
+      "Multi-stream programme across Dynamics F&O, custom backend, and IoT frontend. ~40-person delivery managed across three parallel workstreams.",
+    metrics: ["~40 people managed", "3 parallel streams", "F&O + IoT + Backend"],
+    href: "/case-studies/nespresso",
+  },
+  {
     sector: "Healthcare / Applied AI",
     title: "HumanIA Care — AI Senior Companion",
     summary:
@@ -105,6 +121,14 @@ const caseStudies = [
       "From ERP silos to ACID data lakehouse. Synapse Link to Apache Iceberg. Zero-ETL. Event-driven.",
     metrics: ["Zero downtime", "ACID lakehouse", "Zero-ETL live"],
     href: "/case-studies/dynamics-data",
+  },
+  {
+    sector: "Multi-sector / CRM",
+    title: "Dynamics CRM Implementations",
+    summary:
+      "Multiple Dynamics 365 Sales and Customer Service rollouts across banking, insurance, and industrial clients — including Banco Mediolanum, Unipol, and illimity.",
+    metrics: ["5+ CRM rollouts", "Banking & Insurance", "Enterprise scale"],
+    href: "/case-studies/dynamics-crm",
   },
 ];
 

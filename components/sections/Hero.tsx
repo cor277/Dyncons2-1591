@@ -38,8 +38,8 @@ export function Hero() {
             animate="visible"
             className="font-syne text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#E6EDF3] leading-[1.08] tracking-tight mb-6"
           >
-            The sovereign AI platform Italy&apos;s healthcare and pharma{" "}
-            <span className="text-[#00B4D8] glow-cyan-text">already run in production.</span>
+            Sovereign AI infrastructure for{" "}
+            <span className="text-[#00B4D8] glow-cyan-text">enterprises that own their data.</span>
           </motion.h1>
 
           {/* Body */}
@@ -51,7 +51,8 @@ export function Hero() {
             className="text-[#7D8FA3] text-lg md:text-xl max-w-2xl leading-relaxed mb-10"
           >
             Nexus MDS Core — 16 orchestrated services. Self-hosted. GDPR-ready.
-            Zero hyperscaler dependency. Already in production at Federfarma Lombardia.
+            Zero hyperscaler dependency. From healthcare and pharma to energy and enterprise CRM.
+            Already in production.
           </motion.p>
 
           {/* CTAs */}

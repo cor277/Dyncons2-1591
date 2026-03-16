@@ -26,6 +26,32 @@ const cases = [
     ],
   },
   {
+    slug: "sorgenia",
+    client: "Sorgenia",
+    tag: "Energy · CRM · Marketing Automation",
+    headline: "Dynamics 365 Marketing for Italy's leading green energy provider",
+    summary:
+      "Customer journey orchestration and multi-channel campaign automation for 200k+ contacts. Real-time event triggers from billing and consumption data integrated with Dynamics CRM.",
+    metrics: [
+      { value: "200k+", label: "Contacts managed" },
+      { value: "Multi-channel", label: "Journey orchestration" },
+      { value: "Real-time", label: "Event-driven triggers" },
+    ],
+  },
+  {
+    slug: "nespresso",
+    client: "Nespresso (via ATOS)",
+    tag: "FMCG · Enterprise Programme · IoT",
+    headline: "Nespresso Intervallo — multi-stream enterprise programme",
+    summary:
+      "Programme leadership across Dynamics F&O, custom backend services, and IoT-enabled frontend for Nespresso's Italian B2B operations. ~40-person delivery managed across three parallel workstreams.",
+    metrics: [
+      { value: "~40", label: "People managed" },
+      { value: "3 streams", label: "Parallel workstreams" },
+      { value: "F&O + IoT", label: "Technology scope" },
+    ],
+  },
+  {
     slug: "humania-care",
     client: "HumanIA Care",
     tag: "Applied AI · Healthcare",
@@ -51,6 +77,19 @@ const cases = [
       { value: "12 wk", label: "Go-live timeline" },
     ],
   },
+  {
+    slug: "dynamics-crm",
+    client: "Banking & Insurance CRM",
+    tag: "Multi-sector · CRM · Customer Engagement",
+    headline: "Dynamics 365 CRM — banking, insurance & enterprise",
+    summary:
+      "Multiple Dynamics 365 Sales and Customer Service rollouts for Banco Mediolanum, Unipol, illimity, and industrial clients. Sector-specific workflows, compliance integration, and enterprise scale.",
+    metrics: [
+      { value: "5+", label: "CRM implementations" },
+      { value: "Banking & Insurance", label: "Core sectors" },
+      { value: "Enterprise", label: "Scale" },
+    ],
+  },
 ];
 
 export default function CaseStudiesPage() {
@@ -68,8 +107,8 @@ export default function CaseStudiesPage() {
               Outcomes, not slide decks
             </h1>
             <p className="text-lg text-[#7D8FA3] max-w-2xl mx-auto">
-              Every engagement we take on is measured by business impact. Here are three that
-              illustrate what we deliver — and how we think.
+              Every engagement we take on is measured by business impact. From healthcare and
+              pharma to energy, FMCG, banking, and enterprise CRM — here is how we deliver.
             </p>
           </div>
         </section>

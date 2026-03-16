@@ -28,11 +28,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dynamicsconsulting.it"),
   title: {
-    default: "Dynamics Consulting | Sovereign AI Infrastructure for Healthcare & Pharma Italy",
+    default: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
     template: "%s | Dynamics Consulting",
   },
   description:
-    "We build on-premise AI platforms for healthcare and pharma organisations that cannot afford data sovereignty risk. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant. Already in production at Federfarma Lombardia.",
+    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
   keywords: [
     "AI Solution Architect",
     "Sovereign AI Italy",
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.dynamicsconsulting.it",
     siteName: "Dynamics Consulting",
-    title: "Dynamics Consulting | Sovereign AI Infrastructure for Healthcare & Pharma Italy",
+    title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
     description:
-      "We build on-premise AI platforms for healthcare and pharma organisations that cannot afford data sovereignty risk. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant. Already in production at Federfarma Lombardia.",
+      "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
     images: [
       {
         url: "/og-image.png",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dynamics Consulting | Sovereign AI Infrastructure for Healthcare & Pharma Italy",
+    title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
     description:
       "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
     images: ["/og-image.png"],
