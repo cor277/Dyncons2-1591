@@ -108,6 +108,12 @@ export default function IatpCaseStudy() {
                 ingested codebase.
               </p>
               <p className="mt-4">
+                As the analysis progressed and new documents were generated, the platform&apos;s
+                AI-driven obsolescence engine automatically tracked which earlier analysis artifacts
+                were superseded by newer, more complete versions — maintaining an obsolescence graph
+                so the development team always worked from the most current understanding of the system.
+              </p>
+              <p className="mt-4">
                 What would have taken a team of analysts months was produced in days, with
                 traceability back to the source code for every claim in every document.
               </p>

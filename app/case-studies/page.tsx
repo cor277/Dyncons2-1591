@@ -15,14 +15,14 @@ const cases = [
   {
     slug: "federfarma",
     client: "Federfarma Lombardia",
-    tag: "Enterprise Integration · Cloud",
-    headline: "National pharmacy data network — real-time at scale",
+    tag: "Pharmaceutical · Sovereign AI · Nexus MDS Core",
+    headline: "AI RAG platform for 1,000+ pharmacies — entirely on Nexus MDS Core",
     summary:
-      "Event-driven integration platform connecting thousands of pharmacies across Italy, delivering real-time stock, prescription, and reporting data to regulators and operators.",
+      "RAG pipeline on 10,000+ pharmaceutical documents with Weaviate, on-premise LLM, Budibase PWA, and Keycloak Zero-Trust auth. Self-hosted on a single server, zero cloud dependency.",
     metrics: [
-      { value: "6,000+", label: "Pharmacies connected" },
-      { value: "<200ms", label: "P99 latency" },
-      { value: "99.99%", label: "Uptime SLA" },
+      { value: "1,000+", label: "Pharmacies served" },
+      { value: "10,000+", label: "Docs vectorised" },
+      { value: "On-premise", label: "Zero cloud dependency" },
     ],
   },
   {

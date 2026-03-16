@@ -86,8 +86,8 @@ const caseStudies = [
     sector: "Pharmaceutical / Healthcare",
     title: "Federfarma Lombardia",
     summary:
-      "RAG pipeline on pharmaceutical documents with Zero-Trust auth in production on Nexus MDS Core.",
-    metrics: [">10,000 docs vectorised", "Zero-Trust auth", "PWA mobile"],
+      "RAG pipeline on 10,000+ pharmaceutical documents for 1,000+ pharmacies. Budibase PWA, Keycloak Zero-Trust, on-premise LLM. Entirely on Nexus MDS Core.",
+    metrics: ["1,000+ pharmacies", "10,000+ docs vectorised", "Fully on-premise"],
     href: "/case-studies/federfarma",
   },
   {
