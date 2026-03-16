@@ -17,9 +17,9 @@ export function ChatbotWidget() {
     return () => clearTimeout(timer);
   }, [showBadge]);
 
-  // Lock body scroll when popup is open
+  // Lock body scroll on mobile when popup is open
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && window.innerWidth < 640) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -79,13 +79,13 @@ export function ChatbotWidget() {
         </button>
       </div>
 
-      {/* Popup Overlay */}
+      {/* Popup — anchored bottom-right on desktop, fullscreen on mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-[10000] sm:inset-auto sm:bottom-24 sm:right-6 sm:bg-transparent bg-black/50 sm:backdrop-blur-none backdrop-blur-sm"
           onClick={(e) => { if (e.target === e.currentTarget) closeChat(); }}
         >
-          <div className="relative w-full h-full sm:w-[400px] sm:h-[600px] sm:rounded-2xl overflow-hidden bg-[#0D1117] border border-[#30363D] sm:shadow-[0_0_60px_rgba(0,180,216,0.15)] flex flex-col">
+          <div className="relative w-full h-full sm:w-[440px] sm:h-[680px] sm:rounded-2xl overflow-hidden bg-[#0D1117] border border-[#30363D] sm:shadow-[0_0_60px_rgba(0,180,216,0.2)] flex flex-col">
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 bg-[#161B22] border-b border-[#30363D] shrink-0">
               <div className="flex items-center gap-2.5">
