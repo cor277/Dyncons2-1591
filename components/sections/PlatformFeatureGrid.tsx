@@ -55,7 +55,7 @@ export function PlatformFeatureGrid() {
         <div className="mb-12">
           <SectionHeader
             eyebrow="Architecture"
-            title="~16 servizi orchestrati"
+            title="~16 orchestrated services"
             subtitle="Every component is designed for GDPR-compliant and AI Act-ready environments. No public cloud dependencies."
           />
         </div>
