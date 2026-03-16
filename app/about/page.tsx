@@ -4,9 +4,9 @@ import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "About | Dynamics Consulting",
+  title: "Corrado Patierno — AI Solution Architect Italy",
   description:
-    "Dynamics Consulting is a Milan-based AI and technology consultancy founded by Corrado Patierno. We build sovereign, on-premise AI infrastructure for healthcare, pharma, and enterprise clients across Italy and Europe.",
+    "25+ years in enterprise systems. MISE Innovation Manager. Author of Logistica Fluida. Building sovereign AI infrastructure for Italy's healthcare and pharma mid-market since 2019.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/about" },
 };
 

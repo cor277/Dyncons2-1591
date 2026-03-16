@@ -5,17 +5,25 @@ import { motion, useInView } from "framer-motion";
 const stats = [
   { value: 16, suffix: "+", label: "Docker Services in Nexus MDS Core" },
   { value: 10000, suffix: "+", label: "Pharmaceutical documents processed" },
-  { value: 5, suffix: "+", label: "Enterprise sectors served" },
-  { value: 3, suffix: "", label: "Healthcare platforms deployed" },
+  { value: 6, suffix: "+", label: "Enterprise sectors served" },
+  { value: 2, suffix: "", label: "Healthcare platforms deployed" },
 ];
 
+function formatNumber(n: number) {
+  return n.toLocaleString("en-US");
+}
+
 function Counter({ target, suffix }: { target: number; suffix: string }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(target);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
 
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || hasAnimated) return;
+    setHasAnimated(true);
+    // Reset to 0 briefly then animate up
+    setCount(0);
     const duration = 1400;
     const step = target / (duration / 16);
     let current = 0;
@@ -29,11 +37,11 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
       }
     }, 16);
     return () => clearInterval(timer);
-  }, [inView, target]);
+  }, [inView, target, hasAnimated]);
 
   return (
     <span ref={ref}>
-      {count.toLocaleString("en-US")}
+      {formatNumber(count)}
       {suffix}
     </span>
   );

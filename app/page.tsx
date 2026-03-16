@@ -12,11 +12,12 @@ import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { PillarsSection } from "@/components/sections/PillarsSection";
+import { DigitalTwinSection } from "@/components/sections/DigitalTwinSection";
 
 export const metadata: Metadata = {
-  title: "Dynamics Consulting | AI Solution Architect Italy",
+  title: "Dynamics Consulting | Sovereign AI Infrastructure for Healthcare & Pharma Italy",
   description:
-    "We design AI-ready infrastructure, data platforms, and multi-agent systems for enterprise clients in healthcare, pharma, and regulated industries. GDPR, AI Act, Zero-Trust. Nexus MDS Core.",
+    "We build on-premise AI platforms for healthcare and pharma organisations that cannot afford data sovereignty risk. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant. Already in production at Federfarma Lombardia.",
   alternates: { canonical: "https://www.dynamicsconsulting.it" },
 };
 
@@ -76,18 +77,11 @@ const services = [
       "Solidity smart contracts on Polygon, DeFi AMM, event-sourced microservices on Kubernetes.",
     techBadges: ["Polygon", "Solidity", "EventStoreDB"],
     ctaHref: "/services/blockchain",
+    subdued: true,
   },
 ];
 
 const caseStudies = [
-  {
-    sector: "Healthcare / Applied AI",
-    title: "HumanIA Care — AI Senior Companion",
-    summary:
-      "On-premise AI companion for elderly patients. Multi-agent architecture with RAG, GDPR-compliant data pipeline, and voice interaction layer. Built on Nexus MDS Core.",
-    metrics: ["50k+ active users", "94% satisfaction", "On-premise sovereign AI"],
-    href: "/case-studies/humania-care",
-  },
   {
     sector: "Pharmaceutical / Healthcare",
     title: "Federfarma Lombardia",
@@ -95,6 +89,14 @@ const caseStudies = [
       "RAG pipeline on pharmaceutical documents with Zero-Trust auth in production on Nexus MDS Core.",
     metrics: [">10,000 docs vectorised", "Zero-Trust auth", "PWA mobile"],
     href: "/case-studies/federfarma",
+  },
+  {
+    sector: "Healthcare / Applied AI",
+    title: "HumanIA Care — AI Senior Companion",
+    summary:
+      "AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core.",
+    metrics: ["Multi-agent RAG + Voice", "GDPR-compliant on-premise", "16 Nexus services"],
+    href: "/case-studies/humania-care",
   },
   {
     sector: "Manufacturing / ERP",
@@ -133,7 +135,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Section 5 — Case Studies Preview */}
+      {/* Section 5 — Digital Twin */}
+      <DigitalTwinSection />
+      {/* Section 6 — Case Studies Preview */}
       <section className="py-20 md:py-28 bg-[#0D1117]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">

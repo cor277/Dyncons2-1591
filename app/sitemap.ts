@@ -22,6 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/research`, priority: 0.7, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/contact`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/privacy`, priority: 0.3, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/it/ai-sanitaria-on-premise`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/it/consulenza-ai-farmaceutico`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/it/sovereign-ai-italia`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/research/legge-132-2025`, priority: 0.7, changeFrequency: "yearly" as const },
   ];
   return staticRoutes.map((route) => ({
     url: route.url,

@@ -53,6 +53,14 @@ const posts = [
       "Applying RAG and multi-agent workflows to reconstruct functional and architectural knowledge from large legacy codebases. What works, what does not, and what traceability requirements actually look like.",
   },
   {
+    slug: "/research/legge-132-2025",
+    date: "October 2025",
+    tag: "AI Governance",
+    title: "Legge 132/2025 e AI in sanità: cosa cambia per ospedali, farmacie e aziende farmaceutiche",
+    summary:
+      "La Legge n. 132 del 23 settembre 2025 è la prima normativa organica italiana sull'intelligenza artificiale. Per le organizzazioni in ambito sanitario e farmaceutico, introduce obblighi specifici su governance, data residency e uso secondario dei dati.",
+  },
+  {
     slug: "#",
     date: "October 2025",
     tag: "Enterprise Integration",

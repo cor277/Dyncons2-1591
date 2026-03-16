@@ -13,19 +13,6 @@ export const metadata: Metadata = {
 
 const cases = [
   {
-    slug: "humania-care",
-    client: "HumanIA Care",
-    tag: "Applied AI · Healthcare",
-    headline: "AI-powered digital companion for elderly patients — from concept to production",
-    summary:
-      "Conversational AI and personalisation infrastructure purpose-built for elderly users: fine-tuned speech recognition, RAG-based responses, and privacy-first architecture deployed at scale.",
-    metrics: [
-      { value: "50k+", label: "Active users" },
-      { value: "94%", label: "Satisfaction score" },
-      { value: "6 mo", label: "Time to market" },
-    ],
-  },
-  {
     slug: "federfarma",
     client: "Federfarma Lombardia",
     tag: "Enterprise Integration · Cloud",
@@ -39,12 +26,25 @@ const cases = [
     ],
   },
   {
+    slug: "humania-care",
+    client: "HumanIA Care",
+    tag: "Applied AI · Healthcare",
+    headline: "AI companion architecture for elderly patients — privacy-first, sovereign deployment",
+    summary:
+      "Multi-agent AI architecture with RAG, voice, and memory layers. Purpose-built for regulated care environments on Nexus MDS Core. Designed for scale — not yet in public rollout.",
+    metrics: [
+      { value: "6 mo", label: "Time to production" },
+      { value: "Multi-agent", label: "RAG + Voice + Memory" },
+      { value: "100%", label: "GDPR-compliant pipeline" },
+    ],
+  },
+  {
     slug: "dynamics-data",
     client: "Manufacturing Group",
     tag: "Microsoft Dynamics · Data Platforms",
-    headline: "Dynamics 365 + unified data platform for a multi-site manufacturer",
+    headline: "Dynamics 365 F&O + unified data lakehouse for a multi-site manufacturer",
     summary:
-      "Full ERP migration from legacy Navision to Dynamics 365 Business Central, combined with a cloud data warehouse and Power BI dashboards giving management real-time plant visibility.",
+      "Full ERP migration from legacy systems to Dynamics 365 Finance & Operations, combined with a Synapse Link data lakehouse and Power BI dashboards giving management real-time plant visibility.",
     metrics: [
       { value: "4 sites", label: "Unified on one platform" },
       { value: "60%", label: "Reporting time saved" },

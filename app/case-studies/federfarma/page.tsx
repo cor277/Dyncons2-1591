@@ -6,10 +6,10 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Federfarma — National Pharmacy Network | Case Studies | Dynamics Consulting",
+  title: "Federfarma Lombardia — AI RAG Platform on Nexus MDS Core | Case Study",
   description:
-    "How Dynamics Consulting built an event-driven integration platform connecting 6,000+ Italian pharmacies with sub-200ms latency and 99.99% uptime.",
-  alternates: { canonical: "https://dynamicsconsulting.it/case-studies/federfarma" },
+    "RAG pipeline on pharmaceutical documents. Zero-Trust auth in production. 10,000+ docs vectorised. PWA mobile. Built on Nexus MDS Core for Federfarma Lombardia.",
+  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/federfarma" },
 };
 
 const tech = [

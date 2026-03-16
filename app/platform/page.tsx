@@ -10,14 +10,14 @@ import { PlatformFeatureGrid } from "@/components/sections/PlatformFeatureGrid";
 import { PlatformHero } from "@/components/sections/PlatformHero";
 
 export const metadata: Metadata = {
-  title: "Nexus MDS Core — Enterprise AI Platform",
+  title: "Nexus MDS Core | On-premise Enterprise AI Platform",
   description:
-    "The enterprise self-hosted AI platform. ~16 orchestrated Docker services. GDPR-ready. Zero-Trust. Deployable on Kubernetes or bare-metal.",
+    "16 orchestrated Docker services. Self-hosted LLM, RAG pipeline, Zero-Trust auth, workflow engine. GDPR-ready and AI Act compliant. Built for healthcare and pharma. Request a demo.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/platform" },
   openGraph: {
-    title: "Nexus MDS Core | Dynamics Consulting",
+    title: "Nexus MDS Core | On-premise Enterprise AI Platform | Dynamics Consulting",
     description:
-      "Enterprise AI platform self-hosted. 16 Docker services. GDPR, AI Act, ISO 27001 Ready.",
+      "16 orchestrated Docker services. Self-hosted LLM, RAG pipeline, Zero-Trust auth, workflow engine. GDPR-ready and AI Act compliant. Built for healthcare and pharma.",
   },
 };
 
@@ -46,7 +46,7 @@ const useCases = [
   {
     title: "Healthcare & Pharma",
     description:
-      "RAG pipeline on clinical and pharmaceutical documents. GDPR-compliant authentication. Already in production for Federfarma Lombardia and CureSicure.",
+      "RAG pipeline on clinical and pharmaceutical documents. GDPR-compliant authentication. Already in production for Federfarma Lombardia and CureSicure — healthcare portal with live patient data integration across Italian clinical sources including PNE-AGENAS, SDO/NSIS, and Ministry of Health Open Data.",
     badges: ["GDPR", "OCR Pipeline", "Vector Search"],
   },
   {

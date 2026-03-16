@@ -74,7 +74,7 @@ export function NavBar() {
             href="/contact"
             className="hidden md:inline-flex items-center px-4 py-2 bg-[#00B4D8] text-[#0D1117] rounded-lg text-sm font-semibold hover:bg-[#00c8f0] transition-all duration-200 shadow-[0_0_15px_rgba(0,180,216,0.3)]"
           >
-            Let&apos;s talk →
+            Request a Nexus demo →
           </Link>
 
           {/* Mobile hamburger */}
@@ -112,7 +112,7 @@ export function NavBar() {
                 onClick={() => setMobileOpen(false)}
                 className="mt-3 text-center px-4 py-3 bg-[#00B4D8] text-[#0D1117] rounded-lg text-sm font-semibold"
               >
-                Let&apos;s talk →
+                Request a Nexus demo →
               </Link>
             </div>
           </motion.div>

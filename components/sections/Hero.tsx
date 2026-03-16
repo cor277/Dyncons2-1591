@@ -36,12 +36,10 @@ export function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="font-syne text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#E6EDF3] leading-[1.05] tracking-tight mb-6"
+            className="font-syne text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#E6EDF3] leading-[1.08] tracking-tight mb-6"
           >
-            Where AI meets <br />
-            <span className="text-[#00B4D8] glow-cyan-text">Enterprise</span>
-            <br />
-            Architecture
+            The sovereign AI platform Italy&apos;s healthcare and pharma{" "}
+            <span className="text-[#00B4D8] glow-cyan-text">already run in production.</span>
           </motion.h1>
 
           {/* Body */}
@@ -52,8 +50,8 @@ export function Hero() {
             animate="visible"
             className="text-[#7D8FA3] text-lg md:text-xl max-w-2xl leading-relaxed mb-10"
           >
-            We design AI-ready infrastructure, data platforms, and multi-agent systems
-            for organisations that cannot afford to get it wrong.
+            Nexus MDS Core — 16 orchestrated services. Self-hosted. GDPR-ready.
+            Zero hyperscaler dependency. Already in production at Federfarma Lombardia.
           </motion.p>
 
           {/* CTAs */}
@@ -64,8 +62,26 @@ export function Hero() {
             animate="visible"
             className="flex flex-col sm:flex-row gap-4"
           >
-            <CTAButton label="Nexus MDS Core →" href="/platform" variant="primary" />
+            <CTAButton label="See Nexus in production →" href="/platform" variant="primary" />
             <CTAButton label="View services" href="/#services" variant="secondary" />
+          </motion.div>
+
+          {/* Chatbot callout */}
+          <motion.div
+            custom={4}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="mt-6"
+          >
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent("open-chatbot"))}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#161B22]/80 border border-[#30363D] hover:border-[#00B4D8] text-[#7D8FA3] hover:text-[#E6EDF3] text-sm transition-all duration-200 cursor-pointer"
+            >
+              <span className="text-base">💬</span>
+              <span>Digital Twin live — Ask Nexus anything about this platform</span>
+              <span className="text-[#00B4D8] animate-pulse">↘</span>
+            </button>
           </motion.div>
         </div>
       </div>

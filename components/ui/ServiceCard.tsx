@@ -30,6 +30,7 @@ interface ServiceCardProps {
   description: string;
   techBadges?: string[];
   ctaHref: string;
+  subdued?: boolean;
 }
 
 export function ServiceCard({
@@ -38,6 +39,7 @@ export function ServiceCard({
   description,
   techBadges = [],
   ctaHref,
+  subdued = false,
 }: ServiceCardProps) {
   const Icon = ICON_MAP[iconName] ?? Search;
 
@@ -45,7 +47,7 @@ export function ServiceCard({
     <motion.div
       whileHover={{ scale: 1.02, borderColor: "#00B4D8" }}
       transition={{ duration: 0.2 }}
-      className="group relative flex flex-col gap-4 bg-[#161B22] border border-[#30363D] rounded-xl p-6 cursor-pointer hover:border-[#00B4D8] transition-colors duration-200"
+      className={`group relative flex flex-col gap-4 bg-[#161B22] border border-[#30363D] rounded-xl p-6 cursor-pointer hover:border-[#00B4D8] transition-colors duration-200${subdued ? " opacity-60" : ""}`}
     >
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-lg bg-[rgba(0,180,216,0.08)] border border-[rgba(0,180,216,0.2)] flex items-center justify-center flex-shrink-0">

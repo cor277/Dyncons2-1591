@@ -6,21 +6,21 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dynamics 365 + Unified Data Platform | Case Studies | Dynamics Consulting",
+  title: "Dynamics 365 F&O + Unified Data Platform | Case Studies | Dynamics Consulting",
   description:
-    "ERP migration to Dynamics 365 Business Central and a cloud data warehouse for a multi-site manufacturer — 4 sites unified, 60% reporting time saved, 12-week go-live.",
-  alternates: { canonical: "https://dynamicsconsulting.it/case-studies/dynamics-data" },
+    "ERP migration to Dynamics 365 Finance & Operations and a cloud data lakehouse for a multi-site manufacturer — 4 sites unified, 60% reporting time saved, 12-week go-live.",
+  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/dynamics-data" },
 };
 
 const tech = [
-  "Dynamics 365 Business Central",
+  "Dynamics 365 Finance & Operations",
   "Power BI",
   "Power Automate",
   "Azure Data Factory",
   "Azure Synapse Analytics",
+  "Synapse Link",
+  "Azure Data Lake",
   "dbt",
-  "Azure SQL",
-  "AL Language",
   "Microsoft Fabric",
   "Terraform",
 ];
@@ -43,12 +43,12 @@ export default function DynamicsDataCaseStudy() {
               Microsoft Dynamics · Data Platforms
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Dynamics 365 + unified data platform for a multi-site manufacturer
+              Dynamics 365 F&O + unified data lakehouse for a multi-site manufacturer
             </h1>
             <p className="text-lg text-slate-300">
-              A four-site manufacturing group running aging Navision instances needed a modern ERP
-              and the real-time visibility to manage production, stock, and finance across all
-              locations from a single pane of glass.
+              A four-site manufacturing group running aging legacy ERP instances needed a modern
+              enterprise platform and the real-time visibility to manage production, stock, and
+              finance across all locations from a single pane of glass.
             </p>
           </div>
         </section>
@@ -75,7 +75,7 @@ export default function DynamicsDataCaseStudy() {
             <h2>The challenge</h2>
             <p>
               The client operated four manufacturing sites across northern Italy, each on a separate
-              Navision instance with local customisations accumulated over 15 years. Consolidating
+              legacy ERP instance with local customisations accumulated over 15 years. Consolidating
               financial results for month-end required a five-person team four days of manual
               reconciliation work. Plant managers had no real-time visibility into stock or
               production throughput — decisions were made on data that was at least 24 hours old.
@@ -84,26 +84,26 @@ export default function DynamicsDataCaseStudy() {
             <h2>What we built</h2>
             <p>
               We ran a two-week discovery to map all business processes, custom fields, and
-              third-party integrations across the four Navision instances, producing a full data
+              third-party integrations across the four legacy ERP instances, producing a full data
               lineage map and a risk-ranked migration backlog.
             </p>
             <p>
-              Business Central was deployed in a single multi-company configuration, with
-              site-specific manufacturing workflows configured in AL and a custom inter-company
-              posting engine built to handle the group's internal trading volume. Data migration
+              Dynamics 365 Finance &amp; Operations was deployed in a single multi-company
+              configuration, with site-specific manufacturing workflows and a custom inter-company
+              posting engine built to handle the group&apos;s internal trading volume. Data migration
               pipelines extracted, cleansed, and loaded ten years of transactional history with
               full reconciliation to legacy source totals.
             </p>
             <p>
-              In parallel, we built a cloud data platform on Azure Synapse Analytics with dbt
-              transformation models feeding a Power BI semantic layer. Live data feeds from Business
-              Central flowed through Azure Data Factory into the warehouse, meaning dashboards
-              reflected the current state of all four plants with a 15-minute refresh cadence.
+              In parallel, we built a cloud data lakehouse on Azure Synapse Analytics with Synapse
+              Link providing near-real-time data export from F&amp;O into Azure Data Lake. dbt
+              transformation models fed a Power BI semantic layer, meaning dashboards reflected
+              the current state of all four plants with a 15-minute refresh cadence.
             </p>
 
             <h2>Results</h2>
             <p>
-              All four sites went live on a single Business Central tenant in twelve weeks — on
+              All four sites went live on a single Dynamics 365 F&amp;O tenant in twelve weeks — on
               schedule and within budget. Month-end consolidation time dropped from four days to
               four hours. The Power BI dashboards gave plant managers real-time production, stock,
               and finance visibility for the first time, and the finance team reported a 60%

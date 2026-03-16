@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Microsoft Dynamics 365 | Dynamics Consulting",
   description:
-    "Implementation, customisation, and managed support for Microsoft Dynamics 365 Business Central, Sales, Customer Service, and Power Platform. Certified Microsoft partner.",
-  alternates: { canonical: "https://dynamicsconsulting.it/services/microsoft-dynamics" },
+    "Implementation, customisation, and managed support for Microsoft Dynamics 365 Finance & Operations, Sales, Customer Engagement, and Power Platform. Certified Microsoft partner.",
+  alternates: { canonical: "https://www.dynamicsconsulting.it/services/microsoft-dynamics" },
 };
 
 const faqSchema = {
@@ -17,7 +17,7 @@ const faqSchema = {
       name: "Which Dynamics 365 modules do you implement?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We cover Business Central (ERP), Sales, Customer Service, Field Service, and Marketing — plus the full Power Platform stack including Power Apps, Power Automate, and Power BI.",
+        text: "We cover Finance & Operations (F&O), Sales, Customer Service, Field Service, and Marketing — plus the full Power Platform stack including Power Apps, Power Automate, and Power BI.",
       },
     },
     {
@@ -25,7 +25,7 @@ const faqSchema = {
       name: "How long does a Dynamics 365 implementation take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A focused Business Central implementation for an SME typically runs 8–16 weeks. Larger multi-module rollouts are phased over 3–9 months. We always begin with a two-week discovery to nail down scope and de-risk the timeline.",
+        text: "A focused F&O implementation typically runs 12–24 weeks depending on scope. CRM rollouts are phased over 8–16 weeks. We always begin with a two-week discovery to nail down scope and de-risk the timeline.",
       },
     },
     {
@@ -51,9 +51,9 @@ export default function MicrosoftDynamicsPage() {
   return (
     <ServicePageLayout
       title="Microsoft Dynamics 365"
-      intro="As a certified Microsoft partner, we help mid-market and enterprise organisations unlock the full value of Dynamics 365 — from greenfield implementation and complex data migration to deep customisation, ISV integrations, and long-term managed support."
+      intro="As a certified Microsoft partner, we help mid-market and enterprise organisations unlock the full value of Dynamics 365 — from greenfield implementation and complex data migration to deep customisation, ISV integrations, and long-term managed support. Our primary focus is Finance & Operations (F&O) with complementary CRM (Sales/Customer Engagement) capabilities."
       tech={[
-        "Dynamics 365 Business Central",
+        "Dynamics 365 Finance & Operations",
         "Dynamics 365 Sales",
         "Dynamics 365 Customer Service",
         "Power Platform",
@@ -62,16 +62,16 @@ export default function MicrosoftDynamicsPage() {
         "Power Apps",
         "Azure Active Directory",
         "Azure Integration Services",
-        "AL Language",
+        "Synapse Link",
         "Dataverse",
         "Microsoft 365",
       ]}
       capabilities={[
         {
           iconName: "Layout",
-          name: "Business Central Implementation",
+          name: "F&O Implementation",
           desc:
-            "End-to-end ERP rollout covering finance, supply chain, manufacturing, and project management — configured for Italian fiscal and regulatory requirements from day one.",
+            "End-to-end Finance & Operations rollout covering finance, supply chain, manufacturing, and project management — configured for Italian fiscal and regulatory requirements from day one.",
         },
         {
           iconName: "TrendingUp",
@@ -81,9 +81,9 @@ export default function MicrosoftDynamicsPage() {
         },
         {
           iconName: "Code",
-          name: "Custom AL Development",
+          name: "Data Lakehouse on F&O",
           desc:
-            "Bespoke extensions built in AL language for Business Central, from custom reports and workflows to deep industry-specific functionality — all AppSource-quality code.",
+            "Synapse Link export from F&O into Azure Data Lake, dbt transformation models, and Power BI semantic layer — real-time analytics on ERP data without performance impact on the transactional system.",
         },
         {
           iconName: "Zap",
@@ -107,11 +107,11 @@ export default function MicrosoftDynamicsPage() {
       faqs={[
         {
           q: "Which Dynamics 365 modules do you implement?",
-          a: "We cover Business Central (ERP), Sales, Customer Service, Field Service, and Marketing — plus the full Power Platform stack including Power Apps, Power Automate, and Power BI.",
+          a: "We cover Finance & Operations (F&O), Sales, Customer Service, Field Service, and Marketing — plus the full Power Platform stack including Power Apps, Power Automate, and Power BI.",
         },
         {
           q: "How long does a Dynamics 365 implementation take?",
-          a: "A focused Business Central implementation for an SME typically runs 8–16 weeks. Larger multi-module rollouts are phased over 3–9 months. We always begin with a two-week discovery to nail down scope and de-risk the timeline.",
+          a: "A focused F&O implementation typically runs 12–24 weeks depending on scope. CRM rollouts are phased over 8–16 weeks. We always begin with a two-week discovery to nail down scope and de-risk the timeline.",
         },
         {
           q: "Do you provide post-go-live support?",

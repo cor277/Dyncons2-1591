@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Syne, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { PrivacyBanner } from "@/components/ui/PrivacyBanner";
+import { ChatbotWidget } from "@/components/ChatbotWidget";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -27,15 +28,15 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dynamicsconsulting.it"),
   title: {
-    default: "Dynamics Consulting | AI Solution Architect Italy",
+    default: "Dynamics Consulting | Sovereign AI Infrastructure for Healthcare & Pharma Italy",
     template: "%s | Dynamics Consulting",
   },
   description:
-    "We design AI-ready infrastructure, data platforms, and multi-agent systems for enterprise companies. GDPR, AI Act, Zero-Trust. Nexus MDS Core.",
+    "We build on-premise AI platforms for healthcare and pharma organisations that cannot afford data sovereignty risk. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant. Already in production at Federfarma Lombardia.",
   keywords: [
     "AI Solution Architect",
-    "Kubernetes Architect",
-    "Dynamics 365 Architect",
+    "Sovereign AI Italy",
+    "on-premise AI healthcare",
     "RAG architecture",
     "enterprise AI Italy",
     "GDPR AI compliance",
@@ -43,6 +44,8 @@ export const metadata: Metadata = {
     "agentic AI",
     "AI Act compliance",
     "Nexus MDS Core",
+    "pharmaceutical AI",
+    "healthcare AI infrastructure",
   ],
   authors: [{ name: "Corrado Patierno", url: "https://www.dynamicsconsulting.it" }],
   creator: "Corrado Patierno",
@@ -51,23 +54,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.dynamicsconsulting.it",
     siteName: "Dynamics Consulting",
-    title: "Dynamics Consulting | AI Solution Architect Italy",
+    title: "Dynamics Consulting | Sovereign AI Infrastructure for Healthcare & Pharma Italy",
     description:
-      "AI-ready infrastructure, data platforms, and multi-agent systems for enterprise. GDPR, AI Act, Zero-Trust.",
+      "We build on-premise AI platforms for healthcare and pharma organisations that cannot afford data sovereignty risk. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant. Already in production at Federfarma Lombardia.",
     images: [
       {
         url: "/og-image.png",
         width: 1400,
         height: 788,
-        alt: "Dynamics Consulting — Architecting the Future of AI & Enterprise Data",
+        alt: "Dynamics Consulting — Sovereign AI Infrastructure for Healthcare & Pharma",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dynamics Consulting | AI Solution Architect",
+    title: "Dynamics Consulting | Sovereign AI Infrastructure for Healthcare & Pharma Italy",
     description:
-      "AI-ready infrastructure, data platforms, and multi-agent systems for enterprise.",
+      "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -86,43 +89,91 @@ export const metadata: Metadata = {
 const schemaOrg = [
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Corrado Patierno",
-    jobTitle: "AI Solution Architect",
-    worksFor: { "@type": "Organization", name: "Dynamics Consulting" },
-    url: "https://www.dynamicsconsulting.it/about",
+    "@type": "Organization",
+    name: "Dynamics Consulting",
+    url: "https://www.dynamicsconsulting.it",
+    logo: "https://www.dynamicsconsulting.it/logo.jpg",
+    founder: {
+      "@type": "Person",
+      name: "Corrado Patierno",
+    },
+    foundingDate: "2019",
+    areaServed: ["IT", "EU"],
     knowsAbout: [
-      "Artificial Intelligence",
-      "Kubernetes",
-      "Dynamics 365",
-      "Data Architecture",
-      "GDPR",
-      "AI Act",
-      "Blockchain",
-      "Retrieval-Augmented Generation",
-      "Multi-Agent Systems",
+      "Sovereign AI Infrastructure",
+      "On-premise LLM deployment",
+      "Healthcare AI",
+      "Pharmaceutical AI",
+      "GDPR-compliant AI",
+      "AI Act compliance",
+      "RAG pipelines",
+      "Multi-agent systems",
+      "n8n orchestration",
+      "Docker enterprise AI stack",
     ],
+    description:
+      "Italian AI infrastructure consultancy specialising in sovereign, on-premise AI platforms for healthcare and pharma mid-market. Builders of Nexus MDS Core.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+39-340-725-3246",
+      contactType: "sales",
+      email: "info@dynamicsconsulting.it",
+    },
   },
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Dynamics Consulting",
-    founder: { "@type": "Person", name: "Corrado Patierno" },
-    address: { "@type": "PostalAddress", addressCountry: "IT" },
-    email: "info@dynamicsconsulting.it",
-    telephone: "+393407253246",
-    url: "https://www.dynamicsconsulting.it",
-    vatID: "10651160961",
+    "@type": "Person",
+    name: "Corrado Patierno",
+    jobTitle: "AI Solution Architect & Founder",
+    worksFor: {
+      "@type": "Organization",
+      name: "Dynamics Consulting",
+    },
     knowsAbout: [
-      "Applied AI",
+      "Enterprise AI Architecture",
+      "Sovereign AI",
+      "Healthcare AI Infrastructure",
+      "On-premise LLM",
+      "RAG Systems",
+      "n8n agentic workflows",
       "Kubernetes",
-      "Dynamics 365",
-      "RAG",
-      "Zero-Trust Security",
-      "Enterprise Integration",
-      "Data Lakehouse",
-      "Blockchain",
+      "Zero-Trust security",
+      "Microsoft Dynamics 365",
     ],
+    sameAs: [
+      "https://www.linkedin.com/in/corradopatierno",
+      "https://amzn.eu/d/06ZlECJe",
+    ],
+    author: {
+      "@type": "Book",
+      name: "Logistica Fluida",
+      datePublished: "2026",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Nexus MDS Core",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Linux, Kubernetes, Docker",
+    description:
+      "Enterprise self-hosted AI platform. ~16 orchestrated Docker services including LLM inference, RAG pipeline, Zero-Trust auth, vector search, workflow engine, and observability stack. GDPR-ready and AI Act compliant. Designed for healthcare, pharma, and regulated industries.",
+    creator: {
+      "@type": "Organization",
+      name: "Dynamics Consulting",
+    },
+    featureList: [
+      "On-premise LLM inference (vLLM)",
+      "RAG pipeline with Weaviate",
+      "Zero-Trust auth with Keycloak OIDC/PKCE",
+      "n8n agentic workflow engine",
+      "MinIO S3-compatible storage",
+      "GDPR-compliant data pipeline",
+      "AI Act ready",
+      "EU data residency",
+      "Kubernetes and bare-metal deployable",
+    ],
+    url: "https://www.dynamicsconsulting.it/platform",
   },
 ];
 
@@ -144,6 +195,7 @@ export default function RootLayout({
       </head>
       <body className="font-dm bg-[#0D1117] text-[#E6EDF3] antialiased">
         {children}
+        <ChatbotWidget />
         <PrivacyBanner />
       </body>
     </html>

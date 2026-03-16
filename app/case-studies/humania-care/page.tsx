@@ -8,7 +8,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "HumanIA Care — AI Senior Companion | Case Studies | Dynamics Consulting",
   description:
-    "How Dynamics Consulting built the AI backbone of HumanIA Care digital companion for elderly patients, reaching 50,000+ active users with a 94% satisfaction score in six months.",
+    "An AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core. Multi-agent RAG + Voice + Memory architecture.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/humania-care" },
 };
 
@@ -29,26 +29,27 @@ export default function HumaniaCareStudy() {
             </Link>
             <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">Applied AI · Healthcare</p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#E6EDF3]">
-              AI-powered digital companion for elderly patients
+              AI companion architecture for elderly patients
             </h1>
             <p className="text-lg text-[#7D8FA3]">
-              HumanIA Care is a healthcare technology platform designed to make digital interaction
-              accessible for elderly users. We built the conversational AI and personalisation layer
-              that makes it feel natural, trustworthy, and clinically appropriate.
+              An AI companion architecture for elderly patients, purpose-built for
+              privacy-first deployment in regulated care environments. Built on Nexus MDS Core.
+              Designed for scale — not yet in public rollout.
             </p>
           </div>
         </section>
 
         <section className="border-b border-[#30363D] bg-[#161B22]">
-          <div className="max-w-3xl mx-auto px-6 py-10 grid grid-cols-3 gap-8 text-center">
+          <div className="max-w-3xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "50k+", label: "Active users" },
-              { value: "94%", label: "Satisfaction score" },
-              { value: "6 mo", label: "Time to market" },
+              { value: "6 mo", label: "Time to production" },
+              { value: "Multi-agent", label: "RAG + Voice + Memory architecture" },
+              { value: "100%", label: "GDPR-compliant data pipeline" },
+              { value: "16 services", label: "Nexus MDS Core modules orchestrated" },
             ].map((m) => (
               <div key={m.label}>
-                <div className="text-3xl font-bold text-[#E6EDF3]">{m.value}</div>
-                <div className="text-sm text-[#7D8FA3] mt-1">{m.label}</div>
+                <div className="text-2xl md:text-3xl font-bold text-[#E6EDF3]">{m.value}</div>
+                <div className="text-xs md:text-sm text-[#7D8FA3] mt-1">{m.label}</div>
               </div>
             ))}
           </div>
@@ -68,31 +69,34 @@ export default function HumaniaCareStudy() {
               <p className="mt-4">
                 Healthcare context added a further constraint: every response had to be grounded,
                 auditable, and consistent with clinical guidelines. Hallucinated content was not
-                an acceptable failure mode.
+                an acceptable failure mode. Sovereign deployment — with zero cloud dependency — was
+                a non-negotiable requirement from the start.
               </p>
             </div>
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">What we built</h2>
               <p>
-                We designed a multi-layer AI architecture with a fine-tuned speech recognition model
+                We designed a multi-agent AI architecture with a fine-tuned speech recognition model
                 optimised for elderly vocal patterns. On top of this we deployed a retrieval-augmented
                 generation system using LangChain and Weaviate, grounded in curated, clinically
                 reviewed knowledge. A personalisation engine adapted response style, length, and
-                vocabulary for each user over time.
+                vocabulary for each user over time. The entire system runs as a multi-agent pipeline
+                with RAG, voice, and memory layers orchestrated across 16 Nexus MDS Core services.
               </p>
               <p className="mt-4">
                 Privacy was built in from day one: all personal data anonymised at ingestion, full
-                GDPR compliance, and end-to-end audit logging. The system was deployed on-premise
-                with containerised Kubernetes workloads, keeping response latency under 800ms at
-                the 99th percentile even on mobile connections.
+                GDPR-compliant data pipeline, and end-to-end audit logging. The system was deployed
+                on-premise with containerised Kubernetes workloads and zero cloud dependency, keeping
+                response latency under 800ms at the 99th percentile even on mobile connections.
               </p>
             </div>
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Results</h2>
               <p>
-                Six months from first commit to production launch, the platform reached 50,000 active
-                users with a 94% satisfaction rate. The RAG architecture eliminated hallucinated
-                clinical advice entirely, achieving zero documented incidents in the first year.
+                Six months from first commit to production-ready architecture. The RAG architecture
+                eliminated hallucinated clinical advice entirely, achieving zero documented incidents
+                in testing. The platform is designed for scale in regulated care environments and is
+                currently in controlled deployment — not yet in public rollout.
               </p>
             </div>
             <div>

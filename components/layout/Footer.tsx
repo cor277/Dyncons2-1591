@@ -9,7 +9,6 @@ const services = [
   { label: "Enterprise Integration & API", href: "/services/enterprise-integration" },
   { label: "Microsoft & Dynamics 365", href: "/services/microsoft-dynamics" },
   { label: "Process & Hyper-Automation", href: "/services/automation" },
-  { label: "Blockchain & Web3", href: "/services/blockchain" },
 ];
 
 const legal = [
@@ -47,7 +46,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-[#7D8FA3] text-sm leading-relaxed mb-4">
-              Architecting the Future of AI &amp; Enterprise Data
+              Sovereign AI Infrastructure for Healthcare &amp; Pharma · Italy
             </p>
             <p className="text-[#7D8FA3] text-xs font-mono">P.IVA: 10651160961</p>
           </div>
@@ -129,7 +128,25 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-[#30363D] flex flex-col sm:flex-row justify-between items-center gap-4">
+        {/* Italian resources */}
+        <div className="mt-10 pt-8 border-t border-[#30363D]">
+          <h4 className="font-dm font-semibold text-[#E6EDF3] text-xs uppercase tracking-widest mb-3">
+            Risorse in italiano
+          </h4>
+          <div className="flex flex-wrap gap-x-6 gap-y-1">
+            <Link href="/it/ai-sanitaria-on-premise" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              AI On-Premise per la Sanità
+            </Link>
+            <Link href="/it/consulenza-ai-farmaceutico" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              Consulenza AI Farmaceutico
+            </Link>
+            <Link href="/it/sovereign-ai-italia" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              Sovereign AI Italia
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-[#30363D] flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-[#7D8FA3] text-[10px] sm:text-xs font-mono text-center sm:text-left">
             © {new Date().getFullYear()} Dynamics Consulting — Corrado Patierno — P.IVA 10651160961
           </p>
