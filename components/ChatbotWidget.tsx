@@ -123,7 +123,7 @@ export function ChatbotWidget() {
               src="https://public.dynamicsconsulting.it"
               title="Nexus Digital Twin"
               className="flex-1 w-full border-0"
-              allow="microphone"
+              allow="microphone; camera; clipboard-write; fullscreen"
             />
           </div>
         </div>

@@ -18,7 +18,7 @@
         },
         {
           "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=()"
+          "value": "camera=(self \"https://public.dynamicsconsulting.it\"), microphone=(self \"https://public.dynamicsconsulting.it\"), geolocation=()"
         },
         {
           "key": "Strict-Transport-Security",
