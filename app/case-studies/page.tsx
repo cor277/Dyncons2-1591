@@ -13,6 +13,19 @@ export const metadata: Metadata = {
 
 const cases = [
   {
+    slug: "logitrack",
+    client: "LogiTrack",
+    tag: "Logistics · RFID · AI · Traceability",
+    headline: "RFID & AI-powered traceability for warehouse, production and shipping",
+    summary:
+      "Cloud-native platform combining RFID UHF for real-time warehouse and production tracking with NFC for post-sale authentication. AI anomaly detection, blockchain certification, edge computing, and deep SAP/Power Platform integration.",
+    metrics: [
+      { value: "99.5%", label: "Shipping error reduction" },
+      { value: "20×", label: "Faster inventories" },
+      { value: "End-to-end", label: "Item-level traceability" },
+    ],
+  },
+  {
     slug: "federfarma",
     client: "Federfarma Lombardia",
     tag: "Pharmaceutical · Sovereign AI · Nexus MDS Core",

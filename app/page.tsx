@@ -83,6 +83,14 @@ const services = [
 
 const caseStudies = [
   {
+    sector: "Logistics / RFID / AI",
+    title: "LogiTrack — RFID & AI Traceability",
+    summary:
+      "Cloud-native platform combining RFID UHF for warehouse and production tracking with NFC for post-sale authentication. AI anomaly detection, blockchain certification, and SAP/Power Platform integration.",
+    metrics: ["99.5% fewer shipping errors", "20× faster inventories", "End-to-end traceability"],
+    href: "/case-studies/logitrack",
+  },
+  {
     sector: "Pharmaceutical / Healthcare",
     title: "Federfarma Lombardia",
     summary:
