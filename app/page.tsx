@@ -7,12 +7,12 @@ import { ClientStrip } from "@/components/sections/ClientStrip";
 import { Stats } from "@/components/sections/Stats";
 import { BookCallout } from "@/components/sections/BookCallout";
 import { CTASection } from "@/components/sections/CTASection";
-import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { PillarsSection } from "@/components/sections/PillarsSection";
 import { DigitalTwinSection } from "@/components/sections/DigitalTwinSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
 
 export const metadata: Metadata = {
   title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
@@ -20,66 +20,6 @@ export const metadata: Metadata = {
     "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
   alternates: { canonical: "https://www.dynamicsconsulting.it" },
 };
-
-const services = [
-  {
-    iconName: "Brain",
-    title: "Applied AI & Agentic Workflows",
-    description:
-      "We don't promise generic AI. We design multi-agent systems with memory, orchestration, and governance built in.",
-    techBadges: ["LLM", "Weaviate", "n8n", "vLLM"],
-    ctaHref: "/services/applied-ai",
-  },
-  {
-    iconName: "Cloud",
-    title: "Cloud & Kubernetes Architecture",
-    description:
-      "GPU clusters, Zero-Trust, self-hosted LLM in production. APISIX, Keycloak, OpenWhisk.",
-    techBadges: ["Kubernetes", "APISIX", "Keycloak"],
-    ctaHref: "/services/cloud-kubernetes",
-  },
-  {
-    iconName: "Database",
-    title: "Modern Data Platforms & RAG",
-    description:
-      "From ERP silos to ACID data lakehouses. Zero-ETL. Real-time. Apache Iceberg, Dremio.",
-    techBadges: ["Iceberg", "Dremio", "Weaviate"],
-    ctaHref: "/services/data-platforms",
-  },
-  {
-    iconName: "GitBranch",
-    title: "Enterprise Integration & API",
-    description:
-      "Legacy systems that finally talk to each other. Without rewriting everything.",
-    techBadges: ["ASP.NET Core", "OData", "RabbitMQ"],
-    ctaHref: "/services/enterprise-integration",
-  },
-  {
-    iconName: "Server",
-    title: "Microsoft & Dynamics 365",
-    description:
-      "Dynamics 365 as an AI platform. Not just an ERP. F&O, Power Platform, LLM on ERP data.",
-    techBadges: ["Dynamics 365", "Power Platform", "Azure"],
-    ctaHref: "/services/microsoft-dynamics",
-  },
-  {
-    iconName: "Zap",
-    title: "Process & Hyper-Automation",
-    description:
-      "From deterministic automation to agentic orchestration. n8n agentic, OCR Pipeline.",
-    techBadges: ["n8n", "Airflow", "Apache Hop"],
-    ctaHref: "/services/automation",
-  },
-  {
-    iconName: "Blocks",
-    title: "Blockchain & Web3 Infrastructure",
-    description:
-      "Solidity smart contracts on Polygon, DeFi AMM, event-sourced microservices on Kubernetes.",
-    techBadges: ["Polygon", "Solidity", "EventStoreDB"],
-    ctaHref: "/services/blockchain",
-    subdued: true,
-  },
-];
 
 const caseStudies = [
   {
@@ -159,22 +99,7 @@ export default function HomePage() {
       {/* Section 3 — Nexus MDS Banner */}
       <NexusBanner />
       {/* Section 4 — Services Grid */}
-      <section id="services" className="py-20 md:py-28 bg-[#161B22]">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <SectionHeader
-              eyebrow="What we do"
-              title="Enterprise Services"
-              subtitle="From a single AI component to full infrastructure. Every project is custom, no templates."
-            />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s) => (
-              <ServiceCard key={s.title} {...s} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
       {/* Section 5 — Digital Twin */}
       <DigitalTwinSection />
       {/* Section 6 — Case Studies Preview */}

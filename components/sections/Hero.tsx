@@ -42,9 +42,21 @@ export function Hero() {
             <span className="text-[#00B4D8] glow-cyan-text">enterprises that own their data.</span>
           </motion.h1>
 
-          {/* Body */}
+          {/* Bridge sentence */}
           <motion.p
             custom={2}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="text-[#9BA8B9] text-base md:text-lg max-w-2xl leading-relaxed mb-5"
+          >
+            We build and deploy on-premise AI platforms for healthcare, pharma,
+            and regulated industries — so your data never leaves your perimeter.
+          </motion.p>
+
+          {/* Body */}
+          <motion.p
+            custom={3}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
@@ -57,7 +69,7 @@ export function Hero() {
 
           {/* CTAs */}
           <motion.div
-            custom={3}
+            custom={4}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
@@ -69,7 +81,7 @@ export function Hero() {
 
           {/* Chatbot callout */}
           <motion.div
-            custom={4}
+            custom={5}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
