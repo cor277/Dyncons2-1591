@@ -6,7 +6,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "HumanIA Care — AI Senior Companion | Case Studies | Dynamics Consulting",
+  title: "HumanIA Care — AI Senior Companion",
   description:
     "An AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core. Multi-agent RAG + Voice + Memory architecture.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/humania-care" },

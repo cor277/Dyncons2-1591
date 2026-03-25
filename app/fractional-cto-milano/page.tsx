@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "Fractional CTO Milano — Leadership Tecnologica per PMI | Dynamics Consulting",
+  title: "Fractional CTO Milano — Leadership per PMI",
   description:
     "Fractional CTO a Milano per PMI e mid-market: governance AI, architettura cloud, modernizzazione legacy, team enablement. 25+ anni di esperienza enterprise. Corrado Patierno — Dynamics Consulting.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/fractional-cto-milano" },

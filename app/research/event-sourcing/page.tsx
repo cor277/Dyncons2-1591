@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "Event sourcing in practice: lessons from five production systems",
+  title: "Event Sourcing in Practice",
   description:
     "Event sourcing promises auditability and temporal querying. In practice, projection management, schema evolution, and snapshot strategy are where most implementations struggle.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/event-sourcing" },

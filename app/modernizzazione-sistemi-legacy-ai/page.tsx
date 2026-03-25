@@ -7,7 +7,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
   title:
-    "Modernizzazione Sistemi Legacy con AI | Reverse Engineering AI-Driven",
+    "Modernizzazione Sistemi Legacy con AI",
   description:
     "Modernizzazione sistemi legacy con intelligenza artificiale: reverse engineering AI-driven, analisi automatizzata del codice, pipeline RAG e multi-agent per riscrittura guidata. Dynamics Consulting, specialisti in legacy modernisation per il mid-market italiano.",
   alternates: {

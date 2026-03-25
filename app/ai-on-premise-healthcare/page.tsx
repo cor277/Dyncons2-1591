@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "On-Premise AI for Healthcare | Sovereign Infrastructure for Clinical Data | Dynamics Consulting",
+  title: "On-Premise AI for Healthcare",
   description:
     "On-premise AI healthcare solutions that keep patient data within hospital walls. GDPR, AI Act and NIS2 compliant infrastructure for clinical AI, medical imaging, and pharma. Deployed on Nexus MDS Core.",
   keywords: [

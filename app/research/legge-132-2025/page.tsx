@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "Legge 132/2025 e AI in sanità: cosa cambia per ospedali, farmacie e aziende farmaceutiche",
+  title: "Legge 132/2025 e AI in Sanità: Cosa Cambia",
   description:
     "Analisi della Legge n. 132 del 23 settembre 2025, prima normativa organica italiana sull'intelligenza artificiale. Implicazioni per organizzazioni sanitarie e farmaceutiche.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/legge-132-2025" },

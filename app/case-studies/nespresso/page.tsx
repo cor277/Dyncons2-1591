@@ -6,7 +6,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Nespresso Intervallo Programme — ATOS | Case Studies",
+  title: "Nespresso Intervallo Programme — ATOS",
   description:
     "Multi-stream enterprise programme for Nespresso at ATOS. Dynamics F&O, custom backend, IoT frontend. ~40-person delivery across three parallel workstreams.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/nespresso" },

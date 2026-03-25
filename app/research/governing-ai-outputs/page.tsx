@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "Governing AI outputs in regulated industries: a technical playbook",
+  title: "Governing AI Outputs in Regulated Industries",
   description:
     "Audit logging, output validation, human-in-the-loop patterns, and model card requirements from production AI deployments in healthcare, pharma, and public sector.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/governing-ai-outputs" },

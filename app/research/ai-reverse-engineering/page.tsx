@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "AI-assisted reverse engineering of legacy platforms: lessons from the field",
+  title: "AI Reverse Engineering of Legacy Platforms",
   description:
     "Applying RAG and multi-agent workflows to reconstruct functional and architectural knowledge from large legacy codebases. What works, what does not, and traceability requirements.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/ai-reverse-engineering" },

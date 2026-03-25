@@ -6,7 +6,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dynamics 365 CRM Implementations — Banking, Insurance & Enterprise | Case Studies",
+  title: "Dynamics 365 CRM — Banking & Insurance",
   description:
     "Multiple Dynamics 365 Sales and Customer Service rollouts for banking, insurance, and industrial clients — Banco Mediolanum, Unipol, illimity, and more.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/dynamics-crm" },

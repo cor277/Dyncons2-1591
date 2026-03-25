@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "The lakehouse is not enough: why operational and analytical data need different treatment",
+  title: "The Lakehouse Is Not Enough",
   description:
     "Lakehouses excel at analytical workloads but struggle with transactional guarantees and schema evolution. How to architect for both without rebuilding everything.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/lakehouse-not-enough" },

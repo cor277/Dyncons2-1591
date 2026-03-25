@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Modern Data Platforms & RAG Architecture | Dynamics Consulting",
+  title: "Data Platforms & RAG Architecture",
   description: "Data lakehouse with Apache Iceberg, Dremio data virtualisation, and Weaviate RAG pipelines. Event-driven Dynamics 365 integration. Zero-ETL for regulated industries.",
   keywords: ["data lakehouse", "Apache Iceberg", "Dremio data virtualization", "Weaviate RAG", "Dynamics 365 data modernization", "Zero-ETL"],
   alternates: { canonical: "https://www.dynamicsconsulting.it/services/data-platforms" },
   openGraph: {
-    title: "Modern Data Platforms & RAG | Dynamics Consulting",
+    title: "Data Platforms & RAG Architecture",
     description: "ACID data lakehouse, Zero-ETL, production-ready RAG pipelines.",
   },
 };

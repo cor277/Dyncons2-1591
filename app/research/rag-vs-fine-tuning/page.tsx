@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "RAG vs fine-tuning: a pragmatic guide for enterprise AI teams",
+  title: "RAG vs Fine-Tuning: Enterprise AI Guide",
   description:
     "A decision framework for choosing between retrieval-augmented generation and fine-tuning based on data freshness, cost, latency, and risk profile. From production experience.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/rag-vs-fine-tuning" },

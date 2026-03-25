@@ -6,7 +6,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dynamics 365 F&O + Unified Data Platform | Case Studies | Dynamics Consulting",
+  title: "Dynamics 365 F&O + Unified Data Platform",
   description:
     "ERP migration to Dynamics 365 Finance & Operations and a cloud data lakehouse for a multi-site manufacturer — 4 sites unified, 60% reporting time saved, 12-week go-live.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/dynamics-data" },

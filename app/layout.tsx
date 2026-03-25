@@ -28,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dynamicsconsulting.it"),
   title: {
-    default: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
+    default: "Dynamics Consulting | Sovereign AI Infrastructure",
     template: "%s | Dynamics Consulting",
   },
   description:

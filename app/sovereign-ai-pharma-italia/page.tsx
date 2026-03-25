@@ -7,7 +7,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
   title:
-    "Sovereign AI Pharma Italia — Infrastruttura AI Sovrana per il Settore Farmaceutico",
+    "AI Sovrana per il Pharma Italiano",
   description:
     "Sovereign AI per il pharma italiano: infrastruttura AI on-premise conforme a AI Act, GDPR, Legge 132/2025 e NIS2. Nexus MDS Core — piattaforma sovrana per farmacovigilanza, clinical trials e supply chain farmaceutica.",
   alternates: {

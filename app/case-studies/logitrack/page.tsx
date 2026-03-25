@@ -6,7 +6,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "LogiTrack — RFID & AI-Powered Warehouse, Production & Shipping Traceability | Case Studies",
+  title: "LogiTrack — RFID & AI Logistics Traceability",
   description:
     "End-to-end logistics traceability with RFID UHF, NFC, AI anomaly detection, blockchain certification, and real-time analytics. Cloud-native, edge-ready, integrated with SAP and Power Platform.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/logitrack" },

@@ -15,7 +15,7 @@ import { DigitalTwinSection } from "@/components/sections/DigitalTwinSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 
 export const metadata: Metadata = {
-  title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
+  title: { absolute: "Dynamics Consulting | Sovereign AI Infrastructure" },
   description:
     "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
   alternates: { canonical: "https://www.dynamicsconsulting.it" },
@@ -88,9 +88,46 @@ const caseStudies = [
   },
 ];
 
+const homeSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Dynamics Consulting",
+    url: "https://www.dynamicsconsulting.it",
+    description:
+      "Sovereign AI infrastructure for healthcare and pharma. On-premise AI platforms, GDPR-ready, AI Act compliant.",
+    publisher: {
+      "@type": "Organization",
+      name: "Dynamics Consulting",
+      url: "https://www.dynamicsconsulting.it",
+      logo: "https://www.dynamicsconsulting.it/logo.jpg",
+      founder: {
+        "@type": "Person",
+        name: "Corrado Patierno",
+        jobTitle: "AI Solution Architect & Founder",
+      },
+      foundingDate: "2019",
+      areaServed: ["IT", "EU"],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Via Torino 2",
+        addressLocality: "Milano",
+        postalCode: "20123",
+        addressCountry: "IT",
+      },
+    },
+  },
+];
+
 export default function HomePage() {
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
+        />
+      </head>
       <NavBar />
       {/* Section 1 — Hero */}
       <Hero />

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Enterprise Integration & Modernisation | Dynamics Consulting",
+  title: "Enterprise Integration & Modernisation",
   description: "ESB migration, event sourcing, legacy modernisation and microservices architecture for complex enterprise environments. Talend, Azure Integration, n8n.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/services/enterprise-integration" },
 };

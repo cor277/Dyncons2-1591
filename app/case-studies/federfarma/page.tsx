@@ -6,7 +6,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Federfarma Lombardia — AI RAG Platform on Nexus MDS Core | Case Study",
+  title: "Federfarma — AI RAG Platform on Nexus MDS Core",
   description:
     "RAG pipeline on pharmaceutical documents for 1,000+ pharmacies. Zero-Trust auth with Keycloak, Budibase PWA, Weaviate vector search, on-premise LLM. Built entirely on Nexus MDS Core.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/federfarma" },

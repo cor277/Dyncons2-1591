@@ -52,9 +52,53 @@ const timeline = [
   },
 ];
 
+const aboutSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Dynamics Consulting",
+    url: "https://www.dynamicsconsulting.it/about",
+    mainEntity: {
+      "@type": "Person",
+      name: "Corrado Patierno",
+      jobTitle: "AI Solution Architect & Founder",
+      description:
+        "Technology consultant, AI architect, MISE-certified Innovation Manager, and author of Logistica Fluida. Over 25 years of hands-on delivery across enterprise systems, data platforms, cloud, and AI infrastructure.",
+      worksFor: {
+        "@type": "Organization",
+        name: "Dynamics Consulting",
+        url: "https://www.dynamicsconsulting.it",
+      },
+      knowsAbout: [
+        "Enterprise AI Architecture",
+        "Sovereign AI",
+        "Healthcare AI Infrastructure",
+        "On-premise LLM",
+        "Microsoft Dynamics 365",
+        "Legacy Modernisation",
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/corradopatierno",
+        "https://amzn.eu/d/06ZlECJe",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Milano",
+        addressCountry: "IT",
+      },
+    },
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+        />
+      </head>
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
         {/* Hero */}

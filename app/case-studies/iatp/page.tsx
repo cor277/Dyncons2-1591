@@ -6,7 +6,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "IATP — AI-Driven Legacy Reverse Engineering & Dev Pipeline | Case Studies",
+  title: "IATP — AI-Driven Legacy Reverse Engineering",
   description:
     "AI-assisted reverse engineering of a legacy platform with RAG-based analysis document generation via Nexus, and a full AI-driven development pipeline with Antigravity, Trae, MCP servers, and Comet testing.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/iatp" },
