@@ -10,14 +10,14 @@ import { PlatformFeatureGrid } from "@/components/sections/PlatformFeatureGrid";
 import { PlatformHero } from "@/components/sections/PlatformHero";
 
 export const metadata: Metadata = {
-  title: "Nexus MDS Core | On-premise Enterprise AI Platform",
+  title: "Nexus MDS Core — On-Premise AI Platform",
   description:
-    "16 orchestrated Docker services. Self-hosted LLM, RAG pipeline, Zero-Trust auth, workflow engine. GDPR-ready and AI Act compliant. Built for healthcare and pharma. Request a demo.",
+    "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth. GDPR-ready, AI Act compliant. Healthcare & pharma.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/platform" },
   openGraph: {
-    title: "Nexus MDS Core | On-premise Enterprise AI Platform | Dynamics Consulting",
+    title: "Nexus MDS Core — On-Premise AI Platform",
     description:
-      "16 orchestrated Docker services. Self-hosted LLM, RAG pipeline, Zero-Trust auth, workflow engine. GDPR-ready and AI Act compliant. Built for healthcare and pharma.",
+      "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth. GDPR-ready, AI Act compliant. Healthcare & pharma.",
   },
 };
 
