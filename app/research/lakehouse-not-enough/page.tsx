@@ -86,6 +86,58 @@ export default function LakehouseArticle() {
             </div>
 
             <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">The AI training data problem</h2>
+              <p>
+                The rise of enterprise AI introduces a third consumer that neither the lakehouse
+                nor the operational store was designed for: ML training and inference pipelines.
+                AI workloads need large volumes of historical data (analytical), but they also need
+                it in specific formats — chunked, embedded, deduplicated, and versioned — that
+                neither Parquet files nor PostgreSQL tables naturally provide.
+              </p>
+              <p className="mt-4">
+                Vector databases like Weaviate sit outside both layers entirely. They consume data
+                from the analytical layer (for corpus-scale embedding) and from the operational
+                layer (for real-time context injection in RAG pipelines). Treating the vector
+                store as a third layer — with its own ingestion pipeline, schema governance,
+                and freshness guarantees — is more honest than pretending the lakehouse can
+                serve this role.
+              </p>
+              <p className="mt-4">
+                In Nexus MDS Core deployments, we implement a three-layer architecture:
+                PostgreSQL for operational data, MinIO with Apache Iceberg for analytical
+                workloads, and Weaviate for AI-specific vector storage. Each layer has its
+                own CDC pipeline, its own governance model, and its own freshness SLA. The
+                complexity is explicit rather than hidden — and explicit complexity is manageable
+                complexity.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Governance implications</h2>
+              <p>
+                Data governance in a multi-layer architecture is fundamentally different from
+                governance in a single-store model. Each layer has different access patterns,
+                different sensitivity profiles, and different regulatory requirements.
+              </p>
+              <p className="mt-4">
+                The operational layer contains live personal data — patient records, customer
+                information, transaction details — subject to GDPR access controls, retention
+                policies, and right-to-erasure requirements. The analytical layer contains
+                transformed, often aggregated data where individual-level governance is less
+                granular but lineage tracking is critical. The AI layer contains embeddings
+                that may or may not constitute personal data under GDPR (a question that
+                regulators have not yet definitively answered).
+              </p>
+              <p className="mt-4">
+                A unified governance model that treats all three layers identically will either
+                be too restrictive for analytical and AI workloads (killing productivity) or
+                too permissive for operational data (creating compliance risk). The pragmatic
+                approach is layer-specific governance policies connected by a shared data
+                catalogue that tracks lineage across all three layers.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Practical implications</h2>
               <p>
                 This is not a rejection of the lakehouse pattern — it is a refinement. The lakehouse
@@ -93,6 +145,28 @@ export default function LakehouseArticle() {
                 guarantees. But treating it as the single source of truth for both operational and
                 analytical workloads creates fragility. Separate the layers, connect them with CDC,
                 and let each do what it does best.
+              </p>
+              <p className="mt-4">
+                For organisations building AI capabilities on top of existing data infrastructure,
+                the practical advice is: do not try to force your lakehouse to serve every consumer.
+                Accept that operational, analytical, and AI workloads have fundamentally different
+                requirements. Design your architecture to serve each one well, with clear data
+                contracts and CDC pipelines between them.
+              </p>
+              <p className="mt-4">
+                The result is more moving parts — but each part is simpler, more predictable, and
+                easier to govern than a single platform stretched beyond its design envelope. In
+                regulated industries where data governance is non-negotiable, this explicit
+                separation is not over-engineering. It is the minimum viable architecture. For
+                more on how we implement this in practice, see our{" "}
+                <Link href="/services/data-platforms" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  Modern Data Platforms
+                </Link>{" "}
+                service or explore the{" "}
+                <Link href="/platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  Nexus MDS Core
+                </Link>{" "}
+                architecture.
               </p>
             </div>
 

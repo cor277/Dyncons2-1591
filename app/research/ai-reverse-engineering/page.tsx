@@ -107,14 +107,70 @@ export default function AiReverseEngineeringArticle() {
             </div>
 
             <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Toolchain details: what the pipeline actually looks like</h2>
+              <p>
+                The specific toolchain matters. In production, our reverse engineering pipeline
+                consists of:
+              </p>
+              <ul className="list-disc list-inside space-y-3 mt-4">
+                <li><strong className="text-[#E6EDF3]">Weaviate vector store:</strong> The codebase is chunked at the function/method level, with overlapping context windows that preserve call relationships. Each chunk includes metadata: file path, module, language, and a structural tag (controller, service, model, utility). This metadata enables filtered retrieval — asking about data access patterns searches only model and repository layers, not UI code.</li>
+                <li><strong className="text-[#E6EDF3]">Embedding model:</strong> We use domain-tuned code embeddings rather than general-purpose text embeddings. Code-specific models understand that syntactically different implementations of the same pattern (e.g., error handling in Java vs C#) are semantically similar.</li>
+                <li><strong className="text-[#E6EDF3]">n8n orchestration:</strong> Multi-agent workflows are defined as n8n flows with conditional branching, error handling, and human-approval gates. Each agent in the flow has a specific role: dependency mapper, data flow tracer, business rule extractor, API surface analyser. The orchestration layer ensures agents process the codebase in the right order and that each agent&apos;s output is available to downstream agents.</li>
+                <li><strong className="text-[#E6EDF3]">Output format:</strong> Structured JSON artifacts — not free-form text. Functional specifications, data dictionaries, and dependency maps are produced in machine-readable formats that can be imported into architecture tools, project management systems, or used as input for the next phase (code generation).</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">From analysis to modernisation: the complete pipeline</h2>
+              <p>
+                Reverse engineering is not the end goal — it is the foundation for modernisation.
+                The analysis artifacts produced by the AI pipeline feed directly into the rebuild
+                phase. Functional specifications become user stories. Data dictionaries become
+                schema definitions. Dependency maps become architecture diagrams for the new system.
+              </p>
+              <p className="mt-4">
+                In our{" "}
+                <Link href="/case-studies/iatp" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  IATP engagement
+                </Link>, the reverse engineering phase produced 47 functional specifications, a
+                complete data dictionary covering 180+ database tables, and a dependency map that
+                revealed 12 undocumented integration points with external systems. This output
+                became the specification for the new platform — reducing the specification phase
+                from months to days and eliminating the ambiguity that typically plagues legacy
+                rewrite projects.
+              </p>
+              <p className="mt-4">
+                The AI pipeline also identified the{" "}
+                <strong className="text-[#E6EDF3]">obsolescence engine</strong> pattern: components
+                where technical debt had accumulated to the point where the cost of continued
+                maintenance exceeded the cost of replacement. By quantifying this — lines of
+                dead code, unused dependencies, deprecated API calls, security vulnerabilities
+                in pinned library versions — the analysis provided an objective basis for
+                prioritising which components to rebuild first.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Results from production</h2>
               <p>
                 In our IATP engagement, this approach reduced the analysis phase from an estimated
                 3-4 months of manual work to under two weeks. More importantly, the output was
                 verifiable: every functional specification traced back to specific code, and the
                 development team could validate claims against the source in minutes rather than
-                days. This is now a repeatable methodology in our legacy modernisation practice.
+                days. This is now a repeatable methodology in our{" "}
+                <Link href="/modernizzazione-sistemi-legacy-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  legacy modernisation practice
+                </Link>.
               </p>
+              <p className="mt-4">
+                The quantitative results across multiple engagements:
+              </p>
+              <ul className="list-disc list-inside space-y-3 mt-4">
+                <li><strong className="text-[#E6EDF3]">Analysis speed:</strong> 70-85% reduction in time compared to manual reverse engineering</li>
+                <li><strong className="text-[#E6EDF3]">Coverage:</strong> AI-assisted analysis consistently identifies 15-30% more integration points and business rules than manual analysis</li>
+                <li><strong className="text-[#E6EDF3]">Accuracy:</strong> With human validation, the false positive rate on functional specifications is below 5%</li>
+                <li><strong className="text-[#E6EDF3]">Cost:</strong> Total cost of AI-assisted analysis is typically 40-60% of equivalent manual effort</li>
+              </ul>
             </div>
 
             <div className="flex flex-wrap gap-2 pt-4">

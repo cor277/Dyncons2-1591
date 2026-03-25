@@ -106,6 +106,63 @@ export default function GoverningAiOutputsArticle() {
                 systems. Beyond compliance, model cards are the foundation for informed human
                 oversight — you cannot govern what you do not understand.
               </p>
+              <p className="mt-4">
+                In practice, a model card for a healthcare AI deployment should include: the
+                training data sources and their provenance, the model architecture and version,
+                quantitative performance metrics on domain-specific benchmarks, known failure
+                modes (with examples), intended use cases and explicitly excluded use cases,
+                and the date of the last evaluation. This document is not static — it must be
+                updated whenever the model is retrained, the evaluation benchmark changes, or
+                new failure modes are discovered.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">5. Feedback loops and continuous improvement</h2>
+              <p>
+                Output governance is not a one-time implementation. It is a continuous process
+                that improves over time — but only if the system is designed to learn from its
+                own outputs. This means closing the feedback loop between output validation,
+                human review, and system improvement.
+              </p>
+              <p className="mt-4">
+                In Nexus MDS Core, we implement three feedback mechanisms:
+              </p>
+              <ul className="list-disc list-inside space-y-3 mt-4">
+                <li><strong className="text-[#E6EDF3]">Rejection tracking:</strong> When a human reviewer rejects or modifies an AI output, the rejection reason is logged and categorised. Over time, this creates a dataset of failure patterns that can be used to improve the validation layer, the retrieval pipeline, or the model itself.</li>
+                <li><strong className="text-[#E6EDF3]">Confidence calibration:</strong> The confidence gating thresholds (from Section 3) are not fixed. They are recalibrated periodically based on actual human review outcomes. If outputs above the threshold are being rejected at a rate higher than expected, the threshold is too permissive.</li>
+                <li><strong className="text-[#E6EDF3]">Source quality scoring:</strong> In RAG-based systems, not all source documents are equally reliable. The feedback loop tracks which sources produce outputs that pass human review and which produce outputs that are rejected, creating a source reliability score that influences retrieval ranking.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">6. Architecture patterns for output governance</h2>
+              <p>
+                Implementing all five governance layers (audit logging, output validation,
+                human-in-the-loop, model cards, feedback loops) requires a specific architectural
+                pattern. The naive approach — adding governance as middleware in the request
+                pipeline — creates latency bottlenecks and tight coupling.
+              </p>
+              <p className="mt-4">
+                The pattern we deploy in production uses an event-driven architecture: every
+                AI interaction emits an event to a governance bus. Audit logging, validation,
+                and feedback tracking are implemented as independent consumers of this event
+                stream. This decouples governance from the inference pipeline, ensuring that
+                governance failures do not block user-facing responses (while still capturing
+                every interaction for compliance).
+              </p>
+              <p className="mt-4">
+                For regulated industries, output governance is not an optional add-on — it is
+                the difference between an AI system that can withstand regulatory scrutiny and
+                one that cannot. Italy&apos;s{" "}
+                <Link href="/research/legge-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  Legge 132/2025
+                </Link>{" "}
+                and the EU AI Act make this explicit. The organisations that invest in governance
+                architecture now will be the ones that can deploy AI at scale without regulatory
+                risk. Those that treat governance as an afterthought will find themselves
+                retrofitting — at far greater cost — when regulators come asking questions.
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-2 pt-4">

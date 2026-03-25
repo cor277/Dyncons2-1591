@@ -17,6 +17,16 @@ const nextConfig = {
         destination: "https://www.dynamicsconsulting.it/:path*",
         permanent: true,
       },
+      {
+        source: "/portfolio",
+        destination: "/case-studies",
+        permanent: true,
+      },
+      {
+        source: "/portfolio/:slug*",
+        destination: "/case-studies",
+        permanent: true,
+      },
     ];
   },
 

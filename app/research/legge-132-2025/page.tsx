@@ -115,6 +115,89 @@ export default function Legge132Article() {
             </div>
 
             <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Tempistiche e scadenze</h2>
+              <p>
+                La Legge 132/2025 si inserisce in un calendario normativo già denso. Le
+                organizzazioni sanitarie e farmaceutiche devono orientarsi tra scadenze
+                sovrapposte:
+              </p>
+              <ul className="list-disc list-inside space-y-3 mt-4 text-[#7D8FA3]">
+                <li>
+                  <strong className="text-[#E6EDF3]">Febbraio 2025:</strong> entrata in vigore dei
+                  divieti assoluti dell&apos;AI Act (pratiche di AI vietate, Art. 5).
+                </li>
+                <li>
+                  <strong className="text-[#E6EDF3]">Agosto 2025:</strong> obbligo di conformità per
+                  i modelli di AI general-purpose (GPAI) ai sensi dell&apos;AI Act (Art. 51-56).
+                </li>
+                <li>
+                  <strong className="text-[#E6EDF3]">Settembre 2025:</strong> pubblicazione della
+                  Legge 132/2025 in Gazzetta Ufficiale, con entrata in vigore immediata per le
+                  disposizioni principali.
+                </li>
+                <li>
+                  <strong className="text-[#E6EDF3]">Agosto 2026:</strong> piena applicabilità degli
+                  obblighi per i sistemi AI ad alto rischio ai sensi dell&apos;AI Act (Allegato III),
+                  che include esplicitamente i sistemi AI in ambito sanitario.
+                </li>
+                <li>
+                  <strong className="text-[#E6EDF3]">Ottobre 2027:</strong> scadenza per la conformità
+                  ai requisiti dell&apos;AI Act per i sistemi AI integrati in dispositivi medici e
+                  diagnostici in vitro.
+                </li>
+              </ul>
+              <p className="mt-4">
+                Il messaggio per le organizzazioni sanitarie è chiaro: la finestra per adeguarsi
+                non è di anni, ma di mesi. Chi avvia oggi un progetto AI in sanità deve progettarlo
+                nativamente per la conformità, non pianificare un adeguamento successivo.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Confronto con il quadro europeo</h2>
+              <p>
+                La Legge 132/2025 non sostituisce l&apos;AI Act — lo integra nel contesto italiano.
+                La distinzione è importante: l&apos;AI Act stabilisce il quadro generale (classificazione
+                del rischio, obblighi per fornitori e deployer, governance dei modelli GPAI), mentre la
+                legge italiana aggiunge specificità nazionali.
+              </p>
+              <p className="mt-4">
+                Le principali integrazioni italiane riguardano:
+              </p>
+              <ul className="list-disc list-inside space-y-3 mt-4 text-[#7D8FA3]">
+                <li>
+                  <strong className="text-[#E6EDF3]">Autorità nazionale:</strong> l&apos;AgID (Agenzia
+                  per l&apos;Italia Digitale) e il Garante Privacy assumono ruoli di vigilanza specifici
+                  sui sistemi AI, con poteri di ispezione e sanzione.
+                </li>
+                <li>
+                  <strong className="text-[#E6EDF3]">Sanità pubblica:</strong> requisiti aggiuntivi per
+                  i sistemi AI utilizzati nel SSN (Servizio Sanitario Nazionale), inclusa la necessità
+                  di interoperabilità con il Fascicolo Sanitario Elettronico (FSE).
+                </li>
+                <li>
+                  <strong className="text-[#E6EDF3]">Formazione professionale:</strong> obbligo di
+                  formazione specifica per il personale sanitario che utilizza sistemi AI in contesti
+                  clinici — un requisito che va oltre quanto previsto dall&apos;AI Act.
+                </li>
+              </ul>
+              <p className="mt-4">
+                Per le aziende farmaceutiche, la combinazione di AI Act, Legge 132/2025, GDPR e
+                NIS2 crea un quadro normativo che rende l&apos;infrastruttura{" "}
+                <Link href="/sovereign-ai-pharma-italia" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  AI sovrana
+                </Link>{" "}
+                non una scelta tecnologica, ma una necessità di compliance. Le organizzazioni che
+                continuano a operare su cloud pubblico senza contratti specifici di data residency
+                si espongono a rischi regolamentari crescenti. Per approfondire le implicazioni
+                specifiche per il settore sanitario, vedi il nostro focus su{" "}
+                <Link href="/it/ai-sanitaria-on-premise" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  AI on-premise per la sanità
+                </Link>.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Conclusione</h2>
               <p>
                 La Legge 132/2025 non è un ostacolo all&apos;innovazione AI in sanità — è un quadro

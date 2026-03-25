@@ -87,6 +87,56 @@ export default function EventSourcingArticle() {
             </div>
 
             <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Event sourcing and AI audit trails</h2>
+              <p>
+                An unexpected benefit of event sourcing has emerged in our AI deployments: it
+                provides a natural architecture for AI audit trails. When an AI system processes
+                a query, the entire interaction — the input, the retrieved context, the model
+                invoked, the raw output, the validated output, and any human review actions —
+                can be modelled as a sequence of immutable events.
+              </p>
+              <p className="mt-4">
+                This is not theoretical. In Nexus MDS Core, the{" "}
+                <Link href="/research/governing-ai-outputs" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  output governance layer
+                </Link>{" "}
+                uses an event-sourced audit log. Every AI interaction is stored as a chain of
+                events: QueryReceived → ContextRetrieved → InferenceCompleted →
+                ValidationPassed → ResponseDelivered (or ValidationFailed →
+                HumanReviewRequested → HumanApproved → ResponseDelivered). This gives
+                regulators — and the organisation itself — the ability to reconstruct any
+                AI-assisted decision from first principles, at any point in time.
+              </p>
+              <p className="mt-4">
+                The AI Act&apos;s requirement for &quot;traceability&quot; in high-risk AI systems
+                maps directly to event sourcing&apos;s core guarantee: nothing is lost, nothing is
+                overwritten, and the full history is always available. Organisations that have
+                already adopted event sourcing for their core business processes have a structural
+                advantage when deploying compliant AI systems.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Technology choices: EventStoreDB vs Kafka vs custom</h2>
+              <p>
+                The choice of event store technology is one of the first decisions — and one of the
+                most consequential. From our five production deployments:
+              </p>
+              <ul className="list-disc list-inside space-y-3 mt-4">
+                <li><strong className="text-[#E6EDF3]">EventStoreDB:</strong> Purpose-built for event sourcing. Native support for stream-per-aggregate, projections, and subscriptions. Excellent for greenfield projects where the team commits to event sourcing as the primary data model. Operational overhead is moderate — it is a specialised database that requires specific expertise.</li>
+                <li><strong className="text-[#E6EDF3]">Apache Kafka:</strong> Not designed for event sourcing, but widely used as one. Works well when event sourcing is part of a broader event-driven architecture and the team already operates Kafka. The trade-off: Kafka lacks native support for reading a single aggregate&apos;s event stream efficiently, so you typically need a secondary index or a separate store for aggregate hydration.</li>
+                <li><strong className="text-[#E6EDF3]">PostgreSQL with append-only tables:</strong> The pragmatic choice when the team is already strong in PostgreSQL and the event volume is moderate (under 100M events). You lose specialised features (native projections, catch-up subscriptions) but gain operational simplicity and the ability to use familiar tooling for debugging and monitoring.</li>
+              </ul>
+              <p className="mt-4">
+                Our recommendation: if event sourcing is the core architectural pattern and the
+                team has the expertise, use EventStoreDB. If event sourcing is one component in a
+                larger event-driven system, use Kafka with a purpose-built projection layer. If the
+                team is small and pragmatism trumps purity, PostgreSQL with well-designed
+                append-only tables gets you 80% of the benefit with 20% of the operational cost.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">When to use it</h2>
               <p>
                 Event sourcing is the right choice when auditability is a hard requirement, when
@@ -95,6 +145,25 @@ export default function EventSourcingArticle() {
                 logistics tracking). It is the wrong choice when you just need CRUD with an
                 audit log — a simpler append-only audit table achieves the same goal with
                 a fraction of the operational complexity.
+              </p>
+              <p className="mt-4">
+                The anti-patterns we have observed: using event sourcing for simple CRUD entities
+                that rarely change (user profiles, configuration), applying it to read-heavy
+                workloads where the overhead of aggregate hydration dominates (catalogues,
+                reference data), and adopting it without investing in projection management
+                tooling (which inevitably leads to manual database scripts that defeat the
+                purpose of the pattern).
+              </p>
+              <p className="mt-4">
+                For organisations in regulated industries — where auditability is non-negotiable
+                and temporal queries are a compliance tool — event sourcing is not just a
+                technical pattern. It is an architectural investment in regulatory readiness.
+                For more on how we apply event-driven patterns in enterprise integrations,
+                see our{" "}
+                <Link href="/services/enterprise-integration" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  Enterprise Integration
+                </Link>{" "}
+                service.
               </p>
             </div>
 

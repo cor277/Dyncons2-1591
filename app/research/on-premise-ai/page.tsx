@@ -91,18 +91,116 @@ export default function OnPremiseAiArticle() {
             </div>
 
             <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">The cost equation: cloud vs on-premise for AI workloads</h2>
+              <p>
+                The assumption that cloud AI is cheaper deserves scrutiny. For inference-heavy
+                workloads — the kind healthcare organisations run daily — cloud GPU costs scale
+                linearly with usage. A single A100 instance on a major hyperscaler costs between
+                $25,000 and $35,000 per year. An organisation running multiple models (clinical NLP,
+                document extraction, conversational AI) can easily reach six figures annually in
+                compute alone, before storage and egress fees.
+              </p>
+              <p className="mt-4">
+                On-premise GPU hardware — even enterprise-grade — amortises over 3-5 years. After
+                the initial capital expenditure, the marginal cost of additional inference is
+                effectively zero. For organisations with predictable, sustained AI workloads,
+                the total cost of ownership (TCO) inflection point typically arrives within 18-24
+                months. Beyond that point, on-premise is materially cheaper.
+              </p>
+              <p className="mt-4">
+                There is also a hidden cost in cloud AI that rarely appears in TCO calculations:
+                vendor lock-in. Moving a production AI pipeline from one hyperscaler to another
+                is a project measured in months, not days. On-premise infrastructure, built on
+                open standards (Kubernetes, OCI containers, S3-compatible storage), preserves
+                organisational optionality.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Data residency in practice: what EU regulations actually require</h2>
+              <p>
+                The GDPR requires that personal data transferred outside the EU has adequate
+                safeguards. The AI Act (Regulation EU 2024/1689) adds requirements specific to
+                AI systems: data used for training, testing, and inference must be managed with
+                documented governance processes. Italy&apos;s{" "}
+                <Link href="/research/legge-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  Legge 132/2025
+                </Link>{" "}
+                goes further, requiring verifiable data residency for AI systems processing
+                health data.
+              </p>
+              <p className="mt-4">
+                In practice, &quot;data residency&quot; means more than storing data on EU servers.
+                It means that the entire processing pipeline — ingestion, embedding, vector storage,
+                inference, and response delivery — runs within a jurisdictionally controlled
+                environment. A cloud deployment where data is stored in Frankfurt but inference
+                runs in Virginia does not meet this standard, even if the storage technically
+                resides in the EU.
+              </p>
+              <p className="mt-4">
+                On-premise deployment eliminates this ambiguity entirely. When the full AI stack
+                runs on hardware the organisation owns and operates, data residency is guaranteed
+                by physics, not by contractual clauses. This is not a philosophical argument — it
+                is the difference between a compliance posture that depends on third-party
+                attestations and one that the organisation can verify independently.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Implementation patterns: transitioning from cloud to on-premise AI</h2>
+              <p>
+                Organisations do not need to migrate everything at once. The most successful
+                transitions we have led follow a phased approach:
+              </p>
+              <ul className="list-disc list-inside space-y-3 mt-4">
+                <li><strong className="text-[#E6EDF3]">Phase 1 — Assessment:</strong> Map existing AI workloads, classify data sensitivity, and identify which workloads must move on-premise for regulatory compliance vs. which could remain in the cloud.</li>
+                <li><strong className="text-[#E6EDF3]">Phase 2 — Foundation:</strong> Deploy the on-premise infrastructure (Kubernetes cluster, GPU nodes, storage layer). In Nexus MDS Core deployments, this typically takes 2-3 weeks.</li>
+                <li><strong className="text-[#E6EDF3]">Phase 3 — Migration:</strong> Move high-sensitivity workloads first (clinical AI, patient-facing systems). Maintain cloud for non-sensitive workloads during transition.</li>
+                <li><strong className="text-[#E6EDF3]">Phase 4 — Optimisation:</strong> Tune inference performance, implement observability, and establish operational runbooks for the on-premise stack.</li>
+              </ul>
+              <p className="mt-4">
+                The key insight is that on-premise AI does not mean building from scratch. Modern
+                platforms like Nexus MDS Core provide a pre-integrated stack that deploys in days,
+                not months. The operational complexity that historically made on-premise AI
+                prohibitive has been engineered away.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">What sovereign AI looks like in practice</h2>
               <p>
                 Nexus MDS Core is our answer to this challenge: approximately 16 orchestrated
-                Docker services — LLM inference, RAG pipeline, Zero-Trust authentication,
-                workflow engine, observability — deployable on Kubernetes or bare-metal,
-                entirely within the organisation&apos;s perimeter. It is already in production
-                for Federfarma Lombardia and CureSicure.
+                Docker services — LLM inference (vLLM), RAG pipeline (Weaviate), Zero-Trust
+                authentication (Keycloak), workflow engine (n8n), observability (Grafana + Loki) —
+                deployable on Kubernetes or bare-metal, entirely within the organisation&apos;s
+                perimeter. It is already in production for{" "}
+                <Link href="/case-studies/federfarma" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  Federfarma Lombardia
+                </Link>{" "}
+                and{" "}
+                <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  CureSicure
+                </Link>.
+              </p>
+              <p className="mt-4">
+                For healthcare organisations evaluating their AI strategy, the architecture
+                decision is not cloud vs on-premise in the abstract. It is a concrete question:
+                can your current deployment model satisfy the regulatory requirements you face
+                today and the ones coming in the next 18 months? If the answer is uncertain,
+                on-premise deserves serious evaluation.
               </p>
               <p className="mt-4">
                 On-premise AI is not a step backward. It is the architecture that takes
                 compliance, data sovereignty, and organisational autonomy seriously. For
-                regulated industries, it is the only architecture that makes sense.
+                regulated industries, it is the only architecture that makes sense. Read our{" "}
+                <Link href="/ai-on-premise-healthcare" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  deep-dive on on-premise AI for healthcare
+                </Link>{" "}
+                for a detailed implementation perspective, or explore the{" "}
+                <Link href="/platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  Nexus MDS Core platform
+                </Link>{" "}
+                to see the architecture in detail.
               </p>
             </div>
 
