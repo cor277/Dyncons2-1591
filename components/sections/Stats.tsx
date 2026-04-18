@@ -4,9 +4,9 @@ import { motion, useInView } from "framer-motion";
 
 const stats = [
   { value: 16, suffix: "+", label: "Docker Services in Nexus MDS Core" },
-  { value: 10000, suffix: "+", label: "Pharmaceutical documents processed" },
-  { value: 6, suffix: "+", label: "Enterprise sectors served" },
-  { value: 2, suffix: "", label: "Healthcare platforms deployed" },
+  { value: 10000, suffix: "+", label: "Enterprise documents processed" },
+  { value: 6, suffix: "+", label: "Regulated sectors served" },
+  { value: 2, suffix: "+", label: "Production platforms deployed" },
 ];
 
 function formatNumber(n: number) {
