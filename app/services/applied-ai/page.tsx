@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
   title: "Applied AI & Agentic Workflows | Dynamics Consulting",
@@ -40,6 +42,30 @@ const faqSchema = {
         text: "Yes. Nexus MDS Core integrates vLLM and OpenWebUI for inference of open-source models (LLaMA, Mistral, DeepSeek and others) on dedicated GPU. Data never leaves the enterprise perimeter.",
       },
     },
+    {
+      "@type": "Question",
+      name: "We have data everywhere and no structure — where do we actually start?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Start with a 2-week discovery sprint: inventory what data exists, where it lives, what format it is in, and what quality it is. Then define the business questions you need to answer. Only then build the retrieval layer — a bounded RAG MVP on a defined corpus, validated with real users before further investment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can the system reason over ISO norms and flag conflicts with our project specs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We build RAG systems that are version-aware: they know which revision of a standard applies to a given project date and will not answer with an obsolete clause. Engineers query in natural language and receive cited answers — norm, article number, revision. Every response is logged for professional liability traceability.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you handle agent governance for internal audit and four-eyes requirements?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We design agent architectures with human-in-the-loop approval gates before any write action, immutable audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Aligned with DORA, MiFID II, and AI Act requirements.",
+      },
+    },
   ],
 };
 
@@ -76,6 +102,36 @@ const capabilities: Capability[] = [
   },
 ];
 
+const useCases = [
+  {
+    title: "Companies with unstructured data",
+    description: `The most common starting point in Italian mid-market: data lives in shared folders, email threads, scanned PDFs, legacy ERP exports, and someone's Excel file. No data governance. No API. No structure.
+
+The wrong answer is buying an AI tool. The right answer is understanding what questions the business needs to answer from that data — then building the retrieval layer around those questions.
+
+Our approach: a 2-week discovery sprint to map what exists, where it lives, and what quality it is. Then a 4-week RAG MVP on a defined, bounded corpus. Validated with real users before any further investment. This is the entry point for organisations that have never shipped an AI system.`,
+    tags: ["PDF", "Email archives", "ERP exports", "RAG MVP", "Discovery sprint"],
+  },
+  {
+    title: "Engineering & technical documentation",
+    description: `Civil, structural, aerospace, industrial engineering firms sit on enormous corpora: ISO and UNI norms, EN standards, project specifications, capitolati, contractor documentation, revision histories, technical manuals. A senior engineer knows this corpus by instinct. But the corpus has thousands of pages, changes constantly, and varies by client and jurisdiction.
+
+We build RAG systems that reason over technical documentation. Engineers query in natural language and receive cited answers — norm, article number, revision. The system is version-aware: it knows which revision of a standard applies to a given project date, and will not answer with an obsolete clause.
+
+Every response is logged: who asked, when, which document answered. This is not optional in contexts with professional liability.`,
+    tags: ["ISO/UNI/EN norms", "Technical specs", "Revision control", "Traceable RAG", "Document versioning"],
+  },
+  {
+    title: "Finance & regulated data rooms",
+    description: `An AI agent acting on financial data is not a chatbot. It is a system making operational decisions. Internal audit, risk management, and compliance will ask: who authorised this action? Which model decided? On what data? Is the log immutable? Was the four-eyes principle enforced?
+
+We design agent architectures with human-in-the-loop approval gates before any write action, immutable audit trails with configurable retention, RBAC with segregation between front office / risk / compliance / IT, and full LLM call logging: input, output, model version, timestamp — for every inference.
+
+Compliance alignment: DORA (operational resilience, incident logging), MiFID II (decision traceability), AI Act (high-risk system requirements), GDPR (data minimisation, right to explanation).`,
+    tags: ["Audit trail", "Human-in-the-loop", "DORA", "MiFID II", "RBAC", "AI Act"],
+  },
+];
+
 const tech = ["LLM", "Weaviate", "n8n", "vLLM", "Flutter", "Keycloak", "OpenWebUI", "FastAPI", "transformers"];
 
 const faqs = [
@@ -91,6 +147,18 @@ const faqs = [
     q: "Does Nexus MDS Core support open-source LLMs?",
     a: "Yes. Nexus MDS Core integrates vLLM and OpenWebUI for inference of open-source models (LLaMA, Mistral, DeepSeek and others) on dedicated GPU. Data never leaves the enterprise perimeter.",
   },
+  {
+    q: "We have data everywhere and no structure — where do we actually start?",
+    a: "Start with a 2-week discovery sprint: inventory what data exists, where it lives, what format it is in, and what quality it is. Then define the business questions you need to answer. Only then build the retrieval layer — a bounded RAG MVP on a defined corpus, validated with real users before further investment.",
+  },
+  {
+    q: "Can the system reason over ISO norms and flag conflicts with our project specs?",
+    a: "Yes. We build RAG systems that are version-aware: they know which revision of a standard applies to a given project date and will not answer with an obsolete clause. Engineers query in natural language and receive cited answers — norm, article number, revision. Every response is logged for professional liability traceability.",
+  },
+  {
+    q: "How do you handle agent governance for internal audit and four-eyes requirements?",
+    a: "We design agent architectures with human-in-the-loop approval gates before any write action, immutable audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Aligned with DORA, MiFID II, and AI Act requirements.",
+  },
 ];
 
 export default function AppliedAIPage() {
@@ -102,6 +170,32 @@ export default function AppliedAIPage() {
       capabilities={capabilities}
       faqs={faqs}
       faqSchema={faqSchema}
-    />
+    >
+      {/* Who this is for */}
+      <section className="py-20 md:py-28 bg-[#0D1117]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <SectionHeader eyebrow="Use cases" title="Who this is for" />
+          </div>
+          <div className="space-y-10 max-w-3xl">
+            {useCases.map((uc) => (
+              <div key={uc.title} className="bg-[#161B22] border border-[#30363D] rounded-xl p-8">
+                <h3 className="font-dm font-bold text-[#E6EDF3] text-xl mb-4">{uc.title}</h3>
+                <div className="text-[#7D8FA3] text-sm leading-relaxed space-y-4">
+                  {uc.description.split("\n\n").map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-2 mt-6">
+                  {uc.tags.map((tag) => (
+                    <TechBadge key={tag} label={tag} variant="cyan" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </ServicePageLayout>
   );
 }

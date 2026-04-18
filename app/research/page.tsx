@@ -13,6 +13,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "/research/rag-enterprise-data",
+    date: "April 2026",
+    tag: "Applied AI",
+    title: "How to implement RAG on enterprise data: the honest guide",
+    summary:
+      "The tutorials assume a clean corpus. Your corpus is not clean. Discovery sprints, chunking strategy, retrieval evaluation, and governance — what actually matters when building RAG for enterprise data.",
+  },
+  {
     slug: "/research/on-premise-ai",
     date: "March 2026",
     tag: "Sovereign AI",

@@ -46,7 +46,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-[#7D8FA3] text-sm leading-relaxed mb-4">
-              Sovereign AI Infrastructure for Healthcare &amp; Pharma · Italy
+              Sovereign AI Infrastructure for Regulated Industries · Italy
             </p>
             <p className="text-[#7D8FA3] text-xs font-mono">P.IVA: 10651160961</p>
           </div>
@@ -142,6 +142,15 @@ export function Footer() {
             </Link>
             <Link href="/it/sovereign-ai-italia" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               Sovereign AI Italia
+            </Link>
+            <Link href="/it/ai-dati-aziendali" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              AI Dati Aziendali
+            </Link>
+            <Link href="/it/ai-ingegneria-tecnica" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              AI Ingegneria Tecnica
+            </Link>
+            <Link href="/it/ai-agenti-finanziari" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              AI Agenti Finanziari
             </Link>
           </div>
         </div>

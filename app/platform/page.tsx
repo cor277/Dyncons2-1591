@@ -12,12 +12,12 @@ import { PlatformHero } from "@/components/sections/PlatformHero";
 export const metadata: Metadata = {
   title: "Nexus MDS Core — On-Premise AI Platform",
   description:
-    "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth. GDPR-ready, AI Act compliant. Healthcare & pharma.",
+    "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, AI Act compliant.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/platform" },
   openGraph: {
     title: "Nexus MDS Core — On-Premise AI Platform",
     description:
-      "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth. GDPR-ready, AI Act compliant. Healthcare & pharma.",
+      "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, AI Act compliant.",
   },
 };
 
@@ -48,6 +48,18 @@ const useCases = [
     description:
       "RAG pipeline on clinical and pharmaceutical documents. GDPR-compliant authentication. Already in production for Federfarma Lombardia and CureSicure — healthcare portal with live patient data integration across Italian clinical sources including PNE-AGENAS, SDO/NSIS, and Ministry of Health Open Data.",
     badges: ["GDPR", "OCR Pipeline", "Vector Search"],
+  },
+  {
+    title: "Engineering & Technical Documentation",
+    description:
+      "RAG over technical norms, project specifications, and revision trees. Version-aware retrieval: answers are scoped to the correct document revision for the project date. Every answer is source-cited and fully traceable. Designed for professional liability contexts where a wrong clause has real consequences.",
+    badges: ["ISO/UNI", "Project Specs", "Revision Control", "Traceable RAG"],
+  },
+  {
+    title: "Finance & Regulated Services",
+    description:
+      "RAG and agent systems for banks, asset managers, and insurance. Built with governance as the starting constraint, not a feature added at the end. Human-in-the-loop approval gates, immutable audit trail, RBAC segregation between front office / risk / compliance, full LLM call logging. DORA-aligned for operational resilience. MiFID II-aware for decision traceability. AI Act-ready for high-risk system obligations. EU data residency, zero hyperscaler dependency.",
+    badges: ["DORA", "MiFID II", "Audit trail", "Human-in-the-loop", "RBAC"],
   },
   {
     title: "Enterprise B2B",

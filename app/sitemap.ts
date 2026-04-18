@@ -41,6 +41,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/research/ai-reverse-engineering`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/research/legge-132-2025`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/research/event-sourcing`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/research/rag-enterprise-data`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/it/ai-dati-aziendali`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/it/ai-ingegneria-tecnica`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/it/ai-agenti-finanziari`, priority: 0.7, changeFrequency: "monthly" as const },
   ];
   return staticRoutes.map((route) => ({
     url: route.url,

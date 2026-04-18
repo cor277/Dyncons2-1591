@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1400,
         height: 788,
-        alt: "Dynamics Consulting — Sovereign AI Infrastructure for Healthcare & Pharma",
+        alt: "Dynamics Consulting — Sovereign AI Infrastructure for Regulated Industries",
       },
     ],
   },
@@ -112,7 +112,7 @@ const schemaOrg = [
       "Docker enterprise AI stack",
     ],
     description:
-      "Italian AI infrastructure consultancy specialising in sovereign, on-premise AI platforms for healthcare and pharma mid-market. Builders of Nexus MDS Core.",
+      "Italian AI infrastructure consultancy specialising in sovereign, on-premise AI platforms for regulated industries. Builders of Nexus MDS Core.",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+39-340-725-3246",

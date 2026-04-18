@@ -8,7 +8,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Dynamics 365 CRM — Banking & Insurance",
   description:
-    "Multiple Dynamics 365 Sales and Customer Service rollouts for banking, insurance, and industrial clients — Banco Mediolanum, Unipol, illimity, and more.",
+    "Dynamics 365 CRM implementations for Banco Mediolanum, illimity, and Unipol. Compliance-aware data architecture, core banking integration, audit trails.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/dynamics-crm" },
 };
 
@@ -21,33 +21,6 @@ const tech = [
   "Azure Active Directory",
   "Dataverse",
   "Azure Integration Services",
-];
-
-const engagements = [
-  {
-    client: "Banco Mediolanum",
-    sector: "Banking / Wealth Management",
-    scope:
-      "Dynamics 365 Sales implementation for the advisory network. Lead management, opportunity tracking, and regulatory reporting integrated with core banking systems. Custom Power Apps for field advisors.",
-  },
-  {
-    client: "Unipol",
-    sector: "Insurance",
-    scope:
-      "Dynamics 365 Customer Service deployment for claims management and policyholder engagement. Omnichannel integration (email, phone, web chat) with SLA-driven routing and Power BI operational dashboards.",
-  },
-  {
-    client: "illimity Bank",
-    sector: "Digital Banking / Fintech",
-    scope:
-      "CRM architecture and implementation for a digital-first bank. Dynamics 365 Sales with custom Dataverse entities for complex SME lending workflows, integrated with the bank's proprietary credit scoring engine.",
-  },
-  {
-    client: "Enterprise Industrial Clients",
-    sector: "Manufacturing & Services",
-    scope:
-      "Multiple Dynamics 365 Sales and Customer Service rollouts for mid-market industrial companies. Sales pipeline automation, service ticket management, and Power BI reporting on commercial KPIs.",
-  },
 ];
 
 export default function DynamicsCrmCaseStudy() {
@@ -64,16 +37,17 @@ export default function DynamicsCrmCaseStudy() {
               ← All case studies
             </Link>
             <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">
-              Multi-sector · CRM · Customer Engagement
+              Banking &amp; Insurance · CRM · Regulated Financial Services
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#E6EDF3]">
-              Dynamics 365 CRM — banking, insurance &amp; enterprise
+              Dynamics 365 CRM in banking and insurance
             </h1>
             <p className="text-lg text-[#7D8FA3]">
-              Over the past decade, we have delivered multiple Dynamics 365 Sales and Customer
-              Service implementations for some of Italy&apos;s most demanding organisations in
-              financial services and enterprise. Each project was tailored to sector-specific
-              workflows, compliance requirements, and integration landscapes.
+              These were not standard CRM rollouts. Each engagement was shaped by the
+              regulatory complexity, data segregation requirements, and approval layers
+              that define financial services in Italy. Delivered at Avanade, Capgemini,
+              and as independent consultant — always with hands-on architectural and
+              delivery leadership.
             </p>
           </div>
         </section>
@@ -95,27 +69,92 @@ export default function DynamicsCrmCaseStudy() {
 
         <section className="py-16 px-6">
           <div className="max-w-3xl mx-auto space-y-10">
-            <div className="text-[#7D8FA3] text-lg leading-relaxed">
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Engagements</h2>
-              <p className="mb-8">
-                Each engagement was delivered as part of larger transformation programmes at
-                Avanade, Capgemini, or directly as independent consultant — always with hands-on
-                architectural and delivery leadership.
-              </p>
+            {/* Clients */}
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-6">Clients</h2>
+
+              <div className="space-y-6">
+                <div className="bg-[#161B22] border border-[#30363D] rounded-xl p-6">
+                  <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-2">
+                    Banking / Wealth Management
+                  </p>
+                  <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">Banco Mediolanum</h3>
+                  <p className="text-[#7D8FA3] text-sm leading-relaxed">
+                    Italy&apos;s largest network-based wealth management bank, with thousands of
+                    financial advisors operating across the country. The CRM implementation had to
+                    support the full advisory lifecycle — lead management, opportunity tracking,
+                    regulatory reporting — while integrating with core banking systems and respecting
+                    the strict data segregation between advisory network, operations, and compliance.
+                    Custom Power Apps extended the platform to field advisors on mobile.
+                  </p>
+                </div>
+
+                <div className="bg-[#161B22] border border-[#30363D] rounded-xl p-6">
+                  <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-2">
+                    Digital Banking / Fintech
+                  </p>
+                  <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">illimity Bank</h3>
+                  <p className="text-[#7D8FA3] text-sm leading-relaxed">
+                    A digital-first bank focused on SME lending and distressed credit. The CRM
+                    architecture had to accommodate complex lending workflows with custom Dataverse
+                    entities, integrated with the bank&apos;s proprietary credit scoring engine.
+                    Being a natively digital organisation, the implementation moved fast — but
+                    regulatory constraints on data handling and decision auditability were the same
+                    as any traditional bank.
+                  </p>
+                </div>
+
+                <div className="bg-[#161B22] border border-[#30363D] rounded-xl p-6">
+                  <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-2">
+                    Insurance
+                  </p>
+                  <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">Unipol</h3>
+                  <p className="text-[#7D8FA3] text-sm leading-relaxed">
+                    One of Italy&apos;s largest insurance groups. Dynamics 365 Customer Service
+                    deployment for claims management and policyholder engagement. Omnichannel
+                    integration — email, phone, web chat — with SLA-driven routing and Power BI
+                    operational dashboards. The challenge was not the technology but the organisational
+                    complexity: multiple business units, each with its own approval layers, compliance
+                    requirements, and legacy system dependencies.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {engagements.map((e) => (
-              <div
-                key={e.client}
-                className="bg-[#161B22] border border-[#30363D] rounded-xl p-6"
-              >
-                <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-2">
-                  {e.sector}
+            {/* Banking-grade implementation context */}
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Banking-grade implementation context</h2>
+              <div className="text-[#7D8FA3] text-lg leading-relaxed space-y-4">
+                <p>
+                  These were not standard CRM rollouts. Each engagement required:
                 </p>
-                <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">{e.client}</h3>
-                <p className="text-[#7D8FA3] text-sm leading-relaxed">{e.scope}</p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Compliance-aware data architecture with segregation between front office, risk, and operations data</li>
+                  <li>Integration with core banking and regulatory reporting systems</li>
+                  <li>Audit-trail requirements aligned with internal control frameworks</li>
+                  <li>Change management across regulated business units with multiple approval layers</li>
+                </ul>
+                <p>
+                  This is the operational context that shapes how we approach every AI or data
+                  project in financial services — governance is not a feature added at the end,
+                  it is the starting constraint.
+                </p>
               </div>
-            ))}
+            </div>
+
+            {/* Why this matters for AI projects */}
+            <div>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Why this matters for AI projects</h2>
+              <p className="text-[#7D8FA3] text-lg leading-relaxed">
+                The governance patterns we implemented in these CRM engagements — role segregation,
+                audit trails, approval gates, data compartmentalisation — are the same patterns
+                required for AI agent systems in financial services today. The technology has changed
+                from Dynamics 365 to LLMs and agentic workflows, but the constraints have not: who
+                authorised this action, on what data, with what model, and is the log immutable.
+                Our financial services experience means we design AI systems that meet these
+                requirements from day one, not as a retrofit.
+              </p>
+            </div>
 
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Technologies used</h2>

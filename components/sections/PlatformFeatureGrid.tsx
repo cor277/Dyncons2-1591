@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Cpu, Shield, Search, GitBranch, Database, Activity } from "lucide-react";
+import { Cpu, Shield, Search, GitBranch, Database, Activity, Lock } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const features = [
@@ -45,6 +45,13 @@ const features = [
     tech: "Grafana, Uptime Kuma, Velero",
     description:
       "Real-time monitoring, alerts, automated Kubernetes backup. Guaranteed SLAs with disaster recovery.",
+  },
+  {
+    icon: Lock,
+    title: "Agent Governance",
+    tech: "Keycloak RBAC, n8n approval gates, immutable audit log",
+    description:
+      "Human approval gate before any agent write action. Immutable audit trail on Postgres with configurable retention period. Full LLM call logging: input, output, model version, timestamp. Role-based access control with domain segregation. Supports DORA operational resilience requirements and AI Act high-risk system obligations.",
   },
 ];
 

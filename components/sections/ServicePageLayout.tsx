@@ -64,6 +64,7 @@ interface ServicePageLayoutProps {
   ctaTitle?: string;
   ctaSubtitle?: string;
   faqSchema?: object;
+  children?: React.ReactNode;
 }
 
 function FAQAccordion({ items }: { items: FAQ[] }) {
@@ -104,6 +105,7 @@ export function ServicePageLayout({
   ctaTitle,
   ctaSubtitle,
   faqSchema,
+  children,
 }: ServicePageLayoutProps) {
   return (
     <>
@@ -174,6 +176,8 @@ export function ServicePageLayout({
           </div>
         </div>
       </section>
+
+      {children}
 
       {/* FAQ */}
       <section className="py-20 md:py-28 bg-[#0D1117]">

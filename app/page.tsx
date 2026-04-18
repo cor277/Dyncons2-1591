@@ -95,7 +95,7 @@ const homeSchema = [
     name: "Dynamics Consulting",
     url: "https://www.dynamicsconsulting.it",
     description:
-      "Sovereign AI infrastructure for healthcare and pharma. On-premise AI platforms, GDPR-ready, AI Act compliant.",
+      "Sovereign AI infrastructure for regulated industries. On-premise AI platforms, GDPR-ready, AI Act compliant.",
     publisher: {
       "@type": "Organization",
       name: "Dynamics Consulting",
