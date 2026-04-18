@@ -14,16 +14,14 @@ function formatNumber(n: number) {
 }
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {
-  const [count, setCount] = useState(target);
-  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
+  const [count, setCount] = useState(0);
+  const animatedRef = useRef(false);
 
   useEffect(() => {
-    if (!inView || hasAnimated) return;
-    setHasAnimated(true);
-    // Reset to 0 briefly then animate up
-    setCount(0);
+    if (!inView || animatedRef.current) return;
+    animatedRef.current = true;
     const duration = 1400;
     const step = target / (duration / 16);
     let current = 0;
@@ -37,11 +35,11 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
       }
     }, 16);
     return () => clearInterval(timer);
-  }, [inView, target, hasAnimated]);
+  }, [inView, target]);
 
   return (
     <span ref={ref}>
-      {formatNumber(count)}
+      {formatNumber(inView ? count : target)}
       {suffix}
     </span>
   );
