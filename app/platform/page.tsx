@@ -8,6 +8,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 import { CTASection } from "@/components/sections/CTASection";
 import { PlatformFeatureGrid } from "@/components/sections/PlatformFeatureGrid";
 import { PlatformHero } from "@/components/sections/PlatformHero";
+import { NexusGraphExplorer } from "@/components/sections/NexusGraphExplorer";
 
 export const metadata: Metadata = {
   title: "Nexus MDS Core — On-Premise AI Platform",
@@ -85,6 +86,22 @@ export default function PlatformPage() {
       <NavBar />
       <PlatformHero />
       <PlatformFeatureGrid />
+
+      {/* Architecture graph */}
+      <section className="py-20 md:py-28 bg-[#0D1117]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <SectionHeader
+              eyebrow="Architecture"
+              title="Service graph explorer"
+            />
+            <p className="text-[#7D8FA3] text-sm mt-3 max-w-2xl">
+              Click any node to center the view and explore its connections. Each edge shows the protocol and direction of data flow.
+            </p>
+          </div>
+          <NexusGraphExplorer />
+        </div>
+      </section>
 
       {/* Compliance row */}
       <section className="py-12 bg-[#0D1117] border-t border-[#30363D]">
