@@ -10,6 +10,8 @@ import {
   Zap,
   Blocks,
   Search,
+  ShieldCheck,
+  Compass,
 } from "lucide-react";
 import { TechBadge } from "./TechBadge";
 
@@ -22,6 +24,8 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Zap,
   Blocks,
   Search,
+  ShieldCheck,
+  Compass,
 };
 
 interface ServiceCardProps {

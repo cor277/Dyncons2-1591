@@ -3,6 +3,9 @@ import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { NexusBanner } from "@/components/sections/NexusBanner";
+import { SovereigntyStrip } from "@/components/sections/SovereigntyStrip";
+import { CepfBanner } from "@/components/sections/CepfBanner";
+import { EditorialSeriesSection } from "@/components/sections/EditorialSeriesSection";
 import { ClientStrip } from "@/components/sections/ClientStrip";
 import { Stats } from "@/components/sections/Stats";
 import { BookCallout } from "@/components/sections/BookCallout";
@@ -17,7 +20,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 export const metadata: Metadata = {
   title: { absolute: "Dynamics Consulting | Sovereign AI Infrastructure" },
   description:
-    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
+    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant, aligned with EU Tech Sovereignty Package (CADA, 2026), PLD 2024 ready.",
   alternates: { canonical: "https://www.dynamicsconsulting.it" },
 };
 
@@ -131,10 +134,14 @@ export default function HomePage() {
       <NavBar />
       {/* Section 1 — Hero */}
       <Hero />
+      {/* Section 1b — EU Tech Sovereignty Package strip */}
+      <SovereigntyStrip />
       {/* Section 2 — 3 Pillars */}
       <PillarsSection />
       {/* Section 3 — Nexus MDS Banner */}
       <NexusBanner />
+      {/* Section 3b — CEPF Methodology */}
+      <CepfBanner />
       {/* Section 4 — Services Grid */}
       <ServicesSection />
       {/* Section 5 — Digital Twin */}
@@ -161,6 +168,8 @@ export default function HomePage() {
       <ClientStrip />
       {/* Section 7 — Stats */}
       <Stats />
+      {/* Section 7b — Editorial Series */}
+      <EditorialSeriesSection />
       {/* Section 8 — Book Callout */}
       <BookCallout />
       {/* Section 9 — Final CTA */}

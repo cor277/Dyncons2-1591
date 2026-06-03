@@ -22,6 +22,24 @@ const services: {
   verticals: VerticalKey[];
 }[] = [
   {
+    iconName: "ShieldCheck",
+    title: "AI Governance & Compliance Advisory",
+    description:
+      "Strategic regulatory assessment for EU AI Act, PLD 2024, NIS2, DORA. CEPF compliance audit. Board-level governance design. Architecture review with documented technical accountability.",
+    techBadges: ["AI Act", "PLD 2024", "CEPF", "ISO 27001"],
+    ctaHref: "/services/governance-advisory",
+    verticals: ["healthcare", "enterprise", "legacy"],
+  },
+  {
+    iconName: "Compass",
+    title: "Fractional AI CTO",
+    description:
+      "Permanent CTO presence at fractional cost. Technology strategy, architectural governance, vendor selection, AI programme leadership for organisations under regulatory pressure.",
+    techBadges: ["Strategy", "Architecture", "Leadership"],
+    ctaHref: "/services/fractional-cto",
+    verticals: ["healthcare", "enterprise", "legacy"],
+  },
+  {
     iconName: "Brain",
     title: "Applied AI & Agentic Workflows",
     description:

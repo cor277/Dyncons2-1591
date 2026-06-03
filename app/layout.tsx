@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Dynamics Consulting",
   },
   description:
-    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
+    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant, aligned with EU Tech Sovereignty Package (CADA, 2026), PLD 2024 ready.",
   keywords: [
     "AI Solution Architect",
     "Sovereign AI Italy",
@@ -46,6 +46,14 @@ export const metadata: Metadata = {
     "Nexus MDS Core",
     "pharmaceutical AI",
     "healthcare AI infrastructure",
+    "EU Tech Sovereignty Package",
+    "CADA 2026",
+    "Cloud and AI Development Act",
+    "PLD 2024 software",
+    "EU AI Act 2026",
+    "CEPF methodology",
+    "sovereign cloud Italy",
+    "Fractional AI CTO",
   ],
   authors: [{ name: "Corrado Patierno", url: "https://www.dynamicsconsulting.it" }],
   creator: "Corrado Patierno",
@@ -56,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "Dynamics Consulting",
     title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
     description:
-      "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
+      "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant. Aligned with EU Tech Sovereignty Package (CADA, 2026).",
     images: [
       {
         url: "/og-image.png",
@@ -70,7 +78,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
     description:
-      "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant.",
+      "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant. Aligned with EU Tech Sovereignty Package (CADA, 2026).",
     images: ["/og-image.png"],
   },
   robots: {

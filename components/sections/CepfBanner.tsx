@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { TechBadge } from "@/components/ui/TechBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 
-export function NexusBanner() {
+export function CepfBanner() {
   return (
     <section className="py-20 md:py-28 bg-[#0D1117]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,34 +14,44 @@ export function NexusBanner() {
           transition={{ duration: 0.6 }}
           className="relative bg-[#161B22] border border-[#00B4D8] rounded-2xl p-8 md:p-12 overflow-hidden"
         >
-          {/* Glow overlay */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,180,216,0.07),transparent_60%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,180,216,0.07),transparent_60%)] pointer-events-none" />
 
           <div className="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="max-w-2xl">
               <div className="flex items-center gap-2 mb-4">
                 <span className="live-dot" />
                 <span className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase">
-                  PROPRIETARY PRODUCT
+                  PROPRIETARY METHODOLOGY
                 </span>
               </div>
               <h2 className="font-syne text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#E6EDF3] mb-4">
-                Nexus MDS Core
+                CEPF — Compliance Estimation &amp; Planning Framework
               </h2>
               <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-6">
-                The enterprise AI self-hosted platform. ~16 orchestrated Docker services.
-                GDPR-ready. Zero-Trust. Deployable on Kubernetes or bare-metal.
+                19 regulatory frameworks mapped. 210 entries. 617 operational deliverables.
+                23 cross-framework regulatory overlaps identified. CEPF assesses and plans
+                compliance for software houses and organisations operating under EU AI Act,
+                GDPR, PLD 2024, NIS2, DORA, ISO 27001:2022, Cyber Resilience Act, ISO 56001,
+                and MiFID II.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["GDPR", "AI Act Ready", "PLD 2024 Compliant", "ISO 27001 Ready", "EU Data Residency", "CADA Aligned"].map((b) => (
+                {[
+                  "EU AI Act",
+                  "GDPR",
+                  "PLD 2024",
+                  "NIS2",
+                  "DORA",
+                  "ISO 27001:2022",
+                  "Cyber Resilience Act",
+                ].map((b) => (
                   <TechBadge key={b} label={b} variant="cyan" />
                 ))}
               </div>
             </div>
             <div className="flex-shrink-0">
               <CTAButton
-                label="Discover the platform →"
-                href="/platform"
+                label="Discover CEPF →"
+                href="/cepf"
                 variant="primary"
               />
             </div>

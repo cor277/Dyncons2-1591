@@ -4,51 +4,38 @@ import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Corrado Patierno — AI Solution Architect Italy",
+  title: "About Corrado Patierno — AI Solution Architect Italy",
   description:
-    "25+ years in enterprise systems. MISE Innovation Manager. Author of Logistica Fluida. Building sovereign AI infrastructure for Italy's healthcare and pharma mid-market since 2019.",
+    "25 years of enterprise systems delivery. MISE Innovation Manager. Founder of Dynamics Consulting. Builder of Nexus MDS Core and author of CEPF and Logistica Fluida.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/about" },
 };
 
-const values = [
-  {
-    title: "Outcomes over outputs",
-    body: "We measure success by business impact, not by lines of code or slide decks. Every engagement starts with a clear definition of what success looks like and ends when it is achieved.",
-  },
-  {
-    title: "Radical transparency",
-    body: "We tell clients what they need to hear. If a simpler solution exists, we say so. If a timeline is unrealistic, we say so. Long-term trust is built on honesty.",
-  },
-  {
-    title: "Sovereign AI by default",
-    body: "Organisations in regulated industries have the right to run AI on their own infrastructure, under their own governance, without dependency on hyperscalers. This conviction shapes every architecture we design.",
-  },
-  {
-    title: "Deep specialisation",
-    body: "We work with a selective network of proven specialists rather than growing a large generalist team. Every project gets the right expertise, not the next available consultant.",
-  },
+const availableFor = [
+  "Principal Architect / Solution Architect engagements (AI, data platforms, enterprise integration, Dynamics 365 F&O)",
+  "Fractional CTO / Innovation Manager roles",
+  "Nexus MDS Core deployments for healthcare, pharma, and regulated industries",
+  "AI Governance & Compliance advisory (EU AI Act, PLD 2024, NIS2, CEPF assessment)",
 ];
 
-const timeline = [
+const credentials = [
+  "MISE-certified Innovation Manager",
+  "ISO 56002:2020",
+  "Microsoft Dynamics 365 certified",
+  "Member of Mensa",
+];
+
+const publications = [
   {
-    period: "1997 – 2010",
-    title: "From developer to programme leader",
-    body: "Started as a systems developer in Naples working on RFID, logistics, and critical infrastructure, including a project for the Vatican Apostolic Library. Moved to Milan and progressively took on larger programmes: senior consultant at Capgemini (2011) and Avanade (2016), leading multidisciplinary teams on enterprise projects for clients including Vodafone, RINA, Fincantieri, Unipol, and Banco Mediolanum. Accumulated deep expertise in enterprise integration, data platforms, and complex legacy environments.",
+    title: "CEPF — Compliance Estimation & Planning Framework",
+    body: "19 regulatory frameworks mapped, 210 entries, 617 operational deliverables.",
   },
   {
-    period: "2015 – 2019",
-    title: "CTO roles and platform leadership",
-    body: "Served as CTO (first informal, then official) at Nexo/Sefitalia, leading restructuring of software factory and overseeing ERP, WFM, and SFM platforms for a 1,800-person group network. Concurrently led the Nespresso Intervallo programme at ATOS, managing three delivery streams across Dynamics F&O, custom backend, and IoT frontend with ~40 people.",
+    title: "Logistica Fluida (2026)",
+    body: "Adaptive logistics framework — flow-based decision-making, resilience, continuous reconfiguration of supply chains.",
   },
   {
-    period: "2019 – present",
-    title: "Independent consultant and Innovation Manager",
-    body: "Transitioned to full independence, combining direct project delivery with strategic advisory. MISE-certified Innovation Manager. Certifications in ISO 56002:2020, IBM Enterprise Design Thinking, and Microsoft Dynamics 365 Solution Architecture. Deepened focus on AI-assisted modernisation of legacy enterprise systems, RAG architectures, and on-premise AI infrastructure for regulated industries. Current production clients include Federfarma Lombardia and CureSicure.",
-  },
-  {
-    period: "2026",
-    title: "Logistica Fluida published",
-    body: "Published Logistica Fluida, a conceptual and operational framework for adaptive logistics systems focused on flow-based decision-making, resilience, and continuous reconfiguration of supply chains. The book bridges logistics operations, information systems, and organisational design, and serves as a foundation for decision-support and AI-assisted operational reasoning in complex environments.",
+    title: "Editorial series on EU PLD 2024, AI Act and Tech Sovereignty",
+    body: "Ongoing public analysis for regulated software industries.",
   },
 ];
 
@@ -63,17 +50,19 @@ const aboutSchema = [
       name: "Corrado Patierno",
       jobTitle: "AI Solution Architect & Founder",
       description:
-        "Technology consultant, AI architect, MISE-certified Innovation Manager, and author of Logistica Fluida. Over 25 years of hands-on delivery across enterprise systems, data platforms, cloud, and AI infrastructure.",
+        "Technology consultant and AI architect. MISE-certified Innovation Manager. Author of CEPF and Logistica Fluida. 25+ years delivering enterprise systems for clients including Nespresso, Banco Mediolanum, Fincantieri, RINA, and Vodafone.",
       worksFor: {
         "@type": "Organization",
         name: "Dynamics Consulting",
         url: "https://www.dynamicsconsulting.it",
       },
       knowsAbout: [
-        "Enterprise AI Architecture",
-        "Sovereign AI",
+        "Sovereign AI Infrastructure",
+        "On-premise LLM deployment",
+        "EU AI Act compliance",
+        "PLD 2024",
+        "CEPF methodology",
         "Healthcare AI Infrastructure",
-        "On-premise LLM",
         "Microsoft Dynamics 365",
         "Legacy Modernisation",
       ],
@@ -104,98 +93,102 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">About</p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#E6EDF3]">
-              Built on conviction, not convenience
+            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">
+              About
+            </p>
+            <h1 className="font-syne text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-[#E6EDF3]">
+              About Corrado Patierno
             </h1>
-            <p className="text-lg text-[#7D8FA3] leading-relaxed">
-              Dynamics Consulting was founded with a clear conviction: organisations in healthcare,
-              pharma, and regulated industries deserve AI infrastructure they own, govern, and trust
-              not rented black boxes running on someone else&apos;s cloud.
+            <p className="text-xl md:text-2xl text-[#E6EDF3] leading-relaxed">
+              I build AI infrastructure for organisations that need to own their data.
             </p>
           </div>
         </section>
 
-        {/* Timeline */}
+        {/* Story */}
         <section className="py-20 px-6">
+          <div className="max-w-3xl mx-auto space-y-6 text-[#7D8FA3] text-lg leading-relaxed">
+            <p>
+              After 25 years delivering enterprise systems for clients including Nespresso,
+              Banco Mediolanum, Fincantieri, RINA, and Vodafone, I founded Dynamics Consulting
+              with a specific conviction: healthcare and pharma organisations deserve AI they
+              can govern — not rented black boxes on someone else&apos;s cloud.
+            </p>
+            <p>
+              That conviction became <span className="text-[#E6EDF3] font-medium">Nexus MDS Core</span> —
+              a self-hosted, GDPR-ready AI platform (~16 Docker services: LLM inference, RAG
+              pipeline, Zero-Trust auth, workflow engine) already in production for
+              Federfarma Lombardia and CureSicure.
+            </p>
+            <p>
+              This architectural choice — niche three years ago — is now explicit terminology
+              in the EU Tech Sovereignty Package (CADA, June 2026):{" "}
+              <em className="text-[#00B4D8] not-italic">
+                sovereign cloud and AI for sensitive public and regulated workloads
+              </em>.
+            </p>
+          </div>
+        </section>
+
+        {/* Available for */}
+        <section className="py-16 px-6 bg-[#161B22]">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-12">Our story</p>
-            <div className="space-y-12">
-              {timeline.map((item) => (
-                <div key={item.period} className="flex gap-6">
-                  <div className="shrink-0 w-[110px] text-right">
-                    <span className="text-xs font-mono text-[#00B4D8] tracking-wider">{item.period}</span>
-                  </div>
-                  <div className="relative pl-6 border-l border-[#30363D]">
-                    <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-[#00B4D8]" />
-                    <h3 className="text-base font-bold text-[#E6EDF3] mb-2">{item.title}</h3>
-                    <p className="text-[#7D8FA3] leading-relaxed text-sm">{item.body}</p>
-                  </div>
-                </div>
+            <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-4">
+              Available for
+            </p>
+            <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-6">
+              Engagement models
+            </h2>
+            <ul className="space-y-3">
+              {availableFor.map((a) => (
+                <li
+                  key={a}
+                  className="flex gap-3 text-[#7D8FA3] text-base leading-relaxed"
+                >
+                  <span className="text-[#00B4D8] mt-1.5 shrink-0">▸</span>
+                  <span>{a}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Credentials */}
+        <section className="py-16 px-6">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-4">
+              Credentials
+            </p>
+            <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-6">
+              Certifications &amp; memberships
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {credentials.map((c) => (
+                <span
+                  key={c}
+                  className="text-sm font-mono px-3 py-1.5 rounded-full border border-[#30363D] text-[#7D8FA3]"
+                >
+                  {c}
+                </span>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Founder */}
+        {/* Publications & frameworks */}
         <section className="py-16 px-6 bg-[#161B22]">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-10">Leadership</p>
-            <div className="flex gap-6 items-start">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#00B4D8] to-[#0D47A1] flex items-center justify-center text-white font-bold text-xl shrink-0">
-                CP
-              </div>
-              <div>
-                <div className="text-xl font-bold text-[#E6EDF3] mb-1">Corrado Patierno</div>
-                <div className="text-sm text-[#00B4D8] mb-4">Founder &amp; CEO</div>
-                <p className="text-[#7D8FA3] leading-relaxed mb-5">
-                  Technology consultant, AI architect, MISE-certified Innovation Manager, and author of{" "}
-                  <em>Logistica Fluida</em>. Over 25 years of hands-on delivery across enterprise systems,
-                  data platforms, cloud, and AI infrastructure. Clients include ATOS, Avanade, Capgemini,
-                  illimity, Banco Mediolanum, Nespresso, RINA, and Fincantieri. Member of Mensa. Based in Milan.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {["AI Infrastructure", "Enterprise Architecture", "Data Platforms", "Microsoft Dynamics 365", "Healthcare & Pharma", "ISO 56002", "Innovation Management"].map((tag) => (
-                    <span key={tag} className="text-xs font-mono font-semibold px-3 py-1 rounded-full border border-[#30363D] text-[#7D8FA3]">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Network model */}
-        <section className="py-16 px-6">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">How we work</p>
-            <h2 className="text-2xl font-bold text-[#E6EDF3] mb-5">Principal-led, network-backed</h2>
-            <p className="text-[#7D8FA3] leading-relaxed text-lg mb-5">
-              Every Dynamics Consulting engagement is led directly by Corrado Patierno. Depending on
-              scope, we bring in a curated network of senior independent specialists across AI engineering,
-              data architecture, cloud infrastructure, and enterprise integration, each with production
-              track records in regulated industries.
+            <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-4">
+              Publications &amp; frameworks
             </p>
-            <p className="text-[#7D8FA3] leading-relaxed text-lg">
-              This means clients never get handed off to juniors after the sale. The person who scopes
-              the work is the person who delivers it.
-            </p>
-          </div>
-        </section>
-
-        {/* Values */}
-        <section className="py-20 px-6 bg-[#161B22]">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-14">
-              <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-3">Principles</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#E6EDF3]">Our values</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {values.map((v) => (
-                <div key={v.title} className="bg-[#0D1117] rounded-2xl p-8 border border-[#30363D]">
-                  <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">{v.title}</h3>
-                  <p className="text-[#7D8FA3] leading-relaxed">{v.body}</p>
+            <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-8">
+              Authored work
+            </h2>
+            <div className="space-y-6">
+              {publications.map((p) => (
+                <div key={p.title} className="bg-[#0D1117] border border-[#30363D] rounded-xl p-6">
+                  <h3 className="font-syne text-lg font-bold text-[#E6EDF3] mb-2">{p.title}</h3>
+                  <p className="text-[#7D8FA3] text-sm leading-relaxed">{p.body}</p>
                 </div>
               ))}
             </div>

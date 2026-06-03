@@ -5,8 +5,9 @@ import { motion, useInView } from "framer-motion";
 const stats = [
   { value: 16, suffix: "+", label: "Docker Services in Nexus MDS Core" },
   { value: 10000, suffix: "+", label: "Enterprise documents processed" },
-  { value: 6, suffix: "+", label: "Regulated sectors served" },
-  { value: 2, suffix: "+", label: "Production platforms deployed" },
+  { value: 19, suffix: "", label: "Regulatory frameworks mapped in CEPF" },
+  { value: 8, suffix: "+", label: "Regulated sectors served" },
+  { value: 3, suffix: "+", label: "Production deployments" },
 ];
 
 function formatNumber(n: number) {
@@ -49,7 +50,7 @@ export function Stats() {
   return (
     <section className="py-20 md:py-28 bg-[#0D1117]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}

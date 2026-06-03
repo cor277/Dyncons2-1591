@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 
 const services = [
+  { label: "AI Governance & Compliance Advisory", href: "/services/governance-advisory" },
+  { label: "Fractional AI CTO", href: "/services/fractional-cto" },
   { label: "Applied AI & Agentic Workflows", href: "/services/applied-ai" },
   { label: "Cloud & Kubernetes", href: "/services/cloud-kubernetes" },
   { label: "Modern Data Platforms & RAG", href: "/services/data-platforms" },
@@ -160,7 +162,7 @@ export function Footer() {
             © {new Date().getFullYear()} Dynamics Consulting — Corrado Patierno — P.IVA 10651160961
           </p>
           <p className="text-[#7D8FA3] text-[10px] sm:text-xs font-mono text-center sm:text-right">
-            Milano, Italy · GDPR Compliant · AI Act Ready · EU Data Residency
+            Milano, Italy · GDPR · AI Act Ready · PLD 2024 · ISO 27001 Ready · EU Data Residency · CADA Aligned
           </p>
         </div>
       </div>

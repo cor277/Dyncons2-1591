@@ -7,6 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     { url: `${BASE_URL}/`, priority: 1.0, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/platform`, priority: 0.9, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/services/governance-advisory`, priority: 0.9, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/services/fractional-cto`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/services/applied-ai`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/services/data-platforms`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/services/cloud-kubernetes`, priority: 0.9, changeFrequency: "monthly" as const },
@@ -42,6 +44,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/research/legge-132-2025`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/research/event-sourcing`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/research/rag-enterprise-data`, priority: 0.7, changeFrequency: "yearly" as const },
+    { url: `${BASE_URL}/research/editorial-series`, priority: 0.7, changeFrequency: "weekly" as const },
+    { url: `${BASE_URL}/cepf`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/tech-sovereignty`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/it/ai-dati-aziendali`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/it/ai-ingegneria-tecnica`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/it/ai-agenti-finanziari`, priority: 0.7, changeFrequency: "monthly" as const },
