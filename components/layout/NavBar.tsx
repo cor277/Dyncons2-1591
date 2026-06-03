@@ -3,11 +3,37 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { clsx } from "clsx";
 
-const navLinks = [
-  { label: "Platform", href: "/platform" },
+interface NavChild {
+  label: string;
+  href: string;
+  desc?: string;
+}
+
+interface NavLink {
+  label: string;
+  href?: string;
+  children?: NavChild[];
+}
+
+const navLinks: NavLink[] = [
+  {
+    label: "Platform",
+    children: [
+      {
+        label: "Nexus MDS Core",
+        href: "/platform",
+        desc: "Self-hosted AI platform — 16 services",
+      },
+      {
+        label: "CEPF Methodology",
+        href: "/cepf",
+        desc: "Compliance Estimation & Planning Framework",
+      },
+    ],
+  },
   { label: "Services", href: "/#services" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/about" },
@@ -17,6 +43,8 @@ const navLinks = [
 export function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -58,15 +86,69 @@ export function NavBar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-7">
-            {navLinks.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="text-[#7D8FA3] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200"
-              >
-                {l.label}
-              </Link>
-            ))}
+            {navLinks.map((l) =>
+              l.children ? (
+                <div
+                  key={l.label}
+                  className="relative"
+                  onMouseEnter={() => setOpenDropdown(l.label)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <button
+                    className="flex items-center gap-1 text-[#7D8FA3] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200"
+                    aria-haspopup="true"
+                    aria-expanded={openDropdown === l.label}
+                  >
+                    {l.label}
+                    <ChevronDown
+                      size={14}
+                      className={clsx(
+                        "transition-transform duration-200",
+                        openDropdown === l.label && "rotate-180"
+                      )}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {openDropdown === l.label && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -8 }}
+                        transition={{ duration: 0.15 }}
+                        className="absolute top-full left-1/2 -translate-x-1/2 pt-3 min-w-[280px]"
+                      >
+                        <div className="bg-[#161B22] border border-[#30363D] rounded-xl shadow-lg p-2">
+                          {l.children.map((c) => (
+                            <Link
+                              key={c.href}
+                              href={c.href}
+                              className="block px-4 py-3 rounded-lg hover:bg-[#1C2333] transition-colors group"
+                            >
+                              <div className="text-[#E6EDF3] text-sm font-medium group-hover:text-[#00B4D8] transition-colors">
+                                {c.label}
+                              </div>
+                              {c.desc && (
+                                <div className="text-[#7D8FA3] text-xs mt-0.5">
+                                  {c.desc}
+                                </div>
+                              )}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ) : (
+                <Link
+                  key={l.label}
+                  href={l.href!}
+                  className="text-[#7D8FA3] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200"
+                >
+                  {l.label}
+                </Link>
+              )
+            )}
           </div>
 
           {/* CTA */}
@@ -97,16 +179,60 @@ export function NavBar() {
             className="md:hidden bg-[#161B22] border-b border-[#30363D]"
           >
             <div className="max-w-[1280px] mx-auto px-4 py-4 flex flex-col gap-1">
-              {navLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-[#7D8FA3] hover:text-[#E6EDF3] text-sm font-medium py-2.5 border-b border-[#30363D] last:border-none transition-colors"
-                >
-                  {l.label}
-                </Link>
-              ))}
+              {navLinks.map((l) =>
+                l.children ? (
+                  <div key={l.label} className="border-b border-[#30363D] last:border-none">
+                    <button
+                      onClick={() =>
+                        setMobileExpanded(mobileExpanded === l.label ? null : l.label)
+                      }
+                      className="w-full flex items-center justify-between text-[#7D8FA3] hover:text-[#E6EDF3] text-sm font-medium py-2.5 transition-colors"
+                    >
+                      <span>{l.label}</span>
+                      <ChevronDown
+                        size={16}
+                        className={clsx(
+                          "transition-transform duration-200",
+                          mobileExpanded === l.label && "rotate-180"
+                        )}
+                      />
+                    </button>
+                    {mobileExpanded === l.label && (
+                      <div className="pb-3 pl-3 flex flex-col gap-2">
+                        {l.children.map((c) => (
+                          <Link
+                            key={c.href}
+                            href={c.href}
+                            onClick={() => {
+                              setMobileOpen(false);
+                              setMobileExpanded(null);
+                            }}
+                            className="block py-2"
+                          >
+                            <div className="text-[#E6EDF3] text-sm font-medium">
+                              {c.label}
+                            </div>
+                            {c.desc && (
+                              <div className="text-[#7D8FA3] text-xs mt-0.5">
+                                {c.desc}
+                              </div>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={l.label}
+                    href={l.href!}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-[#7D8FA3] hover:text-[#E6EDF3] text-sm font-medium py-2.5 border-b border-[#30363D] last:border-none transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                )
+              )}
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}

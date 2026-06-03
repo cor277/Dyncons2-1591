@@ -2,23 +2,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 
-const services = [
+const advisoryServices = [
   { label: "AI Governance & Compliance Advisory", href: "/services/governance-advisory" },
   { label: "Fractional AI CTO", href: "/services/fractional-cto" },
+];
+
+const deliveryServices = [
   { label: "Applied AI & Agentic Workflows", href: "/services/applied-ai" },
   { label: "Cloud & Kubernetes", href: "/services/cloud-kubernetes" },
   { label: "Modern Data Platforms & RAG", href: "/services/data-platforms" },
   { label: "Enterprise Integration & API", href: "/services/enterprise-integration" },
   { label: "Microsoft & Dynamics 365", href: "/services/microsoft-dynamics" },
   { label: "Process & Hyper-Automation", href: "/services/automation" },
+  { label: "Blockchain & Web3", href: "/services/blockchain" },
 ];
 
 const legal = [
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "About", href: "/about" },
-  { label: "Research", href: "/research" },
-  { label: "Case Studies", href: "/case-studies" },
   { label: "Nexus MDS Core", href: "/platform" },
+  { label: "CEPF Methodology", href: "/cepf" },
+  { label: "EU Tech Sovereignty", href: "/tech-sovereignty" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Research", href: "/research" },
+  { label: "About", href: "/about" },
+  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 export function Footer() {
@@ -58,8 +64,26 @@ export function Footer() {
             <h4 className="font-dm font-semibold text-[#E6EDF3] text-xs uppercase tracking-widest mb-4">
               Services
             </h4>
+            <p className="text-[#00B4D8] text-[10px] font-mono tracking-widest uppercase mb-2">
+              Advisory &amp; Strategy
+            </p>
+            <ul className="space-y-2 mb-5">
+              {advisoryServices.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200"
+                  >
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="text-[#00B4D8] text-[10px] font-mono tracking-widest uppercase mb-2">
+              Delivery
+            </p>
             <ul className="space-y-2">
-              {services.map((s) => (
+              {deliveryServices.map((s) => (
                 <li key={s.href}>
                   <Link
                     href={s.href}

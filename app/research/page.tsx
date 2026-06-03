@@ -99,8 +99,37 @@ export default function ResearchPage() {
           </div>
         </section>
 
+        {/* Pinned series */}
+        <section className="pt-16 pb-4 px-6">
+          <div className="max-w-4xl mx-auto">
+            <Link
+              href="/research/editorial-series"
+              className="group block rounded-2xl border border-[#00B4D8]/40 hover:border-[#00B4D8] bg-gradient-to-br from-[#161B22] to-[#0D1117] p-8 transition-all shadow-sm hover:shadow-[0_0_30px_rgba(0,180,216,0.12)]"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-semibold uppercase tracking-widest text-[#00B4D8] bg-[rgba(0,180,216,0.1)] border border-[rgba(0,180,216,0.3)] rounded px-2 py-0.5">
+                  Editorial Series
+                </span>
+                <span className="text-xs text-[#7D8FA3]">Public Research · Ongoing</span>
+              </div>
+              <h2 className="text-xl md:text-2xl font-bold text-[#E6EDF3] group-hover:text-[#00B4D8] transition-colors mb-2">
+                PLD 2024 &amp; AI Governance for Software Houses
+              </h2>
+              <p className="text-[#7D8FA3] text-sm leading-relaxed">
+                An ongoing public series on the structural implications of the new EU regulatory
+                regime — Product Liability Directive 2024, AI Act, Tech Sovereignty Package —
+                for software houses and technical professionals in regulated industries. Six
+                articles published, canonical on LinkedIn.
+              </p>
+              <span className="mt-4 inline-flex items-center text-sm font-semibold text-[#00B4D8]">
+                View all articles →
+              </span>
+            </Link>
+          </div>
+        </section>
+
         {/* Articles */}
-        <section className="py-20 px-6">
+        <section className="pt-8 pb-20 px-6">
           <div className="max-w-4xl mx-auto space-y-6">
             {posts.map((p, i) => (
               <Link
