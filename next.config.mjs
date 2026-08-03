@@ -42,6 +42,7 @@ const nextConfig = {
       `<${BASE}/privacy>; rel="privacy-policy"`,
       `<${BASE}/about>; rel="author"`,
       `<${BASE}/sitemap.xml>; rel="describedby"; type="application/xml"`,
+      `<${BASE}/llms.txt>; rel="describedby"; type="text/plain"`,
     ];
 
     // Pages that genuinely exist in both languages. Anything not listed here has

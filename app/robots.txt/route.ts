@@ -21,9 +21,12 @@ Content-Signal: ${CONTENT_SIGNAL}
 Allow: /
 Disallow: /api/
 
+# Curated index for assistants: ${BASE_URL}/llms.txt
 Sitemap: ${BASE_URL}/sitemap.xml
 Host: ${BASE_URL}
 `;
+
+export const dynamic = "force-static";
 
 export function GET() {
   return new Response(body, {
