@@ -18,7 +18,7 @@ const directClients = [
   "Avanade",
   "AESYS",
   "illimity",
-  "Banco Mediolanum",
+  "Banca Mediolanum",
   "Unicorno Ventures",
 ];
 

@@ -79,7 +79,7 @@ export default function AiAgentiFinanziariPage() {
             </p>
             <p>
               <strong className="text-[#E6EDF3]">Esperienza nel settore:</strong> abbiamo
-              implementato Dynamics 365 CRM per Banco Mediolanum, illimity Bank e Unipol —
+              implementato Dynamics 365 CRM per Banca Mediolanum, illimity Bank e Unipol —
               contesti dove la segregazione dei dati, gli audit trail e le approvazioni
               multi-livello erano requisiti non negoziabili. Le stesse competenze di governance
               guidano oggi la progettazione dei nostri sistemi AI agentici.

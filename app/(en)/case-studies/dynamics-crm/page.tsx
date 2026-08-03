@@ -8,7 +8,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Dynamics 365 CRM — Banking & Insurance",
   description:
-    "Dynamics 365 CRM implementations for Banco Mediolanum, illimity, and Unipol. Compliance-aware data architecture, core banking integration, audit trails.",
+    "Dynamics 365 CRM implementations for Banca Mediolanum, illimity, and Unipol. Compliance-aware data architecture, core banking integration, audit trails.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/dynamics-crm" },
 };
 
@@ -78,7 +78,7 @@ export default function DynamicsCrmCaseStudy() {
                   <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-2">
                     Banking / Wealth Management
                   </p>
-                  <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">Banco Mediolanum</h3>
+                  <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">Banca Mediolanum</h3>
                   <p className="text-[#7D8FA3] text-sm leading-relaxed">
                     Italy&apos;s largest network-based wealth management bank, with thousands of
                     financial advisors operating across the country. The CRM implementation had to

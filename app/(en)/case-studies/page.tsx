@@ -109,7 +109,7 @@ const cases = [
     tag: "Multi-sector · CRM · Customer Engagement",
     headline: "Dynamics 365 CRM — banking, insurance & enterprise",
     summary:
-      "Multiple Dynamics 365 Sales and Customer Service rollouts for Banco Mediolanum, Unipol, illimity, and industrial clients. Sector-specific workflows, compliance integration, and enterprise scale.",
+      "Multiple Dynamics 365 Sales and Customer Service rollouts for Banca Mediolanum, Unipol, illimity, and industrial clients. Sector-specific workflows, compliance integration, and enterprise scale.",
     metrics: [
       { value: "5+", label: "CRM implementations" },
       { value: "Banking & Insurance", label: "Core sectors" },

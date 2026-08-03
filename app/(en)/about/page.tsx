@@ -33,7 +33,7 @@ const timeline = [
   {
     period: "1997 – 2010",
     title: "From developer to programme leader",
-    body: "Started as a systems developer in Naples working on RFID, logistics, and critical infrastructure, including a project for the Vatican Apostolic Library. Moved to Milan and progressively took on larger programmes: senior consultant at Capgemini (2011) and Avanade (2016), leading multidisciplinary teams on enterprise projects for clients including Vodafone, RINA, Fincantieri, Unipol, and Banco Mediolanum. Accumulated deep expertise in enterprise integration, data platforms, and complex legacy environments.",
+    body: "Started as a systems developer in Naples working on RFID, logistics, and critical infrastructure, including a project for the Vatican Apostolic Library. Moved to Milan and progressively took on larger programmes: senior consultant at Capgemini (2011) and Avanade (2016), leading multidisciplinary teams on enterprise projects for clients including Vodafone, RINA, Fincantieri and Unipol. Banca Mediolanum ran the other way round: a direct client, where the mandate was to govern the external suppliers on the programme — Capgemini and Avanade among them — including supplier performance and contract renewal decisions. Accumulated deep expertise in enterprise integration, data platforms, and complex legacy environments, on both sides of the contract.",
   },
   {
     period: "2015 – 2019",
@@ -152,7 +152,7 @@ export default function AboutPage() {
                   Technology consultant, AI architect, MISE-certified Innovation Manager, and author of{" "}
                   <em>Logistica Fluida</em>. Over 25 years of hands-on delivery across enterprise systems,
                   data platforms, cloud, and AI infrastructure. Clients include ATOS, Avanade, Capgemini,
-                  illimity, Banco Mediolanum, Nespresso, RINA, and Fincantieri. Member of Mensa. Based in Milan.
+                  illimity, Banca Mediolanum, Nespresso, RINA, and Fincantieri. Member of Mensa. Based in Milan.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["AI Infrastructure", "Enterprise Architecture", "Data Platforms", "Microsoft Dynamics 365", "Healthcare & Pharma", "ISO 56002", "Innovation Management"].map((tag) => (

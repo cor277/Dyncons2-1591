@@ -85,7 +85,7 @@ const caseStudies = [
     sector: "Multi-sector / CRM",
     title: "Dynamics CRM Implementations",
     summary:
-      "Multiple Dynamics 365 Sales and Customer Service rollouts across banking, insurance, and industrial clients — including Banco Mediolanum, Unipol, and illimity.",
+      "Multiple Dynamics 365 Sales and Customer Service rollouts across banking, insurance, and industrial clients — including Banca Mediolanum, Unipol, and illimity.",
     metrics: ["5+ CRM rollouts", "Banking & Insurance", "Enterprise scale"],
     href: "/case-studies/dynamics-crm",
   },
