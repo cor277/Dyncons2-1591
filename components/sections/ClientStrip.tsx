@@ -8,6 +8,10 @@
  *
  * Reclassifying an organisation is moving one string between the two arrays.
  * An empty list renders nothing.
+ *
+ * Note: an organisation can appear both in the /about timeline as a former
+ * employer and here as a direct client — Avanade re-engaged a former employee
+ * as an external consultant. The two pages must stay consistent about that.
  */
 const directClients = [
   "ATOS",

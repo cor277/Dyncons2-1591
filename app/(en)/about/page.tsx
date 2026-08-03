@@ -43,7 +43,7 @@ const timeline = [
   {
     period: "2019 – present",
     title: "Independent consultant and Innovation Manager",
-    body: "Transitioned to full independence, combining direct project delivery with strategic advisory. MISE-certified Innovation Manager. Certifications in ISO 56002:2020, IBM Enterprise Design Thinking, and Microsoft Dynamics 365 Solution Architecture. Deepened focus on AI-assisted modernisation of legacy enterprise systems, RAG architectures, and on-premise AI infrastructure for regulated industries. Current production clients include Federfarma Lombarda and CureSicure.",
+    body: "Transitioned to full independence, combining direct project delivery with strategic advisory. Organisations from the earlier phases came back as direct clients of Dynamics Consulting — Avanade among them, re-engaging a former employee as an external consultant. MISE-certified Innovation Manager. Certifications in ISO 56002:2020, IBM Enterprise Design Thinking, and Microsoft Dynamics 365 Solution Architecture. Deepened focus on AI-assisted modernisation of legacy enterprise systems, RAG architectures, and on-premise AI infrastructure for regulated industries. Current production clients include Federfarma Lombarda and CureSicure.",
   },
   {
     period: "2026",
