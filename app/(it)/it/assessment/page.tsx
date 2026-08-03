@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import Image from "next/image";
+import Link from "next/link";
 import { AssessmentForm } from "@/components/assessment/AssessmentForm";
 
 const IT_URL = "https://www.dynamicsconsulting.it/it/assessment";
@@ -64,24 +65,30 @@ export default function AssessmentItPage() {
     <div lang="it" className="bg-[#0D1117] min-h-screen text-[#E6EDF3]">
       {/* Testata — solo logo, nessuna navigazione */}
       <header className="border-b border-[#21262D]">
-        <div className="max-w-2xl mx-auto px-6 py-6 flex items-center gap-3">
-          <div className="w-9 h-9 rounded overflow-hidden flex-shrink-0">
-            <Image
-              src="/logo.jpg"
-              alt="Dynamics Consulting"
-              width={36}
-              height={36}
-              className="object-contain"
-            />
-          </div>
-          <div>
-            <p className="font-syne text-[#E6EDF3] font-bold text-xs tracking-[0.15em] uppercase leading-none">
-              DYNAMICS
-            </p>
-            <p className="font-syne text-[#00B4D8] font-bold text-xs tracking-[0.15em] uppercase leading-none mt-0.5">
-              CONSULTING
-            </p>
-          </div>
+        <div className="max-w-2xl mx-auto px-6 py-6">
+          <Link
+            href="/"
+            aria-label="Dynamics Consulting — home"
+            className="inline-flex items-center gap-3 group"
+          >
+            <div className="w-9 h-9 rounded overflow-hidden flex-shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt="Dynamics Consulting"
+                width={36}
+                height={36}
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <p className="font-syne text-[#E6EDF3] font-bold text-xs tracking-[0.15em] uppercase leading-none">
+                DYNAMICS
+              </p>
+              <p className="font-syne text-[#00B4D8] group-hover:text-[#00C8F0] font-bold text-xs tracking-[0.15em] uppercase leading-none mt-0.5 transition-colors">
+                CONSULTING
+              </p>
+            </div>
+          </Link>
         </div>
       </header>
 

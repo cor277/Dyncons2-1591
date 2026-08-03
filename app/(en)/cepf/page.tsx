@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
+import { NavBar } from "@/components/layout/NavBar";
+import { Footer } from "@/components/layout/Footer";
 import { CepfTool } from "./CepfTool";
 
 const URL = "https://www.dynamicsconsulting.it/cepf";
@@ -42,9 +44,11 @@ const DEMO_REGIMES = [
 
 export default function CepfPage() {
   return (
-    <div className="bg-[#0D1117] min-h-screen text-[#E6EDF3]">
+    <>
+      <NavBar />
+      <div className="bg-[#0D1117] min-h-screen text-[#E6EDF3]">
       <main>
-        <section className="px-6 pt-16 pb-10">
+        <section className="px-6 pt-28 pb-10">
           <div className="max-w-3xl mx-auto">
             <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-5">
               Proprietary methodology
@@ -130,6 +134,8 @@ export default function CepfPage() {
           </div>
         </section>
       </main>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }
