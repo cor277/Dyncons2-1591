@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 const stats = [
   { value: 16, suffix: "+", label: "Docker Services in Nexus MDS Core" },
   { value: 10000, suffix: "+", label: "Enterprise documents processed" },
-  { value: 19, suffix: "", label: "Regulatory frameworks mapped in CEPF" },
+  { value: 21, suffix: "", label: "Regulatory regimes mapped in CEPF v7" },
   { value: 8, suffix: "+", label: "Regulated sectors served" },
   { value: 3, suffix: "+", label: "Production deployments" },
 ];

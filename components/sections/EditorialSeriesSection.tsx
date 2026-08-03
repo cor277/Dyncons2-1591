@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import { TextLink } from "@/components/ui/TextLink";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CTAButton } from "@/components/ui/CTAButton";
 
 interface Article {
   category: string;
@@ -73,7 +73,7 @@ export function EditorialSeriesSection() {
           ))}
         </div>
 
-        <CTAButton label="View all articles →" href="/research/editorial-series" variant="secondary" />
+        <TextLink label="View all articles →" href="/research/editorial-series" />
       </div>
     </section>
   );

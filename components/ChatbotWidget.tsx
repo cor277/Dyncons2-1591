@@ -1,8 +1,13 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 
+/* Landing pages that must expose a single action — the form. No floating widget. */
+const SUPPRESSED_PATHS = ["/assessment", "/it/assessment"];
+
 export function ChatbotWidget() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [showBadge, setShowBadge] = useState(false);
 
@@ -45,6 +50,8 @@ export function ChatbotWidget() {
   }, []);
 
   const closeChat = useCallback(() => setIsOpen(false), []);
+
+  if (SUPPRESSED_PATHS.includes(pathname)) return null;
 
   return (
     <>

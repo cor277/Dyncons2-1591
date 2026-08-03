@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import { TextLink } from "@/components/ui/TextLink";
 import { TechBadge } from "@/components/ui/TechBadge";
-import { CTAButton } from "@/components/ui/CTAButton";
 
 export function NexusBanner() {
   return (
@@ -39,11 +39,7 @@ export function NexusBanner() {
               </div>
             </div>
             <div className="flex-shrink-0">
-              <CTAButton
-                label="Discover the platform →"
-                href="/platform"
-                variant="primary"
-              />
+              <TextLink label="Discover the platform →" href="/platform" />
             </div>
           </div>
         </motion.div>

@@ -8,6 +8,7 @@ const advisoryServices = [
 ];
 
 const deliveryServices = [
+  { label: "Technical capabilities", href: "/capabilities" },
   { label: "Applied AI & Agentic Workflows", href: "/services/applied-ai" },
   { label: "Cloud & Kubernetes", href: "/services/cloud-kubernetes" },
   { label: "Modern Data Platforms & RAG", href: "/services/data-platforms" },
@@ -80,7 +81,7 @@ export function Footer() {
               ))}
             </ul>
             <p className="text-[#00B4D8] text-[10px] font-mono tracking-widest uppercase mb-2">
-              Delivery
+              Capabilities
             </p>
             <ul className="space-y-2">
               {deliveryServices.map((s) => (

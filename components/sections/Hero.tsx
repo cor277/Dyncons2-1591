@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { TextLink } from "@/components/ui/TextLink";
 import { CTAButton } from "@/components/ui/CTAButton";
 
 const fadeUp = {
@@ -51,7 +52,7 @@ export function Hero() {
             className="text-[#9BA8B9] text-base md:text-lg max-w-2xl leading-relaxed mb-5"
           >
             We build and deploy on-premise AI platforms for healthcare, pharma,
-            and regulated industries — so your data never leaves your perimeter.
+            and regulated industries — so your personal and confidential data never leaves your perimeter.
           </motion.p>
 
           {/* Body */}
@@ -63,7 +64,7 @@ export function Hero() {
             className="text-[#7D8FA3] text-lg md:text-xl max-w-2xl leading-relaxed mb-10"
           >
             Nexus MDS Core — 16 orchestrated services. Self-hosted. GDPR-ready.
-            Zero hyperscaler dependency. From healthcare and pharma to energy and enterprise CRM.
+            No hyperscaler lock-in. From healthcare and pharma to energy and enterprise CRM.
             Already in production.
           </motion.p>
 
@@ -75,8 +76,11 @@ export function Hero() {
             animate="visible"
             className="flex flex-col sm:flex-row gap-4"
           >
-            <CTAButton label="See Nexus in production →" href="/platform" variant="primary" />
-            <CTAButton label="View services" href="/#services" variant="secondary" />
+            <CTAButton label="Exposure assessment →" href="/assessment" variant="primary" />
+            <div className="flex items-center gap-6 sm:self-center">
+              <TextLink label="See Nexus in production →" href="/platform" />
+              <TextLink label="Service lines" href="/#services" />
+            </div>
           </motion.div>
 
           {/* Chatbot callout */}

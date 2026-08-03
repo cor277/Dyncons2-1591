@@ -47,7 +47,7 @@ export function BookCallout() {
               href="https://amzn.eu/d/06ZlECJe"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-5 py-2.5 border border-[#00B4D8] text-[#00B4D8] rounded-lg text-sm font-semibold hover:bg-[#00B4D8] hover:text-[#0D1117] transition-all duration-200"
+              className="inline-flex items-center gap-1 text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium underline underline-offset-4 decoration-[#00B4D8]/40 hover:decoration-[#E6EDF3] transition-colors duration-200"
             >
               Buy on Amazon →
             </a>

@@ -26,12 +26,12 @@ export function DigitalTwinSection() {
             <p className="text-[#7D8FA3] text-lg leading-relaxed mb-8">
               The assistant below is a digital twin of Corrado Patierno — architect and
               founder of Dynamics Consulting. It runs live on Nexus MDS Core:
-              on-premise, GDPR-compliant, zero cloud dependency.
+              sovereign by architecture, GDPR-compliant, no hyperscaler lock-in.
               Ask it anything about the platform, the methodology, or your use case.
             </p>
             <button
               onClick={() => window.dispatchEvent(new CustomEvent("open-chatbot"))}
-              className="inline-flex items-center px-6 py-3 bg-[#00B4D8] text-[#0D1117] rounded-lg text-sm font-semibold hover:bg-[#00c8f0] transition-all duration-200 shadow-[0_0_15px_rgba(0,180,216,0.3)]"
+              className="inline-flex items-center gap-1 text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium underline underline-offset-4 decoration-[#00B4D8]/40 hover:decoration-[#E6EDF3] transition-colors duration-200 cursor-pointer"
             >
               Open the Digital Twin →
             </button>

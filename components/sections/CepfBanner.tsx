@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import { TextLink } from "@/components/ui/TextLink";
 import { TechBadge } from "@/components/ui/TechBadge";
-import { CTAButton } from "@/components/ui/CTAButton";
 
 export function CepfBanner() {
   return (
@@ -28,11 +28,11 @@ export function CepfBanner() {
                 CEPF — Compliance Estimation &amp; Planning Framework
               </h2>
               <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-6">
-                19 regulatory frameworks mapped. 210 entries. 617 operational deliverables.
-                23 cross-framework regulatory overlaps identified. CEPF assesses and plans
-                compliance for software houses and organisations operating under EU AI Act,
-                GDPR, PLD 2024, NIS2, DORA, ISO 27001:2022, Cyber Resilience Act, ISO 56001,
-                and MiFID II.
+                CEPF v7 — 21 regulatory regimes mapped onto their operational obligations,
+                snapshot July 2026. 23 cross-framework regulatory overlaps identified.
+                CEPF assesses and plans compliance for software houses and
+                organisations operating under EU AI Act, GDPR, PLD 2024, NIS2, DORA,
+                ISO 27001:2022, Cyber Resilience Act, ISO 56001, and MiFID II.
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -49,11 +49,7 @@ export function CepfBanner() {
               </div>
             </div>
             <div className="flex-shrink-0">
-              <CTAButton
-                label="Discover CEPF →"
-                href="/cepf"
-                variant="primary"
-              />
+              <TextLink label="Discover CEPF →" href="/cepf" />
             </div>
           </div>
         </motion.div>

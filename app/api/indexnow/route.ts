@@ -1,49 +1,15 @@
 import { NextResponse } from "next/server";
+import sitemap from "@/app/sitemap";
 
 const INDEXNOW_KEY = "ad2c663474ef46fd0c07958461afd08d";
 const HOST = "www.dynamicsconsulting.it";
 const BASE_URL = `https://${HOST}`;
 const KEY_LOCATION = `${BASE_URL}/${INDEXNOW_KEY}.txt`;
 
-/* All site URLs — mirrors app/sitemap.ts */
-const ALL_URLS = [
-  "/",
-  "/platform",
-  "/services/applied-ai",
-  "/services/data-platforms",
-  "/services/cloud-kubernetes",
-  "/services/enterprise-integration",
-  "/services/microsoft-dynamics",
-  "/services/automation",
-  "/services/blockchain",
-  "/case-studies",
-  "/case-studies/humania-care",
-  "/case-studies/federfarma",
-  "/case-studies/dynamics-data",
-  "/case-studies/sorgenia",
-  "/case-studies/nespresso",
-  "/case-studies/dynamics-crm",
-  "/case-studies/iatp",
-  "/case-studies/logitrack",
-  "/about",
-  "/research",
-  "/contact",
-  "/privacy",
-  "/it/ai-sanitaria-on-premise",
-  "/it/consulenza-ai-farmaceutico",
-  "/it/sovereign-ai-italia",
-  "/ai-on-premise-healthcare",
-  "/sovereign-ai-pharma-italia",
-  "/fractional-cto-milano",
-  "/modernizzazione-sistemi-legacy-ai",
-  "/research/on-premise-ai",
-  "/research/rag-vs-fine-tuning",
-  "/research/governing-ai-outputs",
-  "/research/lakehouse-not-enough",
-  "/research/ai-reverse-engineering",
-  "/research/legge-132-2025",
-  "/research/event-sourcing",
-];
+/* Derived from the sitemap so the two can never drift apart again. */
+const ALL_URLS = sitemap().map((entry) =>
+  String(entry.url).replace(BASE_URL, "")
+);
 
 /**
  * POST /api/indexnow

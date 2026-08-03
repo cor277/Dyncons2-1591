@@ -27,7 +27,7 @@ export function SovereigntyStrip() {
           <div className="flex flex-col sm:flex-row gap-3 self-start lg:self-auto">
             <a
               href="/tech-sovereignty"
-              className="inline-flex items-center gap-1.5 text-[#0D1117] bg-[#00B4D8] hover:bg-[#00c8f0] text-sm font-semibold rounded-lg px-4 py-2 transition-all duration-200 whitespace-nowrap"
+              className="inline-flex items-center gap-1 text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium underline underline-offset-4 decoration-[#00B4D8]/40 hover:decoration-[#E6EDF3] transition-colors duration-200 whitespace-nowrap"
             >
               Read our analysis →
             </a>
@@ -35,7 +35,7 @@ export function SovereigntyStrip() {
               href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1187"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium border border-[#00B4D8]/40 hover:border-[#00B4D8] rounded-lg px-4 py-2 transition-all duration-200 whitespace-nowrap"
+              className="inline-flex items-center gap-1 text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium underline underline-offset-4 decoration-[#00B4D8]/40 hover:decoration-[#E6EDF3] transition-colors duration-200 whitespace-nowrap"
             >
               Commission press release ↗
             </a>

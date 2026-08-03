@@ -5,6 +5,9 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { clsx } from "clsx";
+import { LanguageSwitch } from "./LanguageSwitch";
+import { usePathname } from "next/navigation";
+import { assessmentHref, assessmentLabel } from "@/lib/locale";
 
 interface NavChild {
   label: string;
@@ -34,13 +37,33 @@ const navLinks: NavLink[] = [
       },
     ],
   },
-  { label: "Services", href: "/#services" },
+  {
+    label: "Services",
+    children: [
+      {
+        label: "AI Governance & Compliance Advisory",
+        href: "/services/governance-advisory",
+        desc: "AI Act, PLD 2024, NIS2, DORA — assessment and board-level governance",
+      },
+      {
+        label: "Fractional AI CTO",
+        href: "/services/fractional-cto",
+        desc: "Technology strategy and architectural governance, part-time",
+      },
+      {
+        label: "Technical capabilities",
+        href: "/capabilities",
+        desc: "Data platforms, Kubernetes, integration, Dynamics 365, automation",
+      },
+    ],
+  },
   { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/about" },
   { label: "Research", href: "/research" },
 ];
 
 export function NavBar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -152,21 +175,27 @@ export function NavBar() {
           </div>
 
           {/* CTA */}
-          <Link
-            href="/contact"
-            className="hidden md:inline-flex items-center px-4 py-2 bg-[#00B4D8] text-[#0D1117] rounded-lg text-sm font-semibold hover:bg-[#00c8f0] transition-all duration-200 shadow-[0_0_15px_rgba(0,180,216,0.3)]"
-          >
-            Request a Nexus demo →
-          </Link>
+          <div className="hidden md:flex items-center gap-3">
+            <LanguageSwitch />
+            <Link
+              href={assessmentHref(pathname)}
+              className="inline-flex items-center px-4 py-2 bg-[#00B4D8] text-[#0D1117] rounded-lg text-sm font-semibold hover:bg-[#00c8f0] transition-all duration-200 shadow-[0_0_15px_rgba(0,180,216,0.3)]"
+            >
+              {assessmentLabel(pathname)}
+            </Link>
+          </div>
 
-          {/* Mobile hamburger */}
-          <button
-            className="md:hidden text-[#7D8FA3] hover:text-[#E6EDF3]"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: language switch + hamburger */}
+          <div className="md:hidden flex items-center gap-3">
+            <LanguageSwitch />
+            <button
+              className="text-[#7D8FA3] hover:text-[#E6EDF3]"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -234,11 +263,11 @@ export function NavBar() {
                 )
               )}
               <Link
-                href="/contact"
+                href={assessmentHref(pathname)}
                 onClick={() => setMobileOpen(false)}
                 className="mt-3 text-center px-4 py-3 bg-[#00B4D8] text-[#0D1117] rounded-lg text-sm font-semibold"
               >
-                Request a Nexus demo →
+                {assessmentLabel(pathname)}
               </Link>
             </div>
           </motion.div>

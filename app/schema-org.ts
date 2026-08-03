@@ -1,0 +1,91 @@
+/* Shared JSON-LD, emitted by both root layouts. */
+export const schemaOrg = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Dynamics Consulting",
+    url: "https://www.dynamicsconsulting.it",
+    logo: "https://www.dynamicsconsulting.it/logo.jpg",
+    founder: {
+      "@type": "Person",
+      name: "Corrado Patierno",
+    },
+    foundingDate: "2019",
+    areaServed: ["IT", "EU"],
+    knowsAbout: [
+      "Sovereign AI Infrastructure",
+      "On-premise LLM deployment",
+      "Healthcare AI",
+      "Pharmaceutical AI",
+      "GDPR-compliant AI",
+      "AI Act compliance",
+      "RAG pipelines",
+      "Multi-agent systems",
+      "n8n orchestration",
+      "Docker enterprise AI stack",
+    ],
+    description:
+      "Italian AI infrastructure consultancy specialising in sovereign, on-premise AI platforms for regulated industries. Builders of Nexus MDS Core.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+39-340-725-3246",
+      contactType: "sales",
+      email: "info@dynamicsconsulting.it",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Corrado Patierno",
+    jobTitle: "AI Solution Architect & Founder",
+    worksFor: {
+      "@type": "Organization",
+      name: "Dynamics Consulting",
+    },
+    knowsAbout: [
+      "Enterprise AI Architecture",
+      "Sovereign AI",
+      "Healthcare AI Infrastructure",
+      "On-premise LLM",
+      "RAG Systems",
+      "n8n agentic workflows",
+      "Kubernetes",
+      "Zero-Trust security",
+      "Microsoft Dynamics 365",
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/corradopatierno",
+      "https://amzn.eu/d/06ZlECJe",
+    ],
+    author: {
+      "@type": "Book",
+      name: "Logistica Fluida",
+      datePublished: "2026",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Nexus MDS Core",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Linux, Kubernetes, Docker",
+    description:
+      "Enterprise self-hosted AI platform. ~16 orchestrated Docker services including LLM inference, RAG pipeline, Zero-Trust auth, vector search, workflow engine, and observability stack. GDPR-ready and AI Act compliant. Designed for healthcare, pharma, and regulated industries.",
+    creator: {
+      "@type": "Organization",
+      name: "Dynamics Consulting",
+    },
+    featureList: [
+      "Local inference, replaceable external generation",
+      "RAG pipeline with Weaviate",
+      "Zero-Trust auth with Keycloak OIDC/PKCE",
+      "n8n agentic workflow engine",
+      "MinIO S3-compatible storage",
+      "GDPR-compliant data pipeline",
+      "AI Act ready",
+      "EU data residency",
+      "Kubernetes and bare-metal deployable",
+    ],
+    url: "https://www.dynamicsconsulting.it/platform",
+  },
+];
