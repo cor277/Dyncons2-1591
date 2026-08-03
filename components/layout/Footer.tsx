@@ -161,6 +161,12 @@ export function Footer() {
             Risorse in italiano
           </h4>
           <div className="flex flex-wrap gap-x-6 gap-y-1">
+            <Link href="/it/assessment" hrefLang="it" className="text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200">
+              Assessment di esposizione
+            </Link>
+            <Link href="/it/case-studies/federfarma" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              Caso studio: Federfarma Lombarda
+            </Link>
             <Link href="/it/ai-sanitaria-on-premise" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               AI On-Premise per la Sanità
             </Link>

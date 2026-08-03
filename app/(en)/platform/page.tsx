@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { Cpu, Shield, Search, GitBranch, Database, Activity, CheckCircle2 } from "lucide-react";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, AI Act compliant.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/platform" },
   openGraph: {
+    images: OG_IMAGE,
     title: "Nexus MDS Core — On-Premise AI Platform",
     description:
       "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, AI Act compliant.",

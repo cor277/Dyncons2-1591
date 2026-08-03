@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { fontVariables } from "../fonts";
 import { schemaOrg } from "../schema-org";
 import "../globals.css";
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Corrado Patierno", url: "https://www.dynamicsconsulting.it" }],
   creator: "Corrado Patierno",
   openGraph: {
+    images: OG_IMAGE,
     type: "website",
     locale: "it_IT",
     siteName: "Dynamics Consulting",

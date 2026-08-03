@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, conformità Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/it/consulenza-ai-farmaceutico" },
   openGraph: {
+    images: OG_IMAGE,
     title: "Consulenza AI per il Farmaceutico | Nexus MDS Core",
     description:
       "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, conformità Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",

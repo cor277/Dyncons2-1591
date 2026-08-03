@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   keywords: ["agentic AI", "multi-agent systems", "RAG architecture enterprise", "voice AI", "GDPR AI compliance", "AI Act"],
   alternates: { canonical: "https://www.dynamicsconsulting.it/services/applied-ai" },
   openGraph: {
+    images: OG_IMAGE,
     title: "Applied AI & Agentic Workflows | Dynamics Consulting",
     description: "Multi-agent systems with memory, orchestration and governance. GDPR and AI Act compliance by design.",
   },

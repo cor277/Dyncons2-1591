@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
 export const metadata: Metadata = {
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   keywords: ["data lakehouse", "Apache Iceberg", "Dremio data virtualization", "Weaviate RAG", "Dynamics 365 data modernization", "Zero-ETL"],
   alternates: { canonical: "https://www.dynamicsconsulting.it/services/data-platforms" },
   openGraph: {
+    images: OG_IMAGE,
     title: "Data Platforms & RAG Architecture",
     description: "ACID data lakehouse, Zero-ETL, production-ready RAG pipelines.",
   },

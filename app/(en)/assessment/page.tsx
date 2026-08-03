@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import Image from "next/image";
 import { AssessmentForm } from "@/components/assessment/AssessmentForm";
 
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: OG_IMAGE,
     title: "Exposure assessment — PLD 2024 and the AI Act",
     description:
       "From 9 December 2026 the European product liability directive treats software as a product. Three days of work to establish where your supplier’s liability stops and yours begins.",
@@ -26,6 +28,7 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   twitter: {
+    images: TWITTER_IMAGE,
     card: "summary_large_image",
     title: "Exposure assessment — PLD 2024 and the AI Act",
     description:
@@ -97,6 +100,16 @@ export default function AssessmentPage() {
               that date, a defect is no longer merely a breach of contract. This assessment
               establishes, for your organisation, where your supplier’s liability stops and yours
               begins.
+            </p>
+            <p className="mt-5 text-sm">
+              <a
+                href="/it/assessment"
+                hrefLang="it"
+                lang="it"
+                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+              >
+                Questa pagina è disponibile in italiano →
+              </a>
             </p>
           </div>
         </section>

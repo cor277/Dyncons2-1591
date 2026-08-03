@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
       "https://www.dynamicsconsulting.it/modernizzazione-sistemi-legacy-ai",
   },
   openGraph: {
+    images: OG_IMAGE,
     title:
       "Modernizzazione Sistemi Legacy con AI | Dynamics Consulting",
     description:

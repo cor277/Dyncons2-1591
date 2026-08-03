@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { CepfTool } from "./CepfTool";
 
 const URL = "https://www.dynamicsconsulting.it/cepf";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: URL },
   openGraph: {
+    images: OG_IMAGE,
     title: "CEPF — Compliance Estimation & Planning Framework",
     description: DESCRIPTION,
     url: URL,
@@ -18,6 +20,7 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   twitter: {
+    images: TWITTER_IMAGE,
     card: "summary_large_image",
     title: "CEPF — Compliance Estimation & Planning Framework",
     description: DESCRIPTION,
@@ -90,6 +93,17 @@ export default function CepfPage() {
                 The interactive tool below covers nine of the twenty-one regimes in CEPF v7 and a
                 subset of its planning functions. It is a working demonstration, not the complete
                 framework. Its interface is in Italian.
+              </p>
+              <p className="text-[#7D8FA3] leading-relaxed mt-3" lang="it">
+                Lo strumento è in italiano, e lo è anche{" "}
+                <a
+                  href="/it/assessment"
+                  hrefLang="it"
+                  className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+                >
+                  l’assessment di esposizione
+                </a>
+                : se stai leggendo la demo, quello è il percorso giusto.
               </p>
             </div>
 

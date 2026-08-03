@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: OG_IMAGE,
     title: "Federfarma Lombarda — Nexus MDS Core in production",
     description:
       "Regulatory assistant for 1,000+ pharmacies across Milan, Lodi and Monza Brianza. Explicit version chains, personal data never indexed, tamper-evident audit log.",
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   twitter: {
+    images: TWITTER_IMAGE,
     card: "summary_large_image",
     title: "Federfarma Lombarda — Nexus MDS Core in production",
     description:

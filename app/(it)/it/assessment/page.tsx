@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import Image from "next/image";
 import { AssessmentForm } from "@/components/assessment/AssessmentForm";
 
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: OG_IMAGE,
     title: "Assessment di esposizione — PLD 2024 e AI Act",
     description:
       "Dal 9 dicembre 2026 la direttiva europea sulla responsabilità da prodotto include il software. Tre giornate per stabilire dove si ferma la responsabilità del fornitore e dove comincia la tua.",
@@ -26,6 +28,7 @@ export const metadata: Metadata = {
     locale: "it_IT",
   },
   twitter: {
+    images: TWITTER_IMAGE,
     card: "summary_large_image",
     title: "Assessment di esposizione — PLD 2024 e AI Act",
     description:
@@ -97,6 +100,16 @@ export default function AssessmentItPage() {
               prodotti. Da quella data, un difetto non è più solo un inadempimento contrattuale.
               Questo assessment stabilisce, per la tua organizzazione, dove si ferma la
               responsabilità del fornitore e dove comincia la tua.
+            </p>
+            <p className="mt-5 text-sm">
+              <a
+                href="/assessment"
+                hrefLang="en"
+                lang="en"
+                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+              >
+                This page is available in English →
+              </a>
             </p>
           </div>
         </section>

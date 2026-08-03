@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "RAG su ISO, UNI, EN, capitolati e revisioni per studi di ingegneria. Risposte citate con norma e revisione corretta. Traceabilità per responsabilità professionale.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-ingegneria-tecnica" },
   openGraph: {
+    images: OG_IMAGE,
     title: "AI per norme tecniche e ingegneria | Nexus MDS Core",
     description:
       "RAG su ISO, UNI, EN, capitolati e revisioni per studi di ingegneria. Risposte citate con norma e revisione corretta. Traceabilità per responsabilità professionale.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: OG_IMAGE,
     title: "On-Premise AI for Healthcare | Dynamics Consulting",
     description:
       "Sovereign AI infrastructure for hospitals, pharma, and clinical research. Personal and confidential data never leaves your perimeter.",

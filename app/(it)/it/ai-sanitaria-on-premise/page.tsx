@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: OG_IMAGE,
     title: "AI On-Premise per la Sanità Italiana",
     description:
       "Infrastruttura AI on-premise per la sanità italiana. GDPR, AI Act, Legge 132/2025. Nexus MDS Core — piattaforma sovrana per ospedali, farmacie e aziende farmaceutiche.",

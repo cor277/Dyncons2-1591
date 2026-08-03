@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
     canonical: "https://www.dynamicsconsulting.it/services/cloud-kubernetes",
   },
   openGraph: {
+    images: OG_IMAGE,
     title: "Cloud & Kubernetes Architecture | Dynamics Consulting",
     description: "AI-ready infrastructure. GPU orchestration. Zero-Trust by default.",
   },

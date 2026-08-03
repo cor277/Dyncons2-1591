@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "Sovereign AI per le organizzazioni italiane in settori regolamentati. AI Act, GDPR, NIS2. Nexus MDS Core — piattaforma AI on-premise per healthcare, pharma e industrie regolamentate.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/it/sovereign-ai-italia" },
   openGraph: {
+    images: OG_IMAGE,
     title: "Sovereign AI Italia — Infrastruttura AI Governabile",
     description:
       "Sovereign AI per le organizzazioni italiane in settori regolamentati. AI Act, GDPR, NIS2. Nexus MDS Core — piattaforma AI on-premise per healthcare, pharma e industrie regolamentate.",

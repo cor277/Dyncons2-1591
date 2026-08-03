@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, GDPR-compliant, nessuna dipendenza cloud.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-dati-aziendali" },
   openGraph: {
+    images: OG_IMAGE,
     title: "Implementare AI sui dati aziendali | Nexus MDS Core",
     description:
       "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, GDPR-compliant, nessuna dipendenza cloud.",

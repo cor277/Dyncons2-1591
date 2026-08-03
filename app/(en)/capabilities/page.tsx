@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     "The engineering underneath the service lines: applied AI, data platforms, Kubernetes, enterprise integration, Dynamics 365, automation, blockchain. Competences, not separate offerings.",
   alternates: { canonical: URL },
   openGraph: {
+    images: OG_IMAGE,
     title: "Technical capabilities | Dynamics Consulting",
     description:
       "The engineering underneath the service lines: applied AI, data platforms, Kubernetes, enterprise integration, Dynamics 365, automation, blockchain.",

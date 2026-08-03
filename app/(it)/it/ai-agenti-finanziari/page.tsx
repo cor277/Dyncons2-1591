@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/app/og";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "Governance agenti AI per banche e asset manager: approval gate, audit log immutabile, RBAC, logging LLM. DORA, MiFID II, AI Act compliant.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-agenti-finanziari" },
   openGraph: {
+    images: OG_IMAGE,
     title: "Agenti AI per finanza e compliance | Nexus MDS Core",
     description:
       "Governance agenti AI per banche e asset manager: approval gate, audit log immutabile, RBAC, logging LLM. DORA, MiFID II, AI Act compliant.",

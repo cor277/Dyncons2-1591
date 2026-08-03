@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: OG_IMAGE,
     title: "Federfarma Lombarda — Nexus MDS Core in produzione",
     description:
       "Assistente normativo per oltre 1.000 farmacie delle province di Milano, Lodi e Monza Brianza. Catena di versioni esplicita, dati personali mai indicizzati, registro inalterabile.",
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
     locale: "it_IT",
   },
   twitter: {
+    images: TWITTER_IMAGE,
     card: "summary_large_image",
     title: "Federfarma Lombarda — Nexus MDS Core in produzione",
     description:
