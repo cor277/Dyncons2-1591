@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { esc } from "@/lib/escape-html";
 
 export async function POST(req: NextRequest) {
   try {
@@ -36,34 +37,34 @@ export async function POST(req: NextRequest) {
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
               <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: 600; color: #475569; width: 160px;">Name</td>
-              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${name}</td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${esc(name)}</td>
             </tr>
             <tr>
               <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: 600; color: #475569;">Email</td>
-              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;"><a href="mailto:${email}" style="color: #0891b2;">${email}</a></td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;"><a href="mailto:${esc(email)}" style="color: #0891b2;">${esc(email)}</a></td>
             </tr>
             ${company ? `<tr>
               <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: 600; color: #475569;">Company</td>
-              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${company}</td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${esc(company)}</td>
             </tr>` : ""}
             ${projectType ? `<tr>
               <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: 600; color: #475569;">Project type</td>
-              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${projectType}</td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${esc(projectType)}</td>
             </tr>` : ""}
             ${source ? `<tr>
               <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: 600; color: #475569;">How they found us</td>
-              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${source}</td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a;">${esc(source)}</td>
             </tr>` : ""}
             <tr>
               <td style="padding: 10px 0; font-weight: 600; color: #475569; vertical-align: top;">Message</td>
-              <td style="padding: 10px 0; color: #0f172a; white-space: pre-wrap;">${message}</td>
+              <td style="padding: 10px 0; color: #0f172a; white-space: pre-wrap;">${esc(message)}</td>
             </tr>
           </table>
           <div style="margin-top: 24px; padding: 16px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
             <p style="margin: 0 0 8px 0; font-weight: 600; color: #475569; font-size: 12px;">GDPR Consent Record (Art. 7(1))</p>
             <p style="margin: 0; color: #64748b; font-size: 12px;">Explicit consent given: Yes (checkbox)</p>
             <p style="margin: 0; color: #64748b; font-size: 12px;">Legal basis: Art. 6(1)(a) GDPR</p>
-            <p style="margin: 0; color: #64748b; font-size: 12px;">Consent timestamp: ${consentTimestamp || new Date().toISOString()}</p>
+            <p style="margin: 0; color: #64748b; font-size: 12px;">Consent timestamp: ${esc(consentTimestamp || new Date().toISOString())}</p>
             <p style="margin: 0; color: #64748b; font-size: 12px;">Policy version: 2026-03-09-v2</p>
             <p style="margin: 0; color: #64748b; font-size: 12px;">Purpose: Responding to contact enquiry</p>
             <p style="margin: 0; color: #64748b; font-size: 12px;">Retention: 24 months</p>

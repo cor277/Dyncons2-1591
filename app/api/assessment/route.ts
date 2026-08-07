@@ -1,17 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { esc } from "@/lib/escape-html";
 
-/** Escape values before interpolating them into the HTML notification email. */
-function esc(v: unknown): string {
-  return String(v ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-const row = (label: string, value: string, last = false) => `
+const row =(label: string, value: string, last = false) => `
   <tr>
     <td style="padding: 10px 0; ${last ? "" : "border-bottom: 1px solid #e2e8f0;"} font-weight: 600; color: #475569; width: 160px;">${label}</td>
     <td style="padding: 10px 0; ${last ? "" : "border-bottom: 1px solid #e2e8f0;"} color: #0f172a;">${value}</td>
