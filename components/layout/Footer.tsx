@@ -161,6 +161,9 @@ export function Footer() {
             Risorse in italiano
           </h4>
           <div className="flex flex-wrap gap-x-6 gap-y-1">
+            <Link href="/it" hrefLang="it" className="text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200">
+              Tutte le risorse in italiano
+            </Link>
             <Link href="/it/assessment" hrefLang="it" className="text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200">
               Assessment di esposizione
             </Link>

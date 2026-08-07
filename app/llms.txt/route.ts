@@ -83,6 +83,7 @@ on-premise" or "data never leaves the perimeter".
 
 ## Italiano
 
+- [Risorse in italiano — indice](${BASE_URL}/it): Entry point for every Italian-language page.
 - [Assessment di esposizione — PLD 2024 e AI Act](${BASE_URL}/it/assessment)
 - [Federfarma Lombarda — Nexus MDS Core in produzione](${BASE_URL}/it/case-studies/federfarma)
 - [AI On-Premise per la Sanità Italiana](${BASE_URL}/it/ai-sanitaria-on-premise)

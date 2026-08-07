@@ -12,6 +12,7 @@ import { usePathname } from "next/navigation";
  * counterpart renders nothing rather than linking to an unrelated translation.
  */
 const PAIRS: Record<string, string> = {
+  "/": "/it",
   "/ai-on-premise-healthcare": "/it/ai-sanitaria-on-premise",
   "/case-studies/federfarma": "/it/case-studies/federfarma",
   "/assessment": "/it/assessment",
