@@ -9,7 +9,7 @@ import { TechBadge } from "@/components/ui/TechBadge";
 export const metadata: Metadata = {
   title: "On-Premise AI for Healthcare",
   description:
-    "On-premise AI healthcare solutions that keep patient data within hospital walls. GDPR, AI Act and NIS2 compliant infrastructure for clinical AI, medical imaging, and pharma. Deployed on Nexus MDS Core.",
+    "On-premise AI healthcare solutions that keep patient data within hospital walls. Infrastructure architected for GDPR, AI Act and NIS2 requirements, for clinical AI, medical imaging, and pharma. Deployed on Nexus MDS Core.",
   keywords: [
     "on-premise AI healthcare",
     "healthcare AI infrastructure",
@@ -68,10 +68,10 @@ const schema = [
       },
       {
         "@type": "Question",
-        name: "Is on-premise AI compliant with the EU AI Act for healthcare?",
+        name: "Does on-premise deployment help meet EU AI Act obligations in healthcare?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. The EU AI Act classifies most healthcare AI systems as high-risk, requiring human oversight, auditability, and data governance. On-premise deployment simplifies compliance by keeping data, models, and audit trails under the deploying organisation's direct control, eliminating third-party processor risks and enabling complete transparency for conformity assessments.",
+          text: "It helps with the evidence, not with the verdict. The EU AI Act classifies most healthcare AI systems as high-risk, requiring human oversight, auditability, and data governance. On-premise deployment keeps data, models, and audit trails under the deploying organisation's direct control, which removes third-party processor risks and makes the conformity assessment easier to evidence. The assessment itself is what establishes conformity — deployment topology does not.",
         },
       },
       {
@@ -128,7 +128,7 @@ export default function AiOnPremiseHealthcarePage() {
               <span className="text-xs text-[#7D8FA3]">March 2026</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-[#E6EDF3]">
-              On-Premise AI for Healthcare: Why Sovereign Infrastructure Is the Only Compliant Path
+              On-Premise AI for Healthcare: Why the Infrastructure Decision Comes First
             </h1>
             <p className="text-lg text-[#7D8FA3]">
               Healthcare organisations across Europe are deploying artificial intelligence to improve
@@ -531,14 +531,15 @@ export default function AiOnPremiseHealthcarePage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#E6EDF3] mb-2">
-                    Is on-premise AI compliant with the EU AI Act for healthcare?
+                    Does on-premise deployment help meet EU AI Act obligations in healthcare?
                   </h3>
                   <p>
-                    Yes. The AI Act classifies most healthcare AI as high-risk, requiring human
-                    oversight, auditability, and robust data governance. On-premise deployment
-                    simplifies compliance by keeping data, models, and audit trails under the
-                    deploying organisation&apos;s direct control — eliminating third-party processor
-                    risks and enabling complete transparency for conformity assessments.
+                    It helps with the evidence, not with the verdict. The AI Act classifies most
+                    healthcare AI as high-risk, requiring human oversight, auditability, and robust
+                    data governance. On-premise deployment keeps data, models, and audit trails
+                    under the deploying organisation&apos;s direct control — removing third-party
+                    processor risks and making the conformity assessment easier to evidence. The
+                    assessment itself is what establishes conformity; deployment topology does not.
                   </p>
                 </div>
                 <div>

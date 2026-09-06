@@ -25,14 +25,14 @@ export function CepfBanner() {
                 </span>
               </div>
               <h2 className="font-syne text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#E6EDF3] mb-4">
-                CEPF — Compliance Estimation &amp; Planning Framework
+                Compliance-Epistemic Project Framework (CEPF)
               </h2>
               <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-6">
-                CEPF v7 — 21 regulatory regimes mapped onto their operational obligations,
-                snapshot July 2026. 23 cross-framework regulatory overlaps identified.
-                CEPF assesses and plans compliance for software houses and
+                CEPF v7, catalogue snapshot July 2026 — 19 frameworks mapped onto the
+                operational obligations each one produces: 247 requirements, 24
+                cross-framework overlap groups, 695 document templates. It covers
                 organisations operating under EU AI Act, GDPR, PLD 2024, NIS2, DORA,
-                ISO 27001:2022, Cyber Resilience Act, ISO 56001, and MiFID II.
+                ISO 27001:2022, Cyber Resilience Act and ISO 56001.
               </p>
               <div className="flex flex-wrap gap-2">
                 {[

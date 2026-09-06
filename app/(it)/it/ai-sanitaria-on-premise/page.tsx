@@ -70,8 +70,8 @@ export default function AiSanitariaPage() {
             <p>
               Nexus MDS Core è già in produzione per <strong className="text-[#E6EDF3]">Federfarma
               Lombarda</strong>, dove alimenta una pipeline RAG su oltre 10.000 documenti farmaceutici
-              con autenticazione Zero-Trust e accesso mobile PWA. È conforme GDPR, pronta per l&apos;AI Act,
-              e garantisce la residenza dei dati nell&apos;Unione Europea.
+              con autenticazione Zero-Trust e accesso mobile PWA. Ha i controlli GDPR mappati, è progettata
+              sui requisiti dell&apos;AI Act e tiene la residenza dei dati nell&apos;Unione Europea.
             </p>
             <p>
               Per le organizzazioni sanitarie italiane che stanno pianificando o hanno già avviato

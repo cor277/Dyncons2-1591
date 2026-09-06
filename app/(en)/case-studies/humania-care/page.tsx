@@ -44,7 +44,7 @@ export default function HumaniaCareStudy() {
             {[
               { value: "6 mo", label: "Time to production" },
               { value: "Multi-agent", label: "RAG + Voice + Memory architecture" },
-              { value: "100%", label: "GDPR-compliant data pipeline" },
+              { value: "At ingestion", label: "Personal data anonymised" },
               { value: "16 services", label: "Nexus MDS Core modules orchestrated" },
             ].map((m) => (
               <div key={m.label}>
@@ -84,8 +84,8 @@ export default function HumaniaCareStudy() {
                 with RAG, voice, and memory layers orchestrated across 16 Nexus MDS Core services.
               </p>
               <p className="mt-4">
-                Privacy was built in from day one: all personal data anonymised at ingestion, full
-                GDPR-compliant data pipeline, and end-to-end audit logging. The system was deployed
+                Privacy was built in from day one: all personal data anonymised at ingestion, a data pipeline
+                built to GDPR requirements, and end-to-end audit logging. The system was deployed
                 on-premise with containerised Kubernetes workloads and zero cloud dependency, keeping
                 response latency under 800ms at the 99th percentile even on mobile connections.
               </p>

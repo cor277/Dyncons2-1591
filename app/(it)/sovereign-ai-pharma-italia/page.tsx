@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title:
     "AI Sovrana per il Pharma Italiano",
   description:
-    "Sovereign AI per il pharma italiano: infrastruttura AI on-premise conforme a AI Act, GDPR, Legge 132/2025 e NIS2. Nexus MDS Core — piattaforma sovrana per farmacovigilanza, clinical trials e supply chain farmaceutica.",
+    "Sovereign AI per il pharma italiano: infrastruttura AI on-premise progettata sui requisiti di AI Act, GDPR, Legge 132/2025 e NIS2. Nexus MDS Core — piattaforma sovrana per farmacovigilanza, clinical trials e supply chain farmaceutica.",
   alternates: {
     canonical: "https://www.dynamicsconsulting.it/sovereign-ai-pharma-italia",
   },
@@ -22,7 +22,7 @@ const schema = {
       "@type": "WebPage",
       name: "Sovereign AI Pharma Italia — Infrastruttura AI Sovrana per il Settore Farmaceutico",
       description:
-        "Sovereign AI per il pharma italiano: infrastruttura AI on-premise conforme a AI Act, GDPR, Legge 132/2025 e NIS2. Nexus MDS Core per farmacovigilanza, clinical trials e supply chain.",
+        "Sovereign AI per il pharma italiano: infrastruttura AI on-premise progettata sui requisiti di AI Act, GDPR, Legge 132/2025 e NIS2. Nexus MDS Core per farmacovigilanza, clinical trials e supply chain.",
       url: "https://www.dynamicsconsulting.it/sovereign-ai-pharma-italia",
       publisher: {
         "@type": "Organization",
@@ -114,8 +114,8 @@ export default function SovereignAiPharmaItaliaPage() {
               solo se implementata con un&apos;infrastruttura sovrana che
               garantisca residenza dei dati, trasparenza algoritmica e piena
               conformità normativa. Questa pagina spiega come costruire
-              un&apos;infrastruttura AI on-premise per il farmaceutico, conforme
-              a AI Act, GDPR, Legge 132/2025 e NIS2.
+              un&apos;infrastruttura AI on-premise per il farmaceutico, progettata sui
+              requisiti di AI Act, GDPR, Legge 132/2025 e NIS2.
             </p>
           </div>
         </section>
@@ -261,7 +261,7 @@ export default function SovereignAiPharmaItaliaPage() {
                 emergenti e generare report per AIFA e EMA — il tutto senza che
                 i dati dei pazienti lascino il perimetro aziendale. Il vantaggio
                 competitivo è duplice: riduzione dei tempi di analisi fino
-                all&apos;80% e conformità GDPR by design.
+                all&apos;80% e controlli GDPR mappati by design.
               </p>
               <p>
                 <strong className="text-[#E6EDF3]">Gestione documentale per clinical trials.</strong>{" "}

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Dynamics Consulting",
   },
   description:
-    "Piattaforme AI per organizzazioni che non possono permettersi rischi di sovranità del dato. Sanità, farmaceutico, energia, CRM enterprise. Nexus MDS Core — 16 servizi, conforme GDPR, pronto per l'AI Act.",
+    "Piattaforme AI per organizzazioni che non possono permettersi rischi di sovranità del dato. Sanità, farmaceutico, energia, CRM enterprise. Nexus MDS Core — 16 servizi, controlli mappati sul GDPR, progettato sui requisiti dell'AI Act.",
   authors: [{ name: "Corrado Patierno", url: "https://www.dynamicsconsulting.it" }],
   creator: "Corrado Patierno",
   openGraph: {

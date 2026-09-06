@@ -4,6 +4,7 @@ import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { NexusBanner } from "@/components/sections/NexusBanner";
+import { CraDeadlineBanner } from "@/components/sections/CraDeadlineBanner";
 import { SovereigntyStrip } from "@/components/sections/SovereigntyStrip";
 import { CepfBanner } from "@/components/sections/CepfBanner";
 import { EditorialSeriesSection } from "@/components/sections/EditorialSeriesSection";
@@ -20,7 +21,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 export const metadata: Metadata = {
   title: { absolute: "Dynamics Consulting | Sovereign AI Infrastructure" },
   description:
-    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, AI Act compliant, aligned with EU Tech Sovereignty Package (CADA, 2026), PLD 2024 ready.",
+    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, architected for AI Act requirements, aligned with EU Tech Sovereignty Package (CADA, 2026), PLD 2024 ready.",
   alternates: { canonical: "https://www.dynamicsconsulting.it" },
 };
 
@@ -70,7 +71,7 @@ const caseStudies = [
     title: "HumanIA Care — AI Senior Companion",
     summary:
       "AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core.",
-    metrics: ["Multi-agent RAG + Voice", "GDPR-compliant on-premise", "16 Nexus services"],
+    metrics: ["Multi-agent RAG + Voice", "On-premise, GDPR controls mapped", "16 Nexus services"],
     href: "/case-studies/humania-care",
   },
   {
@@ -98,7 +99,7 @@ const homeSchema = [
     name: "Dynamics Consulting",
     url: "https://www.dynamicsconsulting.it",
     description:
-      "Sovereign AI infrastructure for regulated industries. On-premise AI platforms, GDPR-ready, AI Act compliant.",
+      "Sovereign AI infrastructure for regulated industries. On-premise AI platforms, GDPR-ready, architected for AI Act requirements.",
     publisher: {
       "@type": "Organization",
       name: "Dynamics Consulting",
@@ -132,6 +133,8 @@ export default function HomePage() {
         />
       </head>
       <NavBar />
+      {/* Section 0 — 11 September 2026 deadline. Time-boxed: see CraDeadlineBanner. */}
+      <CraDeadlineBanner />
       {/* Section 1 — Hero */}
       <Hero />
       {/* Section 1b — EU Tech Sovereignty Package strip */}

@@ -102,7 +102,7 @@ export default function Legge132Article() {
                   in un log immutabile, accessibile per ispezioni regolamentari.
                 </li>
                 <li>
-                  <strong className="text-[#E6EDF3]">Pipeline GDPR-compliant:</strong> anonimizzazione
+                  <strong className="text-[#E6EDF3]">Pipeline progettata sui requisiti GDPR:</strong> anonimizzazione
                   dei dati personali all&apos;ingestion, crittografia at-rest e in-transit,
                   autenticazione Zero-Trust con Keycloak OIDC/PKCE.
                 </li>

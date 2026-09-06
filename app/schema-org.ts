@@ -17,7 +17,7 @@ export const schemaOrg = [
       "On-premise LLM deployment",
       "Healthcare AI",
       "Pharmaceutical AI",
-      "GDPR-compliant AI",
+      "GDPR-ready AI",
       "AI Act compliance",
       "RAG pipelines",
       "Multi-agent systems",
@@ -70,7 +70,7 @@ export const schemaOrg = [
     applicationCategory: "BusinessApplication",
     operatingSystem: "Linux, Kubernetes, Docker",
     description:
-      "Enterprise self-hosted AI platform. ~16 orchestrated Docker services including LLM inference, RAG pipeline, Zero-Trust auth, vector search, workflow engine, and observability stack. GDPR-ready and AI Act compliant. Designed for healthcare, pharma, and regulated industries.",
+      "Enterprise self-hosted AI platform. ~16 orchestrated Docker services including LLM inference, RAG pipeline, Zero-Trust auth, vector search, workflow engine, and observability stack. GDPR-ready and architected for AI Act requirements. Designed for healthcare, pharma, and regulated industries.",
     creator: {
       "@type": "Organization",
       name: "Dynamics Consulting",
@@ -81,7 +81,7 @@ export const schemaOrg = [
       "Zero-Trust auth with Keycloak OIDC/PKCE",
       "n8n agentic workflow engine",
       "MinIO S3-compatible storage",
-      "GDPR-compliant data pipeline",
+      "Data pipeline designed for GDPR requirements",
       "AI Act ready",
       "EU data residency",
       "Kubernetes and bare-metal deployable",

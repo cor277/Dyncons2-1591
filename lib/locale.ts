@@ -7,6 +7,7 @@ const IT_ROOT_PATHS = new Set([
   "/sovereign-ai-pharma-italia",
   "/fractional-cto-milano",
   "/modernizzazione-sistemi-legacy-ai",
+  "/cra-11-settembre",
 ]);
 
 export function isItalianPath(pathname: string): boolean {

@@ -368,8 +368,8 @@ export default function FederfarmaCaseStudyIt() {
               </p>
               <p className="mt-4">
                 La ricostruibilità non è garantita dalla collocazione fisica dell’inferenza. È
-                garantita dal registro. Questa distinzione è il motivo per cui il sistema resta
-                conforme in entrambe le configurazioni.
+                garantita dal registro. Questa distinzione è il motivo per cui il registro di audit
+                regge in entrambe le configurazioni.
               </p>
             </div>
 

@@ -226,9 +226,10 @@ export default function AssessmentPage() {
               queries per day, an explicit regulatory version chain, personal data never indexed.
             </p>
             <p className="mt-4">
-              <strong className="text-[#E6EDF3]">CEPF</strong> — a regulatory crossing catalogue,
-              version 7, twenty-one regulatory regimes mapped onto their operational obligations. It
-              is the instrument this assessment is based on.
+              <strong className="text-[#E6EDF3]">Compliance-Epistemic Project Framework
+              (CEPF)</strong> — a regulatory crossing catalogue, version 7: nineteen frameworks
+              mapped onto their operational obligations, 247 requirements and 24 cross-framework
+              overlap groups. It is the instrument this assessment is based on.
             </p>
           </section>
         </div>

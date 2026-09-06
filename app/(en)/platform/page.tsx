@@ -14,13 +14,13 @@ import { NexusGraphExplorer } from "@/components/sections/NexusGraphExplorer";
 export const metadata: Metadata = {
   title: "Nexus MDS Core — On-Premise AI Platform",
   description:
-    "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, AI Act compliant.",
+    "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, architected for AI Act requirements.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/platform" },
   openGraph: {
     images: OG_IMAGE,
     title: "Nexus MDS Core — On-Premise AI Platform",
     description:
-      "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, AI Act compliant.",
+      "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, architected for AI Act requirements.",
   },
 };
 
@@ -34,7 +34,7 @@ const schemaOrg = {
   offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
   creator: { "@type": "Organization", name: "Dynamics Consulting" },
   description:
-    "Enterprise self-hosted AI platform with ~16 orchestrated Docker services. Zero-Trust security with Keycloak + APISIX. GDPR-ready. AI Act compliant. Deployable on Kubernetes or bare-metal.",
+    "Enterprise self-hosted AI platform with ~16 orchestrated Docker services. Zero-Trust security with Keycloak + APISIX. GDPR-ready. Architected for AI Act requirements. Deployable on Kubernetes or bare-metal.",
   featureList: [
     "LLM Inference with vLLM and OpenWebUI",
     "Zero-Trust Auth with Keycloak OIDC/PKCE and APISIX",
@@ -49,7 +49,7 @@ const useCases = [
   {
     title: "Healthcare & Pharma",
     description:
-      "RAG pipeline on clinical and pharmaceutical documents. GDPR-compliant authentication. Already in production for Federfarma Lombarda and CureSicure — healthcare portal with live patient data integration across Italian clinical sources including PNE-AGENAS, SDO/NSIS, and Ministry of Health Open Data.",
+      "RAG pipeline on clinical and pharmaceutical documents. Authentication designed for GDPR requirements. Already in production for Federfarma Lombarda and CureSicure — healthcare portal with live patient data integration across Italian clinical sources including PNE-AGENAS, SDO/NSIS, and Ministry of Health Open Data.",
     badges: ["GDPR", "OCR Pipeline", "Vector Search"],
   },
   {

@@ -229,9 +229,10 @@ export default function AssessmentItPage() {
               indicizzati.
             </p>
             <p className="mt-4">
-              <strong className="text-[#E6EDF3]">CEPF</strong> — catalogo di attraversamento
-              normativo, versione 7, ventuno regimi regolamentari mappati sui rispettivi
-              adempimenti operativi. È lo strumento su cui si basa questo assessment.
+              <strong className="text-[#E6EDF3]">Compliance-Epistemic Project Framework
+              (CEPF)</strong> — catalogo di attraversamento normativo, versione 7: diciannove
+              framework mappati sui rispettivi adempimenti operativi, 247 requisiti e 24 gruppi
+              di sovrapposizione. È lo strumento su cui si basa questo assessment.
             </p>
           </section>
         </div>

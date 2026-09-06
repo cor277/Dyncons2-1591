@@ -33,7 +33,7 @@ export function NexusBanner() {
                 GDPR-ready. Zero-Trust. Deployable on Kubernetes or bare-metal.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["GDPR", "AI Act Ready", "PLD 2024 Compliant", "ISO 27001 Ready", "EU Data Residency", "CADA Aligned"].map((b) => (
+                {["GDPR", "AI Act Ready", "PLD 2024 Controls Mapped", "ISO 27001 Ready", "EU Data Residency", "CADA Aligned"].map((b) => (
                   <TechBadge key={b} label={b} variant="cyan" />
                 ))}
               </div>

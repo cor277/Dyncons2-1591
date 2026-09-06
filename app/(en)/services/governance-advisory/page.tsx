@@ -36,9 +36,9 @@ export default function GovernanceAdvisoryPage() {
               AI Governance &amp; Compliance Advisory
             </h1>
             <p className="text-[#7D8FA3] text-lg md:text-xl max-w-2xl leading-relaxed mb-8">
-              Strategic regulatory assessment for EU AI Act, PLD 2024, NIS2, DORA. CEPF
-              compliance audit. Board-level governance design. Architecture review with
-              documented technical accountability.
+              Strategic regulatory assessment for EU AI Act, PLD 2024, NIS2, DORA. Compliance
+              audit against the Compliance-Epistemic Project Framework (CEPF). Board-level
+              governance design. Architecture review with documented technical accountability.
             </p>
             <div className="flex flex-wrap gap-1.5 mb-10">
               {["AI Act", "PLD 2024", "NIS2", "DORA", "CEPF", "ISO 27001"].map((t) => (

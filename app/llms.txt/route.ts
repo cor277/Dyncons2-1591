@@ -40,7 +40,7 @@ on-premise" or "data never leaves the perimeter".
 ## Platform and methodology
 
 - [Nexus MDS Core](${BASE_URL}/platform): Self-hosted AI platform, sixteen orchestrated services — retrieval, vector search, Zero-Trust identity, workflow engine, audit. Deployable on Kubernetes or bare metal.
-- [CEPF — Compliance Estimation & Planning Framework](${BASE_URL}/cepf): Regulatory crossing catalogue, version 7, 21 regulatory regimes mapped onto their operational obligations and their overlaps. The page hosts a reduced demo covering nine of the regimes; the demo interface is in Italian.
+- [Compliance-Epistemic Project Framework (CEPF)](${BASE_URL}/cepf): Regulatory crossing catalogue, version 7, snapshot July 2026 — 19 frameworks mapped onto their operational obligations and their overlaps, 247 requirements, 24 cross-framework overlap groups, 695 document templates. The page hosts a reduced demo of Calibra, the software built on CEPF, covering nine of the frameworks; the demo interface is in Italian.
 - [Technical capabilities](${BASE_URL}/capabilities): The engineering underneath the service lines — applied AI, data platforms, Kubernetes, integration, Dynamics 365, automation, blockchain. Competences, not separate offerings.
 
 ## Services

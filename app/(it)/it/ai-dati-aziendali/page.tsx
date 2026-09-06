@@ -7,13 +7,13 @@ import { CTAButton } from "@/components/ui/CTAButton";
 export const metadata: Metadata = {
   title: "Implementare AI sui dati aziendali | Nexus MDS Core",
   description:
-    "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, GDPR-compliant, nessuna dipendenza cloud.",
+    "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, nessuna dipendenza cloud.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-dati-aziendali" },
   openGraph: {
     images: OG_IMAGE,
     title: "Implementare AI sui dati aziendali | Nexus MDS Core",
     description:
-      "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, GDPR-compliant, nessuna dipendenza cloud.",
+      "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, nessuna dipendenza cloud.",
     url: "https://www.dynamicsconsulting.it/it/ai-dati-aziendali",
     type: "website",
     locale: "it_IT",
@@ -78,8 +78,8 @@ export default function AiDatiAziendaliPage() {
               L&apos;intera infrastruttura è basata su{" "}
               <strong className="text-[#E6EDF3]">Nexus MDS Core</strong>: circa 16 servizi
               Docker orchestrati, deployment on-premise o su server dedicato. I dati personali e riservati
-              non escono mai dal perimetro. Nessun lock-in da hyperscaler. Conformità GDPR
-              verificabile per design.
+              non escono mai dal perimetro. Nessun lock-in da hyperscaler. Controlli GDPR
+              mappati e verificabili per design.
             </p>
             <p>
               Per le PMI che non hanno mai implementato un sistema AI, questo è il punto di

@@ -33,7 +33,7 @@ const navLinks: NavLink[] = [
       {
         label: "CEPF Methodology",
         href: "/cepf",
-        desc: "Compliance Estimation & Planning Framework",
+        desc: "Compliance-Epistemic Project Framework",
       },
     ],
   },

@@ -65,7 +65,8 @@ export default function SovereignAiItaliaPage() {
               specificamente per questo segmento. Circa 16 servizi Docker orchestrati — inferenza LLM,
               pipeline RAG, autenticazione Zero-Trust, workflow engine, observability — deployabili
               su Kubernetes o bare-metal, interamente on-premise. Progettata per sanità e pharma,
-              pronta per l&apos;AI Act, conforme GDPR, con residenza dati garantita nell&apos;UE.
+              costruita sui requisiti dell&apos;AI Act, con i controlli GDPR mappati e residenza
+              dei dati nell&apos;UE.
             </p>
             <p>
               Dynamics Consulting è lo specialista mid-market per l&apos;AI sovrana in Italia.

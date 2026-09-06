@@ -16,7 +16,7 @@ const capabilities: Capability[] = [
   {
     iconName: "GitBranch",
     name: "Event Sourcing",
-    desc: "EventStoreDB and Kafka for immutable audit logs, temporal queries and event replay. GDPR-compliant with selective projection deletion.",
+    desc: "EventStoreDB and Kafka for immutable audit logs, temporal queries and event replay. Selective projection deletion for GDPR erasure requests.",
   },
   {
     iconName: "RefreshCw",

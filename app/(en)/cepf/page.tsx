@@ -7,15 +7,15 @@ import { CepfTool } from "./CepfTool";
 const URL = "https://www.dynamicsconsulting.it/cepf";
 
 const DESCRIPTION =
-  "CEPF — Compliance Estimation & Planning Framework. A regulatory crossing catalogue mapping regulatory regimes onto their operational obligations. This page hosts a reduced demo of the framework.";
+  "Compliance-Epistemic Project Framework (CEPF) — a regulatory crossing catalogue mapping regulatory regimes onto their operational obligations. This page hosts a reduced demo of Calibra, the software built on CEPF.";
 
 export const metadata: Metadata = {
-  title: "CEPF — Compliance Estimation & Planning Framework",
+  title: "Compliance-Epistemic Project Framework (CEPF)",
   description: DESCRIPTION,
   alternates: { canonical: URL },
   openGraph: {
     images: OG_IMAGE,
-    title: "CEPF — Compliance Estimation & Planning Framework",
+    title: "Compliance-Epistemic Project Framework (CEPF)",
     description: DESCRIPTION,
     url: URL,
     type: "website",
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   twitter: {
     images: TWITTER_IMAGE,
     card: "summary_large_image",
-    title: "CEPF — Compliance Estimation & Planning Framework",
+    title: "Compliance-Epistemic Project Framework (CEPF)",
     description: DESCRIPTION,
   },
 };
 
-/* Regimes covered by the demo hosted on this page — sourced from the demo's own catalogue. */
+/* Frameworks covered by the demo hosted on this page — sourced from the demo's own catalogue. */
 const DEMO_REGIMES = [
   ["SOX IT", "Sarbanes-Oxley IT general controls — PCAOB AS 2201, COSO 2013"],
   ["NIS2", "Directive (EU) 2022/2555"],
@@ -54,7 +54,7 @@ export default function CepfPage() {
               Proprietary methodology
             </p>
             <h1 className="font-syne text-3xl md:text-[2.6rem] font-extrabold leading-[1.15] mb-6">
-              CEPF — Compliance Estimation &amp; Planning Framework
+              Compliance-Epistemic Project Framework (CEPF)
             </h1>
 
             <div className="space-y-5 text-[#7D8FA3] text-lg leading-relaxed">
@@ -84,19 +84,22 @@ export default function CepfPage() {
                 .
               </p>
               <p className="text-[#9BA8B9] font-mono text-base">
-                CEPF v7 — 21 regimi — snapshot luglio 2026
+                CEPF v7 — 19 framework, 247 requisiti, 24 gruppi di sovrapposizione,
+                695 template documentali — snapshot luglio 2026
               </p>
             </div>
 
-            {/* Reduced-demo notice */}
+            {/* Reduced-demo notice — the demo is Calibra, the software; CEPF is the framework */}
             <div className="mt-10 rounded-lg border border-[#30363D] bg-[#161B22] px-6 py-5">
               <p className="text-[#E6EDF3] font-semibold mb-2">
-                This page hosts a reduced demo of the framework.
+                This page hosts a reduced demo of Calibra.
               </p>
               <p className="text-[#7D8FA3] leading-relaxed">
-                The interactive tool below covers nine of the twenty-one regimes in CEPF v7 and a
-                subset of its planning functions. It is a working demonstration, not the complete
-                framework. Its interface is in Italian.
+                Calibra is the software built on CEPF. Beyond the regulatory catalogue it carries
+                risk, scheduling, operational flow, Gantt and milestones. The interactive tool
+                below is a demonstration instance, not the production one: it covers nine of the
+                nineteen frameworks in CEPF v7 and a subset of Calibra&apos;s planning functions.
+                Its interface is in Italian.
               </p>
               <p className="text-[#7D8FA3] leading-relaxed mt-3" lang="it">
                 Lo strumento è in italiano, e lo è anche{" "}
@@ -111,10 +114,10 @@ export default function CepfPage() {
               </p>
             </div>
 
-            {/* Regimes covered by the demo */}
+            {/* Frameworks covered by the demo */}
             <div className="mt-10">
               <h2 className="text-xl font-bold text-[#E6EDF3] mb-4">
-                Regimes covered by this demo
+                Frameworks covered by this demo
               </h2>
               <ul className="space-y-2 text-[#7D8FA3]">
                 {DEMO_REGIMES.map(([name, ref]) => (

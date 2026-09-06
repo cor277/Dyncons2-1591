@@ -36,7 +36,7 @@ const ComplianceUI = dynamic(() => import('./ComplianceUI'), {
         }}
       />
       <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
-      <span>Loading CEPF Compliance Tool…</span>
+      <span>Loading the Calibra demo…</span>
     </div>
   ),
 })

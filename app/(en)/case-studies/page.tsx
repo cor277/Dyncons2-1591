@@ -87,7 +87,7 @@ const cases = [
     metrics: [
       { value: "6 mo", label: "Time to production" },
       { value: "Multi-agent", label: "RAG + Voice + Memory" },
-      { value: "100%", label: "GDPR-compliant pipeline" },
+      { value: "At ingestion", label: "Personal data anonymised" },
     ],
   },
   {

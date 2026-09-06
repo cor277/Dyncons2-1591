@@ -361,7 +361,7 @@ export default function FederfarmaCaseStudy() {
               </p>
               <p className="mt-4">
                 Reconstructability is not guaranteed by the physical location of inference. It is
-                guaranteed by the log. That distinction is why the system remains compliant in
+                guaranteed by the log. That distinction is why the audit trail holds in
                 either configuration.
               </p>
             </div>

@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/case-studies/iatp`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/case-studies/logitrack`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/it`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/cra-11-settembre`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/it/case-studies/federfarma`, priority: 0.7, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/about`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/research`, priority: 0.7, changeFrequency: "weekly" as const },

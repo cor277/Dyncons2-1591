@@ -22,10 +22,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How do you design a GDPR-compliant multi-agent system?",
+      name: "How do you design a multi-agent system to GDPR requirements?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A GDPR-compliant multi-agent system requires a real-time NLU classifier to identify personal data, selective memory deletion mechanisms, and a self-hosted architecture to keep data within the enterprise perimeter. Nexus MDS Core implements these patterns in production.",
+        text: "A multi-agent system designed to GDPR requirements needs a real-time NLU classifier to identify personal data, selective memory deletion mechanisms, and a self-hosted architecture to keep data within the enterprise perimeter. Nexus MDS Core implements these patterns in production.",
       },
     },
     {
@@ -138,8 +138,8 @@ const tech = ["LLM", "Weaviate", "n8n", "vLLM", "Flutter", "Keycloak", "OpenWebU
 
 const faqs = [
   {
-    q: "How do you design a GDPR-compliant multi-agent system?",
-    a: "A GDPR-compliant multi-agent system requires a real-time NLU classifier to identify personal data, selective memory deletion mechanisms, and a self-hosted architecture to keep data within the enterprise perimeter. Nexus MDS Core implements these patterns in production.",
+    q: "How do you design a multi-agent system to GDPR requirements?",
+    a: "A multi-agent system designed to GDPR requirements needs a real-time NLU classifier to identify personal data, selective memory deletion mechanisms, and a self-hosted architecture to keep data within the enterprise perimeter. Nexus MDS Core implements these patterns in production.",
   },
   {
     q: "What is the difference between RAG and fine-tuning for enterprise data?",

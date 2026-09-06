@@ -76,7 +76,7 @@ export default function AiIngegneriaTecnicaPage() {
               L&apos;infrastruttura è basata su <strong className="text-[#E6EDF3]">Nexus MDS Core</strong>,
               deployabile on-premise. Chunking semantico per clausola, metadati con gerarchia
               completa della norma, vector search con Weaviate. I dati restano nel perimetro
-              dello studio. Conformità GDPR per design.
+              dello studio. Controlli GDPR mappati per design.
             </p>
             <div className="pt-6">
               <CTAButton label="Parliamo del tuo progetto →" href="/contact" variant="primary" />

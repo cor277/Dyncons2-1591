@@ -7,7 +7,7 @@ import { CTAButton } from "@/components/ui/CTAButton";
 
 const TITLE = "Risorse in italiano — AI sovrana per settori regolamentati";
 const DESCRIPTION =
-  "Indice delle pagine in italiano di Dynamics Consulting: sovereign AI, sanità, farmaceutico, finanza, ingegneria, PMI. Nexus MDS Core — piattaforma AI on-premise, conforme GDPR e AI Act.";
+  "Indice delle pagine in italiano di Dynamics Consulting: sovereign AI, sanità, farmaceutico, finanza, ingegneria, PMI. Nexus MDS Core — piattaforma AI on-premise, progettata sui requisiti GDPR e AI Act.";
 const URL = "https://www.dynamicsconsulting.it/it";
 
 export const metadata: Metadata = {
@@ -143,6 +143,24 @@ export default function ItalianIndexPage() {
             <CTAButton
               label="Sovereign AI Italia &rarr;"
               href="/it/sovereign-ai-italia"
+              variant="primary"
+            />
+          </div>
+        </section>
+
+        <section className="px-6 py-16 border-t border-[#21262D]">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-4">
+              Scadenza dell&apos;11 settembre 2026
+            </h2>
+            <p className="text-[#7D8FA3] text-lg leading-relaxed mb-6">
+              Si applica l&apos;articolo 14 del Cyber Resilience Act: ventiquattro ore per lanciare
+              l&apos;allarme su una vulnerabilit&agrave; attivamente sfruttata. Chi ha il potere di
+              farlo, e in quanto tempo se ne accorge.
+            </p>
+            <CTAButton
+              label="Il test in tre domande &rarr;"
+              href="/cra-11-settembre"
               variant="primary"
             />
           </div>

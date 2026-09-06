@@ -26,7 +26,7 @@ export function DigitalTwinSection() {
             <p className="text-[#7D8FA3] text-lg leading-relaxed mb-8">
               The assistant below is a digital twin of Corrado Patierno — architect and
               founder of Dynamics Consulting. It runs live on Nexus MDS Core:
-              sovereign by architecture, GDPR-compliant, no hyperscaler lock-in.
+              sovereign by architecture, GDPR controls mapped, no hyperscaler lock-in.
               Ask it anything about the platform, the methodology, or your use case.
             </p>
             <button
