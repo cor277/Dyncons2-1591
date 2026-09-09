@@ -29,7 +29,6 @@ const routes: Route[] = [
   { path: "/platform", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/cepf", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/calibra", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/cepf/overlaps", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/capabilities", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-08-03" },
 
   // Advisory

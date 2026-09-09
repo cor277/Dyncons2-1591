@@ -23,7 +23,6 @@ const deliveryServices = [
 const legal = [
   { label: "Nexus MDS Core", href: "/platform" },
   { label: "CEPF Methodology", href: "/cepf" },
-  { label: "Cross-framework overlaps", href: "/cepf/overlaps" },
   { label: "Calibra", href: "/calibra" },
   { label: "EU Tech Sovereignty", href: "/tech-sovereignty" },
   { label: "Case Studies", href: "/case-studies" },

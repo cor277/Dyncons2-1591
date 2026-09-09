@@ -311,8 +311,8 @@ export default async function ImportedArticlePage({
                 </Link>
               </li>
               <li>
-                <Link href="/cepf/overlaps" className="text-[#00B4D8] hover:text-[#E6EDF3]">
-                  Cross-framework overlap catalogue
+                <Link href="/cepf" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  CEPF methodology
                 </Link>
                 <span className="text-[#7D8FA3]">
                   {" "}

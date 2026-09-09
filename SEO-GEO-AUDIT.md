@@ -108,15 +108,34 @@ JavaScript had not run. The footer was carrying the whole link graph by itself.
 - `LanguageSwitch` no longer disappears on pages without a counterpart: with a
   true pair it links the translation, without one it links the other language's
   index, and the accessible label says which of the two it is.
-- Footer: added the exposure assessment, on-premise AI for healthcare, the
-  overlap catalogue and the editorial series on the English side; added
-  Fractional CTO Milano, AI sovrana pharma, modernizzazione legacy, the PLD
-  series and the CRA deadline page to the Italian block.
+- Footer: added the exposure assessment, on-premise AI for healthcare and the
+  editorial series on the English side; added Fractional CTO Milano, AI sovrana
+  pharma, modernizzazione legacy, the PLD series and the CRA deadline page to
+  the Italian block.
 
 Reachability, measured on the built HTML from both an English and an Italian
 page: every URL in the sitemap is either linked from the header or footer, or is
 a leaf under an index that is (individual articles, answers and case studies).
 Nothing is more than one click from a menu item, in either language.
+
+
+## Withdrawn — the CEPF overlap catalogue
+
+`/cepf/overlaps`, published on 9 September, was **removed on 10 September on the
+owner's instruction**. The 24 overlap groups are the catalogue, and the
+catalogue is the product: it is explained, not shown.
+
+- The page and its data file are deleted, and every link to it — navigation in
+  both languages, footer, `/cepf`, `/tech-sovereignty`, the healthcare page, the
+  imported articles' "Continue" list, sitemap, `/llms.txt` — is gone.
+- The URL was live and had been submitted to IndexNow, so it **301s to `/cepf`**
+  rather than returning 404.
+- `/cepf` keeps the explanation: what an overlap group is, with examples of the
+  shared controls (access management, audit logging, SBOM, technical file,
+  post-market surveillance), and an explicit statement that which groups exist
+  and what sits in each stays inside the framework.
+- No derived metric survives either. The four counts that were already public —
+  19 frameworks, 247 requirements, 24 groups, 695 templates — stay.
 
 ## Content custody
 

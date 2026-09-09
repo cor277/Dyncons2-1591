@@ -309,13 +309,13 @@ export default function TechSovereigntyPage() {
                   The SBOM is the clearest case. It is evidence under the product liability directive,
                   an instrument of vulnerability management under the CRA, and now an audit artefact
                   under CADA &mdash; one artefact, three regulatory purposes. The same is true of
-                  supplier registers, vulnerability handling and post-market surveillance. Those
-                  convergences are catalogued explicitly in the{" "}
-                  <Link href="/cepf/overlaps" className="text-[#00B4D8] hover:text-[#E6EDF3]">
-                    cross-framework overlap catalogue
-                  </Link>
-                  , where the product cluster of PLD 2024, the CRA, NIS2 and the AI Act is set out
-                  group by group.
+                  supplier registers, vulnerability handling and post-market surveillance. Mapping
+                  those convergences — which control answers to which regimes, and what that saves —
+                  is what the{" "}
+                  <Link href="/cepf" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    CEPF methodology
+                  </Link>{" "}
+                  is for.
                 </p>
                 <p>
                   The practical consequence for a buyer is that a supplier who cannot produce an SBOM

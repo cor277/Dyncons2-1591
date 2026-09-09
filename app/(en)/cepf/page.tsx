@@ -125,15 +125,18 @@ export default function CepfPage() {
                 695 document templates — snapshot July 2026
               </p>
               <p className="text-[#7D8FA3] leading-relaxed mt-4">
-                The overlap groups are published:{" "}
-                <Link
-                  href="/cepf/overlaps"
-                  className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
-                >
-                  the cross-framework overlap catalogue
-                </Link>{" "}
-                lists all 24 — which regimes share a control, and how many catalogue requirements
-                sit in each — so the numbers above can be checked against something.
+                An overlap group is a point where two or more regimes require the same control —
+                not a similar principle, but an artefact or a process that can be built once and
+                documented against each regime. Access management, audit logging, change
+                management, incident response, an SBOM, a technical file, a post-market
+                surveillance plan. A programme built regime by regime does that work twice and
+                still leaves gaps at the seams; a programme built on the crossings does it once and
+                documents it against each.
+              </p>
+              <p className="text-[#7D8FA3] leading-relaxed mt-4">
+                Which groups exist, which requirements sit in each and what the shared control is
+                worth in effort stay inside the framework: that mapping is the instrument, and it
+                is applied in engagements rather than published.
               </p>
             </div>
 

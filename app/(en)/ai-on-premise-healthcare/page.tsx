@@ -240,13 +240,12 @@ export default function AiOnPremiseHealthcarePage() {
               <p className="mt-4">
                 For organisations operating across multiple EU member states, the surface of
                 obligations expands rather than multiplying: the same controls answer to several
-                regimes at once, which is what the{" "}
-                <Link href="/cepf/overlaps" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
-                  cross-framework overlap catalogue
-                </Link>{" "}
-                sets out. A local deployment simplifies one recurring question in that set — where
-                the data is and who can reach it — and leaves the rest to be answered on their own
-                terms.
+                regimes at once, which is the working assumption behind the{" "}
+                <Link href="/cepf" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  CEPF methodology
+                </Link>
+                . A local deployment simplifies one recurring question in that set — where the data
+                is and who can reach it — and leaves the rest to be answered on their own terms.
               </p>
             </div>
 

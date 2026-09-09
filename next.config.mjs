@@ -23,6 +23,15 @@ const nextConfig = {
         permanent: true,
       },
       {
+        /* Published on 9 September, withdrawn on 10 September: the overlap
+           groups are the catalogue itself, which is explained rather than
+           listed. The URL was live and submitted to IndexNow, so it redirects
+           to the methodology instead of 404ing. */
+        source: "/cepf/overlaps",
+        destination: "/cepf",
+        permanent: true,
+      },
+      {
         source: "/portfolio/:slug*",
         destination: "/case-studies",
         permanent: true,

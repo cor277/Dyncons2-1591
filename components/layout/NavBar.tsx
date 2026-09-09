@@ -48,11 +48,6 @@ const EN_NAV: NavLink[] = [
         desc: "Compliance-Epistemic Project Framework",
       },
       {
-        label: "Cross-framework overlaps",
-        href: "/cepf/overlaps",
-        desc: "The 24 groups where regimes share a control",
-      },
-      {
         label: "Calibra",
         href: "/calibra",
         desc: "The software built on CEPF",
@@ -131,11 +126,6 @@ const IT_NAV: NavLink[] = [
         label: "Metodologia CEPF",
         href: "/cepf",
         desc: "Compliance-Epistemic Project Framework · in inglese",
-      },
-      {
-        label: "Catalogo delle sovrapposizioni",
-        href: "/cepf/overlaps",
-        desc: "I 24 gruppi in cui due regimi condividono un controllo · in inglese",
       },
       {
         label: "Calibra",
