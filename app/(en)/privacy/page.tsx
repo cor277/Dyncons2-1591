@@ -71,9 +71,16 @@ export default function PrivacyPage() {
               information about our services and expertise.
             </li>
             <li>
-              Your conversation messages are sent to a third-party AI model
-              provider to generate responses. Messages are processed in real time
-              and are <strong>not used to train or fine-tune</strong> any AI model.
+              The assistant runs on our own infrastructure: retrieval, identity
+              and the audit record stay there. Only the final answer generation
+              calls an external inference endpoint, which is{" "}
+              <strong>located in the European Union</strong>, and that component
+              is replaceable. Your message and the context assembled for it are
+              sent to that endpoint to produce the answer.
+            </li>
+            <li>
+              Messages are processed in real time and are{" "}
+              <strong>not used to train or fine-tune</strong> any AI model.
             </li>
             <li>
               Conversation data is retained for a maximum of 90 days for quality
@@ -256,9 +263,9 @@ export default function PrivacyPage() {
                 <td>EU / USA (see Section 7)</td>
               </tr>
               <tr>
-                <td>AI model provider</td>
+                <td>AI inference endpoint</td>
                 <td>Generating AI Assistant responses</td>
-                <td>USA (see Section 7)</td>
+                <td>European Union</td>
               </tr>
             </tbody>
           </table></div>
@@ -266,8 +273,11 @@ export default function PrivacyPage() {
           {/* ── 7. INTERNATIONAL TRANSFERS ──────────────────────── */}
           <h2>7. International data transfers</h2>
           <p>
-            Some of our sub-processors are based in the United States. These
-            transfers are protected by:
+            Some of our sub-processors are based in the United States — email
+            delivery and website hosting, as listed in Section 6. Generation of
+            AI Assistant responses is not among them: it runs on an inference
+            endpoint in the European Union. Where a transfer to the United States
+            does occur, it is protected by:
           </p>
           <ul>
             <li>

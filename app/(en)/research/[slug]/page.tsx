@@ -220,9 +220,20 @@ export default async function ImportedArticlePage({
 
           <section className="py-12 px-6">
             <div className="max-w-3xl mx-auto text-[#7D8FA3] text-lg leading-relaxed">
-              {article.blocks.map((block, i) => (
-                <BlockView key={i} block={block} />
-              ))}
+              {article.blocks.map((block, i) => {
+                /* Three of the pieces open on a deck line that LinkedIn marked
+                   up as a heading. Under the H1 it reads as a duplicated title,
+                   so the leading heading is presented as a standfirst. The text
+                   is untouched — only its styling differs. */
+                if (i === 0 && block.type === "h") {
+                  return (
+                    <p key={i} className="text-xl text-[#9BA8B9] leading-relaxed mb-8">
+                      <Inline text={block.text} />
+                    </p>
+                  );
+                }
+                return <BlockView key={i} block={block} />;
+              })}
             </div>
           </section>
         </article>

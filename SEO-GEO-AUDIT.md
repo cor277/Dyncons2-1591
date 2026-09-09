@@ -69,20 +69,24 @@ inference runs — that lives in the Nexus deployment.
 
 Confirmed by the owner on 10 September 2026: the Digital Twin runs **the same
 architecture as the Federfarma deployment**, grounded in his own notes instead
-of a document corpus. Retrieval, identity and audit run on Nexus; only final
-answer generation calls an external inference endpoint, and that component is
-replaceable.
+of a document corpus — retrieval, identity and audit on Nexus, only final answer
+generation on an external inference endpoint, **in the EU**, replaceable.
 
-Action taken: the homepage now describes that architecture, and stays silent on
-*where* the endpoint runs — because the privacy policy still lists the AI model
-provider under **Location: USA**, while the Federfarma architecture is described
-elsewhere on the site as a European datacentre. One of the two is out of date.
-The strip now reads *"Retrieval and audit run locally; final answer generation
-calls an external, replaceable endpoint · what happens to your messages"*, which
-holds either way, and a `TODO (owner)` above the component records what has to
-be reconciled. The privacy policy was **not** edited: changing a stated
-processor location on the strength of an analogy is exactly the kind of guess
-that should not be made in a legal document.
+Both documents were corrected to say that, and to agree with each other:
+
+- The homepage strip now reads *"Retrieval and audit run locally; final answer
+  generation calls a replaceable endpoint in the EU · what happens to your
+  messages"*, linked to the policy.
+- Privacy policy §2.3 no longer says messages are "sent to a third-party AI
+  model provider" full stop; it describes what stays on our infrastructure and
+  what is sent where, and states that the endpoint is in the European Union.
+- The processor table row changed from **"AI model provider — USA"** to
+  **"AI inference endpoint — European Union"**.
+- Section 7 now names which sub-processors the US-transfer safeguards actually
+  cover — email delivery and hosting — and says explicitly that AI generation is
+  not among them.
+
+Still open: the 90-day retention figure, which the owner is verifying.
 
 ## Content custody
 
@@ -228,15 +232,14 @@ wanted, the files have to be downloaded and served from `/public`.
 
 # Legal / privacy claims requiring human verification
 
-1. **Digital Twin — which provider, and in which region.** *Partly answered:*
-   the owner confirmed the architecture is the Federfarma one, grounded in his
-   own notes. What remains open is the identity and region of the inference
-   endpoint. The privacy policy lists the AI model provider under **USA**; the
-   Federfarma architecture is described as a European datacentre. Both cannot be
-   right for the same stack. Note that a provider *established* outside the EU
-   serving from an EU region still engages section 7 (international transfers),
-   so the answer needs both the entity and the region. **The privacy policy is
-   the document to correct first**; the homepage line follows it.
+1. ~~**Digital Twin — which provider, and in which region.**~~ *Answered
+   10 September 2026: same architecture as Federfarma, inference endpoint in the
+   EU.* The homepage and the privacy policy were corrected to match. One thing
+   still worth checking with whoever holds the contract: whether the endpoint's
+   **operator** is an entity established outside the EU. Processing in an EU
+   region by a non-EU controller still engages Section 7, and the policy
+   currently implies it does not.
+
 2. **Conversation retention.** The 90-day figure appears twice in the privacy
    policy. The owner is verifying it against the Nexus deployment; a retention
    claim the system does not honour is worse than no claim.
@@ -246,6 +249,17 @@ wanted, the files have to be downloaded and served from `/public`.
    study page is untouched. Revisit when the engagement is picked up again.
 4. **PLD wording.** The new formulation is deliberately narrow. A lawyer should
    confirm it reads correctly in Italian for the Italian pages.
+5. **One truncated title — Article III.** LinkedIn caps titles at 150
+   characters in *every* place it exposes them (`h1`, `<title>` and JSON-LD
+   alike), so the full title of *"PLD 2024: il decennio che cambia tutto …
+   il run-off cover diventa elemento struttura"* does not exist on the public
+   page. The last word is almost certainly incomplete. It has been left exactly
+   as LinkedIn serves it rather than guessed at; the importer now takes a
+   `--title` override, so supplying the real one is a one-line re-import:
+
+   ```
+   node scripts/import-linkedin-articles.mjs --force      --url <linkedin url> --slug pld-2024-decennio-responsabilita      --title "the full title" --series "Article III · …" --lang it
+   ```
 
 ---
 

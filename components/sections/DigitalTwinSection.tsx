@@ -4,22 +4,16 @@ import { motion } from "framer-motion";
 
 /**
  * The strip under the copy used to read "Hosted on EU infrastructure · No data
- * leaves your session". Neither half was defensible: the assistant is an iframe
- * onto public.dynamicsconsulting.it, and a visitor's message necessarily leaves
- * the browser.
+ * leaves your session". The second half was never true — the assistant is an
+ * iframe onto public.dynamicsconsulting.it, so a visitor's message necessarily
+ * leaves the browser — and the first half was asserted rather than established.
  *
- * What it actually is, per the owner: the same architecture as the Federfarma
- * deployment, grounded in Corrado's own notes rather than in a document corpus.
+ * What it is, confirmed by the owner: the same architecture as the Federfarma
+ * deployment, grounded in Corrado's own notes rather than a document corpus.
  * Retrieval, identity and audit run on Nexus; only final answer generation
- * calls an external inference endpoint, and that component is replaceable.
- *
- * The line below is deliberately silent on where that endpoint runs, because
- * section 6 of the privacy policy still lists the AI model provider under
- * "USA" while the Federfarma architecture is described as European. Until that
- * is reconciled, the honest statement is the one that holds either way.
- *
- * TODO (owner): name the provider and its region, then make the privacy policy
- * and this line agree — the policy first, this line second.
+ * calls an external inference endpoint, in the EU, and that component is
+ * replaceable. Section 2.3 and the processor table in the privacy policy were
+ * corrected to match on 10 September 2026.
  */
 
 export function DigitalTwinSection() {
@@ -48,7 +42,7 @@ export function DigitalTwinSection() {
               The assistant below is a digital twin of Corrado Patierno — architect and founder of
               Dynamics Consulting. It runs on Nexus MDS Core, on the same architecture as the
               Federfarma deployment: retrieval, identity and audit stay inside the perimeter, and
-              only the final generation step calls an outside endpoint. What it retrieves is his
+              only the final generation step calls an outside endpoint, in the EU. What it retrieves is his
               own notes rather than a client corpus. Ask it about the platform, the methodology, or
               your use case.
             </p>
@@ -60,7 +54,7 @@ export function DigitalTwinSection() {
             </button>
             <p className="mt-6 text-[#7D8FA3] text-xs font-mono">
               Powered by Nexus MDS Core · Retrieval and audit run locally; final answer generation
-              calls an external, replaceable endpoint ·{" "}
+              calls a replaceable endpoint in the EU ·{" "}
               <Link href="/privacy" className="underline hover:text-[#E6EDF3]">
                 what happens to your messages
               </Link>

@@ -121,7 +121,7 @@ function findBody(html) {
 
 const BLOCK_RE = /<(p|h2|h3|h4|ul|ol|blockquote)(\s[^>]*)?>/gi;
 
-function extractBlocks(bodyHtml) {
+function extractBlocks(bodyHtml, authorName) {
   const blocks = [];
   BLOCK_RE.lastIndex = 0;
   let m;
@@ -162,6 +162,9 @@ function extractBlocks(bodyHtml) {
 
     const text = inlineText(inner);
     if (!text) continue;
+    /* LinkedIn renders the author card inside the content container, so the
+       byline arrives as a heading. It is not part of the article. */
+    if (authorName && text === authorName) continue;
     if (name === "blockquote") blocks.push({ type: "quote", text });
     else if (name === "p") blocks.push({ type: "p", text });
     else blocks.push({ type: "h", level: name === "h4" ? 3 : 2, text });
@@ -221,6 +224,7 @@ async function main() {
         "    --url     public LinkedIn article URL",
         "    --file    saved .html / .md / .json instead of fetching",
         "    --slug    output slug (required)",
+        "    --title   full title, where LinkedIn truncated it at 150 characters",
         "    --series  editorial series label, e.g. \"Article I · The seven structural shifts\"",
         "    --lang    it | en   (default: it)",
         "    --force   overwrite an existing file",
@@ -283,7 +287,15 @@ async function main() {
   const articleMatch = /<article\b[\s\S]*?<\/article>/i.exec(html);
   if (!articleMatch) fail("no <article> element found — the page markup is not what we expect.");
 
-  const blocks = extractBlocks(articleMatch[0]);
+  const authorName = ld?.author?.name || "Corrado Patierno";
+  const body = findBody(html);
+  if (!body) {
+    fail(
+      'could not find the article body container (data-test-id="article-content-blocks"). ' +
+        "LinkedIn's markup has changed: check the page and update findBody().",
+    );
+  }
+  const blocks = extractBlocks(body, authorName);
   const words = blocks
     .flatMap((b) => (b.type === "list" ? b.items : [b.text]))
     .join(" ")
@@ -299,11 +311,16 @@ async function main() {
   const doc = {
     slug: args.slug,
     lang: args.lang || "it",
-    title: ld?.name || stripTags(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i.exec(articleMatch[0])?.[1] || ""),
+    /* LinkedIn truncates long titles at 150 characters everywhere it exposes
+       them — h1, <title> and JSON-LD alike — so the full title of a long-titled
+       piece is simply not on the public page. --title supplies it rather than
+       letting the script guess the missing words. */
+    title:
+      args.title || ld?.name || stripTags(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i.exec(articleMatch[0])?.[1] || ""),
     /* LinkedIn puts the author's own standfirst in `headline`. It is their
        words, so it can serve as the description; nothing is generated here. */
     standfirst: ld?.headline || "",
-    author: ld?.author?.name || "Corrado Patierno",
+    author: authorName,
     datePublished: ld?.datePublished || null,
     dateModified: ld?.dateModified || null,
     series: args.series || null,
