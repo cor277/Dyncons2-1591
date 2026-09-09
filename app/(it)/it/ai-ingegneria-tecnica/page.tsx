@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { OG_IMAGE } from "@/app/og";
+import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -20,9 +24,32 @@ export const metadata: Metadata = {
   },
 };
 
+const PAGE_URL = "https://www.dynamicsconsulting.it/it/ai-ingegneria-tecnica";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${PAGE_URL}#webpage`,
+    url: PAGE_URL,
+    name: "AI per norme tecniche e ingegneria",
+    description: "RAG su ISO, UNI, EN, capitolati e revisioni per studi di ingegneria. Risposte citate con norma e revisione corretta. Traceabilità per responsabilità professionale.",
+    inLanguage: "it",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }],
+    breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+  },
+  breadcrumbSchema(PAGE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Risorse in italiano", path: "/it" },
+    { name: "AI per norme tecniche e ingegneria" },
+  ]),
+];
+
 export default function AiIngegneriaTecnicaPage() {
   return (
     <>
+      <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen" lang="it">
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
@@ -83,6 +110,39 @@ export default function AiIngegneriaTecnicaPage() {
             </div>
           </div>
         </section>
+        {/* Approfondimenti — collegamenti interni contestuali */}
+        <section className="px-6 pb-16">
+          <div className="max-w-3xl mx-auto border-t border-[#30363D] pt-8">
+            <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Approfondimenti</h2>
+            <ul className="space-y-3 text-base">
+              <li>
+                <Link href="/answers/superseded-documents-rag" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Documenti superati in un sistema RAG
+                </Link>
+                <span className="text-[#7D8FA3]"> — come si distingue una norma vigente da una revocata (in inglese).</span>
+              </li>
+              <li>
+                <Link href="/answers/rag-audit-trail" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  RAG con audit trail
+                </Link>
+                <span className="text-[#7D8FA3]"> — cosa registrare perché una risposta sia ricostruibile (in inglese).</span>
+              </li>
+              <li>
+                <Link href="/research/rag-enterprise-data" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Implementare RAG sui dati aziendali
+                </Link>
+                <span className="text-[#7D8FA3]"> — le decisioni che contano (in inglese).</span>
+              </li>
+              <li>
+                <Link href="/platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Nexus MDS Core
+                </Link>
+                <span className="text-[#7D8FA3]"> — la piattaforma, servizio per servizio.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Chiusura — assessment */}
         <section className="px-6 py-16 border-t border-[#21262D] bg-[#11161D]">
           <div className="max-w-3xl mx-auto">

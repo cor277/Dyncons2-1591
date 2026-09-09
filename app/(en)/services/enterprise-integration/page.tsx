@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema, faqSchema } from "@/app/seo";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
 export const metadata: Metadata = {
@@ -53,6 +54,17 @@ const faqs = [
   },
 ];
 
+const SERVICE_URL = "https://www.dynamicsconsulting.it/services/enterprise-integration";
+
+const crumbs = breadcrumbSchema(
+  SERVICE_URL,
+  [
+    { name: "Home", path: "/" },
+    { name: "Technical capabilities", path: "/capabilities" },
+    { name: "Enterprise Integration & Modernisation" },
+  ],
+);
+
 export default function EnterpriseIntegrationPage() {
   return (
     <ServicePageLayout
@@ -61,6 +73,8 @@ export default function EnterpriseIntegrationPage() {
       tech={tech}
       capabilities={capabilities}
       faqs={faqs}
+      faqSchema={faqSchema(SERVICE_URL, faqs)}
+      breadcrumbSchema={crumbs}
     />
   );
 }

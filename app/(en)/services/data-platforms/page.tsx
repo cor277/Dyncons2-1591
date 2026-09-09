@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
 import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
@@ -83,6 +84,15 @@ const faqs = [
   },
 ];
 
+const crumbs = breadcrumbSchema(
+  "https://www.dynamicsconsulting.it/services/data-platforms",
+  [
+    { name: "Home", path: "/" },
+    { name: "Technical capabilities", path: "/capabilities" },
+    { name: "Modern Data Platforms & RAG" },
+  ],
+);
+
 export default function DataPlatformsPage() {
   return (
     <ServicePageLayout
@@ -92,6 +102,7 @@ export default function DataPlatformsPage() {
       capabilities={capabilities}
       faqs={faqs}
       faqSchema={faqSchema}
+      breadcrumbSchema={crumbs}
     />
   );
 }

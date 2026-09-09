@@ -1,5 +1,6 @@
 import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
 
 export const metadata: Metadata = {
   title: "Intelligent Automation",
@@ -46,6 +47,15 @@ const faqSchema = {
     },
   ],
 };
+
+const crumbs = breadcrumbSchema(
+  "https://www.dynamicsconsulting.it/services/automation",
+  [
+    { name: "Home", path: "/" },
+    { name: "Technical capabilities", path: "/capabilities" },
+    { name: "Intelligent Automation" },
+  ],
+);
 
 export default function AutomationPage() {
   return (
@@ -124,6 +134,7 @@ export default function AutomationPage() {
         },
       ]}
       faqSchema={faqSchema}
+      breadcrumbSchema={crumbs}
     />
   );
 }

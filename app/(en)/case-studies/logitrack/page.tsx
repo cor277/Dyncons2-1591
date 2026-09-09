@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
@@ -32,9 +34,16 @@ const tech = [
   "Power Platform",
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/case-studies/logitrack", [
+  { name: "Home", path: "/" },
+  { name: "Case studies", path: "/case-studies" },
+  { name: "LogiTrack" },
+]);
+
 export default function LogiTrackCaseStudy() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
         {/* Hero */}

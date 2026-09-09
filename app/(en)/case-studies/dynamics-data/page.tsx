@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
@@ -25,9 +27,16 @@ const tech = [
   "Terraform",
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/case-studies/dynamics-data", [
+  { name: "Home", path: "/" },
+  { name: "Case studies", path: "/case-studies" },
+  { name: "Dynamics 365 F&O + data platform" },
+]);
+
 export default function DynamicsDataCaseStudy() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <NavBar />
       <main className="bg-white dark:bg-slate-950 min-h-screen">
         {/* Hero */}

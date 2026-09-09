@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { OG_IMAGE } from "@/app/og";
+import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -20,9 +24,32 @@ export const metadata: Metadata = {
   },
 };
 
+const PAGE_URL = "https://www.dynamicsconsulting.it/it/ai-dati-aziendali";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${PAGE_URL}#webpage`,
+    url: PAGE_URL,
+    name: "Implementare AI sui dati aziendali",
+    description: "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, nessuna dipendenza cloud.",
+    inLanguage: "it",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }],
+    breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+  },
+  breadcrumbSchema(PAGE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Risorse in italiano", path: "/it" },
+    { name: "Implementare AI sui dati aziendali" },
+  ]),
+];
+
 export default function AiDatiAziendaliPage() {
   return (
     <>
+      <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen" lang="it">
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
@@ -91,6 +118,39 @@ export default function AiDatiAziendaliPage() {
             </div>
           </div>
         </section>
+        {/* Approfondimenti — collegamenti interni contestuali */}
+        <section className="px-6 pb-16">
+          <div className="max-w-3xl mx-auto border-t border-[#30363D] pt-8">
+            <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Approfondimenti</h2>
+            <ul className="space-y-3 text-base">
+              <li>
+                <Link href="/research/rag-enterprise-data" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Implementare RAG sui dati aziendali: la guida onesta
+                </Link>
+                <span className="text-[#7D8FA3]"> — discovery, chunking, valutazione del retrieval (in inglese).</span>
+              </li>
+              <li>
+                <Link href="/answers/superseded-documents-rag" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Documenti normativi superati in un sistema RAG
+                </Link>
+                <span className="text-[#7D8FA3]"> — catene di versione e intervalli di validità (in inglese).</span>
+              </li>
+              <li>
+                <Link href="/services/data-platforms" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Data platform e architetture RAG
+                </Link>
+                <span className="text-[#7D8FA3]"> — la linea di servizio.</span>
+              </li>
+              <li>
+                <Link href="/platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Nexus MDS Core
+                </Link>
+                <span className="text-[#7D8FA3]"> — la piattaforma su cui girano questi sistemi.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Chiusura — assessment */}
         <section className="px-6 py-16 border-t border-[#21262D] bg-[#11161D]">
           <div className="max-w-3xl mx-auto">

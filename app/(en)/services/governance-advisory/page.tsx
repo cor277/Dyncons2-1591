@@ -174,6 +174,7 @@ export default function GovernanceAdvisoryPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
       <NavBar />
+      <main>
 
       {/* Hero */}
       <section className="hero-constellation pt-32 pb-20">
@@ -600,6 +601,7 @@ export default function GovernanceAdvisoryPage() {
         ctaLabel="Exposure assessment →"
         ctaHref="/assessment"
       />
+      </main>
       <Footer />
     </>
   );

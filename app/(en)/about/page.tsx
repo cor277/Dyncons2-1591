@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { ORG_ID, PERSON_ID, WEBSITE_ID } from "@/app/schema-org";
 import { NavBar } from "@/components/layout/NavBar";
@@ -58,7 +60,9 @@ const timeline = [
 const aboutSchema = [
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
+    /* Both: the page is the company's about page and the founder's profile,
+       and consumers look for ProfilePage when resolving a person. */
+    "@type": ["AboutPage", "ProfilePage"],
     "@id": "https://www.dynamicsconsulting.it/about#webpage",
     name: "About Dynamics Consulting",
     url: "https://www.dynamicsconsulting.it/about",
@@ -66,6 +70,7 @@ const aboutSchema = [
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     mainEntity: { "@id": PERSON_ID },
+    breadcrumb: { "@id": "https://www.dynamicsconsulting.it/about#breadcrumb" },
   },
   {
     "@context": "https://schema.org",
@@ -81,9 +86,15 @@ const aboutSchema = [
   },
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/about", [
+  { name: "Home", path: "/" },
+  { name: "About" },
+]);
+
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <head>
         <script
           type="application/ld+json"

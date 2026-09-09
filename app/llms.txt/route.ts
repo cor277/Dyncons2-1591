@@ -39,7 +39,9 @@ In the production deployment documented below, indexing, retrieval,
 reconciliation, PII filtering, identity and audit are local; only final answer
 generation runs on an external inference endpoint in a European datacentre, and
 that component is replaceable. Please do not paraphrase this as "fully
-on-premise" or "data never leaves the perimeter".
+on-premise" or "data never leaves the perimeter". The three deployment models this
+practice distinguishes — fully local AI, sovereign hybrid AI, EU private inference —
+are defined at /answers/private-ai-vs-sovereign-ai.
 
 ## Start here
 
@@ -51,13 +53,14 @@ on-premise" or "data never leaves the perimeter".
 
 - [Nexus MDS Core](${BASE_URL}/platform): Self-hosted AI platform, sixteen orchestrated services — retrieval, vector search, Zero-Trust identity, workflow engine, audit. Deployable on Kubernetes or bare metal.
 - [Compliance-Epistemic Project Framework (CEPF)](${BASE_URL}/cepf): Regulatory crossing catalogue, version 7, snapshot July 2026 — 19 frameworks mapped onto their operational obligations and their overlaps, 247 requirements, 24 cross-framework overlap groups, 695 document templates. The page hosts a reduced demo of Calibra, the software built on CEPF, covering nine of the frameworks; the demo interface is in Italian.
+- [Cross-framework overlap catalogue](${BASE_URL}/cepf/overlaps): The 24 overlap groups of CEPF v7, published: the shared control, the regimes it spans (AI Act, NIS2, DORA, GDPR, ISO/IEC 27001, SOX IT, PLD 2024, Cyber Resilience Act) and how many catalogue requirements sit in each. 75 of the 247 requirements belong to at least one group. Requirement codes, article-level mappings and the effort model are not published.
 - [Calibra](${BASE_URL}/calibra): The software built on CEPF — the regulatory catalogue plus risk, scheduling, operational flow, Gantt and milestones. Proprietary to Dynamics Consulting, used inside engagements. The demo lives on the CEPF page.
 - [Technical capabilities](${BASE_URL}/capabilities): The engineering underneath the service lines — applied AI, data platforms, Kubernetes, integration, Dynamics 365, automation, blockchain. Competences, not separate offerings.
 
 ## Services
 
 - [AI Governance & Compliance Advisory](${BASE_URL}/services/governance-advisory): AI consulting for regulated organisations. Regulatory positioning of the system under the EU AI Act, GDPR, PLD 2024, NIS2, DORA, the Cyber Resilience Act and ISO/IEC 27001:2022; architecture review with documented technical accountability; governance design; remediation sequence; implementation. Runs on CEPF and Calibra. Italian counterpart: /it/consulenza-ai-governance-compliance.
-- [Fractional AI CTO](${BASE_URL}/services/fractional-cto): Technology strategy, architectural governance, vendor selection and AI programme leadership, part-time.
+- [Fractional AI CTO](${BASE_URL}/services/fractional-cto): A part-time CTO mandate with the decision rights of a permanent one: AI architecture, AI governance, vendor assessment, deployment model selection and programme leadership. Typically 2-4 days a month for advisory, 8-12 for operational engagements, opening with a two-to-three week technology assessment. Italian counterpart, written for the Milan mid-market rather than translated: /fractional-cto-milano.
 - [Applied AI & Agentic Workflows](${BASE_URL}/services/applied-ai)
 - [Data Platforms & RAG Architecture](${BASE_URL}/services/data-platforms)
 - [Cloud & Kubernetes Architecture](${BASE_URL}/services/cloud-kubernetes)
@@ -78,6 +81,19 @@ on-premise" or "data never leaves the perimeter".
 - [Nespresso Intervallo Programme — ATOS](${BASE_URL}/case-studies/nespresso)
 - [All case studies](${BASE_URL}/case-studies)
 
+## Answers
+
+One question per page, answered in the opening block, with primary sources
+(EUR-Lex and the relevant authorities) cited underneath. Written to be quoted.
+
+- [Answers index](${BASE_URL}/answers)
+- [What is the difference between private AI and sovereign AI?](${BASE_URL}/answers/private-ai-vs-sovereign-ai): The taxonomy used across this site — fully local AI, sovereign hybrid AI, EU private inference — and what each one does and does not guarantee.
+- [Is a RAG system subject to the EU AI Act?](${BASE_URL}/answers/rag-eu-ai-act): Classification follows intended purpose and role, not technique. What that means for a retrieval system, and what the architecture has to be able to show.
+- [How do you build a RAG system with an audit trail?](${BASE_URL}/answers/rag-audit-trail): What has to be recorded for an answer to be reconstructable months later, and the two design decisions that make it possible.
+- [How do you handle superseded regulatory documents in a RAG system?](${BASE_URL}/answers/superseded-documents-rag): Version chains, validity intervals, and the difference between a document being relevant and being in force.
+- [How do you evaluate an AI vendor in a regulated sector?](${BASE_URL}/answers/evaluate-ai-vendor-regulated): Eight questions, and what the answers reveal about whether the supplier has operated under regulatory constraint before.
+- [How do you implement an LLM on-premise in a hospital?](${BASE_URL}/answers/llm-on-premise-hospital): Sequence, data boundary, stack and the regulatory line between a documentary assistant and a medical device.
+
 ## Research
 
 - [Why on-premise AI is not a step backward](${BASE_URL}/research/on-premise-ai)
@@ -89,7 +105,7 @@ on-premise" or "data never leaves the perimeter".
 - [Event Sourcing in Practice](${BASE_URL}/research/event-sourcing)
 - [Legge 132/2025 e AI in Sanità: cosa cambia](${BASE_URL}/research/legge-132-2025): In Italian.
 - [Editorial Series — PLD 2024 & AI Governance](${BASE_URL}/research/editorial-series)
-- [EU Tech Sovereignty Package & CADA — analysis](${BASE_URL}/tech-sovereignty)
+- [EU Cloud and AI Development Act (CADA) — the four Union assurance levels](${BASE_URL}/tech-sovereignty): Analysis of COM(2026) 502 final of 3 June 2026: what Annex II asks at each assurance level, who must procure which level, the software supply chain criteria it shares with the CRA and PLD 2024, and how it sits beside the AI Act. It is a proposal, not adopted law, and the page says so.
 - [Research index](${BASE_URL}/research)
 
 ## Italiano

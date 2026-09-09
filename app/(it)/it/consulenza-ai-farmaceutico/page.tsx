@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { OG_IMAGE } from "@/app/og";
+import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -20,9 +24,32 @@ export const metadata: Metadata = {
   },
 };
 
+const PAGE_URL = "https://www.dynamicsconsulting.it/it/consulenza-ai-farmaceutico";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${PAGE_URL}#webpage`,
+    url: PAGE_URL,
+    name: "Consulenza AI per il Farmaceutico",
+    description: "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, conformità Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",
+    inLanguage: "it",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }],
+    breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+  },
+  breadcrumbSchema(PAGE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Risorse in italiano", path: "/it" },
+    { name: "Consulenza AI per il Farmaceutico" },
+  ]),
+];
+
 export default function ConsulenzaAiFarmaceuticoPage() {
   return (
     <>
+      <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen" lang="it">
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
@@ -78,6 +105,39 @@ export default function ConsulenzaAiFarmaceuticoPage() {
             </div>
           </div>
         </section>
+        {/* Approfondimenti — collegamenti interni contestuali */}
+        <section className="px-6 pb-16">
+          <div className="max-w-3xl mx-auto border-t border-[#30363D] pt-8">
+            <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Approfondimenti</h2>
+            <ul className="space-y-3 text-base">
+              <li>
+                <Link href="/it/case-studies/federfarma" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Federfarma Lombarda — Nexus MDS Core in produzione
+                </Link>
+                <span className="text-[#7D8FA3]"> — distribuzione farmaceutica, oltre 1.000 farmacie.</span>
+              </li>
+              <li>
+                <Link href="/sovereign-ai-pharma-italia" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  AI sovrana per il pharma italiano
+                </Link>
+                <span className="text-[#7D8FA3]"> — il verticale, per esteso.</span>
+              </li>
+              <li>
+                <Link href="/it/consulenza-ai-governance-compliance" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Consulenza AI, governance e compliance
+                </Link>
+                <span className="text-[#7D8FA3]"> — inquadramento normativo e architettura che regge gli obblighi.</span>
+              </li>
+              <li>
+                <Link href="/platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Nexus MDS Core
+                </Link>
+                <span className="text-[#7D8FA3]"> — la piattaforma, servizio per servizio.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Chiusura — assessment */}
         <section className="px-6 py-16 border-t border-[#21262D] bg-[#11161D]">
           <div className="max-w-3xl mx-auto">

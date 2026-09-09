@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
+import { NEXUS_ID, ORG_ID } from "@/app/schema-org";
+import { articleSchema, breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -90,11 +93,44 @@ const risultati = [
   },
 ];
 
+const CASE_URL = "https://www.dynamicsconsulting.it/it/case-studies/federfarma";
+
+/**
+ * The case study is the most cited page on this site, so it carries its own
+ * Article node: author, dates and the platform it is about, rather than being
+ * an anonymous page inside the organisation graph. Dates are the publication
+ * and last revision of this page, month precision.
+ */
+const schema = [
+  {
+    ...articleSchema({
+      url: CASE_URL,
+      type: "TechArticle",
+      headline: "Federfarma Lombarda — Nexus MDS Core in produzione",
+      description: "Assistente normativo in produzione per oltre 1.000 farmacie nelle province di Milano, Lodi e Monza Brianza, circa 2.000 interrogazioni al giorno: catene di versione esplicite sui documenti, dati personali esclusi in ingestion, log di audit a prova di manomissione, retrieval locale e generazione esterna sostituibile.",
+      datePublished: "2026-03",
+      dateModified: "2026-09",
+      inLanguage: "it",
+      articleSection: "Case study",
+      about: ["Retrieval-augmented generation", "Sovereign AI", "Pharmaceutical distribution"],
+    }),
+    isBasedOn: { "@id": NEXUS_ID },
+    sourceOrganization: { "@id": ORG_ID },
+  },
+  breadcrumbSchema(CASE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Risorse in italiano", path: "/it" },
+    { name: "Federfarma Lombarda" },
+  ]),
+];
+
 export default function FederfarmaCaseStudyIt() {
   return (
     <>
+      <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen" lang="it">
+        <article>
         {/* Hero */}
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
           <div className="max-w-3xl mx-auto">
@@ -129,6 +165,20 @@ export default function FederfarmaCaseStudyIt() {
                 <dt className="inline font-semibold text-[#E6EDF3]">Stato: </dt>
                 <dd className="inline">in produzione</dd>
               </div>
+              <div>
+                <dt className="inline font-semibold text-[#E6EDF3]">Autore: </dt>
+                <dd className="inline">
+                  <Link href="/about" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Corrado Patierno
+                  </Link>
+                </dd>
+              </div>
+              <div>
+                <dt className="inline font-semibold text-[#E6EDF3]">Ultimo aggiornamento: </dt>
+                <dd className="inline">
+                  <time dateTime="2026-09">settembre 2026</time>
+                </dd>
+              </div>
             </dl>
             <p className="mt-6 text-sm text-[#7D8FA3]">
               <Link href="/case-studies/federfarma" className="text-[#00B4D8] hover:text-[#E6EDF3] underline" hrefLang="en">
@@ -155,11 +205,72 @@ export default function FederfarmaCaseStudyIt() {
           </div>
         </section>
 
+        {/* Indice — ancore, così una sezione si può linkare e citare da sola */}
+        <section className="px-6 pt-12">
+          <nav aria-label="In questa pagina" className="max-w-3xl mx-auto border border-[#30363D] rounded-xl bg-[#161B22] p-6">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-[#00B4D8] mb-4">
+              In questa pagina
+            </h2>
+            <ol className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-base list-decimal list-inside marker:text-[#7D8FA3]">
+                <li>
+                  <a href="#problem" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Il problema che nessuno chiamava per nome
+                  </a>
+                </li>
+                <li>
+                  <a href="#retrieval-design" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Perché un motore di ricerca non bastava
+                  </a>
+                </li>
+                <li>
+                  <a href="#version-chain" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    La catena di versioni
+                  </a>
+                </li>
+                <li>
+                  <a href="#what-the-pharmacist-sees" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Cosa vede il farmacista
+                  </a>
+                </li>
+                <li>
+                  <a href="#data-boundary" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Dove passa il confine dei dati
+                  </a>
+                </li>
+                <li>
+                  <a href="#reconstructability" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    La ricostruibilità
+                  </a>
+                </li>
+                <li>
+                  <a href="#hardware" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    L’hardware
+                  </a>
+                </li>
+                <li>
+                  <a href="#results" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Risultati
+                  </a>
+                </li>
+                <li>
+                  <a href="#technologies" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Tecnologie utilizzate
+                  </a>
+                </li>
+                <li>
+                  <a href="#accountability" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Cosa firmo
+                  </a>
+                </li>
+            </ol>
+          </nav>
+        </section>
+
         {/* Corpo */}
         <section className="py-16 px-6">
           <div className="max-w-3xl mx-auto space-y-12 text-[#7D8FA3] leading-relaxed text-lg">
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">
+              <h2 id="problem" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">
                 Il problema che nessuno chiamava per nome
               </h2>
               <p>
@@ -198,7 +309,7 @@ export default function FederfarmaCaseStudyIt() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">
+              <h2 id="retrieval-design" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">
                 Perché un motore di ricerca non bastava, e perché un RAG ingenuo sarebbe stato
                 peggio
               </h2>
@@ -226,7 +337,7 @@ export default function FederfarmaCaseStudyIt() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">La catena di versioni</h2>
+              <h2 id="version-chain" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">La catena di versioni</h2>
               <p>
                 Il sistema risolve l’obsolescenza in due fasi distinte, e la seconda è quella che
                 conta.
@@ -261,7 +372,7 @@ export default function FederfarmaCaseStudyIt() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Cosa vede il farmacista</h2>
+              <h2 id="what-the-pharmacist-sees" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">Cosa vede il farmacista</h2>
               <p>
                 Alla domanda — turni, modalità di erogazione, carenze, campagne vaccinali, eventi —
                 il sistema restituisce tre cose insieme.
@@ -290,7 +401,7 @@ export default function FederfarmaCaseStudyIt() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">
+              <h2 id="data-boundary" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">
                 Dove passa il confine dei dati
               </h2>
               <p>
@@ -352,7 +463,7 @@ export default function FederfarmaCaseStudyIt() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">La ricostruibilità</h2>
+              <h2 id="reconstructability" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">La ricostruibilità</h2>
               <p>
                 Se un farmacista agisce su una risposta del sistema e da quell’azione nasce una
                 contestazione, l’organizzazione deve poter ricostruire cosa il sistema ha risposto,
@@ -374,7 +485,7 @@ export default function FederfarmaCaseStudyIt() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">L’hardware</h2>
+              <h2 id="hardware" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">L’hardware</h2>
               <p>
                 Il sistema in produzione gira su una singola GPU consumer da 8 GB, del 2015, che
                 ospita contemporaneamente modello locale, filtro privacy ed embeddings. Modelli
@@ -389,13 +500,13 @@ export default function FederfarmaCaseStudyIt() {
               <p className="mt-4">
                 Il punto per chi decide è questo: il dimensionamento è una scelta di esercizio, non
                 un vincolo imposto dal fornitore. Dove altri richiedono infrastruttura cloud da
-                decine di migliaia di euro l’anno, qui la stessa conformità si ottiene su una
-                macchina da ufficio — e si scala quando serve.
+                decine di migliaia di euro l’anno, qui gli stessi controlli girano su una
+                macchina da ufficio — e scalano quando serve.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Risultati</h2>
+              <h2 id="results" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">Risultati</h2>
               <div className="overflow-x-auto -mx-6 px-6">
                 <table className="w-full text-base border-collapse min-w-[560px]">
                   <thead>
@@ -424,7 +535,7 @@ export default function FederfarmaCaseStudyIt() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Tecnologie utilizzate</h2>
+              <h2 id="technologies" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">Tecnologie utilizzate</h2>
               <div className="flex flex-wrap gap-2 mt-2">
                 {tech.map((t) => (
                   <TechBadge key={t} label={t} />
@@ -433,7 +544,7 @@ export default function FederfarmaCaseStudyIt() {
             </div>
 
             <div className="border-t border-[#30363D] pt-10">
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Cosa firmo</h2>
+              <h2 id="accountability" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">Cosa firmo</h2>
               <p>
                 L’architettura, la collocazione del confine dei dati e il modello di tracciabilità
                 sono decisioni tecniche documentate e assunte. In un settore in cui l’errore di
@@ -470,6 +581,7 @@ export default function FederfarmaCaseStudyIt() {
             <CTAButton label="Assessment di esposizione →" href="/it/assessment" variant="primary" />
           </div>
         </section>
+        </article>
       </main>
       <Footer />
     </>

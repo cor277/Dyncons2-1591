@@ -162,7 +162,7 @@ export function NexusGraphExplorer() {
         {/* ── Sidebar ── */}
         <aside style={{ background:'#11161D', borderRight:'1px solid #1E2530', padding:'22px 18px', overflowY:'auto' }}>
           <div style={{ fontFamily:mono, fontSize:16, fontWeight:700, marginBottom:4 }}>
-            NEXUS <span style={{ color:'#2DD4BF' }}>//</span>
+            NEXUS <span style={{ color:'#2DD4BF' }}>{"//"}</span>
           </div>
           <div style={{ fontFamily:mono, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', color:'#8B96A3', marginBottom:20 }}>
             graph explorer

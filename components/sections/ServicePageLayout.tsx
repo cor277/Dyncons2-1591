@@ -1,9 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import {
   ChevronDown,
-  ChevronUp,
   Brain,
   Mic,
   Search,
@@ -64,32 +62,36 @@ interface ServicePageLayoutProps {
   ctaTitle?: string;
   ctaSubtitle?: string;
   faqSchema?: object;
+  breadcrumbSchema?: object;
   children?: React.ReactNode;
 }
 
 function FAQAccordion({ items }: { items: FAQ[] }) {
-  const [open, setOpen] = useState<number | null>(null);
+  /**
+   * Native <details>. The previous version kept the answers in React state, so
+   * an unopened answer existed nowhere in the served HTML — invisible to a
+   * crawler and to anything reading the page without running JavaScript, which
+   * is most of what retrieves it. <details> collapses in the browser while the
+   * text stays in the document, and it is keyboard-operable for free.
+   */
   return (
     <div className="space-y-3">
       {items.map((item, i) => (
-        <div key={i} className="bg-[#161B22] border border-[#30363D] rounded-xl overflow-hidden">
-          <button
-            onClick={() => setOpen(open === i ? null : i)}
-            className="w-full flex items-center justify-between px-5 py-4 text-left text-[#E6EDF3] font-dm font-medium text-sm hover:text-[#00B4D8] transition-colors"
-          >
+        <details
+          key={i}
+          className="group bg-[#161B22] border border-[#30363D] rounded-xl overflow-hidden"
+        >
+          <summary className="w-full flex items-center justify-between px-5 py-4 text-left text-[#E6EDF3] font-dm font-medium text-sm hover:text-[#00B4D8] transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
             <span>{item.q}</span>
-            {open === i ? (
-              <ChevronUp size={16} className="flex-shrink-0 text-[#00B4D8] ml-3" />
-            ) : (
-              <ChevronDown size={16} className="flex-shrink-0 text-[#7D8FA3] ml-3" />
-            )}
-          </button>
-          {open === i && (
-            <div className="px-5 pb-5 text-[#7D8FA3] text-sm leading-relaxed border-t border-[#30363D] pt-4">
-              {item.a}
-            </div>
-          )}
-        </div>
+            <ChevronDown
+              size={16}
+              className="flex-shrink-0 text-[#7D8FA3] ml-3 transition-transform group-open:rotate-180 group-open:text-[#00B4D8]"
+            />
+          </summary>
+          <div className="px-5 pb-5 text-[#7D8FA3] text-sm leading-relaxed border-t border-[#30363D] pt-4">
+            {item.a}
+          </div>
+        </details>
       ))}
     </div>
   );
@@ -105,6 +107,7 @@ export function ServicePageLayout({
   ctaTitle,
   ctaSubtitle,
   faqSchema,
+  breadcrumbSchema,
   children,
 }: ServicePageLayoutProps) {
   return (
@@ -115,7 +118,14 @@ export function ServicePageLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
       <NavBar />
+      <main>
 
       {/* Hero */}
       <section className="hero-constellation pt-32 pb-20">
@@ -191,6 +201,7 @@ export function ServicePageLayout({
         </div>
       </section>
 
+      </main>
       <CTASection title={ctaTitle} subtitle={ctaSubtitle} />
       <Footer />
     </>

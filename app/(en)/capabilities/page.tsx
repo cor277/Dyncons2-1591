@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { OG_IMAGE } from "@/app/og";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
@@ -76,9 +78,15 @@ const capabilities = [
   },
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/capabilities", [
+  { name: "Home", path: "/" },
+  { name: "Technical capabilities" },
+]);
+
 export default function CapabilitiesPage() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">

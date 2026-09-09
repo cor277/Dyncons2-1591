@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
@@ -23,9 +25,16 @@ const tech = [
   "Azure Integration Services",
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/case-studies/dynamics-crm", [
+  { name: "Home", path: "/" },
+  { name: "Case studies", path: "/case-studies" },
+  { name: "Dynamics 365 CRM" },
+]);
+
 export default function DynamicsCrmCaseStudy() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">

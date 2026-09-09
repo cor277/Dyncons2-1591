@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
+import { NEXUS_ID, ORG_ID } from "@/app/schema-org";
+import { articleSchema, breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -90,11 +93,44 @@ const results = [
   },
 ];
 
+const CASE_URL = "https://www.dynamicsconsulting.it/case-studies/federfarma";
+
+/**
+ * The case study is the most cited page on this site, so it carries its own
+ * Article node: author, dates and the platform it is about, rather than being
+ * an anonymous page inside the organisation graph. Dates are the publication
+ * and last revision of this page, month precision.
+ */
+const schema = [
+  {
+    ...articleSchema({
+      url: CASE_URL,
+      type: "TechArticle",
+      headline: "Federfarma Lombarda — Nexus MDS Core in production",
+      description: "Regulatory assistant in production for 1,000+ pharmacies across the provinces of Milan, Lodi and Monza Brianza, around 2,000 queries a day: explicit document version chains, personal data excluded at ingestion, tamper-evident audit log, local retrieval with replaceable external generation.",
+      datePublished: "2026-03",
+      dateModified: "2026-09",
+      inLanguage: "en",
+      articleSection: "Case study",
+      about: ["Retrieval-augmented generation", "Sovereign AI", "Pharmaceutical distribution"],
+    }),
+    isBasedOn: { "@id": NEXUS_ID },
+    sourceOrganization: { "@id": ORG_ID },
+  },
+  breadcrumbSchema(CASE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Case studies", path: "/case-studies" },
+    { name: "Federfarma Lombarda" },
+  ]),
+];
+
 export default function FederfarmaCaseStudy() {
   return (
     <>
+      <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
+        <article>
         {/* Hero */}
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
           <div className="max-w-3xl mx-auto">
@@ -129,6 +165,20 @@ export default function FederfarmaCaseStudy() {
                 <dt className="inline font-semibold text-[#E6EDF3]">Status: </dt>
                 <dd className="inline">in production</dd>
               </div>
+              <div>
+                <dt className="inline font-semibold text-[#E6EDF3]">Author: </dt>
+                <dd className="inline">
+                  <Link href="/about" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Corrado Patierno
+                  </Link>
+                </dd>
+              </div>
+              <div>
+                <dt className="inline font-semibold text-[#E6EDF3]">Last updated: </dt>
+                <dd className="inline">
+                  <time dateTime="2026-09">September 2026</time>
+                </dd>
+              </div>
             </dl>
             <p className="mt-6 text-sm text-[#7D8FA3]">
               <Link href="/it/case-studies/federfarma" className="text-[#00B4D8] hover:text-[#E6EDF3] underline" hrefLang="it">
@@ -155,11 +205,72 @@ export default function FederfarmaCaseStudy() {
           </div>
         </section>
 
+        {/* Table of contents — anchors, so a section can be linked and quoted on its own */}
+        <section className="px-6 pt-12">
+          <nav aria-label="On this page" className="max-w-3xl mx-auto border border-[#30363D] rounded-xl bg-[#161B22] p-6">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-[#00B4D8] mb-4">
+              On this page
+            </h2>
+            <ol className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-base list-decimal list-inside marker:text-[#7D8FA3]">
+                <li>
+                  <a href="#problem" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    The problem nobody was naming
+                  </a>
+                </li>
+                <li>
+                  <a href="#retrieval-design" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Why search was not enough
+                  </a>
+                </li>
+                <li>
+                  <a href="#version-chain" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    The version chain
+                  </a>
+                </li>
+                <li>
+                  <a href="#what-the-pharmacist-sees" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    What the pharmacist sees
+                  </a>
+                </li>
+                <li>
+                  <a href="#data-boundary" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Where the data boundary sits
+                  </a>
+                </li>
+                <li>
+                  <a href="#reconstructability" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Reconstructability
+                  </a>
+                </li>
+                <li>
+                  <a href="#hardware" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    The hardware
+                  </a>
+                </li>
+                <li>
+                  <a href="#results" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Results
+                  </a>
+                </li>
+                <li>
+                  <a href="#technologies" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Technologies used
+                  </a>
+                </li>
+                <li>
+                  <a href="#accountability" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    What I sign
+                  </a>
+                </li>
+            </ol>
+          </nav>
+        </section>
+
         {/* Body */}
         <section className="py-16 px-6">
           <div className="max-w-3xl mx-auto space-y-12 text-[#7D8FA3] leading-relaxed text-lg">
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">
+              <h2 id="problem" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">
                 The problem nobody was naming
               </h2>
               <p>
@@ -197,7 +308,7 @@ export default function FederfarmaCaseStudy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">
+              <h2 id="retrieval-design" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">
                 Why search was not enough, and why naive RAG would have been worse
               </h2>
               <p>
@@ -224,7 +335,7 @@ export default function FederfarmaCaseStudy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">The version chain</h2>
+              <h2 id="version-chain" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">The version chain</h2>
               <p>
                 The system resolves obsolescence in two distinct phases, and the second is the one
                 that matters.
@@ -257,7 +368,7 @@ export default function FederfarmaCaseStudy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">What the pharmacist sees</h2>
+              <h2 id="what-the-pharmacist-sees" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">What the pharmacist sees</h2>
               <p>
                 For any question — rosters, dispensing procedures, shortages, vaccination campaigns,
                 events — the system returns three things together.
@@ -286,7 +397,7 @@ export default function FederfarmaCaseStudy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">
+              <h2 id="data-boundary" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">
                 Where the data boundary sits
               </h2>
               <p>
@@ -346,7 +457,7 @@ export default function FederfarmaCaseStudy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Reconstructability</h2>
+              <h2 id="reconstructability" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">Reconstructability</h2>
               <p>
                 If a pharmacist acts on a system response and a dispute follows, the organisation
                 must be able to reconstruct what the system answered, when, and on the basis of
@@ -367,7 +478,7 @@ export default function FederfarmaCaseStudy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">The hardware</h2>
+              <h2 id="hardware" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">The hardware</h2>
               <p>
                 The production system runs on a single 8 GB consumer GPU, from 2015, hosting local
                 model, privacy filter and embeddings concurrently. Quantised models, video memory
@@ -381,13 +492,13 @@ export default function FederfarmaCaseStudy() {
               <p className="mt-4">
                 The point for decision-makers is this: sizing is an operational choice, not a
                 constraint imposed by the vendor. Where others require cloud infrastructure costing
-                tens of thousands per year, the same compliance is achieved here on an office
-                machine — and scales when it needs to.
+                tens of thousands per year, the same controls are carried here on an office
+                machine — and scale when they need to.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Results</h2>
+              <h2 id="results" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">Results</h2>
               <div className="overflow-x-auto -mx-6 px-6">
                 <table className="w-full text-base border-collapse min-w-[560px]">
                   <thead>
@@ -416,7 +527,7 @@ export default function FederfarmaCaseStudy() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Technologies used</h2>
+              <h2 id="technologies" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">Technologies used</h2>
               <div className="flex flex-wrap gap-2 mt-2">
                 {tech.map((t) => (
                   <TechBadge key={t} label={t} />
@@ -425,7 +536,7 @@ export default function FederfarmaCaseStudy() {
             </div>
 
             <div className="border-t border-[#30363D] pt-10">
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">What I sign</h2>
+              <h2 id="accountability" className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4">What I sign</h2>
               <p>
                 The architecture, the placement of the data boundary and the traceability model are
                 documented technical decisions, taken and owned. In a sector where a compliance
@@ -462,6 +573,8 @@ export default function FederfarmaCaseStudy() {
             <CTAButton label="Exposure assessment →" href="/assessment" variant="primary" />
           </div>
         </section>
+        </article>
+
       </main>
       <Footer />
     </>

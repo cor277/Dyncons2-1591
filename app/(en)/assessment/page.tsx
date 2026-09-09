@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import Image from "next/image";
 import Link from "next/link";
@@ -60,9 +62,15 @@ const included = [
   },
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/assessment", [
+  { name: "Home", path: "/" },
+  { name: "Exposure assessment" },
+]);
+
 export default function AssessmentPage() {
   return (
     <div className="bg-[#0D1117] min-h-screen text-[#E6EDF3]">
+      <JsonLd data={crumbs} />
       {/* Header — logo only, no navigation */}
       <header className="border-b border-[#21262D]">
         <div className="max-w-2xl mx-auto px-6 py-6">

@@ -13,14 +13,45 @@ const BASE_URL = "https://www.dynamicsconsulting.it";
  */
 const CONTENT_SIGNAL = "search=yes, ai-input=yes, ai-train=no";
 
-const body = `# Content preferences: https://contentsignals.org/
-Content-Signal: ${CONTENT_SIGNAL}
+/**
+ * Crawlers that fetch a page in order to answer a question, as opposed to
+ * crawlers that fetch it in order to train on it. They are listed explicitly
+ * because the inbound funnel now runs through them, and because an explicit
+ * group removes any doubt for an operator reading this file.
+ *
+ * A crawler that matches a named group ignores the `*` group entirely, so each
+ * group has to repeat the Content-Signal and the /api/ exclusion.
+ *
+ * Training-oriented user agents are deliberately absent: they fall through to
+ * `*`, where the Content-Signal states ai-train=no. Adding or removing one is
+ * an editorial decision, not a technical tidy-up.
+ */
+const SEARCH_AGENTS = [
+  "Googlebot",
+  "Bingbot",
+  "OAI-SearchBot", // ChatGPT Search
+  "ChatGPT-User", // ChatGPT fetching a page a user asked about
+  "PerplexityBot",
+  "Perplexity-User",
+  "Claude-SearchBot",
+  "Claude-User",
+  "DuckDuckBot",
+  "Applebot",
+];
 
-User-agent: *
+const group = (agents: string[]) =>
+  `${agents.map((a) => `User-agent: ${a}`).join("\n")}
 Content-Signal: ${CONTENT_SIGNAL}
 Allow: /
 Disallow: /api/
+`;
 
+const body = `# Content preferences: https://contentsignals.org/
+Content-Signal: ${CONTENT_SIGNAL}
+
+${group(["*"])}
+# Search and answer engines — allowed explicitly.
+${SEARCH_AGENTS.map((a) => group([a])).join("\n")}
 # Curated index for assistants: ${BASE_URL}/llms.txt
 Sitemap: ${BASE_URL}/sitemap.xml
 Host: ${BASE_URL}

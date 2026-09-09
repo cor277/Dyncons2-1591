@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
 import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
@@ -104,6 +105,15 @@ const faqs = [
   },
 ];
 
+const crumbs = breadcrumbSchema(
+  "https://www.dynamicsconsulting.it/services/cloud-kubernetes",
+  [
+    { name: "Home", path: "/" },
+    { name: "Technical capabilities", path: "/capabilities" },
+    { name: "Cloud & Kubernetes Architecture" },
+  ],
+);
+
 export default function CloudKubernetesPage() {
   return (
     <ServicePageLayout
@@ -113,6 +123,7 @@ export default function CloudKubernetesPage() {
       capabilities={capabilities}
       faqs={faqs}
       faqSchema={faqSchema}
+      breadcrumbSchema={crumbs}
     />
   );
 }

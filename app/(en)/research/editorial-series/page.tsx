@@ -68,6 +68,7 @@ export default function EditorialSeriesPage() {
   return (
     <>
       <NavBar />
+      <main>
       <section className="hero-constellation pt-32 pb-16">
         <div className="hero-content max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -120,6 +121,7 @@ export default function EditorialSeriesPage() {
       </section>
 
       <CTASection />
+      </main>
       <Footer />
     </>
   );

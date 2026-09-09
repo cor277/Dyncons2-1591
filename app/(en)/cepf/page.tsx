@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { WEBSITE_ID, CEPF_ID, CALIBRA_ID } from "@/app/schema-org";
@@ -60,9 +62,15 @@ const DEMO_REGIMES = [
   ["GS1", "EPC/RFID and EPCIS 2.0 supply chain standards"],
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/cepf", [
+  { name: "Home", path: "/" },
+  { name: "CEPF" },
+]);
+
 export default function CepfPage() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
@@ -113,8 +121,19 @@ export default function CepfPage() {
                 work.
               </p>
               <p className="text-[#9BA8B9] font-mono text-base">
-                CEPF v7 — 19 framework, 247 requisiti, 24 gruppi di sovrapposizione,
-                695 template documentali — snapshot luglio 2026
+                CEPF v7 — 19 frameworks, 247 requirements, 24 cross-framework overlap groups,
+                695 document templates — snapshot July 2026
+              </p>
+              <p className="text-[#7D8FA3] leading-relaxed mt-4">
+                The overlap groups are published:{" "}
+                <Link
+                  href="/cepf/overlaps"
+                  className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+                >
+                  the cross-framework overlap catalogue
+                </Link>{" "}
+                lists all 24 — which regimes share a control, and how many catalogue requirements
+                sit in each — so the numbers above can be checked against something.
               </p>
             </div>
 

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ORG_ID, WEBSITE_ID, NEXUS_ID, CEPF_ID } from "@/app/schema-org";
 import { TextLink } from "@/components/ui/TextLink";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -100,36 +99,11 @@ const caseStudies = [
   },
 ];
 
-/**
- * The organisation, the founder, Nexus, CEPF and Calibra are declared once in
- * app/schema-org.ts and emitted by the layout. Here they are referenced by @id,
- * so the graph connects instead of repeating the same entity twice on one page.
- */
-const homeSchema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": WEBSITE_ID,
-    name: "Dynamics Consulting",
-    url: "https://www.dynamicsconsulting.it",
-    inLanguage: "en",
-    description:
-      "AI consulting, governance and compliance for regulated industries, and sovereign on-premise AI infrastructure. Nexus MDS Core, CEPF and Calibra.",
-    publisher: { "@id": ORG_ID },
-    about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }, { "@id": CEPF_ID }],
-  },
-];
-
 export default function HomePage() {
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
-        />
-      </head>
       <NavBar />
+      <main>
       {/* Section 0 — 11 September 2026 deadline. Time-boxed: see CraDeadlineBanner. */}
       <CraDeadlineBanner />
       {/* Section 1 — Hero */}
@@ -179,6 +153,7 @@ export default function HomePage() {
         ctaLabel="Exposure assessment →"
         ctaHref="/assessment"
       />
+      </main>
       <Footer />
     </>
   );

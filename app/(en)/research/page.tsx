@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -78,9 +80,15 @@ const posts = [
   },
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/research", [
+  { name: "Home", path: "/" },
+  { name: "Research" },
+]);
+
 export default function ResearchPage() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
         {/* Hero */}
@@ -95,6 +103,13 @@ export default function ResearchPage() {
             <p className="text-lg text-[#7D8FA3] max-w-2xl mx-auto">
               Original research, technical deep-dives, and honest takes on the technologies shaping
               enterprise AI, data infrastructure, and legacy modernisation in regulated industries.
+            </p>
+            <p className="text-base text-[#7D8FA3] max-w-2xl mx-auto mt-4">
+              For a single question answered directly rather than argued at length, see the{" "}
+              <Link href="/answers" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                answers
+              </Link>
+              .
             </p>
           </div>
         </section>

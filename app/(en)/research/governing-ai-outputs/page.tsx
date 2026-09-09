@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { RESEARCH_ARTICLES } from "@/app/research-articles";
+import { articleSchema, breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
@@ -12,11 +15,34 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/governing-ai-outputs" },
 };
 
+const article = RESEARCH_ARTICLES["governing-ai-outputs"];
+const ARTICLE_URL = "https://www.dynamicsconsulting.it/research/governing-ai-outputs";
+
+const schema = [
+  articleSchema({
+    url: ARTICLE_URL,
+    type: article.type,
+    headline: article.headline,
+    description: article.description,
+    datePublished: article.datePublished,
+    inLanguage: article.inLanguage,
+    articleSection: article.section,
+    keywords: article.keywords,
+  }),
+  breadcrumbSchema(ARTICLE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Research", path: "/research" },
+    { name: article.headline },
+  ]),
+];
+
 export default function GoverningAiOutputsArticle() {
   return (
     <>
+      <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
+        <article>
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
           <div className="max-w-3xl mx-auto">
             <Link href="/research" className="text-sm text-[#00B4D8] hover:text-[#00C8F0] mb-6 inline-flex items-center gap-1">
@@ -24,7 +50,9 @@ export default function GoverningAiOutputsArticle() {
             </Link>
             <div className="flex items-center gap-3 mb-4">
               <TechBadge label="AI Governance" variant="cyan" />
-              <span className="text-xs text-[#7D8FA3]">January 2026</span>
+              <time dateTime="2026-01" className="text-xs text-[#7D8FA3]">
+                {article.dateLabel}
+              </time>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-[#E6EDF3]">
               Governing AI outputs in regulated industries: a technical playbook
@@ -33,6 +61,12 @@ export default function GoverningAiOutputsArticle() {
               Healthcare, pharma, and public sector AI deployments require more than guardrails.
               Here is what output governance looks like in production — from audit logging to
               human-in-the-loop patterns.
+            </p>
+            <p className="text-sm text-[#7D8FA3] mt-4">
+              By{" "}
+              <Link href="/about" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                Corrado Patierno
+              </Link>
             </p>
           </div>
         </section>
@@ -173,6 +207,7 @@ export default function GoverningAiOutputsArticle() {
           </div>
         </section>
 
+        </article>
         <CTASection />
       </main>
       <Footer />

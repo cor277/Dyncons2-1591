@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID } from "@/app/schema-org";
@@ -84,14 +86,21 @@ const useCases = [
   },
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/platform", [
+  { name: "Home", path: "/" },
+  { name: "Nexus MDS Core" },
+]);
+
 export default function PlatformPage() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
       />
       <NavBar />
+      <main>
       <PlatformHero />
       <PlatformFeatureGrid />
 
@@ -212,6 +221,7 @@ export default function PlatformPage() {
         ctaLabel="Request a demo →"
         ctaHref="/contact"
       />
+      </main>
       <Footer />
     </>
   );

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -118,9 +120,15 @@ const cases = [
   },
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/case-studies", [
+  { name: "Home", path: "/" },
+  { name: "Case studies" },
+]);
+
 export default function CaseStudiesPage() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
         {/* Hero */}

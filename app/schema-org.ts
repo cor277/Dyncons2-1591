@@ -15,6 +15,20 @@ export const CALIBRA_ID = `${BASE_URL}/calibra#software`;
 
 export const schemaOrg = [
   {
+    /* The site itself. Emitted by both layouts so any page that references
+       WEBSITE_ID via isPartOf resolves inside the same document. */
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    name: "Dynamics Consulting",
+    url: BASE_URL,
+    inLanguage: ["en", "it"],
+    description:
+      "AI consulting, governance and compliance for regulated industries, and sovereign on-premise AI infrastructure. Nexus MDS Core, CEPF and Calibra.",
+    publisher: { "@id": ORG_ID },
+    about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }, { "@id": CEPF_ID }],
+  },
+  {
     "@context": "https://schema.org",
     "@type": ["Organization", "ProfessionalService"],
     "@id": ORG_ID,

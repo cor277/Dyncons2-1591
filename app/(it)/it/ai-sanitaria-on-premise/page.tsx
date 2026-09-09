@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { OG_IMAGE } from "@/app/og";
+import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -27,9 +31,32 @@ export const metadata: Metadata = {
   },
 };
 
+const PAGE_URL = "https://www.dynamicsconsulting.it/it/ai-sanitaria-on-premise";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${PAGE_URL}#webpage`,
+    url: PAGE_URL,
+    name: "AI On-Premise per la Sanità Italiana",
+    description: "Infrastruttura AI on-premise per la sanità italiana. GDPR, AI Act, Legge 132/2025. Nexus MDS Core — piattaforma sovrana per ospedali, farmacie e aziende farmaceutiche.",
+    inLanguage: "it",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }],
+    breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+  },
+  breadcrumbSchema(PAGE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Risorse in italiano", path: "/it" },
+    { name: "AI On-Premise per la Sanità Italiana" },
+  ]),
+];
+
 export default function AiSanitariaPage() {
   return (
     <>
+      <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen" lang="it">
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
@@ -83,6 +110,39 @@ export default function AiSanitariaPage() {
             </div>
           </div>
         </section>
+        {/* Approfondimenti — collegamenti interni contestuali */}
+        <section className="px-6 pb-16">
+          <div className="max-w-3xl mx-auto border-t border-[#30363D] pt-8">
+            <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Approfondimenti</h2>
+            <ul className="space-y-3 text-base">
+              <li>
+                <Link href="/it/case-studies/federfarma" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Federfarma Lombarda — Nexus MDS Core in produzione
+                </Link>
+                <span className="text-[#7D8FA3]"> — come funziona davvero, in un sistema vivo.</span>
+              </li>
+              <li>
+                <Link href="/answers/llm-on-premise-hospital" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Implementare un LLM on-premise in ospedale
+                </Link>
+                <span className="text-[#7D8FA3]"> — sequenza, confine dei dati e linea normativa (in inglese).</span>
+              </li>
+              <li>
+                <Link href="/research/legge-132-2025" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Legge 132/2025 e AI in sanità
+                </Link>
+                <span className="text-[#7D8FA3]"> — cosa cambia per ospedali e farmacie.</span>
+              </li>
+              <li>
+                <Link href="/it/sovereign-ai-italia" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Sovereign AI Italia
+                </Link>
+                <span className="text-[#7D8FA3]"> — i tre modelli di deployment e come si sceglie.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Chiusura — assessment */}
         <section className="px-6 py-16 border-t border-[#21262D] bg-[#11161D]">
           <div className="max-w-3xl mx-auto">

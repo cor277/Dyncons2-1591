@@ -1,5 +1,6 @@
 import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
 
 export const metadata: Metadata = {
   title: "Blockchain & Web3",
@@ -46,6 +47,15 @@ const faqSchema = {
     },
   ],
 };
+
+const crumbs = breadcrumbSchema(
+  "https://www.dynamicsconsulting.it/services/blockchain",
+  [
+    { name: "Home", path: "/" },
+    { name: "Technical capabilities", path: "/capabilities" },
+    { name: "Blockchain & Web3" },
+  ],
+);
 
 export default function BlockchainPage() {
   return (
@@ -125,6 +135,7 @@ export default function BlockchainPage() {
         },
       ]}
       faqSchema={faqSchema}
+      breadcrumbSchema={crumbs}
     />
   );
 }

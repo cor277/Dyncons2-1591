@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { ORG_ID, WEBSITE_ID, CEPF_ID, CALIBRA_ID } from "@/app/schema-org";
@@ -74,9 +76,15 @@ const pageSchema = [
   },
 ];
 
+const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/calibra", [
+  { name: "Home", path: "/" },
+  { name: "Calibra" },
+]);
+
 export default function CalibraPage() {
   return (
     <>
+      <JsonLd data={crumbs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}

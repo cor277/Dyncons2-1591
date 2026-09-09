@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { RESEARCH_ARTICLES } from "@/app/research-articles";
+import { articleSchema, breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
@@ -12,11 +15,34 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/ai-reverse-engineering" },
 };
 
+const article = RESEARCH_ARTICLES["ai-reverse-engineering"];
+const ARTICLE_URL = "https://www.dynamicsconsulting.it/research/ai-reverse-engineering";
+
+const schema = [
+  articleSchema({
+    url: ARTICLE_URL,
+    type: article.type,
+    headline: article.headline,
+    description: article.description,
+    datePublished: article.datePublished,
+    inLanguage: article.inLanguage,
+    articleSection: article.section,
+    keywords: article.keywords,
+  }),
+  breadcrumbSchema(ARTICLE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Research", path: "/research" },
+    { name: article.headline },
+  ]),
+];
+
 export default function AiReverseEngineeringArticle() {
   return (
     <>
+      <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
+        <article>
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
           <div className="max-w-3xl mx-auto">
             <Link href="/research" className="text-sm text-[#00B4D8] hover:text-[#00C8F0] mb-6 inline-flex items-center gap-1">
@@ -24,7 +50,9 @@ export default function AiReverseEngineeringArticle() {
             </Link>
             <div className="flex items-center gap-3 mb-4">
               <TechBadge label="Legacy Modernisation" variant="cyan" />
-              <span className="text-xs text-[#7D8FA3]">November 2025</span>
+              <time dateTime="2025-11" className="text-xs text-[#7D8FA3]">
+                {article.dateLabel}
+              </time>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-[#E6EDF3]">
               AI-assisted reverse engineering of legacy platforms: lessons from the field
@@ -33,6 +61,12 @@ export default function AiReverseEngineeringArticle() {
               Applying RAG and multi-agent workflows to reconstruct functional and architectural
               knowledge from large legacy codebases. What works, what does not, and what
               traceability requirements actually look like.
+            </p>
+            <p className="text-sm text-[#7D8FA3] mt-4">
+              By{" "}
+              <Link href="/about" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                Corrado Patierno
+              </Link>
             </p>
           </div>
         </section>
@@ -181,6 +215,7 @@ export default function AiReverseEngineeringArticle() {
           </div>
         </section>
 
+        </article>
         <CTASection />
       </main>
       <Footer />

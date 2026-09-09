@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
 import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -41,7 +42,7 @@ const faqSchema = {
       name: "Does Nexus MDS Core support open-source LLMs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Nexus MDS Core integrates vLLM and OpenWebUI for inference of open-source models (LLaMA, Mistral, DeepSeek and others) on dedicated GPU. Personal and confidential data never leaves the enterprise perimeter.",
+        text: "Yes. Nexus MDS Core integrates vLLM and OpenWebUI for inference of open-source models (LLaMA, Mistral, DeepSeek and others) on dedicated GPU. In a fully local deployment nothing about an answer leaves the enterprise perimeter; in a hybrid deployment only the final generation step calls an external endpoint, and that component is replaceable.",
       },
     },
     {
@@ -147,7 +148,7 @@ const faqs = [
   },
   {
     q: "Does Nexus MDS Core support open-source LLMs?",
-    a: "Yes. Nexus MDS Core integrates vLLM and OpenWebUI for inference of open-source models (LLaMA, Mistral, DeepSeek and others) on dedicated GPU. Personal and confidential data never leaves the enterprise perimeter.",
+    a: "Yes. Nexus MDS Core integrates vLLM and OpenWebUI for inference of open-source models (LLaMA, Mistral, DeepSeek and others) on dedicated GPU. In a fully local deployment nothing about an answer leaves the enterprise perimeter; in a hybrid deployment only the final generation step calls an external endpoint, and that component is replaceable.",
   },
   {
     q: "We have data everywhere and no structure — where do we actually start?",
@@ -163,6 +164,15 @@ const faqs = [
   },
 ];
 
+const crumbs = breadcrumbSchema(
+  "https://www.dynamicsconsulting.it/services/applied-ai",
+  [
+    { name: "Home", path: "/" },
+    { name: "Technical capabilities", path: "/capabilities" },
+    { name: "Applied AI & Agentic Workflows" },
+  ],
+);
+
 export default function AppliedAIPage() {
   return (
     <ServicePageLayout
@@ -172,6 +182,7 @@ export default function AppliedAIPage() {
       capabilities={capabilities}
       faqs={faqs}
       faqSchema={faqSchema}
+      breadcrumbSchema={crumbs}
     >
       {/* Who this is for */}
       <section className="py-20 md:py-28 bg-[#0D1117]">

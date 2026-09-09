@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     images: OG_IMAGE,
     title: "On-Premise AI for Healthcare | Dynamics Consulting",
     description:
-      "Sovereign AI infrastructure for hospitals, pharma, and clinical research. Personal and confidential data never leaves your perimeter.",
+      "Sovereign AI infrastructure for hospitals, pharma, and clinical research. Indexing, retrieval, identity and audit run inside your perimeter, and personal data is excluded at ingestion.",
     url: "https://www.dynamicsconsulting.it/ai-on-premise-healthcare",
     type: "website",
   },

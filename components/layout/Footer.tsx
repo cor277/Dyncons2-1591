@@ -25,6 +25,7 @@ const legal = [
   { label: "EU Tech Sovereignty", href: "/tech-sovereignty" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Research", href: "/research" },
+  { label: "Answers", href: "/answers" },
   { label: "About", href: "/about" },
   { label: "Privacy Policy", href: "/privacy" },
 ];

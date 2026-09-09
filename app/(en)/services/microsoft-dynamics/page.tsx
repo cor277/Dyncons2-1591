@@ -1,5 +1,6 @@
 import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/app/seo";
 
 export const metadata: Metadata = {
   title: "Microsoft Dynamics 365",
@@ -46,6 +47,15 @@ const faqSchema = {
     },
   ],
 };
+
+const crumbs = breadcrumbSchema(
+  "https://www.dynamicsconsulting.it/services/microsoft-dynamics",
+  [
+    { name: "Home", path: "/" },
+    { name: "Technical capabilities", path: "/capabilities" },
+    { name: "Microsoft Dynamics 365" },
+  ],
+);
 
 export default function MicrosoftDynamicsPage() {
   return (
@@ -123,6 +133,7 @@ export default function MicrosoftDynamicsPage() {
         },
       ]}
       faqSchema={faqSchema}
+      breadcrumbSchema={crumbs}
     />
   );
 }
