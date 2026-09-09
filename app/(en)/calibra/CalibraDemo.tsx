@@ -6,6 +6,9 @@ import dynamic from 'next/dynamic'
  * The demo is client-only (heavy interactive state, no server data).
  * The loading placeholder is inline — never a fixed overlay — so the
  * server-rendered description above it stays visible and indexable.
+ *
+ * It lived on the CEPF page until the framework and the software were told
+ * apart by name. It demonstrates Calibra, so it sits with Calibra.
  */
 const ComplianceUI = dynamic(() => import('./ComplianceUI'), {
   ssr: false,
@@ -41,6 +44,6 @@ const ComplianceUI = dynamic(() => import('./ComplianceUI'), {
   ),
 })
 
-export function CepfTool() {
+export function CalibraDemo() {
   return <ComplianceUI />
 }

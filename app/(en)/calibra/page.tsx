@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { CalibraDemo } from "./CalibraDemo";
 import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { ORG_ID, WEBSITE_ID, CEPF_ID, CALIBRA_ID } from "@/app/schema-org";
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
  * Crawlable page for Calibra.
  *
  * Until now the software was described only inside the CEPF page and behind the
- * interactive demo, which made the entity hard to resolve: CEPF and Calibra read
+ * interactive demo on the CEPF page, which made the entity hard to resolve: CEPF and Calibra read
  * as one thing. Everything stated here is already stated elsewhere on the site —
  * nothing about the product is asserted that /cepf does not support.
  */
@@ -80,6 +81,20 @@ const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/calibra", [
   { name: "Home", path: "/" },
   { name: "Calibra" },
 ]);
+
+/* The nine regimes the demonstration instance carries, out of the nineteen in
+   CEPF v7. It describes the demo, so it lives with the demo. */
+const DEMO_REGIMES = [
+  ["SOX IT", "Sarbanes-Oxley IT general controls — PCAOB AS 2201, COSO 2013"],
+  ["NIS2", "Directive (EU) 2022/2555"],
+  ["AI Act", "Regulation (EU) 2024/1689"],
+  ["GDPR", "Regulation (EU) 2016/679"],
+  ["DORA", "Regulation (EU) 2022/2554"],
+  ["ISO/IEC 27001:2022", "Information Security Management System"],
+  ["ISO 56001:2024", "Innovation Management System"],
+  ["ENS", "Esquema Nacional de Seguridad — Real Decreto 311/2022"],
+  ["GS1", "EPC/RFID and EPCIS 2.0 supply chain standards"],
+];
 
 export default function CalibraPage() {
   return (
@@ -166,15 +181,37 @@ export default function CalibraPage() {
 
             {/* Demo */}
             <div className="mt-10 rounded-lg border border-[#30363D] bg-[#161B22] px-6 py-5">
-              <p className="text-[#E6EDF3] font-semibold mb-2">There is a reduced demo online.</p>
+              <p className="text-[#E6EDF3] font-semibold mb-2">The demo runs below.</p>
               <p className="text-[#7D8FA3] leading-relaxed">
-                The interactive tool on the CEPF page is a demonstration instance, not the
-                production one: it covers nine of the nineteen frameworks in CEPF v7 and a subset
-                of Calibra’s planning functions. Its interface is in Italian.
+                It is a demonstration instance, not the production one: it covers nine of the
+                nineteen frameworks in CEPF v7 and a subset of Calibra’s planning functions. Its
+                interface is in Italian.
               </p>
-              <p className="mt-4">
-                <TextLink label="Open the demo on the CEPF page →" href="/cepf" />
+              <p className="text-[#7D8FA3] leading-relaxed mt-3" lang="it">
+                Lo strumento è in italiano, e lo è anche{" "}
+                <a
+                  href="/it/assessment"
+                  hrefLang="it"
+                  className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+                >
+                  l’assessment di esposizione
+                </a>
+                : se stai leggendo la demo, quello è il percorso giusto.
               </p>
+            </div>
+
+            {/* Frameworks the demo instance covers */}
+            <div className="mt-10">
+              <h2 className="text-xl font-bold text-[#E6EDF3] mb-4">
+                Frameworks covered by this demo
+              </h2>
+              <ul className="space-y-2 text-[#7D8FA3]">
+                {DEMO_REGIMES.map(([name, ref]) => (
+                  <li key={name} className="leading-relaxed">
+                    <strong className="text-[#E6EDF3]">{name}</strong> — {ref}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Where it sits */}
@@ -204,6 +241,13 @@ export default function CalibraPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Interactive demo — moved here from /cepf: it demonstrates Calibra */}
+        <section className="px-6 pb-20">
+          <div className="max-w-[1280px] mx-auto">
+            <CalibraDemo />
           </div>
         </section>
 

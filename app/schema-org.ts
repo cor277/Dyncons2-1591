@@ -150,6 +150,6 @@ export const schemaOrg = [
     creator: { "@id": ORG_ID },
     isBasedOn: { "@id": CEPF_ID },
     description:
-      "Software built on the Compliance-Epistemic Project Framework (CEPF). Beyond the regulatory catalogue it carries risk, scheduling, operational flow, Gantt and milestones. A reduced demo runs on the CEPF page.",
+      "Software built on the Compliance-Epistemic Project Framework (CEPF). Beyond the regulatory catalogue it carries risk, scheduling, operational flow, Gantt and milestones. A reduced demo runs on the Calibra page.",
   },
 ];

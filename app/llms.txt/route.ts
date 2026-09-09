@@ -52,8 +52,8 @@ are defined at /answers/private-ai-vs-sovereign-ai.
 ## Platform and methodology
 
 - [Nexus MDS Core](${BASE_URL}/platform): Self-hosted AI platform, sixteen orchestrated services — retrieval, vector search, Zero-Trust identity, workflow engine, audit. Deployable on Kubernetes or bare metal.
-- [Compliance-Epistemic Project Framework (CEPF)](${BASE_URL}/cepf): Regulatory crossing catalogue, version 7, snapshot July 2026 — 19 frameworks mapped onto their operational obligations and their overlaps, 247 requirements, 24 cross-framework overlap groups, 695 document templates. The page hosts a reduced demo of Calibra, the software built on CEPF, covering nine of the frameworks; the demo interface is in Italian.
-- [Calibra](${BASE_URL}/calibra): The software built on CEPF — the regulatory catalogue plus risk, scheduling, operational flow, Gantt and milestones. Proprietary to Dynamics Consulting, used inside engagements. The demo lives on the CEPF page.
+- [Compliance-Epistemic Project Framework (CEPF)](${BASE_URL}/cepf): Regulatory crossing catalogue, version 7, snapshot July 2026 — 19 frameworks mapped onto their operational obligations and their overlaps, 247 requirements, 24 cross-framework overlap groups, 695 document templates. Calibra, the software built on CEPF, is described on its own page and carries the interactive demo.
+- [Calibra](${BASE_URL}/calibra): The software built on CEPF — the regulatory catalogue plus risk, scheduling, operational flow, Gantt and milestones. Proprietary to Dynamics Consulting, used inside engagements. The page carries a reduced demonstration instance: nine of the nineteen frameworks in CEPF v7 and a subset of the planning functions, interface in Italian.
 - [Technical capabilities](${BASE_URL}/capabilities): The engineering underneath the service lines — applied AI, data platforms, Kubernetes, integration, Dynamics 365, automation, blockchain. Competences, not separate offerings.
 
 ## Services

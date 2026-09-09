@@ -6,7 +6,6 @@ import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { WEBSITE_ID, CEPF_ID, CALIBRA_ID } from "@/app/schema-org";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
-import { CepfTool } from "./CepfTool";
 
 const URL = "https://www.dynamicsconsulting.it/cepf";
 
@@ -48,19 +47,6 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
   },
 };
-
-/* Frameworks covered by the demo hosted on this page — sourced from the demo's own catalogue. */
-const DEMO_REGIMES = [
-  ["SOX IT", "Sarbanes-Oxley IT general controls — PCAOB AS 2201, COSO 2013"],
-  ["NIS2", "Directive (EU) 2022/2555"],
-  ["AI Act", "Regulation (EU) 2024/1689"],
-  ["GDPR", "Regulation (EU) 2016/679"],
-  ["DORA", "Regulation (EU) 2022/2554"],
-  ["ISO/IEC 27001:2022", "Information Security Management System"],
-  ["ISO 56001:2024", "Innovation Management System"],
-  ["ENS", "Esquema Nacional de Seguridad — Real Decreto 311/2022"],
-  ["GS1", "EPC/RFID and EPCIS 2.0 supply chain standards"],
-];
 
 const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/cepf", [
   { name: "Home", path: "/" },
@@ -140,57 +126,25 @@ export default function CepfPage() {
               </p>
             </div>
 
-            {/* Reduced-demo notice — the demo is Calibra, the software; CEPF is the framework */}
+            {/* The demo is Calibra, the software; CEPF is the framework it runs on. */}
             <div className="mt-10 rounded-lg border border-[#30363D] bg-[#161B22] px-6 py-5">
               <p className="text-[#E6EDF3] font-semibold mb-2">
-                This page hosts a reduced demo of Calibra.
+                The software built on CEPF is called Calibra.
               </p>
               <p className="text-[#7D8FA3] leading-relaxed">
-                Calibra is the software built on CEPF. Beyond the regulatory catalogue it carries
-                risk, scheduling, operational flow, Gantt and milestones. The interactive tool
-                below is a demonstration instance, not the production one: it covers nine of the
-                nineteen frameworks in CEPF v7 and a subset of Calibra&apos;s planning functions.
-                Its interface is in Italian.{" "}
+                Beyond the regulatory catalogue it carries risk, scheduling, operational flow,
+                Gantt and milestones. A reduced demonstration instance runs on its own page: nine
+                of the nineteen frameworks in CEPF v7, a subset of the planning functions,
+                interface in Italian.{" "}
                 <Link href="/calibra" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
-                  What Calibra is, in text
+                  Calibra, and the demo
                 </Link>
                 .
               </p>
-              <p className="text-[#7D8FA3] leading-relaxed mt-3" lang="it">
-                Lo strumento è in italiano, e lo è anche{" "}
-                <a
-                  href="/it/assessment"
-                  hrefLang="it"
-                  className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
-                >
-                  l’assessment di esposizione
-                </a>
-                : se stai leggendo la demo, quello è il percorso giusto.
-              </p>
-            </div>
-
-            {/* Frameworks covered by the demo */}
-            <div className="mt-10">
-              <h2 className="text-xl font-bold text-[#E6EDF3] mb-4">
-                Frameworks covered by this demo
-              </h2>
-              <ul className="space-y-2 text-[#7D8FA3]">
-                {DEMO_REGIMES.map(([name, ref]) => (
-                  <li key={name} className="leading-relaxed">
-                    <strong className="text-[#E6EDF3]">{name}</strong> — {ref}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </section>
 
-        {/* Interactive demo */}
-        <section className="px-6 pb-20">
-          <div className="max-w-[1280px] mx-auto">
-            <CepfTool />
-          </div>
-        </section>
       </main>
       </div>
       <Footer />
