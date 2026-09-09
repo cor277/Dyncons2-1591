@@ -79,7 +79,7 @@ const faqs = [
 const REGIMES = [
   ["EU AI Act", "Regulation (EU) 2024/1689 — classification, deployer obligations, transparency, AI literacy"],
   ["GDPR", "Regulation (EU) 2016/679 — lawful basis, data minimisation at ingestion, data subject rights"],
-  ["PLD 2024", "Product liability directive — software as a product, from 9 December 2026"],
+  ["PLD 2024", "Product liability directive — software among products, for products placed on the market from 9 December 2026"],
   ["NIS2", "Directive (EU) 2022/2555 — network and information security obligations"],
   ["DORA", "Regulation (EU) 2022/2554 — operational resilience for financial entities"],
   ["Cyber Resilience Act", "Regulation (EU) 2024/2847 — including the Article 14 reporting duty"],
@@ -256,8 +256,9 @@ export default function GovernanceAdvisoryPage() {
             </p>
             <p className="mt-4">
               Liability is assumed to sit with the supplier, and the contract does not say so.
-              From 9 December 2026 the European product liability directive treats software as a
-              product, which changes what a limitation clause is worth.
+              The revised European product liability directive includes software among products,
+              for products placed on the market or put into service from 9 December 2026 — which
+              changes what a limitation clause is worth.
             </p>
           </div>
         </div>

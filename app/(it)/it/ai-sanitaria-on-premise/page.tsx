@@ -150,8 +150,9 @@ export default function AiSanitariaPage() {
               Dove si ferma la responsabilit&agrave; del tuo fornitore, e dove comincia la tua?
             </h2>
             <p className="text-[#7D8FA3] text-lg leading-relaxed mb-8">
-              Dal 9 dicembre 2026 la direttiva europea sulla responsabilit&agrave; da prodotto
-              include il software fra i prodotti. L&apos;assessment di esposizione stabilisce, per
+              La direttiva europea sulla responsabilit&agrave; da prodotto include il software fra i
+              prodotti e si applica a quelli immessi sul mercato o messi in servizio dal 9 dicembre
+              2026. L&apos;assessment di esposizione stabilisce, per
               la tua organizzazione, dove passa il confine.
             </p>
             <CTAButton label="Assessment di esposizione &rarr;" href="/it/assessment" variant="primary" />

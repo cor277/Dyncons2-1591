@@ -1,0 +1,355 @@
+{
+  "slug": "pld-2024-sette-cambi-strutturali",
+  "lang": "it",
+  "title": "PLD 2024: i sette cambi strutturali che ridefiniscono il mestiere delle software house",
+  "standfirst": "Primo articolo della serie. Nei prossimi articoli analizzeremo i cinque scenari di sviluppo software con relative esposizioni, il meccanismo della responsabilità solidale, vulnerability management, configurazioni internazionali, clausole contrattuali essenziali, trasformazioni operative, stratificaz",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-04-28T07:34:42.000+00:00",
+  "dateModified": "2026-04-28T07:35:09.000+00:00",
+  "series": "Article I · The seven structural shifts",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/pld-2024-i-sette-cambi-strutturali-che-ridefiniscono-il-patierno-avhrf"
+  },
+  "importedAt": "2026-09-09",
+  "words": 3130,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Corrado Patierno"
+    },
+    {
+      "type": "p",
+      "text": "Primo articolo della serie. Nei prossimi articoli analizzeremo i cinque scenari di sviluppo software con relative esposizioni, il meccanismo della responsabilità solidale, vulnerability management, configurazioni internazionali, clausole contrattuali essenziali, trasformazioni operative, stratificazione del valore di mercato dei Solution Architect senior post-PLD."
+    },
+    {
+      "type": "p",
+      "text": "Ieri ho pubblicato un post diretto: le piccole software house italiane, le ditte individuali di sviluppo, le strutture con team offshore non controllato, le startup costruite \"vibe coding\" sono già morte. Non lo sanno ancora."
+    },
+    {
+      "type": "p",
+      "text": "Era affermazione provocatoria, ma supportata da analisi tecnica precisa. Questo articolo apre la serie che ne fornirà la dimostrazione articolata. Iniziamo dai sette cambi strutturali introdotti dalla Direttiva UE 2024/2853, perché sono il fondamento di tutto il ragionamento successivo."
+    },
+    {
+      "type": "p",
+      "text": "Ogni articolo successivo della serie si appoggerà su questi sette cambi. Capirli è il punto di partenza per leggere il resto."
+    },
+    {
+      "type": "p",
+      "text": "Non è contenuto teorico. È analisi che sto applicando in progetti concreti presso clienti regulated in healthcare e pharma, e che sta cambiando il modo in cui contrattualizzo i miei engagement professionali."
+    },
+    {
+      "type": "quote",
+      "text": "Nota epistemica: questo è ricostruzione del testo della direttiva applicato a modelli operativi tipici delle software house. Non costituisce parere legale. Per applicazioni concrete serve consulenza specializzata."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Il quadro normativo essenziale"
+    },
+    {
+      "type": "p",
+      "text": "La Direttiva UE 2024/2853 (Product Liability Directive, PLD 2024) è stata pubblicata in Gazzetta Ufficiale UE il 18 novembre 2024. Sostituisce la Direttiva 85/374/CEE che ha regolato la materia per quarant'anni."
+    },
+    {
+      "type": "p",
+      "text": "Le date critiche da tenere a mente sono tre. Entrata in vigore per gli Stati membri: 8 dicembre 2024. Termine ultimo di recepimento nelle leggi nazionali: 9 dicembre 2026. Applicazione: ai prodotti immessi sul mercato o messi in servizio dopo quella data."
+    },
+    {
+      "type": "p",
+      "text": "Mancano otto mesi al recepimento italiano."
+    },
+    {
+      "type": "p",
+      "text": "La direttiva è di armonizzazione massima (Art. 3): gli Stati membri non possono andare al di sotto né al di sopra delle protezioni stabilite. Il livello di responsabilità sostanziale sarà uniforme in tutta l'Unione Europea. Per le software house cipriote, francesi, olandesi, tedesche e italiane, il regime sarà sostanzialmente equivalente."
+    },
+    {
+      "type": "p",
+      "text": "Sei articoli e tre recital della direttiva sono particolarmente decisivi per il software, e li richiamerò puntualmente nei sette cambi strutturali. Articolo 4 (definizione di prodotto), Articolo 8 (produttore di componenti), Articolo 11 (obblighi di sicurezza durante la vita utile), Articolo 12 (responsabilità solidale), Articolo 14 (rivalsa nella catena del valore), Articolo 15 (inderogabilità verso il danneggiato), Articolo 17 (termini di prescrizione). Recital 13 (esplicita inclusione del software e dei sistemi AI), Recital 50 e 52 (obblighi post-immissione)."
+    },
+    {
+      "type": "p",
+      "text": "Vediamo nel dettaglio cosa cambia."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "I sette cambi strutturali"
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cambio 1 — Il prodotto è prodotto, anche se è custom"
+    },
+    {
+      "type": "p",
+      "text": "L'Articolo 4 della direttiva definisce il prodotto includendo esplicitamente il software in tutte le sue forme: app, sistemi operativi, sistemi AI, firmware, software embedded. Il Recital 13 chiarisce che lo sviluppatore di software, incluso il fornitore di sistemi AI ai sensi del Regolamento UE 2024/1689 (AI Act), è considerato fabbricante ai fini della direttiva."
+    },
+    {
+      "type": "p",
+      "text": "Non esiste più ambiguità sull'applicabilità. Il software è prodotto. La direttiva non distingue tra software off-the-shelf e software custom. Un'app sviluppata per cliente specifico è prodotto immesso sul mercato alla messa in servizio, esattamente come un prodotto commerciale standard."
+    },
+    {
+      "type": "p",
+      "text": "Questo cambia la percezione di sé delle software house tradizionali. Molte si percepiscono come fornitori di servizi di sviluppo, non come produttori di prodotti. Il loro modello mentale è quello del contratto d'opera: si fa un lavoro, si consegna il risultato, si chiude il progetto. La PLD ribalta questa percezione: ogni rilascio di un sistema software custom presso un cliente è messa sul mercato di un prodotto, soggetto a regime di responsabilità da prodotto."
+    },
+    {
+      "type": "quote",
+      "text": "Anche le piccole software house che fanno solo progetti custom per clienti specifici rientrano pienamente nel regime. Anche il software generato con assistenza LLM. Anche il \"progetto\" che non viene venduto come prodotto commerciale, ma che il cliente userà operativamente. Anche le customizzazioni specifiche per singolo cliente di prodotti base."
+    },
+    {
+      "type": "p",
+      "text": "Il primo cambio mentale che ogni software house deve fare è semplice da formulare e difficile da accettare. Non state vendendo servizi di sviluppo. State immettendo prodotti sul mercato."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cambio 2 — La responsabilità decennale verso terzi non si limita contrattualmente"
+    },
+    {
+      "type": "p",
+      "text": "L'Articolo 15 stabilisce che la responsabilità del fabbricante non può essere limitata o esclusa contrattualmente verso il danneggiato terzo. L'Articolo 17 stabilisce che la responsabilità dura dieci anni dall'immissione sul mercato, estendibile fino a venticinque per danni latenti alla persona."
+    },
+    {
+      "type": "p",
+      "text": "Questo è il cambio più dirompente rispetto al modello precedente. La pratica consolidata delle software house era proteggersi attraverso clausole contrattuali con il cliente — cap di responsabilità, esclusione danni indiretti, \"totale declinazione di responsabilità\" — assumendo che queste clausole coprissero tutti gli scenari."
+    },
+    {
+      "type": "p",
+      "text": "Verso il cliente le clausole continuano a funzionare entro i limiti del Codice Civile, in particolare Art. 1341 c.c. sulle clausole vessatorie con doppia firma. Regolano i rapporti contrattuali tra le parti, permettono eventualmente la rivalsa interna."
+    },
+    {
+      "type": "p",
+      "text": "Verso il danneggiato terzo che subisce danno dal prodotto, sono inopponibili. Punto. Le clausole \"totale declinazione di responsabilità\" che girano nei contratti italiani diventano carta straccia quando un utente finale, un paziente, un soggetto dei dati subisce danno dal software."
+    },
+    {
+      "type": "p",
+      "text": "qualche esempio:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Lavoratore valutato in performance da sistemi automatizzati senza accordo sindacale ex Art. 4 SdL, e che subisce decisioni HR negative come conseguenza.",
+        "Cliente dell'azienda che subisce un'esfiltrazione indiretta dei propri dati per data breach del cliente della software house.",
+        "Utente finale che, attraverso l'uso di un LLM, subisce danni fisici (esempio: sistema AI in ambito sanitario non correttamente regolato come da AI Act).",
+        "Decisioni del management indotte da LLM o reportistica non corretta e non compliant, che impattano sui dipendenti.",
+        "Fermi prolungati dei sistemi causati da mancata diligenza tecnica, con danni operativi al cliente o agli utilizzatori finali.",
+        "Cliente finale che subisce danni economici o discriminatori a causa del software implementato."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Per i clienti regulated questo è particolarmente rilevante: i loro utenti finali (pazienti di un sistema sanitario, clienti di una banca, assicurati di una compagnia, cittadini di una pubblica amministrazione) sono esattamente i terzi che la PLD protegge. La software house che vende a un cliente regulated deve sapere che il proprio rischio non si chiude con il contratto col cliente — si estende ai milioni di utenti finali che useranno il prodotto."
+    },
+    {
+      "type": "p",
+      "text": "Il concetto di Diligenza Tecnica, si estende a tutta la parte di Diligenza di Compliance ed essendo l'azione del danneggiato inopponibile da clausole con il Cliente, entra in gioco anche una diligenza che ha dimensione legale e che alcuni autori cominciano a definire come 'diligenza etica del produttore': Sviluppare per il cliente X Multinazionale un Software che tramite i dati \"decide\" o indirizza le decisioni verso i dipendenti del management, senza che esista un accordo sindacale, se la Software House non ha fatto una Due Diligence verso il cliente per identificare le mancanze e consegna consapevolmente un software \"illecito\" è perseguibile. Non vale più il \"me lo ha chiesto il cliente\"."
+    },
+    {
+      "type": "p",
+      "text": "Dieci anni di esposizione verso un'audience indeterminata, non limitabile contrattualmente. Per molte software house è realtà che cambia il calcolo economico di ogni ingaggio."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cambio 3 — La garanzia commerciale non chiude la responsabilità PLD"
+    },
+    {
+      "type": "p",
+      "text": "La garanzia commerciale (sei-dodici mesi) è strumento contrattuale tra software house e cliente. La responsabilità PLD dura dieci anni dall'immissione sul mercato."
+    },
+    {
+      "type": "p",
+      "text": "Sono due regimi paralleli che convivono ma non si sovrappongono. La garanzia commerciale è un servizio: se nei primi N mesi emergono bug del prodotto consegnato, la software house li corregge gratuitamente. È regolata dal contratto, ha durata limitata, copre il rapporto bilaterale software house-cliente."
+    },
+    {
+      "type": "p",
+      "text": "La responsabilità PLD è regime normativo: la legge stabilisce che il fabbricante risponde per dieci anni di difetti del prodotto immesso sul mercato. Non è un servizio che il fabbricante offre, è un obbligo di legge che si attiva indipendentemente dalla volontà delle parti. Si applica verso il danneggiato (terzo o cliente), copre i difetti che emergono entro dieci anni, non si esclude contrattualmente."
+    },
+    {
+      "type": "p",
+      "text": "I due regimi convivono. Durante la garanzia commerciale, il cliente ha diritto a interventi gratuiti di correzione bug come servizio commerciale. Durante i dieci anni di responsabilità PLD, chi subisce danno ha diritto al risarcimento secondo la direttiva. Sono due piani distinti."
+    },
+    {
+      "type": "quote",
+      "text": "Anche dopo la fine della garanzia, la software house resta responsabile per dieci anni per difetti del prodotto. Un prodotto consegnato nel 2027 genera responsabilità potenziale fino al 2037. Le software house devono pianificare la propria operatività con questa prospettiva temporale, che è radicalmente diversa dalla logica precedente del \"garanzia sei mesi e poi è del cliente\"."
+    },
+    {
+      "type": "p",
+      "text": "La distinzione è semplice da formulare: la garanzia è impegno commerciale che la software house offre. La responsabilità PLD è regime giuridico che la software house subisce. Confonderli è errore comune ma costoso."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Consigliati da LinkedIn"
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cambio 4 — La maintenance non è opzionale per la sicurezza"
+    },
+    {
+      "type": "p",
+      "text": "I Recital 50 e 52, supportati dall'Articolo 11, stabiliscono che il fabbricante mantiene la responsabilità anche post-immissione se conserva la capacità di fornire aggiornamenti. Questo è rinforzato dal Cyber Resilience Act (Regolamento UE 2024/2847) che è complementare alla PLD."
+    },
+    {
+      "type": "p",
+      "text": "Per i difetti di sicurezza significativi (CVE critici, vulnerabilità sfruttabili), il fabbricante ha obbligo di notificare il rischio al cliente che ha il prodotto deployato, mettere a disposizione la patch (anche a pagamento, se non c'è AM attivo), mantenere capacità tecnica di intervento durante la vita utile."
+    },
+    {
+      "type": "p",
+      "text": "La maintenance non è più \"servizio opzionale che il cliente compra se vuole\". La sicurezza diventa obbligo del fabbricante per tutta la vita utile del prodotto. Il cliente può scegliere se applicare le patch (e a quel punto si assume il rischio operativo della mancata applicazione), ma la software house ha obbligo di renderle disponibili."
+    },
+    {
+      "type": "p",
+      "text": "Operativamente, le software house dovranno strutturare un sistema di post-market surveillance che monitori CVE applicabili ai prodotti deployati presso ogni cliente, generi notifiche tempestive, gestisca il vulnerability handling con SLA proporzionati alla criticità. Questo richiede infrastruttura tecnica e processuale che oggi molte software house non hanno."
+    },
+    {
+      "type": "quote",
+      "text": "Il modello commerciale cambia di conseguenza. La maintenance security diventa quasi obbligatoria a livello strutturale, mentre la maintenance evolutiva resta opzionale. Le software house devono ristrutturare l'AM in livelli (security only, standard con bug fix, premium con evolutiva), proporli sistematicamente al cliente, farsi firmare esplicitamente la scelta. Tratteremo la riformulazione contrattuale dell'AM in un articolo dedicato della serie."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cambio 5 — Customizzazioni come \"nuove immissioni sul mercato\""
+    },
+    {
+      "type": "p",
+      "text": "L'Articolo 8 c. 2 definisce come \"modifica sostanziale\" un aggiornamento che cambia significativamente il prodotto, e in tal caso si parla di \"nuova immissione sul mercato\"."
+    },
+    {
+      "type": "p",
+      "text": "Per il software questo include upgrade architetturali significativi (cambio di pattern architetturale, ristrutturazione di componenti core), aggiunta di nuove funzionalità rilevanti che cambiano il perimetro funzionale, cambiamenti di componenti core (cambio di motore di autenticazione, cambio LLM in un sistema RAG, sostituzione di framework critico), verticalizzazioni che alterano significativamente il prodotto base."
+    },
+    {
+      "type": "p",
+      "text": "Le software house gestiscono spesso un prodotto base che viene customizzato per clienti diversi. Ogni cliente ha la propria versione, con configurazioni specifiche, integrazioni custom, eventualmente moduli aggiuntivi sviluppati ad hoc. Pre-PLD, queste customizzazioni erano trattate come variazioni dello stesso prodotto. Post-PLD, ogni customizzazione sostanziale potrebbe essere una \"nuova immissione sul mercato\" con propria timeline di responsabilità."
+    },
+    {
+      "type": "quote",
+      "text": "La distinzione tra \"modifica minore\" (aggiornamenti incrementali, bug fix, configurazioni) e \"modifica sostanziale\" (cambiamenti di sicurezza, di funzionalità core, di architettura) sarà oggetto di interpretazione giurisprudenziale. In assenza di chiarezza definitiva, la prassi prudente è classificare ogni rilascio come potenzialmente sostanziale, e gestire la documentazione probatoria di conseguenza."
+    },
+    {
+      "type": "p",
+      "text": "Per ogni modifica sostanziale, riparte il decennio di responsabilità PLD per la versione modificata. Una software house che customizza ed evolve il proprio prodotto per clienti diversi crea N versioni distinte, ognuna con propria timeline. Servono strumenti di asset management dei prodotti deployati con tracciabilità delle versioni e dei cicli di vita per cliente."
+    },
+    {
+      "type": "p",
+      "text": "Per molte software house italiane questo è cambio di modello dati operativo significativo. Il modello \"vendiamo lo stesso prodotto a 50 clienti\" diventa \"abbiamo 50 prodotti distinti, ognuno con propria timeline di responsabilità\"."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cambio 6 — La responsabilità individuale dei contributori tecnici"
+    },
+    {
+      "type": "p",
+      "text": "L'Articolo 8 della direttiva definisce il \"produttore di componenti\" come responsabile separatamente dal fabbricante del prodotto finale. Per il software, questo si traduce nell'identificazione di responsabilità tecniche individuali."
+    },
+    {
+      "type": "quote",
+      "text": "L'architect senior che firma l'architettura del prodotto è produttore di componente architetturale. Il tech lead che firma scelte di sicurezza è produttore di componente sicurezza. I consulenti esterni che producono moduli identificabili sono produttori di componenti. I dev che hanno scritto specifiche parti del codice possono essere identificati come produttori dei componenti che hanno realizzato."
+    },
+    {
+      "type": "p",
+      "text": "Questo cambia profondamente la dinamica della responsabilità. Pre-PLD, la responsabilità era organizzativa: il datore di lavoro rispondeva per i propri dipendenti (Art. 2049 c.c. italiano), la software house rispondeva del prodotto. Post-PLD 2024, la responsabilità si distribuisce: la software house resta responsabile come fabbricante, ma i singoli contributori tecnici possono essere identificati separatamente come produttori di componenti."
+    },
+    {
+      "type": "p",
+      "text": "Il caso del dipendente è meno problematico, perché Art. 2049 c.c. continua a prevedere la responsabilità del datore di lavoro per il proprio dipendente. Il dipendente che sbaglia in regime ordinario è coperto dalla copertura aziendale, salvo dolo o colpa grave. Il caso del freelance, dell'architect esterno, del consulente è invece molto più esposto: non c'è schermo del datore di lavoro, e il professionista risponde personalmente come produttore di componente."
+    },
+    {
+      "type": "quote",
+      "text": "Un architect senior che firma una decisione architetturale ne risponde personalmente per dieci anni. La responsabilità non si esaurisce con la fine del contratto di consulenza, non si limita con clausole verso terzi, non si trasferisce automaticamente alla società committente."
+    },
+    {
+      "type": "p",
+      "text": "Le organizzazioni che vogliono attrarre architect senior post-2026 dovranno implementare protocolli di autonomia tecnica vincolante: diritto di veto effettivo su decisioni di sicurezza/compliance, dissenso registrato senza retaliation, escalation a CTO/CISO interno per disaccordi tecnici significativi. È il modello che da decenni funziona per ingegneri strutturali, medici, DPO, e che ora arriva anche al software. Tratteremo le implicazioni di questo cambio per i professionisti tecnici, le clausole contrattuali necessarie, e il valore di mercato post-PLD nei prossimi articoli della serie."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cambio 7 — La catena del valore richiede tracciabilità formalizzata"
+    },
+    {
+      "type": "p",
+      "text": "L'Articolo 14 disciplina il meccanismo di rivalsa nella catena del valore: il fabbricante del prodotto finale può rivalersi sul produttore del componente difettoso, ma solo se ha tracciabilità formalizzata di chi ha prodotto cosa."
+    },
+    {
+      "type": "p",
+      "text": "Senza tracciabilità formalizzata, la rivalsa fallisce. Se il prodotto causa danno, il fabbricante paga, e non riesce a rifarsi sui produttori di componenti perché non ha evidenza di chi ha prodotto cosa. La perdita resta in capo al fabbricante."
+    },
+    {
+      "type": "p",
+      "text": "La software house deve mantenere registro fornitori esterni con tracciabilità di tutto. Componenti open source con versioni, fonti, licenze, advisory feed, frequenza di rilascio, presenza di security policy, dimensione della community, sponsor commerciale eventuale. Servizi cloud terzi con provider, region utilizzata, sub-processor del provider (catena completa, anche dei sub-processor del provider tuo che possono cambiare nel tempo), DPA in essere, certificazioni di sicurezza. Componenti proprietari di terzi con vendor, licenza, SLA di support, disponibilità di patch security, EOL policy. Eventuali consulenti o sviluppatori esterni con identificazione, periodo di intervento, perimetro di responsabilità, copertura assicurativa, ADR firmati."
+    },
+    {
+      "type": "quote",
+      "text": "Questo è un registro fornitori di compliance, distinto dal registro fornitori commerciale che molte software house hanno già nel proprio gestionale. Il primo è obbligatorio post-PLD per gestire la rivalsa, il secondo è strumento amministrativo che molte SH hanno già."
+    },
+    {
+      "type": "p",
+      "text": "La sfida operativa è significativa. Per la maggioranza delle software house italiane, costruire un registro fornitori di compliance solido richiede 60-90 giorni di lavoro strutturato e mantenimento continuativo. Senza, ogni rivalsa potenziale è compromessa in partenza."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Il quadro complessivo: cosa significa nei prossimi 18 mesi"
+    },
+    {
+      "type": "p",
+      "text": "Sette cambi strutturali, applicati simultaneamente al modello operativo delle software house italiane, producono effetti di sistema."
+    },
+    {
+      "type": "quote",
+      "text": "Le software house tradizionali devono ripensare come immettono i prodotti sul mercato (Cambio 1), come gestiscono la responsabilità verso terzi (Cambio 2), come distinguono garanzia commerciale e responsabilità PLD (Cambio 3), come strutturano la maintenance security obbligatoria (Cambio 4), come tracciano le customizzazioni come nuove versioni (Cambio 5), come gestiscono la responsabilità individuale dei contributori tecnici (Cambio 6), come documentano la supply chain per la rivalsa (Cambio 7)."
+    },
+    {
+      "type": "p",
+      "text": "Sono cambiamenti profondi, non aggiustamenti marginali. Richiedono investimenti in governance interna, in documentazione probatoria, in copertura assicurativa, in strutturazione contrattuale. Richiedono spesso consulenza legale specializzata, broker assicurativi tech-aware, eventualmente figure di governance tecnica strutturata (Chief Architect interni o frazionali)."
+    },
+    {
+      "type": "p",
+      "text": "Il costo di questi investimenti è significativo. Per una software house mid-tier italiana stimo orientativamente 50-150 K€ una tantum per l'adeguamento iniziale, più 30-80 K€/anno di costi ricorrenti aggiuntivi (governance, documentazione, polizze, monitoring). Si recuperano nei prezzi praticati al cliente, ma richiedono fase di transizione gestita."
+    },
+    {
+      "type": "quote",
+      "text": "Per i professionisti tecnici (architect, tech lead, freelance), gli investimenti sono diversi ma egualmente strutturali: polizza professionale con massimale e run-off cover adeguati, clausole contrattuali specifiche, dossier professionale documentato, eventualmente specializzazione in nicchie ad alto valore."
+    },
+    {
+      "type": "p",
+      "text": "Le finestre temporali sono strette. Mancano otto mesi al recepimento. Le software house che inizieranno l'adeguamento nei prossimi tre mesi arriveranno al 9 dicembre 2026 con organizzazione strutturata. Quelle che inizieranno a settembre 2026 saranno in transizione affrettata. Quelle che inizieranno dopo il recepimento saranno in modalità reattiva."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cosa viene dopo nella serie"
+    },
+    {
+      "type": "p",
+      "text": "Questo è il primo articolo della serie. Nei prossimi articoli scenderemo nel dettaglio operativo di ognuno dei sette cambi strutturali e delle loro conseguenze pratiche."
+    },
+    {
+      "type": "p",
+      "text": "Il prossimo articolo analizzerà i cinque scenari di sviluppo software che le software house italiane usano comunemente — dal sistema basato su prodotti commerciali con customizzazioni delegate, fino al fork open source con plugin custom — e mostrerà come ognuno si colloca nel regime di esposizione PLD. Per gli architect senior, è il quadro decisionale per valutare quale tipo di ingaggio accettare e a quale tariffa post-PLD."
+    },
+    {
+      "type": "p",
+      "text": "Negli articoli successivi tratteremo il meccanismo della responsabilità solidale (Art. 12) con focus sullo scenario del fallimento della software house, il vulnerability management e la gestione CVE post-PLD, le configurazioni internazionali (cliente EU + software house non-EU + architect EU) e perché le \"fughe giurisdizionali\" via società extra-UE non funzionano, le clausole contrattuali essenziali (venti clausole organizzate per tipologia di rapporto), le otto trasformazioni operative necessarie per le software house, la stratificazione del valore di mercato dei Solution Architect senior post-PLD."
+    },
+    {
+      "type": "p",
+      "text": "Chi è interessato a ricevere gli articoli può seguirmi qui. Chi sta affrontando problemi specifici di adeguamento al regime PLD nella propria organizzazione può contattarmi privatamente per approfondimenti dedicati al caso concreto."
+    },
+    {
+      "type": "p",
+      "text": "Una considerazione finale. Il regime PLD 2024 non è ostacolo da rimuovere o vincolo da aggirare. È evoluzione regolamentare che porta il software al livello di maturità che hanno raggiunto altri settori industriali decenni fa. Per le software house e i professionisti tecnici che lo affrontano con strutturazione adeguata, è opportunità di consolidamento competitivo. Per chi lo ignora, è transizione che si trasformerà in selezione di mercato nei prossimi 18-24 mesi."
+    },
+    {
+      "type": "p",
+      "text": "Otto mesi al recepimento. Il tempo per prepararsi è limitato e diminuisce ogni settimana."
+    }
+  ]
+}

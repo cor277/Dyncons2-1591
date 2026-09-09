@@ -1,0 +1,259 @@
+{
+  "slug": "pld-2024-fuga-giurisdizionale",
+  "lang": "it",
+  "title": "La fuga giurisdizionale, e perché non esiste",
+  "standfirst": "La fuga giurisdizionale, e perché non esiste. Cliente EU, software house non-EU, architect EU: come tre regolamenti europei rendono strutturalmente impossibile delocalizzare il rischio PLD.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-05-27T09:47:42.000+00:00",
+  "dateModified": "2026-05-27T09:48:13.000+00:00",
+  "series": "Article V · International configurations",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/la-fuga-giurisdizionale-e-perch%C3%A9-non-esiste-corrado-patierno-vmlnf"
+  },
+  "importedAt": "2026-09-09",
+  "words": 2891,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Corrado Patierno"
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "La fuga giurisdizionale, e perché non esiste. Cliente EU, software house non-EU, architect EU: come tre regolamenti europei rendono strutturalmente impossibile delocalizzare il rischio PLD."
+    },
+    {
+      "type": "p",
+      "text": "Quinto articolo della serie sulla PLD 2024 e le software house italiane."
+    },
+    {
+      "type": "p",
+      "text": "Nota epistemica: ricostruzione del testo della direttiva e dei regolamenti applicati a modelli operativi tipici. Non costituisce parere legale."
+    },
+    {
+      "type": "p",
+      "text": "Il pensiero ricorre nelle riunioni dei GM italiani con frequenza ormai prevedibile. \"Apro una LTD in UK.\" \"Una società in Delaware.\" \"Una struttura a Cipro che fattura ai clienti italiani.\" \"Tutto il rischio PLD lo sposto sull'entità estera, l'italiana fa solo direzione.\""
+    },
+    {
+      "type": "p",
+      "text": "È un pensiero che gira da quando la PLD 2024 è entrata nel discorso pubblico. È anche un pensiero strutturalmente sbagliato, e questo articolo spiega perché."
+    },
+    {
+      "type": "p",
+      "text": "La premessa va detta in modo netto: per il regime di responsabilità da prodotto difettoso verso danneggiati EU, la giurisdizione e la legge applicabile non si scelgono. Sono determinate da tre regolamenti europei che operano in modo convergente — Bruxelles I bis, Roma II, e la PLD 2024 stessa. La sede dell'entità che vende, il paese in cui è registrata la SH, la struttura societaria interposta sono variabili che il sistema considera in modo subordinato, dopo aver determinato foro e legge in base ad altre coordinate. Coordinate che il GM non controlla, e che il giudice europeo applica indipendentemente dal disegno societario."
+    },
+    {
+      "type": "p",
+      "text": "Capire questo punto cambia il modo di affrontare il regime PLD. Non si esce dalla giurisdizione: si entra in una struttura di responsabilità di cui bisogna conoscere la geometria reale."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Tre regolamenti che decidono prima del disegno societario"
+    },
+    {
+      "type": "p",
+      "text": "Il primo regolamento è il Regolamento UE 1215/2012, noto come Bruxelles I bis. Disciplina la competenza giurisdizionale in materia civile e commerciale nell'Unione Europea. Il principio generale è che il convenuto va citato nel paese in cui ha il domicilio, ma esistono fori speciali che derogano a questo principio. Due rilevano per la PLD."
+    },
+    {
+      "type": "p",
+      "text": "Il primo foro speciale è quello del consumatore: il consumatore EU che subisce un danno può convenire la controparte davanti al giudice del proprio domicilio, indipendentemente da dove è registrata la controparte. Non è una facoltà negoziabile: è regime imperativo per i contratti con consumatori. Una clausola di foro contrattuale che lo deroga è nulla."
+    },
+    {
+      "type": "p",
+      "text": "Il secondo foro speciale è quello dell'evento dannoso: in materia di responsabilità extracontrattuale, il danneggiato può scegliere il foro del luogo in cui si è verificato il danno o il luogo del fatto che lo ha generato. Per la responsabilità da prodotto, questo significa che il giudice del paese del danneggiato è competente, e questa competenza non è esclusa dal fatto che il fabbricante sia altrove."
+    },
+    {
+      "type": "p",
+      "text": "Tradotto sul GM italiano: se apre una LTD in UK e vende software a clienti italiani che lo deployano su sistemi che danneggiano consumatori italiani, il giudice italiano è competente. Il fatto che la LTD sia inglese non sposta nulla. Il foro segue il danneggiato."
+    },
+    {
+      "type": "p",
+      "text": "Il secondo regolamento è il Regolamento CE 864/2007, noto come Roma II. Disciplina la legge applicabile alle obbligazioni extracontrattuali. L'articolo 5 contiene un regime specifico per la responsabilità da prodotto difettoso. La regola è una cascata di criteri che generalmente conduce ad applicare la legge del paese di residenza abituale del danneggiato, se il prodotto è stato commercializzato in quel paese. Sussidiariamente, la legge del paese in cui il prodotto è stato acquisito, o quella del paese in cui il danno si è verificato."
+    },
+    {
+      "type": "p",
+      "text": "Tradotto: anche ammesso che il foro fosse di competenza inglese (non è, ma per ipotesi), la legge applicabile resterebbe quella italiana. Il giudice applicherebbe la PLD recepita in Italia. La struttura legale della LTD inglese diventerebbe irrilevante: non è il diritto inglese che decide se il prodotto è difettoso, è il diritto italiano."
+    },
+    {
+      "type": "p",
+      "text": "Il terzo riferimento è la PLD 2024 stessa — Direttiva (UE) 2024/2853. L'articolo 8 disciplina gli operatori economici responsabili. Il comma (2) stabilisce che se il fabbricante è stabilito al di fuori dell'Unione Europea, la responsabilità è assunta dal rappresentante autorizzato del fabbricante nell'UE, oppure dall'importatore EU. Non c'è uno spazio in cui il prodotto è \"extra-UE\": se entra nel mercato EU, qualcuno EU ne risponde, ed è determinato dal sistema regolatorio, non dalla volontà delle parti."
+    },
+    {
+      "type": "p",
+      "text": "L'articolo 4(10)(b) estende ulteriormente la qualifica di fabbricante: chi presenta il prodotto al mercato apponendo il proprio nome o marchio commerciale è considerato fabbricante, anche se non lo ha materialmente prodotto. È la clausola \"rebrander\" che chiude lo spazio per le strutture di interposizione formale."
+    },
+    {
+      "type": "p",
+      "text": "I tre regolamenti operano insieme. Bruxelles I bis decide il foro. Roma II decide la legge. PLD 2024 decide chi risponde. Tutti e tre si applicano automaticamente, sulla base di criteri oggettivi che il GM non controlla. Disegnare una struttura societaria che ignori questa convergenza non sposta il rischio: lo concentra in punti diversi della catena, talvolta in modo peggiore di quanto sarebbe stato senza interposizione."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 1 — Cliente EU, SH non-EU, architect EU"
+    },
+    {
+      "type": "p",
+      "text": "Lo scenario è frequente nel mercato italiano. Una software house italiana ha un cliente enterprise che opera su scala europea. Per ottimizzare i costi di sviluppo, esternalizza parte della produzione del software a una società extra-UE — tipicamente in India, in Pakistan, in Ucraina, in Bielorussia, nei Balcani. Il progetto è disegnato da un architect EU (italiano, o di altro paese europeo), che firma le specifiche tecniche e supervisiona l'integrazione. Il prodotto finale è venduto al cliente EU, che lo utilizza nei propri sistemi che servono utenti finali EU."
+    },
+    {
+      "type": "p",
+      "text": "A prima vista, la struttura sembra ottimale: costi più alti (architect EU) limitati a una frazione del progetto, costi di sviluppo bulk delocalizzati. Il GM pensa che la responsabilità \"tecnica\" sia ripartita: SH non-EU sviluppa, architect EU disegna, cliente EU integra."
+    },
+    {
+      "type": "p",
+      "text": "Sotto PLD 2024 la struttura si comporta diversamente."
+    },
+    {
+      "type": "p",
+      "text": "Il prodotto, una volta integrato e immesso sul mercato EU dal cliente, qualifica il cliente stesso come potenziale importatore o distributore ex PLD se ne assume il marchio o se è il primo soggetto EU nella catena di immissione. Il cliente diventa, suo malgrado, un punto di responsabilità diretta verso il danneggiato finale. Se il difetto deriva da una componente sviluppata dalla SH non-EU, il cliente EU risponde in prima battuta, e poi può rivalersi contrattualmente sulla SH non-EU — con tutte le difficoltà che la rivalsa transfrontaliera comporta: esecuzione di sentenze in paesi non aderenti a Bruxelles I bis, asimmetrie di copertura assicurativa, costi di contenzioso multipli, tempi che si misurano in anni."
+    },
+    {
+      "type": "p",
+      "text": "L'architect EU, dal canto suo, resta sotto giurisdizione del proprio paese di residenza per la propria posizione di garanzia. Se ha firmato il design tecnico, è qualificato come componente della catena di fabbricazione ex PLD, e in caso di reato (lesioni colpose, omicidio colposo da prodotto difettoso) è soggetto a giurisdizione penale italiana ex Art. 27 della Costituzione, indipendentemente da dove fattura."
+    },
+    {
+      "type": "p",
+      "text": "Il risultato netto: la \"delocalizzazione\" del fornitore non sposta il rischio EU. Lo concentra sul cliente EU e sull'architect EU, mentre la SH non-EU è in posizione di difficile aggressione contrattuale dall'EU. È un'asimmetria che giustifica, dal lato dell'architect EU, una tariffa premium che molti professionisti del segmento non hanno ancora prezzato. Chi firma il design tecnico in una catena multi-giurisdizionale con anello non-EU porta esposizione che il fornitore extra-UE non porta. La tariffa deve riflettere questa asimmetria, o si lavora sotto-prezzati rispetto al rischio reale."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 2 — La fuga giurisdizionale che non funziona"
+    },
+    {
+      "type": "p",
+      "text": "È lo scenario più richiesto nelle riunioni con consulenti societari nel 2025-2026. Il GM italiano apre una struttura societaria estera — LTD in UK, LLC in Delaware, FZE negli Emirati, società a Cipro — e vi sposta formalmente la fatturazione ai clienti italiani. L'idea è che i contenziosi PLD seguiranno la sede della società, e che la persona fisica italiana sia coperta dal velo societario estero."
+    },
+    {
+      "type": "p",
+      "text": "Tre meccanismi indipendenti riportano la responsabilità in Italia."
+    },
+    {
+      "type": "p",
+      "text": "Il primo è l'importatore EU come fabbricante de facto. Se la LTD UK vende a clienti italiani, qualcuno deve materialmente immettere il prodotto sul mercato EU. Quel qualcuno — sia esso il cliente che lo acquisisce, sia un soggetto EU che fa da tramite, sia una persona fisica EU che opera per conto della LTD — diventa fabbricante ex Art. 8(2) PLD. Il GM italiano che è amministratore della LTD UK e contemporaneamente è in qualche modo presente sul mercato italiano (anche solo come referente commerciale, come venditore, come consulente che opera in Italia) si trova esposto come operatore economico EU sul medesimo prodotto. Non c'è separazione effettiva tra la LTD e la persona fisica che la rappresenta sul territorio italiano: il giudice italiano la riconosce."
+    },
+    {
+      "type": "p",
+      "text": "Il secondo è il piercing del velo societario in giurisdizione italiana. Davanti a una struttura societaria estera che appare costruita con il fine di eludere normative imperative — e la PLD è normativa imperativa per la tutela del danneggiato — il giudice italiano applica i principi di prevalenza della sostanza sulla forma. È un orientamento giurisprudenziale consolidato in materia tributaria, antiriciclaggio, e responsabilità civile. La struttura formale viene \"tagliata\" e la persona fisica che la controlla viene chiamata a rispondere direttamente. Non è un esito automatico, ma è esito frequente quando il giudice ritiene che la struttura sia priva di sostanza economica autonoma — il classico caso della LTD con un amministratore italiano, senza dipendenti reali nel paese di registrazione, senza ufficio operativo, costituita poco prima di una contrattualizzazione con cliente italiano."
+    },
+    {
+      "type": "p",
+      "text": "Il terzo, e più definitivo, è la personalità della responsabilità penale. L'Art. 27 della Costituzione italiana stabilisce che la responsabilità penale è personale. In caso di reato connesso al difetto del prodotto — lesioni colpose, omicidio colposo, illeciti penali in materia di trattamento di dati personali, illeciti in materia di sicurezza sul lavoro — la giurisdizione penale italiana persegue la persona fisica che ha commesso il fatto, indipendentemente dalla struttura societaria interposta. Una LTD UK non protegge un cittadino italiano da un procedimento penale in Italia. Il velo societario non esiste nel diritto penale."
+    },
+    {
+      "type": "p",
+      "text": "Sommando i tre meccanismi: la fuga giurisdizionale via società estera è efficace, forse, per il mero rischio commerciale ordinario, dove il piercing del velo non è facile. È strutturalmente inefficace per la responsabilità da prodotto verso danneggiati EU, e completamente inefficace per la responsabilità penale."
+    },
+    {
+      "type": "p",
+      "text": "C'è un costo aggiuntivo che spesso viene ignorato. La struttura estera richiede: sostanza economica documentata nel paese di registrazione (per non essere qualificata come esterovestizione fiscale), gestione amministrativa locale, costi di compliance multipli, doppie polizze assicurative in entrambe le giurisdizioni, contenziosi che possono attivarsi in parallelo. Il costo netto annuo di una struttura del genere è spesso superiore a quello di una polizza tier 1 italiana che copre adeguatamente PLD + cyber + AI liability. Si paga di più per essere meno protetti."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 3 — La catena multi-giurisdizionale"
+    },
+    {
+      "type": "p",
+      "text": "Lo scenario più complesso, e il più frequente in progetti enterprise: una catena con quattro o più giurisdizioni che concorrono al medesimo prodotto. Cloud provider negli Stati Uniti per l'hosting infrastrutturale. Sviluppo offshore in India per i moduli di backend. Architect EU (italiano, francese, tedesco) per il design e l'integrazione. Cliente EU che acquisisce, integra ulteriormente, e deploya verso utenti finali EU."
+    },
+    {
+      "type": "p",
+      "text": "In questo scenario la PLD 2024 si distribuisce lungo la catena in modo asimmetrico. Ogni anello porta esposizione propria, e l'asimmetria è governata da chi materialmente immette sul mercato EU."
+    },
+    {
+      "type": "p",
+      "text": "Il cloud provider USA non è di regola fabbricante del software immesso. È fornitore di infrastruttura. Ma se il difetto del prodotto deriva da un fallimento dell'infrastruttura cloud che il fabbricante non poteva ragionevolmente prevedere o mitigare, si apre un possibile profilo di rivalsa contrattuale del fabbricante verso il cloud provider, governata dal contratto cloud (tipicamente diritto USA o californiano) e dai limiti di responsabilità ivi previsti. Il fabbricante EU paga per primo verso il danneggiato, poi tenta la rivalsa: gli importi che riesce a recuperare sono spesso una frazione minima del danno totale, e i tempi si misurano in anni."
+    },
+    {
+      "type": "p",
+      "text": "Lo sviluppatore offshore in India è componente manufacturer ex Art. 8 PLD se ha sviluppato componenti specifici del prodotto. Ma la sua aggressione legale dall'EU è praticamente impossibile: l'India non aderisce a Bruxelles I bis, l'esecuzione di sentenze italiane in India richiede procedure di riconoscimento lente e costose, e il risultato finale è quasi sempre simbolico. Contrattualmente, può essere previsto un indemnification, ma la sua efficacia dipende dalla solidità finanziaria del fornitore indiano e dalla copertura assicurativa che ha (o non ha) — informazioni che la SH committente raramente verifica al momento della contrattualizzazione."
+    },
+    {
+      "type": "p",
+      "text": "L'architect EU è la figura che il sistema PLD raggiunge in modo più diretto e immediato. È residente nell'UE, è soggetto a giurisdizione EU, ha firmato il design tecnico, è qualificabile come componente della catena di fabbricazione. La rivalsa verso di lui è efficace, rapida, e completa."
+    },
+    {
+      "type": "p",
+      "text": "Il cliente EU che integra e deploya è importatore-distributore-fabbricante in funzione di come si è posizionato contrattualmente nella catena. La sua esposizione dipende dal contratto, ma è strutturalmente alta perché è il punto di immissione sul mercato del prodotto finale."
+    },
+    {
+      "type": "p",
+      "text": "L'esito netto della catena: in caso di danno, il danneggiato EU agisce contro il cliente EU e l'architect EU. Entrambi sono completamente esposti, e devono poi cercare di recuperare contrattualmente dagli anelli upstream non-EU. Il recupero è statisticamente parziale, lento, e costoso."
+    },
+    {
+      "type": "p",
+      "text": "Il modello che funziona — non per eliminare il rischio, ma per allocarlo realisticamente — non è la delocalizzazione. È l'allocazione contrattuale e assicurativa coerente con la geografia reale della catena."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cosa servirebbe davvero — l'allocazione, non la fuga"
+    },
+    {
+      "type": "p",
+      "text": "Il GM che vuole gestire il rischio PLD in modo strutturale non sposta società. Sposta clausole, e sposta coperture assicurative."
+    },
+    {
+      "type": "p",
+      "text": "La prima cosa è mappare la catena reale. Per ogni componente integrato nel prodotto, identificare: il fornitore, la sua sede legale e operativa, la giurisdizione applicabile al contratto, le coperture assicurative dichiarate. È un esercizio che la maggior parte delle SH italiane non ha mai fatto in modo sistematico. Senza questa mappa, l'allocazione del rischio è cieca."
+    },
+    {
+      "type": "p",
+      "text": "La seconda è designare contrattualmente il rappresentante autorizzato EU per ogni fornitore non-EU rilevante. La PLD 2024 lo richiede, ma in pratica raramente è fatto. Senza rappresentante autorizzato, il fornitore extra-UE è soggetto a responsabilità di fatto solo per il tramite dell'importatore EU — che spesso è la SH italiana stessa, senza saperlo."
+    },
+    {
+      "type": "p",
+      "text": "La terza è indemnification reciproche con coperture verificate. Una clausola di indemnification senza polizza che la garantisca è una clausola simbolica. La SH deve pretendere dal fornitore non-EU evidenza di copertura assicurativa effettiva, con beneficiario nominato, e con limiti adeguati al rischio del componente fornito. Se il fornitore non ha la copertura, l'indemnification è carta che vale quello che vale la solvibilità del firmatario."
+    },
+    {
+      "type": "p",
+      "text": "La quarta è polizza propria coerente con la geografia reale. Le polizze tier 1 italiane (Marsh, Aon, WTW) negoziano coperture che includono esplicitamente le esposizioni da catena multi-giurisdizionale, i costi di rivalsa transfrontaliera, e l'AI/algorithmic liability. È il tipo di copertura che richiede 7-14 mila euro l'anno per profili professionali individuali, e ordini di grandezza superiori per le strutture aziendali. È il vero costo del regime PLD per chi opera nel mercato regulated."
+    },
+    {
+      "type": "p",
+      "text": "La quinta, di sintesi, è trasparenza contrattuale verso il cliente EU. Se la SH italiana integra componenti non-EU, il cliente ha diritto di saperlo, di valutare il rischio, e di pattuire come si distribuisce contrattualmente. La SH che non lo dichiara opera in un regime di asimmetria informativa che, in caso di danno, diventa elemento aggravante in giudizio."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Tre domande per il GM"
+    },
+    {
+      "type": "p",
+      "text": "Prima domanda: hai mappato chi è l'importatore EU per ogni componente non-EU che integri nei tuoi sistemi? Se la risposta è no, l'importatore sei probabilmente tu, e non lo sai."
+    },
+    {
+      "type": "p",
+      "text": "Seconda domanda: le tue clausole con fornitori extra-UE includono indemnification con copertura assicurativa verificata e obbligo di designazione del rappresentante autorizzato EU? Se la risposta è no, l'indemnification è simbolica e la responsabilità ex Art. 8(2) PLD ricade su di te o sul tuo cliente."
+    },
+    {
+      "type": "p",
+      "text": "Terza domanda: se domani un cliente EU venisse danneggiato dal tuo prodotto, la giurisdizione che si attiverebbe è quella che pensavi quando hai disegnato la struttura? Se la risposta è \"non so\" o \"vediamo\", la struttura è disegnata male. La giurisdizione si decide ora, non dopo."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Considerazione di chiusura"
+    },
+    {
+      "type": "p",
+      "text": "La fuga giurisdizionale via società extra-UE è un'illusione retrospettiva. Si pensa di averla fatta, fino al primo contenzioso reale. Tre regolamenti europei — Bruxelles I bis, Roma II, PLD 2024 — convergono nel rendere la fuga inefficace per il regime di responsabilità da prodotto verso danneggiati EU. Il velo societario non protegge dal foro del danneggiato, non sposta la legge applicabile, non interrompe la catena di responsabilità ex Art. 8 PLD, non vale nulla in giurisdizione penale italiana."
+    },
+    {
+      "type": "p",
+      "text": "Le software house che si attrezzano per il regime PLD non lo fanno aprendo società all'estero. Lo fanno mappando la propria catena del valore, allocando contrattualmente i rischi, dotandosi di coperture assicurative coerenti con la geografia reale, e prezzando in modo trasparente l'asimmetria di esposizione che ogni anello porta."
+    },
+    {
+      "type": "p",
+      "text": "La differenza tra le due strategie non è cosmetica. È strutturale. Una è elusione, e in giudizio non regge. L'altra è allocazione, e regge perché è onesta."
+    },
+    {
+      "type": "p",
+      "text": "Il prossimo articolo della serie affronta le clausole contrattuali essenziali post-PLD: una rassegna organizzata di venti clausole, raggruppate per tipo di rapporto contrattuale, che le software house italiane dovrebbero introdurre nei propri contratti standard prima del 9 dicembre 2026."
+    }
+  ]
+}

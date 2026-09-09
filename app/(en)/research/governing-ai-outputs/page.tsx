@@ -81,19 +81,31 @@ export default function GoverningAiOutputsArticle() {
                 more — is what comes out and how it is governed after generation.
               </p>
               <p className="mt-4">
-                The AI Act classifies healthcare AI systems as high-risk. This means every output
-                must be traceable, auditable, and subject to human oversight. A well-prompted model
-                that produces untraceable outputs is still non-compliant.
+                Whether an AI system falls in the AI Act&apos;s high-risk categories depends on its
+                intended purpose and on the conditions the Regulation sets out — not on the fact
+                that it runs in a hospital or a pharmacy. A tool that acts as a safety component of
+                a medical device, or that decides on access to care, is a different object from an
+                assistant that retrieves procedures for staff, even where the code is nearly
+                identical. Where a system does fall there, traceability, auditability and effective
+                human oversight stop being good practice and become obligations. Where it does not,
+                they remain the difference between a system you can explain and one you cannot — and
+                the reason to build them is that the classification can change under you, when the
+                intended purpose quietly expands.
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">1. Immutable audit logging</h2>
               <p>
-                Every interaction with the AI system — the query, the retrieved context, the model
-                invoked, the generated response, and the user who received it — must be logged in
-                an append-only store. This is not optional. Regulators expect to reconstruct any
-                AI-assisted decision from first principles.
+                The record worth keeping is the one that lets you reconstruct a specific answer
+                later: the query, the retrieved context, the model invoked, the generated response
+                and the person who received it, in an append-only store. How much of it you are
+                obliged to keep, and for how long, follows from the classification of the system,
+                the regimes that apply to your sector, your own governance and your retention
+                policy — a ninety-day default and a ten-year obligation are not the same design. The
+                engineering point stands regardless of the legal one: a decision that cannot be
+                reconstructed cannot be defended, and retrofitting the record onto a system that was
+                not built to keep one is usually a rebuild.
               </p>
               <p className="mt-4">
                 In Nexus MDS Core, we implement this through a dedicated audit service that
@@ -136,9 +148,11 @@ export default function GoverningAiOutputsArticle() {
               <p>
                 Every model deployed in production must have a model card: a structured document
                 describing its training data, capabilities, known limitations, intended use cases,
-                and evaluation metrics. The AI Act makes this a legal requirement for high-risk
-                systems. Beyond compliance, model cards are the foundation for informed human
-                oversight — you cannot govern what you do not understand.
+                and evaluation metrics. The AI Act does not use the term &quot;model card&quot;, but
+                the technical documentation and the instructions for use it requires of high-risk
+                systems cover much of the same ground, and a model card is a practical way to hold
+                that material in one place. Beyond any obligation, it is the foundation for informed
+                human oversight — you cannot govern what you do not understand.
               </p>
               <p className="mt-4">
                 In practice, a model card for a healthcare AI deployment should include: the

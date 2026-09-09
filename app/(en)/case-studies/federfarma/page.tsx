@@ -566,8 +566,8 @@ export default function FederfarmaCaseStudy() {
               Where does your supplier’s liability stop, and yours begin?
             </h2>
             <p className="text-[#7D8FA3] text-lg leading-relaxed mb-8">
-              From 9 December 2026 the European product liability directive treats software as a
-              product. The exposure assessment establishes, for your organisation, where the
+              The revised European product liability directive includes software among products, and
+              applies to products placed on the market or put into service from 9 December 2026. The exposure assessment establishes, for your organisation, where the
               boundary sits.
             </p>
             <CTAButton label="Exposure assessment →" href="/assessment" variant="primary" />

@@ -135,10 +135,10 @@ export default function EvaluateVendorAnswer() {
 
         <AnswerSection id="liability" title="The question underneath all of them">
           <p>
-            From 9 December 2026, the date by which Member States must have transposed the 2024
-            product liability directive, software is treated as a product for liability purposes in
-            the EU. That does not make suppliers liable for everything, and it does not make buyers
-            safe. What it does is make the boundary matter: which defects sit with whoever put the
+            The 2024 product liability directive includes software in the definition of a
+            product, and applies to products placed on the market or put into service from
+            9 December 2026 — the date by which Member States must have transposed it. That does not
+            make suppliers liable for everything, and it does not make buyers safe. What it does is make the boundary matter: which defects sit with whoever put the
             product on the market, and which sit with whoever deployed it, configured it, and fed it
             data.
           </p>

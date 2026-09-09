@@ -12,7 +12,7 @@ const IT_URL = "https://www.dynamicsconsulting.it/it/assessment";
 export const metadata: Metadata = {
   title: "Exposure assessment — PLD 2024 and the AI Act",
   description:
-    "From 9 December 2026 the European product liability directive treats software as a product. Three days of work to establish where your supplier’s liability stops and yours begins.",
+    "The revised European product liability directive includes software among products and applies to products placed on the market or put into service from 9 December 2026. Three days of work to establish where your supplier’s liability stops and yours begins.",
   alternates: {
     canonical: EN_URL,
     languages: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: OG_IMAGE,
     title: "Exposure assessment — PLD 2024 and the AI Act",
     description:
-      "From 9 December 2026 the European product liability directive treats software as a product. Three days of work to establish where your supplier’s liability stops and yours begins.",
+      "The revised European product liability directive includes software among products and applies to products placed on the market or put into service from 9 December 2026. Three days of work to establish where your supplier’s liability stops and yours begins.",
     url: EN_URL,
     type: "website",
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Exposure assessment — PLD 2024 and the AI Act",
     description:
-      "From 9 December 2026 the European product liability directive treats software as a product. Three days of work to establish where your supplier’s liability stops and yours begins.",
+      "The revised European product liability directive includes software among products and applies to products placed on the market or put into service from 9 December 2026. Three days of work to establish where your supplier’s liability stops and yours begins.",
   },
 };
 

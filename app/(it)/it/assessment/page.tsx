@@ -10,7 +10,7 @@ const EN_URL = "https://www.dynamicsconsulting.it/assessment";
 export const metadata: Metadata = {
   title: "Assessment di esposizione — PLD 2024 e AI Act",
   description:
-    "Dal 9 dicembre 2026 la direttiva europea sulla responsabilità da prodotto include il software. Tre giornate per stabilire dove si ferma la responsabilità del fornitore e dove comincia la tua.",
+    "La direttiva europea sulla responsabilità da prodotto include il software fra i prodotti e si applica a quelli immessi sul mercato o messi in servizio dal 9 dicembre 2026. Tre giornate per stabilire dove si ferma la responsabilità del fornitore e dove comincia la tua.",
   alternates: {
     canonical: IT_URL,
     languages: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: OG_IMAGE,
     title: "Assessment di esposizione — PLD 2024 e AI Act",
     description:
-      "Dal 9 dicembre 2026 la direttiva europea sulla responsabilità da prodotto include il software. Tre giornate per stabilire dove si ferma la responsabilità del fornitore e dove comincia la tua.",
+      "La direttiva europea sulla responsabilità da prodotto include il software fra i prodotti e si applica a quelli immessi sul mercato o messi in servizio dal 9 dicembre 2026. Tre giornate per stabilire dove si ferma la responsabilità del fornitore e dove comincia la tua.",
     url: IT_URL,
     type: "website",
     locale: "it_IT",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Assessment di esposizione — PLD 2024 e AI Act",
     description:
-      "Dal 9 dicembre 2026 la direttiva europea sulla responsabilità da prodotto include il software. Tre giornate per stabilire dove si ferma la responsabilità del fornitore e dove comincia la tua.",
+      "La direttiva europea sulla responsabilità da prodotto include il software fra i prodotti e si applica a quelli immessi sul mercato o messi in servizio dal 9 dicembre 2026. Tre giornate per stabilire dove si ferma la responsabilità del fornitore e dove comincia la tua.",
   },
 };
 

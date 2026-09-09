@@ -63,7 +63,7 @@ const schema = [
         name: "Why does healthcare AI need on-premise deployment?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Healthcare AI processes protected health information (PHI), genomic data, and clinical records that fall under GDPR special category data protections. On-premise deployment guarantees data residency by architecture rather than by contract, eliminates cross-border transfer risks, and provides the verifiable control required by the EU AI Act for high-risk systems.",
+          text: "Healthcare AI often processes health data, which is special category data under the GDPR. Where the deployment is fully local, data residency follows from the architecture rather than from a contractual assurance, and there is no cross-border transfer to justify. It also puts the evidence a regulator may ask for — access records, audit trail, retention — inside the organisation's own control. Whether any of that is required depends on the intended purpose of the system and on the regime that applies to it.",
         },
       },
       {
@@ -71,7 +71,7 @@ const schema = [
         name: "Does on-premise deployment help meet EU AI Act obligations in healthcare?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It helps with the evidence, not with the verdict. The EU AI Act classifies most healthcare AI systems as high-risk, requiring human oversight, auditability, and data governance. On-premise deployment keeps data, models, and audit trails under the deploying organisation's direct control, which removes third-party processor risks and makes the conformity assessment easier to evidence. The assessment itself is what establishes conformity — deployment topology does not.",
+          text: "It helps with the evidence, not with the verdict. Classification under the AI Act follows the intended purpose of the system, not the sector it runs in: a tool that is a safety component of a medical device, or that decides on access to care, sits in the high-risk categories, while an assistant that retrieves administrative and regulatory documents for staff generally does not. Where the high-risk obligations do apply, they call for human oversight, auditability and data governance. On-premise deployment keeps data, models, and audit trails under the deploying organisation's direct control, which removes third-party processor risks and makes the conformity assessment easier to evidence. The assessment itself is what establishes conformity — deployment topology does not.",
         },
       },
       {
@@ -87,7 +87,7 @@ const schema = [
         name: "How does on-premise AI compare to cloud AI in terms of cost for healthcare?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "On-premise AI has higher initial capital expenditure but significantly lower operating costs over 3-5 years. Healthcare organisations running 50,000+ inference requests per month typically reach cost parity within 12-18 months. Additionally, on-premise eliminates per-token API fees, egress charges, and the hidden cost of compliance remediation for cloud data processing.",
+          text: "On-premise AI has higher initial capital expenditure and operating costs that do not scale with inference volume, which is the opposite shape from per-token cloud pricing. Where the break-even falls depends on volume, hardware, utilisation and the cost of the people running it — it is a calculation to run on your own numbers rather than a benchmark to quote. On-premise removes per-token fees and egress charges; it adds hardware, power and operations.",
         },
       },
       {
@@ -166,13 +166,15 @@ export default function AiOnPremiseHealthcarePage() {
                 detection purposes that fall outside the original processing agreement.
               </p>
               <p className="mt-4">
-                On-premise AI eliminates these risks architecturally. When the inference engine, the
-                vector database, and the orchestration layer all run within the hospital&apos;s own
-                data centre, <strong className="text-[#E6EDF3]">data residency is guaranteed by
-                physics, not by contract</strong>. There is no egress, no cross-border transfer, no
-                ambiguity about which jurisdiction governs the processing. For healthcare CTOs
-                evaluating AI deployment strategies, this distinction is not academic — it is the
-                difference between a compliant system and an audit finding.
+                A fully local deployment removes that particular class of risk rather than
+                mitigating it. When the inference engine, the vector database and the orchestration
+                layer all run within the hospital&apos;s own data centre,{" "}
+                <strong className="text-[#E6EDF3]">data residency follows from the architecture
+                rather than from a contract</strong>: there is no egress, no cross-border transfer,
+                and no ambiguity about which jurisdiction governs the processing. It does not remove
+                the risks that come from your own operations — misconfigured access, an unpatched
+                stack, an index built from documents nobody filtered — and those are the ones an
+                audit tends to find. What it changes is who has to be trusted for the answer.
               </p>
               <p className="mt-4">
                 The clinical stakes amplify this further. An AI system that assists in triage
@@ -190,8 +192,10 @@ export default function AiOnPremiseHealthcarePage() {
                 The Regulatory Landscape: GDPR, AI Act, NIS2, and Beyond
               </h2>
               <p>
-                Healthcare AI in Europe operates under a layered regulatory framework that, taken
-                together, creates an almost irresistible case for on-premise deployment.
+                Healthcare AI in Europe operates under a layered regulatory framework. None of
+                these instruments requires on-premise deployment; what they require is that an
+                organisation can demonstrate control over the processing, and a local deployment is
+                one way — often the shortest — of being able to demonstrate it.
               </p>
               <p className="mt-4">
                 <strong className="text-[#E6EDF3]">GDPR (Regulation EU 2016/679)</strong> requires a
@@ -202,12 +206,15 @@ export default function AiOnPremiseHealthcarePage() {
                 has only partially resolved, and which remains subject to future legal challenge.
               </p>
               <p className="mt-4">
-                <strong className="text-[#E6EDF3]">The EU AI Act (Regulation EU 2024/1689)</strong>,
-                which entered its high-risk obligations phase in 2025, classifies AI systems used in
-                healthcare as high-risk. This triggers mandatory requirements for risk management
-                systems, data governance, technical documentation, human oversight, accuracy and
-                robustness measures, and post-market monitoring. Deployers of high-risk AI systems
-                must ensure{" "}
+                <strong className="text-[#E6EDF3]">The EU AI Act (Regulation EU 2024/1689)</strong>
+                {" "}applies in stages, with the obligations for high-risk systems arriving after the
+                prohibitions and the general-purpose model rules. It classifies by intended purpose,
+                not by sector: a system that is a safety component of a medical device, or that
+                determines access to care, falls in the high-risk categories, while a documentary
+                assistant used by staff generally does not. Where a system does fall there, the
+                obligations include risk management, data governance, technical documentation, human
+                oversight, accuracy and robustness measures, and post-market monitoring. Deployers of
+                high-risk AI systems must ensure{" "}
                 <Link href="/research/governing-ai-outputs" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   governance of AI outputs
                 </Link>{" "}
@@ -231,10 +238,15 @@ export default function AiOnPremiseHealthcarePage() {
                 AI-assisted clinical decisions.
               </p>
               <p className="mt-4">
-                For organisations operating across multiple EU member states, the compliance surface
-                only expands. On-premise deployment provides a single, defensible architectural
-                answer to all of these overlapping requirements: the data stays where the care is
-                delivered.
+                For organisations operating across multiple EU member states, the surface of
+                obligations expands rather than multiplying: the same controls answer to several
+                regimes at once, which is what the{" "}
+                <Link href="/cepf/overlaps" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  cross-framework overlap catalogue
+                </Link>{" "}
+                sets out. A local deployment simplifies one recurring question in that set — where
+                the data is and who can reach it — and leaves the rest to be answered on their own
+                terms.
               </p>
             </div>
 
@@ -353,15 +365,20 @@ export default function AiOnPremiseHealthcarePage() {
                 </li>
               </ul>
               <p className="mt-4">
-                This architecture is not theoretical. It is running in production for{" "}
+                This architecture is not theoretical. It runs in production at{" "}
                 <Link href="/case-studies/federfarma" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Federfarma Lombarda
-                </Link>{" "}
-                and{" "}
-                <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
-                  CureSicure / Humania Care
                 </Link>
-                , processing real clinical and pharmaceutical data daily.
+                , where it serves a regulatory-document assistant for over a thousand pharmacies:
+                indexing, retrieval, reconciliation, identity and audit run locally, personal data is
+                excluded at ingestion rather than filtered afterwards, and only final answer
+                generation calls an external inference endpoint in a European datacentre — a
+                component that is replaceable without redesigning the system. The same platform
+                underpins{" "}
+                <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  CureSicure / HumanIA Care
+                </Link>
+                .
               </p>
             </div>
 
@@ -393,12 +410,11 @@ export default function AiOnPremiseHealthcarePage() {
                 allocation — costs that are predictable and do not scale with inference volume.
               </p>
               <p className="mt-4">
-                For a mid-sized hospital running 50,000-100,000 AI inference requests per month
-                across clinical decision support, document summarisation, and internal knowledge
-                retrieval, the break-even point typically falls between{" "}
-                <strong className="text-[#E6EDF3]">12 and 18 months</strong>. After that, the
-                on-premise deployment is materially cheaper — and the compliance posture is
-                structurally stronger from day one.
+                Where the two curves cross depends on inference volume, on the hardware chosen, on
+                how well it is utilised and on what the operations cost in people. We have not
+                published a break-even figure because a number produced from someone else&apos;s
+                workload would not survive contact with yours: the calculation is worth doing
+                explicitly, on your volumes, before the architecture is chosen.
               </p>
               <p className="mt-4">
                 There is also the hidden cost of vendor lock-in. Cloud AI providers change pricing,
@@ -522,11 +538,12 @@ export default function AiOnPremiseHealthcarePage() {
                     Why does healthcare AI need on-premise deployment?
                   </h3>
                   <p>
-                    Healthcare AI processes protected health information, genomic data, and clinical
-                    records classified as GDPR special category data. On-premise deployment
-                    guarantees data residency by architecture, eliminates cross-border transfer
-                    risks, and provides the verifiable control required by the EU AI Act for
-                    high-risk systems. It is the most direct path to demonstrable compliance.
+                    Healthcare AI often processes health data, which is special category data under
+                    the GDPR. In a fully local deployment, data residency follows from the
+                    architecture rather than from a contractual assurance, there is no cross-border
+                    transfer to justify, and the evidence a regulator may ask for stays under the
+                    organisation&apos;s control. Whether that is required, and to what standard,
+                    depends on the intended purpose of the system and on the regime that applies.
                   </p>
                 </div>
                 <div>
@@ -534,9 +551,12 @@ export default function AiOnPremiseHealthcarePage() {
                     Does on-premise deployment help meet EU AI Act obligations in healthcare?
                   </h3>
                   <p>
-                    It helps with the evidence, not with the verdict. The AI Act classifies most
-                    healthcare AI as high-risk, requiring human oversight, auditability, and robust
-                    data governance. On-premise deployment keeps data, models, and audit trails
+                    It helps with the evidence, not with the verdict. Classification follows the
+                    intended purpose of the system rather than the sector it runs in: a safety
+                    component of a medical device sits in the high-risk categories, a documentary
+                    assistant for staff generally does not. Where the obligations do apply, they
+                    call for human oversight, auditability and data governance. On-premise
+                    deployment keeps data, models, and audit trails
                     under the deploying organisation&apos;s direct control — removing third-party
                     processor risks and making the conformity assessment easier to evidence. The
                     assessment itself is what establishes conformity; deployment topology does not.
@@ -562,11 +582,12 @@ export default function AiOnPremiseHealthcarePage() {
                     How does on-premise AI compare to cloud AI in terms of cost?
                   </h3>
                   <p>
-                    On-premise has higher upfront capital expenditure but significantly lower
-                    operating costs over three to five years. Healthcare organisations running
-                    50,000+ monthly inference requests typically reach cost parity within 12-18
-                    months. On-premise also eliminates per-token fees, egress charges, and the
-                    hidden cost of cloud compliance remediation.
+                    On-premise has higher upfront capital expenditure and operating costs that do
+                    not scale with inference volume — the opposite shape from per-token pricing.
+                    Where the break-even falls depends on volume, hardware, utilisation and
+                    operations staffing, so it is a calculation to run on your own numbers rather
+                    than a figure to quote. On-premise removes per-token fees and egress charges;
+                    it adds hardware, power and the people to run it.
                   </p>
                 </div>
                 <div>

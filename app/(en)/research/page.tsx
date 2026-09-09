@@ -5,6 +5,7 @@ import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
+import { formatDate, getImportedArticles } from "@/lib/imported-articles";
 
 export const metadata: Metadata = {
   title: "Research & Insights",
@@ -85,6 +86,37 @@ const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/research", [
   { name: "Research" },
 ]);
 
+/**
+ * The PLD series was written for LinkedIn and imported here in full; the index
+ * lists those pieces alongside the ones written for the site, newest first, so
+ * the archive is one archive rather than two.
+ */
+const imported = getImportedArticles().map((a) => ({
+  slug: `/research/${a.slug}`,
+  date: formatDate(a.datePublished, "en"),
+  sortKey: a.datePublished.slice(0, 10),
+  tag: "PLD 2024 · in Italian",
+  title: a.title,
+  summary: a.standfirst,
+}));
+
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+/** The hand-written posts carry a "Month YYYY" label; turn it into a sort key. */
+const sortKeyOf = (label: string) => {
+  const [month, year] = label.split(" ");
+  const index = MONTHS.indexOf(month);
+  return `${year}-${String(index + 1).padStart(2, "0")}-01`;
+};
+
+const allPosts = [
+  ...posts.map((p) => ({ ...p, sortKey: sortKeyOf(p.date) })),
+  ...imported,
+].sort((a, b) => b.sortKey.localeCompare(a.sortKey));
+
 export default function ResearchPage() {
   return (
     <>
@@ -134,7 +166,7 @@ export default function ResearchPage() {
                 An ongoing public series on the structural implications of the new EU regulatory
                 regime — Product Liability Directive 2024, AI Act, Tech Sovereignty Package —
                 for software houses and technical professionals in regulated industries. Six
-                articles published, canonical on LinkedIn.
+                articles, published here in full and in Italian.
               </p>
               <span className="mt-4 inline-flex items-center text-sm font-semibold text-[#00B4D8]">
                 View all articles →
@@ -146,7 +178,7 @@ export default function ResearchPage() {
         {/* Articles */}
         <section className="pt-8 pb-20 px-6">
           <div className="max-w-4xl mx-auto space-y-6">
-            {posts.map((p, i) => (
+            {allPosts.map((p, i) => (
               <Link
                 key={i}
                 href={p.slug}

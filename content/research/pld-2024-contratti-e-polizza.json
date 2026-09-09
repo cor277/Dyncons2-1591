@@ -1,0 +1,812 @@
+{
+  "slug": "pld-2024-contratti-e-polizza",
+  "lang": "it",
+  "title": "Contratti e polizza nel regime PLD 2024. Venti clausole, tre prospettive, una scorciatoia da non firmare.",
+  "standfirst": "Le venti clausole e la polizza, visti dai tre lati. Cliente, software house, professionista firmatario: contratto e copertura assicurativa in rapporto di forza asimmetrico, prima del 9 dicembre 2026.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-06-03T17:43:54.000+00:00",
+  "dateModified": "2026-06-03T17:44:25.000+00:00",
+  "series": "Article VI · Contracts & insurance",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/contratti-e-polizza-nel-regime-pld-2024-venti-tre-una-patierno-pucxf"
+  },
+  "importedAt": "2026-09-09",
+  "words": 6551,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Corrado Patierno"
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Le venti clausole e la polizza, visti dai tre lati. Cliente, software house, professionista firmatario: contratto e copertura assicurativa in rapporto di forza asimmetrico, prima del 9 dicembre 2026."
+    },
+    {
+      "type": "p",
+      "text": "Sesto articolo della serie sulla PLD 2024 e le software house italiane."
+    },
+    {
+      "type": "p",
+      "text": "Nota epistemica: per ogni clausola viene fornito un razionale e un esempio strutturale. L'esempio strutturale non è testo contrattuale pronto all'uso: è scheletro di clausola con trigger, perimetro, parametri e esclusioni, da passare al proprio legale IT per la stesura formale. Lo stesso vale per le specifiche di polizza, da calibrare con broker qualificato sul profilo specifico."
+    },
+    {
+      "type": "p",
+      "text": "Lo stesso contratto, letto da chi lo firma da posizioni diverse, è un contratto diverso. Per il cliente che acquista software è uno strumento di tutela dell'acquisto e — quando il prodotto incide su terzi — della propria esposizione futura. Per la software house che vende è uno strumento di allocazione del rischio decennale ex PLD 2024, simultaneamente verso il cliente e verso il professionista che firma tecnicamente. Per il professionista firmatario è uno strumento di tutela personale dentro un rapporto strutturalmente sbilanciato, in cui la reciprocità formale non esiste e la copertura della controparte va supposta inadeguata fino a prova contraria."
+    },
+    {
+      "type": "p",
+      "text": "Le venti clausole che servono nei contratti del software regolato post-PLD non sono una lista neutra. Sono lo stesso oggetto contrattuale visto da tre lati con interessi opposti e strategie di tutela differenti. Le clausole, da sole, non bastano: devono essere accompagnate da una copertura assicurativa coerente con il regime decennale, anch'essa con tre incarnazioni distinte in funzione di chi assicura cosa."
+    },
+    {
+      "type": "p",
+      "text": "Una premessa metodologica. La parità contrattuale è un'astrazione. In Italia, nella stragrande maggioranza dei casi, esistono tre asimmetrie strutturali di forza. Il cliente enterprise ha forza verso la software house. La software house ha forza verso il professionista freelance. Il professionista non ha forza simmetrica verso nessuno dei due. Riconoscere queste asimmetrie cambia tutto: chi è in alto pretende, chi è in basso si attrezza assumendo che la copertura sopra di sé non basti."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "I. Dal punto di vista del cliente committente"
+    },
+    {
+      "type": "p",
+      "text": "Il cliente è la parte in posizione di forza. Il suo problema è duplice: tutelare l'acquisto, ed evitare di firmare clausole che lo trasformano in fabbricante ex PLD 2024 senza saperlo."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cosa il cliente deve pretendere dalla software house"
+    },
+    {
+      "type": "p",
+      "text": "Clausola 1 — Software Bill of Materials in consegna."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Senza SBOM, il cliente non sa cosa ha integrato. In giudizio non ha modo di ricostruire la catena di responsabilità, e si espone a culpa in eligendo per non aver verificato lo stato dell'arte del prodotto acquistato (richiamato da NIS2 e ISO 27001:2022 controllo A.8.8). Pretendere l'SBOM è atto di diligenza dell'acquirente che documenta la propria condotta."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Oggetto: SBOM completo del prodotto consegnato dalla software house al cliente.",
+        "Formato: CycloneDX o SPDX, machine-readable.",
+        "Contenuto minimo: identificazione di ciascun componente software integrato, versione, licenza, supplier upstream, hash di integrità.",
+        "Tempistica: SBOM consegnato all'atto del rilascio iniziale e aggiornato a ogni rilascio di major release o entro 30 giorni dall'integrazione di nuovi componenti.",
+        "Modalità di trasmissione: canale documentale tracciabile, conservazione a carico di entrambe le parti per l'intero decennio post-immissione.",
+        "Conseguenze in caso di mancata consegna: sospensione dei pagamenti relativi al rilascio fino a regolarizzazione."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 2 — Processo CVE strutturato."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. La notifica delle vulnerabilità non può essere \"vi avvertiamo quando capita\". Senza processo contrattualizzato, il cliente apprende delle CVE in modo casuale, non può documentare diligenza, e il fornitore può sostenere di averlo informato anche quando non lo ha fatto in modo utile. Per il cliente è evidenza di diligenza propria; per il fornitore è prova di adempimento."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Classi di severity: Classe 1 (CVSS ≥ 9.0 oppure flag CISA-KEV); Classe 2 (CVSS 7.0-8.9); Classe 3 (CVSS 4.0-6.9); Classe 4 (CVSS < 4.0).",
+        "Tempi di notifica: Classe 1 entro 48h dalla pubblicazione CVE; Classe 2 entro 5 gg lavorativi; Classe 3 entro 15 gg; Classe 4 in ciclo regolare mensile.",
+        "Contenuto obbligatorio della notifica: identificativo CVE, descrizione del rischio specifico nel contesto del prodotto, finestra temporale di vulnerabilità, mitigazione disponibile (workaround), patch (tempistica).",
+        "Canale: portale dedicato o PEC, con tracciamento data/ora.",
+        "Conseguenze del ritardo: penale predefinita parametrata alla classe di severity, fermo restando il diritto al risarcimento del danno aggiuntivo."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 3 — Vita utile dichiarata e perimetro del supporto decennale."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. La PLD 2024 stabilisce un regime di responsabilità decennale del fabbricante. Senza dichiarazione esplicita di cosa è coperto, il fornitore sosterrà che molte attività sono \"evoluzioni a pagamento\" mentre il cliente assumerà che sono \"manutenzione compresa\". La clausola allinea le aspettative al regime PLD."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Vita utile dichiarata del prodotto: N anni (tipicamente 7-10 per software enterprise regulated).",
+        "Perimetro del supporto decennale incluso: (a) manutenzione correttiva (bug fix); (b) vulnerability management (patch di sicurezza per CVE Classe 1 e 2); (c) sostituzione di componenti per abbandono upstream (vedi clausola 4); (d) compatibility maintenance verso versioni supportate di OS / runtime / database.",
+        "Perimetro escluso (a remunerazione separata): nuove funzionalità, integrazioni con sistemi terzi non previsti, migrazioni a major version del prodotto.",
+        "Decorrenza: dalla data di accettazione del rilascio in produzione.",
+        "Estensione oltre il decennio: opzionale, secondo offerta da formularsi nei 24 mesi antecedenti la scadenza."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 4 — Sostituzione componenti per abbandono upstream."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. I componenti open source di terze parti possono essere abbandonati upstream, dichiarati EOL, o presentare CVE critiche non patchabili. Senza meccanismo predefinito, ogni evento diventa negoziazione conflittuale al momento del bisogno, mentre l'esposizione PLD ex Art. 8 della software house resta in essere. La clausola sposta l'evento da imprevisto a scenario contrattualizzato."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Trigger di attivazione: (a) componente non più mantenuto da upstream per > 90 giorni; (b) dichiarazione EOL del componente; (c) CVE critica (CVSS ≥ 7.0 + KEV) senza patch upstream entro 30 giorni.",
+        "Perimetro prestazione SH: identificazione componente sostitutivo equivalente, integrazione, regression testing, ridocumentazione tecnica.",
+        "Tempistica: analisi preliminare entro 15 gg lavorativi dal trigger; piano di sostituzione entro 30 gg; esecuzione entro Tier (vedi sotto).",
+        "Pricing tier: Tier A (componente critico, esecuzione 60 gg, [tariffa concordata in allegato economico]); Tier B (rilevante, 90 gg, [tariffa concordata]); Tier C (non critico, 120 gg, [tariffa concordata]).",
+        "Esclusioni: sostituzioni richieste per preferenza estetica o non funzionale del cliente; sostituzioni in conseguenza di scelte imposte dal cliente contro raccomandazione SH (vedi Clausola 8)."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 5 — Prova della copertura assicurativa della software house."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. L'indemnification del fornitore senza copertura assicurativa adeguata è promessa nuda — incapiente nel momento del bisogno. Il cliente in posizione di forza ha titolo a richiedere prova annuale della polizza con i parametri minimi del regime PLD. Il rifiuto del fornitore di esibire la polizza è di per sé un segnale di rischio commerciale."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Documentazione esigibile: certificato di copertura emesso dalla compagnia, riportante massimali, periodo, retroattività, postuma, beneficiari, conferma di pagamento del premio in corso.",
+        "Parametri minimi: massimale per sinistro ≥ 2M€; aggregato annuo ≥ 4M€; retroattività piena; postuma decennale; copertura esplicita software product liability, AI/algorithmic, cyber; costi difesa fuori dal massimale.",
+        "Periodicità: esibizione entro 30 gg dalla firma e successivamente entro 30 gg da ogni rinnovo polizza.",
+        "Conseguenze in caso di mancata esibizione o di copertura inferiore ai minimi: diritto del cliente di sospendere i pagamenti correlati ai nuovi rilasci, fermi gli obblighi di manutenzione del fornitore."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cosa il cliente deve evitare di firmare"
+    },
+    {
+      "type": "p",
+      "text": "Clausola 6 — Rifiuto delle clausole che scaricano sul cliente atti del fabbricante."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Clausole del tipo \"il monitoring CVE è in capo al cliente\" trasferiscono atti strutturali del fabbricante. Verso il consumatore finale sono inopponibili ex Art. 15 PLD; tra le parti, però, il cliente che le firma si carica un onere ingiusto e può finire qualificato come co-fabbricante."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Esempio di formulazione da rifiutare: \"Il Cliente è responsabile del monitoring delle vulnerabilità pubblicate sui componenti integrati nel Prodotto e della valutazione della loro rilevanza ai fini di sicurezza.\"",
+        "Riformulazione difensiva del cliente: \"Il Fornitore è responsabile del monitoring CVE sui componenti del Prodotto e della notifica al Cliente secondo il processo di cui alla Clausola [2]. Il Cliente è tenuto unicamente alla ricezione, valutazione di applicabilità nei propri sistemi, e decisione sull'applicazione delle patch proposte.\"",
+        "Punto di attenzione: qualunque inversione di onere su atti strutturali del fabbricante è da rifiutare integralmente, non solo da limitare."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 7 — Attenzione alle \"specifiche imposte\"."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Quando il cliente impone scelte tecniche contro raccomandazione del fornitore, può essere qualificato come co-fabbricante ex Art. 8 PLD per il difetto derivante. Non si rinuncia a imporre — si fa con consapevolezza documentale, in modo che la responsabilità della scelta sia tracciata."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Procedura attivabile dal cliente: il cliente che intende imporre una scelta tecnica difforme dalla raccomandazione del fornitore richiede al fornitore una nota tecnica scritta che descriva: (a) raccomandazione del fornitore; (b) rischi tecnici associati alla scelta imposta; (c) mitigazioni possibili; (d) conseguenze sul perimetro di responsabilità PLD.",
+        "Atto di accettazione del cliente: il cliente, ricevuta la nota tecnica, può procedere firmando atto formale di accettazione consapevole del rischio.",
+        "Effetto: l'atto vale tra le parti come prova della titolarità della scelta in capo al cliente, ferma restando l'inopponibilità verso il consumatore finale ex Art. 15 PLD.",
+        "Esclusioni: non rientrano nella procedura le scelte di livello esecutivo o di customizzazione standard che non incidono sulla sicurezza o sull'architettura."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "II. Dal punto di vista della software house"
+    },
+    {
+      "type": "p",
+      "text": "La software house è il punto di snodo: esposizione primaria come fabbricante ex Art. 8 PLD, e deve attrezzarsi simultaneamente verso il cliente, verso il professionista che firma tecnicamente, e verso i fornitori non-EU."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Verso il cliente"
+    },
+    {
+      "type": "p",
+      "text": "Clausola 8 — Audit trail delle decisioni architetturali imposte dal cliente."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Quando il cliente impone scelte contro raccomandazione del fornitore, la SH deve poter dimostrare in giudizio che la scelta non è propria. Senza audit trail formale, in ricostruzione ex post la responsabilità si concentra sul firmatario tecnico ed è la SH che paga. La clausola istituzionalizza la traccia e sposta il peso probatorio."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Trigger: qualunque richiesta del cliente che configuri scelta architetturale, di sicurezza, o di componente, difforme dalla raccomandazione tecnica del fornitore.",
+        "Documentazione prodotta dal fornitore: nota tecnica con (a) descrizione della richiesta del cliente; (b) raccomandazione alternativa; (c) rischi tecnici della scelta del cliente; (d) impatto sul perimetro PLD.",
+        "Atto di accettazione del cliente: firma elettronica qualificata o PEC.",
+        "Conservazione: sistema documentale del fornitore con conservazione decennale, accessibile al cliente su richiesta.",
+        "Conseguenza contrattuale: la scelta imposta è qualificata tra le parti come \"scelta del cliente\" ai fini di ripartizione interna della responsabilità."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 9 — Rifiuto patch del cliente e assunzione del rischio."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Quando il cliente rifiuta una patch raccomandata, la SH rimane esposta verso il consumatore finale ma non ha modo di mitigare il rischio. La clausola istituzionalizza il processo formale di rifiuto, in modo che la responsabilità per il difetto non patchato si sposti contrattualmente sul cliente."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Procedura: notifica della patch da parte del fornitore secondo Clausola 2; rifiuto del cliente formalizzato via PEC entro 15 gg dalla notifica.",
+        "Contenuto del rifiuto: dichiarazione del cliente di non voler applicare la patch e di assumersi il rischio residuo per la finestra di non patching.",
+        "Controfirma SH: presa d'atto del rifiuto e quantificazione dell'esposizione residua, comunicata al cliente entro 5 gg.",
+        "Effetto: per la finestra di non patching, la responsabilità interna del difetto correlato alla vulnerabilità non patchata grava sul cliente, ferma restando l'inopponibilità verso il consumatore finale ex Art. 15 PLD.",
+        "Tracciamento: contatore documentale dei rifiuti, attivante Clausola 10 oltre soglia."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 10 — Terminazione manutenzione attiva per rifiuti reiterati."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Una SH che resta titolare di manutenzione su un sistema in cui il cliente rifiuta sistematicamente le patch resta esposta a responsabilità PLD senza strumenti di mitigazione. La clausola permette al fornitore di uscire dal regime di responsabilità attiva, formalizzando il passaggio del sistema in regime \"no maintenance, full risk on customer\"."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Trigger: 3 rifiuti formali di patch Classe 1 o 2 nei 12 mesi precedenti, su uno stesso sistema.",
+        "Notifica del fornitore: comunicazione formale al cliente, con preavviso di 30 gg, dell'intenzione di terminare la manutenzione attiva.",
+        "Regime post-terminazione: sistema in stato \"no maintenance, full risk on customer\"; fornitore esonerato dagli obblighi di manutenzione correttiva e vulnerability management; cliente assume integralmente il rischio del sistema.",
+        "Tracciamento: dichiarazione formale dello stato, conservata da entrambe le parti.",
+        "Effetto verso terzi: l'esonero opera tra le parti e nel regime di rivalsa interna; l'inopponibilità verso il consumatore finale ex Art. 15 PLD resta."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 11 — Modifiche in produzione come variazione contrattuale."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Modifiche tecniche richieste dal cliente su sistemi già in produzione, se assorbite nel canone come \"piccoli ritocchi\", finiscono nel perimetro PLD del fornitore senza ridocumentazione né nuovo prezzo. La clausola le qualifica come variazione formale, con remunerazione separata e — se rilevanti — ridocumentazione e re-firma tecnica."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Definizione di modifica in produzione: qualunque alterazione del prodotto già accettato in produzione, esclusi bug fix di Classe 1 e 2 (che sono manutenzione).",
+        "Procedura: richiesta formale del cliente; quotazione del fornitore con stima costi, tempi, impatti sulla sicurezza e sul perimetro PLD; accettazione del cliente; esecuzione e ridocumentazione.",
+        "Soglia di ri-firma tecnica: modifiche con impatto su componenti di sicurezza, gestione dati personali, o architettura del prodotto comportano nuova firma tecnica del professionista firmatario e aggiornamento dell'SBOM.",
+        "Remunerazione: secondo allegato economico, separata dal canone di manutenzione.",
+        "Effetto sul regime PLD: il decennio di responsabilità per la modifica decorre dalla data di accettazione della variazione, distinto dal decennio del prodotto originario."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 12 — Limitation of liability con esplicito richiamo all'Art. 15 PLD."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. I limiti di responsabilità pattuiti tra le parti hanno spazio nell'autonomia contrattuale, ma verso il consumatore finale sono inopponibili ex Art. 15 PLD. Una clausola che non lo dichiara esplicitamente induce ambiguità interpretativa. Dichiarare il limite è onestà contrattuale che protegge in giudizio."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Limitazione tra le parti: il limite di responsabilità della software house verso il cliente è fissato a [N volte il valore annuo del contratto] per evento e ad aggregato annuo di [M volte il valore annuo].",
+        "Esclusioni dal limite: dolo, colpa grave, violazioni GDPR, e ogni voce per la quale la legge esclude la limitazione contrattuale.",
+        "Richiamo Art. 15 PLD: \"Le parti riconoscono espressamente che, ai sensi dell'art. 15 della Direttiva UE 2024/2853 e della relativa norma di recepimento italiana, la limitazione della responsabilità del fabbricante verso il danneggiato finale è inopponibile e nulla. La presente clausola opera esclusivamente nei rapporti interni tra Fornitore e Cliente, e non incide sulla responsabilità di alcuna delle parti verso terzi danneggiati.\"",
+        "Effetto: le rivalse interne tra le parti operano secondo limite; le azioni dirette del danneggiato finale non sono toccate."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Verso il professionista firmatario"
+    },
+    {
+      "type": "p",
+      "text": "Clausola 13 — Definizione del perimetro firmato."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Senza distinzione esplicita tra ciò che il professionista firma tecnicamente e ciò che configura sotto istruzione, il professionista risponde di tutto e — in regresso — la SH si trova esposta alla sua rivalsa per scelte non sue. La clausola distingue posizione di garanzia ex Art. 40 cpv c.p. dalla mera esecuzione, ed è interesse comune."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Atti firmati dal professionista: design architetturale, scelte di sicurezza (cifratura, autenticazione, gestione segreti, modelli di permessi), decisioni di integrazione e di dipendenza da componenti, approvazione di rilascio in produzione.",
+        "Atti eseguiti sotto istruzione (non firmati): implementazione tecnica di scelte già firmate, configurazione di parametri operativi, deployment in ambienti non di produzione, modifiche minori non strutturali.",
+        "Documentazione della firma: registro tecnico interno SH che traccia, per ogni atto firmato, identità del firmatario, data, documento di design firmato, esito della revisione di sicurezza.",
+        "Conseguenze sul regime PLD: la posizione di garanzia del firmatario si estende esclusivamente agli atti firmati; gli atti eseguiti sotto istruzione restano nella responsabilità di chi ha impartito l'istruzione."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 14 — Riconoscimento del diritto-dovere di dissenso scritto."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Senza dissensi documentati, in giudizio la responsabilità si concentra sull'esecutore tecnico e la SH non ha modo di dimostrare che il difetto deriva da scelta cliente o gestionale. Sembra contro-interesse della SH; in realtà la protegge nei contenziosi PLD e nei rapporti con assicuratore."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Diritto del professionista: esprimere dissenso scritto su scelte tecniche imposte da SH o cliente che ritiene presentino rischi rilevanti per sicurezza, conformità normativa, o integrità del prodotto.",
+        "Dovere del professionista: produrre dissenso quando rileva tali rischi, in forma documentale tracciabile (PEC, email aziendale, sistema documentale interno).",
+        "Contenuto minimo del dissenso: descrizione della scelta contestata; descrizione del rischio; raccomandazione alternativa; dichiarazione \"procedo come istruito sotto responsabilità di [SH / cliente]\".",
+        "Impegni della SH: non penalizzare il professionista per dissensi prodotti; conservare i dissensi nel sistema documentale per il decennio PLD; renderli disponibili al professionista anche dopo la cessazione del rapporto.",
+        "Effetto sul regime PLD: il dissenso scritto sposta la posizione di garanzia ex Art. 40 cpv c.p. dall'esecutore al destinatario del dissenso non corretto."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 15 — Esibizione della polizza professionale del professionista."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. La SH in posizione di forza può pretendere prova annuale di polizza del professionista. Senza polizza adeguata del professionista, la rivalsa contrattuale del fornitore (in caso di esposizione derivante da scelta tecnica del professionista) è inefficace."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Documentazione esigibile: certificato di copertura del professionista, con massimali, periodo, retroattività, postuma, beneficiari, conferma di pagamento.",
+        "Parametri minimi: massimale per sinistro ≥ 1,5M€; aggregato annuo ≥ 3M€; retroattività piena; postuma decennale; copertura esplicita per AI/algorithmic, atti del firmatario, posizione di garanzia.",
+        "Periodicità: esibizione all'avvio del rapporto e successivamente entro 30 gg da ogni rinnovo.",
+        "Conseguenze in caso di mancata esibizione o di copertura inferiore ai minimi: sospensione dell'affidamento di nuovi atti firmati al professionista, fino a regolarizzazione; non costituisce di per sé causa di risoluzione."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Verso i fornitori non-EU"
+    },
+    {
+      "type": "p",
+      "text": "Clausola 16 — Designazione obbligatoria del rappresentante autorizzato EU."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Senza designazione del rappresentante autorizzato EU del fornitore non-EU ex Art. 8 PLD, l'importatore EU del componente è di fatto la software house italiana committente — spesso senza saperlo. La clausola impone al fornitore extra-UE di designare un rappresentante e di renderlo noto."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Obbligo: il fornitore non-EU si obbliga a designare e mantenere durante l'intero rapporto contrattuale un rappresentante autorizzato stabilito nell'Unione Europea ai sensi della normativa PLD vigente.",
+        "Documentazione richiesta: atto di designazione, identificazione del rappresentante (denominazione, sede EU, contatti), accettazione del rappresentante.",
+        "Periodicità: designazione comunicata alla SH committente entro 30 gg dalla firma del contratto e aggiornata in caso di cambio.",
+        "Conseguenze del mancato adempimento: sospensione del contratto e dei pagamenti correlati fino a regolarizzazione; diritto di recesso della SH committente oltre 60 gg di persistente inadempimento."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 17 — Indemnification con prova di copertura verificata."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Verso un soggetto extra-UE, l'indemnification senza copertura assicurativa dimostrata è nuda promessa. Il recupero post-contenzioso è statisticamente parziale, lento, e spesso inattuabile. La clausola condiziona l'efficacia dell'indemnification all'esistenza e all'esibizione di copertura."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Manleva del fornitore: il fornitore non-EU si obbliga a tenere indenne la SH committente da qualunque pretesa di terzi derivante da difetto del componente fornito, secondo i limiti del regime PLD applicabile.",
+        "Condizione di efficacia: l'indemnification è efficace e attivabile solo se il fornitore mantiene polizza assicurativa con massimali coerenti con l'esposizione del componente (parametri minimi in allegato), con beneficiario nominato la SH committente, e ne fornisce prova annuale.",
+        "Documentazione: certificato di copertura, traduzione asseverata in italiano se in lingua straniera, validazione del broker EU del fornitore.",
+        "Conseguenze del mancato mantenimento della polizza: sospensione del contratto, attivazione della garanzia patrimoniale di cui alla Clausola 18."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 18 — Foro EU, legge italiana, garanzia patrimoniale."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. La sentenza italiana contro un fornitore extra-UE è spesso lettera morta, salvo accordi internazionali specifici di esecutività. La clausola assicura competenza italiana, legge italiana, e una garanzia patrimoniale prededotta che rende effettiva la rivalsa."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Foro competente: tribunale italiano del luogo di sede della SH committente, in via esclusiva, per qualunque controversia.",
+        "Legge applicabile: legge italiana.",
+        "Garanzia patrimoniale: a scelta delle parti, una tra: (a) escrow account presso istituto EU con deposito di [X% del valore annuo del contratto]; (b) fideiussione bancaria EU di pari importo; (c) deposito cauzionale presso la SH committente di pari importo.",
+        "Liberatorie e svincoli: la garanzia è svincolata alla cessazione del rapporto e alla decorrenza del decennio post-immissione del componente, salva l'attivazione di pretese.",
+        "Esecuzione: la SH committente può escutere la garanzia direttamente in caso di sentenza italiana di condanna del fornitore non onorata entro 60 gg."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "III. Dal punto di vista del professionista firmatario"
+    },
+    {
+      "type": "p",
+      "text": "Il professionista è la parte in posizione strutturalmente più debole, e questo cambia tutto. Le clausole che le altre parti possono pretendere — esibizione polizze, prove di copertura, garanzie patrimoniali — verso la software house il professionista non le ottiene quasi mai. La copertura della SH, in caso di evento PLD reale, andrebbe supposta inadeguata fino a prova contraria."
+    },
+    {
+      "type": "p",
+      "text": "Le tutele del professionista sono perciò interne alla sua condotta personale, non esterne in clausole pretese alla controparte. Si attrezza lui, perché non ha forza per attrezzare la SH."
+    },
+    {
+      "type": "p",
+      "text": "Clausola 19 — Limitazione del perimetro firmato e dissenso scritto sistematico."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Il professionista firma solo ciò che ha effettivamente disegnato; per tutto il resto produce dissenso scritto sistematico. La carta gialla, in giudizio, sposta la posizione di garanzia ex Art. 40 cpv c.p. dall'esecutore al destinatario non corretto. È la tutela operativa più potente, perché non dipende dalla volontà della controparte: dipende dalla propria disciplina documentale."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Atti firmati: esclusivamente atti di design tecnico, sicurezza, integrazione, approvazione rilascio che il professionista ha effettivamente prodotto e di cui condivide le scelte.",
+        "Atti rifiutati alla firma: qualunque atto contenente scelte imposte contro raccomandazione del professionista, design non rivisti, decisioni gestionali non condivise.",
+        "Procedura di dissenso: PEC dal professionista al committente SH (o al cliente, se in rapporto diretto), con oggetto \"Dissenso tecnico — [riferimento progetto/data]\"; contenuto: descrizione scelta, descrizione rischio, raccomandazione alternativa, formula \"procedo come istruito sotto vostra responsabilità\".",
+        "Conservazione personale: copia su email personale del professionista (non sui sistemi SH), archiviata per il decennio PLD post-progetto.",
+        "Frequenza: ogni volta che si rileva rischio, indipendentemente da reazione attesa o storica della controparte."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clausola 20 — Polizza professionale propria, fatta per sé."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. La polizza del professionista non dipende dall'esistenza o adeguatezza della polizza della SH. Si stipula per sé, con parametri adeguati al regime PLD. Se la SH chiede di vederla la mostra (legittimo), ma non attende reciprocità. La polizza è l'unica tutela economica che protegge il patrimonio personale del professionista in caso di evento decennale."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Tipologia: polizza di responsabilità civile professionale individuale, stipulata dal professionista in nome proprio.",
+        "Parametri minimi: massimale per sinistro ≥ 1,5M€; aggregato annuo ≥ 3M€; retroattività piena dalla data di inizio attività professionale; postuma decennale post-cessazione polizza; copertura esplicita per atti del firmatario, AI/algorithmic, posizione di garanzia, profilo penale ex Artt. 589-590 c.p. e 167 Codice Privacy; costi di difesa fuori dal massimale.",
+        "Esclusioni inaccettabili: esclusione del software product, dell'AI, della consulenza, degli atti firmati come responsabile tecnico.",
+        "Broker: preferibilmente tier 1 italiano (Marsh, Aon, WTW) per accesso a wording specializzati.",
+        "Premio orientativo: 7.000-14.000 € l'anno per profili individuali in regulated. Sotto i 4.000 € polizza inadeguata; sopra i 20.000 € over-pricing — confrontare tre offerte."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Una clausola che il professionista può tentare di ottenere — sapendo che spesso non l'avrà."
+    },
+    {
+      "type": "p",
+      "text": "Razionale. L'asimmetria di forza significa che il professionista raramente ottiene impegni formali dalla SH. Tuttavia, chiedere un commitment scritto di indemnification è atto a basso costo e a potenziale ritorno positivo: se la SH accetta, c'è un titolo da esibire in regresso; se rifiuta, è segnale rilevante per la valutazione del rapporto."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Oggetto della richiesta: impegno scritto della SH a indennizzare il professionista per esposizioni economiche o legali derivanti da decisioni gestionali, commerciali, o di compromesso architetturale imposte contro raccomandazione documentata.",
+        "Forma: clausola contrattuale o lettera di accompagnamento al contratto, firmata dal legale rappresentante della SH.",
+        "Effetto in caso di accettazione: titolo opponibile in regresso, anche se non garantisce capienza patrimoniale o assicurativa effettiva della SH.",
+        "Effetto in caso di rifiuto: il professionista valuta se proseguire il rapporto in assenza dell'impegno, considerando il rifiuto come elemento di profilo di rischio del committente."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Una scorciatoia che molti credono risolutiva — il caso \"B2B senza dati personali\""
+    },
+    {
+      "type": "quote",
+      "text": "Il GM: \"Ho messo nel contratto che il cliente non può inserire dati personali. Il software è B2B puro. Quindi la PLD non si applica, l'AI Act nemmeno, e per la polizza basta una RC professionale base. Sono coperto.\""
+    },
+    {
+      "type": "p",
+      "text": "È una delle convinzioni più diffuse nelle software house italiane in questa fase. È in parte vera e in parte falsa, e la differenza tra le due parti è quello che separa una clausola legittima da una scorciatoia che non funziona. Vale la pena dedicarci una sezione, perché chi la usa pensando di disinnescare la PLD si espone esattamente come prima — solo, in più, ha pagato un legale per scrivere una clausola che non lo protegge."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Dove la clausola NON funziona"
+    },
+    {
+      "type": "p",
+      "text": "Razionale. La PLD 2024 all'Art. 6 definisce i danni risarcibili e include: morte o lesioni personali (incluso il danno psicologico medicalmente riconosciuto); danno o distruzione di beni del consumatore; distruzione o corruzione di dati personali e non personali, ad eccezione dei dati usati esclusivamente per scopi professionali. La clausola \"no dati personali\" tocca quindi solo una parte del perimetro di danno coperto dalla PLD."
+    },
+    {
+      "type": "p",
+      "text": "I punti dove la clausola non disattiva niente:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Lesioni a persone fisiche. Se il software B2B provoca un malfunzionamento che causa lesioni, morte, o danno psicologico — anche a persone diverse dal cliente diretto (operatori, utenti finali del cliente, terzi) — la PLD si applica per intero. Un esempio: un sistema di gestione magazzino B2B che, per difetto, fa cadere uno scaffale e ferisce un magazziniere. PLD attiva, indipendentemente dalla clausola.",
+        "Danni a beni. Un software B2B che gestisce impianti industriali e, per difetto, danneggia macchinari o prodotti — danno a beni risarcibile ex Art. 6.",
+        "Dati personali presenti comunque. In un sistema B2B \"puro\" i dati personali entrano comunque: nomi degli utenti operatori, log di accesso, indirizzi email aziendali (che sono dati personali ex GDPR quando riconducibili a persona fisica), metadata di sessione, ticket di supporto, conversazioni in chat integrate. La clausola può vietare al cliente di inserire dati personali di consumatori finali — non può vietare l'esistenza dei dati personali strutturali al funzionamento del sistema.",
+        "AI Act. Se il sistema è high-risk ex Annex III dell'AI Act (gestione lavoratori, accesso a servizi essenziali, valutazione persone) lo è per la sua funzione, non per la natura B2B del cliente diretto. Un sistema AI che valuta dipendenti del cliente è high-risk anche se i dati restano \"interni\" al cliente.",
+        "Verso il danneggiato finale, l'Art. 15 PLD chiude lo spazio. Quando il danneggiato agisce direttamente, le clausole interne tra fornitore e cliente non lo riguardano.",
+        "L'underwriter non sconta sulla clausola. Nessun broker tier 1 italiano prezza la polizza al ribasso perché c'è una clausola \"B2B no dati personali\" nel contratto cliente-fornitore. Prezza l'esposizione effettiva del software (cosa fa, dove gira, chi lo usa, cosa può andare male), e quell'esposizione resta strutturale al prodotto."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Dove la clausola FUNZIONA — se ben formulata"
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Una clausola di destinazione d'uso B2B con divieto di inserimento di dati di consumatori, pur non disattivando la PLD, ha tre effetti reali, utili e tra le parti opponibili. Qualifica il prodotto come destinato all'uso professionale (rilevante per Art. 6 lettera c sui dati usati per scopi professionali). Sposta tra le parti la responsabilità in caso di uso difforme del cliente — se il cliente viola la clausola e immette dati personali di consumatori, e da quell'uso difforme deriva un danno, l'indemnification tra le parti opera. Documenta la diligenza del fornitore nel limitare lo scope, utile in difesa."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale (clausola ben fatta)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Destinazione d'uso: il Prodotto è progettato e fornito per uso esclusivamente B2B nei rapporti tra il Cliente e le proprie controparti professionali. Esclude espressamente il trattamento di dati personali di consumatori, intesi come persone fisiche al di fuori della loro attività imprenditoriale, commerciale, artigianale o professionale.",
+        "Obbligo del Cliente: il Cliente si impegna a non utilizzare il Prodotto per il trattamento di dati personali di consumatori e a non immettere nel sistema dati personali di tale natura.",
+        "Indemnification del Cliente verso il Fornitore: l'uso difforme costituisce inadempimento contrattuale del Cliente e attiva indemnification piena del Cliente verso il Fornitore per ogni pretesa di terzi correlata, fermo restando l'obbligo del Cliente di mantenere copertura assicurativa adeguata.",
+        "Limite invalicabile dichiarato: \"Le parti riconoscono espressamente che la presente clausola di destinazione d'uso opera esclusivamente nei rapporti interni tra Fornitore e Cliente e non incide sulla responsabilità del fabbricante verso danneggiati finali ai sensi dell'art. 15 della Direttiva UE 2024/2853 e della relativa norma di recepimento italiana. La presente clausola non riduce inoltre la responsabilità del Fornitore per danni a persone, a beni del consumatore, o per uso del Prodotto in scenari coperti dalla normativa AI Act in vigore.\"",
+        "Conseguenze: la clausola opera tra le parti in caso di uso difforme del Cliente; non opera verso terzi danneggiati e non riduce i requisiti assicurativi delle parti rispetto al regime PLD applicabile."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Conseguenza per chi pensava di risparmiare sulla polizza"
+    },
+    {
+      "type": "p",
+      "text": "La clausola B2B non riduce il premio assicurativo della software house né del professionista firmatario. La polizza resta quella adeguata al regime PLD, perché l'esposizione resta. Quello che la clausola riduce è la probabilità di un certo sottoinsieme di scenari (uso del software per dati personali di consumatori), e questo entra marginalmente nella valutazione del rischio dell'underwriter — non è uno sconto, è un elemento di profilo."
+    },
+    {
+      "type": "p",
+      "text": "Chi ha venduto al GM la narrazione \"metti la clausola B2B e risparmi sulla polizza\" gli ha venduto una scorciatoia che non funziona. La clausola B2B ben fatta è uno strumento utile tra le parti. La copertura assicurativa adeguata al regime PLD è uno strumento separato e necessario. Servono entrambi, e nessuno dei due elimina l'altro."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "IV. La copertura assicurativa — l'altra metà del lavoro"
+    },
+    {
+      "type": "p",
+      "text": "Le venti clausole sono lo strato visibile della tutela. La polizza è lo strato che paga quando le clausole non bastano. Per il regime PLD 2024, la polizza professionale standard del mercato italiano IT non è adeguata: è strutturata per il rischio commerciale ordinario, non per il regime decennale del prodotto difettoso."
+    },
+    {
+      "type": "p",
+      "text": "Questa parte indica cosa pretendere nella copertura, da ciascuna delle tre posizioni. Non è fac-simile di polizza: è la specifica tecnica che si porta al broker per ottenere quotazioni comparabili."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Premessa metodologica — il broker conta più della compagnia"
+    },
+    {
+      "type": "p",
+      "text": "Una polizza adeguata al regime PLD si negozia, non si compra a catalogo. I broker tier 1 italiani — Marsh, Aon, WTW — hanno wording specializzati per software e hanno il volume di mercato per negoziare condizioni che broker più piccoli non riescono a ottenere. Per profili professionali individuali e per software house medie, il salto qualitativo tra polizza retail e polizza intermediata tier 1 è strutturale."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "A. La polizza della software house"
+    },
+    {
+      "type": "p",
+      "text": "Razionale. La SH ha esposizione primaria come fabbricante ex Art. 8 PLD per dieci anni post-immissione del prodotto, con responsabilità solidale nella catena. Senza copertura adeguata, il primo evento è esistenziale. La polizza professionale standard italiana non basta: serve costruzione specializzata con buy-back delle esclusioni rilevanti e estensioni mirate."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale (specifica tecnica da portare al broker)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Tipologia: RC professionale + RC prodotto, polizza unica integrata o polizze coordinate senza gap.",
+        "Massimali: per sinistro ≥ 2M€ (mid-market regulated standard); ≥ 5M€ per progetti enterprise mission-critical (sanità, aviation, finance); aggregato annuo ≥ 2x il massimale per sinistro.",
+        "Retroattività: piena, dalla data di inizio attività della SH o dalla prima immissione di prodotto sul mercato.",
+        "Postuma: decennale dalla cessazione della polizza, per sinistri denunciati nei dieci anni successivi relativi a eventi accaduti durante la copertura.",
+        "Estensioni esplicite (buy-back): software product liability; AI / algorithmic liability con definizione contrattuale di \"sistema AI\" coerente con AI Act; cyber liability (data breach, malfunzionamento da attacco); bodily injury derivante da malfunzionamento software (rilevante in healthcare/aviation/automotive).",
+        "Costi di difesa: fuori dal massimale (in aggiunta, non in detrazione).",
+        "Foro assicurativo: italiano.",
+        "Esclusioni accettabili: dolo, atti illeciti penalmente rilevanti accertati con sentenza definitiva, sanzioni amministrative dirette.",
+        "Esclusioni da rifiutare e reintrodurre come buy-back: software, AI, cyber, prodotto immesso sul mercato, attività di consulenza, errore u omissione, contaminazione dati.",
+        "Premio orientativo: 15.000-40.000 € l'anno per software house mid-market regulated (5-20 dipendenti, fatturato 1-5M€, esposizione regulated). Per software house non-regulated B2B ordinario di pari dimensione: 6.000-15.000 € l'anno. Sotto 10.000 € regulated o sotto 4.000 € non-regulated, sotto-copertura strutturale quasi certa; sopra 50.000 € probabilmente over-pricing — chiedere quotazioni a tre broker."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "B. La polizza del professionista firmatario"
+    },
+    {
+      "type": "p",
+      "text": "Razionale. Il professionista ha posizione di garanzia ex Art. 40 cpv c.p. sugli atti firmati, esposizione PLD come componente manufacturer (se è componente nel senso esteso della direttiva), responsabilità GDPR sui trattamenti che disegna, profilo penale personale ex Art. 27 Cost. La polizza copre tutto questo solo se costruita con i parametri giusti: la polizza professionale standard italiana non li ha di default."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Tipologia: RC professionale individuale, con estensioni mirate al ruolo di firmatario tecnico in regulated.",
+        "Massimali: per sinistro ≥ 1,5M€; aggregato annuo ≥ 3M€. Per profili più esposti (CTO fractional, principal architect con progetti mission-critical), ≥ 2M€ / 4M€.",
+        "Retroattività: piena, dalla data di inizio attività professionale.",
+        "Postuma: decennale post-cessazione polizza. Critico: senza postuma, il professionista che cessa l'attività (pensione, cambio carriera) resta scoperto per il decennio successivo con il patrimonio personale esposto.",
+        "Estensioni esplicite: atti del firmatario / posizione di garanzia; AI / algorithmic liability esplicita; cyber liability; difesa penale per Artt. 589-590 c.p. (lesioni / omicidio colposi) e Artt. 167 ss. Codice Privacy; consulenza in regulated.",
+        "Costi di difesa: fuori dal massimale.",
+        "Esclusioni inaccettabili: software product, AI, atti firmati come responsabile tecnico, attività di consulenza.",
+        "Premio orientativo: 7.000-14.000 € l'anno per profili individuali in regulated (Principal Architect, Fractional CTO, Senior AI Architect, Innovation Manager con sign-off su sistemi). Per profili individuali non-regulated B2B ordinario: 3.000-7.000 € l'anno. Sotto 4.000 € regulated o sotto 2.000 € non-regulated, polizza inadeguata; sopra 20.000 € per profili individuali over-pricing — confrontare tre offerte."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "C. Il caso particolare — quando software house e professionista coincidono"
+    },
+    {
+      "type": "p",
+      "text": "Razionale. È il caso del professionista che è anche amministratore unico (e socio unico) della propria SRL operativa, del dipendente che è anche socio operativo della SH, o del freelance che opera attraverso struttura SRL unipersonale. È il caso più diffuso in Italia nel segmento mid-market consulenziale. La cumulazione di ruoli azzera l'efficacia delle clausole di indemnification interne — non si manleva se stessi — e in giudizio il velo della SRL unipersonale si rompe più facilmente. La strategia di tutela cambia: meno contrattualistica interna, più copertura assicurativa pesante."
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Tipologia: polizza unica che copre simultaneamente l'attività della società (SH come fabbricante ex Art. 8 PLD) e la persona fisica come professionista firmatario (posizione di garanzia ex Art. 40 cpv c.p.).",
+        "Wording critico: identificazione esplicita dei due ruoli nel testo polizza, con definizione di \"Assicurato\" che include sia la società sia la persona fisica nei rispettivi ruoli, senza esclusioni reciproche.",
+        "Massimali: dimensionati al cumulo, non al singolo profilo. Per sinistro ≥ 3M€; aggregato annuo ≥ 6M€. Per profili con esposizione enterprise, ≥ 5M€ / 10M€.",
+        "Estensione D&O (Directors & Officers): copertura della responsabilità ex Art. 2476 c.c. dell'amministratore unico verso terzi e creditori sociali. Estensione non inclusa nella polizza professionale standard, va negoziata.",
+        "Audit trail di separazione documentale degli atti: anche se è la stessa persona fisica, gli atti come \"SH\" (firma sociale, decisioni gestionali, fatturazione) e gli atti come \"professionista firmatario\" (firma tecnica, audit di sicurezza, accettazione rilascio) devono restare documentalmente separati nel sistema interno. Senza separazione, in giudizio il velo si rompe e i due ruoli sono indistinguibili.",
+        "Esclusioni inaccettabili: tutte quelle dei punti A e B più \"atti del socio unico\" e \"atti dell'amministratore unico\" come categorie residuali.",
+        "Premio orientativo: 20.000-35.000 € l'anno per il caso coincidente con profilo regulated, in funzione di fatturato (1-3M€) ed esposizione. Per il caso coincidente non-regulated B2B ordinario: 8.000-18.000 € l'anno. Sotto 15.000 € regulated o sotto 6.000 € non-regulated, sotto-copertura strutturale; sopra 50.000 € over-pricing per profili mid-market — confrontare tre offerte."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Il limite comune a clausole e polizza"
+    },
+    {
+      "type": "p",
+      "text": "Tra le parti — cliente, software house, professionista — l'autonomia contrattuale ha spazio significativo. La polizza copre quello che le clausole hanno allocato. Verso il danneggiato finale, la PLD 2024 attraverso l'Art. 15 chiude lo spazio: la responsabilità del fabbricante non può essere limitata o esclusa contrattualmente, e ogni clausola in tal senso è nulla."
+    },
+    {
+      "type": "p",
+      "text": "Nessuna delle venti clausole e nessuna estensione di polizza, viste da cliente, da software house, da professionista, ferma il contenzioso diretto del danneggiato. Tutte regolano come le parti si ripartiscono internamente il costo. La polizza paga quello che ciascuna parte deve pagare in base alle proprie obbligazioni e ripartizioni. Nessuna delle due strutture, anche perfettamente costruita, evita il contenzioso."
+    },
+    {
+      "type": "p",
+      "text": "Quello che le due strutture insieme fanno è rendere sostenibile il decennio PLD per chi è nella catena. Quando arriva l'evento — e in dieci anni arriva, in qualche forma — c'è una struttura contrattuale che alloca, e c'è una copertura economica che paga. Senza una delle due componenti, l'altra non basta. Senza nessuna delle due, l'evento è esistenziale per la persona o per l'azienda colpita."
+    },
+    {
+      "type": "p",
+      "text": "Riconoscere questo limite è la prima clausola, quella di onestà intellettuale. Chi vende \"modelli contrattuali blindati\" o \"polizze che coprono tutto\" sta vendendo l'illusione che il diritto non c'è. La combinazione vincente è altra: clausole interne ben scritte + copertura assicurativa adeguata + processo operativo documentato + ognuna delle tre parti che si attrezza in modo coerente con la propria posizione di forza nella catena."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Tre domande, una per ogni prospettiva"
+    },
+    {
+      "type": "p",
+      "text": "Per il cliente. Hai mappato quali clausole stai firmando senza accorgerti, e pretendi esibizione annuale della polizza professionale del fornitore con i parametri minimi del regime PLD?"
+    },
+    {
+      "type": "p",
+      "text": "Per la software house. I tuoi modelli contrattuali standard verso cliente, professionista e fornitore non-EU sono allineati al regime decennale? E la tua polizza copre le estensioni della Parte IV-A con il premio nell'ordine di grandezza indicato?"
+    },
+    {
+      "type": "p",
+      "text": "Per il professionista. Stai agendo come se la polizza della software house ti coprisse, o come se non ci fosse? La differenza la fa la propria polizza, fatta per sé con i parametri della Parte IV-B, e l'audit trail personale fuori dai sistemi della controparte."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Considerazione di chiusura"
+    },
+    {
+      "type": "p",
+      "text": "Le venti clausole e la polizza, viste dai tre lati, non sono lo stesso oggetto. Sono lo stesso testo e la stessa copertura che proteggi o subisci in funzione di dove sei nella catena. Il cliente forte impone, la software house alloca, il professionista si attrezza dentro un'asimmetria che la legge non corregge."
+    },
+    {
+      "type": "p",
+      "text": "Il livello operativo trattato in questo articolo è quello contrattuale-assicurativo. Esiste un livello adiacente — il livello architetturale, cioè come si progettano i sistemi affinché le clausole siano sostenibili in produzione — che è materia distinta e che altre voci nel dibattito europeo trattano in modo specifico. I due livelli si incontrano nei progetti reali: l'architettura crea le condizioni per cui le clausole sono onorabili, le clausole regolano i confini economici e giuridici, la polizza paga quando le clausole non bastano. Manca uno dei tre, e gli altri due non bastano."
+    },
+    {
+      "type": "p",
+      "text": "Il prossimo articolo della serie affronta la RACI come strumento di governance interna alla software house: quanto la responsabilizzazione formale dei ruoli protegge davvero in caso di contenzioso PLD, e quanto invece è formalismo che si dissolve davanti alla prima ricostruzione ex post del giudice."
+    }
+  ]
+}

@@ -1,4 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { BASE_URL } from "@/app/schema-org";
+import { breadcrumbSchema } from "@/app/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { formatDate, getImportedArticles, isoDay, readingMinutes } from "@/lib/imported-articles";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
@@ -19,54 +24,89 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.dynamicsconsulting.it/research/editorial-series" },
 };
 
-const articles = [
-  {
-    category: "Article VI · Contracts & Insurance",
-    title: "The twenty clauses and the policy, seen from three sides",
-    subtitle:
-      "Client, software house, signing professional: contracts and insurance coverage in asymmetric power dynamics.",
-    href: "https://www.linkedin.com/pulse/contratti-e-polizza-nel-regime-pld-2024-venti-tre-una-patierno-pucxf/",
-  },
-  {
-    category: "Article V · International configurations",
-    title: "Jurisdictional flight and its limits",
-    subtitle:
-      "Brussels I bis, Rome II, corporate veil piercing, criminal liability under Italian Constitution Art. 27.",
-    href: "https://www.linkedin.com/pulse/la-fuga-giurisdizionale-e-perch%C3%A9-non-esiste-corrado-patierno-vmlnf/",
-  },
-  {
-    category: "Article IV · Vulnerability management",
-    title: "Reasonable diligence and defensible timelines under PLD 2024",
-    subtitle:
-      "CVE classification, patching windows, the limit of Art. 15 PLD on contractual transfer of liability.",
-    href: "https://www.linkedin.com/pulse/pld-2024-vulnerability-management-e-gestione-cve-corrado-patierno-gipff/",
-  },
-  {
-    category: "Article III · The decade that changes everything",
-    title: "Software-house liability after PLD 2024",
-    subtitle:
-      "How the new directive restructures the ten-year horizon of producer responsibility for software products.",
-    href: "https://www.linkedin.com/pulse/pld-2024-il-decennio-che-cambia-tutto-responsabilit%C3%A0-della-patierno-mwe1f/",
-  },
-  {
-    category: "Article II · Five-plus-one development scenarios",
-    title: "The 5+1 scenarios and the clauses that matter to each",
-    subtitle:
-      "Bespoke build, SaaS, custom integration, IP licensing, open source, embedded systems — how PLD 2024 maps to each.",
-    href: "https://www.linkedin.com/pulse/pld-2024-i-5-1-scenari-di-sviluppo-software-e-le-che-per-patierno-ffvue/",
-  },
-  {
+/**
+ * The series lives on this domain now: the six articles were imported in full
+ * from LinkedIn (scripts/import-linkedin-articles.mjs) and are served from
+ * /research/<slug>, with the LinkedIn original linked as the place they first
+ * appeared. The English framing of each piece is kept here — the articles
+ * themselves are in Italian, as written.
+ */
+const framing: Record<string, { category: string; title: string; subtitle: string }> = {
+  "pld-2024-sette-cambi-strutturali": {
     category: "Article I · The seven structural shifts",
     title: "PLD 2024 — the seven structural changes that redefine the sector",
     subtitle:
-      "Software as a product, software updates as a producer obligation, ten-year retroactive liability, defect presumptions, evidence asymmetry, joint liability, and component liability.",
-    href: "https://www.linkedin.com/pulse/pld-2024-i-sette-cambi-strutturali-che-ridefiniscono-il-patierno-avhrf/",
+      "Software as a product, software updates as a producer obligation, ten-year liability, defect presumptions, evidence asymmetry, joint liability, and component liability.",
   },
+  "pld-2024-cinque-piu-uno-scenari": {
+    category: "Article II · Five-plus-one development scenarios",
+    title: "The 5+1 scenarios and the exposures each one generates",
+    subtitle:
+      "Bespoke build, SaaS, custom integration, IP licensing, open source, embedded systems — and what each means for the software house, its employees and its external consultants.",
+  },
+  "pld-2024-decennio-responsabilita": {
+    category: "Article III · The decade that changes everything",
+    title: "Joint liability, insolvency, and why run-off cover becomes structural",
+    subtitle:
+      "How the directive restructures the ten-year horizon of producer responsibility for software products.",
+  },
+  "pld-2024-vulnerability-management-cve": {
+    category: "Article IV · Vulnerability management",
+    title: "Reasonable diligence and defensible timelines under PLD 2024",
+    subtitle:
+      "CVE classification, patching windows, and the limit Article 15 places on transferring liability by contract.",
+  },
+  "pld-2024-fuga-giurisdizionale": {
+    category: "Article V · International configurations",
+    title: "Jurisdictional flight, and why it does not exist",
+    subtitle:
+      "Brussels I bis, Rome II, corporate veil piercing, and criminal liability under Article 27 of the Italian Constitution.",
+  },
+  "pld-2024-contratti-e-polizza": {
+    category: "Article VI · Contracts & insurance",
+    title: "Twenty clauses and the policy, seen from three sides",
+    subtitle:
+      "Client, software house, signing professional: contracts and insurance cover in asymmetric power dynamics.",
+  },
+};
+
+const articles = getImportedArticles().map((a) => ({
+  ...a,
+  ...(framing[a.slug] ?? { category: a.series ?? "", title: a.title, subtitle: a.standfirst }),
+  href: `/research/${a.slug}`,
+}));
+
+const crumbs = breadcrumbSchema(`${BASE_URL}/research/editorial-series`, [
+  { name: "Home", path: "/" },
+  { name: "Research", path: "/research" },
+  { name: "Editorial series" },
+]);
+
+const seriesSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${BASE_URL}/research/editorial-series#webpage`,
+    url: `${BASE_URL}/research/editorial-series`,
+    name: "Editorial series — PLD 2024 & AI governance",
+    inLanguage: "en",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: articles.map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: a.title,
+        url: `${BASE_URL}${a.href}`,
+      })),
+    },
+  },
+  crumbs,
 ];
 
 export default function EditorialSeriesPage() {
   return (
     <>
+      <JsonLd data={seriesSchema} />
       <NavBar />
       <main>
       <section className="hero-constellation pt-32 pb-16">
@@ -91,11 +131,9 @@ export default function EditorialSeriesPage() {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {articles.map((a) => (
-              <a
-                key={a.href}
+              <Link
+                key={a.slug}
                 href={a.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group flex flex-col gap-4 bg-[#161B22] border border-[#30363D] rounded-xl p-6 hover:border-[#00B4D8] transition-colors duration-200"
               >
                 <p className="text-[#00B4D8] text-[10px] font-mono font-medium tracking-[0.15em] uppercase">
@@ -105,17 +143,23 @@ export default function EditorialSeriesPage() {
                   {a.title}
                 </h3>
                 <p className="text-[#7D8FA3] text-sm leading-relaxed flex-1">{a.subtitle}</p>
+                <p className="text-[#7D8FA3] text-xs font-mono">
+                  <time dateTime={isoDay(a.datePublished)}>
+                    {formatDate(a.datePublished, "en")}
+                  </time>{" "}
+                  · {readingMinutes(a.words)} min · in Italian
+                </p>
                 <span className="text-[#00B4D8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
-                  Read on LinkedIn →
+                  Read the article →
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
 
           <p className="mt-12 text-[#7D8FA3] text-sm leading-relaxed max-w-2xl">
-            The series is published progressively on LinkedIn. Full archive of articles will be
-            consolidated on this page over time, with canonical links to the original LinkedIn
-            posts to preserve SEO attribution.
+            The six articles are published here in full, in the Italian they were written in. Each
+            one first appeared on LinkedIn and links back to that original; this domain is the
+            archive of record, and the canonical version of every piece is the one on this site.
           </p>
         </div>
       </section>

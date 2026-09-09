@@ -149,7 +149,7 @@ export default function HomePage() {
       {/* Section 9 — Final CTA */}
       <CTASection
         title="Where does your supplier’s liability stop, and yours begin?"
-        subtitle="From 9 December 2026 the European product liability directive treats software as a product. The exposure assessment establishes, for your organisation, where the boundary sits."
+        subtitle="The revised European product liability directive includes software among products and applies to products placed on the market or put into service from 9 December 2026. The exposure assessment establishes, for your organisation, where the boundary sits."
         ctaLabel="Exposure assessment →"
         ctaHref="/assessment"
       />

@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { ANSWER_LIST } from "./answers";
 import { RESEARCH_ARTICLES } from "./research-articles";
+import { getImportedArticles, isoDay } from "@/lib/imported-articles";
 
 const BASE_URL = "https://www.dynamicsconsulting.it";
 
@@ -91,6 +92,14 @@ const researchRoutes: Route[] = Object.values(RESEARCH_ARTICLES).map((a) => ({
   lastModified: "2026-09-09",
 }));
 
+/** The PLD series, imported from LinkedIn: lastmod is the article's own date. */
+const importedRoutes: Route[] = getImportedArticles().map((a) => ({
+  path: `/research/${a.slug}`,
+  priority: 0.7,
+  changeFrequency: "yearly",
+  lastModified: isoDay(a.dateModified ?? a.datePublished),
+}));
+
 const answerRoutes: Route[] = ANSWER_LIST.map((a) => ({
   path: `/answers/${a.slug}`,
   priority: 0.7,
@@ -99,7 +108,7 @@ const answerRoutes: Route[] = ANSWER_LIST.map((a) => ({
 }));
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [...routes, ...researchRoutes, ...answerRoutes].map((route) => ({
+  return [...routes, ...researchRoutes, ...importedRoutes, ...answerRoutes].map((route) => ({
     url: route.path === "/" ? `${BASE_URL}/` : `${BASE_URL}${route.path}`,
     lastModified: new Date(route.lastModified),
     changeFrequency: route.changeFrequency,

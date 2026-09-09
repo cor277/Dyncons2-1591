@@ -104,7 +104,13 @@ One question per page, answered in the opening block, with primary sources
 - [AI Reverse Engineering of Legacy Platforms](${BASE_URL}/research/ai-reverse-engineering)
 - [Event Sourcing in Practice](${BASE_URL}/research/event-sourcing)
 - [Legge 132/2025 e AI in Sanità: cosa cambia](${BASE_URL}/research/legge-132-2025): In Italian.
-- [Editorial Series — PLD 2024 & AI Governance](${BASE_URL}/research/editorial-series)
+- [Editorial series — PLD 2024 & AI governance](${BASE_URL}/research/editorial-series): Six articles on the revised product liability directive, written by Corrado Patierno and published here in full, in Italian. They first appeared on LinkedIn; this domain is the archive of record and carries the canonical version.
+- [PLD 2024: i sette cambi strutturali](${BASE_URL}/research/pld-2024-sette-cambi-strutturali): Article I — software as a product, ten-year liability, security maintenance, customisations as new releases, individual technical accountability, supply chain traceability.
+- [PLD 2024: i 5+1 scenari di sviluppo software](${BASE_URL}/research/pld-2024-cinque-piu-uno-scenari): Article II — the exposure each development model generates for the software house, its employees and its external consultants.
+- [PLD 2024: il decennio che cambia tutto](${BASE_URL}/research/pld-2024-decennio-responsabilita): Article III — joint liability, insolvency of the producer, and run-off cover.
+- [PLD 2024: vulnerability management e gestione CVE](${BASE_URL}/research/pld-2024-vulnerability-management-cve): Article IV — reasonable diligence, patching windows, and the limit Article 15 places on transferring liability by contract.
+- [La fuga giurisdizionale, e perché non esiste](${BASE_URL}/research/pld-2024-fuga-giurisdizionale): Article V — Brussels I bis, Rome II, corporate veil, criminal liability.
+- [Contratti e polizza nel regime PLD 2024](${BASE_URL}/research/pld-2024-contratti-e-polizza): Article VI — twenty contract clauses and the insurance policy, read from the client's, the software house's and the signing professional's side.
 - [EU Cloud and AI Development Act (CADA) — the four Union assurance levels](${BASE_URL}/tech-sovereignty): Analysis of COM(2026) 502 final of 3 June 2026: what Annex II asks at each assurance level, who must procure which level, the software supply chain criteria it shares with the CRA and PLD 2024, and how it sits beside the AI Act. It is a proposal, not adopted law, and the page says so.
 - [Research index](${BASE_URL}/research)
 

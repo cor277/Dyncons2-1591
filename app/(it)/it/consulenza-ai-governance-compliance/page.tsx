@@ -245,9 +245,9 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
             </p>
             <p className="mt-4">
               Si dà per scontato che la responsabilità sia del fornitore, e il contratto non lo
-              dice. Dal 9 dicembre 2026 la direttiva europea sulla responsabilità da prodotto
-              include il software fra i prodotti, e questo cambia quanto vale una clausola di
-              limitazione.
+              dice. La direttiva europea sulla responsabilità da prodotto include il software fra
+              i prodotti, per quelli immessi sul mercato o messi in servizio dal 9 dicembre 2026, e
+              questo cambia quanto vale una clausola di limitazione.
             </p>
           </div>
         </section>
@@ -552,8 +552,9 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
               Dove si ferma la responsabilit&agrave; del tuo fornitore, e dove comincia la tua?
             </h2>
             <p className="text-[#7D8FA3] text-lg leading-relaxed mb-8">
-              Dal 9 dicembre 2026 la direttiva europea sulla responsabilit&agrave; da prodotto
-              include il software fra i prodotti. L&apos;assessment di esposizione stabilisce, per
+              La direttiva europea sulla responsabilit&agrave; da prodotto include il software fra i
+              prodotti e si applica a quelli immessi sul mercato o messi in servizio dal 9 dicembre
+              2026. L&apos;assessment di esposizione stabilisce, per
               la tua organizzazione, dove passa il confine — ed è da lì che parte quasi ogni
               incarico di governance.
             </p>

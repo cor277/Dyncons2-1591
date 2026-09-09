@@ -1,0 +1,360 @@
+{
+  "slug": "pld-2024-decennio-responsabilita",
+  "lang": "it",
+  "title": "PLD 2024: il decennio che cambia tutto. Responsabilità solidale, fallimento della software house, e perché il run-off cover diventa elemento struttura",
+  "standfirst": "Terzo articolo della serie sulla PLD 2024 e le software house italiane. Nota epistemica: ricostruzione del testo della direttiva applicato a modelli operativi tipici.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-05-12T06:50:35.000+00:00",
+  "dateModified": "2026-05-12T06:50:49.000+00:00",
+  "series": "Article III · The decade that changes everything",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/pld-2024-il-decennio-che-cambia-tutto-responsabilit%C3%A0-della-patierno-mwe1f"
+  },
+  "importedAt": "2026-09-09",
+  "words": 3044,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Corrado Patierno"
+    },
+    {
+      "type": "p",
+      "text": "Terzo articolo della serie sulla PLD 2024 e le software house italiane."
+    },
+    {
+      "type": "p",
+      "text": "Nota epistemica: ricostruzione del testo della direttiva applicato a modelli operativi tipici. Non costituisce parere legale."
+    },
+    {
+      "type": "p",
+      "text": "Nei primi due articoli della serie ho mappato i sette cambi strutturali che la PLD 2024 introduce e i sei scenari di sviluppo software con le rispettive esposizioni. Era materia di posizionamento: dove ti collochi, cosa cambia per te, come si distribuisce la responsabilità tra software house, dipendenti, consulenti esterni."
+    },
+    {
+      "type": "p",
+      "text": "Questo articolo affronta tre questioni che emergono solo quando smetti di guardare la fotografia statica e cominci a guardare il film. Tre questioni che hanno in comune un asse temporale lungo dieci anni e che producono esposizioni concrete, calcolabili in numeri, e oggi quasi del tutto non gestite dal mercato italiano dello sviluppo software."
+    },
+    {
+      "type": "p",
+      "text": "La prima è la responsabilità solidale (Art. 12 della direttiva). Cosa significa concretamente quando il fabbricante e il produttore di componente rispondono in solido verso il danneggiato. Chi paga, in che misura, in quale ordine. Cosa succede quando un coobbligato è insolvibile e l'esposizione si concentra sull'altro."
+    },
+    {
+      "type": "p",
+      "text": "La seconda è il fallimento della software house durante il decennio di responsabilità. La SH chiude, fallisce, o cessa attività mentre il prodotto è ancora in produzione presso il cliente. Cosa succede agli architect, sviluppatori, consulenti esterni coobbligati. Spoiler: la responsabilità non si estingue con la SH."
+    },
+    {
+      "type": "p",
+      "text": "La terza è il run-off cover assicurativo, elemento che oggi quasi nessuna polizza professionale italiana incorpora correttamente, e che diventa requisito strutturale del contratto del professionista tecnico esterno post-PLD."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Responsabilità solidale: il meccanismo concreto"
+    },
+    {
+      "type": "p",
+      "text": "L'Art. 12 della Direttiva 2024/2853 stabilisce il principio: quando due o più operatori economici sono responsabili dello stesso danno ai sensi della direttiva, la loro responsabilità è solidale. Il danneggiato può agire contro uno qualsiasi di essi per ottenere il risarcimento integrale."
+    },
+    {
+      "type": "p",
+      "text": "Il principio è semplice. Le sue conseguenze pratiche sono dure."
+    },
+    {
+      "type": "p",
+      "text": "Il danneggiato sceglie chi citare. Non c'è una gerarchia tra coobbligati che il danneggiato debba seguire. Non deve \"prima esaurire\" il fabbricante prima di poter agire contro il produttore di componente. Sceglie liberamente. La scelta razionale del danneggiato è dettata da tre criteri concorrenti: chi è più solvibile, chi è più raggiungibile, chi è più facilmente attaccabile sul piano probatorio."
+    },
+    {
+      "type": "p",
+      "text": "Nei casi di danno significativo, dove il risarcimento atteso può raggiungere centinaia di migliaia o milioni di euro, la valutazione del danneggiato sarà condotta da legali specializzati che faranno preventiva analisi patrimoniale dei coobbligati. Citeranno chi ha capitale, polizza, asset aggredibili. Non chi è \"tecnicamente più responsabile\"."
+    },
+    {
+      "type": "quote",
+      "text": "Il regresso interno arriva dopo. Una volta che un coobbligato ha pagato il danneggiato, può esercitare regresso verso gli altri coobbligati nei limiti delle rispettive responsabilità interne. Ma il regresso è successivo al pagamento, è azione autonoma con i suoi tempi e i suoi costi processuali, e richiede che gli altri coobbligati siano effettivamente solvibili al momento del regresso."
+    },
+    {
+      "type": "p",
+      "text": "Nei casi peggiori, il coobbligato che paga il danneggiato non recupera nulla dagli altri perché nel frattempo sono falliti, hanno cessato attività, o sono diventati irreperibili. È esattamente lo scenario che il decennio di responsabilità rende strutturalmente probabile, vista la durata."
+    },
+    {
+      "type": "p",
+      "text": "Il \"responsabile interno\" non coincide con il \"responsabile esterno\". Tra fabbricante (la SH) e produttore di componente (il consulente esterno freelance), può esistere un accordo contrattuale che attribuisce la responsabilità interna a uno dei due, o che prevede indennità reciproche. Quell'accordo regola il rapporto tra di loro, non opera verso il danneggiato. Il danneggiato cita chi vuole, e il regresso interno tra le parti viene poi."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "I tre scenari concreti del regresso solidale"
+    },
+    {
+      "type": "p",
+      "text": "Vale la pena articolare con casi reali."
+    },
+    {
+      "type": "p",
+      "text": "Scenario uno: SH solvibile, freelance solvibile."
+    },
+    {
+      "type": "p",
+      "text": "Data breach causa danno di 400.000 euro a terzo danneggiato (ad esempio, una associazione di consumatori che raccoglie più utenti coinvolti). La SH ha capitale sociale di 100.000 euro, ricavi annui di 2 milioni, polizza RC professionale con massimale 2 milioni. Il consulente esterno freelance che ha prodotto il container vulnerabile ha polizza RC professionale con massimale 1,5 milioni."
+    },
+    {
+      "type": "p",
+      "text": "Il danneggiato cita la SH. La SH paga 400.000 euro al danneggiato attraverso la propria polizza. Successivamente, la SH esercita regresso verso il consulente per la quota di responsabilità interna attribuibile al componente che il consulente ha prodotto. Se l'accordo contrattuale tra SH e consulente prevede indennità reciproche bilanciate, la SH potrebbe recuperare il 30-50% (a seconda della valutazione tecnica della causalità del componente specifico nel danno complessivo)."
+    },
+    {
+      "type": "p",
+      "text": "Il consulente vive: la polizza paga, indennità reciproca eventualmente applicabile, esposizione gestibile. Lo scenario funziona perché entrambi i coobbligati hanno polizza adeguata e sono solvibili."
+    },
+    {
+      "type": "p",
+      "text": "Scenario due: SH insolvibile, freelance solvibile."
+    },
+    {
+      "type": "p",
+      "text": "Stesso danno, stesso scenario tecnico. Ma tre anni dopo la consegna del prodotto, la SH è fallita. Il liquidatore della SH ha distribuito gli asset residui ai creditori prioritari. La polizza RC della SH non è più attiva (era stata pagata fino al fallimento, dopo non c'è più nessuno che la rinnovi). La polizza claims-made della SH si è chiusa."
+    },
+    {
+      "type": "p",
+      "text": "Il danneggiato non può ottenere nulla dalla SH. Cita direttamente il consulente esterno freelance, in qualità di coobbligato solidale. Il consulente non ha più la possibilità di \"girare la palla\" alla SH che è scomparsa."
+    },
+    {
+      "type": "p",
+      "text": "Il consulente paga 400.000 euro al danneggiato attraverso la propria polizza. Tenta regresso verso la procedura fallimentare della SH per la quota di responsabilità interna. Recupero stimato: zero o frazioni minime (i creditori PLD non sono privilegiati nel concorso fallimentare e arrivano dopo i creditori privilegiati che hanno già consumato l'attivo)."
+    },
+    {
+      "type": "p",
+      "text": "Il consulente, in questo scenario, ha sostenuto l'intero peso del risarcimento per il solo fatto di essere ancora vivo e solvibile dopo il fallimento del fabbricante. È esattamente lo scenario di rischio asimmetrico che la PLD produce strutturalmente."
+    },
+    {
+      "type": "p",
+      "text": "Scenario tre: SH solvibile, freelance insolvibile o irreperibile."
+    },
+    {
+      "type": "p",
+      "text": "Quattro anni dopo la consegna, il consulente esterno ha chiuso partita IVA, è andato all'estero senza forwarding, oppure è deceduto e gli eredi hanno rinunciato all'eredità. Il danneggiato cita la SH che è ancora attiva e solvibile. La SH paga. Esercita regresso verso il consulente: trova un soggetto irreperibile, una posizione fiscale chiusa, eredi che hanno rinunciato. Recupero: zero."
+    },
+    {
+      "type": "p",
+      "text": "La SH si è assunta l'intero peso del risarcimento, anche per la quota di responsabilità interna che era attribuibile al componente del consulente."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cosa significa per la strutturazione dei contratti"
+    },
+    {
+      "type": "p",
+      "text": "I tre scenari sopra producono una conclusione operativa importante: nessun coobbligato può ragionevolmente confidare che il regresso interno funzioni come meccanismo di protezione. Il regresso può funzionare, ma può anche non funzionare. La probabilità di funzionamento dipende da fattori che nessuno dei due coobbligati controlla individualmente (solvibilità futura dell'altro, durata effettiva dell'attività, gestione patrimoniale e assicurativa)."
+    },
+    {
+      "type": "quote",
+      "text": "In pratica, ogni coobbligato deve essere strutturato per sostenere il peggior caso: pagare il 100% del risarcimento, senza recupero dal regresso. È sproporzionato rispetto alla responsabilità interna, ma è scenario realistico."
+    },
+    {
+      "type": "p",
+      "text": "Tre conseguenze sui contratti."
+    },
+    {
+      "type": "p",
+      "text": "Una. La copertura assicurativa di ciascun coobbligato deve essere calibrata sul rischio aggregato, non sulla quota di responsabilità interna. Il consulente esterno con polizza da 500.000 euro che pensava \"tanto la SH ha la sua polizza da 2 milioni\" è esposto perché in scenario di fallimento SH la sua polizza è l'unica disponibile e potrebbe essere insufficiente."
+    },
+    {
+      "type": "p",
+      "text": "Due. Le indennità reciproche contrattuali devono prevedere meccanismi di escrow o garanzie aggiuntive che operino anche in caso di insolvibilità della controparte. Un accordo di indennità con un partner che potrebbe fallire tra cinque anni non è garanzia, è promessa contingente."
+    },
+    {
+      "type": "p",
+      "text": "Tre. La vigilanza reciproca sullo stato patrimoniale del partner diventa attività concreta. Il consulente esterno ha interesse legittimo a sapere se la SH committente sta mantenendo polizza adeguata anno dopo anno. La SH ha interesse a sapere se il consulente esterno sta mantenendo la propria. È materia che oggi non è abituale nei contratti italiani ma che diventerà standard."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Il fallimento della software house: cosa succede ai coobbligati"
+    },
+    {
+      "type": "p",
+      "text": "Il fallimento di una società di capitali è procedura tipica del sistema imprenditoriale italiano. Le statistiche degli ultimi anni mostrano che la maggior parte delle PMI italiane ha tasso di sopravvivenza inferiore al 50% sui dieci anni. Per il settore IT specifico, il dato è leggermente migliore ma resta significativo: la durata media di vita di una piccola SH italiana è inferiore al decennio di responsabilità PLD."
+    },
+    {
+      "type": "p",
+      "text": "In altre parole: dal 9 dicembre 2026, ogni prodotto consegnato da una SH italiana entra in un decennio durante il quale è statisticamente probabile che la SH cessi attività o fallisca prima della fine del periodo di responsabilità."
+    },
+    {
+      "type": "p",
+      "text": "Cosa succede ai coobbligati quando questo accade? Quattro dinamiche."
+    },
+    {
+      "type": "p",
+      "text": "Una. La responsabilità della SH non si estingue automaticamente con il fallimento. Le obbligazioni della SH passano alla procedura fallimentare. I creditori PLD (i danneggiati che hanno subito danno e vogliono risarcimento) sono creditori chirografari nel concorso, non privilegiati. Vengono dopo i creditori privilegiati (dipendenti, fisco, fornitori privilegiati). Tipicamente non recuperano nulla o frazioni minime."
+    },
+    {
+      "type": "p",
+      "text": "In pratica, il fallimento della SH significa che i danneggiati perdono di fatto l'accesso al patrimonio della SH. Devono rivolgersi agli altri coobbligati: produttori di componente, dipendenti per la parte in cui rispondono personalmente (limitata, vista Art. 2049 c.c.), eventuali modificatori sostanziali."
+    },
+    {
+      "type": "p",
+      "text": "Due. La polizza RC della SH cessa di operare. Le polizze claims-made richiedono che il sinistro sia denunciato durante il periodo di efficacia della polizza. Se la SH fallisce e la polizza non viene rinnovata (perché nessuno la rinnova: la procedura fallimentare non rinnova polizze che non producono attivo per i creditori), i sinistri che emergono dopo il fallimento sono scoperti."
+    },
+    {
+      "type": "p",
+      "text": "C'è eccezione: alcune polizze includono clausola di postuma (anche detta extended reporting period) che mantiene la copertura per sinistri denunciati entro un certo numero di anni dopo la cessazione della polizza, a condizione che il fatto sia avvenuto durante la vigenza. La postuma standard è di 1-2 anni, raramente arriva a 5-10. Per il regime decennale PLD, la postuma standard è strutturalmente insufficiente."
+    },
+    {
+      "type": "p",
+      "text": "Tre. Il consulente esterno freelance resta coobbligato solidale verso il danneggiato. Il fallimento della SH committente non scarica il consulente. Anzi, paradossalmente, lo espone di più perché elimina uno dei coobbligati solidali a cui il danneggiato avrebbe potuto rivolgersi prima."
+    },
+    {
+      "type": "p",
+      "text": "In scenario di fallimento SH, il consulente diventa di fatto il bersaglio principale del danneggiato. Se la sua polizza non è adeguata, il suo patrimonio personale è aggredibile."
+    },
+    {
+      "type": "p",
+      "text": "Quattro. Il regresso verso la procedura fallimentare è marginale. Il consulente che paga il danneggiato e tenta regresso verso la procedura fallimentare della SH non recupera quasi nulla. È regresso teorico, non sostanziale."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Run-off cover: cos'è e perché diventa requisito strutturale"
+    },
+    {
+      "type": "p",
+      "text": "La maggior parte delle polizze RC professionali in Italia opera in regime \"claims-made\". Significa che il sinistro è coperto se è denunciato durante il periodo di efficacia della polizza. Quando la polizza cessa (per non rinnovo, cessazione attività, fallimento, morte del professionista), i sinistri denunciati successivamente non sono coperti, anche se il fatto è avvenuto durante la vigenza della polizza."
+    },
+    {
+      "type": "p",
+      "text": "Questo regime, accettabile per professioni a esposizione breve, è strutturalmente incompatibile con il decennio di responsabilità PLD. Un consulente esterno che produce un componente nel 2027 e che chiude attività nel 2030 può vedersi citato da un danneggiato nel 2035 per un difetto del componente che si è materializzato nel 2034. Tra il 2030 (chiusura polizza) e il 2035 (denuncia sinistro) la polizza standard non opera. Il consulente paga di tasca propria, o vede i propri eredi pagare."
+    },
+    {
+      "type": "p",
+      "text": "Il run-off cover (anche detto \"Extended Reporting Period\" o ERP esteso) è il meccanismo assicurativo che risolve questo problema. È clausola che estende la copertura per un periodo di anni successivi alla cessazione della polizza, durante i quali possono essere denunciati sinistri relativi a fatti avvenuti durante la vigenza della polizza."
+    },
+    {
+      "type": "p",
+      "text": "Per il decennio PLD, il run-off cover decennale è il requisito minimo strutturale. Anche se il professionista chiude attività dopo tre anni dalla consegna del componente, il run-off cover decennale dalla data della consegna mantiene attiva la copertura fino alla scadenza della responsabilità PLD."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cosa cercare in una polizza adeguata post-PLD"
+    },
+    {
+      "type": "p",
+      "text": "Le polizze RC professionali standard offerte oggi dal mercato italiano sono raramente adeguate al regime PLD novellato. Cinque elementi sono essenziali e vanno verificati esplicitamente prima di sottoscrivere o rinnovare."
+    },
+    {
+      "type": "p",
+      "text": "Massimale per sinistro. Tipicamente 1,5-2,5 milioni di euro per profili senior che producono componenti in regulated industries. Massimali sotto il milione sono strutturalmente sottodimensionati per cause PLD su data breach significativi."
+    },
+    {
+      "type": "p",
+      "text": "Massimale aggregato annuo. Non solo per sinistro ma anche complessivo nell'anno. Polizze con massimale aggregato basso (es. 2x il massimale per sinistro) si esauriscono rapidamente con due-tre sinistri."
+    },
+    {
+      "type": "p",
+      "text": "Run-off cover decennale. Periodo di estensione della copertura post-cessazione della polizza pari ad almeno dieci anni. Alcune polizze tier-1 (broker Marsh, Aon, WTW) offrono questo come opzione aggiuntiva. Verificare il costo: tipicamente 10-25% di premio aggiuntivo rispetto alla polizza base."
+    },
+    {
+      "type": "p",
+      "text": "Copertura post-mortem. Estensione della copertura agli eredi del professionista in caso di decesso, per il decennio residuo di responsabilità. È clausola specifica che molte polizze non includono nello standard."
+    },
+    {
+      "type": "p",
+      "text": "Copertura specifica per responsabilità da prodotti difettosi software. Non basta la generica RC professionale: serve estensione esplicita alla product liability ai sensi della Direttiva 2024/2853. Alcune polizze pre-PLD escludono esplicitamente la responsabilità da prodotti difettosi; quelle vanno integrate o sostituite."
+    },
+    {
+      "type": "p",
+      "text": "Copertura cyber e data breach. Estensione alla responsabilità da incidenti di cybersicurezza, particolarmente rilevante per la convergenza PLD-GDPR sui data breach. Spesso è prodotto assicurativo separato (cyber liability) ma può essere integrato nella polizza professionale."
+    },
+    {
+      "type": "p",
+      "text": "Difesa giudiziaria. Costi legali di difesa, sia preventiva sia in giudizio. È elemento sostanziale del valore della polizza perché anche in caso di esonero ex Art. 11 della direttiva, il professionista deve sostenere costi di difesa che possono raggiungere 50.000-150.000 euro per causa media. La difesa giudiziaria può essere \"inside the limits\" (consuma il massimale) o \"outside the limits\" (aggiuntiva al massimale); la seconda è strutturalmente migliore."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "L'ordine di grandezza del costo"
+    },
+    {
+      "type": "p",
+      "text": "Per dare numeri concreti al lettore, ecco l'ordine di grandezza tipico di una polizza adeguata per profilo senior tecnico (architect, principal developer, fractional CTO) operante in regulated industries:"
+    },
+    {
+      "type": "p",
+      "text": "Premio annuo base: 4.000-7.000 euro per massimali 1,5-2 milioni e run-off di base (1-2 anni). Aggiunta del run-off decennale: +15-25%, quindi 5.000-9.000 euro/anno. Aggiunta copertura cyber + data breach: +1.500-3.000 euro/anno. Aggiunta copertura post-mortem: +500-1.500 euro/anno."
+    },
+    {
+      "type": "p",
+      "text": "Totale realistico per polizza completa adeguata al regime PLD: 7.000-14.000 euro/anno per il professionista senior. Significativamente sopra le polizze standard pre-PLD (che tipicamente costano 1.500-3.000 euro/anno con massimali inferiori e senza estensioni decennali)."
+    },
+    {
+      "type": "p",
+      "text": "Questo costo va incorporato nella tariffa professionale. Per un consulente che lavora 200 giorni effettivi all'anno, il solo costo polizza adeguata aggiunge 35-70 euro al costo orario di base, ovvero 280-560 euro al giorno solo per la polizza. La tariffa pre-PLD di 400-500 euro/giorno diventa matematicamente insostenibile."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Cosa fare adesso, prima di dicembre 2026"
+    },
+    {
+      "type": "p",
+      "text": "Per le software house italiane:"
+    },
+    {
+      "type": "p",
+      "text": "— Mappare l'esposizione patrimoniale al rischio PLD su tutti i prodotti attualmente in produzione presso clienti, con stima della probabilità di sinistri significativi nel decennio residuo — Verificare la polizza RC professionale e prodotti esistente per coperture PLD adeguate, e attivare gap analysis con broker tier-1 — Strutturare contratti standard nuovi che includano clausole di vita utile manutenibile, vulnerability handling, indennità reciproche con consulenti esterni — Mappare l'inventario dei produttori di componente esterni che hanno contribuito ai prodotti in produzione, con identificazione formale e tracciabilità"
+    },
+    {
+      "type": "p",
+      "text": "Per i consulenti tecnici esterni freelance:"
+    },
+    {
+      "type": "p",
+      "text": "— Attivare polizza RC professionale adeguata con run-off cover decennale, copertura specifica per responsabilità da prodotti difettosi software, copertura cyber, e difesa giudiziaria outside the limits — Strutturare contratti standard con software house committenti che includano qualificazione PLD esplicita del rapporto, indennità reciproche, identificazione formale del perimetro di componenti prodotti — Implementare audit trail formale del proprio lavoro: Git signed commits, ADR firmati, SBOM dei componenti prodotti, monitoring CVE delle dipendenze — Calibrare le tariffe in modo che incorporino il costo della polizza adeguata, del monitoring decennale, della disponibilità a manutenzione"
+    },
+    {
+      "type": "p",
+      "text": "Per i committenti enterprise:"
+    },
+    {
+      "type": "p",
+      "text": "— Mappare l'esposizione patrimoniale ai sistemi custom in produzione, con valutazione del rischio di concentrazione su singoli fornitori che potrebbero fallire nel decennio — Strutturare contratti con i fornitori che includano clausole di subentro tecnico assistito, escrow del codice sorgente, garanzie di continuità per il decennio di responsabilità — Valutare il proprio profilo di rischio come potenziale modificatore sostanziale ex Art. 8 par. 2, in funzione del livello di direzione tecnica esercitato sui fornitori"
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Considerazione strategica"
+    },
+    {
+      "type": "p",
+      "text": "Il decennio di responsabilità PLD ha tre conseguenze sistemiche che modellano il mercato dello sviluppo software italiano dei prossimi anni."
+    },
+    {
+      "type": "p",
+      "text": "Una. Concentrazione del rischio sui soggetti più solidi. I danneggiati cercheranno chi ha capitale e polizza. Le grandi società di consulenza enterprise (Accenture, Deloitte, Capgemini, Avanade) saranno bersagli sproporzionati rispetto alla loro quota di mercato, perché sono più solvibili. Le piccole SH e i freelance saranno scaricabili come coobbligati solo se sopravvivono dieci anni con polizza adeguata."
+    },
+    {
+      "type": "p",
+      "text": "Due. Strutturazione del mercato verso operatori più grandi. Il costo strutturale di operare in regime PLD adeguato (polizze, processi, documentazione, audit trail) ha economie di scala. Le PMI dello sviluppo software che non si strutturano per la PLD usciranno dal mercato. Quelle che si strutturano diventeranno più grandi per ammortizzare il costo. È processo di consolidamento del settore che sta già iniziando e che la PLD accelera."
+    },
+    {
+      "type": "p",
+      "text": "Tre. Trasformazione del freelance tecnico in operatore strutturato. Il consulente esterno tradizionale italiano, che opera a partita IVA senza polizza professionale strutturata e con tariffe standard di mercato, non è economicamente sostenibile post-PLD. La risposta non è \"smettere di lavorare come freelance\" — la risposta è \"operare come freelance con struttura adeguata\": polizza, contratti strutturati, tariffe coerenti, eventualmente SRL professionale per protezione patrimoniale aggiuntiva."
+    },
+    {
+      "type": "p",
+      "text": "Il decennio di responsabilità PLD non è ostacolo da scaricare. È regime che, gestito con strumenti adeguati, può diventare anche elemento di valore commerciale: il professionista strutturato vale di più del professionista non strutturato, e può chiedere tariffe coerenti."
+    },
+    {
+      "type": "quote",
+      "text": "Per le software house italiane e per i professionisti tecnici autonomi, il tempo per attrezzarsi è ora. Dicembre 2026 è fra sette mesi."
+    },
+    {
+      "type": "p",
+      "text": "Nel prossimo articolo della serie tratterò il tema della stratificazione della responsabilità nei progetti che coinvolgono Solution Architect senior, con focus su come la qualifica di \"produttore di componente\" si applica a chi disegna l'architettura senza scrivere materialmente il codice."
+    },
+    {
+      "type": "p",
+      "text": "Quadro completo della serie: i sette cambi strutturali (Articolo I), i sei scenari di sviluppo software (Articolo II), responsabilità solidale e decennio (Articolo III)."
+    }
+  ]
+}
