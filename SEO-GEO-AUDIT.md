@@ -88,6 +88,36 @@ Both documents were corrected to say that, and to agree with each other:
 
 Still open: the 90-day retention figure, which the owner is verifying.
 
+
+## Navigation — both languages
+
+The menu was English on every page, including the Italian ones, so from an
+Italian page every menu item led back out of Italian. And the dropdown panels
+were mounted on React state, which meant **the entire primary navigation was
+absent from the served HTML** — invisible to a crawler and to anyone whose
+JavaScript had not run. The footer was carrying the whole link graph by itself.
+
+- `NavBar` now selects between an English and an Italian tree on
+  `isItalianPath(pathname)`. The Italian tree has Italian labels and Italian
+  destinations: Piattaforma, Servizi, Settori, Casi studio, Ricerca, Chi siamo,
+  Tutto in italiano. Where an Italian reader's next step exists only in English
+  — the platform pages, the answers — the item is listed and marked *in
+  inglese*, rather than hidden.
+- The dropdown panel is always in the document and hidden with CSS. Every menu
+  link is now in the served HTML.
+- `LanguageSwitch` no longer disappears on pages without a counterpart: with a
+  true pair it links the translation, without one it links the other language's
+  index, and the accessible label says which of the two it is.
+- Footer: added the exposure assessment, on-premise AI for healthcare, the
+  overlap catalogue and the editorial series on the English side; added
+  Fractional CTO Milano, AI sovrana pharma, modernizzazione legacy, the PLD
+  series and the CRA deadline page to the Italian block.
+
+Reachability, measured on the built HTML from both an English and an Italian
+page: every URL in the sitemap is either linked from the header or footer, or is
+a leaf under an index that is (individual articles, answers and case studies).
+Nothing is more than one click from a menu item, in either language.
+
 ## Content custody
 
 The six-part PLD 2024 editorial series moved from LinkedIn onto this domain, in

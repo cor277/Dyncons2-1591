@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { clsx } from "clsx";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { usePathname } from "next/navigation";
-import { assessmentHref, assessmentLabel } from "@/lib/locale";
+import { assessmentHref, assessmentLabel, isItalianPath } from "@/lib/locale";
 
 interface NavChild {
   label: string;
@@ -21,7 +21,19 @@ interface NavLink {
   children?: NavChild[];
 }
 
-const navLinks: NavLink[] = [
+/**
+ * Two navigation trees, one per language.
+ *
+ * The Italian pages used to render the English menu, which meant that from an
+ * Italian page every menu item led back out of Italian. They are a section of
+ * the site, not a translation of it, so they get their own tree.
+ *
+ * Where an Italian reader's next step only exists in English — the platform
+ * pages, the answers — the item is listed anyway and marked, because hiding it
+ * would be worse than sending someone to a page in the wrong language they can
+ * still read. Marked, not silent.
+ */
+const EN_NAV: NavLink[] = [
   {
     label: "Platform",
     children: [
@@ -34,6 +46,11 @@ const navLinks: NavLink[] = [
         label: "CEPF Methodology",
         href: "/cepf",
         desc: "Compliance-Epistemic Project Framework",
+      },
+      {
+        label: "Cross-framework overlaps",
+        href: "/cepf/overlaps",
+        desc: "The 24 groups where regimes share a control",
       },
       {
         label: "Calibra",
@@ -56,6 +73,16 @@ const navLinks: NavLink[] = [
         desc: "Technology strategy and architectural governance, part-time",
       },
       {
+        label: "Exposure assessment",
+        href: "/assessment",
+        desc: "Fixed-scope engagement on PLD 2024 and the AI Act",
+      },
+      {
+        label: "On-premise AI for healthcare",
+        href: "/ai-on-premise-healthcare",
+        desc: "Hospitals, pharma and clinical research",
+      },
+      {
         label: "Technical capabilities",
         href: "/capabilities",
         desc: "Data platforms, Kubernetes, integration, Dynamics 365, automation",
@@ -63,12 +90,177 @@ const navLinks: NavLink[] = [
     ],
   },
   { label: "Case Studies", href: "/case-studies" },
+  {
+    label: "Research",
+    children: [
+      {
+        label: "Research & insights",
+        href: "/research",
+        desc: "Long-form technical and regulatory writing",
+      },
+      {
+        label: "Answers",
+        href: "/answers",
+        desc: "One question per page, answered in the first block",
+      },
+      {
+        label: "Editorial series — PLD 2024",
+        href: "/research/editorial-series",
+        desc: "Six articles on the product liability directive, in Italian",
+      },
+      {
+        label: "EU Tech Sovereignty & CADA",
+        href: "/tech-sovereignty",
+        desc: "The four Union assurance levels, analysed",
+      },
+    ],
+  },
   { label: "About", href: "/about" },
-  { label: "Research", href: "/research" },
+];
+
+const IT_NAV: NavLink[] = [
+  {
+    label: "Piattaforma",
+    children: [
+      {
+        label: "Nexus MDS Core",
+        href: "/platform",
+        desc: "Piattaforma AI self-hosted, 16 servizi · in inglese",
+      },
+      {
+        label: "Metodologia CEPF",
+        href: "/cepf",
+        desc: "Compliance-Epistemic Project Framework · in inglese",
+      },
+      {
+        label: "Catalogo delle sovrapposizioni",
+        href: "/cepf/overlaps",
+        desc: "I 24 gruppi in cui due regimi condividono un controllo · in inglese",
+      },
+      {
+        label: "Calibra",
+        href: "/calibra",
+        desc: "Il software costruito su CEPF · in inglese",
+      },
+    ],
+  },
+  {
+    label: "Servizi",
+    children: [
+      {
+        label: "Consulenza AI, governance e compliance",
+        href: "/it/consulenza-ai-governance-compliance",
+        desc: "AI Act, GDPR, PLD 2024, NIS2, DORA, ISO 27001",
+      },
+      {
+        label: "Assessment di esposizione",
+        href: "/it/assessment",
+        desc: "Perimetro e prezzo fissi, deliverable firmato",
+      },
+      {
+        label: "Fractional CTO a Milano",
+        href: "/fractional-cto-milano",
+        desc: "Leadership tecnologica per PMI e mid-market",
+      },
+      {
+        label: "Modernizzazione legacy con AI",
+        href: "/modernizzazione-sistemi-legacy-ai",
+        desc: "Reverse engineering assistito e rientro del debito tecnico",
+      },
+    ],
+  },
+  {
+    label: "Settori",
+    children: [
+      {
+        label: "AI on-premise per la sanità",
+        href: "/it/ai-sanitaria-on-premise",
+        desc: "Ospedali, ASL, strutture accreditate",
+      },
+      {
+        label: "Consulenza AI per il farmaceutico",
+        href: "/it/consulenza-ai-farmaceutico",
+        desc: "Distribuzione e industria farmaceutica",
+      },
+      {
+        label: "AI sovrana per il pharma",
+        href: "/sovereign-ai-pharma-italia",
+        desc: "Il verticale farmaceutico, per esteso",
+      },
+      {
+        label: "Sovereign AI Italia",
+        href: "/it/sovereign-ai-italia",
+        desc: "I tre modelli di deployment, e come si sceglie",
+      },
+      {
+        label: "AI sui dati aziendali",
+        href: "/it/ai-dati-aziendali",
+        desc: "Retrieval sui documenti che avete già",
+      },
+      {
+        label: "AI per norme tecniche e ingegneria",
+        href: "/it/ai-ingegneria-tecnica",
+        desc: "Norme, revisioni, tracciabilità professionale",
+      },
+      {
+        label: "Agenti AI per finanza e compliance",
+        href: "/it/ai-agenti-finanziari",
+        desc: "DORA, MiFID II, tracciabilità delle decisioni",
+      },
+    ],
+  },
+  {
+    label: "Casi studio",
+    children: [
+      {
+        label: "Federfarma Lombarda",
+        href: "/it/case-studies/federfarma",
+        desc: "Nexus MDS Core in produzione, oltre 1.000 farmacie",
+      },
+      {
+        label: "Tutti i casi studio",
+        href: "/case-studies",
+        desc: "L'elenco completo · in inglese",
+      },
+    ],
+  },
+  {
+    label: "Ricerca",
+    children: [
+      {
+        label: "Serie PLD 2024",
+        href: "/research/editorial-series",
+        desc: "Sei articoli sulla direttiva, in italiano",
+      },
+      {
+        label: "Legge 132/2025 e AI in sanità",
+        href: "/research/legge-132-2025",
+        desc: "Cosa cambia per ospedali, farmacie e aziende farmaceutiche",
+      },
+      {
+        label: "Scadenza CRA — 11 settembre",
+        href: "/cra-11-settembre",
+        desc: "Articolo 14 del Reg. (UE) 2024/2847",
+      },
+      {
+        label: "Ricerca e analisi",
+        href: "/research",
+        desc: "L'archivio completo · in gran parte in inglese",
+      },
+      {
+        label: "Risposte dirette",
+        href: "/answers",
+        desc: "Una domanda per pagina · in inglese",
+      },
+    ],
+  },
+  { label: "Chi siamo", href: "/about" },
+  { label: "Tutto in italiano", href: "/it" },
 ];
 
 export function NavBar() {
   const pathname = usePathname();
+  const navLinks = isItalianPath(pathname) ? IT_NAV : EN_NAV;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -136,36 +328,38 @@ export function NavBar() {
                       )}
                     />
                   </button>
-                  <AnimatePresence>
-                    {openDropdown === l.label && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -8 }}
-                        transition={{ duration: 0.15 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-3 min-w-[280px]"
-                      >
-                        <div className="bg-[#161B22] border border-[#30363D] rounded-xl shadow-lg p-2">
-                          {l.children.map((c) => (
-                            <Link
-                              key={c.href}
-                              href={c.href}
-                              className="block px-4 py-3 rounded-lg hover:bg-[#1C2333] transition-colors group"
-                            >
-                              <div className="text-[#E6EDF3] text-sm font-medium group-hover:text-[#00B4D8] transition-colors">
-                                {c.label}
-                              </div>
-                              {c.desc && (
-                                <div className="text-[#7D8FA3] text-xs mt-0.5">
-                                  {c.desc}
-                                </div>
-                              )}
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
+                  {/*
+                    The panel is always in the document and hidden with CSS.
+                    Mounting it on state, as it used to be, meant the whole
+                    dropdown — every link in the primary navigation — was absent
+                    from the served HTML: invisible to a crawler, and to anyone
+                    whose JavaScript has not run yet.
+                  */}
+                  <div
+                    className={clsx(
+                      "absolute top-full left-1/2 -translate-x-1/2 pt-3 min-w-[280px] transition-all duration-150",
+                      openDropdown === l.label
+                        ? "opacity-100 visible translate-y-0"
+                        : "opacity-0 invisible -translate-y-2 pointer-events-none",
                     )}
-                  </AnimatePresence>
+                  >
+                    <div className="bg-[#161B22] border border-[#30363D] rounded-xl shadow-lg p-2">
+                      {l.children.map((c) => (
+                        <Link
+                          key={c.href}
+                          href={c.href}
+                          className="block px-4 py-3 rounded-lg hover:bg-[#1C2333] transition-colors group"
+                        >
+                          <div className="text-[#E6EDF3] text-sm font-medium group-hover:text-[#00B4D8] transition-colors">
+                            {c.label}
+                          </div>
+                          {c.desc && (
+                            <div className="text-[#7D8FA3] text-xs mt-0.5">{c.desc}</div>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <Link

@@ -5,6 +5,8 @@ import { Mail, Phone } from "lucide-react";
 const advisoryServices = [
   { label: "AI Governance & Compliance Advisory", href: "/services/governance-advisory" },
   { label: "Fractional AI CTO", href: "/services/fractional-cto" },
+  { label: "Exposure assessment — PLD 2024", href: "/assessment" },
+  { label: "On-premise AI for healthcare", href: "/ai-on-premise-healthcare" },
 ];
 
 const deliveryServices = [
@@ -21,11 +23,13 @@ const deliveryServices = [
 const legal = [
   { label: "Nexus MDS Core", href: "/platform" },
   { label: "CEPF Methodology", href: "/cepf" },
+  { label: "Cross-framework overlaps", href: "/cepf/overlaps" },
   { label: "Calibra", href: "/calibra" },
   { label: "EU Tech Sovereignty", href: "/tech-sovereignty" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Research", href: "/research" },
   { label: "Answers", href: "/answers" },
+  { label: "Editorial series — PLD 2024", href: "/research/editorial-series" },
   { label: "About", href: "/about" },
   { label: "Privacy Policy", href: "/privacy" },
 ];
@@ -192,6 +196,21 @@ export function Footer() {
             </Link>
             <Link href="/it/ai-agenti-finanziari" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               AI Agenti Finanziari
+            </Link>
+            <Link href="/fractional-cto-milano" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              Fractional CTO Milano
+            </Link>
+            <Link href="/sovereign-ai-pharma-italia" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              AI Sovrana per il Pharma
+            </Link>
+            <Link href="/modernizzazione-sistemi-legacy-ai" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              Modernizzazione sistemi legacy
+            </Link>
+            <Link href="/research/editorial-series" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              Serie PLD 2024 — sei articoli
+            </Link>
+            <Link href="/cra-11-settembre" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              Scadenza CRA — 11 settembre
             </Link>
           </div>
         </div>
