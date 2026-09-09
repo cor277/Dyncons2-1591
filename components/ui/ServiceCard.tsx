@@ -71,6 +71,7 @@ export function ServiceCard({
       )}
       <Link
         href={ctaHref}
+        aria-label={`Learn more about ${title}`}
         className="text-[#00B4D8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200"
       >
         Learn more →

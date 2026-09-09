@@ -255,6 +255,17 @@ export default function AssessmentPage() {
               Exposure is not assessed when the claim arrives. It is assessed before, while there is
               still time to act.
             </p>
+            <p className="mt-5 text-[#7D8FA3] text-base leading-relaxed">
+              This is one fixed-scope engagement. The continuing work it usually opens into —
+              governance design, architecture review, implementation — is described under{" "}
+              <a
+                href="/services/governance-advisory"
+                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+              >
+                AI governance and compliance advisory
+              </a>
+              .
+            </p>
           </div>
         </section>
       </main>

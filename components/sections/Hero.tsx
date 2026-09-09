@@ -27,7 +27,7 @@ export function Hero() {
           >
             <span className="live-dot" />
             <p className="text-[#00B4D8] text-[10px] sm:text-xs font-mono font-medium tracking-[0.1em] sm:tracking-[0.15em] uppercase">
-              AI SOLUTION ARCHITECT · ENTERPRISE INFRASTRUCTURE
+              AI CONSULTING · GOVERNANCE · SOVEREIGN INFRASTRUCTURE
             </p>
           </motion.div>
 
@@ -51,8 +51,9 @@ export function Hero() {
             animate="visible"
             className="text-[#9BA8B9] text-base md:text-lg max-w-2xl leading-relaxed mb-5"
           >
-            We build and deploy on-premise AI platforms for healthcare, pharma,
-            and regulated industries — so your personal and confidential data never leaves your perimeter.
+            Dynamics Consulting provides AI consulting, architecture, governance and compliance
+            for organisations working under regulatory constraint — healthcare, pharma, finance,
+            energy. Advisory and implementation come from the same practice.
           </motion.p>
 
           {/* Body */}
@@ -63,9 +64,11 @@ export function Hero() {
             animate="visible"
             className="text-[#7D8FA3] text-lg md:text-xl max-w-2xl leading-relaxed mb-10"
           >
-            Nexus MDS Core — 16 orchestrated services. Self-hosted. GDPR-ready.
-            No hyperscaler lock-in. From healthcare and pharma to energy and enterprise CRM.
-            Already in production.
+            We design and deploy sovereign AI systems, so that sensitive data, operational control
+            and technical accountability stay inside your perimeter: indexing, retrieval, identity
+            and audit run on your infrastructure, under your governance. Nexus MDS Core — 16
+            orchestrated services. Self-hosted. GDPR-ready. No hyperscaler lock-in. Already in
+            production.
           </motion.p>
 
           {/* CTAs */}
@@ -77,9 +80,12 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <CTAButton label="Exposure assessment →" href="/assessment" variant="primary" />
-            <div className="flex items-center gap-6 sm:self-center">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 sm:self-center">
+              <TextLink
+                label="AI governance & compliance advisory →"
+                href="/services/governance-advisory"
+              />
               <TextLink label="See Nexus in production →" href="/platform" />
-              <TextLink label="Service lines" href="/#services" />
             </div>
           </motion.div>
 

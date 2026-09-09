@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Editorial Series · PLD 2024 & AI Governance | Dynamics Consulting",
+  title: "Editorial Series · PLD 2024 & AI Governance",
   description:
     "Ongoing public series on the structural implications of EU PLD 2024, AI Act, and Tech Sovereignty Package for software houses and technical professionals in regulated industries.",
   keywords: [

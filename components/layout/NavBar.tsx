@@ -35,6 +35,11 @@ const navLinks: NavLink[] = [
         href: "/cepf",
         desc: "Compliance-Epistemic Project Framework",
       },
+      {
+        label: "Calibra",
+        href: "/calibra",
+        desc: "The software built on CEPF",
+      },
     ],
   },
   {
@@ -43,7 +48,7 @@ const navLinks: NavLink[] = [
       {
         label: "AI Governance & Compliance Advisory",
         href: "/services/governance-advisory",
-        desc: "AI Act, PLD 2024, NIS2, DORA — assessment and board-level governance",
+        desc: "AI consulting for regulated organisations — AI Act, PLD 2024, NIS2, DORA",
       },
       {
         label: "Fractional AI CTO",

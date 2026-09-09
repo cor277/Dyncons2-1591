@@ -8,12 +8,15 @@ import { ChatbotWidget } from "@/components/ChatbotWidget";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dynamicsconsulting.it"),
   title: {
-    default: "Dynamics Consulting | Sovereign AI Infrastructure",
+    default: "Sovereign AI, AI Governance & Compliance | Dynamics Consulting",
     template: "%s | Dynamics Consulting",
   },
   description:
-    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, architected for AI Act requirements, aligned with EU Tech Sovereignty Package (CADA, 2026), PLD 2024 ready.",
+    "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. We design and deploy sovereign, on-premise AI systems — Nexus MDS Core, 16 services, GDPR-ready, architected for AI Act and PLD 2024 requirements.",
   keywords: [
+    "AI consulting",
+    "AI governance advisory",
+    "AI compliance consulting",
     "AI Solution Architect",
     "Sovereign AI Italy",
     "on-premise AI healthcare",

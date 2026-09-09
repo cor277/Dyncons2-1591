@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { TextLink } from "@/components/ui/TextLink";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -28,9 +29,19 @@ export function NexusBanner() {
               <h2 className="font-syne text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#E6EDF3] mb-4">
                 Nexus MDS Core
               </h2>
-              <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-6">
+              <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-4">
                 The enterprise AI self-hosted platform. ~16 orchestrated Docker services.
                 GDPR-ready. Zero-Trust. Deployable on Kubernetes or bare-metal.
+              </p>
+              <p className="text-[#7D8FA3] text-base leading-relaxed mb-6">
+                It is normally deployed inside a wider engagement covering AI architecture,{" "}
+                <Link
+                  href="/services/governance-advisory"
+                  className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+                >
+                  governance and compliance
+                </Link>{" "}
+                and regulated operation — not sold as a standalone licence.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["GDPR", "AI Act Ready", "PLD 2024 Controls Mapped", "ISO 27001 Ready", "EU Data Residency", "CADA Aligned"].map((b) => (

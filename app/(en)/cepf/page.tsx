@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
+import { WEBSITE_ID, CEPF_ID, CALIBRA_ID } from "@/app/schema-org";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CepfTool } from "./CepfTool";
@@ -7,10 +9,26 @@ import { CepfTool } from "./CepfTool";
 const URL = "https://www.dynamicsconsulting.it/cepf";
 
 const DESCRIPTION =
-  "Compliance-Epistemic Project Framework (CEPF) — a regulatory crossing catalogue mapping regulatory regimes onto their operational obligations. This page hosts a reduced demo of Calibra, the software built on CEPF.";
+  "Compliance-Epistemic Project Framework (CEPF) — the compliance methodology of Dynamics Consulting: a regulatory crossing catalogue mapping regulatory regimes onto their operational obligations. This page hosts a reduced demo of Calibra, the software built on CEPF.";
+
+/* CEPF and Calibra are declared in app/schema-org.ts; this page is their home. */
+const pageSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${URL}#webpage`,
+    url: URL,
+    name: "Compliance-Epistemic Project Framework (CEPF)",
+    description: DESCRIPTION,
+    inLanguage: "en",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: [{ "@id": CEPF_ID }, { "@id": CALIBRA_ID }],
+    mainEntity: { "@id": CEPF_ID },
+  },
+];
 
 export const metadata: Metadata = {
-  title: "Compliance-Epistemic Project Framework (CEPF)",
+  title: "CEPF — AI and Regulatory Compliance Framework",
   description: DESCRIPTION,
   alternates: { canonical: URL },
   openGraph: {
@@ -45,6 +63,10 @@ const DEMO_REGIMES = [
 export default function CepfPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
       <NavBar />
       <div className="bg-[#0D1117] min-h-screen text-[#E6EDF3]">
       <main>
@@ -74,14 +96,21 @@ export default function CepfPage() {
                 stated once and documented against each regime, rather than built twice.
               </p>
               <p>
-                It is the instrument behind the{" "}
+                CEPF is proprietary to Dynamics Consulting, and it is the instrument behind the{" "}
                 <a
                   href="/assessment"
                   className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
                 >
                   exposure assessment
-                </a>
-                .
+                </a>{" "}
+                and the wider{" "}
+                <Link
+                  href="/services/governance-advisory"
+                  className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+                >
+                  AI governance and compliance advisory
+                </Link>{" "}
+                work.
               </p>
               <p className="text-[#9BA8B9] font-mono text-base">
                 CEPF v7 — 19 framework, 247 requisiti, 24 gruppi di sovrapposizione,
@@ -99,7 +128,11 @@ export default function CepfPage() {
                 risk, scheduling, operational flow, Gantt and milestones. The interactive tool
                 below is a demonstration instance, not the production one: it covers nine of the
                 nineteen frameworks in CEPF v7 and a subset of Calibra&apos;s planning functions.
-                Its interface is in Italian.
+                Its interface is in Italian.{" "}
+                <Link href="/calibra" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                  What Calibra is, in text
+                </Link>
+                .
               </p>
               <p className="text-[#7D8FA3] leading-relaxed mt-3" lang="it">
                 Lo strumento è in italiano, e lo è anche{" "}

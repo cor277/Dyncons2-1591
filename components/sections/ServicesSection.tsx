@@ -11,8 +11,8 @@ const services = [
     iconName: "ShieldCheck",
     title: "AI Governance & Compliance Advisory",
     description:
-      "Strategic regulatory assessment for EU AI Act, PLD 2024, NIS2, DORA. CEPF compliance audit. Board-level governance design. Architecture review with documented technical accountability.",
-    techBadges: ["AI Act", "PLD 2024", "CEPF", "ISO 27001"],
+      "AI consulting for regulated organisations: regulatory assessment against the EU AI Act, PLD 2024, NIS2 and DORA, governance design, and architecture review with documented technical accountability. Carried out with CEPF, our own compliance methodology.",
+    techBadges: ["AI Act", "PLD 2024", "NIS2", "ISO 27001"],
     ctaHref: "/services/governance-advisory",
   },
   {
@@ -59,6 +59,19 @@ export function ServicesSection() {
         </div>
 
         <p className="mt-10 text-[#7D8FA3] text-base">
+          Governance, traceability, data boundaries and human approval are treated as
+          architectural constraints rather than as documentation added after a system is built —
+          what that means in practice is set out under{" "}
+          <Link
+            href="/services/governance-advisory"
+            className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+          >
+            AI governance and compliance advisory
+          </Link>
+          .
+        </p>
+
+        <p className="mt-4 text-[#7D8FA3] text-base">
           The engineering these rest on — data platforms, Kubernetes, integration, Dynamics 365,
           automation, blockchain —{" "}
           <Link href="/capabilities" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">

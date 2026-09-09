@@ -2,7 +2,7 @@ import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Intelligent Automation | Dynamics Consulting",
+  title: "Intelligent Automation",
   description:
     "RPA, process mining, and AI-augmented automation that eliminates manual work, reduces errors, and frees your teams to focus on high-value decisions.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/services/automation" },

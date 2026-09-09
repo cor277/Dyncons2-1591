@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { OG_IMAGE } from "@/app/og";
+import { ORG_ID, NEXUS_ID } from "@/app/schema-org";
 import { Cpu, Shield, Search, GitBranch, Database, Activity, CheckCircle2 } from "lucide-react";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -24,17 +26,21 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Same @id as the Nexus node in app/schema-org.ts, so the two merge instead of
+ * describing the platform twice. The shared node carries name and description;
+ * the version and feature list belong here, on the platform's own page.
+ */
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": NEXUS_ID,
   name: "Nexus MDS Core",
   version: "2.0",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Linux (Docker / Kubernetes)",
   offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
-  creator: { "@type": "Organization", name: "Dynamics Consulting" },
-  description:
-    "Enterprise self-hosted AI platform with ~16 orchestrated Docker services. Zero-Trust security with Keycloak + APISIX. GDPR-ready. Architected for AI Act requirements. Deployable on Kubernetes or bare-metal.",
+  creator: { "@id": ORG_ID },
   featureList: [
     "LLM Inference with vLLM and OpenWebUI",
     "Zero-Trust Auth with Keycloak OIDC/PKCE and APISIX",
@@ -147,6 +153,55 @@ export default function PlatformPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Where the platform sits inside an engagement */}
+      <section className="py-20 md:py-28 bg-[#0D1117] border-t border-[#30363D]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-3">
+            How it is delivered
+          </p>
+          <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-5">
+            A platform inside an engagement, not a licence
+          </h2>
+          <div className="text-[#7D8FA3] text-lg leading-relaxed space-y-4">
+            <p>
+              Nexus MDS Core is normally deployed as part of a wider engagement covering AI
+              architecture,{" "}
+              <Link
+                href="/services/governance-advisory"
+                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+              >
+                governance and compliance advisory
+              </Link>{" "}
+              and regulated operation. The order matters: which obligations reach the system, and
+              which component carries each one, is settled before the deployment topology is.
+            </p>
+            <p>
+              The regulatory side of that work runs on the{" "}
+              <Link href="/cepf" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Compliance-Epistemic Project Framework (CEPF)
+              </Link>{" "}
+              and on{" "}
+              <Link href="/calibra" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Calibra
+              </Link>
+              , the software built on it — separate instruments from the platform itself. Nexus
+              runs the workload; Calibra governs the programme.
+            </p>
+            <p>
+              The usual way in is the{" "}
+              <Link
+                href="/assessment"
+                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+              >
+                exposure assessment
+              </Link>
+              : a fixed-scope engagement that establishes what you are answerable for before
+              anything is built.
+            </p>
           </div>
         </div>
       </section>

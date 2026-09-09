@@ -2,7 +2,7 @@ import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Microsoft Dynamics 365 | Dynamics Consulting",
+  title: "Microsoft Dynamics 365",
   description:
     "Implementation, customisation, and managed support for Microsoft Dynamics 365 Finance & Operations, Sales, Customer Engagement, and Power Platform. Certified Microsoft partner.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/services/microsoft-dynamics" },

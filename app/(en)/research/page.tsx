@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Research & Insights | Dynamics Consulting",
+  title: "Research & Insights",
   description:
     "Thought leadership, technical deep-dives, and original research from Corrado Patierno on sovereign AI, on-premise infrastructure, RAG architectures, and enterprise modernisation for healthcare and pharma.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/research" },

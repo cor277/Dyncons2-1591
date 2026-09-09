@@ -6,7 +6,7 @@ import { CTAButton } from "@/components/ui/CTAButton";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "Fractional AI CTO | Dynamics Consulting",
+  title: "Fractional AI CTO",
   description:
     "Permanent CTO presence at fractional cost. Technology strategy, architectural governance, vendor selection, AI programme leadership for organisations under regulatory pressure.",
   keywords: [

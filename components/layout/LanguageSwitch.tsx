@@ -16,6 +16,7 @@ const PAIRS: Record<string, string> = {
   "/ai-on-premise-healthcare": "/it/ai-sanitaria-on-premise",
   "/case-studies/federfarma": "/it/case-studies/federfarma",
   "/assessment": "/it/assessment",
+  "/services/governance-advisory": "/it/consulenza-ai-governance-compliance",
 };
 
 const REVERSE: Record<string, string> = Object.fromEntries(

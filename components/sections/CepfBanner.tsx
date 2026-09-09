@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { TextLink } from "@/components/ui/TextLink";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -33,6 +34,20 @@ export function CepfBanner() {
                 cross-framework overlap groups, 695 document templates. It covers
                 organisations operating under EU AI Act, GDPR, PLD 2024, NIS2, DORA,
                 ISO 27001:2022, Cyber Resilience Act and ISO 56001.
+              </p>
+              <p className="text-[#7D8FA3] text-base leading-relaxed mb-6">
+                CEPF is the methodology;{" "}
+                <Link href="/calibra" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                  Calibra
+                </Link>{" "}
+                is the software built on it. Both are used inside{" "}
+                <Link
+                  href="/services/governance-advisory"
+                  className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+                >
+                  AI governance and compliance advisory
+                </Link>{" "}
+                engagements.
               </p>
               <div className="flex flex-wrap gap-2">
                 {[

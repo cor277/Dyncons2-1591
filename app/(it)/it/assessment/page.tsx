@@ -258,6 +258,18 @@ export default function AssessmentItPage() {
               L’esposizione non si valuta quando arriva la contestazione. Si valuta prima, quando
               c’è ancora tempo per intervenire.
             </p>
+            <p className="mt-5 text-[#7D8FA3] text-base leading-relaxed">
+              Questo è un incarico a perimetro fisso. Il lavoro continuativo in cui di solito
+              prosegue — disegno della governance, revisione architetturale, implementazione —
+              è descritto nella{" "}
+              <a
+                href="/it/consulenza-ai-governance-compliance"
+                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+              >
+                consulenza AI, governance e compliance
+              </a>
+              .
+            </p>
           </div>
         </section>
       </main>

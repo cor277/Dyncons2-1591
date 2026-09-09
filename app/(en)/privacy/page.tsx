@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for dynamicsconsulting.it — how we collect, use, and protect your personal data in compliance with GDPR and the EU AI Act.",
+    "Privacy policy for dynamicsconsulting.it — how we collect, use, and protect your personal data under the GDPR and the EU AI Act.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/privacy" },
 };
 

@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 export const metadata: Metadata = {
-  title: "Applied AI & Agentic Workflows | Dynamics Consulting",
+  title: "Applied AI & Agentic Workflows",
   description: "Multi-agent systems, RAG pipelines, Voice AI and AI governance for organisations in regulated industries. GDPR and AI Act compliance by design.",
   keywords: ["agentic AI", "multi-agent systems", "RAG architecture enterprise", "voice AI", "GDPR AI compliance", "AI Act"],
   alternates: { canonical: "https://www.dynamicsconsulting.it/services/applied-ai" },

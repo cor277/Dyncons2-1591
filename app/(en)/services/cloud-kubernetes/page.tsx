@@ -3,7 +3,7 @@ import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Cloud & Kubernetes Architecture | Dynamics Consulting",
+  title: "Cloud & Kubernetes Architecture",
   description:
     "Kubernetes CPU/GPU clusters on AKS, GCP, Hetzner. APISIX API Gateway with Zero-Trust. Serverless AI with OpenWhisk. Self-hosted LLM deployment.",
   keywords: [

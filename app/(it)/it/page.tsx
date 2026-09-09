@@ -7,7 +7,7 @@ import { CTAButton } from "@/components/ui/CTAButton";
 
 const TITLE = "Risorse in italiano — AI sovrana per settori regolamentati";
 const DESCRIPTION =
-  "Indice delle pagine in italiano di Dynamics Consulting: sovereign AI, sanità, farmaceutico, finanza, ingegneria, PMI. Nexus MDS Core — piattaforma AI on-premise, progettata sui requisiti GDPR e AI Act.";
+  "Indice delle pagine in italiano di Dynamics Consulting: consulenza AI, governance e compliance, sovereign AI, sanità, farmaceutico, finanza, ingegneria, PMI. Nexus MDS Core — piattaforma AI on-premise, progettata sui requisiti GDPR e AI Act.";
 const URL = "https://www.dynamicsconsulting.it/it";
 
 export const metadata: Metadata = {
@@ -15,7 +15,11 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: {
     canonical: URL,
-    languages: { en: "https://www.dynamicsconsulting.it/" },
+    languages: {
+      it: URL,
+      en: "https://www.dynamicsconsulting.it/",
+      "x-default": "https://www.dynamicsconsulting.it/",
+    },
   },
   openGraph: {
     images: OG_IMAGE,
@@ -80,6 +84,12 @@ const SECTORS: Resource[] = [
 
 const SERVICES: Resource[] = [
   {
+    href: "/it/consulenza-ai-governance-compliance",
+    title: "Consulenza AI, governance e compliance",
+    blurb:
+      "Analisi normativa, disegno della governance e architettura per chi introduce AI in un settore regolamentato. AI Act, GDPR, PLD 2024, NIS2, DORA.",
+  },
+  {
     href: "/fractional-cto-milano",
     title: "Fractional CTO a Milano",
     blurb:
@@ -131,6 +141,25 @@ export default function ItalianIndexPage() {
         </section>
 
         <section className="px-6 py-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-4">
+              Consulenza AI, governance e compliance
+            </h2>
+            <p className="text-[#7D8FA3] text-lg leading-relaxed mb-6">
+              Dynamics Consulting è uno studio indipendente di consulenza e ingegneria AI: analisi
+              normativa, governance, architettura e implementazione per organizzazioni in settori
+              regolamentati. È la pagina da cui partire se stai valutando l&apos;introduzione
+              dell&apos;intelligenza artificiale dove un output ha conseguenze.
+            </p>
+            <CTAButton
+              label="Consulenza AI, governance e compliance &rarr;"
+              href="/it/consulenza-ai-governance-compliance"
+              variant="primary"
+            />
+          </div>
+        </section>
+
+        <section className="px-6 py-16 border-t border-[#21262D]">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-4">
               Da dove partire

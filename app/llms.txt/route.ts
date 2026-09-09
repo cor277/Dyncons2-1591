@@ -14,10 +14,20 @@ const BASE_URL = "https://www.dynamicsconsulting.it";
 const body = `# Dynamics Consulting
 
 > Sovereign AI infrastructure for regulated industries, based in Milan, Italy.
-> Independent consultancy led by Corrado Patierno: AI governance and compliance
-> advisory, fractional AI CTO, and Nexus MDS Core — a self-hosted AI platform
-> for organisations that must be able to show where their data goes and
-> reconstruct what a system answered.
+> Independent AI consulting and engineering practice led by Corrado Patierno:
+> AI consulting and architecture, AI governance and compliance advisory,
+> fractional AI CTO, and Nexus MDS Core — a self-hosted AI platform for
+> organisations that must be able to show where their data goes and reconstruct
+> what a system answered. Advisory and implementation come from the same
+> practice, which is the distinction from both a pure compliance consultancy and
+> a pure software house.
+>
+> Entities, so they are not conflated: Dynamics Consulting is the provider.
+> Nexus MDS Core is its sovereign, self-hosted enterprise AI platform. CEPF —
+> the Compliance-Epistemic Project Framework — is its compliance methodology.
+> Calibra is the software built on CEPF. The exposure assessment is one
+> fixed-scope engagement inside the governance and compliance service, not the
+> service itself.
 
 The site is primarily in English. Italian versions exist for the pages listed
 under "Italiano"; they are the canonical version for Italian readers, not
@@ -41,11 +51,12 @@ on-premise" or "data never leaves the perimeter".
 
 - [Nexus MDS Core](${BASE_URL}/platform): Self-hosted AI platform, sixteen orchestrated services — retrieval, vector search, Zero-Trust identity, workflow engine, audit. Deployable on Kubernetes or bare metal.
 - [Compliance-Epistemic Project Framework (CEPF)](${BASE_URL}/cepf): Regulatory crossing catalogue, version 7, snapshot July 2026 — 19 frameworks mapped onto their operational obligations and their overlaps, 247 requirements, 24 cross-framework overlap groups, 695 document templates. The page hosts a reduced demo of Calibra, the software built on CEPF, covering nine of the frameworks; the demo interface is in Italian.
+- [Calibra](${BASE_URL}/calibra): The software built on CEPF — the regulatory catalogue plus risk, scheduling, operational flow, Gantt and milestones. Proprietary to Dynamics Consulting, used inside engagements. The demo lives on the CEPF page.
 - [Technical capabilities](${BASE_URL}/capabilities): The engineering underneath the service lines — applied AI, data platforms, Kubernetes, integration, Dynamics 365, automation, blockchain. Competences, not separate offerings.
 
 ## Services
 
-- [AI Governance & Compliance Advisory](${BASE_URL}/services/governance-advisory): EU AI Act, PLD 2024, NIS2, DORA. CEPF audit, board-level governance design, architecture review with documented accountability.
+- [AI Governance & Compliance Advisory](${BASE_URL}/services/governance-advisory): AI consulting for regulated organisations. Regulatory positioning of the system under the EU AI Act, GDPR, PLD 2024, NIS2, DORA, the Cyber Resilience Act and ISO/IEC 27001:2022; architecture review with documented technical accountability; governance design; remediation sequence; implementation. Runs on CEPF and Calibra. Italian counterpart: /it/consulenza-ai-governance-compliance.
 - [Fractional AI CTO](${BASE_URL}/services/fractional-cto): Technology strategy, architectural governance, vendor selection and AI programme leadership, part-time.
 - [Applied AI & Agentic Workflows](${BASE_URL}/services/applied-ai)
 - [Data Platforms & RAG Architecture](${BASE_URL}/services/data-platforms)
@@ -84,6 +95,7 @@ on-premise" or "data never leaves the perimeter".
 ## Italiano
 
 - [Risorse in italiano — indice](${BASE_URL}/it): Entry point for every Italian-language page.
+- [Consulenza AI, governance e compliance](${BASE_URL}/it/consulenza-ai-governance-compliance): The Italian counterpart of the governance advisory service — written for Italian decision-makers, not a translation of record.
 - [Assessment di esposizione — PLD 2024 e AI Act](${BASE_URL}/it/assessment)
 - [Federfarma Lombarda — Nexus MDS Core in produzione](${BASE_URL}/it/case-studies/federfarma)
 - [AI On-Premise per la Sanità Italiana](${BASE_URL}/it/ai-sanitaria-on-premise)

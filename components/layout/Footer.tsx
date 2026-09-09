@@ -21,6 +21,7 @@ const deliveryServices = [
 const legal = [
   { label: "Nexus MDS Core", href: "/platform" },
   { label: "CEPF Methodology", href: "/cepf" },
+  { label: "Calibra", href: "/calibra" },
   { label: "EU Tech Sovereignty", href: "/tech-sovereignty" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Research", href: "/research" },
@@ -163,6 +164,9 @@ export function Footer() {
           <div className="flex flex-wrap gap-x-6 gap-y-1">
             <Link href="/it" hrefLang="it" className="text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200">
               Tutte le risorse in italiano
+            </Link>
+            <Link href="/it/consulenza-ai-governance-compliance" hrefLang="it" className="text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200">
+              Consulenza AI, governance e compliance
             </Link>
             <Link href="/it/assessment" hrefLang="it" className="text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200">
               Assessment di esposizione

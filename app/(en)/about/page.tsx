@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ORG_ID, PERSON_ID, WEBSITE_ID } from "@/app/schema-org";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Corrado Patierno — AI Solution Architect Italy",
+  title: "About — Corrado Patierno, AI consulting and engineering",
   description:
-    "25+ years in enterprise systems. MISE Innovation Manager. Author of Logistica Fluida. Building sovereign AI infrastructure for Italy's healthcare and pharma mid-market since 2019.",
+    "Dynamics Consulting is an independent Italian AI consulting and engineering practice led by Corrado Patierno: AI governance and compliance, enterprise AI architecture, sovereign infrastructure. 25+ years in enterprise systems, MISE Innovation Manager, author of Logistica Fluida.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/about" },
 };
 
@@ -52,40 +54,29 @@ const timeline = [
   },
 ];
 
+/* Person and Organization are declared in app/schema-org.ts; referenced by @id here. */
 const aboutSchema = [
   {
     "@context": "https://schema.org",
     "@type": "AboutPage",
+    "@id": "https://www.dynamicsconsulting.it/about#webpage",
     name: "About Dynamics Consulting",
     url: "https://www.dynamicsconsulting.it/about",
-    mainEntity: {
-      "@type": "Person",
-      name: "Corrado Patierno",
-      jobTitle: "AI Solution Architect & Founder",
-      description:
-        "Technology consultant, AI architect, MISE-certified Innovation Manager, and author of Logistica Fluida. Over 25 years of hands-on delivery across enterprise systems, data platforms, cloud, and AI infrastructure.",
-      worksFor: {
-        "@type": "Organization",
-        name: "Dynamics Consulting",
-        url: "https://www.dynamicsconsulting.it",
-      },
-      knowsAbout: [
-        "Enterprise AI Architecture",
-        "Sovereign AI",
-        "Healthcare AI Infrastructure",
-        "On-premise LLM",
-        "Microsoft Dynamics 365",
-        "Legacy Modernisation",
-      ],
-      sameAs: [
-        "https://www.linkedin.com/in/corradopatierno",
-        "https://amzn.eu/d/06ZlECJe",
-      ],
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Milano",
-        addressCountry: "IT",
-      },
+    inLanguage: "en",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": ORG_ID },
+    mainEntity: { "@id": PERSON_ID },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": PERSON_ID,
+    description:
+      "Technology consultant, AI architect, MISE-certified Innovation Manager, and author of Logistica Fluida. Over 25 years of hands-on delivery across enterprise systems, data platforms, cloud, and AI infrastructure.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Milano",
+      addressCountry: "IT",
     },
   },
 ];
@@ -109,9 +100,15 @@ export default function AboutPage() {
               Built on conviction, not convenience
             </h1>
             <p className="text-lg text-[#7D8FA3] leading-relaxed">
-              Dynamics Consulting was founded with a clear conviction: organisations in healthcare,
-              pharma, and regulated industries deserve AI infrastructure they own, govern, and trust
-              not rented black boxes running on someone else&apos;s cloud.
+              Dynamics Consulting is an independent Italian AI consulting and engineering practice,
+              led by Corrado Patierno from Milan, working on AI governance and compliance,
+              enterprise AI architecture and sovereign infrastructure for organisations in
+              regulated industries.
+            </p>
+            <p className="mt-5 text-lg text-[#7D8FA3] leading-relaxed">
+              It was founded with a clear conviction: organisations in healthcare, pharma, and
+              regulated industries deserve AI infrastructure they own, govern, and trust — not
+              rented black boxes running on someone else&apos;s cloud.
             </p>
           </div>
         </section>
@@ -179,7 +176,14 @@ export default function AboutPage() {
             </p>
             <p className="text-[#7D8FA3] leading-relaxed text-lg">
               This means clients never get handed off to juniors after the sale. The person who scopes
-              the work is the person who delivers it.
+              the work is the person who delivers it — which is also why{" "}
+              <Link
+                href="/services/governance-advisory"
+                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
+              >
+                AI governance and compliance advisory
+              </Link>{" "}
+              and the engineering that implements it sit in the same practice.
             </p>
           </div>
         </section>

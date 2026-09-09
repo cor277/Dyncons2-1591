@@ -19,11 +19,11 @@ import { ChatbotWidget } from "@/components/ChatbotWidget";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dynamicsconsulting.it"),
   title: {
-    default: "Dynamics Consulting | Infrastruttura AI sovrana",
+    default: "Dynamics Consulting | Consulenza AI e infrastruttura AI sovrana",
     template: "%s | Dynamics Consulting",
   },
   description:
-    "Piattaforme AI per organizzazioni che non possono permettersi rischi di sovranità del dato. Sanità, farmaceutico, energia, CRM enterprise. Nexus MDS Core — 16 servizi, controlli mappati sul GDPR, progettato sui requisiti dell'AI Act.",
+    "Consulenza AI, governance e compliance per organizzazioni in settori regolamentati, e piattaforme AI che restano dentro il perimetro. Sanità, farmaceutico, energia, CRM enterprise. Nexus MDS Core — 16 servizi, controlli mappati sul GDPR, progettato sui requisiti dell'AI Act.",
   authors: [{ name: "Corrado Patierno", url: "https://www.dynamicsconsulting.it" }],
   creator: "Corrado Patierno",
   openGraph: {

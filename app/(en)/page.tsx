@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ORG_ID, WEBSITE_ID, NEXUS_ID, CEPF_ID } from "@/app/schema-org";
 import { TextLink } from "@/components/ui/TextLink";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -19,10 +20,17 @@ import { DigitalTwinSection } from "@/components/sections/DigitalTwinSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 
 export const metadata: Metadata = {
-  title: { absolute: "Dynamics Consulting | Sovereign AI Infrastructure" },
+  title: { absolute: "Sovereign AI, AI Governance & Compliance | Dynamics Consulting" },
   description:
-    "We build on-premise AI platforms for organisations that cannot afford data sovereignty risk. Healthcare, pharma, energy, enterprise CRM. Nexus MDS Core — 16 services, GDPR-ready, architected for AI Act requirements, aligned with EU Tech Sovereignty Package (CADA, 2026), PLD 2024 ready.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it" },
+    "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. We design and deploy sovereign, on-premise AI systems — Nexus MDS Core, 16 services, GDPR-ready, architected for AI Act and PLD 2024 requirements.",
+  alternates: {
+    canonical: "https://www.dynamicsconsulting.it",
+    languages: {
+      en: "https://www.dynamicsconsulting.it",
+      it: "https://www.dynamicsconsulting.it/it",
+      "x-default": "https://www.dynamicsconsulting.it",
+    },
+  },
 };
 
 const caseStudies = [
@@ -92,34 +100,23 @@ const caseStudies = [
   },
 ];
 
+/**
+ * The organisation, the founder, Nexus, CEPF and Calibra are declared once in
+ * app/schema-org.ts and emitted by the layout. Here they are referenced by @id,
+ * so the graph connects instead of repeating the same entity twice on one page.
+ */
 const homeSchema = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": WEBSITE_ID,
     name: "Dynamics Consulting",
     url: "https://www.dynamicsconsulting.it",
+    inLanguage: "en",
     description:
-      "Sovereign AI infrastructure for regulated industries. On-premise AI platforms, GDPR-ready, architected for AI Act requirements.",
-    publisher: {
-      "@type": "Organization",
-      name: "Dynamics Consulting",
-      url: "https://www.dynamicsconsulting.it",
-      logo: "https://www.dynamicsconsulting.it/logo.jpg",
-      founder: {
-        "@type": "Person",
-        name: "Corrado Patierno",
-        jobTitle: "AI Solution Architect & Founder",
-      },
-      foundingDate: "2019",
-      areaServed: ["IT", "EU"],
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Via Torino 2",
-        addressLocality: "Milano",
-        postalCode: "20123",
-        addressCountry: "IT",
-      },
-    },
+      "AI consulting, governance and compliance for regulated industries, and sovereign on-premise AI infrastructure. Nexus MDS Core, CEPF and Calibra.",
+    publisher: { "@id": ORG_ID },
+    about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }, { "@id": CEPF_ID }],
   },
 ];
 
