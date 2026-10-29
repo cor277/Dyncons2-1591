@@ -62,7 +62,7 @@ const caseStudies = [
     title: "CureSicure",
     summary:
       "Legge i dati pubblici degli ospedali (PNE-AGENAS, SDO/NSIS, open data del Ministero della Salute) e, data una patologia, aiuta i pazienti a trovare le strutture che misurano meglio per qualità ed efficienza. Gira su Nexus MDS Core.",
-    metrics: ["In produzione", "Solo dati pubblici", "Nessun tracciamento d’uso, per scelta"],
+    metrics: ["In produzione", "Solo dati pubblici", "Nessun tracciamento degli utenti, per scelta"],
     href: "/it/case-studies/curesicure",
   },
   {

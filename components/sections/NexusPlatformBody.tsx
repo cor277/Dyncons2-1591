@@ -168,12 +168,6 @@ const EN: Copy = {
           "Yes. Records are hash-chained; a verification endpoint inside the installation and a separate command-line tool check the chain without relying on the running service.",
         saas: "Typically the log stays with the vendor: you see what its console or export shows, with fuller access on request.",
       },
-      {
-        aspect: "If the provider shuts down",
-        nexus:
-          "The installation stays on your servers and keeps running: Docker, open-source components such as Keycloak, APISIX, Weaviate, PostgreSQL and llama.cpp, and a generation step you can move to another endpoint or a local model.",
-        saas: "Typically the service switches off with the vendor; exporting data and indexes has to be negotiated, often against a deadline.",
-      },
     ],
     note: "Comparison with the typical SaaS delivery model, not with any specific vendor.",
   },
@@ -260,7 +254,7 @@ const EN: Copy = {
         title: "CureSicure",
         summary:
           "Reads public hospital data — PNE-AGENAS, SDO/NSIS, Ministry of Health open data — and, given a condition, helps patients find the facilities that measure best on quality and efficiency.",
-        metrics: ["Public data only", "No usage tracking, by design"],
+        metrics: ["Public data only", "No user tracking, by design"],
         href: "/case-studies/curesicure",
       },
       {
@@ -422,12 +416,6 @@ const IT: Copy = {
           "Sì. I record sono concatenati via hash; un endpoint di verifica dentro l’installazione e uno strumento a riga di comando separato controllano la catena senza fidarsi del servizio in esecuzione.",
         saas: "Di norma il registro resta al fornitore: vedi quello che mostrano la sua console o il suo export, con un accesso più ampio su richiesta.",
       },
-      {
-        aspect: "Se il fornitore chiude",
-        nexus:
-          "L’installazione resta sui tuoi server e continua a girare: Docker, componenti open source come Keycloak, APISIX, Weaviate, PostgreSQL e llama.cpp, e una generazione che puoi spostare su un altro endpoint o su un modello locale.",
-        saas: "Di norma il servizio si spegne con il fornitore; l’export di dati e indici va negoziato, spesso con una scadenza.",
-      },
     ],
     note: "Confronto con il modello tipico di erogazione in SaaS, non con un fornitore specifico.",
   },
@@ -515,7 +503,7 @@ const IT: Copy = {
         title: "CureSicure",
         summary:
           "Legge i dati pubblici degli ospedali (PNE-AGENAS, SDO/NSIS, open data del Ministero della Salute) e, data una patologia, aiuta il paziente a trovare le strutture che misurano meglio per qualità ed efficienza.",
-        metrics: ["Solo dati pubblici", "Nessun tracciamento, per scelta"],
+        metrics: ["Solo dati pubblici", "Nessun tracciamento degli utenti, per scelta"],
         href: "/it/case-studies/curesicure",
         linkLabel: "Leggi il case study →",
       },

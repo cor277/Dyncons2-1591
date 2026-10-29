@@ -13,7 +13,7 @@ const CASE_URL = "https://www.dynamicsconsulting.it/case-studies/curesicure";
 
 const TITLE = "CureSicure — public hospital data, read for patients";
 const DESCRIPTION =
-  "A pro bono service in production on Nexus MDS Core. It reads public hospital data (PNE-AGENAS, SDO/NSIS, Ministry of Health open data) and, given a condition, helps a patient find the facilities that measure best on quality and efficiency. It tracks nobody, by design.";
+  "A pro bono service in production on Nexus MDS Core. It reads public hospital data (PNE-AGENAS, SDO/NSIS, Ministry of Health open data) and, given a condition, helps a patient find the facilities that measure best on quality and efficiency. By design it tracks no users: the platform keeps only the technical audit log of model calls.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -202,9 +202,9 @@ export default function CureSicureCaseStudy() {
                 <p className="mt-4">
                   CureSicure{" "}
                   <strong className="text-[#E6EDF3]">
-                    collects no usage metrics and tracks nobody
+                    collects no usage metrics and tracks no users; the platform keeps only the technical audit log of model calls
                   </strong>
-                  , by choice. With nothing collected there is nothing to count, so this page
+                  , by choice. With no usage data collected there is nothing to count, so this page
                   publishes no usage figures and claims none.
                 </p>
               </div>

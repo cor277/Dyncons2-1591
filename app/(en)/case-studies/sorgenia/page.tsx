@@ -85,9 +85,9 @@ export default function SorgeniaCaseStudy() {
               customer events like contract renewal, usage spikes, or billing milestones.
             </p>
 
-            <h2>What Dynamics Consulting built</h2>
+            <h2>What was delivered</h2>
             <p>
-              Dynamics Consulting implemented Dynamics 365 Marketing (now Customer Insights - Journeys) as the
+              The programme implemented Dynamics 365 Marketing (now Customer Insights - Journeys) as the
               central orchestration layer, fully integrated with Sorgenia&apos;s existing Dynamics
               365 Sales and custom billing platform. The core deliverables included:
             </p>

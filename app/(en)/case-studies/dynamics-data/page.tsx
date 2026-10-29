@@ -91,9 +91,9 @@ export default function DynamicsDataCaseStudy() {
               production throughput — decisions were made on data that was at least 24 hours old.
             </p>
 
-            <h2>What Dynamics Consulting built</h2>
+            <h2>What was delivered</h2>
             <p>
-              Dynamics Consulting ran a two-week discovery to map all business processes, custom fields, and
+              The programme started with a two-week discovery to map all business processes, custom fields, and
               third-party integrations across the four legacy ERP instances, producing a full data
               lineage map and a risk-ranked migration backlog.
             </p>
@@ -105,7 +105,7 @@ export default function DynamicsDataCaseStudy() {
               full reconciliation to legacy source totals.
             </p>
             <p>
-              In parallel, Dynamics Consulting built a cloud data lakehouse on Azure Synapse Analytics with Synapse
+              In parallel, a cloud data lakehouse was built on Azure Synapse Analytics with Synapse
               Link providing near-real-time data export from F&amp;O into Azure Data Lake. dbt
               transformation models fed a Power BI semantic layer, meaning dashboards reflected
               the current state of all four plants with a 15-minute refresh cadence.

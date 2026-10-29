@@ -101,9 +101,9 @@ export default function SorgeniaCaseStudyIt() {
               rinnovo del contratto, i picchi di consumo o le scadenze di fatturazione.
             </p>
 
-            <h2>Cosa ha costruito Dynamics Consulting</h2>
+            <h2>Cosa è stato consegnato</h2>
             <p>
-              Dynamics Consulting ha implementato Dynamics 365 Marketing (oggi Customer Insights - Journeys) come
+              Il programma ha implementato Dynamics 365 Marketing (oggi Customer Insights - Journeys) come
               livello centrale di orchestrazione, integrato pienamente con Dynamics 365 Sales già
               in uso in Sorgenia e con la piattaforma di fatturazione custom. I deliverable
               principali:

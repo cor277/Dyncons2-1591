@@ -450,7 +450,7 @@ export default function AiOnPremiseHealthcarePage() {
                 and efficiency indicators from PNE-AGENAS, SDO/NSIS discharge records, Ministry of
                 Health open data — and, given a condition, helps a patient find the facilities that
                 measure best on quality and efficiency. It runs on Nexus MDS Core as a pro bono
-                service, and by design it keeps no usage metrics and tracks nobody.
+                service; by design it keeps no usage metrics and tracks no users — only the platform’s technical audit log of model calls.
               </p>
               <p className="mt-4">
                 <strong className="text-[#E6EDF3]">

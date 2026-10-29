@@ -13,7 +13,7 @@ const CASE_URL = "https://www.dynamicsconsulting.it/it/case-studies/curesicure";
 
 const TITLE = "CureSicure — i dati pubblici degli ospedali, letti per i pazienti";
 const DESCRIPTION =
-  "Un servizio pro bono in produzione su Nexus MDS Core. Legge i dati pubblici degli ospedali (PNE-AGENAS, SDO/NSIS, open data del Ministero della Salute) e, data una patologia, aiuta il paziente a trovare le strutture che misurano meglio per qualità ed efficienza. Per scelta non traccia nessuno.";
+  "Un servizio pro bono in produzione su Nexus MDS Core. Legge i dati pubblici degli ospedali (PNE-AGENAS, SDO/NSIS, open data del Ministero della Salute) e, data una patologia, aiuta il paziente a trovare le strutture che misurano meglio per qualità ed efficienza. Per scelta non traccia gli utenti: la piattaforma conserva solo il registro tecnico delle chiamate ai modelli.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -202,9 +202,9 @@ export default function CureSicureCaseStudyIt() {
                 <p className="mt-4">
                   CureSicure{" "}
                   <strong className="text-[#E6EDF3]">
-                    non raccoglie metriche d’uso e non traccia nessuno
+                    non raccoglie metriche d’uso e non traccia gli utenti; la piattaforma conserva solo il registro tecnico delle chiamate ai modelli
                   </strong>
-                  , per scelta. Se non si raccoglie niente non c’è niente da contare: per questo la
+                  , per scelta. Se non si raccolgono dati d’uso non c’è niente da contare: per questo la
                   pagina non pubblica numeri d’uso e non ne rivendica.
                 </p>
               </div>
