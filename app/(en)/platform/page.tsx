@@ -1,19 +1,11 @@
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
-import Link from "next/link";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID } from "@/app/schema-org";
-import { Cpu, Shield, Search, GitBranch, Database, Activity, CheckCircle2 } from "lucide-react";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
-import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CTAButton } from "@/components/ui/CTAButton";
-import { TechBadge } from "@/components/ui/TechBadge";
-import { CTASection } from "@/components/sections/CTASection";
-import { PlatformFeatureGrid } from "@/components/sections/PlatformFeatureGrid";
-import { PlatformHero } from "@/components/sections/PlatformHero";
-import { NexusGraphExplorer } from "@/components/sections/NexusGraphExplorer";
+import { NexusPlatformBody } from "@/components/sections/NexusPlatformBody";
 
 export const metadata: Metadata = {
   title: "Nexus MDS Core — On-Premise AI Platform",
@@ -55,39 +47,6 @@ const schemaOrg = {
   ],
 };
 
-const useCases = [
-  {
-    title: "Healthcare & Pharma",
-    description:
-      "RAG pipeline on clinical and pharmaceutical documents. Authentication designed for GDPR requirements. In production for Federfarma Lombarda, and for CureSicure — a service that reads public hospital data (PNE-AGENAS, SDO/NSIS, Ministry of Health open data) to point patients to the facilities that measure best for their condition.",
-    badges: ["GDPR", "OCR Pipeline", "Vector Search"],
-  },
-  {
-    title: "Engineering & Technical Documentation",
-    description:
-      "RAG over technical norms, project specifications, and revision trees. Version-aware retrieval: answers are scoped to the correct document revision for the project date. Every answer is source-cited and fully traceable. Designed for professional liability contexts where a wrong clause has real consequences.",
-    badges: ["ISO/UNI", "Project Specs", "Revision Control", "Traceable RAG"],
-  },
-  {
-    title: "Finance & Regulated Services",
-    description:
-      "RAG and agent systems for banks, asset managers, and insurance. Built with governance as the starting constraint, not a feature added at the end. Human-in-the-loop approval gates, tamper-evident audit trail, RBAC segregation between front office / risk / compliance, full LLM call logging. Controls mapped to DORA operational resilience, MiFID II decision traceability and AI Act high-risk obligations. EU data residency, no hyperscaler lock-in.",
-    badges: ["DORA", "MiFID II", "Audit trail", "Human-in-the-loop", "RBAC"],
-  },
-  {
-    title: "Enterprise B2B",
-    description:
-      "Internal copilot on ERP data, enterprise workflow automation, event-driven integration with legacy systems.",
-    badges: ["Dynamics 365", "LLM", "Event-Driven"],
-  },
-  {
-    title: "Regulated Industries",
-    description:
-      "Infrastructure architected for AI Act requirements: EU data residency, tamper-evident audit trail, generation on a local model or a replaceable EU endpoint.",
-    badges: ["AI Act", "EU Data Residency", "ISO 27001 controls mapped"],
-  },
-];
-
 const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/platform", [
   { name: "Home", path: "/" },
   { name: "Nexus MDS Core" },
@@ -103,126 +62,7 @@ export default function PlatformPage() {
       />
       <NavBar />
       <main>
-      <PlatformHero />
-      <PlatformFeatureGrid />
-
-      {/* Architecture graph */}
-      <section className="py-20 md:py-28 bg-[#0D1117]">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
-            <SectionHeader
-              eyebrow="Architecture"
-              title="Service graph explorer"
-            />
-            <p className="text-[#7D8FA3] text-sm mt-3 max-w-2xl">
-              Click any node to center the view and explore its connections. Each edge shows the protocol and direction of data flow.
-            </p>
-          </div>
-          <NexusGraphExplorer />
-        </div>
-      </section>
-
-      {/* Compliance row */}
-      <section className="py-12 bg-[#0D1117] border-t border-[#30363D]">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mb-6 text-center">
-            Controls mapped — no certification claimed
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {["GDPR controls mapped", "AI Act controls mapped", "ISO/IEC 27001:2022 controls mapped", "EU data residency"].map((b) => (
-              <TechBadge key={b} label={b} variant="cyan" />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use cases */}
-      <section className="py-20 md:py-28 bg-[#161B22]">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <SectionHeader
-              eyebrow="Use cases"
-              title="Designed for regulated industries"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {useCases.map((uc) => (
-              <div
-                key={uc.title}
-                className="bg-[#0D1117] border border-[#30363D] rounded-xl p-6"
-              >
-                <h3 className="font-dm font-bold text-[#E6EDF3] text-lg mb-3">
-                  {uc.title}
-                </h3>
-                <p className="text-[#7D8FA3] text-sm leading-relaxed mb-4">
-                  {uc.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {uc.badges.map((b) => (
-                    <TechBadge key={b} label={b} variant="cyan" />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Where the platform sits inside an engagement */}
-      <section className="py-20 md:py-28 bg-[#0D1117] border-t border-[#30363D]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-3">
-            How it is delivered
-          </p>
-          <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-5">
-            A platform inside an engagement, not a licence
-          </h2>
-          <div className="text-[#7D8FA3] text-lg leading-relaxed space-y-4">
-            <p>
-              Nexus MDS Core is normally deployed as part of a wider engagement covering AI
-              architecture,{" "}
-              <Link
-                href="/services/governance-advisory"
-                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
-              >
-                governance and compliance advisory
-              </Link>{" "}
-              and regulated operation. The order matters: which obligations reach the system, and
-              which component carries each one, is settled before the deployment topology is.
-            </p>
-            <p>
-              The regulatory side of that work runs on the{" "}
-              <Link href="/cepf" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
-                Compliance-Epistemic Project Framework (CEPF)
-              </Link>{" "}
-              and on{" "}
-              <Link href="/calibra" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
-                Calibra
-              </Link>
-              , the software built on it — separate instruments from the platform itself. Nexus
-              runs the workload; Calibra governs the programme.
-            </p>
-            <p>
-              The usual way in is the{" "}
-              <Link
-                href="/assessment"
-                className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
-              >
-                exposure assessment
-              </Link>
-              : a fixed-scope engagement that establishes what you are answerable for before
-              anything is built.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <CTASection
-        title="Ready to see Nexus in action?"
-        subtitle="We show it running in production: Docker on a single server, every service active."
-        ctaLabel="Request a demo →"
-        ctaHref="/contact"
-      />
+        <NexusPlatformBody />
       </main>
       <Footer />
     </>

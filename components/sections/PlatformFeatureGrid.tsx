@@ -2,9 +2,15 @@
 import { motion } from "framer-motion";
 import { Cpu, Shield, Search, GitBranch, Database, Activity, Lock } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { NEXUS_SERVICE_COUNT, NEXUS_SNAPSHOT_EN, NEXUS_INFERENCE_EN } from "@/lib/nexus";
+import {
+  NEXUS_SERVICE_COUNT,
+  NEXUS_SNAPSHOT_EN,
+  NEXUS_SNAPSHOT_IT,
+  NEXUS_INFERENCE_EN,
+  NEXUS_INFERENCE_IT,
+} from "@/lib/nexus";
 
-const features = [
+const featuresEn = [
   {
     icon: Cpu,
     title: "AI Inference",
@@ -56,15 +62,82 @@ const features = [
   },
 ];
 
-export function PlatformFeatureGrid() {
+/* Same seven blocks, same order, written in Italian rather than translated. */
+const featuresIt = [
+  {
+    icon: Cpu,
+    title: "Inferenza AI",
+    tech: "llama.cpp, Nexus UI (Open WebUI), GPU rilevata in automatico",
+    description:
+      "Server locale per modelli open-weight, Qwen di default; con una GPU più grande gira un modello più grande. La generazione avviene qui, interamente in locale, oppure su un endpoint UE sostituibile, a scelta per ogni carico di lavoro. Ogni chiamata passa dal gateway ed è registrata.",
+  },
+  {
+    icon: Shield,
+    title: "Autenticazione Zero-Trust",
+    tech: "Keycloak OIDC/PKCE, APISIX, JWT",
+    description:
+      "Single sign-on con Keycloak per utenti e applicazioni; OIDC al gateway per le console di workflow e storage, JWT sui webhook. Le edizioni open source di alcune console di amministrazione usano basic auth o restrizione per IP; le edizioni enterprise le portano sotto OIDC quando serve.",
+  },
+  {
+    icon: Search,
+    title: "Ricerca vettoriale e RAG",
+    tech: "Weaviate, embedding bge-m3, Apache Tika",
+    description:
+      "Pipeline RAG in produzione su documenti aziendali: estrazione del testo con OCR di riserva, embedding calcolati in locale, ricerca vettoriale. Paginazione a cursore su raccolte con oltre 10.000 documenti.",
+  },
+  {
+    icon: GitBranch,
+    title: "Motore di workflow",
+    tech: "n8n (queue mode), Apache Hop",
+    description:
+      "Orchestrazione dei processi con decisioni affidate al modello, dall'automazione deterministica ai flussi agentici, con l'ETL batch accanto.",
+  },
+  {
+    icon: Database,
+    title: "Storage enterprise",
+    tech: "MinIO S3, PostgreSQL + pgvector, Dremio, SQL Server",
+    description:
+      "Object storage compatibile S3, un Postgres condiviso con estensione vettoriale, query federate su sorgenti eterogenee, integrazione dati con ERP e database legacy.",
+  },
+  {
+    icon: Activity,
+    title: "Osservabilità",
+    tech: "Healthcheck, autoheal, pg-backup",
+    description:
+      "Servizi con healthcheck riavviati automaticamente quando cadono, avvisi email su disco e gateway, backup programmati del database con conservazione di 7 giornalieri, 4 settimanali e 6 mensili.",
+  },
+  {
+    icon: Lock,
+    title: "Governance degli agenti",
+    tech: "Keycloak RBAC, approvazioni in n8n, audit log concatenato, filtro privacy",
+    description:
+      "Passaggi di approvazione umana prima delle azioni di scrittura degli agenti, costruiti nel workflow. Ogni chiamata al modello, locale o esterna, registrata al gateway: record cifrati e concatenati, con integrità verificabile su richiesta, archiviati ogni mese con conservazione configurabile. Dati personali riconosciuti e oscurati in locale prima che arrivino a un modello. Accessi per ruolo con segregazione per dominio. Controlli mappati sulla resilienza operativa DORA e sugli obblighi AI Act per i sistemi ad alto rischio.",
+  },
+];
+
+export function PlatformFeatureGrid({
+  locale = "en",
+  eyebrow,
+}: {
+  locale?: "en" | "it";
+  eyebrow?: string;
+}) {
+  const it = locale === "it";
+  const features = it ? featuresIt : featuresEn;
+  const title = it
+    ? `${NEXUS_SERVICE_COUNT} servizi containerizzati`
+    : `${NEXUS_SERVICE_COUNT} containerised services`;
+  const subtitle = it
+    ? `${NEXUS_INFERENCE_IT} Conteggio dei servizi a ${NEXUS_SNAPSHOT_IT}.`
+    : `${NEXUS_INFERENCE_EN} Service count as of ${NEXUS_SNAPSHOT_EN}.`;
   return (
     <section className="py-20 md:py-28 bg-[#161B22]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <SectionHeader
-            eyebrow="Architecture"
-            title={`${NEXUS_SERVICE_COUNT} containerised services`}
-            subtitle={`${NEXUS_INFERENCE_EN} Service count as of ${NEXUS_SNAPSHOT_EN}.`}
+            eyebrow={eyebrow ?? (it ? "Sotto il cofano" : "Under the hood")}
+            title={title}
+            subtitle={subtitle}
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

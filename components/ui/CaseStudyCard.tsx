@@ -8,7 +8,9 @@ interface CaseStudyCardProps {
   title: string;
   summary: string;
   metrics: string[];
-  href: string;
+  /** Omitted when there is no case study page to link to. */
+  href?: string;
+  linkLabel?: string;
 }
 
 export function CaseStudyCard({
@@ -17,6 +19,7 @@ export function CaseStudyCard({
   summary,
   metrics,
   href,
+  linkLabel = "Read the case study →",
 }: CaseStudyCardProps) {
   return (
     <motion.div
@@ -38,12 +41,14 @@ export function CaseStudyCard({
           <TechBadge key={m} label={m} variant="green" />
         ))}
       </div>
-      <Link
-        href={href}
-        className="text-[#00B4D8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200"
-      >
-        Read the case study →
-      </Link>
+      {href && (
+        <Link
+          href={href}
+          className="text-[#00B4D8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200"
+        >
+          {linkLabel}
+        </Link>
+      )}
     </motion.div>
   );
 }

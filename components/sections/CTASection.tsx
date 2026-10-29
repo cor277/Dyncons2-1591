@@ -7,6 +7,8 @@ interface CTASectionProps {
   subtitle?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  /** Optional second, lower-emphasis action. */
+  secondary?: { label: string; href: string };
 }
 
 export function CTASection({
@@ -14,6 +16,7 @@ export function CTASection({
   subtitle = "AI infrastructure to build, a legacy system to modernise, or an ERP to connect to the future? Get in touch.",
   ctaLabel = "Start the conversation →",
   ctaHref = "/contact",
+  secondary,
 }: CTASectionProps) {
   return (
     <section className="py-20 md:py-28 bg-[#0D1117]">
@@ -30,7 +33,12 @@ export function CTASection({
           <p className="text-[#7D8FA3] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
             {subtitle}
           </p>
-          <CTAButton label={ctaLabel} href={ctaHref} variant="primary" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <CTAButton label={ctaLabel} href={ctaHref} variant="primary" />
+            {secondary && (
+              <CTAButton label={secondary.label} href={secondary.href} variant="secondary" />
+            )}
+          </div>
         </motion.div>
       </div>
     </section>
