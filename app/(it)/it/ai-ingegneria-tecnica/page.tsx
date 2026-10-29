@@ -133,7 +133,7 @@ export default function AiIngegneriaTecnicaPage() {
                 <span className="text-[#7D8FA3]"> — le decisioni che contano (in inglese).</span>
               </li>
               <li>
-                <Link href="/platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Nexus MDS Core
                 </Link>
                 <span className="text-[#7D8FA3]"> — la piattaforma, servizio per servizio.</span>

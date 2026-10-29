@@ -111,7 +111,7 @@ export const schemaOrg = [
     applicationCategory: "BusinessApplication",
     operatingSystem: "Linux, Kubernetes, Docker",
     description:
-      "Enterprise self-hosted AI platform: local LLM inference, RAG pipeline, Zero-Trust identity, vector search, workflow engine, and a hash-chained audit of every model call. GDPR controls mapped and architected for AI Act requirements. Designed for healthcare, pharma, and regulated industries.",
+      "The AI operating layer for regulated perimeters: governance — identity, approval steps, a hash-chained audit of every model call — built once and inherited by every use case. Indexing, retrieval and audit run inside the perimeter; generation runs on a local model or a replaceable EU endpoint. Self-hosted; GDPR controls mapped and architected for AI Act requirements. Designed for healthcare, pharma, and regulated industries.",
     creator: { "@id": ORG_ID },
     url: `${BASE_URL}/platform`,
   },

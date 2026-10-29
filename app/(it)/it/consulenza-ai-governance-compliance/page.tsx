@@ -387,7 +387,7 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
                   sostituibile. È la strada implementativa quando l’analisi conclude che deve
                   cambiare l’architettura.
                 </p>
-                <TextLink label="Nexus MDS Core →" href="/platform" />
+                <TextLink label="Nexus MDS Core →" href="/it/piattaforma-nexus" />
               </div>
             </div>
           </div>
@@ -431,7 +431,7 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
               <strong className="text-[#E6EDF3]">Implementazione.</strong> Progettazione e
               realizzazione di quello che l’analisi richiede — retrieval, identità, audit, approval
               gate — sulla tua infrastruttura o su{" "}
-              <Link href="/platform" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+              <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
                 Nexus MDS Core
               </Link>
               .

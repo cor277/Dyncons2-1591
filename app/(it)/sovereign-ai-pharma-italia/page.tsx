@@ -156,7 +156,7 @@ export default function SovereignAiPharmaItaliaPage() {
                 pharma, e farlo nel rispetto di un quadro normativo che diventa
                 ogni anno più stringente. È esattamente il segmento in cui opera{" "}
                 <Link
-                  href="/platform"
+                  href="/it/piattaforma-nexus"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Nexus MDS Core
@@ -300,7 +300,7 @@ export default function SovereignAiPharmaItaliaPage() {
               </h2>
               <p>
                 <Link
-                  href="/platform"
+                  href="/it/piattaforma-nexus"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Nexus MDS Core

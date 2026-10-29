@@ -279,7 +279,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
               <p>
                 L&apos;obsolescence engine &egrave; integrato nella nostra piattaforma{" "}
                 <Link
-                  href="/platform"
+                  href="/it/piattaforma-nexus"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Nexus MDS Core

@@ -175,6 +175,9 @@ export function Footer() {
             <Link href="/it/assessment" hrefLang="it" className="text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium transition-colors duration-200">
               Assessment di esposizione
             </Link>
+            <Link href="/it/piattaforma-nexus" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+              Nexus MDS Core — la piattaforma
+            </Link>
             <Link href="/it/case-studies/federfarma" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               Caso studio: Federfarma Lombarda
             </Link>

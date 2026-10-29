@@ -245,7 +245,7 @@ export default function FractionalCtoMilanoPage() {
                 Il servizio di Fractional CTO di Dynamics Consulting &egrave; guidato direttamente
                 da <strong className="text-[#E6EDF3]">Corrado Patierno</strong>, fondatore dell&apos;azienda
                 e architetto della piattaforma{" "}
-                <Link href="/platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Nexus MDS Core
                 </Link>. Con oltre 25 anni di esperienza in sistemi enterprise, Corrado porta
                 un profilo che combina profondit&agrave; tecnica e visione strategica — una
@@ -484,7 +484,7 @@ export default function FractionalCtoMilanoPage() {
                     data mesh), Kubernetes e infrastrutture cloud-native, e integrazione
                     di sistemi complessi in contesti enterprise regolamentati. Ha progettato
                     e guidato la piattaforma{" "}
-                    <Link href="/platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                    <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                       Nexus MDS Core
                     </Link>{" "}
                     per AI sovrana in settori regolamentati.

@@ -1,22 +1,37 @@
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { OG_IMAGE } from "@/app/og";
+import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID } from "@/app/schema-org";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { NexusPlatformBody } from "@/components/sections/NexusPlatformBody";
 
+const EN_URL = "https://www.dynamicsconsulting.it/platform";
+const IT_URL = "https://www.dynamicsconsulting.it/it/piattaforma-nexus";
+const TITLE = "Nexus MDS Core — the AI operating layer for regulated perimeters";
+const DESCRIPTION =
+  "Build AI governance once and run every use case on it: identity, approval steps and an audit of every model call, inherited by each new use case. Indexing, retrieval and audit inside your perimeter; generation on a local model or a replaceable EU endpoint.";
+
 export const metadata: Metadata = {
-  title: "Nexus MDS Core — On-Premise AI Platform",
-  description:
-    "Self-hosted enterprise AI platform: local LLM inference, RAG pipeline, Zero-Trust auth, agent governance and audit. GDPR controls mapped, architected for AI Act requirements.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/platform" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: EN_URL,
+    languages: { en: EN_URL, it: IT_URL, "x-default": EN_URL },
+  },
   openGraph: {
     images: OG_IMAGE,
-    title: "Nexus MDS Core — On-Premise AI Platform",
-    description:
-      "Self-hosted enterprise AI platform: local LLM inference, RAG pipeline, Zero-Trust auth, agent governance and audit. GDPR controls mapped, architected for AI Act requirements.",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: EN_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: TWITTER_IMAGE,
   },
 };
 

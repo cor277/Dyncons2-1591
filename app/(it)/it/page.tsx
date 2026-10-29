@@ -90,6 +90,12 @@ const SERVICES: Resource[] = [
       "Analisi normativa, disegno della governance e architettura per chi introduce AI in un settore regolamentato. AI Act, GDPR, PLD 2024, NIS2, DORA.",
   },
   {
+    href: "/it/piattaforma-nexus",
+    title: "Nexus MDS Core — la piattaforma",
+    blurb:
+      "Governance dell’AI costruita una volta ed ereditata da ogni caso d’uso: identità, approvazioni, audit di ogni chiamata al modello. Dati nel tuo perimetro.",
+  },
+  {
     href: "/fractional-cto-milano",
     title: "Fractional CTO a Milano",
     blurb:

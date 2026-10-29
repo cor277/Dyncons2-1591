@@ -215,7 +215,7 @@ export default function SovereignAiItaliaPage() {
             <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Approfondimenti</h2>
             <ul className="space-y-3 text-base">
               <li>
-                <Link href="/platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Nexus MDS Core
                 </Link>
                 <span className="text-[#7D8FA3]"> — la piattaforma, servizio per servizio.</span>

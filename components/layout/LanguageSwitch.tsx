@@ -19,6 +19,7 @@ const PAIRS: Record<string, string> = {
   "/ai-on-premise-healthcare": "/it/ai-sanitaria-on-premise",
   "/case-studies/federfarma": "/it/case-studies/federfarma",
   "/assessment": "/it/assessment",
+  "/platform": "/it/piattaforma-nexus",
   "/services/governance-advisory": "/it/consulenza-ai-governance-compliance",
 };
 

@@ -30,9 +30,10 @@ export function NexusBanner() {
                 Nexus MDS Core
               </h2>
               <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-4">
-                The enterprise AI self-hosted platform. Zero-Trust identity, every model call audited.
-                Runs on Docker on your server or on EU sovereign infrastructure, and moves to
-                Kubernetes when scale requires it.
+                Build AI governance once and run every use case on it, inside your perimeter.
+                Identity, approval steps and an audit of every model call are set up once; each
+                new use case inherits them. Generation runs on a local model or a replaceable EU
+                endpoint.
               </p>
               <p className="text-[#7D8FA3] text-base leading-relaxed mb-6">
                 It is normally deployed inside a wider engagement covering AI architecture,{" "}

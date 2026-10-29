@@ -128,7 +128,7 @@ export default function ConsulenzaAiFarmaceuticoPage() {
                 <span className="text-[#7D8FA3]"> — inquadramento normativo e architettura che regge gli obblighi.</span>
               </li>
               <li>
-                <Link href="/platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Nexus MDS Core
                 </Link>
                 <span className="text-[#7D8FA3]"> — la piattaforma, servizio per servizio.</span>

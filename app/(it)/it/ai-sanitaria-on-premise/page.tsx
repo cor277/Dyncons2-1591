@@ -107,7 +107,7 @@ export default function AiSanitariaPage() {
               sovrano e sostenibile.
             </p>
             <div className="pt-6">
-              <CTAButton label="Scopri Nexus MDS Core →" href="/platform" variant="primary" />
+              <CTAButton label="Scopri Nexus MDS Core →" href="/it/piattaforma-nexus" variant="primary" />
             </div>
           </div>
         </section>

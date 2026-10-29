@@ -26,7 +26,7 @@ const routes: Route[] = [
   { path: "/", priority: 1.0, changeFrequency: "weekly", lastModified: "2026-09-09" },
 
   // Platform and methodology
-  { path: "/platform", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
+  { path: "/platform", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-10-29" },
   { path: "/cepf", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/calibra", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/capabilities", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-08-03" },
@@ -68,6 +68,7 @@ const routes: Route[] = [
   { path: "/it", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/it/ai-sanitaria-on-premise", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-06" },
   { path: "/it/consulenza-ai-farmaceutico", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-08-03" },
+  { path: "/it/piattaforma-nexus", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-29" },
   { path: "/it/sovereign-ai-italia", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-06" },
   { path: "/it/ai-dati-aziendali", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-06" },
   { path: "/it/ai-ingegneria-tecnica", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-06" },
