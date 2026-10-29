@@ -138,7 +138,9 @@ export default function EvaluateVendorAnswer() {
           <p>
             The 2024 product liability directive includes software in the definition of a
             product, and applies to products placed on the market or put into service from
-            9 December 2026 — the date by which Member States must have transposed it. That does not
+            9 December 2026 — the date by which Member States must have transposed it (in Italy the
+            transposing decree was given final approval by the Council of Ministers on 28 October
+            2026 and has not yet been published in the Gazzetta Ufficiale). That does not
             make suppliers liable for everything, and it does not make buyers safe. What it does is make the boundary matter: which defects sit with whoever put the
             product on the market, and which sit with whoever deployed it, configured it, and fed it
             data.

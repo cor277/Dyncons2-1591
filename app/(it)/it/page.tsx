@@ -140,6 +140,12 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
           "Governance AI, architettura cloud, modernizzazione legacy, team enablement per PMI e mid-market.",
       },
       {
+        href: "/it/normativa",
+        title: "Normativa: AI, dati e sicurezza",
+        blurb:
+          "AI Act, Legge 132/2025 e decreti attuativi, GDPR, PLD, CRA, NIS2, DORA e le altre norme: cosa chiedono, da quando, a chi. Una pagina per legge.",
+      },
+      {
         href: "/it/assessment",
         title: "Assessment di esposizione",
         blurb:
@@ -251,7 +257,7 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
         href: "/sovereign-ai-pharma-italia",
         title: "AI sovrana per il pharma italiano",
         blurb:
-          "Il caso della sovranità del dato nel farmaceutico: perché la residenza dei dati è un requisito, non una preferenza.",
+          "Il caso della sovranità del dato nel farmaceutico: perché la residenza dei dati, che nessuna norma impone, resta il modo più diretto di dimostrare il controllo.",
       },
       {
         href: "/it/ai-agenti-finanziari",

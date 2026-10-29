@@ -8,7 +8,7 @@ import { useIsItalian } from "@/lib/use-is-italian";
 /* ─── Consent configuration ──────────────────────────────── */
 
 const CONSENT_KEY = "dc_privacy_consent";
-const CONSENT_VERSION = "2026-03-09-v2";
+const CONSENT_VERSION = "2026-09-10";
 const DECLINE_COOLDOWN_DAYS = 30;
 
 export interface ConsentCategories {

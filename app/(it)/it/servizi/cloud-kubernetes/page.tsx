@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Come si mette in produzione un LLM su Kubernetes in modo sicuro?",
-    a: "Un deployment sicuro di un LLM su Kubernetes richiede: namespace isolati, network policy, autenticazione OIDC tramite Keycloak, rate limiting a livello di APISIX e un node pool GPU dedicato. Nexus MDS Core implementa questo stack in una configurazione a comando singolo.",
+    a: "Un deployment sicuro di un LLM su Kubernetes richiede: namespace isolati, network policy, autenticazione OIDC tramite Keycloak, rate limiting a livello di APISIX e un node pool GPU dedicato. Nexus MDS Core installa lo strato di identità e di gateway di questo stack — Keycloak, rate limiting su APISIX, una rete di servizi isolata — con un solo script di setup su Docker; portati su Kubernetes, gli stessi servizi aggiungono namespace e network policy.",
   },
   {
     q: "Che differenza c'è fra AKS, GCP GKE e Hetzner per i carichi di lavoro AI?",

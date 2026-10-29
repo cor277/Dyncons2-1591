@@ -101,7 +101,7 @@ export default function SovereignAiPage() {
               the rules require.
             </p>
             <p>
-              The EU AI Act (in force since August 2024, with obligations phasing in up to 2027),
+              The EU AI Act (in force since August 2024, with obligations phasing in up to 2028),
               the GDPR, the NIS2 Directive and Law 132/2025 — Italy&apos;s first comprehensive
               national AI law — together create a framework in which organisations in healthcare,
               pharmaceuticals, finance and public administration must demonstrate effective control

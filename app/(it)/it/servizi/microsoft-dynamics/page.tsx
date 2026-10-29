@@ -8,7 +8,7 @@ const PATH = "/it/servizi/microsoft-dynamics";
 const PAGE_URL = `https://www.dynamicsconsulting.it${PATH}`;
 
 const DESCRIPTION =
-  "Implementazione, personalizzazione e supporto gestito per Microsoft Dynamics 365 Finance & Operations, Sales, Customer Engagement e Power Platform. Partner Microsoft certificato.";
+  "Implementazione, personalizzazione e supporto gestito per Microsoft Dynamics 365 Finance & Operations, Sales, Customer Engagement e Power Platform. Microsoft Cloud Partner.";
 
 export const metadata: Metadata = {
   title: "Microsoft Dynamics 365",
@@ -64,7 +64,7 @@ export default function MicrosoftDynamicsPage() {
     <ServicePageLayout
       locale="it"
       title="Microsoft Dynamics 365"
-      intro="Come partner Microsoft certificato, aiutiamo organizzazioni mid-market ed enterprise a ottenere da Dynamics 365 tutto il valore che può dare: dall'implementazione da zero alla migrazione di dati complessa, fino alla personalizzazione profonda, alle integrazioni con soluzioni ISV e al supporto gestito di lungo periodo. Il nostro focus principale è Finance & Operations (F&O), con competenze CRM complementari (Sales/Customer Engagement)."
+      intro="Come Microsoft Cloud Partner, aiutiamo organizzazioni mid-market ed enterprise a ottenere da Dynamics 365 tutto il valore che può dare: dall'implementazione da zero alla migrazione di dati complessa, fino alla personalizzazione profonda, alle integrazioni con soluzioni ISV e al supporto gestito di lungo periodo. Il nostro focus principale è Finance & Operations (F&O), con competenze CRM complementari (Sales/Customer Engagement)."
       tech={[
         "Dynamics 365 Finance & Operations",
         "Dynamics 365 Sales",

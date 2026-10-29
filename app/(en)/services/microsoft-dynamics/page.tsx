@@ -6,7 +6,7 @@ import { breadcrumbSchema } from "@/app/seo";
 export const metadata: Metadata = {
   title: "Microsoft Dynamics 365",
   description:
-    "Implementation, customisation, and managed support for Microsoft Dynamics 365 Finance & Operations, Sales, Customer Engagement, and Power Platform. Certified Microsoft partner.",
+    "Implementation, customisation, and managed support for Microsoft Dynamics 365 Finance & Operations, Sales, Customer Engagement, and Power Platform. Microsoft Cloud Partner.",
   alternates: alternatesFor("/services/microsoft-dynamics"),
 };
 
@@ -62,7 +62,7 @@ export default function MicrosoftDynamicsPage() {
   return (
     <ServicePageLayout
       title="Microsoft Dynamics 365"
-      intro="As a certified Microsoft partner, we help mid-market and enterprise organisations unlock the full value of Dynamics 365 — from greenfield implementation and complex data migration to deep customisation, ISV integrations, and long-term managed support. Our primary focus is Finance & Operations (F&O) with complementary CRM (Sales/Customer Engagement) capabilities."
+      intro="As a Microsoft Cloud Partner, we help mid-market and enterprise organisations unlock the full value of Dynamics 365 — from greenfield implementation and complex data migration to deep customisation, ISV integrations, and long-term managed support. Our primary focus is Finance & Operations (F&O) with complementary CRM (Sales/Customer Engagement) capabilities."
       tech={[
         "Dynamics 365 Finance & Operations",
         "Dynamics 365 Sales",

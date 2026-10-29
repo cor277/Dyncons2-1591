@@ -269,8 +269,9 @@ export default function RagDatiAziendaliArticle() {
                 </li>
                 <li>
                   <strong className="text-[#E6EDF3]">Requisiti normativi:</strong> GDPR, AI Act, DORA,
-                  Legge 132/2025: ognuno aggiunge vincoli su dove i dati possono essere trattati e su
-                  come il trattamento va documentato. L&apos;on-premise semplifica la compliance perché
+                  Legge 132/2025: ognuno aggiunge vincoli su come i dati possono essere trattati e su
+                  come il trattamento va documentato; nessuno impone di tenere i dati in Italia o in
+                  UE, ma il GDPR limita i trasferimenti fuori dall&apos;Unione. L&apos;on-premise semplifica la compliance perché
                   elimina gli accordi di trattamento dati con terze parti.
                 </li>
                 <li>

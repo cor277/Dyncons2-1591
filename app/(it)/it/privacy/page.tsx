@@ -30,7 +30,7 @@ export default function PrivacyItPage() {
         <article className="max-w-3xl mx-auto prose prose-invert prose-lg prose-headings:font-syne prose-headings:text-[#E6EDF3] prose-p:text-[#7D8FA3] prose-li:text-[#7D8FA3] prose-strong:text-[#E6EDF3] prose-a:text-[#00B4D8] prose-a:underline hover:prose-a:text-[#E6EDF3]">
           <h1>Informativa privacy</h1>
           <p className="lead text-[#7D8FA3]">
-            Ultimo aggiornamento: 9 marzo 2026 · Versione 2026-03-09-v2
+            Ultimo aggiornamento: 10 settembre 2026 · Versione 2026-09-10
           </p>
 
           {/* ── 1. DATA CONTROLLER ─────────────────────────────── */}

@@ -33,7 +33,7 @@ const faqSchema = {
       name: "How do you securely deploy an LLM on Kubernetes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Secure LLM deployment on Kubernetes requires: isolated namespaces, network policies, OIDC authentication via Keycloak, rate-limiting at APISIX level, and a dedicated GPU node pool. Nexus MDS Core implements this stack in a single-command configuration.",
+        text: "Secure LLM deployment on Kubernetes requires: isolated namespaces, network policies, OIDC authentication via Keycloak, rate-limiting at APISIX level, and a dedicated GPU node pool. Nexus MDS Core ships the identity and gateway layer of this stack — Keycloak, APISIX rate limiting, an isolated service network — with a single setup script on Docker; moved to Kubernetes, the same services add namespaces and network policies.",
       },
     },
     {
@@ -96,7 +96,7 @@ const tech = [
 const faqs = [
   {
     q: "How do you securely deploy an LLM on Kubernetes?",
-    a: "Secure LLM deployment on Kubernetes requires: isolated namespaces, network policies, OIDC authentication via Keycloak, rate-limiting at APISIX level, and a dedicated GPU node pool. Nexus MDS Core implements this stack in a single-command configuration.",
+    a: "Secure LLM deployment on Kubernetes requires: isolated namespaces, network policies, OIDC authentication via Keycloak, rate-limiting at APISIX level, and a dedicated GPU node pool. Nexus MDS Core ships the identity and gateway layer of this stack — Keycloak, APISIX rate limiting, an isolated service network — with a single setup script on Docker; moved to Kubernetes, the same services add namespaces and network policies.",
   },
   {
     q: "What is the difference between AKS, GCP GKE, and Hetzner for AI workloads?",

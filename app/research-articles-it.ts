@@ -115,14 +115,14 @@ export const RESEARCH_ARTICLES_IT: Record<string, ResearchArticleIt> = {
     headline:
       "Legge 132/2025 e AI in sanità: cosa cambia per ospedali, farmacie e aziende farmaceutiche",
     description:
-      "La prima normativa organica italiana sull'intelligenza artificiale e gli obblighi che introduce per le organizzazioni sanitarie e farmaceutiche su governance, data residency e uso secondario dei dati.",
+      "La prima normativa organica italiana sull'intelligenza artificiale e gli obblighi che introduce per le organizzazioni sanitarie e farmaceutiche su governance, decisione clinica e uso secondario dei dati.",
     summary:
-      "La Legge n. 132 del 23 settembre 2025 è la prima normativa organica italiana sull'intelligenza artificiale. Per le organizzazioni in ambito sanitario e farmaceutico, introduce obblighi specifici su governance, data residency e uso secondario dei dati.",
+      "La Legge n. 132 del 23 settembre 2025 è la prima normativa organica italiana sull'intelligenza artificiale. Per le organizzazioni in ambito sanitario e farmaceutico, introduce obblighi specifici su governance, decisione clinica e uso secondario dei dati.",
     datePublished: "2025-10",
     dateLabel: "ottobre 2025",
     section: "Governance AI",
     inLanguage: "it",
-    keywords: ["Legge 132/2025", "AI sanità", "governance", "data residency"],
+    keywords: ["Legge 132/2025", "AI sanità", "governance", "uso secondario dei dati"],
   },
   "event-sourcing": {
     slug: "event-sourcing",

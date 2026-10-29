@@ -162,8 +162,11 @@ export default function OnPremiseAiArticle() {
                 <Link href="/research/law-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Legge 132/2025
                 </Link>{" "}
-                goes further, requiring verifiable data residency for AI systems processing
-                health data.
+                does not impose data residency: its only provision in that direction is a
+                non-binding preference, for public administration e-procurement platforms, for
+                solutions that keep strategic data in data centres in Italy (Article 5(1)(d)).
+                Residency is a design choice that makes control easier to demonstrate, not a
+                legal requirement.
               </p>
               <p className="mt-4">
                 In practice, &quot;data residency&quot; means more than storing data on EU servers.

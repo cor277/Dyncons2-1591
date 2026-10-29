@@ -3,6 +3,7 @@ import { ANSWER_LIST } from "./answers";
 import { RESEARCH_ARTICLES } from "./research-articles";
 import { getImportedArticles, isoDay } from "@/lib/imported-articles";
 import { ROUTE_PAIRS, IT_ONLY_PATHS, counterpartOf } from "@/lib/i18n-routes";
+import { NORME, NORMATIVA_PATH, REGISTRO_AGGIORNATO, normaPath } from "@/app/normativa";
 
 const BASE_URL = "https://www.dynamicsconsulting.it";
 
@@ -102,6 +103,17 @@ const importedRoutes: Route[] = getImportedArticles().map((a) => ({
   lastModified: isoDay(a.dateModified ?? a.datePublished),
 }));
 
+/** The Italian law pages: one per entry in the registry, dated by its last review. */
+const normativaRoutes: Route[] = [
+  { path: NORMATIVA_PATH, priority: 0.8, changeFrequency: "weekly", lastModified: REGISTRO_AGGIORNATO },
+  ...NORME.map((n) => ({
+    path: normaPath(n.slug),
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+    lastModified: n.aggiornato ?? REGISTRO_AGGIORNATO,
+  })),
+];
+
 const answerRoutes: Route[] = ANSWER_LIST.map((a) => ({
   path: `/answers/${a.slug}`,
   priority: 0.7,
@@ -138,7 +150,7 @@ function pairedRoutes(known: Route[]): Route[] {
 const abs = (path: string) => (path === "/" ? `${BASE_URL}/` : `${BASE_URL}${path}`);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const known = [...routes, ...researchRoutes, ...importedRoutes, ...answerRoutes];
+  const known = [...routes, ...researchRoutes, ...importedRoutes, ...answerRoutes, ...normativaRoutes];
   return [...known, ...pairedRoutes(known)].map((route) => {
     const other = counterpartOf(route.path);
     const it = other && ROUTE_PAIRS[route.path] ? other : route.path;

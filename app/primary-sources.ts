@@ -59,7 +59,7 @@ export const SOURCES = {
   garante: {
     label: "Garante per la protezione dei dati personali",
     url: "https://www.garanteprivacy.it/",
-    note: "the Italian supervisory authority, including its decisions on AI services",
+    note: "the Italian data protection authority under the GDPR, including its decisions on AI services (Italy's national AI authorities are AgID and ACN)",
   },
   acn: {
     label: "Agenzia per la Cybersicurezza Nazionale (ACN)",

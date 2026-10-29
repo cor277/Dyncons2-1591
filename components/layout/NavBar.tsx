@@ -263,6 +263,11 @@ const IT_NAV: NavLink[] = [
         desc: "Una domanda per pagina, con la risposta nel primo blocco",
       },
       {
+        label: "Normativa: AI, dati e sicurezza",
+        href: "/it/normativa",
+        desc: "Le leggi che si applicano a chi progetta e usa AI in Italia, una per pagina",
+      },
+      {
         label: "Serie editoriale — PLD 2024",
         href: "/it/ricerca/serie-editoriale",
         desc: "Sei articoli sulla direttiva sulla responsabilità da prodotto",

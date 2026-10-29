@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <article className="max-w-3xl mx-auto prose prose-invert prose-lg prose-headings:font-syne prose-headings:text-[#E6EDF3] prose-p:text-[#7D8FA3] prose-li:text-[#7D8FA3] prose-strong:text-[#E6EDF3] prose-a:text-[#00B4D8] prose-a:underline hover:prose-a:text-[#E6EDF3]">
           <h1>Privacy Policy</h1>
           <p className="lead text-[#7D8FA3]">
-            Last updated: 9 March 2026 · Version 2026-03-09-v2
+            Last updated: 10 September 2026 · Version 2026-09-10
           </p>
 
           {/* ── 1. DATA CONTROLLER ─────────────────────────────── */}

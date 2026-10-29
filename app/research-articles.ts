@@ -95,12 +95,12 @@ export const RESEARCH_ARTICLES: Record<string, ResearchArticle> = {
     headline:
       "Legge 132/2025 e AI in sanità: cosa cambia per ospedali, farmacie e aziende farmaceutiche",
     description:
-      "La prima normativa organica italiana sull'intelligenza artificiale e gli obblighi che introduce per le organizzazioni sanitarie e farmaceutiche su governance, data residency e uso secondario dei dati.",
+      "La prima normativa organica italiana sull'intelligenza artificiale e gli obblighi che introduce per le organizzazioni sanitarie e farmaceutiche su governance, decisione clinica e uso secondario dei dati.",
     datePublished: "2025-10",
     dateLabel: "October 2025",
     section: "AI Governance",
     inLanguage: "it",
-    keywords: ["Legge 132/2025", "AI sanità", "governance", "data residency"],
+    keywords: ["Legge 132/2025", "AI sanità", "governance", "uso secondario dei dati"],
   },
   /* English translation of "legge-132-2025", which was written in Italian. */
   "law-132-2025": {
@@ -109,12 +109,12 @@ export const RESEARCH_ARTICLES: Record<string, ResearchArticle> = {
     headline:
       "Law 132/2025 and AI in healthcare: what changes for hospitals, pharmacies and pharmaceutical companies",
     description:
-      "Italy's first comprehensive law on artificial intelligence and the obligations it introduces for healthcare and pharmaceutical organisations on governance, data residency and secondary use of data.",
+      "Italy's first comprehensive law on artificial intelligence and the obligations it introduces for healthcare and pharmaceutical organisations on governance, clinical decision-making and secondary use of data.",
     datePublished: "2025-10",
     dateLabel: "October 2025",
     section: "AI Governance",
     inLanguage: "en",
-    keywords: ["Law 132/2025", "Italy AI law", "healthcare AI", "governance", "data residency"],
+    keywords: ["Law 132/2025", "Italy AI law", "healthcare AI", "governance", "secondary use of data"],
   },
   "event-sourcing": {
     slug: "event-sourcing",

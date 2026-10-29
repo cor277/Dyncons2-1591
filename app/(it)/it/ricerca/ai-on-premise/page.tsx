@@ -175,8 +175,11 @@ export default function AiOnPremiseArticle() {
                 <Link href="/it/ricerca/legge-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Legge 132/2025
                 </Link>{" "}
-                va oltre, e richiede una residenza dei dati verificabile per i sistemi AI che trattano
-                dati sanitari.
+                non impone la residenza dei dati: l&apos;unica norma in quella direzione è una
+                preferenza non vincolante, per le piattaforme di e-procurement della PA, verso
+                soluzioni che tengono i dati strategici in data center sul territorio nazionale
+                (art. 5, comma 1, lett. d). La residenza è una scelta di progetto che rende il
+                controllo più facile da dimostrare, non un obbligo di legge.
               </p>
               <p className="mt-4">
                 In pratica &quot;residenza dei dati&quot; significa più che tenere i dati su server

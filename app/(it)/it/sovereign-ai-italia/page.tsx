@@ -100,7 +100,7 @@ export default function SovereignAiItaliaPage() {
               per poter dimostrare quello che la norma chiede.
             </p>
             <p>
-              L&apos;AI Act europeo (in vigore da agosto 2024, con obblighi progressivi fino al 2027),
+              L&apos;AI Act europeo (in vigore da agosto 2024, con obblighi progressivi fino al 2028),
               il GDPR, la Direttiva NIS2, e la Legge 132/2025 — prima legge italiana organica
               sull&apos;AI — creano un quadro in cui le organizzazioni in sanità, farmaceutica,
               finanza e pubblica amministrazione devono dimostrare controllo effettivo sui propri

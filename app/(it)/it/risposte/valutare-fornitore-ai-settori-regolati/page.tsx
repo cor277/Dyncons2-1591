@@ -145,7 +145,8 @@ export default function ValutareFornitoreRisposta() {
             La direttiva del 2024 sulla responsabilità da prodotto include il software nella
             definizione di prodotto e si applica ai prodotti immessi sul mercato o messi in
             servizio dal 9 dicembre 2026 — la data entro cui gli Stati membri devono averla
-            recepita. Questo non rende i fornitori responsabili di tutto, e non mette al sicuro chi
+            recepita (in Italia il decreto di recepimento è stato approvato in via definitiva dal
+            Consiglio dei ministri il 28 ottobre 2026 e non è ancora in Gazzetta Ufficiale). Questo non rende i fornitori responsabili di tutto, e non mette al sicuro chi
             acquista. Quello che fa è rendere decisivo il confine: quali difetti ricadono su chi ha
             immesso il prodotto sul mercato, e quali su chi lo ha messo in esercizio, configurato e
             alimentato di dati.

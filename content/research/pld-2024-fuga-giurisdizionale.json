@@ -12,7 +12,7 @@
     "url": "https://it.linkedin.com/pulse/la-fuga-giurisdizionale-e-perch%C3%A9-non-esiste-corrado-patierno-vmlnf"
   },
   "importedAt": "2026-09-09",
-  "words": 2889,
+  "words": 2945,
   "blocks": [
     {
       "type": "h",
@@ -74,7 +74,7 @@
     },
     {
       "type": "p",
-      "text": "Il terzo riferimento è la PLD 2024 stessa — Direttiva (UE) 2024/2853. L'articolo 8 disciplina gli operatori economici responsabili. Il comma (2) stabilisce che se il fabbricante è stabilito al di fuori dell'Unione Europea, la responsabilità è assunta dal rappresentante autorizzato del fabbricante nell'UE, oppure dall'importatore EU. Non c'è uno spazio in cui il prodotto è \"extra-UE\": se entra nel mercato EU, qualcuno EU ne risponde, ed è determinato dal sistema regolatorio, non dalla volontà delle parti."
+      "text": "Il terzo riferimento è la PLD 2024 stessa — Direttiva (UE) 2024/2853. L'articolo 8 disciplina gli operatori economici responsabili. Il paragrafo 1, lettera c), stabilisce che se il fabbricante è stabilito al di fuori dell'Unione Europea, la responsabilità è assunta dal rappresentante autorizzato del fabbricante nell'UE, oppure dall'importatore EU. Non c'è uno spazio in cui il prodotto è \"extra-UE\": se entra nel mercato EU, qualcuno EU ne risponde, ed è determinato dal sistema regolatorio, non dalla volontà delle parti."
     },
     {
       "type": "p",
@@ -107,7 +107,7 @@
     },
     {
       "type": "p",
-      "text": "L'architect EU, dal canto suo, resta sotto giurisdizione del proprio paese di residenza per la propria posizione di garanzia. Se ha firmato il design tecnico, è qualificato come componente della catena di fabbricazione ex PLD, e in caso di reato (lesioni colpose, omicidio colposo da prodotto difettoso) è soggetto a giurisdizione penale italiana ex Art. 27 della Costituzione, indipendentemente da dove fattura."
+      "text": "L'architect EU, dal canto suo, resta sotto giurisdizione del proprio paese di residenza per la propria posizione di garanzia. Se ha firmato il design tecnico, è qualificato come componente della catena di fabbricazione ex PLD, e in caso di reato (lesioni colpose, omicidio colposo da prodotto difettoso) è soggetto a giurisdizione penale italiana ex artt. 6-10 c.p. (per l'art. 6 basta che l'azione, l'omissione o l'evento si sia verificato in Italia, anche solo in parte) e ne risponde personalmente ex Art. 27 della Costituzione, indipendentemente da dove fattura."
     },
     {
       "type": "p",
@@ -128,7 +128,7 @@
     },
     {
       "type": "p",
-      "text": "Il primo è l'importatore EU come fabbricante de facto. Se la LTD UK vende a clienti italiani, qualcuno deve materialmente immettere il prodotto sul mercato EU. Quel qualcuno — sia esso il cliente che lo acquisisce, sia un soggetto EU che fa da tramite, sia una persona fisica EU che opera per conto della LTD — diventa fabbricante ex Art. 8(2) PLD. Il GM italiano che è amministratore della LTD UK e contemporaneamente è in qualche modo presente sul mercato italiano (anche solo come referente commerciale, come venditore, come consulente che opera in Italia) si trova esposto come operatore economico EU sul medesimo prodotto. Non c'è separazione effettiva tra la LTD e la persona fisica che la rappresenta sul territorio italiano: il giudice italiano la riconosce."
+      "text": "Il primo è l'importatore EU come fabbricante de facto. Se la LTD UK vende a clienti italiani, qualcuno deve materialmente immettere il prodotto sul mercato EU. Quel qualcuno — sia esso il cliente che lo acquisisce, sia un soggetto EU che fa da tramite, sia una persona fisica EU che opera per conto della LTD — diventa responsabile come importatore ex Art. 8, par. 1, lett. c) PLD. Il GM italiano che è amministratore della LTD UK e contemporaneamente è in qualche modo presente sul mercato italiano (anche solo come referente commerciale, come venditore, come consulente che opera in Italia) si trova esposto come operatore economico EU sul medesimo prodotto. Non c'è separazione effettiva tra la LTD e la persona fisica che la rappresenta sul territorio italiano: il giudice italiano la riconosce."
     },
     {
       "type": "p",
@@ -136,7 +136,7 @@
     },
     {
       "type": "p",
-      "text": "Il terzo, e più definitivo, è la personalità della responsabilità penale. L'Art. 27 della Costituzione italiana stabilisce che la responsabilità penale è personale. In caso di reato connesso al difetto del prodotto — lesioni colpose, omicidio colposo, illeciti penali in materia di trattamento di dati personali, illeciti in materia di sicurezza sul lavoro — la giurisdizione penale italiana persegue la persona fisica che ha commesso il fatto, indipendentemente dalla struttura societaria interposta. Una LTD UK non protegge un cittadino italiano da un procedimento penale in Italia. Il velo societario non esiste nel diritto penale."
+      "text": "Il terzo, e più definitivo, è la personalità della responsabilità penale. L'Art. 27 della Costituzione italiana stabilisce che la responsabilità penale è personale. In caso di reato connesso al difetto del prodotto — lesioni colpose, omicidio colposo, illeciti penali in materia di trattamento di dati personali, illeciti in materia di sicurezza sul lavoro — la giurisdizione penale italiana (artt. 6-10 c.p.: basta che l'azione, l'omissione o l'evento si sia verificato in Italia, anche solo in parte) persegue la persona fisica che ha commesso il fatto, indipendentemente dalla struttura societaria interposta. Una LTD UK non protegge un cittadino italiano da un procedimento penale in Italia. Il velo societario non esiste nel diritto penale."
     },
     {
       "type": "p",
@@ -223,7 +223,7 @@
     },
     {
       "type": "p",
-      "text": "Seconda domanda: le tue clausole con fornitori extra-UE includono indemnification con copertura assicurativa verificata e obbligo di designazione del rappresentante autorizzato EU? Se la risposta è no, l'indemnification è simbolica e la responsabilità ex Art. 8(2) PLD ricade su di te o sul tuo cliente."
+      "text": "Seconda domanda: le tue clausole con fornitori extra-UE includono indemnification con copertura assicurativa verificata e obbligo di designazione del rappresentante autorizzato EU? Se la risposta è no, l'indemnification è simbolica e la responsabilità ex Art. 8, par. 1, lett. c) PLD ricade su di te o sul tuo cliente."
     },
     {
       "type": "p",

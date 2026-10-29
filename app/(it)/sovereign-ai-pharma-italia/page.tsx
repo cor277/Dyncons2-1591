@@ -46,7 +46,7 @@ const schema = {
           name: "Perché un\u2019azienda farmaceutica non può usare AI cloud-based?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Il quadro normativo europeo (AI Act, GDPR, Legge 132/2025, NIS2) impone requisiti stringenti sulla residenza dei dati, la trasparenza algoritmica e la governance dei sistemi AI in settori ad alto rischio come il pharma. Le soluzioni cloud degli hyperscaler rendono difficile dimostrare la conformità su tutti questi fronti simultaneamente.",
+            text: "Il quadro normativo europeo (AI Act, GDPR, Legge 132/2025, NIS2) impone requisiti stringenti sulla protezione dei dati, la trasparenza algoritmica e la governance dei sistemi AI, con gli obblighi più pesanti riservati agli usi ad alto rischio. Nessuna di queste norme impone di tenere i dati in Italia o in UE, ma il GDPR sottopone ogni trasferimento fuori dall’UE a garanzie specifiche. Le soluzioni cloud degli hyperscaler rendono difficile dimostrare la conformità su tutti questi fronti simultaneamente.",
           },
         },
         {
@@ -70,7 +70,7 @@ const schema = {
           name: "La Legge 132/2025 si applica anche alle aziende farmaceutiche private?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sì. La Legge 132/2025 si applica a tutti i soggetti che sviluppano o impiegano sistemi di intelligenza artificiale in Italia, incluse le aziende farmaceutiche private. In particolare, i sistemi AI utilizzati in ambito sanitario e farmaceutico rientrano nella categoria ad alto rischio, con obblighi rafforzati di trasparenza, governance e supervisione umana.",
+            text: "Sì. La Legge 132/2025 si applica a tutti i soggetti che sviluppano o impiegano sistemi di intelligenza artificiale in Italia, incluse le aziende farmaceutiche private. Non classifica i sistemi AI per rischio: lo fa l’AI Act, che considera ad alto rischio, per esempio, l’AI componente di sicurezza di un dispositivo medico (obblighi dal 2 agosto 2028) e gli usi elencati nel suo Allegato III (dal 2 dicembre 2027). In sanità la Legge 132 aggiunge che la decisione clinica resta sempre al medico e che il paziente ha diritto a essere informato.",
           },
         },
         {
@@ -178,15 +178,21 @@ export default function SovereignAiPharmaItaliaPage() {
                 L&apos;
                 <strong className="text-[#E6EDF3]">AI Act europeo</strong>{" "}
                 (Regolamento UE 2024/1689), in vigore da agosto 2024 con
-                obblighi progressivi fino al 2027, classifica i sistemi AI
-                utilizzati in ambito sanitario e farmaceutico come{" "}
-                <strong className="text-[#E6EDF3]">sistemi ad alto rischio</strong>.
+                obblighi progressivi fino al 2028, classifica i sistemi AI per
+                uso, non per settore: l&apos;AI che è componente di sicurezza di
+                un dispositivo medico, o che rientra in uno degli usi elencati
+                nell&apos;Allegato III, è un{" "}
+                <strong className="text-[#E6EDF3]">sistema ad alto rischio</strong>.
                 Questo comporta obblighi specifici: documentazione tecnica
                 dettagliata, sistemi di gestione del rischio, data governance
                 verificabile, supervisione umana obbligatoria, e registrazione
-                in un database europeo. Per le aziende farmaceutiche che
-                utilizzano AI in farmacovigilanza o clinical trials, questi
-                requisiti sono immediatamente operativi.
+                in un database europeo. Dopo il Regolamento (UE) 2026/1744 si
+                applicano dal 2 dicembre 2027 per gli usi dell&apos;Allegato III
+                e dal 2 agosto 2028 per i dispositivi medici; gli obblighi di
+                trasparenza dell&apos;articolo 50 si applicano dal 2 agosto 2026.
+                Per le aziende farmaceutiche che utilizzano AI in
+                farmacovigilanza o clinical trials, la prima domanda è se il
+                sistema rientri davvero in quelle categorie.
               </p>
               <p>
                 Il <strong className="text-[#E6EDF3]">GDPR</strong> resta il
@@ -206,11 +212,13 @@ export default function SovereignAiPharmaItaliaPage() {
                   Legge 132/2025
                 </Link>{" "}
                 — prima legge italiana organica sull&apos;intelligenza
-                artificiale — introduce obblighi specifici per i sistemi AI in
-                sanità, tra cui la trasparenza verso il paziente, la
-                supervisione umana obbligatoria nelle decisioni cliniche, e
-                sanzioni penali per l&apos;uso improprio di AI in ambito
-                sanitario. Per il pharma, questo si traduce nella necessità di
+                artificiale — integra l&apos;AI Act con norme nazionali: in
+                sanità, il diritto del paziente a essere informato e la
+                decisione clinica che resta sempre al medico; sul piano penale,
+                i reati del suo articolo 26 e, con il D.Lgs. 160/2026, il nuovo
+                articolo 437-bis del codice penale per chi omette misure di
+                sicurezza o sorveglianza umana nei sistemi AI ad alto rischio.
+                Per il pharma, questo si traduce nella necessità di
                 audit trail completi e nella capacità di spiegare ogni output
                 algoritmico.
               </p>
@@ -235,8 +243,11 @@ export default function SovereignAiPharmaItaliaPage() {
                 >
                   AI sovrana
                 </Link>{" "}
-                non una preferenza tecnologica, ma un requisito di conformità
-                per il settore farmaceutico.
+                non tanto una preferenza tecnologica quanto la via più diretta
+                per rispettare questi requisiti nel settore farmaceutico:
+                nessuna di queste norme la impone, ma ognuna chiede
+                all&apos;azienda di dimostrare dove vanno i suoi dati e chi può
+                raggiungerli.
               </p>
             </div>
 
@@ -348,7 +359,7 @@ export default function SovereignAiPharmaItaliaPage() {
               <p>
                 Ogni componente è stato selezionato per la sua maturità in
                 ambito enterprise, la licenza open-source, e la capacità di
-                operare completamente offline. L&apos;architettura è progettata
+                girare su infrastruttura controllata dall&apos;azienda. L&apos;architettura è progettata
                 per essere auditabile: ogni decisione del sistema AI è
                 tracciabile, ogni accesso è registrato, ogni output è
                 riproducibile.
@@ -441,8 +452,12 @@ export default function SovereignAiPharmaItaliaPage() {
               <p>
                 I risultati: riduzione significativa dei tempi di ricerca
                 documentale, automazione di processi che prima richiedevano ore
-                di lavoro manuale, e un&apos;infrastruttura AI completamente
-                on-premise che Federfarma controlla e governa autonomamente. Il
+                di lavoro manuale, e un&apos;infrastruttura AI che Federfarma
+                controlla e governa autonomamente: indicizzazione, retrieval,
+                identità e audit restano locali, i dati personali sono esclusi
+                in fase di ingestione e solo la generazione della risposta
+                finale avviene su un endpoint sostituibile in datacenter
+                europeo. Il
                 caso dimostra che la sovereign AI nel pharma non è teoria: è
                 operativa, misurabile, e già in produzione in Italia.
               </p>
@@ -544,9 +559,12 @@ export default function SovereignAiPharmaItaliaPage() {
                   >
                     Legge 132/2025
                   </Link>
-                  , NIS2) impone requisiti stringenti sulla residenza dei dati,
-                  la trasparenza algoritmica e la governance dei sistemi AI in
-                  settori ad alto rischio come il pharma. Le soluzioni cloud
+                  , NIS2) impone requisiti stringenti sulla protezione dei dati,
+                  la trasparenza algoritmica e la governance dei sistemi AI, con
+                  gli obblighi più pesanti riservati agli usi ad alto rischio.
+                  Nessuna di queste norme impone di tenere i dati in Italia o in
+                  UE, ma il GDPR sottopone ogni trasferimento fuori dall&apos;UE a
+                  garanzie specifiche. Le soluzioni cloud
                   degli hyperscaler rendono difficile dimostrare la conformità
                   su tutti questi fronti simultaneamente.
                 </p>
@@ -596,10 +614,14 @@ export default function SovereignAiPharmaItaliaPage() {
                 <p>
                   Sì. La Legge 132/2025 si applica a tutti i soggetti che
                   sviluppano o impiegano sistemi di intelligenza artificiale in
-                  Italia, incluse le aziende farmaceutiche private. I sistemi AI
-                  utilizzati in ambito sanitario e farmaceutico rientrano nella
-                  categoria ad alto rischio, con obblighi rafforzati di
-                  trasparenza, governance e supervisione umana.
+                  Italia, incluse le aziende farmaceutiche private. Non
+                  classifica i sistemi AI per rischio: lo fa l&apos;AI Act, che
+                  considera ad alto rischio, per esempio, l&apos;AI componente di
+                  sicurezza di un dispositivo medico (obblighi dal 2 agosto
+                  2028) e gli usi elencati nel suo Allegato III (dal 2 dicembre
+                  2027). In sanità la Legge 132 aggiunge che la decisione
+                  clinica resta sempre al medico e che il paziente ha diritto a
+                  essere informato.
                 </p>
               </div>
 

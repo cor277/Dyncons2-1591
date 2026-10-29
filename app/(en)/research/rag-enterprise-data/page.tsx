@@ -251,8 +251,9 @@ export default function RagEnterpriseDataArticle() {
                 </li>
                 <li>
                   <strong className="text-[#E6EDF3]">Regulatory requirements:</strong> GDPR,
-                  AI Act, DORA, Legge 132/2025 — each adds constraints on where data can be
-                  processed and how processing must be documented. On-premise simplifies
+                  AI Act, DORA, Legge 132/2025 — each adds constraints on how data can be
+                  processed and how processing must be documented; none of them requires the data
+                  to stay in Italy or in the EU, but the GDPR restricts transfers outside it. On-premise simplifies
                   compliance by eliminating third-party data processing agreements.
                 </li>
                 <li>

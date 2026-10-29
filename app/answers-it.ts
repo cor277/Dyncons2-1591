@@ -155,7 +155,7 @@ export const FONTI_IT = {
   garante: {
     label: "Garante per la protezione dei dati personali",
     url: "https://www.garanteprivacy.it/",
-    note: "l’autorità di controllo italiana, comprese le sue decisioni sui servizi di AI",
+    note: "l’autorità italiana di controllo sulla protezione dei dati (GDPR), comprese le sue decisioni sui servizi di AI (le autorità nazionali per l’IA sono AgID e ACN)",
   },
   aifa: {
     label: "AIFA — Agenzia Italiana del Farmaco",

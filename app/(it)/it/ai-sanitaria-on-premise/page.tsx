@@ -72,7 +72,9 @@ export default function AiSanitariaPage() {
               al mondo per quanto riguarda il trattamento dei dati. Il GDPR, il Regolamento europeo
               sull&apos;AI (AI Act) e la Legge 132/2025 — prima normativa organica italiana
               sull&apos;intelligenza artificiale — impongono requisiti specifici su governance dei dati,
-              data residency e uso secondario delle informazioni cliniche.
+              trasferimenti fuori dall&apos;UE e uso secondario delle informazioni cliniche. Nessuna
+              di queste norme impone di tenere i dati in Italia: la residenza è una scelta di
+              architettura, non un obbligo.
             </p>
             <p>
               Per ospedali, ASL, farmacie e aziende farmaceutiche, questo significa che le soluzioni AI

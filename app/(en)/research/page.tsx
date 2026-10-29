@@ -70,7 +70,7 @@ const posts = [
     tag: "AI Governance",
     title: "Law 132/2025 and AI in healthcare: what changes for hospitals, pharmacies and pharmaceutical companies",
     summary:
-      "Law no. 132 of 23 September 2025 is Italy's first comprehensive law on artificial intelligence. For healthcare and pharmaceutical organisations it introduces specific obligations on governance, data residency and secondary use of data. Translated from the Italian original.",
+      "Law no. 132 of 23 September 2025 is Italy's first comprehensive law on artificial intelligence. For healthcare and pharmaceutical organisations it introduces specific obligations on governance, clinical decision-making and secondary use of data. Translated from the Italian original.",
   },
   {
     slug: "/research/event-sourcing",

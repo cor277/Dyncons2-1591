@@ -1,4 +1,5 @@
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
+import { NORME, normaPath } from "@/app/normativa";
 
 const BASE_URL = "https://www.dynamicsconsulting.it";
 
@@ -128,6 +129,13 @@ Every page of this site exists in Italian too; the Italian address of each Engli
 - [Ricerca](${BASE_URL}/it/ricerca): including the original Italian texts of the PLD 2024 series and of the Law 132/2025 article.
 - [Fractional CTO Milano](${BASE_URL}/fractional-cto-milano): Written for the Milan mid-market; Italian only.
 - [CRA: segnalazione in 24 ore](${BASE_URL}/cra-11-settembre): Article 14 of Regulation (EU) 2024/2847; Italian only.
+
+## Normativa (in Italian)
+
+Laws and regulations that apply to anyone designing, selling or using AI in Italy, one page each: what it asks, of whom, from when, where it stacks with the others, official sources. Reviewed ${"2026-10-29"}.
+
+- [Normativa: AI, dati e sicurezza — indice](${BASE_URL}/it/normativa)
+${NORME.map((n) => `- [${n.titoloBreve} — ${n.riferimento}](${BASE_URL}${normaPath(n.slug)}): ${n.sintesi.replace(/\s+/g, " ")}`).join("\n")}
 
 ## Optional
 
