@@ -57,12 +57,13 @@ are defined at /answers/private-ai-vs-sovereign-ai.
 - [Nexus MDS Core](${BASE_URL}/platform): The AI operating layer for regulated perimeters — governance (identity, approval steps, a hash-chained audit of every model call) built once and inherited by every use case. ${NEXUS_SERVICE_COUNT} containerised services: retrieval, vector search, Zero-Trust identity, workflow engine, audit. Generation on a local model or a replaceable EU endpoint. Runs on Docker; moves to Kubernetes when scale requires it. Italian: ${BASE_URL}/it/piattaforma-nexus
 - [Compliance-Epistemic Project Framework (CEPF)](${BASE_URL}/cepf): Regulatory crossing catalogue, version 7, snapshot July 2026 — 19 frameworks mapped onto their operational obligations and their overlaps, 247 requirements, 24 cross-framework overlap groups, 695 document templates. Calibra, the software built on CEPF, is described on its own page and carries the interactive demo.
 - [Calibra](${BASE_URL}/calibra): The software built on CEPF — the regulatory catalogue plus risk, scheduling, operational flow, Gantt and milestones. Proprietary to Dynamics Consulting, used inside engagements. The page carries a reduced demonstration instance: nine of the nineteen frameworks in CEPF v7 and a subset of the planning functions, interface in Italian.
+- [Trust](${BASE_URL}/trust): What can be checked and how. No certifications held by Dynamics Consulting or Nexus MDS Core; controls mapped with CEPF; the sub-processors of this website and the external components of a Nexus installation; how the hash-chained audit record is verified. Italian: ${BASE_URL}/it/trust
 - [Technical capabilities](${BASE_URL}/capabilities): The engineering underneath the service lines — applied AI, data platforms, Kubernetes, integration, Dynamics 365, automation, blockchain. Competences, not separate offerings.
 
 ## Services
 
 - [AI Governance & Compliance Advisory](${BASE_URL}/services/governance-advisory): AI consulting for regulated organisations. Regulatory positioning of the system under the EU AI Act, GDPR, PLD 2024, NIS2, DORA, the Cyber Resilience Act and ISO/IEC 27001:2022; architecture review with documented technical accountability; governance design; remediation sequence; implementation. Runs on CEPF and Calibra. Italian counterpart: /it/consulenza-ai-governance-compliance.
-- [Fractional AI CTO](${BASE_URL}/services/fractional-cto): A part-time CTO mandate with the decision rights of a permanent one: AI architecture, AI governance, vendor assessment, deployment model selection and programme leadership. Typically 2-4 days a month for advisory, 8-12 for operational engagements, opening with a two-to-three week technology assessment. Italian counterpart, written for the Milan mid-market rather than translated: /fractional-cto-milano.
+- [Fractional AI CTO](${BASE_URL}/services/fractional-cto): A part-time CTO mandate with the decision rights of a permanent one: AI architecture, AI governance, vendor assessment, deployment model selection and programme leadership. Typically 2-4 days a month for advisory, 8-12 for operational engagements, opening with a two-to-three week technology assessment. Italian counterpart, written for the Milan mid-market rather than translated: /it/fractional-cto-milano.
 - [Applied AI & Agentic Workflows](${BASE_URL}/services/applied-ai)
 - [Data Platforms & RAG Architecture](${BASE_URL}/services/data-platforms)
 - [Cloud & Kubernetes Architecture](${BASE_URL}/services/cloud-kubernetes)
@@ -131,8 +132,8 @@ Every page of this site exists in Italian too; the Italian address of each Engli
 - [Case study](${BASE_URL}/it/case-studies)
 - [Risposte](${BASE_URL}/it/risposte)
 - [Ricerca](${BASE_URL}/it/ricerca): including the original Italian texts of the PLD 2024 series and of the Law 132/2025 article.
-- [Fractional CTO Milano](${BASE_URL}/fractional-cto-milano): Written for the Milan mid-market; Italian only.
-- [CRA: segnalazione in 24 ore](${BASE_URL}/cra-11-settembre): Article 14 of Regulation (EU) 2024/2847; Italian only.
+- [Fractional CTO Milano](${BASE_URL}/it/fractional-cto-milano): Written for the Milan mid-market; Italian only.
+- [CRA: segnalazione in 24 ore](${BASE_URL}/it/cra-11-settembre): Article 14 of Regulation (EU) 2024/2847; Italian only.
 
 ## Normativa (in Italian)
 
@@ -145,6 +146,7 @@ ${NORME.map((n) => `- [${n.titoloBreve} — ${n.riferimento}](${BASE_URL}${norma
 
 - [About — Corrado Patierno](${BASE_URL}/about): Background, timeline and values. Twenty-five years in enterprise systems, MISE-certified Innovation Manager, author of Logistica Fluida.
 - [On-Premise AI for Healthcare](${BASE_URL}/ai-on-premise-healthcare)
+- [Sovereign AI for pharma](${BASE_URL}/sovereign-ai-pharma): On-premise AI for pharmaceutical companies under the EU AI Act, GDPR, Law 132/2025 and NIS2. Italian: ${BASE_URL}/it/ai-sovrana-pharma
 - [Privacy policy](${BASE_URL}/privacy)
 - [Sitemap](${BASE_URL}/sitemap.xml)
 `;

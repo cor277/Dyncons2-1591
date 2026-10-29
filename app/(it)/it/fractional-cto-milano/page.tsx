@@ -4,12 +4,13 @@ import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
+import { alternatesFor } from "@/lib/i18n-routes";
 
 export const metadata: Metadata = {
   title: "Fractional CTO Milano — Leadership per PMI",
   description:
     "Fractional CTO a Milano per PMI e mid-market: governance AI, architettura cloud, modernizzazione legacy, team enablement. 25+ anni di esperienza enterprise. Corrado Patierno — Dynamics Consulting.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/fractional-cto-milano" },
+  alternates: alternatesFor("/it/fractional-cto-milano"),
 };
 
 const schema = {
@@ -20,7 +21,7 @@ const schema = {
       name: "Fractional CTO Milano — Leadership Tecnologica per PMI",
       description:
         "Servizio di Fractional CTO a Milano per aziende mid-market: governance AI, architettura enterprise, modernizzazione legacy e team enablement. Dynamics Consulting — Corrado Patierno.",
-      url: "https://www.dynamicsconsulting.it/fractional-cto-milano",
+      url: "https://www.dynamicsconsulting.it/it/fractional-cto-milano",
       publisher: {
         "@type": "Organization",
         name: "Dynamics Consulting",

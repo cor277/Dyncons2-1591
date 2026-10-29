@@ -87,14 +87,9 @@ const EN_NAV: NavLink[] = [
         desc: "Hospitals, pharma and clinical research",
       },
       {
-        label: "AI consulting for pharma",
-        href: "/ai-consulting-pharma",
-        desc: "Pharmaceutical distribution and industry",
-      },
-      {
         label: "Sovereign AI for pharma",
         href: "/sovereign-ai-pharma",
-        desc: "The pharmaceutical vertical, in full",
+        desc: "Pharmaceutical industry and distribution",
       },
       {
         label: "Sovereign AI",
@@ -188,7 +183,7 @@ const IT_NAV: NavLink[] = [
       },
       {
         label: "Fractional CTO a Milano",
-        href: "/fractional-cto-milano",
+        href: "/it/fractional-cto-milano",
         desc: "Leadership tecnologica per PMI e mid-market",
       },
       {
@@ -198,7 +193,7 @@ const IT_NAV: NavLink[] = [
       },
       {
         label: "Modernizzazione legacy con AI",
-        href: "/modernizzazione-sistemi-legacy-ai",
+        href: "/it/modernizzazione-sistemi-legacy-ai",
         desc: "Reverse engineering assistito e rientro del debito tecnico",
       },
       {
@@ -217,14 +212,9 @@ const IT_NAV: NavLink[] = [
         desc: "Ospedali, ASL, strutture accreditate",
       },
       {
-        label: "Consulenza AI per il farmaceutico",
-        href: "/it/consulenza-ai-farmaceutico",
-        desc: "Distribuzione e industria farmaceutica",
-      },
-      {
         label: "AI sovrana per il pharma",
-        href: "/sovereign-ai-pharma-italia",
-        desc: "Il verticale farmaceutico, per esteso",
+        href: "/it/ai-sovrana-pharma",
+        desc: "Industria e distribuzione farmaceutica",
       },
       {
         label: "Sovereign AI Italia",
@@ -279,7 +269,7 @@ const IT_NAV: NavLink[] = [
       },
       {
         label: "CRA: segnalazione in 24 ore",
-        href: "/cra-11-settembre",
+        href: "/it/cra-11-settembre",
         desc: "Articolo 14 del Reg. (UE) 2024/2847",
       },
       {

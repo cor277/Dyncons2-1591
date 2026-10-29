@@ -4,7 +4,7 @@ import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { CTAButton } from "@/components/ui/CTAButton";
 
-const URL = "https://www.dynamicsconsulting.it/cra-11-settembre";
+const URL = "https://www.dynamicsconsulting.it/it/cra-11-settembre";
 
 const TITLE = "Dall’11 settembre hai 24 ore per segnalare. Chi le usa?";
 const DESCRIPTION =
@@ -115,7 +115,7 @@ const schema = [
     author: {
       "@type": "Person",
       name: "Corrado Patierno",
-      url: "https://www.dynamicsconsulting.it/about",
+      url: "https://www.dynamicsconsulting.it/it/chi-siamo",
     },
   },
   {

@@ -7,8 +7,10 @@
  * its pair here; a path that appears in no pair has no counterpart and the
  * switch sends readers to the other language's index instead.
  *
- * Italian paths live under /it/ with Italian slugs. A handful of older Italian
- * pages sit at the top level (/fractional-cto-milano, …) and keep their URLs.
+ * Italian paths live under /it/ with Italian slugs, without exception. The
+ * older top-level Italian pages (/fractional-cto-milano, /cra-11-settembre,
+ * /modernizzazione-sistemi-legacy-ai, /sovereign-ai-pharma-italia) moved under
+ * /it/ and are 301-redirected in next.config.mjs.
  */
 
 export const BASE_URL = "https://www.dynamicsconsulting.it";
@@ -27,6 +29,7 @@ export const ROUTE_PAIRS: Record<string, string> = {
   "/tech-sovereignty": "/it/sovranita-tecnologica",
   "/assessment": "/it/assessment",
   "/ai-on-premise-healthcare": "/it/ai-sanitaria-on-premise",
+  "/trust": "/it/trust",
 
   // Services
   "/services/governance-advisory": "/it/consulenza-ai-governance-compliance",
@@ -87,19 +90,18 @@ export const ROUTE_PAIRS: Record<string, string> = {
   "/ai-agents-finance": "/it/ai-agenti-finanziari",
   "/ai-on-company-data": "/it/ai-dati-aziendali",
   "/ai-technical-standards": "/it/ai-ingegneria-tecnica",
-  "/ai-consulting-pharma": "/it/consulenza-ai-farmaceutico",
   "/sovereign-ai": "/it/sovereign-ai-italia",
-  "/sovereign-ai-pharma": "/sovereign-ai-pharma-italia",
-  "/legacy-modernisation-ai": "/modernizzazione-sistemi-legacy-ai",
+  "/sovereign-ai-pharma": "/it/ai-sovrana-pharma",
+  "/legacy-modernisation-ai": "/it/modernizzazione-sistemi-legacy-ai",
 };
 
 /**
- * Italian pages with no English counterpart, by decision: /cra-11-settembre is
- * the landing of an Italian LinkedIn series; /fractional-cto-milano argues a
- * different case for the Milan mid-market and is not a translation of
+ * Italian pages with no English counterpart, by decision: /it/cra-11-settembre
+ * is the landing of an Italian LinkedIn series; /it/fractional-cto-milano
+ * argues a different case for the Milan mid-market and is not a translation of
  * /services/fractional-cto (which has its own Italian version).
  */
-export const IT_ONLY_PATHS = ["/cra-11-settembre", "/fractional-cto-milano"];
+export const IT_ONLY_PATHS = ["/it/cra-11-settembre", "/it/fractional-cto-milano"];
 
 const IT_TO_EN: Record<string, string> = Object.fromEntries(
   Object.entries(ROUTE_PAIRS).map(([en, it]) => [it, en])

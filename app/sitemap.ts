@@ -37,10 +37,10 @@ const routes: Route[] = [
   { path: "/services/governance-advisory", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/it/consulenza-ai-governance-compliance", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/services/fractional-cto", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/fractional-cto-milano", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-08-03" },
+  { path: "/it/fractional-cto-milano", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-29" },
   { path: "/assessment", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/it/assessment", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/cra-11-settembre", priority: 0.9, changeFrequency: "weekly", lastModified: "2026-09-06" },
+  { path: "/it/cra-11-settembre", priority: 0.9, changeFrequency: "weekly", lastModified: "2026-10-29" },
 
   // Delivery service lines
   { path: "/services/applied-ai", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
@@ -65,11 +65,11 @@ const routes: Route[] = [
 
   // Sector and language landing pages
   { path: "/ai-on-premise-healthcare", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-06" },
-  { path: "/sovereign-ai-pharma-italia", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-06" },
-  { path: "/modernizzazione-sistemi-legacy-ai", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-08-03" },
+  { path: "/sovereign-ai-pharma", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-29" },
+  { path: "/it/ai-sovrana-pharma", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-29" },
+  { path: "/it/modernizzazione-sistemi-legacy-ai", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-29" },
   { path: "/it", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/it/ai-sanitaria-on-premise", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-06" },
-  { path: "/it/consulenza-ai-farmaceutico", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-08-03" },
   { path: "/it/piattaforma-nexus", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-29" },
   { path: "/it/sovereign-ai-italia", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-06" },
   { path: "/it/ai-dati-aziendali", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-06" },
@@ -84,6 +84,7 @@ const routes: Route[] = [
   { path: "/contact", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-08-03" },
   { path: "/tech-sovereignty", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/privacy", priority: 0.5, changeFrequency: "yearly", lastModified: "2026-09-09" },
+  { path: "/trust", priority: 0.6, changeFrequency: "monthly", lastModified: "2026-10-29" },
 ];
 
 /** Research article slugs come from the registry; all eight were revised on 2026-09-09. */

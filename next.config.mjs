@@ -57,6 +57,29 @@ const nextConfig = {
         permanent: true,
       },
       {
+        /* The last Italian pages at the top level moved under /it/ on
+           2026-10-29, so every Italian URL sits in the Italian section. */
+        source: "/:slug(fractional-cto-milano|modernizzazione-sistemi-legacy-ai|cra-11-settembre)",
+        destination: "/it/:slug",
+        permanent: true,
+      },
+      {
+        /* Two pharma landings per language merged into one per language. */
+        source: "/ai-consulting-pharma",
+        destination: "/sovereign-ai-pharma",
+        permanent: true,
+      },
+      {
+        source: "/sovereign-ai-pharma-italia",
+        destination: "/it/ai-sovrana-pharma",
+        permanent: true,
+      },
+      {
+        source: "/it/consulenza-ai-farmaceutico",
+        destination: "/it/ai-sovrana-pharma",
+        permanent: true,
+      },
+      {
         source: "/portfolio/:slug*",
         destination: "/case-studies",
         permanent: true,

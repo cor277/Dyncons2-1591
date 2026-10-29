@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
+import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
+import { breadcrumbSchema } from "@/app/seo";
 import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
-import { CTASection } from "@/components/sections/CTASection";
+import { CTAButton } from "@/components/ui/CTAButton";
 import { TechBadge } from "@/components/ui/TechBadge";
 
 const PAGE_URL = "https://www.dynamicsconsulting.it/sovereign-ai-pharma";
@@ -34,14 +36,15 @@ const schema = {
       name: "Sovereign AI for Pharma — Sovereign AI Infrastructure for the Pharmaceutical Sector",
       description:
         "Sovereign AI for pharmaceutical companies in Italy and the EU: on-premise AI infrastructure designed around the EU AI Act, GDPR, Italy’s Law 132/2025 and NIS2. Nexus MDS Core for pharmacovigilance, clinical trials and supply chain.",
+      "@id": `${PAGE_URL}#webpage`,
       url: PAGE_URL,
       inLanguage: "en",
-      publisher: {
-        "@type": "Organization",
-        name: "Dynamics Consulting",
-        url: "https://www.dynamicsconsulting.it",
-      },
+      isPartOf: { "@id": WEBSITE_ID },
+      publisher: { "@id": ORG_ID },
+      about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }],
+      breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
     },
+    breadcrumbSchema(PAGE_URL, [{ name: "Home", path: "/" }, { name: "Sovereign AI for pharma" }]),
     {
       "@type": "FAQPage",
       inLanguage: "en",
@@ -399,28 +402,30 @@ export default function SovereignAiPharmaPage() {
                   Federfarma Lombarda
                 </Link>{" "}
                 is a concrete example of sovereign AI applied to the Italian pharmaceutical sector.
-                Federfarma Lombarda — the association of pharmacy owners representing more than
-                1,000 pharmacies in the provinces of Milan, Lodi and Monza Brianza — needed to
-                modernise its information systems by adding AI capabilities for document analysis
-                and the automation of its association processes, while remaining fully within the
-                rules.
+                Federfarma Lombarda — the association of pharmacy owners in the provinces of Milan,
+                Lodi and Monza Brianza, with more than 1,000 pharmacies in scope — sends its members
+                a continuous flow of circulars, drug recalls and shortages, duty rosters, deadlines
+                and regulations: thousands of documents that correct or supersede one another. The
+                previous channel, a website with a Google-based search engine, did not reach
+                significant usage.
               </p>
               <p>
                 <strong className="text-[#E6EDF3]">Dynamics Consulting</strong>{" "}
-                designed and implemented an infrastructure based on Nexus MDS Core, with a RAG
-                pipeline for querying the document base intelligently, agentic workflows to
-                automate repetitive processes, and an intuitive user interface for staff. The
-                project was led directly by the founder, Corrado Patierno, with an iterative
-                approach: discovery, MVP, validation with end users, and progressive release.
+                designed and implemented a regulatory assistant on Nexus MDS Core: retrieval over
+                the document base with explicit version chains, so that an answer rests on what is
+                still in force and shows what superseded what; personal data excluded at ingestion
+                and never indexed; a tamper-evident record of every invocation. The project was led
+                directly by the founder, Corrado Patierno, with an iterative approach: discovery,
+                MVP, validation with end users, and progressive release.
               </p>
               <p>
-                The results: a significant reduction in document search time, automation of
-                processes that used to take hours of manual work, and an AI infrastructure that
-                Federfarma controls and governs on its own: indexing, retrieval, identity and audit
-                run locally, personal data is excluded at ingestion, and only final answer
-                generation runs on a replaceable endpoint in a European datacentre. The case shows that
-                sovereign AI in pharma is not theory: it is operational, measurable, and already in
-                production in Italy.
+                The result is an assistant in production that answers around 2,000 queries a day,
+                on an AI infrastructure that Federfarma controls and governs on its own: indexing,
+                retrieval, identity and audit run locally, and only final answer generation runs on
+                a replaceable endpoint in a European datacentre. What transits is the question and
+                the already-retrieved fragments of circulars the Association distributes to its
+                members anyway. The case shows that sovereign AI in pharma is not theory: it is
+                already in production in Italy.
               </p>
             </div>
 
@@ -438,7 +443,9 @@ export default function SovereignAiPharmaPage() {
                 >
                   Dynamics Consulting
                 </Link>{" "}
-                runs with a proven methodology.
+                runs with a proven methodology. Dynamics Consulting does not sell software
+                licences: it designs the architecture to fit, implements it on-premise and makes it
+                operational.
               </p>
               <p>
                 <strong className="text-[#E6EDF3]">Phase 1 — Discovery and assessment (2-3 weeks).</strong>{" "}
@@ -528,12 +535,12 @@ export default function SovereignAiPharmaPage() {
                   Nexus MDS Core supports automated pharmacovigilance with RAG pipelines, document
                   management for clinical trials, pharmaceutical supply chain optimisation,
                   automation of regulatory processes with agentic workflows, and semantic search
-                  over a scientific document base. To go further, see the page on{" "}
+                  over a scientific document base. To go further, see the{" "}
                   <Link
-                    href="/ai-consulting-pharma"
+                    href="/platform"
                     className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                   >
-                    AI consulting for pharma
+                    platform, service by service
                   </Link>
                   .
                 </p>
@@ -596,7 +603,57 @@ export default function SovereignAiPharmaPage() {
           </div>
         </section>
 
-        <CTASection />
+        {/* Further reading — contextual internal links */}
+        <section className="px-6 pb-16">
+          <div className="max-w-3xl mx-auto border-t border-[#30363D] pt-8">
+            <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Further reading</h2>
+            <ul className="space-y-3 text-base">
+              <li>
+                <Link href="/case-studies/federfarma" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Federfarma Lombarda — Nexus MDS Core in production
+                </Link>
+                <span className="text-[#7D8FA3]"> — pharmaceutical distribution, more than 1,000 pharmacies.</span>
+              </li>
+              <li>
+                <Link href="/services/governance-advisory" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  AI governance and compliance advisory
+                </Link>
+                <span className="text-[#7D8FA3]"> — the regulatory framing, and an architecture that carries the obligations.</span>
+              </li>
+              <li>
+                <Link href="/platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Nexus MDS Core
+                </Link>
+                <span className="text-[#7D8FA3]"> — the platform, service by service.</span>
+              </li>
+              <li>
+                <Link href="/trust" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  Trust
+                </Link>
+                <span className="text-[#7D8FA3]"> — certifications, sub-processors and how the audit chain is verified.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Close — assessment */}
+        <section className="px-6 py-16 border-t border-[#21262D] bg-[#11161D]">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-4">
+              Where does your supplier’s liability stop, and yours begin?
+            </h2>
+            <p className="text-[#7D8FA3] text-lg leading-relaxed mb-8">
+              The revised European product liability directive includes software among products,
+              and applies to products placed on the market or put into service from 9 December
+              2026. The exposure assessment establishes, for your organisation, where the boundary
+              sits.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <CTAButton label="Exposure assessment →" href="/assessment" variant="primary" />
+              <CTAButton label="Let’s talk about your project →" href="/contact" variant="secondary" />
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

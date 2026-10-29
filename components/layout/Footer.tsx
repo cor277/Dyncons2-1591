@@ -44,6 +44,7 @@ const legal: FooterLink[] = [
   { label: "Answers", it: "Risposte", href: "/answers" },
   { label: "Editorial series — PLD 2024", it: "Serie editoriale — PLD 2024", href: "/research/editorial-series" },
   { label: "About", it: "Chi siamo", href: "/about" },
+  { label: "Trust", it: "Trust", href: "/trust" },
   { label: "Privacy Policy", it: "Informativa privacy", href: "/privacy" },
 ];
 
@@ -233,9 +234,6 @@ export function Footer() {
             <Link href="/it/ai-sanitaria-on-premise" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               AI On-Premise per la Sanità
             </Link>
-            <Link href="/it/consulenza-ai-farmaceutico" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
-              Consulenza AI Farmaceutico
-            </Link>
             <Link href="/it/sovereign-ai-italia" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               Sovereign AI Italia
             </Link>
@@ -248,19 +246,19 @@ export function Footer() {
             <Link href="/it/ai-agenti-finanziari" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               AI Agenti Finanziari
             </Link>
-            <Link href="/fractional-cto-milano" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+            <Link href="/it/fractional-cto-milano" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               Fractional CTO Milano
             </Link>
-            <Link href="/sovereign-ai-pharma-italia" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+            <Link href="/it/ai-sovrana-pharma" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               AI Sovrana per il Pharma
             </Link>
-            <Link href="/modernizzazione-sistemi-legacy-ai" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+            <Link href="/it/modernizzazione-sistemi-legacy-ai" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               Modernizzazione sistemi legacy
             </Link>
             <Link href="/it/ricerca/serie-editoriale" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               Serie PLD 2024 — dieci articoli
             </Link>
-            <Link href="/cra-11-settembre" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
+            <Link href="/it/cra-11-settembre" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               CRA: segnalazione in 24 ore
             </Link>
           </div>

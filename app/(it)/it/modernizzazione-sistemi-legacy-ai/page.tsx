@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Modernizzazione Sistemi Legacy con AI",
   description:
     "Modernizzazione sistemi legacy con intelligenza artificiale: reverse engineering AI-driven, analisi automatizzata del codice, pipeline RAG e multi-agent per riscrittura guidata. Dynamics Consulting, specialisti in legacy modernisation per il mid-market italiano.",
-  alternates: alternatesFor("/modernizzazione-sistemi-legacy-ai"),
+  alternates: alternatesFor("/it/modernizzazione-sistemi-legacy-ai"),
   openGraph: {
     images: OG_IMAGE,
     title:
@@ -28,7 +28,7 @@ const schema = {
     {
       "@type": "WebPage",
       name: "Modernizzazione Sistemi Legacy con AI",
-      url: "https://www.dynamicsconsulting.it/modernizzazione-sistemi-legacy-ai",
+      url: "https://www.dynamicsconsulting.it/it/modernizzazione-sistemi-legacy-ai",
       description:
         "Guida completa alla modernizzazione dei sistemi legacy con intelligenza artificiale: reverse engineering AI-driven, pipeline RAG, obsolescence engine e casi di studio reali.",
       publisher: {
@@ -519,7 +519,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                   "RAG Pipeline",
                   "n8n Multi-Agent",
                   "LLM Inference",
-                  "vLLM",
+                  "llama.cpp",
                   "Kubernetes",
                   "Docker",
                   "PostgreSQL",
