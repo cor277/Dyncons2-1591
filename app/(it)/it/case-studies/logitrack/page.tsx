@@ -89,11 +89,10 @@ export default function LogiTrackCaseStudyIt() {
 
         {/* Metrics bar */}
         <section className="border-b border-[#30363D] bg-[#161B22]">
-          <div className="max-w-3xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="max-w-3xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
             {[
               { value: "99,5%", label: "Errori di spedizione in meno" },
               { value: "20×", label: "Cicli di inventario più rapidi" },
-              { value: "8–12 mesi", label: "Rientro tipico dell’investimento" },
               { value: "End-to-end", label: "Tracciabilità per singolo articolo" },
             ].map((m) => (
               <div key={m.label}>
@@ -327,11 +326,6 @@ export default function LogiTrackCaseStudyIt() {
                   <strong className="text-[#E6EDF3]">Supporto decisionale guidato dall’AI</strong>:
                   rilevamento delle anomalie, analisi predittive e report narrativi al posto
                   dell’analisi manuale.
-                </li>
-                <li>
-                  <strong className="text-[#E6EDF3]">Rientro dell’investimento in 8–12 mesi</strong>{" "}
-                  grazie alla riduzione degli errori, all’ottimizzazione dei tempi e ai guadagni di
-                  produttività.
                 </li>
                 <li>
                   <strong className="text-[#E6EDF3]">Autenticità certificata su blockchain</strong>{" "}

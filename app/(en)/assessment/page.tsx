@@ -217,8 +217,8 @@ export default function AssessmentPage() {
               transformation.
             </p>
             <p className="mt-4">
-              Author of <em>Logistica Fluida</em> (2026) and of the first Italian technical manual
-              on RFID (Duke Editore, 2006).
+              Author of <em>Logistica Fluida</em> (2026) and of a technical manual on RFID (Duke
+              Editore, 2006).
             </p>
             <p className="mt-4">Designs and maintains two proprietary tools:</p>
             <p className="mt-4">

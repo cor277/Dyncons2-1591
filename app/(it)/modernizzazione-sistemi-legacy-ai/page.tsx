@@ -304,9 +304,8 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
               <p>
                 La pipeline AI ha indicizzato l&apos;intero codebase in Weaviate, inclusi i database
                 schema, le stored procedure, i file di configurazione e la documentazione esistente.
-                Il sistema multi-agent ha poi analizzato il codice, identificando 47 bounded context
-                distinti, 312 regole di business implicite nel codice, e 23 dipendenze esterne di
-                cui 8 in stato di end-of-life. La fase di analisi &egrave; passata dai 3-4 mesi
+                Il sistema multi-agent ha poi analizzato il codice e prodotto 47 specifiche
+                funzionali, che coprono oltre 180 tabelle e 12 punti di integrazione. La fase di analisi &egrave; passata dai 3-4 mesi
                 stimati a meno di due settimane.
               </p>
               <p>

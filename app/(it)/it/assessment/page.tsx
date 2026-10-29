@@ -211,8 +211,8 @@ export default function AssessmentItPage() {
               processi.
             </p>
             <p className="mt-4">
-              Autore di <em>Logistica Fluida</em> (2026) e del primo manuale tecnico italiano
-              sull’RFID (Duke Editore, 2006).
+              Autore di <em>Logistica Fluida</em> (2026) e di un manuale tecnico sull’RFID (Duke
+              Editore, 2006).
             </p>
             <p className="mt-4">Progetta e mantiene due strumenti proprietari:</p>
             <p className="mt-4">

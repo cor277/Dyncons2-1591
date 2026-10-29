@@ -302,9 +302,8 @@ export default function LegacyModernisationAiPage() {
               <p>
                 The AI pipeline indexed the entire codebase in Weaviate, including database
                 schemas, stored procedures, configuration files and existing documentation. The
-                multi-agent system then analysed the code, identifying 47 distinct bounded
-                contexts, 312 business rules implicit in the code, and 23 external dependencies, 8
-                of them end-of-life. The analysis phase went from an estimated 3-4 months to under
+                multi-agent system then analysed the code and produced 47 functional
+                specifications, covering more than 180 tables and 12 integration points. The analysis phase went from an estimated 3-4 months to under
                 two weeks.
               </p>
               <p>

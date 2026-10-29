@@ -73,11 +73,10 @@ export default function LogiTrackCaseStudy() {
 
         {/* Metrics bar */}
         <section className="border-b border-[#30363D] bg-[#161B22]">
-          <div className="max-w-3xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="max-w-3xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
             {[
               { value: "99.5%", label: "Shipping error reduction" },
               { value: "20×", label: "Faster inventory cycles" },
-              { value: "8–12 mo", label: "Typical ROI payback" },
               { value: "End-to-end", label: "Item-level traceability" },
             ].map((m) => (
               <div key={m.label}>
@@ -299,10 +298,6 @@ export default function LogiTrackCaseStudy() {
                 <li>
                   <strong className="text-[#E6EDF3]">AI-driven decision support</strong> — anomaly
                   detection, predictive analytics, and narrative reporting replace manual analysis.
-                </li>
-                <li>
-                  <strong className="text-[#E6EDF3]">8–12 month ROI</strong> payback through error
-                  reduction, time optimisation, and productivity gains.
                 </li>
                 <li>
                   <strong className="text-[#E6EDF3]">Blockchain-certified authenticity</strong> for
