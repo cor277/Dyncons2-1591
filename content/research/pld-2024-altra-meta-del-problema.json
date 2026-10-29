@@ -1,0 +1,263 @@
+{
+  "slug": "pld-2024-altra-meta-del-problema",
+  "lang": "it",
+  "title": "L'altra metà del problema.",
+  "standfirst": "Governance, trasformazioni e ruoli, prima che la PLD 2024 li definisca per voi. Articolo VII della serie sulla Direttiva UE 2024/2853 (Product Liability Directive 2024), operativa dal 9 dicembre 2026.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-06-09T08:07:43.000+00:00",
+  "dateModified": "2026-06-09T08:08:13.000+00:00",
+  "series": "Article VII · Governance and roles",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/laltra-met%C3%A0-del-problema-corrado-patierno-whmnf"
+  },
+  "importedAt": "2026-10-29",
+  "words": 3814,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Governance, trasformazioni e ruoli, prima che la PLD 2024 li definisca per voi."
+    },
+    {
+      "type": "p",
+      "text": "Articolo VII della serie sulla Direttiva UE 2024/2853 (Product Liability Directive 2024), operativa dal 9 dicembre 2026. Pensato per CEO, CTO, Direzioni Compliance e Solution Architect senior delle software house italiane attive in regulated industries."
+    },
+    {
+      "type": "p",
+      "text": "Nota epistemica: questo è il settimo pezzo di una serie che fino a qui ha mappato il problema. Da qui in avanti la conversazione si sposta. Il prossimo articolo apre esplicitamente la domanda che molte Direzioni mi stanno facendo da settimane: \"Due mesi, sei articoli — cosa si fa concretamente?\". Questo pezzo è l'ultima diagnosi, e già contiene i semi della risposta."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Apertura"
+    },
+    {
+      "type": "p",
+      "text": "Due mesi fa, quando questa serie è partita, l'osservazione che muoveva ogni articolo era duplice. Da un lato, la maggior parte delle software house italiane attive in regulated non aveva mappato il regime PLD 2024 — la conoscenza era confinata a uffici legali isolati, raramente arrivava al CEO, quasi mai al CTO. Dall'altro, anche dove la mappatura era avvenuta, il dibattito si era concentrato quasi interamente su due dimensioni: le clausole contrattuali e la copertura assicurativa. Sono dimensioni necessarie, e l’articolo VI le ha trattate nel dettaglio che meritano. Ma sono solo metà del problema."
+    },
+    {
+      "type": "p",
+      "text": "L'altra metà è interna all'organizzazione. Riguarda la struttura della governance, le trasformazioni operative dei processi quotidiani, e — in particolare — la nuova posizione di responsabilità che il Solution Architect senior assume quando il regime PLD entra in vigore. Sono temi che le Direzioni tendono a rinviare perché sembrano più astratti delle clausole. Sono in realtà più urgenti, perché toccano la struttura organizzativa che richiede mesi per essere modificata, non settimane."
+    },
+    {
+      "type": "p",
+      "text": "Questo articolo affronta tre nodi che restano aperti: la matrice RACI come strumento di governance interna, le tre trasformazioni operative cruciali che separano una software house preparata da una software house esposta, e la stratificazione delle responsabilità del Solution Architect senior in epoca PLD 2024. Sono temi tecnici, ma li tratto in modo sintetico perché il lavoro fatto sul campo in regulated industries — sanità, pharma, aviazione — mi mostra che la diagnosi pura sta diventando satura. Il pubblico target chiede ora il passaggio operativo. Il prossimo articolo lo affronterà direttamente."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "I. La RACI come finzione di governance, quando non è agganciata a sistemi tecnici"
+    },
+    {
+      "type": "p",
+      "text": "La matrice RACI — Responsible, Accountable, Consulted, Informed — è uno degli strumenti di governance organizzativa più diffusi in Italia. La trovi nelle slide di metà delle software house mid-market. Distribuisce ruoli per ogni attività progettuale, identifica chi è responsabile dell'esecuzione e chi è accountable del risultato, definisce chi va consultato e chi solo informato. Sul piano carta è elegante. Sul piano fattuale, dopo il 9 dicembre 2026, rischia di diventare una finzione."
+    },
+    {
+      "type": "p",
+      "text": "Il motivo è strutturale. La RACI nasce come strumento di mappatura organizzativa: documenta intenzioni e divisione del lavoro. Il regime PLD 2024 non chiede intenzioni, chiede evidenze. In un eventuale contenzioso post-incidente, il giudice non valuta la matrice RACI come documento probatorio del riparto di responsabilità. Valuta la ricostruzione fattuale di chi ha firmato cosa, chi ha approvato cosa nei sistemi tecnici, chi ha rifiutato cosa con dissenso documentato, chi ha caricato cosa nel sistema di build, chi ha autorizzato cosa nel sistema di deployment."
+    },
+    {
+      "type": "p",
+      "text": "La RACI funziona finché esiste una corrispondenza diretta tra la riga della matrice e la traccia tecnica di esecuzione. Se Mario Rossi è marcato Accountable per l'approvazione delle modifiche di produzione, e nel sistema di Git operativo le approvazioni vengono regolarmente fatte da Luca Bianchi (perché Mario è in ferie, perché il processo è degenerato, perché nessuno ha aggiornato la RACI da diciotto mesi), la matrice non protegge nessuno. Anzi, può aggravare la posizione: documenta che esisteva una struttura di responsabilità diversa da quella effettivamente operante, e quindi suggerisce che l'organizzazione sapeva qual era il processo corretto e non l'ha rispettato."
+    },
+    {
+      "type": "p",
+      "text": "La PLD 2024, all'articolo 8, rende responsabile accanto al fabbricante del prodotto anche il fabbricante del componente difettoso che lo ha reso difettoso, e considera fabbricante chi modifica il prodotto in maniera sostanziale. La ricostruzione di chi abbia contribuito al difetto si fa attraverso evidenze tecniche, non attraverso la grafica organizzativa. Il giudice ricostruisce dai sistemi quello che è realmente accaduto: chi ha committato il codice difettoso, chi ha approvato la pull request, chi ha firmato la release notes, chi ha autorizzato il deployment, chi ha ricevuto e ignorato l'alert CVE. La matrice RACI entra nella ricostruzione solo come elemento secondario, eventualmente a sfavore dell'organizzazione se diverge dalla pratica reale."
+    },
+    {
+      "type": "p",
+      "text": "Questo non significa che la RACI sia inutile. Significa che è strumento incompleto. Diventa strumento utile, e in alcuni casi anche probatoriamente forte, solo quando è agganciata in modo strutturale a tre sistemi tecnici contestuali."
+    },
+    {
+      "type": "p",
+      "text": "Il primo è il sistema di audit trail tecnico delle decisioni. Per ogni voce di matrice RACI deve esistere, nel sistema operativo della software house, una procedura che registra automaticamente le esecuzioni di quel ruolo. Approvazioni in Git con identità verificata. Sign-off documentati in sistema di ticketing con timestamp e firmatario non sostituibile. Logging dei deployment con identità dell'operatore che ha lanciato il pipeline. Se la RACI dice \"Mario Rossi approva\", il sistema deve dimostrare che è Mario Rossi che ha approvato, non un'identità generica condivisa da quattro persone."
+    },
+    {
+      "type": "p",
+      "text": "Il secondo è il sistema di gestione del dissenso scritto. Quando un attore della RACI riceve istruzione che ritiene tecnicamente o regolatoriamente inadeguata, deve esistere una procedura strutturata per documentare il dissenso, conservarlo in modo non-cancellabile, e farlo entrare nel record probatorio della decisione finale. Se il Solution Architect senior dissente sull'uso di una libreria con CVE noto, il dissenso non può sparire nei meandri di Slack o di una mailing list. Deve essere conservato in modo che, due anni dopo, sia recuperabile e attribuibile."
+    },
+    {
+      "type": "p",
+      "text": "Il terzo è il sistema di tracciabilità del perimetro firmato. Per ogni rilascio di codice, il sistema deve documentare quali porzioni sono state effettivamente disegnate e firmate dal Solution Architect senior, e quali invece sono state eseguite sotto istruzione di project manager o di management con dissenso documentato. Senza questa distinzione, l'intera responsabilità tecnica si concentra sul firmatario nominale, anche quando le scelte non erano sue."
+    },
+    {
+      "type": "p",
+      "text": "Quello che si vede sul campo, lavorando in deployment regulated in Italia, è che pochissime organizzazioni dispongono di questi tre sistemi in modo integrato. Hanno tracking Git, hanno ticketing, hanno logging — ma raramente i tre sistemi sono interconnessi in un audit trail unico che ricostruisca chi ha deciso cosa con quale alternativa raccomandata. La RACI da sola, in questo scenario, è cartoceria che si dissolve davanti alla prima ricostruzione fattuale seria."
+    },
+    {
+      "type": "p",
+      "text": "La domanda operativa, per chi ha una RACI in azienda, non è \"è ben fatta la mia matrice?\". È: \"i sistemi tecnici che ho oggi rendono tracciabile, attribuibile e probatoriamente forte la matrice che ho disegnato?\". Se la risposta è no, la matrice è esposta alla prima causa PLD seria. Se la risposta è sì, la matrice diventa strumento di governance reale, non finzione."
+    },
+    {
+      "type": "p",
+      "text": "Per chi vuole un test rapido di copertura, due domande concrete da farsi questa settimana."
+    },
+    {
+      "type": "p",
+      "text": "Prima domanda: prendi una decisione tecnica rilevante di sei mesi fa — l'approvazione di una libreria critica, la chiusura di un CVE noto, l'autorizzazione di un deployment importante. Riesci a ricostruire, dai sistemi attuali, chi l'ha presa, con quale motivazione esplicita, con quali alternative considerate, con quale eventuale dissenso di altri membri del team? Se la ricostruzione richiede ore di interviste a persone che \"ricordano vagamente\", la matrice RACI che hai oggi è scollegata dai sistemi."
+    },
+    {
+      "type": "p",
+      "text": "Seconda domanda: chiedi al tuo Solution Architect senior di mostrarti dove sono conservati i suoi dissensi tecnici degli ultimi dodici mesi — quelli formali, non i commenti su Slack. Se la risposta è \"non li conserviamo separatamente\", il sistema di dissenso scritto non esiste, e la RACI nomina come Accountable persone che non hanno modo di documentare oggi le scelte che contesteranno domani."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "II. Tre trasformazioni operative cruciali"
+    },
+    {
+      "type": "p",
+      "text": "La scaletta originale della serie prevedeva, per questo articolo, un trattamento di otto trasformazioni operative necessarie alle software house per adeguarsi al regime PLD 2024. Riducendo a tre, perché il pubblico ha già metabolizzato la diagnosi e ora chiede priorità, scelgo le tre che — sulla base del lavoro fatto in deployment regulated negli ultimi diciotto mesi — separano in modo netto le organizzazioni preparate da quelle esposte."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Prima trasformazione — Governance documentale strutturata"
+    },
+    {
+      "type": "p",
+      "text": "La prima trasformazione riguarda il modo in cui le decisioni tecniche e organizzative vengono documentate. Nella maggior parte delle software house italiane mid-market, la documentazione delle decisioni esiste in forme frammentate: alcune in Confluence o in altro sistema wiki, alcune in email, alcune in Slack o in altro sistema di chat, alcune nei commenti di pull request, alcune nei ticket. Questa frammentazione è gestibile in un regime di responsabilità tradizionale, perché in caso di disputa l'organizzazione può ricostruire selettivamente quello che è utile alla sua difesa."
+    },
+    {
+      "type": "p",
+      "text": "Il regime PLD 2024 inverte la logica. L'onere probatorio della non-difettosità del prodotto, in molti scenari, ricade sul fabbricante. L'articolo 10 introduce presunzioni di difettosità in casi specifici, e l'organizzazione deve poter dimostrare il contrario. La ricostruzione selettiva non funziona — il danneggiato, attraverso disclosure obbligatoria ex articolo 9, può chiedere accesso a tutte le evidenze documentali rilevanti. Frammentazione diventa esposizione."
+    },
+    {
+      "type": "quote",
+      "text": "La trasformazione necessaria è verso una governance documentale strutturata: ogni decisione tecnica rilevante (approvazione di architettura, scelta di libreria, accettazione di rischio CVE, autorizzazione di deployment, rifiuto di patch, modifica in produzione) viene registrata in sistema unico con identità verificata del decisore, timestamp non manipolabile, motivazione, alternative considerate, e — quando presente — dissenso di altri stakeholder. Non è burocrazia: è infrastruttura difensiva strutturale, simile a quanto regulated industries serie (banche di rilievo sistemico, dispositivi medici di classe IIb-III, infrastruttura aeronautica) già praticano da decenni."
+    },
+    {
+      "type": "p",
+      "text": "Quello che vediamo sul campo è che la trasformazione documentale, quando affrontata in modo organico, richiede 6-12 mesi di lavoro per una software house di 50-200 persone. Affrontata in emergenza dopo il primo contenzioso, richiede multipli del tempo e del costo, e in ogni caso non recupera retroattivamente le decisioni già prese in modo non strutturato."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Seconda trasformazione — Audit trail tecnico integrato"
+    },
+    {
+      "type": "p",
+      "text": "La seconda trasformazione è il completamento tecnico della prima. La documentazione strutturata delle decisioni è condizione necessaria; deve essere accoppiata a un audit trail tecnico che ricostruisce, sul piano dei sistemi software, l'esecuzione delle decisioni stesse."
+    },
+    {
+      "type": "p",
+      "text": "Concretamente significa che il sistema di versionamento del codice, il sistema di build automatica, il sistema di deployment, il sistema di gestione dei segreti, il sistema di accesso ai server di produzione devono produrre log persistenti, non manipolabili, con identità verificata dell'operatore. I log devono essere conservati per durata coerente con il periodo di scadenza PLD (10 anni dal momento in cui il prodotto è immesso sul mercato o messo in servizio, ex articolo 17, esteso a 25 anni per le lesioni personali che si manifestano in ritardo). Devono essere accessibili in modo ricostruttivo: due anni dopo un deployment, l'organizzazione deve poter ricostruire chi ha autorizzato cosa, in che ordine, con quale evidenza."
+    },
+    {
+      "type": "p",
+      "text": "La maggior parte delle software house mid-market italiane ha sistemi parziali. Git con commit message ma identità talvolta condivise. CI/CD con log di build ma cancellazione automatica dopo 90 giorni per limiti di storage. Deployment manuale con script lanciati da workstation locali senza tracciamento centrale. Server di produzione con accessi SSH condivisi e log non centralizzati. In regime PLD 2024, ognuna di queste lacune è un punto di rottura nella ricostruzione fattuale."
+    },
+    {
+      "type": "p",
+      "text": "La trasformazione audit trail è tecnicamente complessa e organizzativamente delicata. Richiede investimento in infrastruttura, ridisegno dei processi di CI/CD, formazione del team di sviluppo, talvolta sostituzione di tooling consolidato ma non più adeguato al nuovo standard. Quello che si vede sul campo è che le organizzazioni che hanno affrontato la trasformazione in modo strutturato — e a questo proposito esistono approcci metodologici che la rendono sostenibile, non un cantiere paralizzante — hanno trovato come beneficio collaterale un miglioramento della produttività dei team, perché la tracciabilità non è solo strumento difensivo: è strumento di osservabilità che riduce il tempo di diagnosi degli incidenti operativi."
+    },
+    {
+      "type": "quote",
+      "text": "Un dettaglio tecnico che merita evidenza, perché ricorrente nei casi reali. La distinzione cruciale non è tra \"abbiamo log\" e \"non abbiamo log\" — quasi tutte le software house hanno qualche forma di logging. La distinzione cruciale è tra log attribuibili e non manipolabili e log generici. Un log che dice \"il pipeline è stato lanciato alle 14:32\" non vale come evidenza se l'identità dell'operatore è una service account condivisa da otto persone, o se i log sono conservati in sistema dove gli amministratori hanno accesso in scrittura. Un log che dice \"Mario Rossi (verifica MFA, ip aziendale, timestamp firmato crittograficamente) ha lanciato il pipeline alle 14:32\" vale come evidenza, perché è ricostruibile in modo non contestabile. La differenza tra le due forme di logging non è di costo infrastrutturale significativo, è di impostazione architetturale. Ma richiede di essere progettata fin dall'inizio, perché retrofittare attribuibilità su sistemi già operativi è notoriamente più costoso che progettarla in greenfield."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Terza trasformazione — Separazione strutturale del perimetro firmato"
+    },
+    {
+      "type": "p",
+      "text": "La terza trasformazione è di carattere organizzativo e contrattuale. Riguarda la separazione strutturale tra il perimetro effettivamente disegnato e firmato dai professionisti tecnici senior (Solution Architect, Principal Engineer, CTO) e il perimetro eseguito sotto istruzione di management — anche con dissenso documentato."
+    },
+    {
+      "type": "p",
+      "text": "Nella software house tradizionale la distinzione è confusa. Il Solution Architect senior viene presentato all'esterno (clienti, partner, certificatori) come la firma tecnica dell'intero perimetro progettuale. Spesso firma documenti che descrivono soluzioni che non ha personalmente disegnato, modificato sotto pressioni gestionali, o accettato come compromesso non ottimale. Sotto il regime PLD 2024, questa confusione concentra rischio penale e civile in modo sproporzionato sul singolo individuo."
+    },
+    {
+      "type": "quote",
+      "text": "La trasformazione necessaria è duplice. Sul piano interno, l'organizzazione deve definire formalmente il perimetro firmato dal Solution Architect senior — quali decisioni richiedono la sua firma esplicita, quali decisioni sono di competenza del project manager con notifica al SA, quali decisioni sono di competenza del management con eventuale dissenso documentato del SA. Sul piano esterno, contratti e documentazione consegnata ai clienti devono riflettere questa distinzione, evitando che il SA appaia firmatario di porzioni progettuali che non ha effettivamente disegnato."
+    },
+    {
+      "type": "p",
+      "text": "Questa è la trasformazione più resistita organizzativamente, perché tocca la cultura dell'autorità tecnica del SA senior — abituato a \"garantire\" l'intero progetto anche quando le scelte non erano sue. È anche la trasformazione che, nel concreto, evita le situazioni più drammatiche post-incidente: situazioni in cui il SA senior si trova personalmente esposto a contenzioso civile e penale per scelte che aveva contestato internamente, ma di cui appare firmatario sui documenti esterni."
+    },
+    {
+      "type": "p",
+      "text": "Quello che vediamo è che le organizzazioni che hanno fatto questa separazione in modo strutturato (con governance documentale e audit trail di cui sopra) non solo riducono il rischio individuale del SA senior — riducono anche il proprio rischio organizzativo, perché la chiarezza distributiva delle responsabilità rende ricostruibile in giudizio chi ha effettivamente deciso cosa, evitando concentrazioni di responsabilità che il giudice troverebbe sospette o non credibili."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "III. La stratificazione del Solution Architect senior"
+    },
+    {
+      "type": "p",
+      "text": "Il regime PLD 2024 non modifica formalmente il ruolo del Solution Architect senior. Lo modifica sostanzialmente, perché ridisegna la posizione di responsabilità all'interno della quale il SA opera. Questo è il terzo nodo da affrontare, ed è quello che più direttamente investe i professionisti tecnici senior che leggono questa serie."
+    },
+    {
+      "type": "p",
+      "text": "Nella software house pre-PLD, il SA senior era figura di autorità tecnica con responsabilità prevalentemente reputazionale. Errori gravi potevano costare il rapporto contrattuale, la rotazione su altro progetto, in casi estremi la cessazione del rapporto. Responsabilità civile e penale era teoricamente esistente ma raramente attivata, e quando attivata si fermava generalmente al livello dell'organizzazione, non del singolo professionista."
+    },
+    {
+      "type": "quote",
+      "text": "La PLD 2024, combinata con l'articolo 27 della Costituzione italiana (personalità della responsabilità penale), e con la posizione di garanzia ex articolo 40 capoverso del Codice Penale, cambia il quadro in modo sostanziale. Il SA senior può trovarsi personalmente esposto a contenzioso civile per concorso nella difettosità del prodotto, e a contenzioso penale per omicidio colposo o lesioni colpose (articoli 589-590 c.p.) quando il prodotto difettoso provoca danni alla persona. Le polizze RC professionale di base, quasi sempre, non coprono adeguatamente questi scenari."
+    },
+    {
+      "type": "p",
+      "text": "La trasformazione necessaria del ruolo si articola su tre livelli di stratificazione, che il SA senior deve costruire attivamente per essere sostenibile nel nuovo regime."
+    },
+    {
+      "type": "p",
+      "text": "Il primo livello è quello del framework di compliance personale e organizzativa. Il SA senior deve operare all'interno di un framework che mappa, per ogni decisione tecnica rilevante, l'esposizione regolatoria associata. Non è strumento che il singolo professionista può costruire da zero per ogni progetto — è infrastruttura metodologica che richiede mappatura completa delle normative applicabili (PLD 2024, AI Act, GDPR, NIS2, Cyber Resilience Act, ISO 27001 e successive, standard verticali) e dei deliverable di evidenza richiesti per ciascuna. Quello che si vede sul campo è che le organizzazioni serie stanno adottando framework strutturati di questo tipo — alcuni sviluppati internamente, altri acquisiti o adattati da metodologie consolidate. Senza questa infrastruttura metodologica, il SA senior opera in modo artigianale su un piano che richiede strutturazione industriale."
+    },
+    {
+      "type": "p",
+      "text": "Il secondo livello è quello del supporto infrastrutturale tecnico. Il framework di compliance da solo non basta: deve essere tradotto in evidenze tecniche concrete, generate automaticamente dai sistemi su cui il SA opera. SBOM CycloneDX/SPDX auto-generato. Audit trail delle decisioni tecniche integrato nei sistemi di sviluppo. Log persistenti e non manipolabili dei deployment. Sistema di gestione del dissenso scritto. Tutto questo richiede infrastruttura tecnica che oggi raramente esiste integrata nelle software house mid-market. Esistono approcci architetturali — alcuni basati su deployment sovrano on-premise, altri su soluzioni più frammentate — che permettono di costruire questa infrastruttura in modo sostenibile per organizzazioni che non hanno la capacità di sviluppo di un grande gruppo enterprise."
+    },
+    {
+      "type": "p",
+      "text": "Il terzo livello è quello della stratificazione contrattuale e assicurativa del ruolo individuale. Il SA senior deve operare con perimetro firmato definito contrattualmente, con sistema di dissenso scritto operativo, e con polizza professionale individuale che copra adeguatamente i rischi PLD — è il tema trattato nell'Articolo VI, e qui lo richiamo solo per completezza. Senza il primo e il secondo livello, il terzo è insufficiente. Con il primo e il secondo, il terzo diventa robusto."
+    },
+    {
+      "type": "quote",
+      "text": "La stratificazione completa del ruolo richiede investimento personale e organizzativo. Per il professionista individuale, significa rivedere il proprio contratto con la software house, attivare polizza personale adeguata, costruire sistematicamente la documentazione del proprio perimetro firmato e dei propri dissensi. Per l'organizzazione, significa investire nei framework di compliance e nell'infrastruttura tecnica che rendono il ruolo sostenibile nel tempo."
+    },
+    {
+      "type": "p",
+      "text": "Quello che si vede sul campo, lavorando sia con software house mid-market sia con organizzazioni regulated più strutturate, è che la stratificazione completa è oggi pratica concreta solo in una minoranza di realtà. La maggioranza opera ancora con SA senior individualmente esposti, dentro organizzazioni che non hanno costruito né il framework di compliance né l'infrastruttura tecnica di supporto. È situazione che funziona finché non si verifica il primo contenzioso PLD serio. Dopo, recuperare è costoso e talvolta tardivo."
+    },
+    {
+      "type": "p",
+      "text": "Una considerazione che vale la pena fissare esplicitamente, perché i SA senior che leggono questa serie me la fanno regolarmente in privato. La domanda è: \"Cosa succede a me, personalmente, in uno scenario PLD reale? Quanto rischio davvero?\". La risposta onesta è che dipende da fattori che oggi nessuno può stimare con precisione, perché il regime non è ancora entrato in vigore e la giurisprudenza italiana ed europea sull'articolo 8 PLD 2024, e in particolare sulla responsabilità di chi fornisce componenti, si formerà nei primi anni di applicazione. Ma alcuni elementi sono già chiari. Primo: la responsabilità penale ex articoli 589-590 del Codice Penale, quando un prodotto difettoso provoca lesioni o decesso, è strettamente personale (articolo 27 Costituzione), e non è scaricabile sull'organizzazione né coperta dalle polizze tradizionali RC professionale. Secondo: il SA senior che ha firmato come responsabile tecnico una scelta che ha contribuito alla difettosità, anche se la scelta era stata imposta dal management, può trovarsi in posizione di garanzia ex articolo 40 capoverso, e dunque essere chiamato a rispondere per omissione delle cautele necessarie. Terzo: la difesa \"la scelta non era mia\" funziona solo se è documentata strutturalmente — dissenso scritto formale, conservato in sistema attribuibile, antecedente alla decisione finale. Se è ricostruita ex post da Slack, email o memoria, non regge."
+    },
+    {
+      "type": "quote",
+      "text": "Il punto operativo per il SA senior che legge è semplice da dichiarare e impegnativo da implementare: il momento di costruire la propria stratificazione individuale è prima del primo incidente, non dopo. Costruirla dopo è tardivo per il caso che ti riguarda; costruirla prima è infrastruttura che ti accompagna sull'intero arco residuo della carriera."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "IV. Chiusura"
+    },
+    {
+      "type": "p",
+      "text": "Questo è il settimo articolo della serie. Negli articoli precedenti abbiamo mappato i cambi strutturali introdotti dalla PLD 2024 per le software house, i sei scenari di sviluppo software esposti, il regime di solidarietà ex articolo 12, il vulnerability management e il processo CVE, le configurazioni internazionali e le possibili fughe giurisdizionali, le venti clausole contrattuali e la copertura assicurativa nei tre profili (cliente, software house, professionista firmatario). In questo articolo abbiamo trattato i tre nodi che restano: la RACI come finzione di governance se non agganciata a sistemi tecnici, le tre trasformazioni operative cruciali per organizzazioni che non vogliono arrivare impreparate, la stratificazione del ruolo del Solution Architect senior."
+    },
+    {
+      "type": "p",
+      "text": "Il lavoro fatto nei sette articoli e nei due pezzi bonus (HR-AI scraping, Tech Sovereignty Package) ha avuto un obiettivo preciso: mappare in modo strutturato il problema, in modo che le Direzioni di software house e i professionisti firmatari avessero finalmente un riferimento operativo per capire dove sono, cosa rischiano, e in quale direzione devono muoversi."
+    },
+    {
+      "type": "p",
+      "text": "La diagnosi, a questo punto, è completa. Quello che la serie ha lasciato in sospeso, sistematicamente, è l'altra metà della conversazione: cosa fa concretamente una software house che ha mappato il problema e vuole muoversi prima di dicembre 2026. Le risposte parziali sono comparse nei vari articoli — clausole specifiche, parametri di polizza, suggerimenti operativi — ma sono distribuite, e non costituiscono ancora un quadro operativo unitario."
+    },
+    {
+      "type": "p",
+      "text": "Il prossimo articolo della serie affronta esplicitamente questa domanda. Il titolo è già definito, e mi è venuto da una conversazione recente con un CTO di software house mid-market che, dopo aver letto i primi sei articoli, mi ha scritto un messaggio che riassumeva quello che probabilmente molti lettori stanno pensando: \"Tutto chiaro. E mò?\""
+    },
+    {
+      "type": "p",
+      "text": "È la domanda giusta. E ha una risposta operativa che non è generica, non è promozionale, e non è rinviabile. La affronteremo la prossima settimana, e nelle settimane successive entreremo nel dettaglio dei due pilastri che — sul campo, in deployment regulated reali — abbiamo verificato funzionare: un framework metodologico per la mappatura sistematica della compliance multi-normativa, e un'infrastruttura tecnica sovrana per la sua implementazione operativa."
+    },
+    {
+      "type": "p",
+      "text": "La diagnosi finisce qui. Da qui in avanti, parliamo di cosa si fa."
+    }
+  ]
+}

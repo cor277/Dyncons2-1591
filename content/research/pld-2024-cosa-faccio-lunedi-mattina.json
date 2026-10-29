@@ -1,0 +1,258 @@
+{
+  "slug": "pld-2024-cosa-faccio-lunedi-mattina",
+  "lang": "it",
+  "title": "Cosa faccio lunedì mattina",
+  "standfirst": "Quali norme mi toccano davvero (e perché non è mai una sola). Tre ipotesi di progetto a confronto.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-06-23T10:04:41.000+00:00",
+  "dateModified": "2026-06-23T10:04:49.000+00:00",
+  "series": "Article IX · The method",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/cosa-faccio-luned%C3%AC-mattina-corrado-patierno-arx1e"
+  },
+  "importedAt": "2026-10-29",
+  "words": 3030,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Quali norme mi toccano davvero (e perché non è mai una sola). Tre ipotesi di progetto a confronto."
+    },
+    {
+      "type": "p",
+      "text": "(Articolo IX della serie. I precedenti hanno fatto la diagnosi. Questo prende un progetto vero e lo costruisce.)"
+    },
+    {
+      "type": "p",
+      "text": "\"Non ho tempo, cosa devo fare?\""
+    },
+    {
+      "type": "p",
+      "text": "Due direttori a livello CIO hanno chiuso così, dopo avermi sentito spiegare cosa cambia dal 9 dicembre. La risposta che ricevono di solito è il nome di un prodotto: \"usa questo, attiva quel toggle\". È sbagliata — lo strumento non ti rende conforme, uno strumento mal configurato ti rende non conforme."
+    },
+    {
+      "type": "p",
+      "text": "Ma c'è una seconda risposta sbagliata, più sottile, ed è quella che do io stesso se non sto attento: \"applica la PLD\". Perché non è detto che la PLD ti tocchi nel modo in cui pensi. Se vendi a consumatori finali la responsabilità da prodotto ti morde in pieno; se sei in un contesto B2B, il morso è un altro e il baricentro si sposta sul contratto e su altre norme. La prima domanda, quindi, non è \"cosa faccio\". È: quali regole si applicano davvero al mio caso? Quasi tutti la saltano — e finiscono o a fare adempimenti che non gli servono, o a saltarne uno che li espone."
+    },
+    {
+      "type": "p",
+      "text": "Il lavoro vero comincia da lì. Lo mostro su tre ipotesi parallele, perché è confrontandole che si vede il metodo:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "SRL A — vende a consumatori finali un servizio digitale in ambito sanitario. Tratta dati dei pazienti.",
+        "SRL B — vende a imprese un gestionale, in un settore non regolato. Tratta dati aziendali dei clienti.",
+        "SRL C — fa e-commerce in dropshipping: vende a consumatori prodotti che non produce né tocca, spediti da fornitori spesso extra-UE, con descrizioni, prezzi e assistenza generati o gestiti dall'AI."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Stesso ingrediente — un sistema AI in produzione — tre mondi di rischio diversi. E C, lo vedremo, è il più insidioso dei tre: chi vende roba che non ha fatto è convinto di non rispondere di niente. È esattamente l'errore che la PLD 2024 punisce. Quattro movimenti per portarle tutte e tre a un esito difendibile."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "1. Discernere: non tutte le norme ti toccano, e non allo stesso modo"
+    },
+    {
+      "type": "p",
+      "text": "Prima di progettare qualunque cosa, si separa ciò che si applica da ciò che no. Bastano poche domande, ma vanno fatte in ordine e con onestà:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Vendi a consumatori (B2C) o a imprese (B2B)? È il primo bivio. Nel B2C la PLD 2024 morde forte: responsabilità da prodotto verso la persona danneggiata, oggettiva, fino a dieci anni. Nel B2B il danneggiato è un'impresa, e l'esposizione si sposta prevalentemente sul piano contrattuale (Codice Civile) — la PLD non sparisce, ma cambia peso e percorso. Stesso progetto, due mondi di rischio diversi.",
+        "Tratti dati personali? Se sì, GDPR. Se sono sanitari o comunque sensibili, la soglia di diligenza si alza e scattano valutazioni d'impatto più pesanti.",
+        "Il sistema AI in che fascia di rischio cade? Uso ad alto rischio o no: cambia se sei sotto l'intero impianto dell'AI Act o solo sotto gli obblighi di trasparenza.",
+        "Sei in un settore regolato o tocchi infrastrutture critiche? Allora si aggiungono NIS2 e regole di settore.",
+        "Sei produttore, importatore o distributore? Domanda che quasi nessuno si fa, e che vale carissima. La PLD 2024 non colpisce solo chi fabbrica. Se immetti sul mercato UE un prodotto di un fabbricante extra-UE e non sei in grado di indicare un operatore economico europeo responsabile entro i termini previsti, rispondi tu come se l'avessi fatto. Il dropshipper che pensa \"non è roba mia, io rivendo soltanto\" è esattamente il bersaglio della norma.",
+        "Il tuo sistema AI genera contenuti o decisioni verso il consumatore? Descrizioni di prodotto, prezzi dinamici, risposte di assistenza, raccomandazioni. Se sì, si accendono gli obblighi di trasparenza dell'AI Act e — quando il contenuto generato è ingannevole o pericoloso — il Codice del Consumo e la sicurezza prodotto.",
+        "Chi opera il sistema è dipendente o esterno? Cambia chi è esposto, e con quale titolo, quando qualcosa va storto."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Il risultato non è un parere. È una lista onesta dei regimi che ti toccano — e per le nostre tre SRL è diversa:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "SRL A (B2C, sanità, dati sensibili): PLD in pieno, GDPR con valutazione d'impatto rinforzata, AI Act probabilmente ad alto rischio, regole di settore sanitario. Lista lunga.",
+        "SRL B (B2B, non regolato, dati aziendali): esposizione prevalentemente contrattuale (Codice Civile), GDPR sui dati personali che comunque transitano, AI Act in fascia di sola trasparenza. Niente NIS2, niente regole di settore. Lista corta.",
+        "SRL C (B2C, dropshipping, prodotto extra-UE): PLD come distributore — con l'obbligo di saper indicare l'operatore UE a monte, pena rispondere in proprio; sicurezza prodotto e Codice del Consumo per i claim; AI Act per i contenuti generati; GDPR sui dati dei clienti. Niente settore regolato, ma una catena di fornitura che è essa stessa un regime. Lista media, ma di forma diversa: il rischio non è in ciò che costruisce, è in ciò che rivende e in ciò che l'AI dichiara al posto suo."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tre progetti, tre liste, tre forme di rischio. Discernere prima significa non pagare per ciò che non ti serve (B avrebbe sprecato budget applicandosi la sanità), non scoprire troppo tardi ciò che ti serviva (A si sarebbe giocata la difendibilità saltando la valutazione d'impatto), e non ignorare un'esposizione che non sapevi di avere (C era convinta di non rispondere del prodotto: si sbagliava)."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "2. La collisione: le norme non si escludono, si sommano"
+    },
+    {
+      "type": "p",
+      "text": "Qui arriva la parte che quasi nessuno gestisce, e che fa fallire i progetti. Una volta discernuti i regimi che ti toccano, scopri che non si dividono il campo: si sovrappongono. Sono cumulativi, non alternativi."
+    },
+    {
+      "type": "p",
+      "text": "Prendiamo SRL A e un solo evento — un difetto nel sistema che causa un danno a un paziente. Lo stesso fatto accende più norme insieme, ognuna con una logica diversa, un proprio convenuto e un proprio orologio."
+    },
+    {
+      "type": "p",
+      "text": "Un fatto, quattro titoli di responsabilità, quattro convenuti possibili, quattro orologi. E il punto che cambia il modo di lavorare: lo stesso difetto tecnico — niente tracciabilità, nessuna verifica di dove gira il dato — prova contemporaneamente la difettosità sotto PLD e l'inadeguatezza delle misure sotto GDPR. Una breccia, due condanne."
+    },
+    {
+      "type": "p",
+      "text": "Ma vale anche al contrario, ed è la leva del progetto: un singolo deliverable, fatto bene, può chiudere il fianco su più norme insieme. La tracciabilità ricostruibile ti difende sotto PLD e sotto GDPR. La gestione documentata delle vulnerabilità è diligenza per il GDPR e requisito di sicurezza per NIS2. Gestire la collisione non significa moltiplicare il lavoro per il numero di norme: significa sapere quali deliverable stanno all'incrocio e valgono doppio. Chi non vede la stratificazione fa quattro volte lo stesso lavoro, o ne dimentica un pezzo. Chi la vede, la usa per risparmiare."
+    },
+    {
+      "type": "p",
+      "text": "Per SRL B la stessa collisione è più sottile: meno regimi sovrapposti, ma il punto non cambia — anche due strati che si toccano (contratto + GDPR) vanno gestiti insieme, non a compartimenti. La differenza è di scala, non di logica."
+    },
+    {
+      "type": "p",
+      "text": "Per SRL C la collisione cambia forma, ed è la più istruttiva. Immagina che l'AI generi per un prodotto una descrizione che promette una proprietà che il prodotto non ha — e un cliente si fa male fidandosi di quella promessa. In un colpo solo: PLD, perché il prodotto immesso sul mercato è difettoso e l'operatore UE raggiungibile sei tu (il fabbricante cinese è irreperibile, l'orologio dei termini per indicarlo è scaduto); Codice del Consumo, perché il claim è una pratica commerciale ingannevole; AI Act, perché il contenuto generato dall'AI andava segnalato come tale; GDPR, se nel frattempo i dati del cliente sono stati trattati senza base adeguata. Quattro strati su un prodotto che C non ha mai toccato, attivati da una frase che ha scritto la macchina. Qui la collisione non è \"tante norme sullo stesso difetto tecnico\": è \"un anello debole della catena — l'AI che parla al posto tuo — che apre più fronti insieme\". Chi gestisce C senza vedere questa forma costruisce un e-commerce che funziona e che, al primo claim sbagliato, non ha nessuno a monte su cui scaricare."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "3. Il catalogo: dove la collisione è già mappata"
+    },
+    {
+      "type": "p",
+      "text": "Questo discernimento — quali regimi, quali deliverable, quali stanno all'incrocio — non si rifà a mano per ogni progetto. Ma il problema, prima ancora di essere di volume, è stato un altro, e vale la pena raccontarlo perché è da lì che il catalogo è nato."
+    },
+    {
+      "type": "p",
+      "text": "Il Compliance-Epistemic Project Framework (CEPF) non è nato come catalogo. È nato da un conflitto."
+    },
+    {
+      "type": "p",
+      "text": "È il conflitto che chiunque pianifichi progetti conosce: la stima PERT e la compliance non si parlano. Il PERT tratta ogni attività come stimabile e, sotto pressione di budget o di tempo, comprimibile o tagliabile. Ma i deliverable di compliance non sono comprimibili: sono un pavimento. Trattarli come task normali significa, prima o poi, tagliarli per far quadrare i tempi — e scoprire troppo tardi di aver tagliato proprio ciò che ti difende."
+    },
+    {
+      "type": "p",
+      "text": "Per uscirne ho costruito una metodologia di lavoro, un framework — lo stesso che vi ho presentato prima di questa serie sulla PLD, e che chiamo CEPF. L'idea è separare ciò che è negoziabile da ciò che non lo è. La compliance non entra nel PERT come una voce tra le altre, ma come vincolo: un floor pre-popolato che il piano deve rispettare prima ancora di stimare le funzionalità. Il PERT torna a fare il suo mestiere su tutto il resto; il pavimento resta pavimento, e nessuno lo taglia alle tre di notte per consegnare in tempo."
+    },
+    {
+      "type": "p",
+      "text": "CEPF è la forma matura di quel framework: diciannove framework normativi, 247 requisiti, 695 template documentali (CEPF v7, snapshot luglio 2026), già mappati e — soprattutto — già incrociati tra loro, così che il catalogo sa quali deliverable servono più regimi insieme. E ognuno dei regimi richiede di conoscerlo abbastanza da non lasciare buchi: è la ragione per cui, a mano, non scala."
+    },
+    {
+      "type": "p",
+      "text": "La forma è quella di una matrice: sulle righe i deliverable, sulle colonne i regimi, e in ogni cella se quel deliverable è obbligatorio o consigliato per quel regime."
+    },
+    {
+      "type": "p",
+      "text": "Dato il contesto specifico di un'azienda — discernuto nel movimento 1 — il catalogo dice quali righe le servono davvero, quali può ignorare, e quali coprono più colonne insieme. Per SRL A restituisce gran parte delle righe e quasi tutte le colonne; per SRL B poche righe, due colonne; per SRL C righe che A e B non hanno mai visto — l'identificazione dell'operatore a monte, la tracciabilità della catena di fornitura, l'etichettatura dei contenuti generati dall'AI. È lo stesso catalogo che cambia forma sul caso."
+    },
+    {
+      "type": "p",
+      "text": "Non è uno strumento da comprare: è la spina dorsale di compliance che trasforma \"conosco diciannove framework\" da sapere di pochi a metodo ripetibile. La stessa interrogazione che a mano è un mese di lavoro specializzato — perché devi conoscere ogni regime per sapere quali righe accendere — diventa una sessione."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "4. Dal catalogo al progetto: la gestione, non la teoria"
+    },
+    {
+      "type": "p",
+      "text": "Un catalogo, da solo, è una lista. Diventa valore quando si trasforma in un piano di progetto con tempi, dipendenze e responsabilità. È qui che la compliance smette di essere un adempimento e diventa gestione."
+    },
+    {
+      "type": "p",
+      "text": "Dai deliverable discernuti nasce il piano:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Il compliance floor. I deliverable che i tuoi regimi rendono obbligatori non sono opzionali e non si negoziano a fine progetto: sono il pavimento del piano, pre-popolato prima ancora di stimare le funzionalità. Sai, dal primo giorno, qual è il minimo sotto cui non puoi scendere.",
+        "La stima. Ogni deliverable di compliance ha un suo effort. Messo nel piano dall'inizio, ti dice prima quanto costa la difendibilità — e ti permette di prezzarla nel progetto invece di subirla come sorpresa. Un progetto che scopre la compliance alla fine la paga il triplo e in ritardo.",
+        "Le dipendenze e i cancelli. Alcuni deliverable bloccano gli altri: non progetti la tracciabilità dopo aver costruito il sistema, la disegni prima. Il piano ha cancelli che non si attraversano finché il deliverable che li presidia non è chiuso — la mappa dei regimi prima del disegno, il disegno difendibile prima della costruzione, il dossier di difesa e la copertura assicurativa prima del go-live, il protocollo di modifica sostanziale prima dell'esercizio.",
+        "La data che fa partire l'orologio. La messa in produzione va trattata come un atto formale: è la data certa da cui decorre la responsabilità — fino a dieci anni nel B2C. E ogni modifica sostanziale, dopo, può farla ripartire: nel piano è un cancello, non un addendum."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Il risultato è un progetto in cui la difendibilità è stimata, pianificata e tracciata come qualsiasi altra parte del lavoro. Non un faldone che qualcuno compila la sera prima dell'audit."
+    },
+    {
+      "type": "p",
+      "text": "In concreto, il piano scorre su cinque cancelli. Ognuno ha un artefatto che produce e un criterio che non si supera finché l'artefatto non è chiuso. E ognuno pesa diversamente per le tre SRL."
+    },
+    {
+      "type": "p",
+      "text": "Cancello 1 — Inquadramento. Artefatto: scheda regimi+rischio e matrice di chi-firma. Criterio: non si scrive una riga di codice finché ogni decisione del sistema non ha un nome accanto. Per A è la fase più densa (sanità, alto rischio); per B si chiude in mezza giornata; per C qui emerge il punto che la salva o la affonda — chi è l'operatore UE a monte di ogni prodotto, e cosa fa il sistema se non lo trova."
+    },
+    {
+      "type": "p",
+      "text": "Cancello 2 — Progettazione difendibile. Artefatto: valutazione d'impatto sul dato, scelta documentata di residenza e calcolo, mappa decisione/approvazione umana, specifica della tracciabilità. Criterio: si costruisce solo ciò che ha passato questo cancello. Per A la residenza del dato sanitario è vincolante; per B è prudenza; per C la mappa \"cosa scrive l'AI verso il cliente, e chi la approva prima che vada online\" è il presidio centrale."
+    },
+    {
+      "type": "p",
+      "text": "Cancello 3 — Costruzione. Artefatto: distinta dei componenti, meccanismo di intercettazione vulnerabilità, versioning, evidenza dei test. Criterio: la tracciabilità deve funzionare davvero, non essere specificata. Qui lo strumento è indifferente: è la differenza tra \"fatto\" e \"fatto in modo difendibile\", e si gioca sulla traccia, non sul tool."
+    },
+    {
+      "type": "p",
+      "text": "Cancello 4 — Messa in produzione. Artefatto: dossier di difesa (tutti i deliverable raccolti), data di go-live certa, firma di chi attesta la difendibilità, perimetro contrattuale e — dove i regimi lo impongono — copertura assicurativa attiva. Criterio: non si va in produzione senza una firma e una data. La data fa partire l'orologio della responsabilità, fino a dieci anni; trattarla come un deploy qualunque è il primo errore."
+    },
+    {
+      "type": "p",
+      "text": "Cancello 5 — Esercizio e continuità. Artefatto: registro vivo di manutenzione e modifiche, protocollo di modifica sostanziale, piano di continuità. Criterio: ogni modifica rilevante riapre il cancello 2, perché può far ripartire la responsabilità. E il piano di continuità deve essere stato provato, non solo scritto: cosa succede se il fornitore o il modello su cui ti appoggi viene spento da un giorno all'altro."
+    },
+    {
+      "type": "p",
+      "text": "Ogni cancello è popolato dal catalogo: i deliverable obbligatori per i regimi discernuti sono già lì, ciascuno con il suo effort. È questo che rende la compliance gestione di progetto e non adempimento."
+    },
+    {
+      "type": "p",
+      "text": "Ogni voce del piano ha una banda di effort indicativa (S, M, L) e l'elenco dei regimi che copre, ed è quest'ultimo la chiave: nel piano di SRL C l'audit trail ha effort L, ma copre tre regimi insieme — è il deliverable a più alto ritorno del piano."
+    },
+    {
+      "type": "p",
+      "text": "Letta così, la compliance non è un costo che scopri alla fine: è un insieme di voci con un effort, un cancello e una resa su più regimi. Sai prima quanto pesa, la prezzi, e scegli l'ordine. Il piano di SRL A è più ricco di quello di SRL C, quello di SRL B molto più magro — ma la logica è identica: la difendibilità è stimata, pianificata e tracciata come qualsiasi altra parte del lavoro, non un faldone compilato la sera prima dell'audit."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Perché afferrare \"un agente qualunque\" è l'errore che costa caro"
+    },
+    {
+      "type": "p",
+      "text": "Arriviamo al punto da cui siamo partiti. Quegli strumenti agentici che tutti ti consigliano non sono cattivi: sono agnostici alla compliance. Non incorporano nessuno dei diciannove framework di cui sopra — non la PLD, non il GDPR, non l'AI Act. Non sanno cosa sia un audit trail difendibile, non si chiedono dove vive il dato, non ti fanno firmare niente. E quasi tutti fanno girare inferenza e dati su infrastruttura sotto giurisdizione estera, dove la tua non arriva: residenza che non controlli, e un interruttore che possono spegnere da fuori."
+    },
+    {
+      "type": "p",
+      "text": "L'errore non è \"lo strumento è sbagliato\". L'errore è comprarlo al posto del metodo invece che dentro il metodo. Ti dà velocità su un sistema che funziona e che, al primo guaio, non ha nessuno dei cancelli che ti difendono. Per SRL A è un dato sanitario che esce dall'UE senza che nessuno l'abbia deciso. Per SRL C è un claim generato dall'AI, su un prodotto che non hai fatto, che apre quattro fronti insieme. Per tutte è la stessa cosa: hai pagato per andare più veloce verso il muro."
+    },
+    {
+      "type": "p",
+      "text": "Lo strumento non è il livello del problema. Il livello del problema è il progetto."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "La differenza, in una riga"
+    },
+    {
+      "type": "p",
+      "text": "Discernere i regimi, vedere dove collidono, mapparli in un catalogo e trasformarli in un piano stimato: questo ti dice cosa deve essere vero perché il sistema regga — che tu sia SRL A, B o C. Le tre liste sono diverse, le tre forme di collisione sono diverse, i tre piani sono diversi: il metodo è lo stesso. Lo strumento, qualunque esso sia, vive dentro questo metodo — non al suo posto. Costruire l'infrastruttura che rende vero tutto questo in produzione — il dato dove deve stare, ogni decisione ricostruibile, la continuità anche se un fornitore viene spento — è il capitolo successivo. Lo affronto nel prossimo pezzo."
+    },
+    {
+      "type": "p",
+      "text": "Nota. La PLD 2024 non è ancora recepita in Italia (termine: 9 dicembre 2026): descrivo la struttura del rischio che le norme disegnano, non sentenze esistenti. Non sono un avvocato — porto l'architettura del problema e del progetto; la qualificazione del caso concreto spetta a un legale, la copertura a un broker."
+    },
+    {
+      "type": "p",
+      "text": "Se vuoi sapere quali regimi toccano davvero il tuo prossimo progetto, dove collidono e quali deliverable ti mancano, è esattamente da lì che parte il lavoro. Scrivimi."
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "slug": "pld-2024-what-to-do-on-monday-morning",
+  "lang": "en",
+  "translationOf": "pld-2024-cosa-faccio-lunedi-mattina",
+  "title": "What to do on Monday morning",
+  "standfirst": "Which rules really apply to me (and why it is never just one). Three project scenarios compared.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-06-23T10:04:41.000+00:00",
+  "dateModified": "2026-06-23T10:04:49.000+00:00",
+  "series": "Article IX · The method",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/cosa-faccio-luned%C3%AC-mattina-corrado-patierno-arx1e"
+  },
+  "importedAt": "2026-10-29",
+  "words": 3252,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Which rules really apply to me (and why it is never just one). Three project scenarios compared."
+    },
+    {
+      "type": "p",
+      "text": "(Article IX of the series. The previous ones made the diagnosis. This one takes a real project and builds it.)"
+    },
+    {
+      "type": "p",
+      "text": "\"I don't have time. What do I need to do?\""
+    },
+    {
+      "type": "p",
+      "text": "Two CIO-level directors closed the conversation with exactly that, after hearing me explain what changes from 9 December. The answer they usually get is the name of a product: \"use this, switch on that toggle\". It is wrong — the tool does not make you compliant, and a badly configured tool makes you non-compliant."
+    },
+    {
+      "type": "p",
+      "text": "But there is a second wrong answer, subtler, and it is the one I give myself if I am not careful: \"apply the PLD\". Because the PLD does not necessarily affect you the way you think. If you sell to end consumers, product liability bites in full; if you work in a B2B context, the bite is a different one and the centre of gravity shifts to the contract and to other rules. So the first question is not \"what do I do\". It is: which rules actually apply to my case? Almost everyone skips it — and ends up either carrying out obligations they do not need, or missing one that exposes them."
+    },
+    {
+      "type": "p",
+      "text": "The real work starts there. I will show it on three parallel scenarios, because it is by comparing them that the method becomes visible:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "SRL A — sells a digital healthcare service to end consumers. It processes patient data.",
+        "SRL B — sells management software to businesses, in a non-regulated sector. It processes its clients' business data.",
+        "SRL C — runs dropshipping e-commerce: it sells to consumers products it neither makes nor handles, shipped by suppliers that are often outside the EU, with descriptions, prices and customer support generated or managed by AI."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Same ingredient — an AI system in production — three different worlds of risk. And C, as we will see, is the most insidious of the three: whoever sells goods they did not make is convinced they are liable for nothing. That is exactly the mistake the PLD 2024 punishes. Four moves to bring all three to a defensible outcome."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "1. Discern: not every rule applies to you, and not in the same way"
+    },
+    {
+      "type": "p",
+      "text": "Before designing anything, you separate what applies from what does not. A few questions are enough, but they must be asked in order and honestly:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Do you sell to consumers (B2C) or to businesses (B2B)? This is the first fork. In B2C the PLD 2024 bites hard: product liability towards the injured person, strict, for up to ten years. In B2B the injured party is a business, and the exposure shifts mainly to the contractual level (the Italian Civil Code) — the PLD does not disappear, but its weight and route change. Same project, two different worlds of risk.",
+        "Do you process personal data? If so, the GDPR. If the data is health data or otherwise sensitive, the bar for diligence rises and heavier impact assessments are triggered.",
+        "Which risk tier does the AI system fall into? High-risk use or not: it decides whether you are under the whole framework of the AI Act or only under its transparency obligations.",
+        "Are you in a regulated sector, or do you touch critical infrastructure? Then NIS2 and sector rules are added.",
+        "Are you a manufacturer, an importer or a distributor? A question almost nobody asks, and one that costs dearly. The PLD 2024 does not only hit those who make things. If you place on the EU market a product from a non-EU manufacturer and cannot identify a responsible European economic operator within the prescribed time limits, you are liable as if you had made it yourself. The dropshipper who thinks \"it's not my stuff, I only resell it\" is exactly the target of the rule.",
+        "Does your AI system generate content or decisions aimed at the consumer? Product descriptions, dynamic pricing, support replies, recommendations. If so, the AI Act's transparency obligations switch on and — when the generated content is misleading or dangerous — so do the Italian Consumer Code and product safety rules.",
+        "Is the person operating the system an employee or an outside contractor? It changes who is exposed, and on what grounds, when something goes wrong."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The result is not a legal opinion. It is an honest list of the regimes that apply to you — and for our three SRLs it is different:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "SRL A (B2C, healthcare, sensitive data): the PLD in full, the GDPR with a reinforced impact assessment, the AI Act probably at high risk, healthcare sector rules. A long list.",
+        "SRL B (B2B, non-regulated, business data): mainly contractual exposure (the Italian Civil Code), the GDPR on the personal data that passes through anyway, the AI Act in the transparency-only tier. No NIS2, no sector rules. A short list.",
+        "SRL C (B2C, dropshipping, non-EU product): the PLD as a distributor — with the obligation to be able to identify the EU operator upstream, or be liable in its own right; product safety and the Consumer Code for the claims; the AI Act for the generated content; the GDPR on customer data. No regulated sector, but a supply chain that is itself a regime. A medium-length list, but of a different shape: the risk is not in what it builds, it is in what it resells and in what the AI states on its behalf."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Three projects, three lists, three shapes of risk. Discerning first means not paying for what you do not need (B would have wasted budget applying healthcare rules to itself), not discovering too late what you did need (A would have thrown away its defensibility by skipping the impact assessment), and not ignoring an exposure you did not know you had (C was convinced it was not liable for the product: it was wrong)."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "2. The collision: rules do not exclude each other, they add up"
+    },
+    {
+      "type": "p",
+      "text": "Here comes the part that almost nobody manages, and that makes projects fail. Once you have discerned the regimes that apply to you, you find that they do not divide the ground between them: they overlap. They are cumulative, not alternatives."
+    },
+    {
+      "type": "p",
+      "text": "Take SRL A and a single event — a defect in the system that causes harm to a patient. The same fact triggers several rules at once, each with its own logic, its own defendant and its own clock."
+    },
+    {
+      "type": "p",
+      "text": "One fact, four grounds of liability, four possible defendants, four clocks. And here is the point that changes the way you work: the same technical defect — no traceability, no check on where the data runs — simultaneously proves defectiveness under the PLD and inadequate measures under the GDPR. One breach, two convictions."
+    },
+    {
+      "type": "p",
+      "text": "But it also works the other way round, and that is the project's lever: a single deliverable, done well, can close your flank under several rules at once. Reconstructable traceability defends you under the PLD and under the GDPR. Documented vulnerability management is diligence for the GDPR and a security requirement for NIS2. Managing the collision does not mean multiplying the work by the number of rules: it means knowing which deliverables sit at the intersection and count double. Whoever does not see the layering does the same work four times, or forgets a piece of it. Whoever sees it uses it to save."
+    },
+    {
+      "type": "p",
+      "text": "For SRL B the same collision is subtler: fewer overlapping regimes, but the point does not change — even two layers that touch (contract + GDPR) must be managed together, not in separate compartments. The difference is one of scale, not of logic."
+    },
+    {
+      "type": "p",
+      "text": "For SRL C the collision changes shape, and it is the most instructive. Imagine the AI generates a description for a product that promises a property the product does not have — and a customer gets hurt relying on that promise. In one stroke: the PLD, because the product placed on the market is defective and the reachable EU operator is you (the Chinese manufacturer cannot be traced, and the clock for identifying it has run out); the Consumer Code, because the claim is a misleading commercial practice; the AI Act, because the AI-generated content should have been flagged as such; the GDPR, if in the meantime the customer's data was processed without an adequate legal basis. Four layers on a product C never touched, triggered by a sentence the machine wrote. Here the collision is not \"many rules on the same technical defect\": it is \"one weak link in the chain — the AI speaking on your behalf — that opens several fronts at once\". Whoever runs C without seeing this shape builds an e-commerce business that works and that, at the first wrong claim, has nobody upstream to pass the liability on to."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "3. The catalogue: where the collision is already mapped"
+    },
+    {
+      "type": "p",
+      "text": "This discernment — which regimes, which deliverables, which sit at the intersection — is not redone by hand for every project. But before it was a problem of volume, the problem was a different one, and it is worth telling, because that is where the catalogue was born."
+    },
+    {
+      "type": "p",
+      "text": "The Compliance-Epistemic Project Framework (CEPF) was not born as a catalogue. It was born from a conflict."
+    },
+    {
+      "type": "p",
+      "text": "It is the conflict anyone who plans projects knows: PERT estimation and compliance do not talk to each other. PERT treats every activity as estimable and, under budget or time pressure, compressible or cuttable. But compliance deliverables are not compressible: they are a floor. Treating them as ordinary tasks means, sooner or later, cutting them to make the schedule work — and finding out too late that you have cut precisely what defends you."
+    },
+    {
+      "type": "p",
+      "text": "To get out of it I built a working methodology, a framework — the same one I presented before this series on the PLD, and which I call CEPF. The idea is to separate what is negotiable from what is not. Compliance does not enter the PERT as one item among others, but as a constraint: a pre-populated floor that the plan must respect before the features are even estimated. PERT goes back to doing its job on everything else; the floor stays a floor, and nobody cuts it at three in the morning to deliver on time."
+    },
+    {
+      "type": "p",
+      "text": "CEPF is the mature form of that framework: nineteen regulatory frameworks, 247 requirements, 695 document templates (CEPF v7, July 2026 snapshot), already mapped and — above all — already cross-referenced, so that the catalogue knows which deliverables serve several regimes at once. And each of the regimes requires you to know it well enough not to leave gaps: that is why, by hand, it does not scale."
+    },
+    {
+      "type": "p",
+      "text": "It takes the form of a matrix: deliverables in the rows, regimes in the columns, and in each cell whether that deliverable is mandatory or recommended for that regime."
+    },
+    {
+      "type": "p",
+      "text": "Given a company's specific context — discerned in move 1 — the catalogue tells it which rows it really needs, which it can ignore, and which cover several columns at once. For SRL A it returns most of the rows and almost all the columns; for SRL B a few rows, two columns; for SRL C rows that A and B have never seen — identification of the upstream operator, supply-chain traceability, labelling of AI-generated content. It is the same catalogue changing shape to fit the case."
+    },
+    {
+      "type": "p",
+      "text": "It is not a tool to buy: it is the compliance backbone that turns \"I know nineteen frameworks\" from the knowledge of a few into a repeatable method. The same query that by hand is a month of specialist work — because you have to know every regime to know which rows to switch on — becomes a single session."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "4. From catalogue to project: management, not theory"
+    },
+    {
+      "type": "p",
+      "text": "A catalogue, on its own, is a list. It becomes valuable when it turns into a project plan with timings, dependencies and responsibilities. This is where compliance stops being a box-ticking obligation and becomes management."
+    },
+    {
+      "type": "p",
+      "text": "The plan grows out of the deliverables you have discerned:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The compliance floor. The deliverables your regimes make mandatory are not optional and are not negotiated at the end of the project: they are the floor of the plan, pre-populated before the features are even estimated. You know, from day one, the minimum below which you cannot go.",
+        "The estimate. Every compliance deliverable has its own effort. Put into the plan from the start, it tells you early what defensibility costs — and lets you price it into the project instead of suffering it as a surprise. A project that discovers compliance at the end pays three times as much, and late.",
+        "Dependencies and gates. Some deliverables block others: you do not design traceability after building the system, you design it first. The plan has gates that cannot be crossed until the deliverable guarding them is closed — the regime map before the design, the defensible design before the build, the defence dossier and the insurance cover before go-live, the substantial-modification protocol before operation.",
+        "The date that starts the clock. Going into production must be treated as a formal act: it is the certain date from which liability runs — up to ten years in B2C. And every substantial modification afterwards can restart it: in the plan it is a gate, not an addendum."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The result is a project in which defensibility is estimated, planned and tracked like any other part of the work. Not a binder someone fills in the night before the audit."
+    },
+    {
+      "type": "p",
+      "text": "In practice, the plan runs through five gates. Each has an artefact it produces and a criterion that cannot be passed until the artefact is closed. And each weighs differently for the three SRLs."
+    },
+    {
+      "type": "p",
+      "text": "Gate 1 — Scoping. Artefact: a regimes-and-risk sheet and a who-signs matrix. Criterion: not a line of code is written until every decision of the system has a name next to it. For A this is the densest phase (healthcare, high risk); for B it closes in half a day; for C this is where the point emerges that saves it or sinks it — who the EU operator upstream of each product is, and what the system does if it cannot find one."
+    },
+    {
+      "type": "p",
+      "text": "Gate 2 — Defensible design. Artefact: a data impact assessment, a documented choice of data residency and compute location, a map of decisions and human approval, a traceability specification. Criterion: only what has passed this gate gets built. For A, the residency of health data is binding; for B it is prudence; for C the map of \"what the AI writes to the customer, and who approves it before it goes online\" is the central safeguard."
+    },
+    {
+      "type": "p",
+      "text": "Gate 3 — Build. Artefact: a bill of materials, a vulnerability-interception mechanism, versioning, test evidence. Criterion: traceability must actually work, not just be specified. Here the tool does not matter: it is the difference between \"done\" and \"done defensibly\", and it is decided by the trail, not by the tool."
+    },
+    {
+      "type": "p",
+      "text": "Gate 4 — Go-live. Artefact: the defence dossier (all the deliverables gathered together), a certain go-live date, the signature of whoever attests to defensibility, the contractual perimeter and — where the regimes require it — active insurance cover. Criterion: nothing goes into production without a signature and a date. The date starts the liability clock, for up to ten years; treating it like any other deploy is the first mistake."
+    },
+    {
+      "type": "p",
+      "text": "Gate 5 — Operation and continuity. Artefact: a living register of maintenance and changes, a substantial-modification protocol, a continuity plan. Criterion: every relevant change reopens gate 2, because it can restart liability. And the continuity plan must have been tested, not just written: what happens if the supplier or the model you rely on is switched off overnight."
+    },
+    {
+      "type": "p",
+      "text": "Every gate is populated by the catalogue: the mandatory deliverables for the regimes you have discerned are already there, each with its effort. That is what turns compliance into project management rather than box-ticking."
+    },
+    {
+      "type": "p",
+      "text": "Every item in the plan has an indicative effort band (S, M, L) and the list of regimes it covers, and the latter is the key: in SRL C's plan the audit trail has effort L, but it covers three regimes at once — it is the deliverable with the highest return in the plan."
+    },
+    {
+      "type": "p",
+      "text": "Read this way, compliance is not a cost you discover at the end: it is a set of items with an effort, a gate and a yield across several regimes. You know early how much it weighs, you price it, and you choose the order. SRL A's plan is richer than SRL C's, SRL B's much leaner — but the logic is identical: defensibility is estimated, planned and tracked like any other part of the work, not a binder filled in the night before the audit."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Why grabbing \"any old agent\" is the mistake that costs dearly"
+    },
+    {
+      "type": "p",
+      "text": "Back to where we started. The agentic tools everyone recommends to you are not bad: they are agnostic about compliance. They embed none of the nineteen frameworks above — not the PLD, not the GDPR, not the AI Act. They do not know what a defensible audit trail is, they do not ask where the data lives, they do not make you sign anything. And almost all of them run inference and data on infrastructure under foreign jurisdiction, where yours does not reach: residency you do not control, and a switch that can be turned off from outside."
+    },
+    {
+      "type": "p",
+      "text": "The mistake is not \"the tool is wrong\". The mistake is buying it instead of the method rather than inside the method. It gives you speed on a system that works and that, at the first sign of trouble, has none of the gates that defend you. For SRL A it is health data leaving the EU without anyone having decided it. For SRL C it is an AI-generated claim, on a product you did not make, that opens four fronts at once. For all of them it is the same thing: you have paid to go faster towards the wall."
+    },
+    {
+      "type": "p",
+      "text": "The tool is not the level of the problem. The level of the problem is the project."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The difference, in one line"
+    },
+    {
+      "type": "p",
+      "text": "Discern the regimes, see where they collide, map them in a catalogue and turn them into an estimated plan: this tells you what must be true for the system to hold — whether you are SRL A, B or C. The three lists are different, the three shapes of collision are different, the three plans are different: the method is the same. The tool, whatever it is, lives inside this method — not in its place. Building the infrastructure that makes all of this true in production — the data where it must be, every decision reconstructable, continuity even if a supplier is switched off — is the next chapter. I tackle it in the next piece."
+    },
+    {
+      "type": "p",
+      "text": "Note. The PLD 2024 has not yet been transposed in Italy (deadline: 9 December 2026): I am describing the structure of risk that the rules lay out, not existing case law. I am not a lawyer — I bring the architecture of the problem and of the project; qualifying the specific case is a job for a lawyer, and the cover a job for a broker."
+    },
+    {
+      "type": "p",
+      "text": "If you want to know which regimes really apply to your next project, where they collide and which deliverables you are missing, that is exactly where the work starts. Write to me."
+    }
+  ]
+}

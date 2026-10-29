@@ -258,7 +258,7 @@ export function Footer() {
               Modernizzazione sistemi legacy
             </Link>
             <Link href="/it/ricerca/serie-editoriale" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
-              Serie PLD 2024 — sei articoli
+              Serie PLD 2024 — dieci articoli
             </Link>
             <Link href="/cra-11-settembre" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
               CRA: segnalazione in 24 ore

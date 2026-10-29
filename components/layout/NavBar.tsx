@@ -135,7 +135,7 @@ const EN_NAV: NavLink[] = [
       {
         label: "Editorial series — PLD 2024",
         href: "/research/editorial-series",
-        desc: "Six articles on the product liability directive",
+        desc: "Ten articles on the product liability directive and AI governance",
       },
       {
         label: "Law 132/2025 and AI in healthcare",
@@ -270,7 +270,7 @@ const IT_NAV: NavLink[] = [
       {
         label: "Serie editoriale — PLD 2024",
         href: "/it/ricerca/serie-editoriale",
-        desc: "Sei articoli sulla direttiva sulla responsabilità da prodotto",
+        desc: "Dieci articoli sulla responsabilità da prodotto e la governance dell’AI",
       },
       {
         label: "Legge 132/2025 e AI in sanità",

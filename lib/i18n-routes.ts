@@ -79,6 +79,10 @@ export const ROUTE_PAIRS: Record<string, string> = {
   "/research/pld-2024-jurisdictional-escape": "/it/ricerca/pld-2024-fuga-giurisdizionale",
   "/research/pld-2024-seven-structural-changes": "/it/ricerca/pld-2024-sette-cambi-strutturali",
   "/research/pld-2024-vulnerability-management": "/it/ricerca/pld-2024-vulnerability-management-cve",
+  "/research/pld-2024-the-other-half-of-the-problem": "/it/ricerca/pld-2024-altra-meta-del-problema",
+  "/research/pld-2024-so-what-now": "/it/ricerca/pld-2024-e-mo",
+  "/research/pld-2024-what-to-do-on-monday-morning": "/it/ricerca/pld-2024-cosa-faccio-lunedi-mattina",
+  "/research/pld-2024-digital-sovereignty-architecture": "/it/ricerca/pld-2024-sovranita-digitale-architettura",
 
   // Pages written in Italian first; the English is the counterpart
   "/ai-agents-finance": "/it/ai-agenti-finanziari",

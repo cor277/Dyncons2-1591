@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 /**
- * The six articles were written in Italian for LinkedIn and imported in full
+ * The ten articles were written in Italian for LinkedIn and imported in full
  * (scripts/import-linkedin-articles.mjs). The Italian originals are served at
  * /it/ricerca/<slug>; this page lists the English translations, served at
  * /research/<slug>. The short framing of each piece is kept here, keyed by the
@@ -61,13 +61,37 @@ const framing: Record<string, { category: string; title: string; subtitle: strin
     category: "Article V · International configurations",
     title: "Jurisdictional flight, and why it does not exist",
     subtitle:
-      "Brussels I bis, Rome II, corporate veil piercing, and criminal liability under Article 27 of the Italian Constitution.",
+      "Brussels I bis, Rome II, corporate veil piercing, Italian criminal jurisdiction (Arts. 6-10 of the Criminal Code) and personal criminal liability (Art. 27 of the Constitution).",
   },
   "pld-2024-contracts-and-insurance": {
     category: "Article VI · Contracts & insurance",
     title: "Twenty clauses and the policy, seen from three sides",
     subtitle:
       "Client, software house, signing professional: contracts and insurance cover in asymmetric power dynamics.",
+  },
+  "pld-2024-the-other-half-of-the-problem": {
+    category: "Article VII · Governance and roles",
+    title: "The other half of the problem",
+    subtitle:
+      "The RACI matrix as a governance fiction unless it is tied to technical systems, three operational transformations, and the senior solution architect's position under PLD 2024.",
+  },
+  "pld-2024-so-what-now": {
+    category: "Article VIII · From diagnosis to action",
+    title: "So what now?",
+    subtitle:
+      "Four moves for the months before 9 December 2026: audit the products in scope, review the contracts, check the insurance, build an audit trail that holds up as evidence.",
+  },
+  "pld-2024-what-to-do-on-monday-morning": {
+    category: "Article IX · The method",
+    title: "What to do on Monday morning",
+    subtitle:
+      "Which rules actually apply, where they collide, and how a compliance floor turns into a project plan — shown on three hypothetical companies.",
+  },
+  "pld-2024-digital-sovereignty-architecture": {
+    category: "Article X · Sovereign infrastructure",
+    title: "Digital sovereignty: not a slogan, an architecture",
+    subtitle:
+      "Residency, jurisdiction and continuity are three different things, and the five requirements an infrastructure has to meet to keep a regulated AI system defensible in production.",
   },
 };
 
@@ -160,7 +184,7 @@ export default function EditorialSeriesPage() {
           </div>
 
           <p className="mt-12 text-[#7D8FA3] text-sm leading-relaxed max-w-2xl">
-            The six articles were written in Italian and first appeared on LinkedIn. They are
+            The ten articles were written in Italian and first appeared on LinkedIn. They are
             published here in full in English translation; each one links back to its LinkedIn
             source and to the Italian original, which is also hosted on this site in the{" "}
             <Link href="/it/ricerca/serie-editoriale" className="text-[#00B4D8] hover:text-[#E6EDF3]">

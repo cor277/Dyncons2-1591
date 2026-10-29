@@ -303,7 +303,7 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
         href: "/it/ricerca/serie-editoriale",
         title: "Serie editoriale — PLD 2024",
         blurb:
-          "Sei articoli sulla direttiva sulla responsabilità da prodotto 2024 per software house e professionisti tecnici.",
+          "Dieci articoli sulla direttiva sulla responsabilità da prodotto 2024 e sulla governance dell’AI, per software house e professionisti tecnici.",
       },
       {
         href: "/cra-11-settembre",

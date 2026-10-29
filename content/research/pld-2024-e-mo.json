@@ -1,0 +1,190 @@
+{
+  "slug": "pld-2024-e-mo",
+  "lang": "it",
+  "title": "E mò?",
+  "standfirst": "Dalla diagnosi all'azione: cosa fa concretamente una software house in regulated/b2c nei mesi prima del 9 dicembre 2026. Articolo VIII della serie sulla Direttiva UE 2024/2853 (Product Liability Directive 2024), operativa dal 9 dicembre 2026.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-06-16T09:15:17.000+00:00",
+  "dateModified": "2026-06-16T09:15:26.000+00:00",
+  "series": "Article VIII · From diagnosis to action",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/e-m%C3%B2-corrado-patierno-9fmof"
+  },
+  "importedAt": "2026-10-29",
+  "words": 2507,
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Dalla diagnosi all'azione: cosa fa concretamente una software house in regulated/b2c nei mesi prima del 9 dicembre 2026."
+    },
+    {
+      "type": "p",
+      "text": "Articolo VIII della serie sulla Direttiva UE 2024/2853 (Product Liability Directive 2024), operativa dal 9 dicembre 2026. Pensato per CEO, CTO, Direzioni Compliance e Solution Architect senior delle software house italiane attive in regulated industries."
+    },
+    {
+      "type": "p",
+      "text": "Nota epistemica: i sette articoli precedenti hanno mappato il problema. Questo lo gira. Da qui in avanti si parla di cosa si fa. Quanto segue è uno scheletro operativo, non consulenza legale: ogni passaggio va validato con un legale IT qualificato e con il vostro broker assicurativo. I riferimenti normativi sono verificati; le scelte operative sono indicazioni di metodo, non garanzie di esito."
+    },
+    {
+      "type": "p",
+      "text": "Tre settimane fa ho avuto, a distanza di pochi giorni, la stessa conversazione con due Direttori Generali di altrettante aziende mid-market in settori regolati. Persone serie, con responsabilità reali, che governano organizzazioni da centinaia di persone. Nessuno dei due aveva mappato il regime PLD 2024. E quando ho finito di spiegarne la portata, entrambi hanno reagito con la stessa identica frase, a poche ore di distanza l'uno dall'altro: \"Non ho tempo, non ho voglia di diventare un esperto di questa roba. Dimmi solo cosa devo fare.\""
+    },
+    {
+      "type": "p",
+      "text": "È la stessa domanda che mi era arrivata qualche settimana prima da un CTO, dopo aver letto i primi sei articoli di questa serie. Tre parole: \"Tutto chiaro. E mò?\""
+    },
+    {
+      "type": "p",
+      "text": "È la domanda giusta. Ed è il motivo per cui questo articolo esiste. La diagnosi, nei sette pezzi precedenti, è completa: chi è esposto, a cosa, con quali presunzioni a sfavore, con quali clausole, con quali coperture. Ma la diagnosi senza prescrizione è un peso, non un servizio. Chi legge non vuole diventare giurista. Vuole sapere cosa fare lunedì mattina. Questo pezzo risponde a quello, e niente di più."
+    },
+    {
+      "type": "p",
+      "text": "Una premessa, però, sul perché adesso. Perché la tentazione, davanti a una direttiva operativa fra sei mesi, è rinviare. E questa settimana ha reso il rinvio molto più costoso."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "I. Perché adesso, e non a novembre"
+    },
+    {
+      "type": "p",
+      "text": "Venerdì 12 giugno, alle 23:21 ora italiana, il Dipartimento del Commercio degli Stati Uniti ha imposto un controllo all'esportazione sui modelli di frontiera Fable 5 e Mythos 5 di Anthropic. Per garantire conformità, il fornitore li ha disabilitati per tutti i clienti nel mondo — americani inclusi — in poche ore. È la prima volta che un modello già in distribuzione pubblica viene spento su ordine di un governo. Non un guasto, non una scelta commerciale: un ordine eseguito. E un precedente — perché ciò che oggi colpisce un modello, domani può colpire una categoria."
+    },
+    {
+      "type": "p",
+      "text": "Quell'episodio non riguarda la PLD. Riguarda un regime diverso — sovranità e continuità operativa — e mi raccomando di non confonderli: sono cumulativi, non alternativi, ed è un errore ricorrente trattarli come la stessa cosa. Ma le due vicende, quella della sovranità e quella della responsabilità da prodotto, sono le due facce della stessa trasformazione di fondo: il controllo e la responsabilità di ciò che costruite sopra tecnologia di terzi stanno migrando verso di voi, e più velocemente di quanto il calendario lasci credere."
+    },
+    {
+      "type": "p",
+      "text": "Sul fronte responsabilità, i tribunali si stanno già muovendo, in anticipo sull'entrata in vigore della direttiva. Il 28 maggio il Landgericht di Monaco I, con un provvedimento d'urgenza (26 O 869/26), ha qualificato Google come responsabile diretto dei propri AI Overviews — non intermediario neutrale, ma autore del contenuto generato. È responsabilità civile generale, non ancora PLD, ma anticipa esattamente la logica che la direttiva renderà sistematica fra sei mesi: chi mette in circolazione l'output di un sistema ne risponde. La giurisprudenza non aspetta il 9 dicembre. Si sta formando ora."
+    },
+    {
+      "type": "p",
+      "text": "A questo si aggiunge una ragione strutturale, già anticipata nell'Articolo VII. Le trasformazioni che servono — governance documentale, audit trail tecnico, separazione del perimetro firmato — non si fanno in settimane. Per una software house di 50-200 persone richiedono 6-12 mesi se affrontate in modo organico, multipli del tempo e del costo se affrontate in emergenza dopo il primo contenzioso. Sei mesi, da qui a dicembre, non sono un margine comodo. Sono il tempo minimo per arrivare preparati, e solo se si comincia adesso."
+    },
+    {
+      "type": "p",
+      "text": "Detto in modo brutale: la finestra per muoversi con metodo, anziché in panico, è aperta ora e si chiude da sola. Chi parte a novembre non sta scegliendo di farlo \"più avanti\". Sta scegliendo di arrivare dopo."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "II. I quattro movimenti operativi dei prossimi 90 giorni"
+    },
+    {
+      "type": "p",
+      "text": "Per chi vuole una risposta concreta alla domanda \"cosa devo fare\", la riduco a quattro movimenti. Non sono esaustivi, ma sono prioritari e sequenziali: ognuno abilita il successivo. Sono anche la stessa checklist che uso quando un Direttore mi pone esattamente quella domanda, e che da qui in avanti ricorrerà in modo consistente nei miei contenuti, perché è il riferimento minimo difendibile."
+    },
+    {
+      "type": "p",
+      "text": "Primo movimento — Audit dei prodotti soggetti a PLD 2024"
+    },
+    {
+      "type": "p",
+      "text": "Prima di qualsiasi azione difensiva, serve sapere cosa è esposto. Sembra ovvio. Non lo è: la maggior parte delle software house non ha una mappa aggiornata di quali propri prodotti, moduli, componenti e sistemi di AI ricadono nel perimetro della direttiva. La PLD 2024 estende la nozione di prodotto al software e ai sistemi di AI in modo esplicito, e, ai sensi dell'articolo 8, rende responsabile accanto al fabbricante del prodotto anche il fabbricante del componente difettoso che lo ha reso difettoso. Questo significa che anche un componente fornito a una software house terza, un modulo white-label, un sistema integrato in un prodotto altrui, può esporvi."
+    },
+    {
+      "type": "p",
+      "text": "L'audit del primo movimento risponde a tre domande per ciascun prodotto: rientra nel perimetro PLD? In quale ruolo lo immettete — fabbricante del prodotto finito, fabbricante di un componente, integratore? Quali aggiornamenti e quali sistemi di AI ne fanno parte, considerando che la direttiva copre anche gli update e la mancata fornitura di patch di sicurezza?"
+    },
+    {
+      "type": "p",
+      "text": "Esempio strutturale, dei più frequenti. Una software house sviluppa un modulo di AI a supporto decisionale — un motore di triage, un classificatore, un sistema di scoring — e lo fornisce white-label a un secondo vendor, che lo integra nel proprio prodotto finito e lo vende a una struttura sanitaria. La software house a monte ragiona così: \"io fornisco un componente, la responsabilità è dell'integratore\". È esattamente la trappola dell'articolo 8. Se quel modulo è il componente difettoso che ha reso difettoso il prodotto e provocato il danno, la software house a monte risponde come fabbricante del componente (articolo 8, paragrafo 1, lettera b), direttamente verso il danneggiato finale, in solido ex articolo 12 — a prescindere da chi gli abbia venduto cosa. \"Sono solo un componente\" non è una difesa: nel nuovo regime è una descrizione esatta di chi paga."
+    },
+    {
+      "type": "p",
+      "text": "Test rapido da fare questa settimana: chiedete al vostro team tecnico l'elenco dei prodotti immessi sul mercato negli ultimi tre anni e provate a marcarli con il ruolo PLD corrispondente. Se nessuno in azienda sa rispondere senza una riunione di due ore, l'audit non è mai stato fatto, e tutto ciò che segue poggia sul vuoto."
+    },
+    {
+      "type": "p",
+      "text": "Secondo movimento — Revisione delle clausole contrattuali"
+    },
+    {
+      "type": "p",
+      "text": "Mappato il perimetro, si guardano i contratti. L'Articolo VI ha trattato in dettaglio le venti clausole e ha smontato la \"scorciatoia B2B che non funziona\": l'idea, diffusa e sbagliata, che basti scrivere \"il rischio è del cliente\" per trasferire la responsabilità. Non funziona, perché la PLD protegge il danneggiato finale e la ripartizione interna tra fornitori non lo vincola; e perché il regime di solidarietà dell'articolo 12 fa sì che il danneggiato possa rivolgersi a chiunque nella catena, salvo poi il regresso."
+    },
+    {
+      "type": "p",
+      "text": "La revisione del secondo movimento non riscrive i contratti da sola — è lavoro da legale IT — ma prepara il terreno: identifica i contratti attivi che espongono in modo asimmetrico, separa il perimetro effettivamente firmato dai professionisti tecnici da quello eseguito sotto istruzione, e introduce le clausole di ripartizione, manleva e regresso che il nuovo regime rende necessarie. Test rapido: prendete il vostro contratto-tipo di fornitura e cercate la parola \"difetto\" e la parola \"aggiornamento\". Se non compaiono, o compaiono solo in formule di esclusione generiche, il contratto è scritto per un regime di responsabilità che il 9 dicembre cessa di esistere."
+    },
+    {
+      "type": "p",
+      "text": "Terzo movimento — Verifica dell'adeguatezza assicurativa"
+    },
+    {
+      "type": "p",
+      "text": "Quasi nessuna polizza RC professionale di base, oggi, copre adeguatamente gli scenari PLD. È il punto trattato nell'Articolo VI: serve una Tech E&O con estensione prodotto, massimali coerenti, retroattività piena, postuma adeguata al periodo decennale dell'articolo 17, e — per i professionisti firmatari — copertura dei rischi individuali che le polizze tradizionali escludono. Molte aziende scoprono, leggendo le esclusioni, che la polizza che credevano protettiva esclude proprio l'esposizione di tipo PLD."
+    },
+    {
+      "type": "p",
+      "text": "Il terzo movimento è una verifica, da fare con un broker tier-1 — Marsh, Aon, WTW hanno le competenze e le facility per profilare correttamente questo rischio — non con il rinnovo automatico della polizza esistente. Test rapido: chiedete al vostro broker, per iscritto, se la vostra copertura attuale risponde a un danno alla persona causato da un difetto del vostro software ai sensi della Direttiva 2024/2853. Se la risposta è esitante, o se vi rimandano alle condizioni generali, la copertura non è profilata per il nuovo regime."
+    },
+    {
+      "type": "p",
+      "text": "Quarto movimento — Audit trail tecnico difendibile probatoriamente"
+    },
+    {
+      "type": "p",
+      "text": "È il movimento più tecnico e il più trascurato, ed è quello che regge tutti gli altri. In un contenzioso PLD, con l'inversione dell'onere probatorio e le presunzioni di difettosità dell'articolo 10, e con la disclosure obbligatoria delle evidenze ex articolo 9, la differenza tra un'organizzazione che si difende e una che soccombe non è la qualità delle slide: è la capacità di ricostruire, dai sistemi, chi ha deciso cosa, quando, con quale alternativa, con quale dissenso documentato."
+    },
+    {
+      "type": "p",
+      "text": "Come ho dettagliato nell'Articolo VII, la distinzione non è tra \"abbiamo log\" e \"non abbiamo log\" — quasi tutti hanno qualche log. È tra log attribuibili e non manipolabili e log generici: un pipeline lanciato da una service account condivisa da otto persone non vale come prova; lo stesso evento con identità verificata, MFA, timestamp firmato crittograficamente, sì. Test rapido: prendete una decisione tecnica rilevante di sei mesi fa e provate a ricostruirla dai sistemi. Se servono ore di interviste a chi \"ricorda vagamente\", l'audit trail non esiste ancora, e va costruito — sapendo che retrofittare attribuibilità su sistemi esistenti costa più che progettarla."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "III. Oltre la checklist: i due pilastri"
+    },
+    {
+      "type": "p",
+      "text": "I quattro movimenti sono la risposta minima. Ma chi li affronta sul serio si scontra subito con un problema di scala: farli a mano, prodotto per prodotto, normativa per normativa, è insostenibile per un'organizzazione che non ha la capacità di sviluppo di un grande gruppo enterprise. E la PLD non arriva da sola: si sovrappone — cumulativamente, non in alternativa — ad AI Act, GDPR, NIS2, Cyber Resilience Act, e agli standard verticali di settore. Mappare tutto questo a mano, e tradurlo in evidenze tecniche, è il punto dove la maggior parte delle buone intenzioni si arena."
+    },
+    {
+      "type": "p",
+      "text": "Da qui in avanti la serie smette di essere solo diagnostica e nomina, per la prima volta in modo esplicito, i due pilastri che — sul campo, in deployment regulated reali — ho verificato funzionare. Non sono soluzioni magiche, non sono l'unico modo possibile, e non li presento come tali. Sono il modo che ho costruito e che uso."
+    },
+    {
+      "type": "p",
+      "text": "Il primo pilastro è il Compliance-Epistemic Project Framework (CEPF). E la prima cosa da dire è cosa non è: non è l'ennesimo framework da aggiungere alla pila. Di framework, chi opera in regulated ne ha già fin troppi — PLD, AI Act, GDPR, NIS2, Cyber Resilience Act, ISO, standard verticali di settore. Il problema non è la mancanza di framework: è che si sovrappongono, in parte si contraddicono, in parte chiedono le stesse evidenze con nomi diversi, e nessuno tiene la mappa unificata. CEPF è il sistema che mette ordine in quella pila: un livello di orchestrazione che prende i framework che siete già obbligati a seguire, ne risolve le sovrapposizioni, e li traduce in un unico insieme di deliverable di evidenza non duplicati. Risponde così al problema di scala dei movimenti uno e due — invece di rifare la compliance normativa per normativa e prodotto per prodotto, la rende processo ripetibile anziché cantiere infinito. Lo apro nel dettaglio nel prossimo articolo."
+    },
+    {
+      "type": "p",
+      "text": "Il secondo pilastro è Nexus MDS Core, un'infrastruttura tecnica sovrana, installata nel perimetro del cliente e sotto il suo controllo. Anche qui una precisazione che conta: non è un prototipo né una promessa da slide. È una piattaforma già in produzione, come AI sovrana in produzione, presso Federfarma Lombarda — un contesto regolato ad alta criticità, dove gira, viene usata e regge un carico reale. Risponde al problema del quarto movimento — l'audit trail attribuibile e non manipolabile — e, non secondariamente, al problema di sovranità che l'episodio Fable 5 ha reso concreto questa settimana: un'infrastruttura in cui indicizzazione, retrieval, identità e audit restano sotto il vostro controllo, la generazione gira su un modello locale o su un endpoint UE sostituibile, e i cui dati di evidenza non dipendono dall'autorizzazione continuativa di un terzo. Lo tratto nell'articolo successivo."
+    },
+    {
+      "type": "p",
+      "text": "Li nomino qui, ma non li sviluppo: ognuno merita il suo pezzo, e li avrà. Il punto di questo articolo è un altro: che la checklist dei quattro movimenti è fattibile, e che esistono strumenti — il mio, e altri — per renderla sostenibile invece che paralizzante."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "IV. Chiusura"
+    },
+    {
+      "type": "p",
+      "text": "Torno alla domanda da cui siamo partiti, quella dei due Direttori e del CTO: \"E mò?\""
+    },
+    {
+      "type": "p",
+      "text": "La risposta onesta è che non c'è una scorciatoia, ma c'è una sequenza. Mappare cosa è esposto. Sistemare i contratti. Profilare la polizza con un broker che sappia cosa sta facendo. Costruire un audit trail che regga in giudizio. Quattro movimenti, nei prossimi 90 giorni, prima che la finestra di vantaggio si chiuda da sola. E, per chi vuole farlo a scala, due pilastri — metodo e infrastruttura — che i prossimi due articoli aprono nel dettaglio."
+    },
+    {
+      "type": "p",
+      "text": "C'è una cosa che ho ripetuto in privato a entrambi i Direttori, e che vale la pena fissare qui. Questo non è solo un problema da cui difendersi. Per chi si muove adesso, è la più grande occasione di riposizionamento di valore degli ultimi anni: nel mercato che si forma dopo il 9 dicembre, chi resta commodity — ore di sviluppo, nessuna tracciabilità, nessuna copertura profilata — diventa non assicurabile, e quindi non ingaggiabile dai clienti regolati. Chi rende la propria accountability dimostrabile smette di vendere ore e comincia a vendere software difendibile probatoriamente. La compliance, fatta con metodo, smette di essere un costo e diventa potere di prezzo."
+    },
+    {
+      "type": "p",
+      "text": "Se siete una software house in regulated e a una di queste quattro domande — cosa è esposto, come stanno i contratti, com'è la polizza, regge l'audit trail — non sapete rispondere, quel vuoto è esattamente ciò su cui lavoro. Scrivetemi in privato: nei prossimi mesi questa è la conversazione che conta."
+    },
+    {
+      "type": "p",
+      "text": "Il prossimo articolo apre il primo pilastro: CEPF, e come si mappa la compliance multi-normativa senza affogarci dentro."
+    },
+    {
+      "type": "p",
+      "text": "La diagnosi è finita. Da qui, si lavora."
+    }
+  ]
+}

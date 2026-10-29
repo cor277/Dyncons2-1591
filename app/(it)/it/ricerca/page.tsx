@@ -112,7 +112,7 @@ export default function RicercaPage() {
                 Una serie pubblica, in corso, sulle implicazioni strutturali del nuovo regime
                 normativo europeo — direttiva sulla responsabilità da prodotto 2024, AI Act, Tech
                 Sovereignty Package — per le software house e i professionisti tecnici nei settori
-                regolamentati. Sei articoli, pubblicati qui per intero.
+                regolamentati. Dieci articoli, pubblicati qui per intero.
               </p>
               <span className="mt-4 inline-flex items-center text-sm font-semibold text-[#00B4D8]">
                 Vedi tutti gli articoli →

@@ -291,7 +291,7 @@ export default async function ArticoloImportatoPage({
                 >
                   L’intera serie
                 </Link>
-                <span className="text-[#7D8FA3]"> — sei articoli sulla PLD 2024, in ordine.</span>
+                <span className="text-[#7D8FA3]"> — dieci articoli sulla PLD 2024 e la governance dell’AI, in ordine.</span>
               </li>
               <li>
                 <Link href="/it/assessment" className="text-[#00B4D8] hover:text-[#E6EDF3]">

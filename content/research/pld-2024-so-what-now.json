@@ -1,0 +1,191 @@
+{
+  "slug": "pld-2024-so-what-now",
+  "lang": "en",
+  "translationOf": "pld-2024-e-mo",
+  "title": "So what now?",
+  "standfirst": "From diagnosis to action: what a software house in regulated/B2C sectors actually does in the months before 9 December 2026. Article VIII of the series on EU Directive 2024/2853 (Product Liability Directive 2024), applicable from 9 December 2026.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-06-16T09:15:17.000+00:00",
+  "dateModified": "2026-06-16T09:15:26.000+00:00",
+  "series": "Article VIII · From diagnosis to action",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/e-m%C3%B2-corrado-patierno-9fmof"
+  },
+  "importedAt": "2026-10-29",
+  "words": 2671,
+  "blocks": [
+    {
+      "type": "p",
+      "text": "From diagnosis to action: what a software house in regulated/B2C sectors actually does in the months before 9 December 2026."
+    },
+    {
+      "type": "p",
+      "text": "Article VIII of the series on EU Directive 2024/2853 (Product Liability Directive 2024), applicable from 9 December 2026. Written for CEOs, CTOs, Compliance Directors and senior Solution Architects at Italian software houses working in regulated industries."
+    },
+    {
+      "type": "p",
+      "text": "Epistemic note: the seven previous articles mapped the problem. This one turns it around. From here on we talk about what gets done. What follows is an operational skeleton, not legal advice: every step must be validated with a qualified IT lawyer and with your insurance broker. The regulatory references have been checked; the operational choices are indications of method, not guarantees of outcome."
+    },
+    {
+      "type": "p",
+      "text": "Three weeks ago, within a few days of each other, I had the same conversation with the managing directors of two mid-market companies in regulated sectors. Serious people, with real responsibilities, running organisations of hundreds of people. Neither had mapped the PLD 2024 regime. And when I had finished explaining its scope, both reacted with exactly the same words, a few hours apart: \"I don't have the time, and I don't want to become an expert in this stuff. Just tell me what I need to do.\""
+    },
+    {
+      "type": "p",
+      "text": "It was the same question that had reached me a few weeks earlier from a CTO, after reading the first six articles in this series. Five words: \"All clear. So what now?\""
+    },
+    {
+      "type": "p",
+      "text": "It is the right question. And it is the reason this article exists. The diagnosis, across the seven previous pieces, is complete: who is exposed, to what, with which presumptions against them, with which clauses, with which cover. But diagnosis without prescription is a burden, not a service. The reader does not want to become a lawyer. They want to know what to do on Monday morning. This piece answers that, and nothing more."
+    },
+    {
+      "type": "p",
+      "text": "One premise first, though, on why now. Because the temptation, faced with a directive that applies in six months, is to put it off. And this week has made putting it off much more expensive."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "I. Why now, and not in November"
+    },
+    {
+      "type": "p",
+      "text": "On Friday 12 June, at 23:21 Italian time, the United States Department of Commerce imposed an export control on Anthropic's frontier models Fable 5 and Mythos 5. To comply, the provider disabled them for all customers worldwide — Americans included — within a few hours. It is the first time a model already in public distribution has been switched off on a government's orders. Not an outage, not a commercial decision: an order, carried out. And a precedent — because what hits one model today can hit a whole category tomorrow."
+    },
+    {
+      "type": "p",
+      "text": "That episode does not concern the PLD. It concerns a different regime — sovereignty and operational continuity — and I urge you not to confuse them: they are cumulative, not alternatives, and treating them as the same thing is a recurring mistake. But the two stories, sovereignty and product liability, are two faces of the same underlying transformation: control over, and liability for, what you build on top of third-party technology are migrating towards you, and faster than the calendar would suggest."
+    },
+    {
+      "type": "p",
+      "text": "On the liability front, the courts are already moving, ahead of the directive's entry into application. On 28 May the Munich I Regional Court (Landgericht München I), in an urgent interim order (26 O 869/26), held Google directly liable for its own AI Overviews — not a neutral intermediary, but the author of the generated content. This is general civil liability, not yet the PLD, but it anticipates exactly the logic the directive will make systematic in six months: whoever puts the output of a system into circulation answers for it. Case law is not waiting for 9 December. It is taking shape now."
+    },
+    {
+      "type": "p",
+      "text": "On top of this there is a structural reason, already anticipated in Article VII. The transformations needed — documentary governance, technical audit trail, separation of the signed scope — cannot be done in weeks. For a software house of 50-200 people they take 6-12 months if tackled organically, and multiples of the time and cost if tackled as an emergency after the first litigation. Six months, from now to December, is not a comfortable margin. It is the minimum time to arrive prepared, and only if you start now."
+    },
+    {
+      "type": "p",
+      "text": "To put it bluntly: the window for moving with method, rather than in a panic, is open now and will close by itself. Whoever starts in November is not choosing to do it \"later on\". They are choosing to arrive too late."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "II. The four operational moves for the next 90 days"
+    },
+    {
+      "type": "p",
+      "text": "For anyone who wants a concrete answer to the question \"what do I need to do\", I boil it down to four moves. They are not exhaustive, but they are priorities, and sequential: each one enables the next. They are also the same checklist I use when a managing director asks me exactly that question, and from now on it will recur consistently in my content, because it is the minimum defensible reference."
+    },
+    {
+      "type": "p",
+      "text": "First move — Audit of the products subject to the PLD 2024"
+    },
+    {
+      "type": "p",
+      "text": "Before any defensive action, you need to know what is exposed. It sounds obvious. It is not: most software houses do not have an up-to-date map of which of their products, modules, components and AI systems fall within the scope of the directive. The PLD 2024 explicitly extends the notion of product to software and AI systems and, under Article 8, makes liable, alongside the manufacturer of the product, the manufacturer of the defective component that made the product defective. This means that even a component supplied to a third-party software house, a white-label module, a system integrated into someone else's product, can expose you."
+    },
+    {
+      "type": "p",
+      "text": "The audit in the first move answers three questions for each product: does it fall within the PLD scope? In what role do you place it on the market — manufacturer of the finished product, manufacturer of a component, integrator? Which updates and which AI systems are part of it, bearing in mind that the directive also covers updates and the failure to supply security patches?"
+    },
+    {
+      "type": "p",
+      "text": "A structural example, one of the most frequent. A software house develops an AI decision-support module — a triage engine, a classifier, a scoring system — and supplies it white-label to a second vendor, which integrates it into its own finished product and sells it to a healthcare provider. The upstream software house reasons like this: \"I supply a component, the liability lies with the integrator\". That is exactly the Article 8 trap. If that module is the defective component that made the product defective and caused the damage, the upstream software house is liable as manufacturer of the component (Article 8(1)(b)), directly towards the end injured party, jointly and severally under Article 12 — regardless of who sold what to whom. \"I'm just a component\" is not a defence: under the new regime it is an exact description of who pays."
+    },
+    {
+      "type": "p",
+      "text": "A quick test to do this week: ask your technical team for the list of products placed on the market in the last three years and try to tag each with its corresponding PLD role. If nobody in the company can answer without a two-hour meeting, the audit has never been done, and everything that follows rests on nothing."
+    },
+    {
+      "type": "p",
+      "text": "Second move — Review of contract clauses"
+    },
+    {
+      "type": "p",
+      "text": "Once the scope is mapped, you look at the contracts. Article VI covered the twenty clauses in detail and took apart the \"B2B shortcut that doesn't work\": the widespread and mistaken idea that writing \"the risk lies with the client\" is enough to transfer liability. It does not work, because the PLD protects the end injured party and the internal allocation between suppliers does not bind them; and because the joint and several liability regime of Article 12 means the injured party can turn to anyone in the chain, with recourse to follow."
+    },
+    {
+      "type": "p",
+      "text": "The review in the second move does not rewrite the contracts on its own — that is work for an IT lawyer — but it prepares the ground: it identifies the active contracts with asymmetric exposure, separates the scope actually signed off by technical professionals from the scope carried out under instruction, and introduces the allocation, indemnification and recourse clauses the new regime makes necessary. Quick test: take your standard supply contract and search for the word \"defect\" and the word \"update\". If they do not appear, or appear only in generic exclusion wording, the contract is written for a liability regime that ceases to exist on 9 December."
+    },
+    {
+      "type": "p",
+      "text": "Third move — Checking that your insurance is adequate"
+    },
+    {
+      "type": "p",
+      "text": "Almost no basic professional indemnity policy today adequately covers PLD scenarios. This is the point covered in Article VI: you need Tech E&O with a product extension, consistent limits, full retroactive cover, an extended reporting period matching the ten-year period of Article 17, and — for signing professionals — cover for the individual risks traditional policies exclude. Many companies discover, reading the exclusions, that the policy they believed protected them excludes precisely PLD-type exposure."
+    },
+    {
+      "type": "p",
+      "text": "The third move is a check, to be done with a tier-1 broker — Marsh, Aon and WTW have the expertise and facilities to profile this risk correctly — not with the automatic renewal of your existing policy. Quick test: ask your broker, in writing, whether your current cover responds to personal injury caused by a defect in your software under Directive 2024/2853. If the answer is hesitant, or if they refer you to the general terms and conditions, the cover has not been profiled for the new regime."
+    },
+    {
+      "type": "p",
+      "text": "Fourth move — A technical audit trail that stands up as evidence"
+    },
+    {
+      "type": "p",
+      "text": "This is the most technical move and the most neglected, and it is the one that holds up all the others. In PLD litigation, with the reversal of the burden of proof and the presumptions of defectiveness in Article 10, and with the mandatory disclosure of evidence under Article 9, the difference between an organisation that defends itself and one that loses is not the quality of its slides: it is the ability to reconstruct, from its systems, who decided what, when, against which alternative, with what documented dissent."
+    },
+    {
+      "type": "p",
+      "text": "As I detailed in Article VII, the distinction is not between \"we have logs\" and \"we don't have logs\" — almost everyone has some logs. It is between attributable, tamper-proof logs and generic logs: a pipeline launched from a service account shared by eight people is worthless as proof; the same event with verified identity, MFA and a cryptographically signed timestamp is not. Quick test: take a significant technical decision from six months ago and try to reconstruct it from your systems. If it takes hours of interviews with people who \"vaguely remember\", the audit trail does not exist yet, and it has to be built — knowing that retrofitting attributability onto existing systems costs more than designing it in."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "III. Beyond the checklist: the two pillars"
+    },
+    {
+      "type": "p",
+      "text": "The four moves are the minimum answer. But anyone who takes them on seriously immediately runs into a problem of scale: doing them by hand, product by product, regulation by regulation, is unsustainable for an organisation that lacks the development capacity of a large enterprise group. And the PLD does not arrive alone: it overlaps — cumulatively, not as an alternative — with the AI Act, GDPR, NIS2, the Cyber Resilience Act, and the vertical standards of each sector. Mapping all of this by hand, and translating it into technical evidence, is where most good intentions run aground."
+    },
+    {
+      "type": "p",
+      "text": "From here on the series stops being only diagnostic and names, for the first time explicitly, the two pillars that — in the field, on real regulated deployments — I have verified work. They are not magic solutions, they are not the only possible way, and I do not present them as such. They are the way I have built and that I use."
+    },
+    {
+      "type": "p",
+      "text": "The first pillar is the Compliance-Epistemic Project Framework (CEPF). And the first thing to say is what it is not: it is not yet another framework to add to the pile. Anyone working in regulated sectors already has more than enough frameworks — PLD, AI Act, GDPR, NIS2, Cyber Resilience Act, ISO, vertical sector standards. The problem is not a lack of frameworks: it is that they overlap, partly contradict each other, partly ask for the same evidence under different names, and nobody keeps the unified map. CEPF is the system that brings order to that pile: an orchestration layer that takes the frameworks you are already obliged to follow, resolves their overlaps, and translates them into a single set of non-duplicated evidence deliverables. In this way it answers the problem of scale in moves one and two — instead of redoing compliance regulation by regulation and product by product, it turns it into a repeatable process rather than an endless building site. I open it up in detail in the next article."
+    },
+    {
+      "type": "p",
+      "text": "The second pillar is Nexus MDS Core, a sovereign technical infrastructure, installed within the client's perimeter and under its control. Here too, a clarification that matters: it is neither a prototype nor a promise on a slide. It is a platform already in production, as sovereign AI in production, at Federfarma Lombarda — a highly critical regulated context, where it runs, is used, and bears a real load. It answers the problem of the fourth move — the attributable, tamper-proof audit trail — and, not least, the sovereignty problem that the Fable 5 episode made concrete this week: an infrastructure in which indexing, retrieval, identity and audit stay under your control, generation runs on a local model or on a replaceable EU endpoint, and whose evidence data does not depend on the continuing authorisation of a third party. I cover it in the article after next."
+    },
+    {
+      "type": "p",
+      "text": "I name them here, but I do not develop them: each deserves its own piece, and will get one. The point of this article is something else: that the checklist of four moves is doable, and that there are tools — mine, and others — to make it sustainable rather than paralysing."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "IV. Closing"
+    },
+    {
+      "type": "p",
+      "text": "I come back to the question we started from, the one from the two managing directors and the CTO: \"So what now?\""
+    },
+    {
+      "type": "p",
+      "text": "The honest answer is that there is no shortcut, but there is a sequence. Map what is exposed. Fix the contracts. Profile the policy with a broker who knows what they are doing. Build an audit trail that stands up in court. Four moves, in the next 90 days, before the window of advantage closes by itself. And, for those who want to do it at scale, two pillars — method and infrastructure — which the next two articles open up in detail."
+    },
+    {
+      "type": "p",
+      "text": "There is one thing I said in private to both managing directors, and it is worth setting down here. This is not only a problem to defend yourself against. For those who move now, it is the biggest opportunity for value repositioning in years: in the market that takes shape after 9 December, whoever remains a commodity — development hours, no traceability, no profiled cover — becomes uninsurable, and therefore unhireable by regulated clients. Whoever makes their accountability demonstrable stops selling hours and starts selling software that is defensible as evidence. Compliance, done with method, stops being a cost and becomes pricing power."
+    },
+    {
+      "type": "p",
+      "text": "If you are a software house in a regulated sector and you cannot answer one of these four questions — what is exposed, where the contracts stand, what the policy looks like, whether the audit trail holds up — that gap is exactly what I work on. Message me privately: in the coming months, this is the conversation that counts."
+    },
+    {
+      "type": "p",
+      "text": "The next article opens up the first pillar: CEPF, and how to map multi-regulation compliance without drowning in it."
+    },
+    {
+      "type": "p",
+      "text": "The diagnosis is over. From here, we get to work."
+    }
+  ]
+}

@@ -315,7 +315,7 @@ export default async function ImportedArticlePage({
                 >
                   The whole series
                 </Link>
-                <span className="text-[#7D8FA3]"> — six articles on PLD 2024, in order, in English translation.</span>
+                <span className="text-[#7D8FA3]"> — ten articles on PLD 2024 and AI governance, in order, in English translation.</span>
               </li>
               <li>
                 <Link href="/assessment" className="text-[#00B4D8] hover:text-[#E6EDF3]">

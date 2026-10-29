@@ -106,13 +106,17 @@ One question per page, answered in the opening block, with primary sources
 - [AI Reverse Engineering of Legacy Platforms](${BASE_URL}/research/ai-reverse-engineering)
 - [Event Sourcing in Practice](${BASE_URL}/research/event-sourcing)
 - [Law 132/2025 and AI in healthcare](${BASE_URL}/research/law-132-2025): Italy's AI law and what it changes for hospitals, pharmacies and pharmaceutical companies. Translated from the Italian original.
-- [Editorial series — PLD 2024 & AI governance](${BASE_URL}/research/editorial-series): Six articles on the revised product liability directive by Corrado Patierno, written in Italian (first published on LinkedIn) and published here in full English translation.
+- [Editorial series — PLD 2024 & AI governance](${BASE_URL}/research/editorial-series): Ten articles on the revised product liability directive and AI governance by Corrado Patierno, written in Italian (first published on LinkedIn) and published here in full English translation.
 - [PLD 2024: seven structural changes](${BASE_URL}/research/pld-2024-seven-structural-changes): Article I — software as a product, ten-year liability, security maintenance, customisations as new releases, individual technical accountability, supply chain traceability.
 - [PLD 2024: the 5+1 software development scenarios](${BASE_URL}/research/pld-2024-five-plus-one-scenarios): Article II — the exposure each development model generates for the software house, its employees and its external consultants.
 - [PLD 2024: a decade of liability](${BASE_URL}/research/pld-2024-a-decade-of-liability): Article III — joint liability, insolvency of the producer, and run-off cover.
 - [PLD 2024: vulnerability management and CVEs](${BASE_URL}/research/pld-2024-vulnerability-management): Article IV — reasonable diligence, patching windows, and the limit Article 15 places on transferring liability by contract.
 - [The jurisdictional escape, and why it does not exist](${BASE_URL}/research/pld-2024-jurisdictional-escape): Article V — Brussels I bis, Rome II, corporate veil, criminal liability.
 - [Contracts and insurance under PLD 2024](${BASE_URL}/research/pld-2024-contracts-and-insurance): Article VI — twenty contract clauses and the insurance policy, read from the client's, the software house's and the signing professional's side.
+- [The other half of the problem](${BASE_URL}/research/pld-2024-the-other-half-of-the-problem): Article VII — the RACI matrix as governance fiction unless tied to technical systems, three operational transformations, the senior solution architect's position.
+- [So what now?](${BASE_URL}/research/pld-2024-so-what-now): Article VIII — four moves before 9 December 2026: audit the products in scope, review contracts, check insurance, build an audit trail that holds up as evidence.
+- [What to do on Monday morning](${BASE_URL}/research/pld-2024-what-to-do-on-monday-morning): Article IX — which rules apply, where they collide, and how a compliance floor becomes a project plan.
+- [Digital sovereignty: not a slogan, an architecture](${BASE_URL}/research/pld-2024-digital-sovereignty-architecture): Article X — residency, jurisdiction and continuity, and five requirements for a sovereign AI infrastructure.
 - [EU Cloud and AI Development Act (CADA) — the four Union assurance levels](${BASE_URL}/tech-sovereignty): Analysis of COM(2026) 502 final of 3 June 2026: what Annex II asks at each assurance level, who must procure which level, the software supply chain criteria it shares with the CRA and PLD 2024, and how it sits beside the AI Act. It is a proposal, not adopted law, and the page says so.
 - [Research index](${BASE_URL}/research)
 

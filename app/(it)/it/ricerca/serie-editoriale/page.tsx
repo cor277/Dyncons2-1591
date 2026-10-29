@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 /**
- * The six PLD 2024 articles, in the Italian they were written in, served from
+ * The ten PLD 2024 articles, in the Italian they were written in, served from
  * /it/ricerca/<slug>. The card framing (category and subtitle) is the Italian
  * version of the one on /research/editorial-series; the title is the author's.
  */
@@ -67,12 +67,32 @@ const framing: Record<string, { category: string; subtitle: string }> = {
   "pld-2024-fuga-giurisdizionale": {
     category: "Articolo V · Configurazioni internazionali",
     subtitle:
-      "Bruxelles I bis, Roma II, superamento dello schermo societario e responsabilità penale ai sensi dell'articolo 27 della Costituzione.",
+      "Bruxelles I bis, Roma II, superamento dello schermo societario, giurisdizione penale italiana (artt. 6-10 c.p.) e personalità della responsabilità penale (art. 27 della Costituzione).",
   },
   "pld-2024-contratti-e-polizza": {
     category: "Articolo VI · Contratti e polizza",
     subtitle:
       "Committente, software house, professionista che firma: contratti e coperture assicurative in rapporti di forza asimmetrici.",
+  },
+  "pld-2024-altra-meta-del-problema": {
+    category: "Articolo VII · Governance e ruoli",
+    subtitle:
+      "La matrice RACI come finzione di governance se non è agganciata ai sistemi tecnici, tre trasformazioni operative e la posizione del Solution Architect senior nel regime PLD 2024.",
+  },
+  "pld-2024-e-mo": {
+    category: "Articolo VIII · Dalla diagnosi all'azione",
+    subtitle:
+      "Quattro movimenti per i mesi prima del 9 dicembre 2026: audit dei prodotti, revisione dei contratti, verifica della polizza, audit trail difendibile in giudizio.",
+  },
+  "pld-2024-cosa-faccio-lunedi-mattina": {
+    category: "Articolo IX · Il metodo",
+    subtitle:
+      "Quali norme si applicano davvero, dove collidono e come il pavimento di compliance diventa un piano di progetto, su tre ipotesi di azienda.",
+  },
+  "pld-2024-sovranita-digitale-architettura": {
+    category: "Articolo X · L'infrastruttura sovrana",
+    subtitle:
+      "Residenza, giurisdizione e continuità sono tre cose diverse, e i cinque requisiti che un'infrastruttura deve soddisfare per tenere difendibile in produzione un sistema AI regolato.",
   },
 };
 
@@ -166,7 +186,7 @@ export default function SerieEditorialePage() {
           </div>
 
           <p className="mt-12 text-[#7D8FA3] text-sm leading-relaxed max-w-2xl">
-            I sei articoli sono pubblicati qui per intero, nell&apos;italiano in cui sono stati
+            I dieci articoli sono pubblicati qui per intero, nell&apos;italiano in cui sono stati
             scritti. Ognuno è uscito prima su LinkedIn e rimanda a quell&apos;originale; questo
             dominio è l&apos;archivio di riferimento, e la versione canonica di ogni articolo è
             quella su questo sito.
