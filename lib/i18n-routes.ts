@@ -43,7 +43,6 @@ export const ROUTE_PAIRS: Record<string, string> = {
   "/case-studies": "/it/case-studies",
   "/case-studies/dynamics-crm": "/it/case-studies/dynamics-crm",
   "/case-studies/dynamics-data": "/it/case-studies/dynamics-data",
-  "/case-studies/eldy": "/it/case-studies/eldy",
   "/case-studies/federfarma": "/it/case-studies/federfarma",
   "/case-studies/humania-care": "/it/case-studies/humania-care",
   "/case-studies/iatp": "/it/case-studies/iatp",

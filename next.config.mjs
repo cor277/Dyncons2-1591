@@ -46,6 +46,17 @@ const nextConfig = {
         permanent: true,
       },
       {
+        /* Retired duplicate of the HumanIA Care case study. */
+        source: "/case-studies/eldy",
+        destination: "/case-studies/humania-care",
+        permanent: true,
+      },
+      {
+        source: "/it/case-studies/eldy",
+        destination: "/it/case-studies/humania-care",
+        permanent: true,
+      },
+      {
         source: "/portfolio/:slug*",
         destination: "/case-studies",
         permanent: true,
