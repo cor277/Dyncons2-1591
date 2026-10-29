@@ -3,6 +3,35 @@ import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 
+const LABELS = {
+  en: {
+    indexHref: "/answers",
+    aboutHref: "/about",
+    all: "← All answers",
+    by: "By",
+    updated: "updated",
+    sources: "Sources",
+    sourcesNote:
+      "Primary sources for the regulatory statements above. Where this page describes what an obligation requires, the text of the act is the authority, not this page.",
+    related: "Related on this site",
+    disclaimer:
+      "This page is technical and architectural guidance, written from delivery experience in regulated environments. It is not legal advice, and it does not establish the regulatory classification of any specific system.",
+  },
+  it: {
+    indexHref: "/it/risposte",
+    aboutHref: "/it/chi-siamo",
+    all: "← Tutte le risposte",
+    by: "Di",
+    updated: "aggiornato a",
+    sources: "Fonti",
+    sourcesNote:
+      "Fonti primarie per le affermazioni normative qui sopra. Dove questa pagina descrive cosa richiede un obbligo, fa fede il testo dell’atto, non questa pagina.",
+    related: "Sullo stesso tema, su questo sito",
+    disclaimer:
+      "Questa pagina è un orientamento tecnico e architetturale, scritto a partire da incarichi svolti in ambienti regolati. Non è una consulenza legale e non stabilisce la classificazione normativa di alcun sistema specifico.",
+  },
+};
+
 export interface AnswerSource {
   label: string;
   url: string;
@@ -35,6 +64,7 @@ export function AnswerPageLayout({
   children,
   ctaTitle,
   ctaSubtitle,
+  locale = "en",
 }: {
   question: string;
   shortAnswer: React.ReactNode;
@@ -46,7 +76,10 @@ export function AnswerPageLayout({
   children: React.ReactNode;
   ctaTitle?: string;
   ctaSubtitle?: string;
+  /** Language of the fixed labels and of the index link. */
+  locale?: "en" | "it";
 }) {
+  const L = LABELS[locale];
   return (
     <>
       <NavBar />
@@ -55,10 +88,10 @@ export function AnswerPageLayout({
           <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
             <div className="max-w-3xl mx-auto">
               <Link
-                href="/answers"
+                href={L.indexHref}
                 className="text-sm text-[#00B4D8] hover:text-[#00C8F0] mb-6 inline-flex items-center gap-1"
               >
-                ← All answers
+                {L.all}
               </Link>
               <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-[#E6EDF3]">
                 {question}
@@ -67,11 +100,11 @@ export function AnswerPageLayout({
                 {shortAnswer}
               </div>
               <p className="mt-6 text-sm text-[#7D8FA3]">
-                By{" "}
-                <Link href="/about" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                {L.by}{" "}
+                <Link href={L.aboutHref} className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Corrado Patierno
                 </Link>{" "}
-                · updated <time dateTime={updated}>{updatedLabel}</time>
+                · {L.updated} <time dateTime={updated}>{updatedLabel}</time>
               </p>
             </div>
           </section>
@@ -83,13 +116,9 @@ export function AnswerPageLayout({
               {sources && sources.length > 0 && (
                 <div>
                   <h2 className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4" id="sources">
-                    Sources
+                    {L.sources}
                   </h2>
-                  <p className="mb-4 text-base">
-                    Primary sources for the regulatory statements above. Where this page describes
-                    what an obligation requires, the text of the act is the authority, not this
-                    page.
-                  </p>
+                  <p className="mb-4 text-base">{L.sourcesNote}</p>
                   <ul className="space-y-3 text-base">
                     {sources.map((s) => (
                       <li key={s.url}>
@@ -111,7 +140,7 @@ export function AnswerPageLayout({
               {related && related.length > 0 && (
                 <div>
                   <h2 className="scroll-mt-24 text-2xl font-bold text-[#E6EDF3] mb-4" id="related">
-                    Related on this site
+                    {L.related}
                   </h2>
                   <ul className="space-y-3 text-base">
                     {related.map((r) => (
@@ -127,9 +156,7 @@ export function AnswerPageLayout({
               )}
 
               <p className="text-sm text-[#7D8FA3] border-t border-[#30363D] pt-6">
-                This page is technical and architectural guidance, written from delivery
-                experience in regulated environments. It is not legal advice, and it does not
-                establish the regulatory classification of any specific system.
+                {L.disclaimer}
               </p>
             </div>
           </section>

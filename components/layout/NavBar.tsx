@@ -224,7 +224,7 @@ const IT_NAV: NavLink[] = [
       },
       {
         label: "Legge 132/2025 e AI in sanità",
-        href: "/research/legge-132-2025",
+        href: "/it/ricerca/legge-132-2025",
         desc: "Cosa cambia per ospedali, farmacie e aziende farmaceutiche",
       },
       {

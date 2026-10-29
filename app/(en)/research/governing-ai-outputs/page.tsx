@@ -204,7 +204,7 @@ export default function GoverningAiOutputsArticle() {
                 For regulated industries, output governance is not an optional add-on — it is
                 the difference between an AI system that can withstand regulatory scrutiny and
                 one that cannot. Italy&apos;s{" "}
-                <Link href="/research/legge-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/research/law-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Legge 132/2025
                 </Link>{" "}
                 and the EU AI Act make this explicit. The organisations that invest in governance

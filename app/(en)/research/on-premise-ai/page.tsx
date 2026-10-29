@@ -158,7 +158,7 @@ export default function OnPremiseAiArticle() {
                 safeguards. The AI Act (Regulation EU 2024/1689) adds requirements specific to
                 AI systems: data used for training, testing, and inference must be managed with
                 documented governance processes. Italy&apos;s{" "}
-                <Link href="/research/legge-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/research/law-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Legge 132/2025
                 </Link>{" "}
                 goes further, requiring verifiable data residency for AI systems processing

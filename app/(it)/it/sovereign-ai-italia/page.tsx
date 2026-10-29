@@ -242,7 +242,7 @@ export default function SovereignAiItaliaPage() {
                 <span className="text-[#7D8FA3]"> — il verticale sanitario.</span>
               </li>
               <li>
-                <Link href="/research/legge-132-2025" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/ricerca/legge-132-2025" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Legge 132/2025 e AI in sanità
                 </Link>
                 <span className="text-[#7D8FA3]"> — cosa cambia, in concreto.</span>

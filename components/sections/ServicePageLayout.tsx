@@ -64,7 +64,28 @@ interface ServicePageLayoutProps {
   faqSchema?: object;
   breadcrumbSchema?: object;
   children?: React.ReactNode;
+  /** Language of the fixed labels; the page passes its own copy for the rest. */
+  locale?: "en" | "it";
 }
+
+const LABELS = {
+  en: {
+    eyebrow: "Services",
+    cta: "Let's discuss your project →",
+    capabilities: "Capabilities",
+    whatWeBuild: "What we build",
+    faq: "FAQ",
+    faqTitle: "Frequently asked questions",
+  },
+  it: {
+    eyebrow: "Servizi",
+    cta: "Parliamo del tuo progetto →",
+    capabilities: "Competenze",
+    whatWeBuild: "Cosa costruiamo",
+    faq: "Domande frequenti",
+    faqTitle: "Le domande che ci fanno più spesso",
+  },
+};
 
 function FAQAccordion({ items }: { items: FAQ[] }) {
   /**
@@ -98,7 +119,7 @@ function FAQAccordion({ items }: { items: FAQ[] }) {
 }
 
 export function ServicePageLayout({
-  eyebrow = "Services",
+  eyebrow,
   title,
   intro,
   tech,
@@ -109,7 +130,9 @@ export function ServicePageLayout({
   faqSchema,
   breadcrumbSchema,
   children,
+  locale = "en",
 }: ServicePageLayoutProps) {
+  const L = LABELS[locale];
   return (
     <>
       {faqSchema && (
@@ -137,7 +160,7 @@ export function ServicePageLayout({
             className="max-w-3xl"
           >
             <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-4">
-              {eyebrow}
+              {eyebrow ?? L.eyebrow}
             </p>
             <h1 className="font-syne text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#E6EDF3] leading-[1.05] tracking-tight mb-6">
               {title}
@@ -150,7 +173,7 @@ export function ServicePageLayout({
                 <TechBadge key={t} label={t} />
               ))}
             </div>
-            <CTAButton label="Let's discuss your project →" href="/contact" variant="primary" />
+            <CTAButton label={L.cta} href="/contact" variant="primary" />
           </motion.div>
         </div>
       </section>
@@ -159,7 +182,7 @@ export function ServicePageLayout({
       <section className="py-20 md:py-28 bg-[#161B22]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <SectionHeader eyebrow="Capabilities" title="What we build" />
+            <SectionHeader eyebrow={L.capabilities} title={L.whatWeBuild} />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((cap, i) => {
@@ -193,7 +216,7 @@ export function ServicePageLayout({
       <section className="py-20 md:py-28 bg-[#0D1117]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <SectionHeader eyebrow="FAQ" title="Frequently asked questions" />
+            <SectionHeader eyebrow={L.faq} title={L.faqTitle} />
           </div>
           <div className="max-w-3xl">
             <FAQAccordion items={faqs} />

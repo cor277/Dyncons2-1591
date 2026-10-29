@@ -2,36 +2,23 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { isItalianPath } from "@/lib/locale";
+import { counterpartOf, isItalianPath } from "@/lib/i18n-routes";
 
 /**
  * Explicit language selector. There is deliberately NO Accept-Language redirect:
  * automatic redirection breaks indexing, because a crawler is served a page whose
  * URL does not match its content.
  *
- * Only paths that genuinely have both versions appear in PAIRS. A page with no
+ * Only paths that genuinely have both versions appear in lib/i18n-routes.ts. A page with no
  * counterpart still offers a way across — to the other language's index, not to
  * an unrelated page presented as its translation. The label says which of the
  * two it is.
  */
-const PAIRS: Record<string, string> = {
-  "/": "/it",
-  "/ai-on-premise-healthcare": "/it/ai-sanitaria-on-premise",
-  "/case-studies/federfarma": "/it/case-studies/federfarma",
-  "/assessment": "/it/assessment",
-  "/platform": "/it/piattaforma-nexus",
-  "/services/governance-advisory": "/it/consulenza-ai-governance-compliance",
-};
-
-const REVERSE: Record<string, string> = Object.fromEntries(
-  Object.entries(PAIRS).map(([en, it]) => [it, en])
-);
-
 export function LanguageSwitch({ className = "" }: { className?: string }) {
   const pathname = usePathname();
 
-  const isItalian = pathname in REVERSE || isItalianPath(pathname);
-  const counterpart = isItalian ? REVERSE[pathname] : PAIRS[pathname];
+  const isItalian = isItalianPath(pathname);
+  const counterpart = counterpartOf(pathname);
 
   /**
    * With a true counterpart, this is a translation link. Without one it is a

@@ -201,7 +201,7 @@ export default function SovereignAiPharmaItaliaPage() {
               <p>
                 La{" "}
                 <Link
-                  href="/research/legge-132-2025"
+                  href="/it/ricerca/legge-132-2025"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Legge 132/2025
@@ -540,7 +540,7 @@ export default function SovereignAiPharmaItaliaPage() {
                 <p>
                   Il quadro normativo europeo (AI Act, GDPR,{" "}
                   <Link
-                    href="/research/legge-132-2025"
+                    href="/it/ricerca/legge-132-2025"
                     className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                   >
                     Legge 132/2025

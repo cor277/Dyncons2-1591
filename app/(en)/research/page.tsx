@@ -64,7 +64,7 @@ const posts = [
       "Applying RAG and multi-agent workflows to reconstruct functional and architectural knowledge from large legacy codebases. What works, what does not, and what traceability requirements actually look like.",
   },
   {
-    slug: "/research/legge-132-2025",
+    slug: "/research/law-132-2025",
     date: "October 2025",
     tag: "AI Governance",
     title: "Legge 132/2025 e AI in sanità: cosa cambia per ospedali, farmacie e aziende farmaceutiche",

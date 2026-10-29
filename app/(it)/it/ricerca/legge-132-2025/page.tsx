@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -12,11 +13,11 @@ export const metadata: Metadata = {
   title: "Legge 132/2025 e AI in Sanità: Cosa Cambia",
   description:
     "Analisi della Legge n. 132 del 23 settembre 2025, prima normativa organica italiana sull'intelligenza artificiale. Implicazioni per organizzazioni sanitarie e farmaceutiche.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/legge-132-2025" },
+  alternates: alternatesFor("/it/ricerca/legge-132-2025"),
 };
 
 const article = RESEARCH_ARTICLES["legge-132-2025"];
-const ARTICLE_URL = "https://www.dynamicsconsulting.it/research/legge-132-2025";
+const ARTICLE_URL = "https://www.dynamicsconsulting.it/it/ricerca/legge-132-2025";
 
 const schema = [
   articleSchema({

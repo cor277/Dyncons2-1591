@@ -1,18 +1,8 @@
-/**
- * Italian-language routes. The (it) route group cannot be read from the URL —
- * route groups are invisible in the path — so the set is listed explicitly.
- * Keep in sync with app/(it)/.
- */
-const IT_ROOT_PATHS = new Set([
-  "/sovereign-ai-pharma-italia",
-  "/fractional-cto-milano",
-  "/modernizzazione-sistemi-legacy-ai",
-  "/cra-11-settembre",
-]);
+import { isItalianPath } from "@/lib/i18n-routes";
 
-export function isItalianPath(pathname: string): boolean {
-  return pathname === "/it" || pathname.startsWith("/it/") || IT_ROOT_PATHS.has(pathname);
-}
+/* Which paths are Italian is decided by lib/i18n-routes.ts, the one table of
+   EN/IT pairs. Re-exported so existing imports keep working. */
+export { isItalianPath };
 
 /** The single primary call to action, in the language of the page it sits on. */
 export function assessmentHref(pathname: string): string {

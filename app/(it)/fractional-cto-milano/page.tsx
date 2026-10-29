@@ -192,7 +192,7 @@ export default function FractionalCtoMilanoPage() {
                 Framework di governance per l&apos;adozione dell&apos;AI — quali use case hanno ROI
                 reale, quali modelli adottare (LLM commerciali vs open-source vs fine-tuned),
                 come gestire dati sensibili in conformit&agrave; con{" "}
-                <Link href="/research/legge-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/ricerca/legge-132-2025" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   AI Act e normativa italiana
                 </Link>. Questo include la definizione di policy per l&apos;uso dell&apos;AI generativa
                 da parte dei dipendenti, la selezione degli strumenti e il monitoraggio

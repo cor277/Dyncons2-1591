@@ -198,7 +198,7 @@ export default function HospitalLlmAnswer() {
           <p>
             Italian hospitals have a further layer &mdash; national AI legislation and the sector
             rules on secondary use of health data &mdash; discussed in{" "}
-            <Link href="/research/legge-132-2025" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+            <Link href="/research/law-132-2025" className="text-[#00B4D8] hover:text-[#E6EDF3]">
               the analysis of Legge 132/2025
             </Link>
             . And for organisations in scope of NIS2, an AI platform is part of the entity&apos;s own

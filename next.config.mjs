@@ -32,6 +32,20 @@ const nextConfig = {
         permanent: true,
       },
       {
+        /* Articles written in Italian moved into the Italian section on
+           2026-10-29, where they render with lang="it"; the English
+           translations took English slugs under /research. Links already
+           shared (LinkedIn, IndexNow) keep reaching the Italian text. */
+        source: "/research/legge-132-2025",
+        destination: "/it/ricerca/legge-132-2025",
+        permanent: true,
+      },
+      {
+        source: "/research/:slug(pld-2024-cinque-piu-uno-scenari|pld-2024-contratti-e-polizza|pld-2024-decennio-responsabilita|pld-2024-fuga-giurisdizionale|pld-2024-sette-cambi-strutturali|pld-2024-vulnerability-management-cve)",
+        destination: "/it/ricerca/:slug",
+        permanent: true,
+      },
+      {
         source: "/portfolio/:slug*",
         destination: "/case-studies",
         permanent: true,
