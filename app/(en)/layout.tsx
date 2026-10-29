@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Dynamics Consulting",
   },
   description:
-    "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. We design and deploy sovereign, on-premise AI systems — Nexus MDS Core, 16 services, GDPR-ready, architected for AI Act and PLD 2024 requirements.",
+    "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. We design and deploy sovereign, on-premise AI systems — Nexus MDS Core, GDPR controls mapped, architected for AI Act and PLD 2024 requirements.",
   keywords: [
     "AI consulting",
     "AI governance advisory",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Dynamics Consulting",
     title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
     description:
-      "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — 16 services, GDPR-ready, architected for AI Act requirements. Aligned with EU Tech Sovereignty Package (CADA, 2026).",
+      "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — GDPR controls mapped, architected for AI Act requirements and the criteria of the CADA proposal (2026).",
     images: [
       {
         url: "/og-image.png",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dynamics Consulting | Sovereign AI Infrastructure for Regulated Industries · Italy",
     description:
-      "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — 16 services, GDPR-ready, architected for AI Act requirements. Aligned with EU Tech Sovereignty Package (CADA, 2026).",
+      "On-premise AI platforms for healthcare and pharma. Nexus MDS Core — GDPR controls mapped, architected for AI Act requirements and the criteria of the CADA proposal (2026).",
     images: ["/og-image.png"],
   },
   robots: {

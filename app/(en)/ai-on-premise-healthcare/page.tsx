@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
@@ -79,7 +80,7 @@ const schema = [
         name: "What hardware is needed to run AI on-premise in a hospital?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A production-grade on-premise healthcare AI stack typically requires a GPU server (NVIDIA A100, H100, or L40S) with 48-80 GB VRAM for LLM inference, a Kubernetes cluster with 3+ nodes for orchestration, NVMe storage for vector databases, and redundant networking. Nexus MDS Core is optimised to run on this hardware profile with approximately 16 Docker services.",
+          text: `A production-grade on-premise healthcare AI stack typically requires a GPU server (NVIDIA A100, H100, or L40S) with 48-80 GB VRAM for LLM inference, a Kubernetes cluster with 3+ nodes for orchestration, NVMe storage for vector databases, and redundant networking. Nexus MDS Core runs as ${NEXUS_SERVICE_COUNT} Docker services on a single server; on a GPU of this class generation runs locally too, otherwise it calls a replaceable EU endpoint. The stack moves to Kubernetes when scale requires it.`,
         },
       },
       {
@@ -321,16 +322,17 @@ export default function AiOnPremiseHealthcarePage() {
                     Nexus MDS Core
                   </Link>
                 </strong>{" "}
-                is the platform we built to solve this problem. It consists of approximately 16
-                orchestrated Docker services deployed on Kubernetes or bare-metal infrastructure,
-                entirely within the organisation&apos;s perimeter. The key components include:
+                is the platform we built to solve this problem. It consists of {NEXUS_SERVICE_COUNT}
+                containerised services running on Docker inside the organisation&apos;s perimeter,
+                with a path to Kubernetes when scale requires it. Generation runs on a local model or
+                on a replaceable EU endpoint. The key components include:
               </p>
               <ul className="mt-4 space-y-3 list-disc list-inside">
                 <li>
-                  <strong className="text-[#E6EDF3]">LLM inference engine (vLLM):</strong> Serves
-                  open-source models — LLaMA, Mistral, DeepSeek, Qwen — on dedicated GPU hardware.
-                  Supports dynamic batching and continuous batching for throughput optimisation.
-                  No data leaves the server.
+                  <strong className="text-[#E6EDF3]">Local LLM inference (llama.cpp):</strong> Serves
+                  open-weight models, Qwen by default, on the organisation&apos;s own hardware with
+                  the GPU detected automatically. On a GPU server generation runs here and no data
+                  leaves it; otherwise generation calls a replaceable EU endpoint.
                 </li>
                 <li>
                   <strong className="text-[#E6EDF3]">RAG pipeline with Weaviate:</strong> Vector
@@ -339,15 +341,15 @@ export default function AiOnPremiseHealthcarePage() {
                   Chunking strategies are tuned for medical text structures.
                 </li>
                 <li>
-                  <strong className="text-[#E6EDF3]">Zero-Trust authentication:</strong> Every
-                  service-to-service call is authenticated and authorised. Role-based access control
+                  <strong className="text-[#E6EDF3]">Zero-Trust authentication:</strong> Users and
+                  applications authenticate through Keycloak at the gateway. Role-based access control
                   maps to clinical roles — physician, nurse, pharmacist, administrator — ensuring
                   that AI access mirrors existing clinical governance.
                 </li>
                 <li>
-                  <strong className="text-[#E6EDF3]">Immutable audit logging:</strong> Every query,
-                  every retrieved context chunk, every generated response is logged in an
-                  append-only store with cryptographic integrity verification. This satisfies AI Act
+                  <strong className="text-[#E6EDF3]">Tamper-evident audit logging:</strong> Every model
+                  call — the query, the retrieved context sent with it, the generated response — is
+                  logged in an encrypted, hash-chained store whose integrity can be verified on demand. This supports AI Act
                   traceability requirements and enables retrospective review of any AI-assisted
                   decision.
                 </li>
@@ -358,9 +360,9 @@ export default function AiOnPremiseHealthcarePage() {
                   engine with retry logic, timeout handling, and human-in-the-loop escalation.
                 </li>
                 <li>
-                  <strong className="text-[#E6EDF3]">Observability stack:</strong> Prometheus
-                  metrics, structured logging, and distributed tracing provide real-time visibility
-                  into model performance, latency, error rates, and resource utilisation.
+                  <strong className="text-[#E6EDF3]">Operations:</strong> Health-checked services are
+                  restarted automatically when they fail, disk and gateway raise email alerts, and
+                  databases are backed up on a schedule with tiered retention.
                 </li>
               </ul>
               <p className="mt-4">
@@ -373,9 +375,9 @@ export default function AiOnPremiseHealthcarePage() {
                 excluded at ingestion rather than filtered afterwards, and only final answer
                 generation calls an external inference endpoint in a European datacentre — a
                 component that is replaceable without redesigning the system. The same platform
-                underpins{" "}
+                underpins CureSicure and{" "}
                 <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
-                  CureSicure / HumanIA Care
+                  HumanIA Care
                 </Link>
                 .
               </p>
@@ -444,27 +446,31 @@ export default function AiOnPremiseHealthcarePage() {
                 infrastructure to process pharmaceutical distribution data, regulatory compliance
                 documents, and inter-pharmacy communications. The system handles document
                 classification, automated regulatory response drafting, and knowledge retrieval
-                across a corpus of pharmaceutical regulations and circulars. All processing runs
-                on-premise through Nexus MDS Core. No pharmacy data, no patient-adjacent information,
-                and no proprietary pharmaceutical intelligence ever transits through external cloud
-                infrastructure.
+                across a corpus of pharmaceutical regulations and circulars. Indexing,
+                retrieval, identity and audit run on-premise through Nexus MDS Core; personal data is
+                excluded at ingestion, and only final answer generation calls a replaceable endpoint
+                in a European datacentre.
+              </p>
+              <p className="mt-4">
+                <strong className="text-[#E6EDF3]">CureSicure</strong> reads public hospital data — outcome
+                and efficiency indicators from PNE-AGENAS, SDO/NSIS discharge records, Ministry of
+                Health open data — and, given a condition, helps a patient find the facilities that
+                measure best on quality and efficiency. It runs on Nexus MDS Core as a pro bono
+                service, and by design it keeps no usage metrics and tracks nobody.
               </p>
               <p className="mt-4">
                 <strong className="text-[#E6EDF3]">
                   <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
-                    CureSicure / Humania Care
+                    HumanIA Care
                   </Link>
                 </strong>{" "}
-                — a healthcare technology platform — required on-premise AI for clinical data
-                processing, patient communication automation, and care pathway optimisation. The
-                deployment includes a RAG pipeline indexed on clinical protocols and care guidelines,
-                enabling practitioners to query institutional knowledge through natural language while
-                maintaining complete data sovereignty. The{" "}
+                is an AI home assistant for older people, their caregivers and residential care
+                homes. It runs on Nexus MDS Core, with personal data anonymised at ingestion and
+                every answer grounded in curated, reviewed knowledge. The{" "}
                 <Link href="/research/governing-ai-outputs" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   output governance framework
                 </Link>{" "}
-                ensures every AI-generated recommendation is logged, traceable, and subject to
-                clinical review before reaching the patient.
+                keeps every generated answer logged and traceable.
               </p>
               <p className="mt-4">
                 These deployments demonstrate that on-premise healthcare AI is not a future
@@ -572,8 +578,8 @@ export default function AiOnPremiseHealthcarePage() {
                     <Link href="/platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                       Nexus MDS Core
                     </Link>{" "}
-                    is optimised to run on this hardware profile with approximately 16 Docker
-                    services.
+                    runs as {NEXUS_SERVICE_COUNT} Docker services on a single server; on a GPU of this class
+                    generation runs locally too, otherwise it calls a replaceable EU endpoint.
                   </p>
                 </div>
                 <div>
@@ -637,7 +643,7 @@ export default function AiOnPremiseHealthcarePage() {
                 </li>
                 <li>
                   <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
-                    Case study: CureSicure / Humania Care
+                    Case study: HumanIA Care
                   </Link>
                 </li>
                 <li>

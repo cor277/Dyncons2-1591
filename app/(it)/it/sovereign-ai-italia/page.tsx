@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
 import { breadcrumbSchema, faqSchema } from "@/app/seo";
@@ -114,9 +115,11 @@ export default function SovereignAiItaliaPage() {
             </p>
             <p>
               <strong className="text-[#E6EDF3]">Nexus MDS Core</strong> è la piattaforma costruita
-              specificamente per questo segmento. Circa 16 servizi Docker orchestrati — inferenza LLM,
-              pipeline RAG, autenticazione Zero-Trust, workflow engine, observability — deployabili
-              su Kubernetes o bare-metal, interamente on-premise. Progettata per sanità e pharma,
+              specificamente per questo segmento. {NEXUS_SERVICE_COUNT} servizi containerizzati — inferenza LLM locale, pipeline RAG,
+              autenticazione Zero-Trust, workflow engine, audit di ogni chiamata al modello — su
+              Docker, on-premise o su infrastruttura sovrana UE, con passaggio a Kubernetes quando la
+              scala lo richiede. La generazione gira su un modello locale o su un endpoint UE
+              sostituibile. Progettata per sanità e pharma,
               costruita sui requisiti dell&apos;AI Act, con i controlli GDPR mappati e residenza
               dei dati nell&apos;UE.
             </p>

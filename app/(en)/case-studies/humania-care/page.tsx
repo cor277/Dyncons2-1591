@@ -54,7 +54,7 @@ export default function HumaniaCareStudy() {
               { value: "6 mo", label: "Time to production" },
               { value: "Multi-agent", label: "RAG + Voice + Memory architecture" },
               { value: "At ingestion", label: "Personal data anonymised" },
-              { value: "16 services", label: "Nexus MDS Core modules orchestrated" },
+              { value: "Nexus", label: "Runs on Nexus MDS Core" },
             ].map((m) => (
               <div key={m.label}>
                 <div className="text-2xl md:text-3xl font-bold text-[#E6EDF3]">{m.value}</div>
@@ -78,7 +78,7 @@ export default function HumaniaCareStudy() {
               <p className="mt-4">
                 Healthcare context added a further constraint: every response had to be grounded,
                 auditable, and consistent with clinical guidelines. Hallucinated content was not
-                an acceptable failure mode. Sovereign deployment — with zero cloud dependency — was
+                an acceptable failure mode. Sovereign deployment — data, identity and audit inside the perimeter — was
                 a non-negotiable requirement from the start.
               </p>
             </div>
@@ -90,12 +90,13 @@ export default function HumaniaCareStudy() {
                 generation system using LangChain and Weaviate, grounded in curated, clinically
                 reviewed knowledge. A personalisation engine adapted response style, length, and
                 vocabulary for each user over time. The entire system runs as a multi-agent pipeline
-                with RAG, voice, and memory layers orchestrated across 16 Nexus MDS Core services.
+                with RAG, voice, and memory layers orchestrated on Nexus MDS Core.
               </p>
               <p className="mt-4">
                 Privacy was built in from day one: all personal data anonymised at ingestion, a data pipeline
                 built to GDPR requirements, and end-to-end audit logging. The system was deployed
-                on-premise with containerised Kubernetes workloads and zero cloud dependency, keeping
+                on Nexus MDS Core in Docker containers, with generation on a local model or a
+                replaceable EU endpoint, keeping
                 response latency under 800ms at the 99th percentile even on mobile connections.
               </p>
             </div>

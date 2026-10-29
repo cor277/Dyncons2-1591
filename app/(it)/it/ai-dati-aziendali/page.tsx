@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
 import { breadcrumbSchema } from "@/app/seo";
@@ -11,13 +12,13 @@ import { CTAButton } from "@/components/ui/CTAButton";
 export const metadata: Metadata = {
   title: "Implementare AI sui dati aziendali | Nexus MDS Core",
   description:
-    "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, nessuna dipendenza cloud.",
+    "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, dati nel perimetro.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-dati-aziendali" },
   openGraph: {
     images: OG_IMAGE,
     title: "Implementare AI sui dati aziendali | Nexus MDS Core",
     description:
-      "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, nessuna dipendenza cloud.",
+      "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, dati nel perimetro.",
     url: "https://www.dynamicsconsulting.it/it/ai-dati-aziendali",
     type: "website",
     locale: "it_IT",
@@ -33,7 +34,7 @@ const schema = [
     "@id": `${PAGE_URL}#webpage`,
     url: PAGE_URL,
     name: "Implementare AI sui dati aziendali",
-    description: "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, nessuna dipendenza cloud.",
+    description: "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, dati nel perimetro.",
     inLanguage: "it",
     isPartOf: { "@id": WEBSITE_ID },
     about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }],
@@ -103,9 +104,10 @@ export default function AiDatiAziendaliPage() {
             </ul>
             <p>
               L&apos;intera infrastruttura è basata su{" "}
-              <strong className="text-[#E6EDF3]">Nexus MDS Core</strong>: circa 16 servizi
-              Docker orchestrati, deployment on-premise o su server dedicato. I dati personali e riservati
-              non escono mai dal perimetro. Nessun lock-in da hyperscaler. Controlli GDPR
+              <strong className="text-[#E6EDF3]">Nexus MDS Core</strong>: {NEXUS_SERVICE_COUNT} servizi
+              containerizzati, deployment on-premise o su server dedicato. Indicizzazione, retrieval,
+              identità e audit restano nel perimetro; la generazione gira su un modello locale o su
+              un endpoint UE sostituibile. Nessun lock-in da hyperscaler. Controlli GDPR
               mappati e verificabili per design.
             </p>
             <p>

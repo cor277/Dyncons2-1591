@@ -190,8 +190,8 @@ export default function RagVsFineTuningArticle() {
               <p>
                 For most enterprise use cases we deploy, the answer is a fine-tuned base model
                 (for tone, format, and domain reasoning) combined with RAG (for up-to-date,
-                traceable knowledge). This is how Nexus MDS Core operates: vLLM serves the
-                inference layer, Weaviate provides the vector search, and the RAG pipeline
+                traceable knowledge). This is how Nexus MDS Core operates: a local model server or a replaceable EU endpoint
+                provides the inference layer, Weaviate provides the vector search, and the RAG pipeline
                 ensures every response is grounded in verifiable source material.
               </p>
               <p className="mt-4">

@@ -30,8 +30,9 @@ export function NexusBanner() {
                 Nexus MDS Core
               </h2>
               <p className="text-[#7D8FA3] text-base md:text-lg leading-relaxed mb-4">
-                The enterprise AI self-hosted platform. ~16 orchestrated Docker services.
-                GDPR-ready. Zero-Trust. Deployable on Kubernetes or bare-metal.
+                The enterprise AI self-hosted platform. Zero-Trust identity, every model call audited.
+                Runs on Docker on your server or on EU sovereign infrastructure, and moves to
+                Kubernetes when scale requires it.
               </p>
               <p className="text-[#7D8FA3] text-base leading-relaxed mb-6">
                 It is normally deployed inside a wider engagement covering AI architecture,{" "}
@@ -44,7 +45,7 @@ export function NexusBanner() {
                 and regulated operation — not sold as a standalone licence.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["GDPR", "AI Act Ready", "PLD 2024 Controls Mapped", "ISO 27001 Ready", "EU Data Residency", "CADA Aligned"].map((b) => (
+                {["GDPR controls mapped", "AI Act controls mapped", "PLD 2024 controls mapped", "ISO 27001 controls mapped", "EU data residency", "CADA criteria mapped (proposal)"].map((b) => (
                   <TechBadge key={b} label={b} variant="cyan" />
                 ))}
               </div>

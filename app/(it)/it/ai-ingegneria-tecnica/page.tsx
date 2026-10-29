@@ -89,7 +89,7 @@ export default function AiIngegneriaTecnicaPage() {
             <p>
               Ogni risposta è registrata: chi ha chiesto, quando, quale documento ha risposto.
               Questo non è opzionale in contesti con responsabilità professionale. Il log è
-              immutabile e consultabile per audit.
+              a prova di manomissione e consultabile per audit.
             </p>
             <p>
               <strong className="text-[#E6EDF3]">Background del fondatore:</strong> Corrado
@@ -102,8 +102,7 @@ export default function AiIngegneriaTecnicaPage() {
             <p>
               L&apos;infrastruttura è basata su <strong className="text-[#E6EDF3]">Nexus MDS Core</strong>,
               deployabile on-premise. Chunking semantico per clausola, metadati con gerarchia
-              completa della norma, vector search con Weaviate. I dati restano nel perimetro
-              dello studio. Controlli GDPR mappati per design.
+              completa della norma, vector search con Weaviate. Documenti e indici restano nel perimetro dello studio. Controlli GDPR mappati per design.
             </p>
             <div className="pt-6">
               <CTAButton label="Parliamo del tuo progetto →" href="/contact" variant="primary" />

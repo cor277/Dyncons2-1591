@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { TechBadge } from "@/components/ui/TechBadge";
 
@@ -23,12 +24,12 @@ export function PlatformHero() {
             Nexus MDS Core
           </h1>
           <p className="text-[#7D8FA3] text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-            The enterprise AI platform. Self-hosted. GDPR-ready. Zero-Trust.
-            ~16 orchestrated Docker services. Built for healthcare, pharma,
+            The enterprise AI platform. Self-hosted. Zero-Trust.
+            {NEXUS_SERVICE_COUNT} containerised services. Built for healthcare, pharma,
             and regulated industries.
           </p>
           <div className="flex flex-wrap gap-2 mb-10">
-            {["GDPR", "AI Act Ready", "ISO 27001 Ready", "EU Data Residency"].map((b) => (
+            {["GDPR controls mapped", "AI Act controls mapped", "ISO/IEC 27001:2022 controls mapped", "EU data residency"].map((b) => (
               <TechBadge key={b} label={b} variant="cyan" />
             ))}
           </div>

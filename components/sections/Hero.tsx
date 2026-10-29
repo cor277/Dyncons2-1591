@@ -66,8 +66,8 @@ export function Hero() {
           >
             We design and deploy sovereign AI systems, so that sensitive data, operational control
             and technical accountability stay inside your perimeter: indexing, retrieval, identity
-            and audit run on your infrastructure, under your governance. Nexus MDS Core — 16
-            orchestrated services. Self-hosted. GDPR-ready. No hyperscaler lock-in. Already in
+            and audit run on your infrastructure, under your governance. Nexus MDS Core —
+            self-hosted, GDPR controls mapped, no hyperscaler lock-in. Already in
             production.
           </motion.p>
 

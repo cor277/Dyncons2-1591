@@ -95,7 +95,7 @@ export default function GoverningAiOutputsArticle() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">1. Immutable audit logging</h2>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">1. Tamper-evident audit logging</h2>
               <p>
                 The record worth keeping is the one that lets you reconstruct a specific answer
                 later: the query, the retrieved context, the model invoked, the generated response
@@ -109,8 +109,9 @@ export default function GoverningAiOutputsArticle() {
               </p>
               <p className="mt-4">
                 In Nexus MDS Core, we implement this through a dedicated audit service that
-                intercepts every request-response cycle. Logs are stored in an immutable time-series
-                database with cryptographic integrity verification.
+                intercepts every request-response cycle. Each record is encrypted and
+                hash-chained to the previous one, so any alteration breaks the chain, and integrity can
+                be verified on demand.
               </p>
             </div>
 

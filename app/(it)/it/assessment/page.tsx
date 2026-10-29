@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import Image from "next/image";
 import Link from "next/link";
@@ -222,7 +223,7 @@ export default function AssessmentItPage() {
             <p className="mt-4">Progetta e mantiene due strumenti proprietari:</p>
             <p className="mt-4">
               <strong className="text-[#E6EDF3]">Nexus MDS Core</strong> — piattaforma di
-              intelligenza artificiale per ambienti regolati, sedici servizi orchestrati, in
+              intelligenza artificiale per ambienti regolati, {NEXUS_SERVICE_COUNT} servizi containerizzati, in
               produzione presso Federfarma Lombarda, associazione dei titolari di farmacia delle
               province di Milano, Lodi e Monza Brianza: oltre mille farmacie, circa duemila
               interrogazioni al giorno, catena di versioni normative esplicita, dati personali mai

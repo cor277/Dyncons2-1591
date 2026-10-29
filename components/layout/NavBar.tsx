@@ -40,7 +40,7 @@ const EN_NAV: NavLink[] = [
       {
         label: "Nexus MDS Core",
         href: "/platform",
-        desc: "Self-hosted AI platform — 16 services",
+        desc: "Self-hosted, governed AI platform",
       },
       {
         label: "CEPF Methodology",
@@ -120,7 +120,7 @@ const IT_NAV: NavLink[] = [
       {
         label: "Nexus MDS Core",
         href: "/platform",
-        desc: "Piattaforma AI self-hosted, 16 servizi · in inglese",
+        desc: "Piattaforma AI self-hosted · in inglese",
       },
       {
         label: "Metodologia CEPF",

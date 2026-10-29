@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -203,17 +204,17 @@ export default function OnPremiseAiArticle() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">What sovereign AI looks like in practice</h2>
               <p>
-                Nexus MDS Core is our answer to this challenge: approximately 16 orchestrated
-                Docker services — LLM inference (vLLM), RAG pipeline (Weaviate), Zero-Trust
-                authentication (Keycloak), workflow engine (n8n), observability (Grafana + Loki) —
-                deployable on Kubernetes or bare-metal, entirely within the organisation&apos;s
-                perimeter. It is already in production for{" "}
+                Nexus MDS Core is our answer to this challenge: {NEXUS_SERVICE_COUNT} containerised
+                services — local LLM inference (llama.cpp), RAG pipeline (Weaviate), Zero-Trust
+                authentication (Keycloak), workflow engine (n8n), a hash-chained audit of every model
+                call — running on Docker inside the organisation&apos;s perimeter, with generation
+                on a local model or a replaceable EU endpoint. It is already in production for{" "}
                 <Link href="/case-studies/federfarma" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Federfarma Lombarda
                 </Link>{" "}
-                and{" "}
+                and of two healthcare services, CureSicure and{" "}
                 <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
-                  CureSicure
+                  HumanIA Care
                 </Link>.
               </p>
               <p className="mt-4">

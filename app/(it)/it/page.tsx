@@ -60,7 +60,7 @@ const SECTORS: Resource[] = [
     href: "/it/ai-agenti-finanziari",
     title: "Finanza e compliance",
     blurb:
-      "Governance degli agenti AI per banche e asset manager: approval gate, audit log immutabile, RBAC. DORA, MiFID II.",
+      "Governance degli agenti AI per banche e asset manager: approval gate, audit log a prova di manomissione, RBAC. DORA, MiFID II.",
   },
   {
     href: "/it/ai-ingegneria-tecnica",

@@ -2,56 +2,57 @@
 import { motion } from "framer-motion";
 import { Cpu, Shield, Search, GitBranch, Database, Activity, Lock } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { NEXUS_SERVICE_COUNT, NEXUS_SNAPSHOT_EN, NEXUS_INFERENCE_EN } from "@/lib/nexus";
 
 const features = [
   {
     icon: Cpu,
     title: "AI Inference",
-    tech: "vLLM, OpenWebUI, GPU-ready",
+    tech: "llama.cpp, Nexus UI (Open WebUI), GPU auto-detect",
     description:
-      "Local LLMs in production, no data outside the perimeter. Open-source models (LLaMA, Mistral, DeepSeek) on dedicated GPU.",
+      "Local model server for open-weight models, Qwen by default; a larger GPU takes a larger model. Generation runs here, fully local, or on a replaceable EU endpoint, chosen per workload. Every call passes the gateway and is logged.",
   },
   {
     icon: Shield,
     title: "Zero-Trust Auth",
     tech: "Keycloak OIDC/PKCE, APISIX, JWT",
     description:
-      "Enterprise authentication for every architecture layer. No service exposed without OIDC authentication.",
+      "Single sign-on through Keycloak for users and applications; OIDC at the gateway for the workflow and storage consoles, JWT on webhooks. The open-source editions of a few admin consoles use basic auth or IP restriction; their enterprise editions bring them under OIDC when required.",
   },
   {
     icon: Search,
     title: "Vector Search & RAG",
-    tech: "Weaviate, semantic chunking",
+    tech: "Weaviate, bge-m3 embeddings, Apache Tika",
     description:
-      "Production-ready RAG pipeline on enterprise documents. Cursor-based pagination on datasets with >10,000 documents.",
+      "Production RAG pipeline on enterprise documents: text extraction with an OCR fallback, embeddings computed locally, vector search. Cursor-based pagination on datasets with >10,000 documents.",
   },
   {
     icon: GitBranch,
     title: "Workflow Engine",
-    tech: "n8n agentic, Airflow, Apache Hop",
+    tech: "n8n (queue mode), Apache Hop",
     description:
-      "Process orchestration with LLM decision-making. From deterministic automation to agentic orchestration.",
+      "Process orchestration with LLM decision-making, from deterministic automation to agentic flows, with batch ETL alongside.",
   },
   {
     icon: Database,
     title: "Enterprise Storage",
-    tech: "MinIO S3, PostgreSQL, Dremio",
+    tech: "MinIO S3, PostgreSQL + pgvector, Dremio, SQL Server",
     description:
-      "AWS S3-compatible storage, federated queries on heterogeneous sources, Zero-ETL data virtualization.",
+      "S3-compatible object storage, a shared Postgres with vector extension, federated queries on heterogeneous sources, data integration with ERP and legacy databases.",
   },
   {
     icon: Activity,
     title: "Observability",
-    tech: "Grafana, Uptime Kuma, Velero",
+    tech: "Healthchecks, autoheal, pg-backup",
     description:
-      "Real-time monitoring, alerts, automated Kubernetes backup. Guaranteed SLAs with disaster recovery.",
+      "Health-checked services restarted automatically when they fail, email alerts on disk and gateway, scheduled database backups with 7 daily / 4 weekly / 6 monthly retention.",
   },
   {
     icon: Lock,
     title: "Agent Governance",
-    tech: "Keycloak RBAC, n8n approval gates, immutable audit log",
+    tech: "Keycloak RBAC, n8n approval steps, hash-chained audit log, privacy filter",
     description:
-      "Human approval gate before any agent write action. Immutable audit trail on Postgres with configurable retention period. Full LLM call logging: input, output, model version, timestamp. Role-based access control with domain segregation. Supports DORA operational resilience requirements and AI Act high-risk system obligations.",
+      "Human approval steps before agent write actions, built into the workflow. Every model call, local or external, logged at the gateway: encrypted, hash-chained records whose integrity can be verified on demand, archived monthly with configurable retention. Personal data detected and redacted on-device before it reaches a model. Role-based access with domain segregation. Controls mapped to DORA operational resilience and AI Act high-risk obligations.",
   },
 ];
 
@@ -62,8 +63,8 @@ export function PlatformFeatureGrid() {
         <div className="mb-12">
           <SectionHeader
             eyebrow="Architecture"
-            title="~16 orchestrated services"
-            subtitle="Every component is designed for GDPR-regulated and AI Act-ready environments. No public cloud dependencies."
+            title={`${NEXUS_SERVICE_COUNT} containerised services`}
+            subtitle={`${NEXUS_INFERENCE_EN} Service count as of ${NEXUS_SNAPSHOT_EN}.`}
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

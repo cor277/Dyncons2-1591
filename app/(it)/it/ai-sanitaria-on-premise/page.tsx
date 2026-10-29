@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
 import { breadcrumbSchema } from "@/app/seo";
@@ -88,11 +89,11 @@ export default function AiSanitariaPage() {
             </p>
             <p>
               <strong className="text-[#E6EDF3]">Nexus MDS Core</strong> è la piattaforma AI
-              enterprise progettata specificamente per questi vincoli. Composta da circa 16 servizi
-              Docker orchestrati — inclusi elaborazione locale, generazione esterna sostituibile, pipeline RAG con Weaviate,
-              autenticazione Zero-Trust con Keycloak, e motore di workflow con n8n — può essere
-              deployata su Kubernetes o bare-metal, interamente all&apos;interno del perimetro
-              dell&apos;organizzazione.
+              enterprise progettata specificamente per questi vincoli. Composta da {NEXUS_SERVICE_COUNT} servizi containerizzati — modello locale, pipeline RAG con
+              Weaviate, autenticazione Zero-Trust con Keycloak, motore di workflow con n8n, audit di
+              ogni chiamata al modello — gira su Docker dentro il perimetro dell&apos;organizzazione
+              e passa a Kubernetes quando la scala lo richiede. La generazione avviene su un modello
+              locale o su un endpoint UE sostituibile.
             </p>
             <p>
               Nexus MDS Core è già in produzione per <strong className="text-[#E6EDF3]">Federfarma

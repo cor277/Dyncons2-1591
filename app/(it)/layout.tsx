@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Dynamics Consulting",
   },
   description:
-    "Consulenza AI, governance e compliance per organizzazioni in settori regolamentati, e piattaforme AI che restano dentro il perimetro. Sanità, farmaceutico, energia, CRM enterprise. Nexus MDS Core — 16 servizi, controlli mappati sul GDPR, progettato sui requisiti dell'AI Act.",
+    "Consulenza AI, governance e compliance per organizzazioni in settori regolamentati, e piattaforme AI che restano dentro il perimetro. Sanità, farmaceutico, energia, CRM enterprise. Nexus MDS Core — controlli mappati sul GDPR, progettato sui requisiti dell'AI Act.",
   authors: [{ name: "Corrado Patierno", url: "https://www.dynamicsconsulting.it" }],
   creator: "Corrado Patierno",
   openGraph: {

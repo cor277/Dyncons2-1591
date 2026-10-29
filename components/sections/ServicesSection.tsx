@@ -27,7 +27,7 @@ const services = [
     iconName: "Server",
     title: "Sovereign AI Platform — Nexus MDS Core",
     description:
-      "Sixteen orchestrated services for regulated environments. Local indexing, retrieval and audit; replaceable external generation. In production in pharmaceutical distribution and healthcare.",
+      "The governed AI layer for regulated environments. Indexing, retrieval, identity and audit run locally; generation runs on a local model or a replaceable EU endpoint. In production in pharmaceutical distribution and healthcare.",
     techBadges: ["Nexus MDS Core", "Weaviate", "Keycloak", "n8n"],
     ctaHref: "/platform",
   },

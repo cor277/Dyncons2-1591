@@ -56,7 +56,7 @@ export const schemaOrg = [
       "Enterprise AI architecture",
       "Healthcare AI",
       "Pharmaceutical AI",
-      "GDPR-ready AI",
+      "GDPR for AI systems",
       "AI Act compliance",
       "PLD 2024 product liability for software",
       "RAG pipelines",
@@ -111,7 +111,7 @@ export const schemaOrg = [
     applicationCategory: "BusinessApplication",
     operatingSystem: "Linux, Kubernetes, Docker",
     description:
-      "Enterprise self-hosted AI platform. ~16 orchestrated Docker services including LLM inference, RAG pipeline, Zero-Trust auth, vector search, workflow engine, and observability stack. GDPR-ready and architected for AI Act requirements. Designed for healthcare, pharma, and regulated industries.",
+      "Enterprise self-hosted AI platform: local LLM inference, RAG pipeline, Zero-Trust identity, vector search, workflow engine, and a hash-chained audit of every model call. GDPR controls mapped and architected for AI Act requirements. Designed for healthcare, pharma, and regulated industries.",
     creator: { "@id": ORG_ID },
     url: `${BASE_URL}/platform`,
   },

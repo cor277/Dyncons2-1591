@@ -21,7 +21,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 export const metadata: Metadata = {
   title: { absolute: "Sovereign AI, AI Governance & Compliance | Dynamics Consulting" },
   description:
-    "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. We design and deploy sovereign, on-premise AI systems — Nexus MDS Core, 16 services, GDPR-ready, architected for AI Act and PLD 2024 requirements.",
+    "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. We design and deploy sovereign, on-premise AI systems — Nexus MDS Core, GDPR controls mapped, architected for AI Act and PLD 2024 requirements.",
   alternates: {
     canonical: "https://www.dynamicsconsulting.it",
     languages: {

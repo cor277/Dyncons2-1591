@@ -11,13 +11,13 @@ import { CTAButton } from "@/components/ui/CTAButton";
 export const metadata: Metadata = {
   title: "Agenti AI per finanza e compliance | Nexus MDS Core",
   description:
-    "Governance agenti AI per banche e asset manager: approval gate, audit log immutabile, RBAC, logging LLM. Architettura progettata sui requisiti DORA, MiFID II e AI Act.",
+    "Governance agenti AI per banche e asset manager: approval gate, audit log a prova di manomissione, RBAC, logging LLM. Architettura progettata sui requisiti DORA, MiFID II e AI Act.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-agenti-finanziari" },
   openGraph: {
     images: OG_IMAGE,
     title: "Agenti AI per finanza e compliance | Nexus MDS Core",
     description:
-      "Governance agenti AI per banche e asset manager: approval gate, audit log immutabile, RBAC, logging LLM. Architettura progettata sui requisiti DORA, MiFID II e AI Act.",
+      "Governance agenti AI per banche e asset manager: approval gate, audit log a prova di manomissione, RBAC, logging LLM. Architettura progettata sui requisiti DORA, MiFID II e AI Act.",
     url: "https://www.dynamicsconsulting.it/it/ai-agenti-finanziari",
     type: "website",
     locale: "it_IT",
@@ -33,7 +33,7 @@ const schema = [
     "@id": `${PAGE_URL}#webpage`,
     url: PAGE_URL,
     name: "Agenti AI per finanza e compliance",
-    description: "Governance agenti AI per banche e asset manager: approval gate, audit log immutabile, RBAC, logging LLM. Architettura progettata sui requisiti DORA, MiFID II e AI Act.",
+    description: "Governance agenti AI per banche e asset manager: approval gate, audit log a prova di manomissione, RBAC, logging LLM. Architettura progettata sui requisiti DORA, MiFID II e AI Act.",
     inLanguage: "it",
     isPartOf: { "@id": WEBSITE_ID },
     about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }],
@@ -81,8 +81,8 @@ export default function AiAgentiFinanziariPage() {
                 prima di qualsiasi azione di scrittura dell&apos;agente
               </li>
               <li>
-                <strong className="text-[#E6EDF3]">Audit trail immutabile</strong> su Postgres
-                con periodo di retention configurabile
+                <strong className="text-[#E6EDF3]">Audit trail a prova di manomissione</strong> su
+                Postgres, cifrato e concatenato, con periodo di retention configurabile
               </li>
               <li>
                 <strong className="text-[#E6EDF3]">RBAC con segregazione di dominio</strong>{" "}

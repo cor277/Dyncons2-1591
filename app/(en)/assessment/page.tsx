@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
@@ -228,7 +229,7 @@ export default function AssessmentPage() {
             <p className="mt-4">Designs and maintains two proprietary tools:</p>
             <p className="mt-4">
               <strong className="text-[#E6EDF3]">Nexus MDS Core</strong> — an artificial
-              intelligence platform for regulated environments, sixteen orchestrated services, in
+              intelligence platform for regulated environments, {NEXUS_SERVICE_COUNT} containerised services, in
               production at Federfarma Lombarda, the association of pharmacy owners of the provinces
               of Milan, Lodi and Monza Brianza: over one thousand pharmacies, around two thousand
               queries per day, an explicit regulatory version chain, personal data never indexed.

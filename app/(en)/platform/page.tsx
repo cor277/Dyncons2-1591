@@ -18,13 +18,13 @@ import { NexusGraphExplorer } from "@/components/sections/NexusGraphExplorer";
 export const metadata: Metadata = {
   title: "Nexus MDS Core — On-Premise AI Platform",
   description:
-    "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, architected for AI Act requirements.",
+    "Self-hosted enterprise AI platform: local LLM inference, RAG pipeline, Zero-Trust auth, agent governance and audit. GDPR controls mapped, architected for AI Act requirements.",
   alternates: { canonical: "https://www.dynamicsconsulting.it/platform" },
   openGraph: {
     images: OG_IMAGE,
     title: "Nexus MDS Core — On-Premise AI Platform",
     description:
-      "Self-hosted enterprise AI platform: 16 Docker services including LLM inference, RAG pipeline, Zero-Trust auth, agent governance. GDPR-ready, architected for AI Act requirements.",
+      "Self-hosted enterprise AI platform: local LLM inference, RAG pipeline, Zero-Trust auth, agent governance and audit. GDPR controls mapped, architected for AI Act requirements.",
   },
 };
 
@@ -40,16 +40,18 @@ const schemaOrg = {
   name: "Nexus MDS Core",
   version: "2.0",
   applicationCategory: "BusinessApplication",
-  operatingSystem: "Linux (Docker / Kubernetes)",
+  operatingSystem: "Linux (Docker Compose; Kubernetes when scale requires it)",
   offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
   creator: { "@id": ORG_ID },
   featureList: [
-    "LLM Inference with vLLM and OpenWebUI",
+    "Local LLM inference with llama.cpp and Open WebUI",
+    "Generation on a local model or a replaceable EU endpoint",
     "Zero-Trust Auth with Keycloak OIDC/PKCE and APISIX",
-    "Vector Search with Weaviate (RAG production-ready)",
-    "Workflow automation with n8n agentic, Airflow, Apache Hop",
-    "Enterprise storage with MinIO S3 and PostgreSQL",
-    "Observability with Grafana, Uptime Kuma, Velero",
+    "Vector search and RAG with Weaviate, local embeddings and Apache Tika",
+    "Workflow automation with n8n and Apache Hop",
+    "Enterprise storage with MinIO S3, PostgreSQL and Dremio",
+    "Hash-chained audit log of every model call",
+    "On-device personal-data redaction",
   ],
 };
 
@@ -57,7 +59,7 @@ const useCases = [
   {
     title: "Healthcare & Pharma",
     description:
-      "RAG pipeline on clinical and pharmaceutical documents. Authentication designed for GDPR requirements. Already in production for Federfarma Lombarda and CureSicure — healthcare portal with live patient data integration across Italian clinical sources including PNE-AGENAS, SDO/NSIS, and Ministry of Health Open Data.",
+      "RAG pipeline on clinical and pharmaceutical documents. Authentication designed for GDPR requirements. In production for Federfarma Lombarda, and for CureSicure — a service that reads public hospital data (PNE-AGENAS, SDO/NSIS, Ministry of Health open data) to point patients to the facilities that measure best for their condition.",
     badges: ["GDPR", "OCR Pipeline", "Vector Search"],
   },
   {
@@ -69,7 +71,7 @@ const useCases = [
   {
     title: "Finance & Regulated Services",
     description:
-      "RAG and agent systems for banks, asset managers, and insurance. Built with governance as the starting constraint, not a feature added at the end. Human-in-the-loop approval gates, immutable audit trail, RBAC segregation between front office / risk / compliance, full LLM call logging. DORA-aligned for operational resilience. MiFID II-aware for decision traceability. AI Act-ready for high-risk system obligations. EU data residency, no hyperscaler lock-in.",
+      "RAG and agent systems for banks, asset managers, and insurance. Built with governance as the starting constraint, not a feature added at the end. Human-in-the-loop approval gates, tamper-evident audit trail, RBAC segregation between front office / risk / compliance, full LLM call logging. Controls mapped to DORA operational resilience, MiFID II decision traceability and AI Act high-risk obligations. EU data residency, no hyperscaler lock-in.",
     badges: ["DORA", "MiFID II", "Audit trail", "Human-in-the-loop", "RBAC"],
   },
   {
@@ -81,8 +83,8 @@ const useCases = [
   {
     title: "Regulated Industries",
     description:
-      "AI Act-ready infrastructure with EU data residency, immutable audit trail, zero public cloud dependency.",
-    badges: ["AI Act", "EU Data Residency", "ISO 27001 Ready"],
+      "Infrastructure architected for AI Act requirements: EU data residency, tamper-evident audit trail, generation on a local model or a replaceable EU endpoint.",
+    badges: ["AI Act", "EU Data Residency", "ISO 27001 controls mapped"],
   },
 ];
 
@@ -124,10 +126,10 @@ export default function PlatformPage() {
       <section className="py-12 bg-[#0D1117] border-t border-[#30363D]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mb-6 text-center">
-            Compliance &amp; Certifications
+            Controls mapped — no certification claimed
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {["GDPR", "AI Act Ready", "ISO 27001 Ready", "EU Data Residency"].map((b) => (
+            {["GDPR controls mapped", "AI Act controls mapped", "ISO/IEC 27001:2022 controls mapped", "EU data residency"].map((b) => (
               <TechBadge key={b} label={b} variant="cyan" />
             ))}
           </div>
@@ -217,7 +219,7 @@ export default function PlatformPage() {
 
       <CTASection
         title="Ready to see Nexus in action?"
-        subtitle="We show how it deploys in production on Kubernetes or bare-metal, with all 16 services active."
+        subtitle="We show it running in production: Docker on a single server, every service active."
         ctaLabel="Request a demo →"
         ctaHref="/contact"
       />

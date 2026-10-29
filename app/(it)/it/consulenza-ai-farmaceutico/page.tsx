@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
 import { breadcrumbSchema } from "@/app/seo";
@@ -80,20 +81,18 @@ export default function ConsulenzaAiFarmaceuticoPage() {
             </p>
             <p>
               Il nostro approccio si basa su <strong className="text-[#E6EDF3]">Nexus MDS Core</strong>,
-              una piattaforma composta da circa 16 servizi Docker orchestrati che include:
+              una piattaforma di {NEXUS_SERVICE_COUNT} servizi containerizzati che include:
             </p>
             <ul className="list-disc list-inside space-y-2 text-[#7D8FA3]">
               <li>Pipeline RAG per interrogazione intelligente di documenti farmaceutici</li>
               <li>Workflow agentici con n8n per automazione dei processi regolatori</li>
-              <li>Elaborazione locale, generazione esterna sostituibile — i dati personali e riservati non escono mai dal perimetro</li>
+              <li>Indicizzazione, retrieval e audit nel perimetro; generazione su modello locale o su endpoint UE sostituibile</li>
               <li>Autenticazione Zero-Trust con Keycloak OIDC/PKCE</li>
               <li>Vector search con Weaviate per ricerca semantica su base documentale</li>
             </ul>
             <p>
-              A differenza delle soluzioni basate su Azure, AWS o GCP, con Nexus MDS Core i dati
-              restano in Italia, sotto il controllo dell&apos;organizzazione. Non c&apos;è dipendenza
-              da hyperscaler, non c&apos;è rischio di lock-in, e la conformità è verificabile
-              per design.
+              A differenza delle soluzioni basate su Azure, AWS o GCP, con Nexus MDS Core i dati restano sotto il controllo dell&apos;organizzazione, nell&apos;Unione Europea. Non c&apos;è dipendenza
+              da hyperscaler, non c&apos;è rischio di lock-in, e i controlli sono verificabili per design.
             </p>
             <p>
               Nexus MDS Core è già in produzione per Federfarma Lombarda, dove alimenta una pipeline

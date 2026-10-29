@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -38,7 +39,7 @@ const schema = {
           name: "Cosa si intende per sovereign AI nel settore farmaceutico?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Per sovereign AI nel pharma si intende un\u2019infrastruttura di intelligenza artificiale che l\u2019azienda farmaceutica possiede, governa e controlla interamente on-premise, senza dipendenza da cloud provider esterni. I dati di farmacovigilanza, clinical trials e proprietà intellettuale non escono mai dal perimetro aziendale.",
+            text: "Per sovereign AI nel pharma si intende un\u2019infrastruttura di intelligenza artificiale che l\u2019azienda farmaceutica possiede, governa e controlla: indicizzazione, retrieval, identità e audit on-premise, generazione su un modello locale o su un endpoint UE sostituibile. I documenti di farmacovigilanza, clinical trials e proprietà intellettuale restano indicizzati nel perimetro aziendale.",
           },
         },
         {
@@ -141,14 +142,12 @@ export default function SovereignAiPharmaItaliaPage() {
               <p>
                 La <strong className="text-[#E6EDF3]">sovereign AI</strong> —
                 intelligenza artificiale sovrana — risponde a questa esigenza con
-                un principio architetturale preciso: l&apos;intera
-                infrastruttura AI risiede on-premise, sotto il controllo
-                esclusivo dell&apos;organizzazione. Nessun dato attraversa reti
-                pubbliche. Nessun modello viene addestrato su server di terze
-                parti. Ogni componente — dall&apos;inferenza LLM alla ricerca
-                vettoriale, dall&apos;orchestrazione dei workflow
-                all&apos;autenticazione — opera all&apos;interno del perimetro
-                aziendale.
+                un principio architetturale preciso: l&apos;infrastruttura AI risiede on-premise, sotto il controllo
+                dell&apos;organizzazione. Indicizzazione, ricerca vettoriale,
+                orchestrazione dei workflow, autenticazione e audit operano
+                all&apos;interno del perimetro aziendale; la generazione gira su un
+                modello locale o, se l&apos;organizzazione lo sceglie, su un
+                endpoint UE sostituibile.
               </p>
               <p>
                 Per le aziende farmaceutiche mid-market italiane — quelle con
@@ -258,10 +257,9 @@ export default function SovereignAiPharmaItaliaPage() {
                 documentali crescenti. Una pipeline RAG on-premise consente di
                 interrogare automaticamente i database di segnalazioni,
                 classificare gli eventi per gravità, identificare pattern
-                emergenti e generare report per AIFA e EMA — il tutto senza che
-                i dati dei pazienti lascino il perimetro aziendale. Il vantaggio
-                competitivo è duplice: riduzione dei tempi di analisi fino
-                all&apos;80% e controlli GDPR mappati by design.
+                emergenti e generare report per AIFA e EMA — il tutto con i dati dei pazienti indicizzati nel perimetro aziendale e la
+                generazione su modello locale. Il vantaggio è duplice: tempi di
+                analisi più brevi e controlli GDPR mappati by design.
               </p>
               <p>
                 <strong className="text-[#E6EDF3]">Gestione documentale per clinical trials.</strong>{" "}
@@ -311,17 +309,16 @@ export default function SovereignAiPharmaItaliaPage() {
                 <strong className="text-[#E6EDF3]">Dynamics Consulting</strong>{" "}
                 progettata specificamente per il deployment di AI sovrana in
                 settori regolamentati. Non è un prodotto SaaS: è
-                un&apos;architettura modulare composta da circa 16 servizi
-                Docker orchestrati, deployabile su Kubernetes o bare-metal,
-                interamente on-premise.
+                un&apos;architettura modulare composta da {NEXUS_SERVICE_COUNT} servizi
+                containerizzati su Docker, on-premise, con passaggio a Kubernetes
+                quando la scala lo richiede.
               </p>
               <p>I componenti principali rilevanti per il pharma includono:</p>
               <ul className="list-disc list-inside space-y-2 text-[#7D8FA3]">
                 <li>
-                  <strong className="text-[#E6EDF3]">Elaborazione locale, generazione
-                  esterna sostituibile</strong>{" "}
-                  con modelli open-weight (Llama 3, Mistral, Qwen) eseguiti
-                  localmente
+                  <strong className="text-[#E6EDF3]">Elaborazione locale, generazione a scelta</strong>{" "}
+                  su modello open-weight locale (llama.cpp, Qwen di default) o su
+                  endpoint UE sostituibile
                 </li>
                 <li>
                   <strong className="text-[#E6EDF3]">Pipeline RAG</strong> con
@@ -339,9 +336,9 @@ export default function SovereignAiPharmaItaliaPage() {
                   authentication, role-based access control granulare
                 </li>
                 <li>
-                  <strong className="text-[#E6EDF3]">Observability completa</strong>{" "}
-                  con Grafana, Prometheus e Loki — monitoring, alerting e audit
-                  trail per ogni interazione con il sistema AI
+                  <strong className="text-[#E6EDF3]">Audit e operatività</strong>{" "}
+                  — registro cifrato e concatenato di ogni chiamata al modello,
+                  healthcheck con riavvio automatico, backup programmati
                 </li>
                 <li>
                   <strong className="text-[#E6EDF3]">API gateway</strong> con
@@ -527,10 +524,11 @@ export default function SovereignAiPharmaItaliaPage() {
                 <p>
                   Per sovereign AI nel pharma si intende un&apos;infrastruttura
                   di intelligenza artificiale che l&apos;azienda farmaceutica
-                  possiede, governa e controlla interamente on-premise, senza
-                  dipendenza da cloud provider esterni. I dati di
-                  farmacovigilanza, clinical trials e proprietà intellettuale
-                  non escono mai dal perimetro aziendale.
+                  possiede, governa e controlla: indicizzazione, retrieval,
+                  identità e audit on-premise, generazione su un modello locale o su
+                  un endpoint UE sostituibile. I documenti di farmacovigilanza,
+                  clinical trials e proprietà intellettuale restano indicizzati nel
+                  perimetro aziendale.
                 </p>
               </div>
 
@@ -633,7 +631,7 @@ export default function SovereignAiPharmaItaliaPage() {
               <TechBadge label="On-Premise" />
               <TechBadge label="Farmacovigilanza" />
               <TechBadge label="Clinical Trials" />
-              <TechBadge label="vLLM" />
+              <TechBadge label="llama.cpp" />
               <TechBadge label="RAG Pipeline" />
             </div>
           </div>

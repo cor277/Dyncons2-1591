@@ -42,7 +42,7 @@ const faqSchema = {
       name: "Does Nexus MDS Core support open-source LLMs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Nexus MDS Core integrates vLLM and OpenWebUI for inference of open-source models (LLaMA, Mistral, DeepSeek and others) on dedicated GPU. In a fully local deployment nothing about an answer leaves the enterprise perimeter; in a hybrid deployment only the final generation step calls an external endpoint, and that component is replaceable.",
+        text: "Yes. Nexus MDS Core runs open-weight models locally through llama.cpp, with Open WebUI as the interface; a larger GPU takes a larger model. In a fully local deployment nothing about an answer leaves the enterprise perimeter; in a hybrid deployment only the final generation step calls an external endpoint, and that component is replaceable.",
       },
     },
     {
@@ -66,7 +66,7 @@ const faqSchema = {
       name: "How do you handle agent governance for internal audit and four-eyes requirements?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We design agent architectures with human-in-the-loop approval gates before any write action, immutable audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Aligned with DORA, MiFID II, and AI Act requirements.",
+        text: "We design agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Controls mapped to DORA, MiFID II and AI Act requirements.",
       },
     },
   ],
@@ -128,9 +128,9 @@ Every response is logged: who asked, when, which document answered. This is not 
     title: "Finance & regulated data rooms",
     description: `An AI agent acting on financial data is not a chatbot. It is a system making operational decisions. Internal audit, risk management, and compliance will ask: who authorised this action? Which model decided? On what data? Is the log immutable? Was the four-eyes principle enforced?
 
-We design agent architectures with human-in-the-loop approval gates before any write action, immutable audit trails with configurable retention, RBAC with segregation between front office / risk / compliance / IT, and full LLM call logging: input, output, model version, timestamp — for every inference.
+We design agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office / risk / compliance / IT, and full LLM call logging: input, output, model version, timestamp — for every inference.
 
-Compliance alignment: DORA (operational resilience, incident logging), MiFID II (decision traceability), AI Act (high-risk system requirements), GDPR (data minimisation, right to explanation).`,
+Controls mapped to: DORA (operational resilience, incident logging), MiFID II (decision traceability), AI Act (high-risk system requirements), GDPR (data minimisation, right to explanation).`,
     tags: ["Audit trail", "Human-in-the-loop", "DORA", "MiFID II", "RBAC", "AI Act"],
   },
 ];
@@ -148,7 +148,7 @@ const faqs = [
   },
   {
     q: "Does Nexus MDS Core support open-source LLMs?",
-    a: "Yes. Nexus MDS Core integrates vLLM and OpenWebUI for inference of open-source models (LLaMA, Mistral, DeepSeek and others) on dedicated GPU. In a fully local deployment nothing about an answer leaves the enterprise perimeter; in a hybrid deployment only the final generation step calls an external endpoint, and that component is replaceable.",
+    a: "Yes. Nexus MDS Core runs open-weight models locally through llama.cpp, with Open WebUI as the interface; a larger GPU takes a larger model. In a fully local deployment nothing about an answer leaves the enterprise perimeter; in a hybrid deployment only the final generation step calls an external endpoint, and that component is replaceable.",
   },
   {
     q: "We have data everywhere and no structure — where do we actually start?",
@@ -160,7 +160,7 @@ const faqs = [
   },
   {
     q: "How do you handle agent governance for internal audit and four-eyes requirements?",
-    a: "We design agent architectures with human-in-the-loop approval gates before any write action, immutable audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Aligned with DORA, MiFID II, and AI Act requirements.",
+    a: "We design agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Controls mapped to DORA, MiFID II and AI Act requirements.",
   },
 ];
 
