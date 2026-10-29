@@ -262,7 +262,7 @@ export default function Legge132Article() {
               <p className="mt-4">
                 Per le aziende farmaceutiche, la combinazione di AI Act, Legge 132/2025, GDPR e
                 NIS2 crea un quadro normativo che rende l&apos;infrastruttura{" "}
-                <Link href="/sovereign-ai-pharma-italia" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/ai-sovrana-pharma" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   AI sovrana
                 </Link>{" "}
                 il modo più diretto di sapere e dimostrare dove girano i dati e chi li controlla.

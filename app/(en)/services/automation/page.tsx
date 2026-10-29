@@ -27,7 +27,7 @@ const faqSchema = {
       name: "How do you identify which processes to automate first?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We start with process mining on your existing logs to identify high-volume, high-error, and high-cost processes objectively. We then score candidates on automation feasibility and ROI to build a prioritised roadmap.",
+        text: "Dynamics Consulting starts with process mining on your existing logs to identify high-volume, high-error, and high-cost processes objectively. It then scores candidates on automation feasibility and ROI to build a prioritised roadmap.",
       },
     },
     {
@@ -35,7 +35,7 @@ const faqSchema = {
       name: "Do automations require changes to our existing systems?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not usually. RPA bots interact at the UI or API layer, so no system modifications are needed. Where APIs exist we prefer them for reliability, but we can automate systems with no API at all.",
+        text: "Not usually. RPA bots interact at the UI or API layer, so no system modifications are needed. Where APIs exist Dynamics Consulting prefers them for reliability, but it can automate systems with no API at all.",
       },
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       name: "How do you ensure automations remain reliable over time?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We build comprehensive exception handling, alerting, and self-healing logic into every bot. Ongoing managed services include bot monitoring, break-fix SLAs, and periodic reviews to adapt automations to system changes.",
+        text: "Dynamics Consulting builds comprehensive exception handling, alerting, and self-healing logic into every bot. Ongoing managed services include bot monitoring, break-fix SLAs, and periodic reviews to adapt automations to system changes.",
       },
     },
   ],
@@ -62,7 +62,7 @@ export default function AutomationPage() {
   return (
     <ServicePageLayout
       title="Intelligent Automation"
-      intro="Manual, repetitive work is the enemy of scale. We design and deploy automation programmes that combine RPA, process mining, and AI to systematically eliminate low-value labour — with a return that is measured on each process, not promised in advance."
+      intro="Manual, repetitive work is the enemy of scale. Dynamics Consulting designs and deploys automation programmes that combine RPA, process mining, and AI to systematically eliminate low-value labour — with a return that is measured on each process, not promised in advance."
       tech={[
         "UiPath",
         "Power Automate",
@@ -123,15 +123,15 @@ export default function AutomationPage() {
         },
         {
           q: "How do you identify which processes to automate first?",
-          a: "We start with process mining on your existing logs to identify high-volume, high-error, and high-cost processes objectively. We then score candidates on automation feasibility and ROI to build a prioritised roadmap.",
+          a: "Dynamics Consulting starts with process mining on your existing logs to identify high-volume, high-error, and high-cost processes objectively. It then scores candidates on automation feasibility and ROI to build a prioritised roadmap.",
         },
         {
           q: "Do automations require changes to our existing systems?",
-          a: "Not usually. RPA bots interact at the UI or API layer, so no system modifications are needed. Where APIs exist we prefer them for reliability, but we can automate systems with no API at all.",
+          a: "Not usually. RPA bots interact at the UI or API layer, so no system modifications are needed. Where APIs exist Dynamics Consulting prefers them for reliability, but it can automate systems with no API at all.",
         },
         {
           q: "How do you ensure automations remain reliable over time?",
-          a: "We build comprehensive exception handling, alerting, and self-healing logic into every bot. Ongoing managed services include bot monitoring, break-fix SLAs, and periodic reviews to adapt automations to system changes.",
+          a: "Dynamics Consulting builds comprehensive exception handling, alerting, and self-healing logic into every bot. Ongoing managed services include bot monitoring, break-fix SLAs, and periodic reviews to adapt automations to system changes.",
         },
       ]}
       faqSchema={faqSchema}

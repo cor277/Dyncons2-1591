@@ -73,7 +73,7 @@ export default function IatpCaseStudyIt() {
             </h1>
             <p className="text-lg text-[#7D8FA3]">
               Una piattaforma legacy, cresciuta per anni senza documentazione, andava capita,
-              documentata e modernizzata senza il team che l’aveva sviluppata. Abbiamo costruito
+              documentata e modernizzata senza il team che l’aveva sviluppata. Dynamics Consulting ha costruito
               una pipeline basata sull’AI che ha ricostruito il sistema con il reverse engineering,
               ha generato in automatico i documenti di analisi e ha poi messo in piedi un workflow
               di sviluppo e test interamente guidato dall’AI.
@@ -120,7 +120,7 @@ export default function IatpCaseStudyIt() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Fase 1 — Reverse engineering con l’AI</h2>
               <p>
-                Abbiamo usato Nexus MDS Core come spina dorsale analitica. L’intero codice legacy è
+                Dynamics Consulting ha usato Nexus MDS Core come spina dorsale analitica. L’intero codice legacy è
                 stato acquisito in una pipeline RAG basata su Weaviate, creando una base di
                 conoscenza interrogabile semanticamente su ogni modulo, funzione, flusso di dati e
                 regola di business contenuta nel codice.
@@ -151,7 +151,7 @@ export default function IatpCaseStudyIt() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Fase 2 — Pipeline di sviluppo guidata dall’AI</h2>
               <p>
-                Con il sistema compreso e documentato a fondo, abbiamo implementato una pipeline di
+                Con il sistema compreso e documentato a fondo, Dynamics Consulting ha implementato una pipeline di
                 sviluppo moderna, potenziata dall’AI:
               </p>
               <ul className="list-disc list-inside space-y-3 mt-4">

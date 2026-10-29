@@ -18,19 +18,19 @@ export const metadata: Metadata = {
 const values = [
   {
     title: "Outcomes over outputs",
-    body: "We measure success by business impact, not by lines of code or slide decks. Every engagement starts with a clear definition of what success looks like and ends when it is achieved.",
+    body: "Dynamics Consulting measures success by business impact, not by lines of code or slide decks. Every engagement starts with a clear definition of what success looks like and ends when it is achieved.",
   },
   {
     title: "Radical transparency",
-    body: "We tell clients what they need to hear. If a simpler solution exists, we say so. If a timeline is unrealistic, we say so. Long-term trust is built on honesty.",
+    body: "Dynamics Consulting tells clients what they need to hear. If a simpler solution exists, it says so. If a timeline is unrealistic, it says so. Long-term trust is built on honesty.",
   },
   {
     title: "Sovereign AI by default",
-    body: "Organisations in regulated industries have the right to run AI on their own infrastructure, under their own governance, without dependency on hyperscalers. This conviction shapes every architecture we design.",
+    body: "Organisations in regulated industries have the right to run AI on their own infrastructure, under their own governance, without dependency on hyperscalers. This conviction shapes every architecture Dynamics Consulting designs.",
   },
   {
     title: "Deep specialisation",
-    body: "We work with a selective network of proven specialists rather than growing a large generalist team. Every project gets the right expertise, not the next available consultant.",
+    body: "Dynamics Consulting works with a selective network of proven specialists rather than growing a large generalist team. Every project gets the right expertise, not the next available consultant.",
   },
 ];
 
@@ -128,7 +128,7 @@ export default function AboutPage() {
         {/* Timeline */}
         <section className="py-20 px-6">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-12">Our story</p>
+            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-12">The story</p>
             <div className="space-y-12">
               {timeline.map((item) => (
                 <div key={item.period} className="flex gap-6">
@@ -156,7 +156,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <div className="text-xl font-bold text-[#E6EDF3] mb-1">Corrado Patierno</div>
-                <div className="text-sm text-[#00B4D8] mb-4">Founder &amp; CEO</div>
+                <div className="text-sm text-[#00B4D8] mb-4">Founder &amp; Principal Architect</div>
                 <p className="text-[#7D8FA3] leading-relaxed mb-5">
                   Technology consultant, AI architect, MISE-certified Innovation Manager, and author of{" "}
                   <em>Logistica Fluida</em>. Over 25 years of hands-on delivery across enterprise systems,
@@ -178,11 +178,11 @@ export default function AboutPage() {
         {/* Network model */}
         <section className="py-16 px-6">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">How we work</p>
+            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">How Dynamics Consulting works</p>
             <h2 className="text-2xl font-bold text-[#E6EDF3] mb-5">Principal-led, network-backed</h2>
             <p className="text-[#7D8FA3] leading-relaxed text-lg mb-5">
               Every Dynamics Consulting engagement is led directly by Corrado Patierno. Depending on
-              scope, we bring in a curated network of senior independent specialists across AI engineering,
+              scope, Dynamics Consulting brings in a curated network of senior independent specialists across AI engineering,
               data architecture, cloud infrastructure, and enterprise integration, each with production
               track records in regulated industries.
             </p>
@@ -205,7 +205,7 @@ export default function AboutPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-3">Principles</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#E6EDF3]">Our values</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#E6EDF3]">Values</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               {values.map((v) => (

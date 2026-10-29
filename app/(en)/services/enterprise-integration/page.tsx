@@ -47,11 +47,11 @@ const tech = ["n8n", "APISIX", "Talend ESB", "EventStoreDB", "Kafka", "Azure Log
 const faqs = [
   {
     q: "When does it make sense to replace a legacy ESB rather than extend it?",
-    a: "When maintenance cost exceeds the cost of migration, when the ESB is a delivery bottleneck, or when it cannot support event-driven patterns. We evaluate both paths before recommending either.",
+    a: "When maintenance cost exceeds the cost of migration, when the ESB is a delivery bottleneck, or when it cannot support event-driven patterns. Dynamics Consulting evaluates both paths before recommending either.",
   },
   {
     q: "Can you integrate Dynamics 365 with on-premise systems without Azure?",
-    a: "Yes. We use self-hosted middleware (n8n, APISIX, custom connectors) to bridge Dynamics 365 with on-premise systems, avoiding dependency on Azure PaaS services.",
+    a: "Yes. Dynamics Consulting uses self-hosted middleware (n8n, APISIX, custom connectors) to bridge Dynamics 365 with on-premise systems, avoiding dependency on Azure PaaS services.",
   },
 ];
 

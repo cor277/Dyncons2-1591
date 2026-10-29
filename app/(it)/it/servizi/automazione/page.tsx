@@ -30,15 +30,15 @@ const faqs = [
   },
   {
     q: "Come capite quali processi automatizzare per primi?",
-    a: "Partiamo dal process mining sui log che hai già, per individuare in modo oggettivo i processi con più volumi, più errori e più costi. Poi valutiamo i candidati per fattibilità dell'automazione e ROI, e ne ricaviamo una roadmap con le priorità.",
+    a: "Dynamics Consulting parte dal process mining sui log che hai già, per individuare in modo oggettivo i processi con più volumi, più errori e più costi. Poi valuta i candidati per fattibilità dell'automazione e ROI, e ne ricava una roadmap con le priorità.",
   },
   {
     q: "Le automazioni richiedono modifiche ai sistemi esistenti?",
-    a: "Di solito no. I bot RPA lavorano a livello di interfaccia o di API, quindi i sistemi non vanno modificati. Dove esistono API le preferiamo perché sono più affidabili, ma possiamo automatizzare anche sistemi che non ne hanno affatto.",
+    a: "Di solito no. I bot RPA lavorano a livello di interfaccia o di API, quindi i sistemi non vanno modificati. Dove esistono API Dynamics Consulting le preferisce perché sono più affidabili, ma può automatizzare anche sistemi che non ne hanno affatto.",
   },
   {
     q: "Come vi assicurate che le automazioni restino affidabili nel tempo?",
-    a: "In ogni bot costruiamo una gestione completa delle eccezioni, alerting e logica di auto-ripristino. I servizi gestiti continuativi comprendono il monitoraggio dei bot, SLA di break-fix e revisioni periodiche per adattare le automazioni ai cambiamenti dei sistemi.",
+    a: "In ogni bot Dynamics Consulting costruisce una gestione completa delle eccezioni, alerting e logica di auto-ripristino. I servizi gestiti continuativi comprendono il monitoraggio dei bot, SLA di break-fix e revisioni periodiche per adattare le automazioni ai cambiamenti dei sistemi.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function AutomazionePage() {
     <ServicePageLayout
       locale="it"
       title="Automazione intelligente"
-      intro="Il lavoro manuale e ripetitivo è il nemico della scala. Progettiamo e mettiamo in produzione programmi di automazione che combinano RPA, process mining e AI per eliminare in modo sistematico il lavoro a basso valore, con un ritorno che si misura su ogni processo, non si promette in anticipo."
+      intro="Il lavoro manuale e ripetitivo è il nemico della scala. Dynamics Consulting progetta e mette in produzione programmi di automazione che combinano RPA, process mining e AI per eliminare in modo sistematico il lavoro a basso valore, con un ritorno che si misura su ogni processo, non si promette in anticipo."
       tech={[
         "UiPath",
         "Power Automate",

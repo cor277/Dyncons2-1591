@@ -32,19 +32,19 @@ export const metadata: Metadata = {
 const values = [
   {
     title: "Risultati, non deliverable",
-    body: "Misuriamo il successo sull’impatto per il business, non sulle righe di codice o sulle slide. Ogni incarico parte da una definizione chiara di cosa significa successo e finisce quando lo si raggiunge.",
+    body: "Dynamics Consulting misura il successo sull’impatto per il business, non sulle righe di codice o sulle slide. Ogni incarico parte da una definizione chiara di cosa significa successo e finisce quando lo si raggiunge.",
   },
   {
     title: "Trasparenza radicale",
-    body: "Diciamo ai clienti quello che hanno bisogno di sentirsi dire. Se esiste una soluzione più semplice, lo diciamo. Se una tempistica non è realistica, lo diciamo. La fiducia nel lungo periodo si costruisce sull’onestà.",
+    body: "Dynamics Consulting dice ai clienti quello che hanno bisogno di sentirsi dire. Se esiste una soluzione più semplice, lo dice. Se una tempistica non è realistica, lo dice. La fiducia nel lungo periodo si costruisce sull’onestà.",
   },
   {
     title: "AI sovrana per impostazione",
-    body: "Le organizzazioni dei settori regolati hanno il diritto di far girare l’AI sulla propria infrastruttura, sotto la propria governance, senza dipendere dagli hyperscaler. È una convinzione che orienta ogni architettura che progettiamo.",
+    body: "Le organizzazioni dei settori regolati hanno il diritto di far girare l’AI sulla propria infrastruttura, sotto la propria governance, senza dipendere dagli hyperscaler. È una convinzione che orienta ogni architettura che Dynamics Consulting progetta.",
   },
   {
     title: "Specializzazione profonda",
-    body: "Lavoriamo con una rete selezionata di specialisti di comprovata esperienza invece di far crescere un grande team generalista. Ogni progetto riceve le competenze giuste, non il primo consulente disponibile.",
+    body: "Dynamics Consulting lavora con una rete selezionata di specialisti di comprovata esperienza invece di far crescere un grande team generalista. Ogni progetto riceve le competenze giuste, non il primo consulente disponibile.",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function ChiSiamoPage() {
         {/* Timeline */}
         <section className="py-20 px-6">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-12">La nostra storia</p>
+            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-12">La storia</p>
             <div className="space-y-12">
               {timeline.map((item) => (
                 <div key={item.period} className="flex gap-6">
@@ -165,7 +165,7 @@ export default function ChiSiamoPage() {
               </div>
               <div>
                 <div className="text-xl font-bold text-[#E6EDF3] mb-1">Corrado Patierno</div>
-                <div className="text-sm text-[#00B4D8] mb-4">Founder &amp; CEO</div>
+                <div className="text-sm text-[#00B4D8] mb-4">Fondatore e Principal Architect</div>
                 <p className="text-[#7D8FA3] leading-relaxed mb-5">
                   Consulente tecnologico, architetto AI, Innovation Manager certificato MISE e autore di{" "}
                   <em>Logistica Fluida</em>. Oltre 25 anni di delivery sul campo tra sistemi enterprise,
@@ -187,11 +187,11 @@ export default function ChiSiamoPage() {
         {/* Network model */}
         <section className="py-16 px-6">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">Come lavoriamo</p>
+            <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-4">Come lavora Dynamics Consulting</p>
             <h2 className="text-2xl font-bold text-[#E6EDF3] mb-5">Guida diretta, rete di specialisti</h2>
             <p className="text-[#7D8FA3] leading-relaxed text-lg mb-5">
               Ogni incarico di Dynamics Consulting è guidato direttamente da Corrado Patierno. A
-              seconda del perimetro, coinvolgiamo una rete selezionata di specialisti indipendenti
+              seconda del perimetro, Dynamics Consulting coinvolge una rete selezionata di specialisti indipendenti
               senior in ingegneria AI, architettura dei dati, infrastruttura cloud e integrazione
               enterprise, ognuno con esperienze in produzione nei settori regolati.
             </p>
@@ -214,7 +214,7 @@ export default function ChiSiamoPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-[#00B4D8] text-sm font-semibold uppercase tracking-widest mb-3">Principi</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#E6EDF3]">I nostri valori</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#E6EDF3]">I valori</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               {values.map((v) => (

@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: "Bisogna adottare Nexus MDS Core?",
-    a: "No. Gran parte del lavoro di advisory si svolge su sistemi costruiti da altri fornitori e lì rimane. Nexus MDS Core è la strada implementativa quando l’analisi conclude che deve cambiare l’architettura: è una piattaforma che progettiamo e gestiamo, non un prerequisito della consulenza.",
+    a: "No. Gran parte del lavoro di advisory si svolge su sistemi costruiti da altri fornitori e lì rimane. Nexus MDS Core è la strada implementativa quando l’analisi conclude che deve cambiare l’architettura: è una piattaforma che Dynamics Consulting progetta e gestisce, non un prerequisito della consulenza.",
   },
   {
     q: "Che differenza c’è fra CEPF e Calibra?",
@@ -195,7 +195,7 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
                 variant="primary"
               />
               <div className="flex items-center gap-6 sm:self-center">
-                <TextLink label="Scrivimi &rarr;" href="/contact" />
+                <TextLink label="Scrivimi &rarr;" href="/it/contatti" />
                 <TextLink label="This page in English →" href="/services/governance-advisory" />
               </div>
             </div>
@@ -254,7 +254,7 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
         <section className="px-6 py-16 border-t border-[#21262D]">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-8">
-              Che cosa facciamo, concretamente
+              Che cosa fa Dynamics Consulting, concretamente
             </h2>
             <ul className="grid gap-5 sm:grid-cols-2">
               {LAVORO.map((l) => (
@@ -417,7 +417,7 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
               governance e revisione architetturale lungo la vita di un programma, anche nella forma
               del{" "}
               <Link
-                href="/fractional-cto-milano"
+                href="/it/fractional-cto-milano"
                 className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
               >
                 fractional CTO
@@ -495,7 +495,7 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
               </Link>
               ,{" "}
               <Link
-                href="/it/consulenza-ai-farmaceutico"
+                href="/it/ai-sovrana-pharma"
                 className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
               >
                 farmaceutico

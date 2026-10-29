@@ -102,7 +102,7 @@ export default function NespressoCaseStudyIt() {
               delivery enterprise.
             </p>
 
-            <h2>Cosa abbiamo consegnato</h2>
+            <h2>Cosa è stato consegnato</h2>
             <p>
               Come responsabile del programma, Corrado Patierno ha gestito tre stream di delivery
               paralleli, con circa 40 persone fra consulenti funzionali, sviluppatori, tester e

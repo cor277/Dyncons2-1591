@@ -11,7 +11,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "HumanIA Care — AI Senior Companion",
   description:
-    "An AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core. Multi-agent RAG + Voice + Memory architecture.",
+    "An AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core. Multi-agent RAG + Voice + Memory architecture. Controlled pilot, not yet in public rollout.",
   alternates: alternatesFor("/case-studies/humania-care"),
 };
 
@@ -44,7 +44,7 @@ export default function HumaniaCareStudy() {
             <p className="text-lg text-[#7D8FA3]">
               An AI companion architecture for elderly patients, purpose-built for
               privacy-first deployment in regulated care environments. Built on Nexus MDS Core.
-              Designed for scale — not yet in public rollout.
+              Currently a controlled pilot — not yet in public rollout.
             </p>
           </div>
         </section>
@@ -52,7 +52,7 @@ export default function HumaniaCareStudy() {
         <section className="border-b border-[#30363D] bg-[#161B22]">
           <div className="max-w-3xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "6 mo", label: "Time to production" },
+              { value: "Pilot", label: "Controlled pilot, not yet in public rollout" },
               { value: "Multi-agent", label: "RAG + Voice + Memory architecture" },
               { value: "At ingestion", label: "Personal data anonymised" },
               { value: "Nexus", label: "Runs on Nexus MDS Core" },
@@ -84,10 +84,10 @@ export default function HumaniaCareStudy() {
               </p>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">What we built</h2>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">What Dynamics Consulting built</h2>
               <p>
-                We designed a multi-agent AI architecture with a fine-tuned speech recognition model
-                optimised for elderly vocal patterns. On top of this we deployed a retrieval-augmented
+                Dynamics Consulting designed a multi-agent AI architecture with a fine-tuned speech recognition model
+                optimised for elderly vocal patterns. On top of this it deployed a retrieval-augmented
                 generation system using LangChain and Weaviate, grounded in curated, clinically
                 reviewed knowledge. A personalisation engine adapted response style, length, and
                 vocabulary for each user over time. The entire system runs as a multi-agent pipeline
@@ -95,7 +95,7 @@ export default function HumaniaCareStudy() {
               </p>
               <p className="mt-4">
                 Privacy was built in from day one: all personal data anonymised at ingestion, a data pipeline
-                built to GDPR requirements, and end-to-end audit logging. The system was deployed
+                built to GDPR requirements, and end-to-end audit logging. In the pilot the system runs
                 on Nexus MDS Core in Docker containers, with generation on a local model or a
                 replaceable EU endpoint, keeping
                 response latency under 800ms at the 99th percentile even on mobile connections.
@@ -104,9 +104,9 @@ export default function HumaniaCareStudy() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Results</h2>
               <p>
-                Six months from first commit to production-ready architecture. In testing, no
+                In testing, no
                 hallucinated clinical advice was documented with the RAG architecture. The platform is designed for scale in regulated care environments and is
-                currently in controlled deployment — not yet in public rollout.
+                currently a controlled pilot — not yet in public rollout.
               </p>
             </div>
             <div>

@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "Do we have to adopt Nexus MDS Core?",
-    a: "No. Most advisory work is carried out on systems built by other suppliers, and stays there. Nexus MDS Core is the option when the conclusion of the analysis is that the architecture itself has to change — it is a platform we build and run, not a precondition for the advice.",
+    a: "No. Most advisory work is carried out on systems built by other suppliers, and stays there. Nexus MDS Core is the option when the conclusion of the analysis is that the architecture itself has to change — it is a platform Dynamics Consulting builds and runs, not a precondition for the advice.",
   },
   {
     q: "What is CEPF, and what is Calibra?",
@@ -203,7 +203,7 @@ export default function GovernanceAdvisoryPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton label="Exposure assessment →" href="/assessment" variant="primary" />
               <div className="flex items-center gap-6 sm:self-center">
-                <TextLink label="Talk to us directly →" href="/contact" />
+                <TextLink label="Write to me directly →" href="/contact" />
                 <TextLink
                   label="Questa pagina in italiano →"
                   href="/it/consulenza-ai-governance-compliance"
@@ -539,7 +539,7 @@ export default function GovernanceAdvisoryPage() {
             <p>
               <strong className="text-[#E6EDF3]">HumanIA Care.</strong> An AI companion
               architecture for elderly patients, built for privacy-first deployment in regulated
-              care environments.{" "}
+              care environments. Controlled pilot, not yet in public rollout.{" "}
               <Link
                 href="/case-studies/humania-care"
                 className="text-[#00B4D8] hover:text-[#E6EDF3] underline"

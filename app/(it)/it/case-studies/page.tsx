@@ -100,9 +100,9 @@ const cases = [
     tag: "AI applicata · Sanità",
     headline: "Architettura di AI companion per pazienti anziani: privacy by design, deployment sovrano",
     summary:
-      "Architettura AI multi-agente con livelli di RAG, voce e memoria. Costruita su Nexus MDS Core per gli ambienti di cura regolati. Progettata per scalare, non ancora in distribuzione pubblica.",
+      "Architettura AI multi-agente con livelli di RAG, voce e memoria. Costruita su Nexus MDS Core per gli ambienti di cura regolati. Pilota controllato, non ancora in rollout pubblico.",
     metrics: [
-      { value: "6 mesi", label: "Tempo alla produzione" },
+      { value: "< 800 ms", label: "Latenza di risposta p99" },
       { value: "Multi-agente", label: "RAG + voce + memoria" },
       { value: "In ingestion", label: "Dati personali anonimizzati" },
     ],
@@ -157,9 +157,9 @@ export default function CaseStudiesPageIt() {
               Risultati, non slide
             </h1>
             <p className="text-lg text-[#7D8FA3] max-w-2xl mx-auto">
-              Ogni progetto che seguiamo si misura sull’impatto di business. Dalla sanità e dal
+              Ogni progetto che Dynamics Consulting segue si misura sull’impatto di business. Dalla sanità e dal
               farmaceutico all’energia, al largo consumo, alle banche e al CRM enterprise: ecco
-              come lavoriamo.
+              come lavora.
             </p>
           </div>
         </section>

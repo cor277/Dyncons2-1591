@@ -121,7 +121,7 @@ export default function ValutareFornitoreRisposta() {
           },
           {
             label: "Fractional AI CTO",
-            href: "/fractional-cto-milano",
+            href: "/it/fractional-cto-milano",
             note: "dove la valutazione dei fornitori diventa una responsabilità continuativa",
           },
           { label: "Un sistema RAG rientra nell’AI Act?", href: "/it/risposte/rag-ai-act" },

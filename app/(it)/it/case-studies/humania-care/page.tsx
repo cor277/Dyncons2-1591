@@ -13,7 +13,7 @@ const PATH = "/it/case-studies/humania-care";
 const PAGE_URL = `https://www.dynamicsconsulting.it${PATH}`;
 const TITLE = "HumanIA Care — AI companion per anziani";
 const DESCRIPTION =
-  "Un’architettura di AI companion per pazienti anziani, progettata per un deployment privacy by design negli ambienti di cura regolati. Costruita su Nexus MDS Core. Architettura multi-agente RAG + voce + memoria.";
+  "Un’architettura di AI companion per pazienti anziani, progettata per un deployment privacy by design negli ambienti di cura regolati. Costruita su Nexus MDS Core. Architettura multi-agente RAG + voce + memoria. Pilota controllato, non ancora in rollout pubblico.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -59,7 +59,7 @@ export default function HumaniaCareStudyIt() {
             <p className="text-lg text-[#7D8FA3]">
               Un’architettura di AI companion per pazienti anziani, progettata per un deployment
               privacy by design negli ambienti di cura regolati. Costruita su Nexus MDS Core.
-              Pensata per scalare, non ancora in distribuzione pubblica.
+              Oggi è un pilota controllato, non ancora in rollout pubblico.
             </p>
           </div>
         </section>
@@ -67,7 +67,7 @@ export default function HumaniaCareStudyIt() {
         <section className="border-b border-[#30363D] bg-[#161B22]">
           <div className="max-w-3xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "6 mesi", label: "Tempo alla produzione" },
+              { value: "Pilota", label: "Pilota controllato, non ancora in rollout pubblico" },
               { value: "Multi-agente", label: "Architettura RAG + voce + memoria" },
               { value: "In ingestion", label: "Dati personali anonimizzati" },
               { value: "Nexus", label: "Gira su Nexus MDS Core" },
@@ -101,11 +101,11 @@ export default function HumaniaCareStudyIt() {
               </p>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Cosa abbiamo costruito</h2>
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Cosa ha costruito Dynamics Consulting</h2>
               <p>
-                Abbiamo progettato un’architettura AI multi-agente con un modello di riconoscimento
+                Dynamics Consulting ha progettato un’architettura AI multi-agente con un modello di riconoscimento
                 vocale sottoposto a fine-tuning e ottimizzato sulle caratteristiche della voce degli
-                anziani. Sopra abbiamo messo in campo un sistema di retrieval-augmented generation
+                anziani. Sopra ha messo in campo un sistema di retrieval-augmented generation
                 con LangChain e Weaviate, ancorato a una base di conoscenza curata e rivista da
                 clinici. Un motore di personalizzazione adattava nel tempo stile, lunghezza e lessico
                 delle risposte a ciascun utente. L’intero sistema gira come pipeline multi-agente,
@@ -114,7 +114,7 @@ export default function HumaniaCareStudyIt() {
               <p className="mt-4">
                 La privacy è stata parte del progetto dal primo giorno: tutti i dati personali
                 anonimizzati in ingestion, una pipeline dati progettata sui requisiti del GDPR e
-                logging di audit end-to-end. Il sistema è stato rilasciato su Nexus MDS Core in
+                logging di audit end-to-end. Nel pilota il sistema gira su Nexus MDS Core in
                 container Docker, con la generazione su un modello locale o su un endpoint UE
                 sostituibile, mantenendo la latenza di risposta sotto gli 800 ms al 99° percentile
                 anche su connessioni mobili.
@@ -123,10 +123,10 @@ export default function HumaniaCareStudyIt() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Risultati</h2>
               <p>
-                Sei mesi dal primo commit a un’architettura pronta per la produzione. In fase di test,
+                In fase di test,
                 con l’architettura RAG non è stato documentato alcun consiglio clinico allucinato. La piattaforma è progettata per scalare negli ambienti
-                di cura regolati ed è attualmente in deployment controllato, non ancora in
-                distribuzione pubblica.
+                di cura regolati ed è attualmente un pilota controllato, non ancora in rollout
+                pubblico.
               </p>
             </div>
             <div>

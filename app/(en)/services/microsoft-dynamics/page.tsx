@@ -19,7 +19,7 @@ const faqSchema = {
       name: "Which Dynamics 365 modules do you implement?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We cover Finance & Operations (F&O), Sales, Customer Service, Field Service, and Marketing — plus the full Power Platform stack including Power Apps, Power Automate, and Power BI.",
+        text: "Dynamics Consulting covers Finance & Operations (F&O), Sales, Customer Service, Field Service, and Marketing — plus the full Power Platform stack including Power Apps, Power Automate, and Power BI.",
       },
     },
     {
@@ -27,7 +27,7 @@ const faqSchema = {
       name: "How long does a Dynamics 365 implementation take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A focused F&O implementation typically runs 12–24 weeks depending on scope. CRM rollouts are phased over 8–16 weeks. We always begin with a two-week discovery to nail down scope and de-risk the timeline.",
+        text: "A focused F&O implementation typically runs 12–24 weeks depending on scope. CRM rollouts are phased over 8–16 weeks. Dynamics Consulting always begins with a two-week discovery to nail down scope and de-risk the timeline.",
       },
     },
     {
@@ -35,7 +35,7 @@ const faqSchema = {
       name: "Do you provide post-go-live support?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We offer tiered managed support plans with defined SLAs, a dedicated success manager, quarterly roadmap reviews, and proactive monitoring of critical business processes.",
+        text: "Yes. Dynamics Consulting offers tiered managed support plans with defined SLAs, a dedicated success manager, quarterly roadmap reviews, and proactive monitoring of critical business processes.",
       },
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       name: "Can you migrate data from our existing ERP?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. Data migration is a core deliverable. We build extraction, transformation, and validation pipelines for every legacy system we have encountered — including SAP, Oracle NetSuite, custom Access/Excel solutions, and older Navision versions.",
+        text: "Absolutely. Data migration is a core deliverable. Dynamics Consulting builds extraction, transformation, and validation pipelines for every legacy system it has encountered — including SAP, Oracle NetSuite, custom Access/Excel solutions, and older Navision versions.",
       },
     },
   ],
@@ -62,7 +62,7 @@ export default function MicrosoftDynamicsPage() {
   return (
     <ServicePageLayout
       title="Microsoft Dynamics 365"
-      intro="As a Microsoft Cloud Partner, we help mid-market and enterprise organisations unlock the full value of Dynamics 365 — from greenfield implementation and complex data migration to deep customisation, ISV integrations, and long-term managed support. Our primary focus is Finance & Operations (F&O) with complementary CRM (Sales/Customer Engagement) capabilities."
+      intro="As a Microsoft Cloud Partner, Dynamics Consulting helps mid-market and enterprise organisations unlock the full value of Dynamics 365 — from greenfield implementation and complex data migration to deep customisation, ISV integrations, and long-term managed support. Its primary focus is Finance & Operations (F&O) with complementary CRM (Sales/Customer Engagement) capabilities."
       tech={[
         "Dynamics 365 Finance & Operations",
         "Dynamics 365 Sales",
@@ -118,19 +118,19 @@ export default function MicrosoftDynamicsPage() {
       faqs={[
         {
           q: "Which Dynamics 365 modules do you implement?",
-          a: "We cover Finance & Operations (F&O), Sales, Customer Service, Field Service, and Marketing — plus the full Power Platform stack including Power Apps, Power Automate, and Power BI.",
+          a: "Dynamics Consulting covers Finance & Operations (F&O), Sales, Customer Service, Field Service, and Marketing — plus the full Power Platform stack including Power Apps, Power Automate, and Power BI.",
         },
         {
           q: "How long does a Dynamics 365 implementation take?",
-          a: "A focused F&O implementation typically runs 12–24 weeks depending on scope. CRM rollouts are phased over 8–16 weeks. We always begin with a two-week discovery to nail down scope and de-risk the timeline.",
+          a: "A focused F&O implementation typically runs 12–24 weeks depending on scope. CRM rollouts are phased over 8–16 weeks. Dynamics Consulting always begins with a two-week discovery to nail down scope and de-risk the timeline.",
         },
         {
           q: "Do you provide post-go-live support?",
-          a: "Yes. We offer tiered managed support plans with defined SLAs, a dedicated success manager, quarterly roadmap reviews, and proactive monitoring of critical business processes.",
+          a: "Yes. Dynamics Consulting offers tiered managed support plans with defined SLAs, a dedicated success manager, quarterly roadmap reviews, and proactive monitoring of critical business processes.",
         },
         {
           q: "Can you migrate data from our existing ERP?",
-          a: "Absolutely. Data migration is a core deliverable. We build extraction, transformation, and validation pipelines for every legacy system we have encountered — including SAP, Oracle NetSuite, custom Access/Excel solutions, and older Navision versions.",
+          a: "Absolutely. Data migration is a core deliverable. Dynamics Consulting builds extraction, transformation, and validation pipelines for every legacy system it has encountered — including SAP, Oracle NetSuite, custom Access/Excel solutions, and older Navision versions.",
         },
       ]}
       faqSchema={faqSchema}

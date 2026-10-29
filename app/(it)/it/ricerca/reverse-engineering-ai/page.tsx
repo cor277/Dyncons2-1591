@@ -207,7 +207,7 @@ export default function AiReverseEngineeringArticleIt() {
                 verificabile: ogni specifica funzionale era riconducibile a codice preciso, e il
                 team di sviluppo poteva validare le affermazioni sulla sorgente in pochi minuti
                 invece che in giorni. Oggi è una metodologia ripetibile della nostra{" "}
-                <Link href="/modernizzazione-sistemi-legacy-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/modernizzazione-sistemi-legacy-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   practice di modernizzazione legacy
                 </Link>.
               </p>

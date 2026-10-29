@@ -61,11 +61,11 @@ const tech = ["n8n", "APISIX", "Talend ESB", "EventStoreDB", "Kafka", "Azure Log
 const faqs = [
   {
     q: "Quando conviene sostituire un ESB legacy invece di estenderlo?",
-    a: "Quando il costo di manutenzione supera quello della migrazione, quando l'ESB è un collo di bottiglia per i rilasci o quando non regge pattern event-driven. Valutiamo entrambe le strade prima di consigliarne una.",
+    a: "Quando il costo di manutenzione supera quello della migrazione, quando l'ESB è un collo di bottiglia per i rilasci o quando non regge pattern event-driven. Dynamics Consulting valuta entrambe le strade prima di consigliarne una.",
   },
   {
     q: "Potete integrare Dynamics 365 con sistemi on-premise senza Azure?",
-    a: "Sì. Usiamo middleware self-hosted (n8n, APISIX, connettori su misura) per collegare Dynamics 365 ai sistemi on-premise, senza dipendere dai servizi PaaS di Azure.",
+    a: "Sì. Dynamics Consulting usa middleware self-hosted (n8n, APISIX, connettori su misura) per collegare Dynamics 365 ai sistemi on-premise, senza dipendere dai servizi PaaS di Azure.",
   },
 ];
 

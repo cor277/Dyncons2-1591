@@ -59,7 +59,7 @@ const faqSchema = {
       name: "Can the system reason over ISO norms and flag conflicts with our project specs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We build RAG systems that are version-aware: they know which revision of a standard applies to a given project date and will not answer with an obsolete clause. Engineers query in natural language and receive cited answers — norm, article number, revision. Every response is logged for professional liability traceability.",
+        text: "Yes. Dynamics Consulting builds RAG systems that are version-aware: they know which revision of a standard applies to a given project date and will not answer with an obsolete clause. Engineers query in natural language and receive cited answers — norm, article number, revision. Every response is logged for professional liability traceability.",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "How do you handle agent governance for internal audit and four-eyes requirements?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We design agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Controls mapped to DORA, MiFID II and AI Act requirements.",
+        text: "Dynamics Consulting designs agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Controls mapped to DORA, MiFID II and AI Act requirements.",
       },
     },
   ],
@@ -113,14 +113,14 @@ const useCases = [
 
 The wrong answer is buying an AI tool. The right answer is understanding what questions the business needs to answer from that data — then building the retrieval layer around those questions.
 
-Our approach: a 2-week discovery sprint to map what exists, where it lives, and what quality it is. Then a 4-week RAG MVP on a defined, bounded corpus. Validated with real users before any further investment. This is the entry point for organisations that have never shipped an AI system.`,
+The approach: a 2-week discovery sprint to map what exists, where it lives, and what quality it is. Then a 4-week RAG MVP on a defined, bounded corpus. Validated with real users before any further investment. This is the entry point for organisations that have never shipped an AI system.`,
     tags: ["PDF", "Email archives", "ERP exports", "RAG MVP", "Discovery sprint"],
   },
   {
     title: "Engineering & technical documentation",
     description: `Civil, structural, aerospace, industrial engineering firms sit on enormous corpora: ISO and UNI norms, EN standards, project specifications, capitolati, contractor documentation, revision histories, technical manuals. A senior engineer knows this corpus by instinct. But the corpus has thousands of pages, changes constantly, and varies by client and jurisdiction.
 
-We build RAG systems that reason over technical documentation. Engineers query in natural language and receive cited answers — norm, article number, revision. The system is version-aware: it knows which revision of a standard applies to a given project date, and will not answer with an obsolete clause.
+Dynamics Consulting builds RAG systems that reason over technical documentation. Engineers query in natural language and receive cited answers — norm, article number, revision. The system is version-aware: it knows which revision of a standard applies to a given project date, and will not answer with an obsolete clause.
 
 Every response is logged: who asked, when, which document answered. This is not optional in contexts with professional liability.`,
     tags: ["ISO/UNI/EN norms", "Technical specs", "Revision control", "Traceable RAG", "Document versioning"],
@@ -129,7 +129,7 @@ Every response is logged: who asked, when, which document answered. This is not 
     title: "Finance & regulated data rooms",
     description: `An AI agent acting on financial data is not a chatbot. It is a system making operational decisions. Internal audit, risk management, and compliance will ask: who authorised this action? Which model decided? On what data? Is the log immutable? Was the four-eyes principle enforced?
 
-We design agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office / risk / compliance / IT, and full LLM call logging: input, output, model version, timestamp — for every inference.
+Dynamics Consulting designs agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office / risk / compliance / IT, and full LLM call logging: input, output, model version, timestamp — for every inference.
 
 Controls mapped to: DORA (operational resilience, incident logging), MiFID II (decision traceability), AI Act (high-risk system requirements), GDPR (data minimisation, right to explanation).`,
     tags: ["Audit trail", "Human-in-the-loop", "DORA", "MiFID II", "RBAC", "AI Act"],
@@ -157,11 +157,11 @@ const faqs = [
   },
   {
     q: "Can the system reason over ISO norms and flag conflicts with our project specs?",
-    a: "Yes. We build RAG systems that are version-aware: they know which revision of a standard applies to a given project date and will not answer with an obsolete clause. Engineers query in natural language and receive cited answers — norm, article number, revision. Every response is logged for professional liability traceability.",
+    a: "Yes. Dynamics Consulting builds RAG systems that are version-aware: they know which revision of a standard applies to a given project date and will not answer with an obsolete clause. Engineers query in natural language and receive cited answers — norm, article number, revision. Every response is logged for professional liability traceability.",
   },
   {
     q: "How do you handle agent governance for internal audit and four-eyes requirements?",
-    a: "We design agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Controls mapped to DORA, MiFID II and AI Act requirements.",
+    a: "Dynamics Consulting designs agent architectures with human-in-the-loop approval gates before any write action, tamper-evident audit trails with configurable retention, RBAC with segregation between front office, risk, compliance, and IT, and full LLM call logging — input, output, model version, timestamp — for every inference. Controls mapped to DORA, MiFID II and AI Act requirements.",
   },
 ];
 
@@ -178,7 +178,7 @@ export default function AppliedAIPage() {
   return (
     <ServicePageLayout
       title="Applied AI & Agentic Workflows"
-      intro="We do not promise generic AI. We design multi-agent systems with memory, orchestration and governance."
+      intro="Dynamics Consulting does not promise generic AI. It designs multi-agent systems with memory, orchestration and governance."
       tech={tech}
       capabilities={capabilities}
       faqs={faqs}

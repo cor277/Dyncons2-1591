@@ -216,10 +216,11 @@ export default function OnPremiseAiArticle() {
                 <Link href="/case-studies/federfarma" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Federfarma Lombarda
                 </Link>{" "}
-                and of two healthcare services, CureSicure and{" "}
+                and for the healthcare service CureSicure;{" "}
                 <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   HumanIA Care
-                </Link>.
+                </Link>{" "}
+                runs on it as a controlled pilot, not yet in public rollout.
               </p>
               <p className="mt-4">
                 For healthcare organisations evaluating their AI strategy, the architecture

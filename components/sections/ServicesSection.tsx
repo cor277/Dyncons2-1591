@@ -14,7 +14,7 @@ const COPY = {
         iconName: "ShieldCheck",
         title: "AI Governance & Compliance Advisory",
         description:
-          "AI consulting for regulated organisations: regulatory assessment against the EU AI Act, PLD 2024, NIS2 and DORA, governance design, and architecture review with documented technical accountability. Carried out with CEPF, our own compliance methodology.",
+          "AI consulting for regulated organisations: regulatory assessment against the EU AI Act, PLD 2024, NIS2 and DORA, governance design, and architecture review with documented technical accountability. Carried out with CEPF, the compliance methodology Dynamics Consulting developed.",
         techBadges: ["AI Act", "PLD 2024", "NIS2", "ISO 27001"],
         ctaHref: "/services/governance-advisory",
       },
@@ -30,12 +30,12 @@ const COPY = {
         iconName: "Server",
         title: "Sovereign AI Platform — Nexus MDS Core",
         description:
-          "Build AI governance once and run every use case on it, inside your perimeter. Indexing, retrieval, identity and audit run locally; generation runs on a local model or a replaceable EU endpoint. In production in pharmaceutical distribution and healthcare.",
+          "Dynamics Consulting designs, installs and runs Nexus MDS Core inside your perimeter: use cases scoped with you, the platform deployed on your server or on EU infrastructure, identity, approval steps and audit configured, then operated and extended as new use cases arrive. In production in pharmaceutical distribution and healthcare.",
         techBadges: ["Nexus MDS Core", "Weaviate", "Keycloak", "n8n"],
         ctaHref: "/platform",
       },
     ],
-    eyebrow: "What we do",
+    eyebrow: "What Dynamics Consulting does",
     title: "Three service lines",
     subtitle: "Advisory, leadership, platform. Each engagement is custom, no templates.",
     constraintsBefore:
@@ -51,7 +51,7 @@ const COPY = {
         iconName: "ShieldCheck",
         title: "Consulenza AI, governance e compliance",
         description:
-          "Consulenza AI per organizzazioni regolamentate: analisi normativa rispetto a EU AI Act, PLD 2024, NIS2 e DORA, disegno della governance e revisione dell’architettura con responsabilità tecnica documentata. Condotta con CEPF, la nostra metodologia di compliance.",
+          "Consulenza AI per organizzazioni regolamentate: analisi normativa rispetto a EU AI Act, PLD 2024, NIS2 e DORA, disegno della governance e revisione dell’architettura con responsabilità tecnica documentata. Condotta con CEPF, la metodologia di compliance sviluppata da Dynamics Consulting.",
         techBadges: ["AI Act", "PLD 2024", "NIS2", "ISO 27001"],
         ctaHref: "/services/governance-advisory",
       },
@@ -67,12 +67,12 @@ const COPY = {
         iconName: "Server",
         title: "Piattaforma AI sovrana — Nexus MDS Core",
         description:
-          "Costruisci la governance dell’AI una volta e fai girare ogni caso d’uso su di essa, nel tuo perimetro. Indicizzazione, retrieval, identità e audit girano in locale; la generazione gira su un modello locale o su un endpoint UE sostituibile. In produzione nella distribuzione farmaceutica e nella sanità.",
+          "Dynamics Consulting progetta, installa e gestisce Nexus MDS Core nel tuo perimetro: i casi d’uso definiti con te, la piattaforma installata sul tuo server o su infrastruttura UE, identità, passaggi di approvazione e audit configurati, poi l’esercizio e l’estensione man mano che arrivano nuovi casi d’uso. In produzione nella distribuzione farmaceutica e nella sanità.",
         techBadges: ["Nexus MDS Core", "Weaviate", "Keycloak", "n8n"],
         ctaHref: "/platform",
       },
     ],
-    eyebrow: "Cosa facciamo",
+    eyebrow: "Cosa fa Dynamics Consulting",
     title: "Tre linee di servizio",
     subtitle: "Consulenza, leadership, piattaforma. Ogni incarico è su misura, senza template.",
     constraintsBefore:

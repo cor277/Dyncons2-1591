@@ -19,7 +19,7 @@ const faqSchema = {
       name: "When does blockchain actually make sense for a business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Blockchain adds value when you need an immutable shared ledger among parties who do not fully trust each other — supply-chain provenance, cross-organisation settlement, digital asset issuance, or regulatory audit trails. If a centralised database owned by one party suffices, we will tell you so.",
+        text: "Blockchain adds value when you need an immutable shared ledger among parties who do not fully trust each other — supply-chain provenance, cross-organisation settlement, digital asset issuance, or regulatory audit trails. If a centralised database owned by one party suffices, Dynamics Consulting will tell you so.",
       },
     },
     {
@@ -35,7 +35,7 @@ const faqSchema = {
       name: "Do you audit smart contracts for security?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Every smart contract we deliver goes through automated analysis with Slither and Mythril plus a manual security review. For high-value contracts we recommend a third-party audit as well and can coordinate that process.",
+        text: "Yes. Every smart contract Dynamics Consulting delivers goes through automated analysis with Slither and Mythril plus a manual security review. For high-value contracts it recommends a third-party audit as well and can coordinate that process.",
       },
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       name: "Can you integrate blockchain with our existing ERP or CRM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. We build off-chain oracle services and middleware that bridge on-chain events to your ERP, WMS, or CRM — so blockchain becomes a trust layer, not a siloed system.",
+        text: "Absolutely. Dynamics Consulting builds off-chain oracle services and middleware that bridge on-chain events to your ERP, WMS, or CRM — so blockchain becomes a trust layer, not a siloed system.",
       },
     },
   ],
@@ -62,7 +62,7 @@ export default function BlockchainPage() {
   return (
     <ServicePageLayout
       title="Blockchain & Web3"
-      intro="We cut through the hype and focus on where distributed ledgers genuinely solve business problems — supply-chain traceability, digital asset issuance, cross-party settlement, and tamper-proof audit trails. No tokens for their own sake."
+      intro="Dynamics Consulting cuts through the hype and focuses on where distributed ledgers genuinely solve business problems — supply-chain traceability, digital asset issuance, cross-party settlement, and tamper-proof audit trails. No tokens for their own sake."
       tech={[
         "Ethereum",
         "Polygon",
@@ -120,7 +120,7 @@ export default function BlockchainPage() {
       faqs={[
         {
           q: "When does blockchain actually make sense for a business?",
-          a: "Blockchain adds value when you need an immutable shared ledger among parties who do not fully trust each other — supply-chain provenance, cross-organisation settlement, digital asset issuance, or regulatory audit trails. If a centralised database owned by one party suffices, we will tell you so.",
+          a: "Blockchain adds value when you need an immutable shared ledger among parties who do not fully trust each other — supply-chain provenance, cross-organisation settlement, digital asset issuance, or regulatory audit trails. If a centralised database owned by one party suffices, Dynamics Consulting will tell you so.",
         },
         {
           q: "Public or private blockchain — which is right for us?",
@@ -128,11 +128,11 @@ export default function BlockchainPage() {
         },
         {
           q: "Do you audit smart contracts for security?",
-          a: "Yes. Every smart contract we deliver goes through automated analysis with Slither and Mythril plus a manual security review. For high-value contracts we recommend a third-party audit as well and can coordinate that process.",
+          a: "Yes. Every smart contract Dynamics Consulting delivers goes through automated analysis with Slither and Mythril plus a manual security review. For high-value contracts it recommends a third-party audit as well and can coordinate that process.",
         },
         {
           q: "Can you integrate blockchain with our existing ERP or CRM?",
-          a: "Absolutely. We build off-chain oracle services and middleware that bridge on-chain events to your ERP, WMS, or CRM — so blockchain becomes a trust layer, not a siloed system.",
+          a: "Absolutely. Dynamics Consulting builds off-chain oracle services and middleware that bridge on-chain events to your ERP, WMS, or CRM — so blockchain becomes a trust layer, not a siloed system.",
         },
       ]}
       faqSchema={faqSchema}

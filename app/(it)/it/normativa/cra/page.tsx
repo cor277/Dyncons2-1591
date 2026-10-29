@@ -72,7 +72,7 @@ export default function CraPage() {
       approfondimenti={[
         {
           label: "Dall’11 settembre hai 24 ore per segnalare. Chi le usa?",
-          href: "/cra-11-settembre",
+          href: "/it/cra-11-settembre",
           note: "l’art. 14 in dettaglio: il test in tre domande e cosa avere pronto prima della prima segnalazione",
         },
         {
@@ -261,7 +261,7 @@ export default function CraPage() {
           rispetto del termine del preallarme (art. 64, par. 10): l’obbligo di segnalare resta. Chi
           deve segnalare, da quale evento parte l’orologio e cosa preparare prima è il tema della
           pagina{" "}
-          <Link href="/cra-11-settembre" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+          <Link href="/it/cra-11-settembre" className="text-[#00B4D8] hover:text-[#E6EDF3]">
             Dall’11 settembre hai 24 ore per segnalare
           </Link>
           .

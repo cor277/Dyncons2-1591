@@ -86,9 +86,9 @@ const cases = [
     tag: "Applied AI · Healthcare",
     headline: "AI companion architecture for elderly patients — privacy-first, sovereign deployment",
     summary:
-      "Multi-agent AI architecture with RAG, voice, and memory layers. Purpose-built for regulated care environments on Nexus MDS Core. Designed for scale — not yet in public rollout.",
+      "Multi-agent AI architecture with RAG, voice, and memory layers. Purpose-built for regulated care environments on Nexus MDS Core. Controlled pilot — not yet in public rollout.",
     metrics: [
-      { value: "6 mo", label: "Time to production" },
+      { value: "< 800 ms", label: "p99 response latency" },
       { value: "Multi-agent", label: "RAG + Voice + Memory" },
       { value: "At ingestion", label: "Personal data anonymised" },
     ],
@@ -142,8 +142,8 @@ export default function CaseStudiesPage() {
               Outcomes, not slide decks
             </h1>
             <p className="text-lg text-[#7D8FA3] max-w-2xl mx-auto">
-              Every engagement we take on is measured by business impact. From healthcare and
-              pharma to energy, FMCG, banking, and enterprise CRM — here is how we deliver.
+              Every engagement Dynamics Consulting takes on is measured by business impact. From healthcare and
+              pharma to energy, FMCG, banking, and enterprise CRM — here is how it delivers.
             </p>
           </div>
         </section>

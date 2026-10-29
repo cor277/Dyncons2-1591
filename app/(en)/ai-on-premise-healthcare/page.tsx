@@ -373,7 +373,7 @@ export default function AiOnPremiseHealthcarePage() {
                 <Link href="/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   HumanIA Care
                 </Link>
-                .
+                {" "}(the latter as a controlled pilot, not yet in public rollout).
               </p>
             </div>
 
@@ -459,7 +459,7 @@ export default function AiOnPremiseHealthcarePage() {
                   </Link>
                 </strong>{" "}
                 is an AI home assistant for older people, their caregivers and residential care
-                homes. It runs on Nexus MDS Core, with personal data anonymised at ingestion and
+                homes, currently a controlled pilot, not yet in public rollout. It runs on Nexus MDS Core, with personal data anonymised at ingestion and
                 every answer grounded in curated, reviewed knowledge. The{" "}
                 <Link href="/research/governing-ai-outputs" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   output governance framework
@@ -467,7 +467,7 @@ export default function AiOnPremiseHealthcarePage() {
                 keeps every generated answer logged and traceable.
               </p>
               <p className="mt-4">
-                These deployments demonstrate that on-premise healthcare AI is not a future
+                The production deployments demonstrate that on-premise healthcare AI is not a future
                 aspiration. It is production infrastructure, running today, processing real data,
                 under real regulatory scrutiny.
               </p>

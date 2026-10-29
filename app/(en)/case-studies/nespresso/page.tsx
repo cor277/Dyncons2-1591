@@ -86,7 +86,7 @@ export default function NespressoCaseStudy() {
               governance with strict timeline commitments and enterprise-grade delivery standards.
             </p>
 
-            <h2>What we delivered</h2>
+            <h2>What was delivered</h2>
             <p>
               As programme lead, Corrado Patierno managed three parallel delivery streams with
               approximately 40 people across functional consultants, developers, testers, and

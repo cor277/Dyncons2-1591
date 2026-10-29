@@ -518,7 +518,7 @@ export default function LegacyModernisationAiPage() {
                   "RAG Pipeline",
                   "n8n Multi-Agent",
                   "LLM Inference",
-                  "vLLM",
+                  "llama.cpp",
                   "Kubernetes",
                   "Docker",
                   "PostgreSQL",

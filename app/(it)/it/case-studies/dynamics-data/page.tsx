@@ -108,9 +108,9 @@ export default function DynamicsDataCaseStudyIt() {
               dati vecchi di almeno 24 ore.
             </p>
 
-            <h2>Cosa abbiamo costruito</h2>
+            <h2>Cosa ha costruito Dynamics Consulting</h2>
             <p>
-              Abbiamo condotto una discovery di due settimane per mappare tutti i processi di
+              Dynamics Consulting ha condotto una discovery di due settimane per mappare tutti i processi di
               business, i campi personalizzati e le integrazioni con terze parti delle quattro
               istanze ERP legacy, producendo una mappa completa della data lineage e un backlog di
               migrazione ordinato per rischio.
@@ -123,7 +123,7 @@ export default function DynamicsDataCaseStudyIt() {
               storico transazionale, con riconciliazione completa sui totali dei sistemi di origine.
             </p>
             <p>
-              In parallelo abbiamo costruito un data lakehouse in cloud su Azure Synapse Analytics,
+              In parallelo Dynamics Consulting ha costruito un data lakehouse in cloud su Azure Synapse Analytics,
               con Synapse Link a esportare i dati da F&amp;O verso Azure Data Lake quasi in tempo
               reale. I modelli di trasformazione dbt alimentavano un livello semantico Power BI: le
               dashboard riflettevano lo stato corrente di tutti e quattro gli stabilimenti con un

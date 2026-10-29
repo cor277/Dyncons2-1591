@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Quando ha davvero senso la blockchain per un'azienda?",
-    a: "La blockchain porta valore quando ti serve un registro condiviso e immutabile fra parti che non si fidano del tutto l'una dell'altra: provenienza lungo la filiera, regolamento fra organizzazioni diverse, emissione di asset digitali o audit trail regolamentari. Se basta un database centralizzato in mano a una sola parte, te lo diciamo.",
+    a: "La blockchain porta valore quando ti serve un registro condiviso e immutabile fra parti che non si fidano del tutto l'una dell'altra: provenienza lungo la filiera, regolamento fra organizzazioni diverse, emissione di asset digitali o audit trail regolamentari. Se basta un database centralizzato in mano a una sola parte, Dynamics Consulting te lo dice.",
   },
   {
     q: "Blockchain pubblica o privata: quale fa per noi?",
@@ -34,11 +34,11 @@ const faqs = [
   },
   {
     q: "Fate audit di sicurezza degli smart contract?",
-    a: "Sì. Ogni smart contract che consegniamo passa per un'analisi automatica con Slither e Mythril e per una revisione di sicurezza manuale. Per i contratti di valore elevato consigliamo anche un audit di terza parte, e possiamo coordinarlo noi.",
+    a: "Sì. Ogni smart contract che Dynamics Consulting consegna passa per un'analisi automatica con Slither e Mythril e per una revisione di sicurezza manuale. Per i contratti di valore elevato consiglia anche un audit di terza parte, e può coordinarlo.",
   },
   {
     q: "Potete integrare la blockchain con il nostro ERP o CRM?",
-    a: "Certo. Costruiamo servizi oracle off-chain e middleware che collegano gli eventi on-chain al tuo ERP, WMS o CRM: così la blockchain diventa un livello di fiducia, non un sistema isolato.",
+    a: "Certo. Dynamics Consulting costruisce servizi oracle off-chain e middleware che collegano gli eventi on-chain al tuo ERP, WMS o CRM: così la blockchain diventa un livello di fiducia, non un sistema isolato.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function BlockchainPage() {
     <ServicePageLayout
       locale="it"
       title="Blockchain e Web3"
-      intro="Lasciamo da parte l'hype e ci concentriamo dove i registri distribuiti risolvono davvero problemi di business: tracciabilità della filiera, emissione di asset digitali, regolamento fra più parti e audit trail a prova di manomissione. Niente token fini a se stessi."
+      intro="Dynamics Consulting lascia da parte l'hype e si concentra dove i registri distribuiti risolvono davvero problemi di business: tracciabilità della filiera, emissione di asset digitali, regolamento fra più parti e audit trail a prova di manomissione. Niente token fini a se stessi."
       tech={[
         "Ethereum",
         "Polygon",

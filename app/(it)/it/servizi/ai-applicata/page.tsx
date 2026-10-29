@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Il sistema può ragionare sulle norme ISO e segnalare conflitti con le nostre specifiche di progetto?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sì. Costruiamo sistemi RAG consapevoli delle versioni: sanno quale revisione di una norma si applica alla data di un progetto e non rispondono con una clausola superata. Gli ingegneri fanno domande in linguaggio naturale e ricevono risposte citate: norma, numero dell'articolo, revisione. Ogni risposta viene registrata, per la tracciabilità ai fini della responsabilità professionale.",
+        text: "Sì. Dynamics Consulting costruisce sistemi RAG consapevoli delle versioni: sanno quale revisione di una norma si applica alla data di un progetto e non rispondono con una clausola superata. Gli ingegneri fanno domande in linguaggio naturale e ricevono risposte citate: norma, numero dell'articolo, revisione. Ogni risposta viene registrata, per la tracciabilità ai fini della responsabilità professionale.",
       },
     },
     {
@@ -75,7 +75,7 @@ const faqSchema = {
       name: "Come gestite la governance degli agenti rispetto all'internal audit e al principio dei quattro occhi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Progettiamo architetture di agenti con approval gate human-in-the-loop prima di qualsiasi azione di scrittura, audit trail a prova di manomissione con retention configurabile, RBAC con separazione fra front office, rischio, compliance e IT, e log completo di ogni chiamata all'LLM (input, output, versione del modello, timestamp) per ogni inferenza. Controlli mappati sui requisiti di DORA, MiFID II e AI Act.",
+        text: "Dynamics Consulting progetta architetture di agenti con approval gate human-in-the-loop prima di qualsiasi azione di scrittura, audit trail a prova di manomissione con retention configurabile, RBAC con separazione fra front office, rischio, compliance e IT, e log completo di ogni chiamata all'LLM (input, output, versione del modello, timestamp) per ogni inferenza. Controlli mappati sui requisiti di DORA, MiFID II e AI Act.",
       },
     },
   ],
@@ -121,14 +121,14 @@ const useCases = [
 
 La risposta sbagliata è comprare uno strumento di AI. Quella giusta è capire a quali domande l'azienda deve rispondere con quei dati, e poi costruire il livello di retrieval attorno a quelle domande.
 
-Il nostro approccio: un discovery sprint di 2 settimane per mappare cosa esiste, dove sta e di che qualità è. Poi un RAG MVP di 4 settimane su un corpus definito e circoscritto. Validato con utenti reali prima di qualsiasi ulteriore investimento. È il punto d'ingresso per le organizzazioni che non hanno mai messo in produzione un sistema di AI.`,
+L'approccio: un discovery sprint di 2 settimane per mappare cosa esiste, dove sta e di che qualità è. Poi un RAG MVP di 4 settimane su un corpus definito e circoscritto. Validato con utenti reali prima di qualsiasi ulteriore investimento. È il punto d'ingresso per le organizzazioni che non hanno mai messo in produzione un sistema di AI.`,
     tags: ["PDF", "Archivi email", "Export ERP", "RAG MVP", "Discovery sprint"],
   },
   {
     title: "Ingegneria e documentazione tecnica",
     description: `Gli studi di ingegneria civile, strutturale, aerospaziale e industriale siedono su corpus enormi: norme ISO e UNI, standard EN, specifiche di progetto, capitolati, documentazione degli appaltatori, storici delle revisioni, manuali tecnici. Un ingegnere senior conosce questo corpus d'istinto. Ma il corpus conta migliaia di pagine, cambia di continuo e varia per cliente e per giurisdizione.
 
-Costruiamo sistemi RAG che ragionano sulla documentazione tecnica. Gli ingegneri fanno domande in linguaggio naturale e ricevono risposte citate: norma, numero dell'articolo, revisione. Il sistema è consapevole delle versioni: sa quale revisione di una norma si applica alla data di un progetto e non risponde con una clausola superata.
+Dynamics Consulting costruisce sistemi RAG che ragionano sulla documentazione tecnica. Gli ingegneri fanno domande in linguaggio naturale e ricevono risposte citate: norma, numero dell'articolo, revisione. Il sistema è consapevole delle versioni: sa quale revisione di una norma si applica alla data di un progetto e non risponde con una clausola superata.
 
 Ogni risposta viene registrata: chi ha chiesto, quando, quale documento ha risposto. Dove c'è responsabilità professionale, non è facoltativo.`,
     tags: ["Norme ISO/UNI/EN", "Specifiche tecniche", "Controllo revisioni", "RAG tracciabile", "Versioning documentale"],
@@ -137,7 +137,7 @@ Ogni risposta viene registrata: chi ha chiesto, quando, quale documento ha rispo
     title: "Finanza e data room regolamentate",
     description: `Un agente AI che agisce su dati finanziari non è un chatbot. È un sistema che prende decisioni operative. Internal audit, risk management e compliance chiederanno: chi ha autorizzato questa azione? Quale modello ha deciso? Su quali dati? Il log è immutabile? È stato applicato il principio dei quattro occhi?
 
-Progettiamo architetture di agenti con approval gate human-in-the-loop prima di qualsiasi azione di scrittura, audit trail a prova di manomissione con retention configurabile, RBAC con separazione fra front office / rischio / compliance / IT, e log completo di ogni chiamata all'LLM: input, output, versione del modello, timestamp, per ogni inferenza.
+Dynamics Consulting progetta architetture di agenti con approval gate human-in-the-loop prima di qualsiasi azione di scrittura, audit trail a prova di manomissione con retention configurabile, RBAC con separazione fra front office / rischio / compliance / IT, e log completo di ogni chiamata all'LLM: input, output, versione del modello, timestamp, per ogni inferenza.
 
 Controlli mappati su: DORA (resilienza operativa, registrazione degli incidenti), MiFID II (tracciabilità delle decisioni), AI Act (requisiti dei sistemi ad alto rischio), GDPR (minimizzazione dei dati, diritto alla spiegazione).`,
     tags: ["Audit trail", "Human-in-the-loop", "DORA", "MiFID II", "RBAC", "AI Act"],
@@ -165,11 +165,11 @@ const faqs = [
   },
   {
     q: "Il sistema può ragionare sulle norme ISO e segnalare conflitti con le nostre specifiche di progetto?",
-    a: "Sì. Costruiamo sistemi RAG consapevoli delle versioni: sanno quale revisione di una norma si applica alla data di un progetto e non rispondono con una clausola superata. Gli ingegneri fanno domande in linguaggio naturale e ricevono risposte citate: norma, numero dell'articolo, revisione. Ogni risposta viene registrata, per la tracciabilità ai fini della responsabilità professionale.",
+    a: "Sì. Dynamics Consulting costruisce sistemi RAG consapevoli delle versioni: sanno quale revisione di una norma si applica alla data di un progetto e non rispondono con una clausola superata. Gli ingegneri fanno domande in linguaggio naturale e ricevono risposte citate: norma, numero dell'articolo, revisione. Ogni risposta viene registrata, per la tracciabilità ai fini della responsabilità professionale.",
   },
   {
     q: "Come gestite la governance degli agenti rispetto all'internal audit e al principio dei quattro occhi?",
-    a: "Progettiamo architetture di agenti con approval gate human-in-the-loop prima di qualsiasi azione di scrittura, audit trail a prova di manomissione con retention configurabile, RBAC con separazione fra front office, rischio, compliance e IT, e log completo di ogni chiamata all'LLM (input, output, versione del modello, timestamp) per ogni inferenza. Controlli mappati sui requisiti di DORA, MiFID II e AI Act.",
+    a: "Dynamics Consulting progetta architetture di agenti con approval gate human-in-the-loop prima di qualsiasi azione di scrittura, audit trail a prova di manomissione con retention configurabile, RBAC con separazione fra front office, rischio, compliance e IT, e log completo di ogni chiamata all'LLM (input, output, versione del modello, timestamp) per ogni inferenza. Controlli mappati sui requisiti di DORA, MiFID II e AI Act.",
   },
 ];
 
@@ -184,7 +184,7 @@ export default function AiApplicataPage() {
     <ServicePageLayout
       locale="it"
       title="AI applicata e workflow agentici"
-      intro="Non promettiamo AI generica. Progettiamo sistemi multi-agente con memoria, orchestrazione e governance."
+      intro="Dynamics Consulting non promette AI generica. Progetta sistemi multi-agente con memoria, orchestrazione e governance."
       tech={tech}
       capabilities={capabilities}
       faqs={faqs}

@@ -26,19 +26,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Quali moduli di Dynamics 365 implementate?",
-    a: "Copriamo Finance & Operations (F&O), Sales, Customer Service, Field Service e Marketing, più l'intero stack Power Platform: Power Apps, Power Automate e Power BI.",
+    a: "Dynamics Consulting copre Finance & Operations (F&O), Sales, Customer Service, Field Service e Marketing, più l'intero stack Power Platform: Power Apps, Power Automate e Power BI.",
   },
   {
     q: "Quanto dura un'implementazione di Dynamics 365?",
-    a: "Un'implementazione F&O mirata dura di solito fra 12 e 24 settimane, a seconda del perimetro. I rollout CRM si articolano in fasi su 8–16 settimane. Partiamo sempre da una discovery di due settimane per fissare il perimetro e ridurre i rischi sui tempi.",
+    a: "Un'implementazione F&O mirata dura di solito fra 12 e 24 settimane, a seconda del perimetro. I rollout CRM si articolano in fasi su 8–16 settimane. Dynamics Consulting parte sempre da una discovery di due settimane per fissare il perimetro e ridurre i rischi sui tempi.",
   },
   {
     q: "Offrite supporto dopo il go-live?",
-    a: "Sì. Offriamo piani di supporto gestito a più livelli con SLA definiti, un success manager dedicato, revisioni trimestrali della roadmap e monitoraggio proattivo dei processi di business critici.",
+    a: "Sì. Dynamics Consulting offre piani di supporto gestito a più livelli con SLA definiti, un success manager dedicato, revisioni trimestrali della roadmap e monitoraggio proattivo dei processi di business critici.",
   },
   {
     q: "Potete migrare i dati dal nostro ERP attuale?",
-    a: "Certo. La migrazione dei dati è un deliverable centrale. Costruiamo pipeline di estrazione, trasformazione e validazione per ogni sistema legacy che abbiamo incontrato, compresi SAP, Oracle NetSuite, soluzioni su misura in Access/Excel e vecchie versioni di Navision.",
+    a: "Certo. La migrazione dei dati è un deliverable centrale. Dynamics Consulting costruisce pipeline di estrazione, trasformazione e validazione per ogni sistema legacy che ha incontrato, compresi SAP, Oracle NetSuite, soluzioni su misura in Access/Excel e vecchie versioni di Navision.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function MicrosoftDynamicsPage() {
     <ServicePageLayout
       locale="it"
       title="Microsoft Dynamics 365"
-      intro="Come Microsoft Cloud Partner, aiutiamo organizzazioni mid-market ed enterprise a ottenere da Dynamics 365 tutto il valore che può dare: dall'implementazione da zero alla migrazione di dati complessa, fino alla personalizzazione profonda, alle integrazioni con soluzioni ISV e al supporto gestito di lungo periodo. Il nostro focus principale è Finance & Operations (F&O), con competenze CRM complementari (Sales/Customer Engagement)."
+      intro="Come Microsoft Cloud Partner, Dynamics Consulting aiuta organizzazioni mid-market ed enterprise a ottenere da Dynamics 365 tutto il valore che può dare: dall'implementazione da zero alla migrazione di dati complessa, fino alla personalizzazione profonda, alle integrazioni con soluzioni ISV e al supporto gestito di lungo periodo. Il suo focus principale è Finance & Operations (F&O), con competenze CRM complementari (Sales/Customer Engagement)."
       tech={[
         "Dynamics 365 Finance & Operations",
         "Dynamics 365 Sales",

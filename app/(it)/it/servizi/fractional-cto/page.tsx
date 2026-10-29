@@ -107,7 +107,7 @@ const responsibilities = [
   },
   {
     title: "Modello di deployment",
-    body: "On-premise, ibrido o ospitato in UE: si decide in base al modello di minaccia e all'esposizione regolatoria, non per preferenza. La tassonomia qui sotto è quella che usiamo in tutti i nostri incarichi.",
+    body: "On-premise, ibrido o ospitato in UE: si decide in base al modello di minaccia e all'esposizione regolatoria, non per preferenza. La tassonomia qui sotto è quella che Dynamics Consulting usa in tutti i suoi incarichi.",
   },
   {
     title: "Guida del programma",
@@ -228,7 +228,7 @@ export default function FractionalCtoItPage() {
                 <CTAButton label="Parliamo di un mandato →" href="/it/contatti" variant="primary" />
                 <div className="flex items-center gap-6 sm:self-center">
                   <TextLink label="Assessment di esposizione →" href="/it/assessment" />
-                  <TextLink label="Fractional CTO a Milano →" href="/fractional-cto-milano" />
+                  <TextLink label="Fractional CTO a Milano →" href="/it/fractional-cto-milano" />
                 </div>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function FractionalCtoItPage() {
                 >
                   incarico di consulenza su governance e compliance
                 </Link>{" "}
-                è la risposta più economica e più onesta, e te lo diciamo.
+                è la risposta più economica e più onesta, e Dynamics Consulting te lo dice.
               </p>
             </div>
 
@@ -499,7 +499,7 @@ export default function FractionalCtoItPage() {
                 <Link href="/it/cepf" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Compliance-Epistemic Project Framework (CEPF)
                 </Link>{" "}
-                è il catalogo di attraversamento normativo che manteniamo, e il ragionamento dietro
+                è il catalogo di attraversamento normativo che Dynamics Consulting mantiene, e il ragionamento dietro
                 le architetture è pubblicato come{" "}
                 <Link href="/it/ricerca" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   ricerca
@@ -518,7 +518,7 @@ export default function FractionalCtoItPage() {
               Domande frequenti
             </p>
             <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-10">
-              Le domande che ci fanno davvero
+              Le domande che vengono fatte davvero a Dynamics Consulting
             </h2>
             <div className="space-y-8">
               {faqs.map((f) => (

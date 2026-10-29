@@ -24,7 +24,7 @@ const PATH = "/it";
 const PAGE_URL = `https://www.dynamicsconsulting.it${PATH}`;
 const TITLE = "AI sovrana, governance e compliance dell’AI | Dynamics Consulting";
 const DESCRIPTION =
-  "Consulenza, architettura, governance e compliance AI per i settori regolamentati in Italia e nell’UE. Progettiamo e mettiamo in esercizio sistemi AI sovrani e on-premise: Nexus MDS Core, controlli GDPR mappati, progettato sui requisiti di AI Act e PLD 2024.";
+  "Consulenza, architettura, governance e compliance AI per i settori regolamentati in Italia e nell’UE. Dynamics Consulting progetta e mette in esercizio sistemi AI sovrani e on-premise: Nexus MDS Core, controlli GDPR mappati, progettato sui requisiti di AI Act e PLD 2024.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -85,7 +85,7 @@ const caseStudies = [
     sector: "Sanità / AI applicata",
     title: "HumanIA Care — AI companion per anziani",
     summary:
-      "Architettura di AI companion per pazienti anziani, pensata per un deployment privacy-first negli ambienti di cura regolamentati. Costruita su Nexus MDS Core.",
+      "Architettura di AI companion per pazienti anziani, pensata per un deployment privacy-first negli ambienti di cura regolamentati. Costruita su Nexus MDS Core. Pilota controllato, non ancora in rollout pubblico.",
     metrics: ["RAG multi-agente + voce", "On-premise, controlli GDPR mappati", "Su Nexus MDS Core"],
     href: "/it/case-studies/humania-care",
   },
@@ -134,7 +134,7 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
           "Autorità architetturale, governance dell’AI, valutazione dei fornitori e guida del programma con un mandato part-time, per imprese europee in settori regolati.",
       },
       {
-        href: "/fractional-cto-milano",
+        href: "/it/fractional-cto-milano",
         title: "Fractional CTO a Milano",
         blurb:
           "Governance AI, architettura cloud, modernizzazione legacy, team enablement per PMI e mid-market.",
@@ -196,7 +196,7 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
         blurb: "Smart contract, tokenizzazione e tracciabilità della filiera.",
       },
       {
-        href: "/modernizzazione-sistemi-legacy-ai",
+        href: "/it/modernizzazione-sistemi-legacy-ai",
         title: "Modernizzazione di sistemi legacy",
         blurb:
           "Reverse engineering assistito da AI per capire, documentare e riscrivere sistemi che nessuno mantiene più.",
@@ -216,7 +216,7 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
         href: "/it/cepf",
         title: "Compliance-Epistemic Project Framework (CEPF)",
         blurb:
-          "La nostra metodologia di compliance: i regimi normativi mappati sugli obblighi operativi che producono.",
+          "La metodologia di compliance di Dynamics Consulting: i regimi normativi mappati sugli obblighi operativi che producono.",
       },
       {
         href: "/it/calibra",
@@ -248,16 +248,10 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
           "Infrastruttura AI on-premise per ospedali, farmacie e aziende sanitarie. GDPR, AI Act, Legge 132/2025.",
       },
       {
-        href: "/it/consulenza-ai-farmaceutico",
+        href: "/it/ai-sovrana-pharma",
         title: "Farmaceutico",
         blurb:
-          "RAG su documenti regolatori e workflow agentici per il pharma mid-market. Alternativa sovrana agli hyperscaler.",
-      },
-      {
-        href: "/sovereign-ai-pharma-italia",
-        title: "AI sovrana per il pharma italiano",
-        blurb:
-          "Il caso della sovranità del dato nel farmaceutico: perché la residenza dei dati, che nessuna norma impone, resta il modo più diretto di dimostrare il controllo.",
+          "RAG su documenti regolatori e workflow agentici per il pharma, con la residenza dei dati come scelta architetturale: nessuna norma la impone, ma è il modo più diretto di dimostrare il controllo.",
       },
       {
         href: "/it/ai-agenti-finanziari",
@@ -291,7 +285,7 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
         href: "/it/risposte",
         title: "Risposte",
         blurb:
-          "Le domande che ci vengono fatte davvero su AI sovrana, RAG e AI Act, ognuna risolta nel primo paragrafo.",
+          "Le domande che vengono fatte davvero a Dynamics Consulting su AI sovrana, RAG e AI Act, ognuna risolta nel primo paragrafo.",
       },
       {
         href: "/it/ricerca",
@@ -306,7 +300,7 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
           "Dieci articoli sulla direttiva sulla responsabilità da prodotto 2024 e sulla governance dell’AI, per software house e professionisti tecnici.",
       },
       {
-        href: "/cra-11-settembre",
+        href: "/it/cra-11-settembre",
         title: "Cyber Resilience Act, articolo 14",
         blurb:
           "Dall’11 settembre 2026, ventiquattro ore per segnalare una vulnerabilità attivamente sfruttata. Il test in tre domande.",
@@ -330,7 +324,7 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
       {
         href: "/it/privacy",
         title: "Informativa privacy",
-        blurb: "Come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
+        blurb: "Come Dynamics Consulting raccoglie, utilizza e protegge i tuoi dati personali.",
       },
     ],
   },

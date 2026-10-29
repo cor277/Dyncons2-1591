@@ -22,7 +22,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 export const metadata: Metadata = {
   title: { absolute: "Sovereign AI, AI Governance & Compliance | Dynamics Consulting" },
   description:
-    "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. We design and deploy sovereign, on-premise AI systems — Nexus MDS Core, GDPR controls mapped, architected for AI Act and PLD 2024 requirements.",
+    "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. Dynamics Consulting designs and deploys sovereign, on-premise AI systems — Nexus MDS Core, GDPR controls mapped, architected for AI Act and PLD 2024 requirements.",
   alternates: alternatesFor("/"),
 };
 
@@ -71,7 +71,7 @@ const caseStudies = [
     sector: "Healthcare / Applied AI",
     title: "HumanIA Care — AI Senior Companion",
     summary:
-      "AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core.",
+      "AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core. Controlled pilot, not yet in public rollout.",
     metrics: ["Multi-agent RAG + Voice", "On-premise, GDPR controls mapped", "Runs on Nexus MDS Core"],
     href: "/case-studies/humania-care",
   },

@@ -5,27 +5,30 @@ import { useIsItalian } from "@/lib/use-is-italian";
  * Two lists, deliberately separate.
  *
  * `directClients`  — direct contractual relationships with Dynamics Consulting.
- * `experienceWith` — everything else: work delivered while employed elsewhere, or
- *                    through an agency or system integrator. The heading for this
- *                    list must never imply a commercial relationship.
+ * `experienceWith` — programmes delivered with and for others: work delivered
+ *                    through a system integrator, or with an organisation that
+ *                    was also an employer. The heading for this list must never
+ *                    imply a direct commercial relationship.
  *
  * Reclassifying an organisation is moving one string between the two arrays.
- * An empty list renders nothing.
+ * An empty list renders nothing. When in doubt, an organisation goes in the
+ * second list.
  *
- * Note: an organisation can appear both in the /about timeline as a former
- * employer and here as a direct client — Avanade re-engaged a former employee
- * as an external consultant. The two pages must stay consistent about that.
+ * ATOS and Avanade were also employers (see the /about timeline), so they are
+ * never listed as clients, even though Avanade later re-engaged a former
+ * employee as an external consultant.
  */
 const directClients = [
-  "ATOS",
-  "Avanade",
   "AESYS",
-  "illimity",
   "Banca Mediolanum",
   "Unicorno Ventures",
 ];
 
-const experienceWith: string[] = [];
+const experienceWith: string[] = [
+  "ATOS",
+  "Avanade",
+  "illimity",
+];
 
 function Marquee({ items }: { items: string[] }) {
   const doubled = [...items, ...items];
@@ -54,7 +57,7 @@ export function ClientStrip() {
       {directClients.length > 0 && (
         <>
           <p className="text-center text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mb-8">
-            {isItalian ? "Clienti" : "Clients"}
+            {isItalian ? "Clienti diretti" : "Direct clients"}
           </p>
           <Marquee items={directClients} />
         </>
@@ -63,7 +66,7 @@ export function ClientStrip() {
       {experienceWith.length > 0 && (
         <>
           <p className="text-center text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mb-8 mt-12">
-            {isItalian ? "Esperienza maturata presso" : "Experience gained at"}
+            {isItalian ? "Programmi realizzati con e per" : "Programmes delivered with and for"}
           </p>
           <Marquee items={experienceWith} />
         </>

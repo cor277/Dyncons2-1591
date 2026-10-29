@@ -25,6 +25,15 @@ import { NEXUS_INFERENCE_EN, NEXUS_INFERENCE_IT } from "@/lib/nexus";
 
 const link = "text-[#00B4D8] hover:text-[#E6EDF3] underline";
 
+interface ProofCard {
+  sector: string;
+  title: string;
+  summary: string;
+  metrics: string[];
+  href?: string;
+  linkLabel?: string;
+}
+
 interface Copy {
   hero: {
     eyebrow: string;
@@ -59,14 +68,9 @@ interface Copy {
   proof: {
     eyebrow: string;
     title: string;
-    cards: {
-      sector: string;
-      title: string;
-      summary: string;
-      metrics: string[];
-      href?: string;
-      linkLabel?: string;
-    }[];
+    cards: ProofCard[];
+    /** Projects running on Nexus that are not in production yet. */
+    pilot: { label: string; cards: ProofCard[] };
   };
   delivery: { eyebrow: string; title: string; body: ReactNode[] };
   graph: { eyebrow: string; title: string; intro: string };
@@ -218,14 +222,6 @@ const EN: Copy = {
         metrics: ["Public data only", "No usage tracking, by design"],
       },
       {
-        sector: "Elderly care",
-        title: "HumanIA Care",
-        summary:
-          "AI home assistant for older people, their caregivers and residential care homes: voice, memory and retrieval grounded in reviewed knowledge.",
-        metrics: ["6 months to production", "Personal data anonymised at ingestion"],
-        href: "/case-studies/humania-care",
-      },
-      {
         sector: "Legacy modernisation",
         title: "IATP",
         summary:
@@ -234,6 +230,19 @@ const EN: Copy = {
         href: "/case-studies/iatp",
       },
     ],
+    pilot: {
+      label: "In development · controlled pilot",
+      cards: [
+        {
+          sector: "Elderly care",
+          title: "HumanIA Care",
+          summary:
+            "AI home assistant for older people, their caregivers and residential care homes: voice, memory and retrieval grounded in reviewed knowledge. A controlled pilot, not yet in public rollout.",
+          metrics: ["< 800 ms p99 response latency", "Personal data anonymised at ingestion"],
+          href: "/case-studies/humania-care",
+        },
+      ],
+    },
   },
   delivery: {
     eyebrow: "How it is delivered",
@@ -274,7 +283,7 @@ const EN: Copy = {
     eyebrow: "Under the hood",
     title: "Service graph explorer",
     intro:
-      "The request path as deployed. Click any node to center the view and explore its connections; each edge shows the protocol and direction of data flow. Infrastructure helpers (etcd, the gateway dashboard, autoheal, an internal ops agent) are not drawn.",
+      "The request path as deployed. Click any node to center the view and explore its connections; each edge shows the protocol and direction of data flow. Infrastructure helpers (etcd, the gateway dashboard, autoheal, an internal ops agent) are not drawn. HyperLog receives operational gateway logs only — no prompts, no responses; the audit of model calls stays inside the perimeter.",
   },
   controls: {
     label: "Controls mapped — no certification claimed",
@@ -307,7 +316,7 @@ const IT: Copy = {
       "Controlli mappati su ISO/IEC 27001:2022",
       "Residenza dei dati in UE",
     ],
-    primary: { label: "Richiedi una demo →", href: "/contact" },
+    primary: { label: "Richiedi una demo →", href: "/it/contatti" },
     secondary: { label: "Parti dall’assessment di esposizione", href: "/it/assessment" },
   },
   governance: {
@@ -435,24 +444,29 @@ const IT: Copy = {
         metrics: ["Solo dati pubblici", "Nessun tracciamento, per scelta"],
       },
       {
-        sector: "Assistenza agli anziani",
-        title: "HumanIA Care",
-        summary:
-          "Assistente AI domestico per anziani, caregiver e RSA: voce, memoria e retrieval ancorati a conoscenze verificate.",
-        metrics: ["6 mesi alla produzione", "Dati personali anonimizzati all’acquisizione"],
-        href: "/case-studies/humania-care",
-        linkLabel: "Leggi il case study (in inglese) →",
-      },
-      {
         sector: "Modernizzazione legacy",
         title: "IATP",
         summary:
           "Reverse engineering assistito dall’AI di una piattaforma legacy: il retrieval sul codice, su Nexus, genera i documenti di analisi.",
         metrics: ["Documenti generati con RAG", "Orchestrazione DevOps con MCP"],
-        href: "/case-studies/iatp",
-        linkLabel: "Leggi il case study (in inglese) →",
+        href: "/it/case-studies/iatp",
+        linkLabel: "Leggi il case study →",
       },
     ],
+    pilot: {
+      label: "In sviluppo · pilota controllato",
+      cards: [
+        {
+          sector: "Assistenza agli anziani",
+          title: "HumanIA Care",
+          summary:
+            "Assistente AI domestico per anziani, caregiver e RSA: voce, memoria e retrieval ancorati a conoscenze verificate. Un pilota controllato, non ancora in rollout pubblico.",
+          metrics: ["Latenza di risposta p99 < 800 ms", "Dati personali anonimizzati all’acquisizione"],
+          href: "/it/case-studies/humania-care",
+          linkLabel: "Leggi il case study →",
+        },
+      ],
+    },
   },
   delivery: {
     eyebrow: "Come si consegna",
@@ -492,7 +506,7 @@ const IT: Copy = {
     eyebrow: "Sotto il cofano",
     title: "Mappa dei servizi",
     intro:
-      "Il percorso delle richieste così come è installato. Clicca un nodo per centrarlo ed esplorarne le connessioni; ogni arco indica protocollo e direzione del flusso. Non sono disegnati i servizi di supporto (etcd, la dashboard del gateway, autoheal, un agente operativo interno). Le etichette della mappa sono in inglese.",
+      "Il percorso delle richieste così come è installato. Clicca un nodo per centrarlo ed esplorarne le connessioni; ogni arco indica protocollo e direzione del flusso. Non sono disegnati i servizi di supporto (etcd, la dashboard del gateway, autoheal, un agente operativo interno). HyperLog riceve solo i log operativi del gateway, senza prompt né risposte: l’audit delle chiamate al modello resta dentro il perimetro. Le etichette della mappa sono in inglese.",
   },
   controls: {
     label: "Controlli mappati — nessuna certificazione dichiarata",
@@ -509,7 +523,7 @@ const IT: Copy = {
     subtitle:
       "Una dimostrazione su un deployment in produzione: Docker su un singolo server, tutti i servizi attivi, registro di audit compreso.",
     label: "Richiedi una demo →",
-    href: "/contact",
+    href: "/it/contatti",
     secondary: { label: "Assessment di esposizione →", href: "/it/assessment" },
   },
 };
@@ -651,6 +665,14 @@ export function NexusPlatformBody({ locale = "en" }: { locale?: "en" | "it" }) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {c.proof.cards.map((card) => (
+              <CaseStudyCard key={card.title} {...card} />
+            ))}
+          </div>
+          <p className="text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mt-12 mb-4">
+            {c.proof.pilot.label}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {c.proof.pilot.cards.map((card) => (
               <CaseStudyCard key={card.title} {...card} />
             ))}
           </div>

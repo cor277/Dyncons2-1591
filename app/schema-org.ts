@@ -78,7 +78,7 @@ export const schemaOrg = [
     "@type": "Person",
     "@id": PERSON_ID,
     name: "Corrado Patierno",
-    jobTitle: "AI Solution Architect & Founder",
+    jobTitle: "Founder & Principal Architect",
     worksFor: { "@id": ORG_ID },
     knowsAbout: [
       "Enterprise AI Architecture",

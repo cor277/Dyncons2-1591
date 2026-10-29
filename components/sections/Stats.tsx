@@ -5,28 +5,41 @@ import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 
 type Locale = "en" | "it";
 
+// Every figure here is countable: Federfarma Lombarda numbers come from the
+// case study, CEPF counts from the v7 snapshot, the service count from lib/nexus.ts.
 const STATS = {
   en: [
-    { value: NEXUS_SERVICE_COUNT, suffix: "", label: "Containerised services in Nexus MDS Core" },
-    { value: 10000, suffix: "+", label: "Enterprise documents processed" },
-    { value: 19, suffix: "", label: "Frameworks mapped in CEPF v7" },
-    { value: 8, suffix: "+", label: "Regulated sectors served" },
-    { value: 3, suffix: "+", label: "Production deployments" },
+    { value: NEXUS_SERVICE_COUNT, prefix: "", suffix: "", label: "Containerised services in Nexus MDS Core" },
+    { value: 1000, prefix: "", suffix: "+", label: "Pharmacies served — Federfarma Lombarda" },
+    { value: 2000, prefix: "~", suffix: "", label: "Queries per day — Federfarma Lombarda" },
+    { value: 10000, prefix: "", suffix: "+", label: "Documents vectorised — Federfarma Lombarda" },
+    { value: 247, prefix: "", suffix: "", label: "Requirements in CEPF v7" },
   ],
   it: [
-    { value: NEXUS_SERVICE_COUNT, suffix: "", label: "Servizi containerizzati in Nexus MDS Core" },
-    { value: 10000, suffix: "+", label: "Documenti aziendali elaborati" },
-    { value: 19, suffix: "", label: "Framework mappati in CEPF v7" },
-    { value: 8, suffix: "+", label: "Settori regolamentati serviti" },
-    { value: 3, suffix: "+", label: "Deployment in produzione" },
+    { value: NEXUS_SERVICE_COUNT, prefix: "", suffix: "", label: "Servizi containerizzati in Nexus MDS Core" },
+    { value: 1000, prefix: "", suffix: "+", label: "Farmacie servite — Federfarma Lombarda" },
+    { value: 2000, prefix: "~", suffix: "", label: "Interrogazioni al giorno — Federfarma Lombarda" },
+    { value: 10000, prefix: "", suffix: "+", label: "Documenti vettorializzati — Federfarma Lombarda" },
+    { value: 247, prefix: "", suffix: "", label: "Requisiti in CEPF v7" },
   ],
 };
 
+// Grouping by hand: it-IT leaves four-digit numbers ungrouped ("1000"), the site writes "1.000".
 function formatNumber(n: number, locale: Locale) {
-  return n.toLocaleString(locale === "it" ? "it-IT" : "en-US");
+  return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, locale === "it" ? "." : ",");
 }
 
-function Counter({ target, suffix, locale }: { target: number; suffix: string; locale: Locale }) {
+function Counter({
+  target,
+  prefix,
+  suffix,
+  locale,
+}: {
+  target: number;
+  prefix: string;
+  suffix: string;
+  locale: Locale;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
   const [count, setCount] = useState(0);
@@ -52,6 +65,7 @@ function Counter({ target, suffix, locale }: { target: number; suffix: string; l
 
   return (
     <span ref={ref}>
+      {prefix}
       {formatNumber(inView ? count : target, locale)}
       {suffix}
     </span>
@@ -74,7 +88,7 @@ export function Stats({ locale = "en" }: { locale?: Locale }) {
               className="text-center"
             >
               <div className="font-syne text-4xl md:text-5xl font-extrabold text-[#00B4D8] mb-2">
-                <Counter target={s.value} suffix={s.suffix} locale={locale} />
+                <Counter target={s.value} prefix={s.prefix} suffix={s.suffix} locale={locale} />
               </div>
               <p className="text-[#7D8FA3] text-sm leading-tight">{s.label}</p>
             </motion.div>

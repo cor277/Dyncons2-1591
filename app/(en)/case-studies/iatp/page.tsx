@@ -58,7 +58,7 @@ export default function IatpCaseStudy() {
             </h1>
             <p className="text-lg text-[#7D8FA3]">
               A legacy platform with years of undocumented evolution needed to be understood,
-              documented, and modernised — without the original development team. We built an
+              documented, and modernised — without the original development team. Dynamics Consulting built an
               AI-powered pipeline that reverse-engineered the system, auto-generated analysis
               documents, and then implemented a full AI-driven development and testing workflow.
             </p>
@@ -103,7 +103,7 @@ export default function IatpCaseStudy() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Phase 1 — AI-powered reverse engineering</h2>
               <p>
-                We deployed Nexus MDS Core as the analytical backbone. The entire legacy codebase
+                Dynamics Consulting deployed Nexus MDS Core as the analytical backbone. The entire legacy codebase
                 was ingested into a RAG pipeline powered by Weaviate, creating a semantically
                 searchable knowledge base of every module, function, data flow, and business rule
                 embedded in the code.
@@ -132,7 +132,7 @@ export default function IatpCaseStudy() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Phase 2 — AI-driven development pipeline</h2>
               <p>
-                With the system fully understood and documented, we implemented a modern,
+                With the system fully understood and documented, Dynamics Consulting implemented a modern,
                 AI-augmented development pipeline:
               </p>
               <ul className="list-disc list-inside space-y-3 mt-4">

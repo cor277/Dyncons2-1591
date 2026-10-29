@@ -230,10 +230,11 @@ export default function AiOnPremiseArticle() {
                 <Link href="/it/case-studies/federfarma" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Federfarma Lombarda
                 </Link>{" "}
-                e per due servizi in ambito sanitario, CureSicure e{" "}
+                e per il servizio sanitario CureSicure;{" "}
                 <Link href="/it/case-studies/humania-care" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   HumanIA Care
-                </Link>.
+                </Link>{" "}
+                ci gira come pilota controllato, non ancora in rollout pubblico.
               </p>
               <p className="mt-4">
                 Per le organizzazioni sanitarie che stanno valutando la propria strategia AI, la

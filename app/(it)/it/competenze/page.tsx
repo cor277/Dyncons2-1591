@@ -101,7 +101,7 @@ export default function CompetenzePage() {
             <p className="text-lg text-[#7D8FA3] leading-relaxed">
               Sono competenze, non offerte separate. Sono l’ingegneria su cui poggiano le tre linee
               di servizio — consulenza sulla governance, fractional CTO e la piattaforma di AI
-              sovrana — e le elenchiamo qui perché ciò che un progetto richiede davvero sia visibile,
+              sovrana — e sono elencate qui perché ciò che un progetto richiede davvero sia visibile,
               non sottinteso.
             </p>
           </div>

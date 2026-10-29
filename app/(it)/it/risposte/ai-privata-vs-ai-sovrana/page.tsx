@@ -93,7 +93,7 @@ export default function AiPrivataVsSovranaRisposta() {
           },
           {
             label: "Fractional AI CTO",
-            href: "/fractional-cto-milano",
+            href: "/it/fractional-cto-milano",
             note: "dove questa decisione di solito viene presa",
           },
         ]}

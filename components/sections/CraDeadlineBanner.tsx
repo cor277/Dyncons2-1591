@@ -28,7 +28,7 @@ export function CraDeadlineBanner() {
             </p>
           </div>
           <Link
-            href="/cra-11-settembre"
+            href="/it/cra-11-settembre"
             hrefLang="it"
             lang="it"
             className="inline-flex items-center gap-1 text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium underline underline-offset-4 decoration-[#00B4D8]/40 hover:decoration-[#E6EDF3] transition-colors duration-200 whitespace-nowrap self-start lg:self-auto"

@@ -162,7 +162,7 @@ export default function DynamicsCrmCaseStudyIt() {
                   <li>Change management su business unit regolate, con più livelli di approvazione</li>
                 </ul>
                 <p>
-                  È il contesto operativo che determina come affrontiamo ogni progetto AI o dati nei
+                  È il contesto operativo che determina come Dynamics Consulting affronta ogni progetto AI o dati nei
                   servizi finanziari: la governance non è una funzionalità aggiunta alla fine, è il
                   vincolo da cui si parte.
                 </p>
@@ -177,8 +177,8 @@ export default function DynamicsCrmCaseStudyIt() {
                 audit trail, approval gate, compartimentazione dei dati) sono gli stessi che oggi
                 servono per i sistemi di agenti AI nei servizi finanziari. La tecnologia è passata
                 da Dynamics 365 agli LLM e ai workflow agentici, ma i vincoli no: chi ha autorizzato
-                questa azione, su quali dati, con quale modello, e se il log è immutabile. La nostra
-                esperienza nei servizi finanziari ci porta a progettare sistemi AI che soddisfano
+                questa azione, su quali dati, con quale modello, e se il log è immutabile. Questa
+                esperienza nei servizi finanziari porta Dynamics Consulting a progettare sistemi AI che soddisfano
                 questi requisiti dal primo giorno, non con un intervento a posteriori.
               </p>
             </div>

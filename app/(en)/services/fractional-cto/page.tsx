@@ -227,7 +227,7 @@ export default function FractionalCtoPage() {
                 <CTAButton label="Discuss a mandate →" href="/contact" variant="primary" />
                 <div className="flex items-center gap-6 sm:self-center">
                   <TextLink label="Exposure assessment →" href="/assessment" />
-                  <TextLink label="Fractional CTO a Milano →" href="/fractional-cto-milano" />
+                  <TextLink label="Fractional CTO a Milano →" href="/it/fractional-cto-milano" />
                 </div>
               </div>
             </div>
@@ -310,7 +310,7 @@ export default function FractionalCtoPage() {
                 >
                   advisory engagement on governance and compliance
                 </Link>{" "}
-                is the cheaper and more honest answer, and we will say so.
+                is the cheaper and more honest answer, and Dynamics Consulting will say so.
               </p>
             </div>
 
@@ -503,7 +503,7 @@ export default function FractionalCtoPage() {
               FAQ
             </p>
             <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-10">
-              Questions we are actually asked
+              Questions Dynamics Consulting is actually asked
             </h2>
             <div className="space-y-8">
               {faqs.map((f) => (

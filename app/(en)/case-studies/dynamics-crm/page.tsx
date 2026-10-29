@@ -145,7 +145,7 @@ export default function DynamicsCrmCaseStudy() {
                   <li>Change management across regulated business units with multiple approval layers</li>
                 </ul>
                 <p>
-                  This is the operational context that shapes how we approach every AI or data
+                  This is the operational context that shapes how Dynamics Consulting approaches every AI or data
                   project in financial services — governance is not a feature added at the end,
                   it is the starting constraint.
                 </p>
@@ -156,12 +156,12 @@ export default function DynamicsCrmCaseStudy() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Why this matters for AI projects</h2>
               <p className="text-[#7D8FA3] text-lg leading-relaxed">
-                The governance patterns we implemented in these CRM engagements — role segregation,
+                The governance patterns implemented in these CRM engagements — role segregation,
                 audit trails, approval gates, data compartmentalisation — are the same patterns
                 required for AI agent systems in financial services today. The technology has changed
                 from Dynamics 365 to LLMs and agentic workflows, but the constraints have not: who
                 authorised this action, on what data, with what model, and is the log immutable.
-                Our financial services experience means we design AI systems that meet these
+                This financial services experience means Dynamics Consulting designs AI systems that meet these
                 requirements from day one, not as a retrofit.
               </p>
             </div>
