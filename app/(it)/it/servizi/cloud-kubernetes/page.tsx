@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "Che differenza c'è fra AKS, GCP GKE e Hetzner per i carichi di lavoro AI?",
-    a: "AKS e GKE offrono un'integrazione nativa con i servizi cloud (storage, IAM, monitoraggio) ma a costi GPU elevati. Hetzner bare-metal offre GPU H100/A100 a costi da 3 a 5 volte inferiori, ma l'infrastruttura va gestita. La scelta dipende da budget, compliance (residenza dei dati in UE) e capacità operativa del team.",
+    a: "AKS e GKE offrono un'integrazione nativa con i servizi cloud (storage, IAM, monitoraggio) ma a costi GPU elevati. Hetzner bare-metal offre GPU H100/A100 a prezzi più bassi, ma l'infrastruttura va gestita. La scelta dipende da budget, compliance (residenza dei dati in UE) e capacità operativa del team.",
   },
 ];
 

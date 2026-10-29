@@ -125,9 +125,9 @@ export default function SovereignAiPage() {
               requirements of the AI Act, with GDPR controls mapped and data resident in the EU.
             </p>
             <p>
-              Dynamics Consulting is the mid-market specialist for sovereign AI in Italy. Unlike
-              generalist system integrators, we focus exclusively on on-premise AI infrastructure
-              for regulated sectors. Every project is led directly by the founder, Corrado
+              Dynamics Consulting works with mid-market organisations in Italy on sovereign AI.
+              Unlike generalist system integrators, our focus is on-premise AI infrastructure for
+              regulated sectors. Every project is led directly by the founder, Corrado
               Patierno, who has more than 25 years of experience in enterprise systems.
             </p>
             <div className="pt-6">

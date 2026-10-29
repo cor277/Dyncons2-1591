@@ -62,7 +62,7 @@ export default function AutomationPage() {
   return (
     <ServicePageLayout
       title="Intelligent Automation"
-      intro="Manual, repetitive work is the enemy of scale. We design and deploy automation programmes that combine RPA, process mining, and AI to systematically eliminate low-value labour — delivering measurable ROI within weeks, not years."
+      intro="Manual, repetitive work is the enemy of scale. We design and deploy automation programmes that combine RPA, process mining, and AI to systematically eliminate low-value labour — with a return that is measured on each process, not promised in advance."
       tech={[
         "UiPath",
         "Power Automate",

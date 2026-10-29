@@ -61,7 +61,7 @@ const caseStudies = [
     sector: "Energia / CRM",
     title: "Sorgenia — Dynamics Marketing",
     summary:
-      "Implementazione di Dynamics 365 Marketing per il principale fornitore italiano di energia verde. Orchestrazione dei customer journey e automazione delle campagne su larga scala.",
+      "Implementazione di Dynamics 365 Marketing per Sorgenia, operatore italiano dell’energia. Orchestrazione dei customer journey e automazione delle campagne su larga scala.",
     metrics: ["200k+ contatti gestiti", "D365 Marketing", "Journey multicanale"],
     href: "/it/case-studies/sorgenia",
   },
@@ -94,7 +94,7 @@ const caseStudies = [
     title: "Modernizzazione dei dati Dynamics 365",
     summary:
       "Dai silos dell’ERP a un data lakehouse ACID. Da Synapse Link ad Apache Iceberg. Zero-ETL. Event-driven.",
-    metrics: ["Zero downtime", "Lakehouse ACID", "Zero-ETL in esercizio"],
+    metrics: ["4 sedi unificate", "Lakehouse ACID", "Zero-ETL in esercizio"],
     href: "/it/case-studies/dynamics-data",
   },
   {

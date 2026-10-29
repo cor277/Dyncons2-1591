@@ -108,7 +108,7 @@ export default function MicrosoftDynamicsPage() {
           iconName: "Database",
           name: "Migrazione e integrazione dei dati",
           desc:
-            "Migrazione strutturata di anagrafiche, storico transazionale e documenti da qualsiasi sistema legacy, con report di riconciliazione completi e tolleranza zero per la perdita di dati.",
+            "Migrazione strutturata di anagrafiche, storico transazionale e documenti da qualsiasi sistema legacy, con report di riconciliazione completi che rendono conto di ogni record migrato.",
         },
         {
           iconName: "Shield",

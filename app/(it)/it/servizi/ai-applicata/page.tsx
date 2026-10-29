@@ -85,7 +85,7 @@ const capabilities: Capability[] = [
   {
     iconName: "Brain",
     name: "Sistemi multi-agente",
-    desc: "Memoria a breve e lungo termine su più livelli, riassunto automatico dopo 10 interazioni per ottimizzare l'uso dei token, finestra di contesto di fatto illimitata.",
+    desc: "Memoria a breve e lungo termine su più livelli, riassunto automatico dopo 10 interazioni per ottimizzare l'uso dei token, così le conversazioni lunghe conservano il contesto entro la finestra del modello.",
   },
   {
     iconName: "Mic",

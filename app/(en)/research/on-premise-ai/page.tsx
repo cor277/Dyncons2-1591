@@ -131,17 +131,17 @@ export default function OnPremiseAiArticle() {
               <p>
                 The assumption that cloud AI is cheaper deserves scrutiny. For inference-heavy
                 workloads — the kind healthcare organisations run daily — cloud GPU costs scale
-                linearly with usage. A single A100 instance on a major hyperscaler costs between
-                $25,000 and $35,000 per year. An organisation running multiple models (clinical NLP,
-                document extraction, conversational AI) can easily reach six figures annually in
-                compute alone, before storage and egress fees.
+                linearly with usage. An organisation running multiple models (clinical NLP,
+                document extraction, conversational AI) pays for every hour of GPU compute, before
+                storage and egress fees.
               </p>
               <p className="mt-4">
-                On-premise GPU hardware — even enterprise-grade — amortises over 3-5 years. After
-                the initial capital expenditure, the marginal cost of additional inference is
-                effectively zero. For organisations with predictable, sustained AI workloads,
-                the total cost of ownership (TCO) inflection point typically arrives within 18-24
-                months. Beyond that point, on-premise is materially cheaper.
+                On-premise GPU hardware — even enterprise-grade — is a capital expenditure that
+                amortises over several years. After it, the marginal cost of additional inference
+                is low. For organisations with predictable, sustained AI workloads, there is a total
+                cost of ownership (TCO) inflection point beyond which on-premise is cheaper; where
+                it falls depends on volume, hardware and utilisation, and has to be calculated
+                case by case.
               </p>
               <p className="mt-4">
                 There is also a hidden cost in cloud AI that rarely appears in TCO calculations:
@@ -188,20 +188,20 @@ export default function OnPremiseAiArticle() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Implementation patterns: transitioning from cloud to on-premise AI</h2>
               <p>
-                Organisations do not need to migrate everything at once. The most successful
-                transitions we have led follow a phased approach:
+                Organisations do not need to migrate everything at once. The transitions we have
+                led follow a phased approach:
               </p>
               <ul className="list-disc list-inside space-y-3 mt-4">
                 <li><strong className="text-[#E6EDF3]">Phase 1 — Assessment:</strong> Map existing AI workloads, classify data sensitivity, and identify which workloads must move on-premise for regulatory compliance vs. which could remain in the cloud.</li>
-                <li><strong className="text-[#E6EDF3]">Phase 2 — Foundation:</strong> Deploy the on-premise infrastructure (Kubernetes cluster, GPU nodes, storage layer). In Nexus MDS Core deployments, this typically takes 2-3 weeks.</li>
+                <li><strong className="text-[#E6EDF3]">Phase 2 — Foundation:</strong> Deploy the on-premise infrastructure (Kubernetes cluster, GPU nodes, storage layer).</li>
                 <li><strong className="text-[#E6EDF3]">Phase 3 — Migration:</strong> Move high-sensitivity workloads first (clinical AI, patient-facing systems). Maintain cloud for non-sensitive workloads during transition.</li>
                 <li><strong className="text-[#E6EDF3]">Phase 4 — Optimisation:</strong> Tune inference performance, implement observability, and establish operational runbooks for the on-premise stack.</li>
               </ul>
               <p className="mt-4">
                 The key insight is that on-premise AI does not mean building from scratch. Modern
-                platforms like Nexus MDS Core provide a pre-integrated stack that deploys in days,
-                not months. The operational complexity that historically made on-premise AI
-                prohibitive has been engineered away.
+                platforms like Nexus MDS Core provide a pre-integrated stack, so a deployment does
+                not start from zero. Much of the operational complexity that historically made
+                on-premise AI prohibitive is now handled by the platform.
               </p>
             </div>
 

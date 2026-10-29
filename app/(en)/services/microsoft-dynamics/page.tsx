@@ -106,7 +106,7 @@ export default function MicrosoftDynamicsPage() {
           iconName: "Database",
           name: "Data Migration & Integration",
           desc:
-            "Structured migration of master data, transactional history, and documents from any legacy system, with full reconciliation reports and zero tolerance for data loss.",
+            "Structured migration of master data, transactional history, and documents from any legacy system, with full reconciliation reports that account for every migrated record.",
         },
         {
           iconName: "Shield",

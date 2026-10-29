@@ -145,16 +145,15 @@ export default function RagVsFineTuningArticle() {
               <p>
                 RAG has a lower upfront cost but ongoing operational costs: vector store hosting,
                 embedding compute for document ingestion, and retrieval latency overhead on every
-                query. For a mid-market organisation processing 10,000-50,000 queries per day,
-                the vector store and embedding pipeline typically costs €500-2,000/month on
-                on-premise infrastructure.
+                query. On on-premise infrastructure that cost is driven by query volume and by how
+                often the documents change.
               </p>
               <p className="mt-4">
                 Fine-tuning has a higher upfront cost — GPU hours for training, dataset curation,
                 evaluation cycles — but lower per-query costs once deployed, since there is no
-                retrieval step. A single fine-tuning run on a 7B parameter model costs between
-                €2,000 and €10,000 depending on dataset size and infrastructure. But this cost
-                recurs every time the training data changes significantly.
+                retrieval step. The cost of a fine-tuning run depends on model size, dataset size
+                and infrastructure, and it recurs every time the training data changes
+                significantly.
               </p>
               <p className="mt-4">
                 The hidden cost in fine-tuning is evaluation. Every new model version needs

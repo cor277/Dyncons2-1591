@@ -105,7 +105,7 @@ export default function DynamicsCrmCaseStudyIt() {
                   </p>
                   <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">Banca Mediolanum</h3>
                   <p className="text-[#7D8FA3] text-sm leading-relaxed">
-                    La più grande banca italiana di wealth management basata su una rete di
+                    Banca italiana di wealth management basata su una rete di
                     consulenti, con migliaia di consulenti finanziari operativi in tutto il Paese.
                     Il CRM doveva coprire l’intero ciclo della consulenza (gestione dei lead,
                     tracciamento delle opportunità, reportistica regolamentare) integrandosi con i
@@ -136,7 +136,7 @@ export default function DynamicsCrmCaseStudyIt() {
                   </p>
                   <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">Unipol</h3>
                   <p className="text-[#7D8FA3] text-sm leading-relaxed">
-                    Uno dei maggiori gruppi assicurativi italiani. Deployment di Dynamics 365
+                    Gruppo assicurativo italiano. Deployment di Dynamics 365
                     Customer Service per la gestione dei sinistri e la relazione con gli assicurati.
                     Integrazione omnicanale (email, telefono, web chat) con instradamento guidato
                     dagli SLA e dashboard operative in Power BI. La difficoltà non era la

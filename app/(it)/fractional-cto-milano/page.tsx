@@ -43,7 +43,7 @@ const schema = {
           name: "Quanto costa un Fractional CTO a Milano?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Il costo di un Fractional CTO varia in base all\u2019impegno richiesto. Tipicamente si parte da 2-4 giornate al mese per advisory strategico fino a 8-12 giornate per engagement operativi. Rispetto a un CTO full-time con RAL di 120-180k\u20ac pi\u00f9 benefit, il modello frazionato riduce il costo del 60-80% mantenendo lo stesso livello di seniority.",
+            text: "Il costo di un Fractional CTO varia in base all\u2019impegno richiesto. Tipicamente si parte da 2-4 giornate al mese per advisory strategico fino a 8-12 giornate per engagement operativi. Rispetto a un CTO full-time paghi solo le giornate che usi, con lo stesso livello di seniority.",
           },
         },
         {
@@ -133,8 +133,8 @@ export default function FractionalCtoMilanoPage() {
                 Per le PMI milanesi — aziende con 50-500 dipendenti, fatturato tra 10 e 200 milioni
                 di euro — il Fractional CTO risolve un paradosso strutturale: queste organizzazioni
                 hanno raggiunto una complessit&agrave; tecnologica che richiede leadership C-level dedicata,
-                ma il loro stadio di crescita non giustifica (o non permette) un&apos;assunzione full-time
-                con RAL di 120-180.000 euro pi&ugrave; benefit, stock option e costi di onboarding.
+                ma il loro stadio di crescita non giustifica (o non permette) un&apos;assunzione full-time,
+                con retribuzione, benefit, stock option e costi di onboarding.
               </p>
               <p>
                 Il risultato? Decisioni tecnologiche delegate a figure operative — IT manager,
@@ -426,9 +426,8 @@ export default function FractionalCtoMilanoPage() {
                   <p>
                     Il costo varia in base all&apos;impegno richiesto. Si parte da 2-4 giornate
                     al mese per advisory strategico fino a 8-12 giornate per engagement
-                    operativi. Rispetto a un CTO full-time con RAL di 120-180k&euro; pi&ugrave;
-                    benefit, il modello frazionato riduce il costo del 60-80% mantenendo
-                    lo stesso livello di seniority e profondit&agrave; tecnica.
+                    operativi. Rispetto a un CTO full-time paghi solo le giornate che usi, con lo
+                    stesso livello di seniority e profondit&agrave; tecnica.
                   </p>
                 </div>
 

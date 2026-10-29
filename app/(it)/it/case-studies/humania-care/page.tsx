@@ -123,9 +123,8 @@ export default function HumaniaCareStudyIt() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Risultati</h2>
               <p>
-                Sei mesi dal primo commit a un’architettura pronta per la produzione. L’architettura
-                RAG ha eliminato del tutto i consigli clinici allucinati, con zero incidenti
-                documentati in fase di test. La piattaforma è progettata per scalare negli ambienti
+                Sei mesi dal primo commit a un’architettura pronta per la produzione. In fase di test,
+                con l’architettura RAG non è stato documentato alcun consiglio clinico allucinato. La piattaforma è progettata per scalare negli ambienti
                 di cura regolati ed è attualmente in deployment controllato, non ancora in
                 distribuzione pubblica.
               </p>

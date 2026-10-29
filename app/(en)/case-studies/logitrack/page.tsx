@@ -256,7 +256,7 @@ export default function LogiTrackCaseStudy() {
               <p className="mt-4">
                 An integrated SIEM provides continuous security monitoring with multi-level event
                 correlation, automatic anomaly alerting, documented incident-response procedures, and
-                encrypted backups with configurable retention and guaranteed RTO/RPO.
+                encrypted backups with configurable retention and defined RTO/RPO targets.
               </p>
             </div>
 

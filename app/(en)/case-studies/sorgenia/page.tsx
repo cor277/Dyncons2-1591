@@ -11,7 +11,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Sorgenia — Dynamics 365 Marketing | Case Studies",
   description:
-    "Dynamics 365 Marketing implementation for Sorgenia, Italy's leading green energy provider. Customer journey orchestration, campaign automation, and multi-channel engagement at scale.",
+    "Dynamics 365 Marketing implementation for Sorgenia, an Italian energy provider. Customer journey orchestration, campaign automation, and multi-channel engagement at scale.",
   alternates: alternatesFor("/case-studies/sorgenia"),
 };
 
@@ -49,7 +49,7 @@ export default function SorgeniaCaseStudy() {
               Energy · CRM · Marketing Automation
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Dynamics 365 Marketing for Italy&apos;s leading green energy provider
+              Dynamics 365 Marketing for Sorgenia, an Italian energy provider
             </h1>
             <p className="text-lg text-slate-300">
               Sorgenia needed a marketing automation platform that could orchestrate complex
@@ -78,8 +78,7 @@ export default function SorgeniaCaseStudy() {
           <div className="max-w-3xl mx-auto prose prose-slate dark:prose-invert prose-lg">
             <h2>The challenge</h2>
             <p>
-              Sorgenia, one of Italy&apos;s largest independent energy companies and a leader in
-              green energy, was running marketing campaigns through a fragmented set of tools:
+              Sorgenia, an Italian energy company with a green energy offering, was running marketing campaigns through a fragmented set of tools:
               separate ESP for email, manual SMS batches, disconnected web tracking, and no unified
               view of customer engagement. Campaign setup took days, segmentation was done in
               spreadsheets, and there was no way to trigger real-time communications based on

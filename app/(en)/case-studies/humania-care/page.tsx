@@ -104,9 +104,8 @@ export default function HumaniaCareStudy() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Results</h2>
               <p>
-                Six months from first commit to production-ready architecture. The RAG architecture
-                eliminated hallucinated clinical advice entirely, achieving zero documented incidents
-                in testing. The platform is designed for scale in regulated care environments and is
+                Six months from first commit to production-ready architecture. In testing, no
+                hallucinated clinical advice was documented with the RAG architecture. The platform is designed for scale in regulated care environments and is
                 currently in controlled deployment — not yet in public rollout.
               </p>
             </div>

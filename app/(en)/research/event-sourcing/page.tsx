@@ -56,7 +56,7 @@ export default function EventSourcingArticle() {
               </time>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-[#E6EDF3]">
-              Event sourcing in practice: lessons from five production systems
+              Event sourcing in practice: lessons from production systems
             </h1>
             <p className="text-lg text-[#7D8FA3]">
               Event sourcing promises auditability and temporal querying. In practice, projection
@@ -88,7 +88,7 @@ export default function EventSourcingArticle() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Where implementations struggle</h2>
               <p>
-                Having deployed event sourcing in five production systems across financial services,
+                Having deployed event sourcing in production systems across financial services,
                 logistics, and enterprise integration, the pattern that emerges is consistent: the
                 event store itself is the easy part. Everything around it is where complexity lives.
               </p>
@@ -155,19 +155,19 @@ export default function EventSourcingArticle() {
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Technology choices: EventStoreDB vs Kafka vs custom</h2>
               <p>
                 The choice of event store technology is one of the first decisions — and one of the
-                most consequential. From our five production deployments:
+                most consequential. From our production deployments:
               </p>
               <ul className="list-disc list-inside space-y-3 mt-4">
                 <li><strong className="text-[#E6EDF3]">EventStoreDB:</strong> Purpose-built for event sourcing. Native support for stream-per-aggregate, projections, and subscriptions. Excellent for greenfield projects where the team commits to event sourcing as the primary data model. Operational overhead is moderate — it is a specialised database that requires specific expertise.</li>
                 <li><strong className="text-[#E6EDF3]">Apache Kafka:</strong> Not designed for event sourcing, but widely used as one. Works well when event sourcing is part of a broader event-driven architecture and the team already operates Kafka. The trade-off: Kafka lacks native support for reading a single aggregate&apos;s event stream efficiently, so you typically need a secondary index or a separate store for aggregate hydration.</li>
-                <li><strong className="text-[#E6EDF3]">PostgreSQL with append-only tables:</strong> The pragmatic choice when the team is already strong in PostgreSQL and the event volume is moderate (under 100M events). You lose specialised features (native projections, catch-up subscriptions) but gain operational simplicity and the ability to use familiar tooling for debugging and monitoring.</li>
+                <li><strong className="text-[#E6EDF3]">PostgreSQL with append-only tables:</strong> The pragmatic choice when the team is already strong in PostgreSQL and the event volume is moderate. You lose specialised features (native projections, catch-up subscriptions) but gain operational simplicity and the ability to use familiar tooling for debugging and monitoring.</li>
               </ul>
               <p className="mt-4">
                 Our recommendation: if event sourcing is the core architectural pattern and the
                 team has the expertise, use EventStoreDB. If event sourcing is one component in a
                 larger event-driven system, use Kafka with a purpose-built projection layer. If the
                 team is small and pragmatism trumps purity, PostgreSQL with well-designed
-                append-only tables gets you 80% of the benefit with 20% of the operational cost.
+                append-only tables gets you most of the benefit for a fraction of the operational cost.
               </p>
             </div>
 

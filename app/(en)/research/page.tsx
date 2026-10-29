@@ -76,7 +76,7 @@ const posts = [
     slug: "/research/event-sourcing",
     date: "October 2025",
     tag: "Enterprise Integration",
-    title: "Event sourcing in practice: lessons from five production systems",
+    title: "Event sourcing in practice: lessons from production systems",
     summary:
       "Event sourcing promises auditability and temporal querying. In practice, projection management, schema evolution, and snapshot strategy are where most implementations struggle.",
   },

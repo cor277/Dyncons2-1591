@@ -45,7 +45,7 @@ const schema = {
           name: "Quanto tempo richiede la modernizzazione di un sistema legacy con AI?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "La fase di analisi automatizzata con la nostra pipeline AI richiede tipicamente 2-4 settimane, contro i 3-6 mesi di un audit manuale tradizionale. La riscrittura completa dipende dalla complessit\u00e0 del sistema, ma la roadmap generata dall\u2019AI riduce i tempi del 40-60% rispetto a un approccio puramente manuale.",
+            text: "Con la nostra pipeline AI la fase di analisi automatizzata si misura in settimane, non nei mesi di un audit manuale tradizionale. La durata della riscrittura completa dipende dalla complessit\u00e0 del sistema; la roadmap generata dall\u2019AI permette di stimarla sul caso specifico prima di iniziare.",
           },
         },
         {
@@ -77,7 +77,7 @@ const schema = {
           name: "Quanto costa la modernizzazione AI-assisted rispetto alla riscrittura tradizionale?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "I nostri progetti mostrano un risparmio medio del 40-60% rispetto alla riscrittura manuale completa. Il risparmio deriva dalla riduzione drastica dei tempi di analisi e comprensione del codice, che tipicamente rappresentano il 30-50% del costo totale di un progetto di modernizzazione.",
+            text: "Il risparmio rispetto a una riscrittura manuale completa va misurato sul caso specifico. Deriva soprattutto dalla riduzione dei tempi di analisi e comprensione del codice, che in un progetto di modernizzazione sono una quota rilevante del costo totale.",
           },
         },
         {
@@ -150,7 +150,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 l&apos;organizzazione non riesce nemmeno a quantificare.
               </p>
               <p>
-                Le conseguenze sono concrete: costi di manutenzione che crescono del 15-25% annuo,
+                Le conseguenze sono concrete: costi di manutenzione che crescono ogni anno,
                 impossibilit&agrave; di implementare nuove funzionalit&agrave; richieste dal mercato,
                 vulnerabilit&agrave; di sicurezza su componenti non pi&ugrave; patchati, difficolt&agrave;
                 nel reperire sviluppatori disposti a lavorare su stack obsoleti, e un rischio
@@ -168,7 +168,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 manuale, lungo e costoso. Un team di analisti deve leggere il codice sorgente riga
                 per riga, intervistare gli utenti, ricostruire i flussi di dati, e documentare la
                 business logic &mdash; un lavoro che per sistemi complessi pu&ograve; richiedere
-                6-12 mesi. Con l&apos;AI, questo paradigma cambia radicalmente.
+                mesi. Con l&apos;AI, questo paradigma cambia radicalmente.
               </p>
               <p>
                 La nostra pipeline utilizza un&apos;architettura{" "}
@@ -249,7 +249,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 L&apos;obsolescence engine: identificare il debito tecnico prima che diventi critico
               </h2>
               <p>
-                Una delle componenti pi&ugrave; innovative della nostra pipeline &egrave;
+                Una componente chiave della nostra pipeline &egrave;
                 l&apos;<strong className="text-[#E6EDF3]">obsolescence engine</strong>, un sistema
                 che monitora continuamente lo stato di salute tecnologica di un&apos;applicazione.
                 Non si tratta di un semplice dependency checker: &egrave; un motore di analisi che
@@ -306,8 +306,8 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 schema, le stored procedure, i file di configurazione e la documentazione esistente.
                 Il sistema multi-agent ha poi analizzato il codice, identificando 47 bounded context
                 distinti, 312 regole di business implicite nel codice, e 23 dipendenze esterne di
-                cui 8 in stato di end-of-life. L&apos;analisi, che avrebbe richiesto un team di
-                5-6 analisti per 4-5 mesi, &egrave; stata completata in 3 settimane.
+                cui 8 in stato di end-of-life. La fase di analisi &egrave; passata dai 3-4 mesi
+                stimati a meno di due settimane.
               </p>
               <p>
                 La roadmap generata ha permesso al team di sviluppo di procedere con una modernizzazione
@@ -367,7 +367,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
               <p>
                 Il risultato &egrave; una pipeline end-to-end che va dall&apos;analisi iniziale alla
                 validazione del nuovo sistema, con traccabilit&agrave; completa delle decisioni e
-                la garanzia che nessuna regola di business venga persa nella transizione. Questa
+                la verifica, regola per regola, che la business logic passi intatta nella transizione. Questa
                 pipeline &egrave; parte integrante dei nostri servizi di{" "}
                 <Link
                   href="/it/servizi/integrazione-enterprise"
@@ -392,37 +392,32 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
               </h2>
               <p>
                 La domanda che ogni CTO e IT director si pone &egrave; legittima: la modernizzazione
-                AI-driven produce un ritorno sull&apos;investimento reale e misurabile? I dati dei
-                nostri progetti dicono di s&igrave;, e in modo significativo.
+                AI-driven produce un ritorno sull&apos;investimento reale e misurabile? La risposta
+                dipende dal sistema e va misurata caso per caso; ecco dove si concentra il risparmio.
               </p>
               <p>
                 Il primo risparmio &egrave; sulla fase di <strong className="text-[#E6EDF3]">
-                analisi e comprensione</strong>, che tipicamente rappresenta il 30-50% del costo
-                totale di un progetto di modernizzazione. La nostra pipeline riduce questa fase
-                del 70-80%, producendo al contempo un output pi&ugrave; completo e strutturato di
-                quello ottenibile con un audit manuale. Su un progetto medio da 500K euro, questo
-                si traduce in un risparmio di 100-200K euro solo sulla fase di analisi.
+                analisi e comprensione</strong>, che in un progetto di modernizzazione pesa in
+                modo rilevante sul costo totale. La nostra pipeline accorcia questa fase,
+                producendo al contempo un output pi&ugrave; completo e strutturato di quello
+                ottenibile con un audit manuale. Quanto si risparmia dipende dal sistema e va
+                misurato sul caso.
               </p>
               <p>
                 Il secondo risparmio &egrave; sulla <strong className="text-[#E6EDF3]">riduzione dei
                 difetti</strong> durante la riscrittura. La disponibilit&agrave; della pipeline RAG
                 durante lo sviluppo riduce gli errori di interpretazione della business logic originale,
-                che sono la causa principale di bug critici nei progetti di modernizzazione. I nostri
-                dati mostrano una riduzione del 45% dei difetti post-rilascio rispetto a progetti
-                di riscrittura manuale comparabili.
+                che sono la causa principale di bug critici nei progetti di modernizzazione.
               </p>
               <p>
                 Il terzo beneficio, meno quantificabile ma strategicamente decisivo, &egrave; la{" "}
                 <strong className="text-[#E6EDF3]">riduzione del rischio progettuale</strong>.
-                I progetti di modernizzazione legacy hanno storicamente un tasso di fallimento
-                del 60-70%, principalmente per sottostima della complessit&agrave; e perdita di
-                business logic. L&apos;analisi AI-driven fornisce una visione completa del sistema
+                Molti progetti di modernizzazione legacy falliscono, soprattutto per sottostima
+                della complessit&agrave; e perdita di business logic. L&apos;analisi AI-driven fornisce una visione completa del sistema
                 prima di iniziare la riscrittura, permettendo una stima accurata dei tempi e dei
-                costi e riducendo drasticamente il rischio di scope creep.
+                costi e riducendo il rischio di scope creep.
               </p>
               <p>
-                In sintesi, per un progetto di modernizzazione mid-market tipico, il costo della
-                nostra pipeline AI si ripaga 3-5 volte nel risparmio complessivo del progetto.
                 Per le organizzazioni che vogliono approfondire il nostro approccio, &egrave;
                 disponibile una{" "}
                 <Link
@@ -447,10 +442,10 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                     Quanto tempo richiede la modernizzazione di un sistema legacy con AI?
                   </h3>
                   <p>
-                    La fase di analisi automatizzata con la nostra pipeline AI richiede tipicamente 2-4
-                    settimane, contro i 3-6 mesi di un audit manuale tradizionale. La riscrittura
-                    completa dipende dalla complessit&agrave; del sistema, ma la roadmap generata
-                    dall&apos;AI riduce i tempi del 40-60% rispetto a un approccio puramente manuale.
+                    Con la nostra pipeline AI la fase di analisi automatizzata si misura in
+                    settimane, non nei mesi di un audit manuale tradizionale. La durata della
+                    riscrittura completa dipende dalla complessit&agrave; del sistema; la roadmap
+                    generata dall&apos;AI permette di stimarla sul caso specifico prima di iniziare.
                   </p>
                 </div>
 
@@ -495,10 +490,10 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                     Quanto costa la modernizzazione AI-assisted rispetto alla riscrittura tradizionale?
                   </h3>
                   <p>
-                    I nostri progetti mostrano un risparmio medio del 40-60% rispetto alla riscrittura
-                    manuale completa. Il risparmio deriva dalla riduzione drastica dei tempi di analisi
-                    e comprensione del codice, che tipicamente rappresentano il 30-50% del costo totale
-                    di un progetto di modernizzazione.
+                    Il risparmio rispetto a una riscrittura manuale completa va misurato sul caso
+                    specifico. Deriva soprattutto dalla riduzione dei tempi di analisi e comprensione
+                    del codice, che in un progetto di modernizzazione sono una quota rilevante del
+                    costo totale.
                   </p>
                 </div>
 

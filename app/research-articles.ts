@@ -119,9 +119,9 @@ export const RESEARCH_ARTICLES: Record<string, ResearchArticle> = {
   "event-sourcing": {
     slug: "event-sourcing",
     type: "TechArticle",
-    headline: "Event sourcing in practice: lessons from five production systems",
+    headline: "Event sourcing in practice: lessons from production systems",
     description:
-      "Projection management, schema evolution and snapshot strategy — where event sourcing implementations actually struggle, drawn from five production systems.",
+      "Projection management, schema evolution and snapshot strategy — where event sourcing implementations actually struggle, drawn from production systems.",
     datePublished: "2025-10",
     dateLabel: "October 2025",
     section: "Enterprise Integration",

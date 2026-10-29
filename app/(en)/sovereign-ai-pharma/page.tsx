@@ -75,7 +75,7 @@ const schema = {
           name: "How long does it take to implement a sovereign AI platform in pharma?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A standard Nexus MDS Core deployment takes 8 to 16 weeks, depending on how complex the integration with existing systems (ERP, LIMS, EDC) is. The initial discovery and assessment phase takes 2-3 weeks, followed by iterative deployment of the services.",
+            text: "It depends mainly on how complex the integration with existing systems (ERP, LIMS, EDC) is. The timeline is estimated at the end of the initial discovery and assessment phase, and the services are then deployed iteratively.",
           },
         },
         {
@@ -145,8 +145,7 @@ export default function SovereignAiPharmaPage() {
                 clinical trial results, adverse event reports, patented formulations, regulatory
                 dossiers — carries an economic and regulatory value that makes it incompatible
                 with hyperscalers&apos; multi-tenant cloud architectures. A single data breach in
-                pharma can cost hundreds of millions of euros in penalties, on top of
-                irreversible reputational damage.
+                pharma can mean regulatory penalties on top of lasting reputational damage.
               </p>
               <p>
                 <strong className="text-[#E6EDF3]">Sovereign AI</strong> answers that need with a
@@ -176,8 +175,8 @@ export default function SovereignAiPharmaPage() {
                 The regulatory framework: AI Act, GDPR, Law 132/2025, NIS2
               </h2>
               <p>
-                The Italian pharmaceutical sector faces an unprecedented convergence of AI
-                regulation. Understanding that framework is the prerequisite for any architectural
+                The Italian pharmaceutical sector is subject to several AI-related regulations
+                at once. Understanding that framework is the prerequisite for any architectural
                 decision.
               </p>
               <p>
@@ -263,8 +262,8 @@ export default function SovereignAiPharmaPage() {
                 A Phase III clinical trial generates tens of thousands of documents: protocols,
                 informed consents, case report forms (CRFs), monitoring reports, correspondence
                 with ethics committees. A sovereign AI system with semantic vector search lets
-                regulatory teams find any piece of information instantly through natural-language
-                queries, removing hours of manual searching in legacy systems.
+                regulatory teams find information through natural-language queries, instead of
+                searching manually across legacy systems.
               </p>
               <p>
                 <strong className="text-[#E6EDF3]">Pharmaceutical supply chain optimisation.</strong>{" "}
@@ -380,9 +379,9 @@ export default function SovereignAiPharmaPage() {
               <p>
                 <strong className="text-[#E6EDF3]">Economic risk.</strong>{" "}
                 Cloud AI API costs are variable and often unpredictable. For high-volume workloads
-                — such as pharmacovigilance processing thousands of reports a month — the operating
-                cost of an on-premise platform typically pays back in 12-18 months, with marginal
-                costs significantly lower than the cloud.
+                — such as pharmacovigilance processing thousands of reports a month — an on-premise
+                platform has a fixed cost that does not grow with every request; whether and when
+                it pays back against the cloud has to be calculated on the actual volumes.
               </p>
             </div>
 
@@ -545,10 +544,9 @@ export default function SovereignAiPharmaPage() {
                   How long does it take to implement a sovereign AI platform in pharma?
                 </h3>
                 <p>
-                  A standard Nexus MDS Core deployment takes 8 to 16 weeks, depending on how
-                  complex the integration with existing systems (ERP, LIMS, EDC) is. The initial
-                  discovery and assessment phase takes 2-3 weeks, followed by iterative deployment
-                  of the services.
+                  It depends mainly on how complex the integration with existing systems (ERP,
+                  LIMS, EDC) is. The timeline is estimated at the end of the initial discovery and
+                  assessment phase, and the services are then deployed iteratively.
                 </p>
               </div>
 

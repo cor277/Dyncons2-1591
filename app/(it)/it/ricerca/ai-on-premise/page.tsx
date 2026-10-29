@@ -143,18 +143,18 @@ export default function AiOnPremiseArticle() {
               <p>
                 L&apos;idea che l&apos;AI in cloud costi meno merita una verifica. Per i carichi
                 dominati dall&apos;inferenza, quelli che le organizzazioni sanitarie eseguono ogni
-                giorno, il costo delle GPU in cloud cresce in modo lineare con l&apos;uso. Una singola
-                istanza A100 su un grande hyperscaler costa tra 25.000 e 35.000 dollari l&apos;anno.
+                giorno, il costo delle GPU in cloud cresce in modo lineare con l&apos;uso.
                 Un&apos;organizzazione che fa girare più modelli (NLP clinico, estrazione da documenti,
-                AI conversazionale) può arrivare facilmente a cifre a sei zeri l&apos;anno solo di
-                calcolo, prima di storage e costi di egress.
+                AI conversazionale) paga ogni ora di calcolo GPU, prima di storage e costi di
+                egress.
               </p>
               <p className="mt-4">
-                L&apos;hardware GPU on-premise, anche di classe enterprise, si ammortizza in 3-5 anni.
-                Dopo l&apos;investimento iniziale, il costo marginale di un&apos;inferenza in più è di
-                fatto nullo. Per le organizzazioni con carichi AI prevedibili e continuativi, il punto
-                di svolta del costo totale di possesso (TCO) arriva in genere entro 18-24 mesi. Oltre
-                quel punto, l&apos;on-premise costa sensibilmente meno.
+                L&apos;hardware GPU on-premise, anche di classe enterprise, è un investimento che si
+                ammortizza in più anni. Dopo l&apos;investimento iniziale, il costo marginale di
+                un&apos;inferenza in più è basso. Per le organizzazioni con carichi AI prevedibili e
+                continuativi esiste un punto di svolta del costo totale di possesso (TCO) oltre il
+                quale l&apos;on-premise costa meno; dove cade dipende da volumi, hardware e utilizzo,
+                e va calcolato sul caso.
               </p>
               <p className="mt-4">
                 C&apos;è poi un costo nascosto dell&apos;AI in cloud che compare di rado nei calcoli
@@ -201,20 +201,20 @@ export default function AiOnPremiseArticle() {
             <div>
               <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Pattern di implementazione: passare dal cloud all&apos;AI on-premise</h2>
               <p>
-                Le organizzazioni non devono migrare tutto in una volta. Le transizioni meglio riuscite
-                tra quelle che abbiamo guidato seguono un approccio per fasi:
+                Le organizzazioni non devono migrare tutto in una volta. Le transizioni che abbiamo
+                guidato seguono un approccio per fasi:
               </p>
               <ul className="list-disc list-inside space-y-3 mt-4">
                 <li><strong className="text-[#E6EDF3]">Fase 1 — Assessment:</strong> mappare i carichi AI esistenti, classificare la sensibilità dei dati e individuare quali carichi devono passare on-premise per ragioni normative e quali possono restare in cloud.</li>
-                <li><strong className="text-[#E6EDF3]">Fase 2 — Fondamenta:</strong> installare l&apos;infrastruttura on-premise (cluster Kubernetes, nodi GPU, livello di storage). Nei deployment di Nexus MDS Core questo richiede in genere 2-3 settimane.</li>
+                <li><strong className="text-[#E6EDF3]">Fase 2 — Fondamenta:</strong> installare l&apos;infrastruttura on-premise (cluster Kubernetes, nodi GPU, livello di storage).</li>
                 <li><strong className="text-[#E6EDF3]">Fase 3 — Migrazione:</strong> spostare per primi i carichi più sensibili (AI clinica, sistemi rivolti ai pazienti). Mantenere il cloud per i carichi non sensibili durante la transizione.</li>
                 <li><strong className="text-[#E6EDF3]">Fase 4 — Ottimizzazione:</strong> mettere a punto le prestazioni di inferenza, introdurre l&apos;osservabilità e definire i runbook operativi per lo stack on-premise.</li>
               </ul>
               <p className="mt-4">
                 Il punto chiave è che AI on-premise non significa costruire da zero. Piattaforme moderne
-                come Nexus MDS Core offrono uno stack già integrato che si installa in giorni, non in
-                mesi. La complessità operativa che storicamente rendeva proibitiva l&apos;AI on-premise
-                è stata eliminata con l&apos;ingegneria.
+                come Nexus MDS Core offrono uno stack già integrato, così il deployment non parte da
+                zero. Buona parte della complessità operativa che storicamente rendeva proibitiva
+                l&apos;AI on-premise oggi la gestisce la piattaforma.
               </p>
             </div>
 

@@ -68,7 +68,7 @@ export default function ConsulenzaAiFarmaceuticoPage() {
         <section className="py-16 px-6">
           <div className="max-w-3xl mx-auto space-y-6 text-[#7D8FA3] text-lg leading-relaxed">
             <p>
-              Il settore farmaceutico italiano affronta una sfida unica: integrare l&apos;intelligenza
+              Il settore farmaceutico italiano affronta una sfida particolare: integrare l&apos;intelligenza
               artificiale nei processi operativi — dalla gestione documentale alla farmacovigilanza —
               mantenendo la piena conformità normativa. La Legge 132/2025, il GDPR e l&apos;AI Act europeo
               definiscono un quadro regolatorio che rende inadeguate le soluzioni AI cloud-based

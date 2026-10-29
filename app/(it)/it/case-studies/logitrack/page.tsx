@@ -277,10 +277,10 @@ export default function LogiTrackCaseStudyIt() {
                 rischio ai sensi dell’AI Act europeo, con piena spiegabilità e trasparenza.
               </p>
               <p className="mt-4">
-                Un SIEM integrato garantisce il monitoraggio continuo della sicurezza con
+                Un SIEM integrato fornisce il monitoraggio continuo della sicurezza con
                 correlazione degli eventi su più livelli, alert automatici sulle anomalie, procedure
                 documentate di risposta agli incidenti e backup cifrati con retention configurabile
-                e RTO/RPO garantiti.
+                e obiettivi RTO/RPO definiti.
               </p>
             </div>
 

@@ -90,7 +90,7 @@ export default function DynamicsCrmCaseStudy() {
                   </p>
                   <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">Banca Mediolanum</h3>
                   <p className="text-[#7D8FA3] text-sm leading-relaxed">
-                    Italy&apos;s largest network-based wealth management bank, with thousands of
+                    Italian wealth management bank built on a network of advisors, with thousands of
                     financial advisors operating across the country. The CRM implementation had to
                     support the full advisory lifecycle — lead management, opportunity tracking,
                     regulatory reporting — while integrating with core banking systems and respecting
@@ -120,7 +120,7 @@ export default function DynamicsCrmCaseStudy() {
                   </p>
                   <h3 className="text-lg font-bold text-[#E6EDF3] mb-3">Unipol</h3>
                   <p className="text-[#7D8FA3] text-sm leading-relaxed">
-                    One of Italy&apos;s largest insurance groups. Dynamics 365 Customer Service
+                    Italian insurance group. Dynamics 365 Customer Service
                     deployment for claims management and policyholder engagement. Omnichannel
                     integration — email, phone, web chat — with SLA-driven routing and Power BI
                     operational dashboards. The challenge was not the technology but the organisational

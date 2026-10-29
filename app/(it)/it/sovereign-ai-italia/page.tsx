@@ -125,9 +125,9 @@ export default function SovereignAiItaliaPage() {
               dei dati nell&apos;UE.
             </p>
             <p>
-              Dynamics Consulting è lo specialista mid-market per l&apos;AI sovrana in Italia.
-              A differenza dei system integrator generalisti, il nostro focus è esclusivamente
-              su infrastrutture AI on-premise per settori regolamentati. Ogni progetto è guidato
+              Dynamics Consulting lavora sull&apos;AI sovrana con le organizzazioni mid-market in
+              Italia. A differenza dei system integrator generalisti, il nostro focus sono le
+              infrastrutture AI on-premise per settori regolamentati. Ogni progetto è guidato
               direttamente dal fondatore, Corrado Patierno, con oltre 25 anni di esperienza in
               sistemi enterprise.
             </p>

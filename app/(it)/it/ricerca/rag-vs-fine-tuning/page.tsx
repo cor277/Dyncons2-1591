@@ -159,19 +159,16 @@ export default function RagVsFineTuningArticleIt() {
               <p>
                 Il RAG ha un costo iniziale più basso ma costi operativi continui: hosting del
                 vector store, calcolo degli embedding per l&apos;ingestione dei documenti e overhead
-                di latenza del retrieval su ogni richiesta. Per un&apos;organizzazione di medie
-                dimensioni che gestisce da 10.000 a 50.000 richieste al giorno, vector store e
-                pipeline di embedding costano tipicamente tra 500 e 2.000 € al mese su
-                infrastruttura on-premise.
+                di latenza del retrieval su ogni richiesta. Su infrastruttura on-premise questo
+                costo dipende dal volume di richieste e da quanto spesso cambiano i documenti.
               </p>
               <p className="mt-4">
                 Il fine-tuning ha un costo iniziale più alto (ore GPU per l&apos;addestramento,
                 cura del dataset, cicli di valutazione) ma un costo per richiesta più basso una
-                volta in produzione, perché non c&apos;è il passaggio di retrieval. Un singolo ciclo
-                di fine-tuning su un modello da 7 miliardi di parametri costa tra 2.000 e
-                10.000 €, a seconda della dimensione del dataset e dell&apos;infrastruttura. Ma
-                questo costo si ripresenta ogni volta che i dati di training cambiano in modo
-                significativo.
+                volta in produzione, perché non c&apos;è il passaggio di retrieval. Il costo di un
+                ciclo di fine-tuning dipende dalla dimensione del modello e del dataset e
+                dall&apos;infrastruttura, e si ripresenta ogni volta che i dati di training cambiano
+                in modo significativo.
               </p>
               <p className="mt-4">
                 Il costo nascosto del fine-tuning è la valutazione. Ogni nuova versione del

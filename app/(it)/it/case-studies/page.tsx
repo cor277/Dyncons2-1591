@@ -59,7 +59,7 @@ const cases = [
     slug: "sorgenia",
     client: "Sorgenia",
     tag: "Energia · CRM · Marketing automation",
-    headline: "Dynamics 365 Marketing per il principale fornitore italiano di energia verde",
+    headline: "Dynamics 365 Marketing per Sorgenia, operatore italiano dell’energia",
     summary:
       "Orchestrazione dei customer journey e automazione delle campagne multicanale su oltre 200.000 contatti. Trigger su eventi in tempo reale dai dati di fatturazione e di consumo, integrati con Dynamics CRM.",
     metrics: [

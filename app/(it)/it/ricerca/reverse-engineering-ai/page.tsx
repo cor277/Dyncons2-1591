@@ -212,14 +212,13 @@ export default function AiReverseEngineeringArticleIt() {
                 </Link>.
               </p>
               <p className="mt-4">
-                I risultati quantitativi su più progetti:
+                Da un progetto all&apos;altro la direzione è la stessa: l&apos;analisi è più rapida
+                del reverse engineering manuale, fa emergere punti di integrazione e regole di
+                business che una lettura manuale non vede, e le specifiche funzionali che produce
+                vanno comunque validate da una persona. Quanto tempo e quanto costo fa risparmiare
+                dipende dal sistema e va misurato caso per caso; i numeri di IATP qui sopra sono
+                quelli che abbiamo misurato.
               </p>
-              <ul className="list-disc list-inside space-y-3 mt-4">
-                <li><strong className="text-[#E6EDF3]">Velocità di analisi:</strong> tempi ridotti del 70-85% rispetto al reverse engineering manuale</li>
-                <li><strong className="text-[#E6EDF3]">Copertura:</strong> l&apos;analisi assistita dall&apos;AI individua sistematicamente il 15-30% in più di punti di integrazione e regole di business rispetto all&apos;analisi manuale</li>
-                <li><strong className="text-[#E6EDF3]">Accuratezza:</strong> con la validazione umana, il tasso di falsi positivi sulle specifiche funzionali è sotto il 5%</li>
-                <li><strong className="text-[#E6EDF3]">Costo:</strong> il costo totale dell&apos;analisi assistita dall&apos;AI è tipicamente il 40-60% dell&apos;equivalente sforzo manuale</li>
-              </ul>
             </div>
 
             <div className="flex flex-wrap gap-2 pt-4">

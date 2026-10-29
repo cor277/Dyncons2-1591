@@ -13,7 +13,7 @@ const PATH = "/it/case-studies/sorgenia";
 const PAGE_URL = `https://www.dynamicsconsulting.it${PATH}`;
 const TITLE = "Sorgenia — Dynamics 365 Marketing | Case study";
 const DESCRIPTION =
-  "Implementazione di Dynamics 365 Marketing per Sorgenia, il principale fornitore italiano di energia verde. Orchestrazione dei customer journey, automazione delle campagne e coinvolgimento multicanale su larga scala.";
+  "Implementazione di Dynamics 365 Marketing per Sorgenia, operatore italiano dell’energia. Orchestrazione dei customer journey, automazione delle campagne e coinvolgimento multicanale su larga scala.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -64,7 +64,7 @@ export default function SorgeniaCaseStudyIt() {
               Energia · CRM · Marketing automation
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Dynamics 365 Marketing per il principale fornitore italiano di energia verde
+              Dynamics 365 Marketing per Sorgenia, operatore italiano dell’energia
             </h1>
             <p className="text-lg text-slate-300">
               Sorgenia aveva bisogno di una piattaforma di marketing automation capace di
@@ -93,8 +93,7 @@ export default function SorgeniaCaseStudyIt() {
           <div className="max-w-3xl mx-auto prose prose-slate dark:prose-invert prose-lg">
             <h2>La sfida</h2>
             <p>
-              Sorgenia, una delle maggiori aziende energetiche indipendenti italiane e leader
-              nell’energia verde, gestiva le campagne di marketing con un insieme frammentato di
+              Sorgenia, azienda energetica italiana con un’offerta di energia verde, gestiva le campagne di marketing con un insieme frammentato di
               strumenti: un ESP separato per le email, invii SMS manuali a lotti, tracciamento web
               scollegato e nessuna vista unificata del coinvolgimento dei clienti. Impostare una
               campagna richiedeva giorni, la segmentazione si faceva su fogli di calcolo e non

@@ -198,14 +198,12 @@ export default function AiReverseEngineeringArticle() {
                 </Link>.
               </p>
               <p className="mt-4">
-                The quantitative results across multiple engagements:
+                Across engagements the direction is consistent: the analysis is faster than manual
+                reverse engineering, it surfaces integration points and business rules that a
+                manual reading misses, and the functional specifications it produces still need
+                human validation. How much time and cost it saves depends on the system and has to
+                be measured case by case; the IATP figures above are the ones we have measured.
               </p>
-              <ul className="list-disc list-inside space-y-3 mt-4">
-                <li><strong className="text-[#E6EDF3]">Analysis speed:</strong> 70-85% reduction in time compared to manual reverse engineering</li>
-                <li><strong className="text-[#E6EDF3]">Coverage:</strong> AI-assisted analysis consistently identifies 15-30% more integration points and business rules than manual analysis</li>
-                <li><strong className="text-[#E6EDF3]">Accuracy:</strong> With human validation, the false positive rate on functional specifications is below 5%</li>
-                <li><strong className="text-[#E6EDF3]">Cost:</strong> Total cost of AI-assisted analysis is typically 40-60% of equivalent manual effort</li>
-              </ul>
             </div>
 
             <div className="flex flex-wrap gap-2 pt-4">

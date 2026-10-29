@@ -115,7 +115,7 @@ export default function NespressoCaseStudy() {
             <p>
               All three streams delivered on schedule within the ATOS governance framework.
               The F&O implementation unified order-to-cash across the Italian B2B operation.
-              The IoT dashboard provided Nespresso with unprecedented visibility into machine
+              The IoT dashboard gave Nespresso visibility into machine
               fleet performance, enabling proactive maintenance and data-driven account
               management. The programme demonstrated the ability to coordinate large,
               complex enterprise deliveries across multiple technology stacks simultaneously.

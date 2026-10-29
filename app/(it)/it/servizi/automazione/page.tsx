@@ -64,7 +64,7 @@ export default function AutomazionePage() {
     <ServicePageLayout
       locale="it"
       title="Automazione intelligente"
-      intro="Il lavoro manuale e ripetitivo è il nemico della scala. Progettiamo e mettiamo in produzione programmi di automazione che combinano RPA, process mining e AI per eliminare in modo sistematico il lavoro a basso valore, con un ROI misurabile in settimane, non in anni."
+      intro="Il lavoro manuale e ripetitivo è il nemico della scala. Progettiamo e mettiamo in produzione programmi di automazione che combinano RPA, process mining e AI per eliminare in modo sistematico il lavoro a basso valore, con un ritorno che si misura su ogni processo, non si promette in anticipo."
       tech={[
         "UiPath",
         "Power Automate",

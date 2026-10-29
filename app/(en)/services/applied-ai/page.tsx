@@ -77,7 +77,7 @@ const capabilities: Capability[] = [
   {
     iconName: "Brain",
     name: "Multi-Agent Systems",
-    desc: "Layered short/long-term memory, automatic summarisation after 10 interactions to optimise token usage, effectively infinite context window.",
+    desc: "Layered short/long-term memory, automatic summarisation after 10 interactions to optimise token usage, so long conversations keep their context within the model's window.",
   },
   {
     iconName: "Mic",

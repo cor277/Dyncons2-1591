@@ -128,9 +128,9 @@ export const RESEARCH_ARTICLES_IT: Record<string, ResearchArticleIt> = {
     slug: "event-sourcing",
     enSlug: "event-sourcing",
     type: "TechArticle",
-    headline: "Event sourcing nella pratica: lezioni da cinque sistemi in produzione",
+    headline: "Event sourcing nella pratica: lezioni da sistemi in produzione",
     description:
-      "Gestione delle proiezioni, evoluzione degli schemi e strategia di snapshot: dove le implementazioni di event sourcing faticano davvero, da cinque sistemi in produzione.",
+      "Gestione delle proiezioni, evoluzione degli schemi e strategia di snapshot: dove le implementazioni di event sourcing faticano davvero, da sistemi in produzione.",
     summary:
       "L'event sourcing promette auditabilità e interrogazioni temporali. Nella pratica, gestione delle proiezioni, evoluzione degli schemi e strategia di snapshot sono i punti dove la maggior parte delle implementazioni si inceppa.",
     datePublished: "2025-10",
