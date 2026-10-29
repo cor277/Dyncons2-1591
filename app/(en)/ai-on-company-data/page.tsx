@@ -137,7 +137,7 @@ export default function AiOnCompanyDataPage() {
                 <span className="text-[#7D8FA3]"> — version chains and validity intervals.</span>
               </li>
               <li>
-                <Link href="/services/data-platforms" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/capabilities#data-platforms" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Data platforms and RAG architectures
                 </Link>
                 <span className="text-[#7D8FA3]"> — the service line.</span>

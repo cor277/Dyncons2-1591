@@ -11,9 +11,9 @@ import { NexusPlatformBody } from "@/components/sections/NexusPlatformBody";
 const PAGE_URL = "https://www.dynamicsconsulting.it/it/piattaforma-nexus";
 const EN_URL = "https://www.dynamicsconsulting.it/platform";
 
-const TITLE = "Nexus MDS Core — lo strato operativo dell’AI per i settori regolati";
+const TITLE = "Nexus MDS Core — lo strato AI che resta nel tuo perimetro";
 const DESCRIPTION =
-  "La governance dell’AI si costruisce una volta e ogni caso d’uso la eredita: identità, approvazioni e audit di ogni chiamata al modello. Indicizzazione, retrieval e audit nel tuo perimetro; generazione su modello locale o su endpoint UE sostituibile.";
+  "Indicizzazione, retrieval, identità e audit nel tuo perimetro; ogni chiamata al modello in un registro di audit a catena hash che puoi verificare; generazione su modello locale o su endpoint UE sostituibile. Governance configurata una volta: ogni nuovo caso d’uso costa meno.";
 
 export const metadata: Metadata = {
   title: TITLE,

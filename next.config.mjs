@@ -79,6 +79,22 @@ const nextConfig = {
         destination: "/it/ai-sovrana-pharma",
         permanent: true,
       },
+      /* The technical capability pages merged into one page per language on
+         2026-10-29; each old URL lands on its section. */
+      { source: "/services/applied-ai", destination: "/capabilities#applied-ai", permanent: true },
+      { source: "/services/data-platforms", destination: "/capabilities#data-platforms", permanent: true },
+      { source: "/services/cloud-kubernetes", destination: "/capabilities#cloud-kubernetes", permanent: true },
+      { source: "/services/enterprise-integration", destination: "/capabilities#enterprise-integration", permanent: true },
+      { source: "/services/automation", destination: "/capabilities#automation", permanent: true },
+      { source: "/services/microsoft-dynamics", destination: "/capabilities#dynamics-365", permanent: true },
+      { source: "/services/blockchain", destination: "/capabilities#blockchain", permanent: true },
+      { source: "/it/servizi/ai-applicata", destination: "/it/competenze#ai-applicata", permanent: true },
+      { source: "/it/servizi/data-platform", destination: "/it/competenze#data-platform", permanent: true },
+      { source: "/it/servizi/cloud-kubernetes", destination: "/it/competenze#cloud-kubernetes", permanent: true },
+      { source: "/it/servizi/integrazione-enterprise", destination: "/it/competenze#integrazione-enterprise", permanent: true },
+      { source: "/it/servizi/automazione", destination: "/it/competenze#automazione", permanent: true },
+      { source: "/it/servizi/microsoft-dynamics", destination: "/it/competenze#dynamics-365", permanent: true },
+      { source: "/it/servizi/blockchain", destination: "/it/competenze#blockchain", permanent: true },
       {
         source: "/portfolio/:slug*",
         destination: "/case-studies",

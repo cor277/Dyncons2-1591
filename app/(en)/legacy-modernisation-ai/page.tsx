@@ -367,14 +367,14 @@ export default function LegacyModernisationAiPage() {
                 rule, that the business logic is carried across in the transition. This pipeline is an integral part
                 of our{" "}
                 <Link
-                  href="/services/enterprise-integration"
+                  href="/capabilities#enterprise-integration"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   enterprise integration
                 </Link>{" "}
                 and{" "}
                 <Link
-                  href="/services/applied-ai"
+                  href="/capabilities#applied-ai"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   applied AI

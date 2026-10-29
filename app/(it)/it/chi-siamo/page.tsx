@@ -206,6 +206,21 @@ export default function ChiSiamoPage() {
               </Link>{" "}
               e l’ingegneria che la mette in pratica stanno nello stesso studio.
             </p>
+            <p className="text-[#7D8FA3] leading-relaxed text-lg mt-5">
+              Fa parte dell’ingegneria anche l’integrazione con i sistemi ERP e CRM, Dynamics 365
+              compreso — Dynamics Consulting è Microsoft Cloud Partner: lo raccontano i case study{" "}
+              <Link href="/it/case-studies/dynamics-data" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Dynamics 365 F&amp;O e data platform
+              </Link>{" "}
+              e{" "}
+              <Link href="/it/case-studies/dynamics-crm" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Dynamics 365 CRM
+              </Link>
+              .{" "}
+              <Link href="/it/competenze" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Competenze tecniche →
+              </Link>
+            </p>
           </div>
         </section>
 

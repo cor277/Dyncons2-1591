@@ -212,7 +212,7 @@ export default function LakehouseArticleIt() {
                 negoziabile, questa separazione esplicita non è over-engineering. È
                 l&apos;architettura minima indispensabile. Per vedere come la realizziamo in
                 pratica, guarda il nostro servizio di{" "}
-                <Link href="/it/servizi/data-platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/competenze#data-platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   data platform moderne
                 </Link>{" "}
                 o esplora l&apos;architettura di{" "}

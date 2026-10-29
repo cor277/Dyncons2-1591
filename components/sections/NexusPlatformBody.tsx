@@ -15,7 +15,8 @@ import { NEXUS_INFERENCE_EN, NEXUS_INFERENCE_IT } from "@/lib/nexus";
  * /it/piattaforma-nexus so the two keep the same structure. The Italian copy
  * is written in Italian, not translated sentence by sentence.
  *
- * Order: promise → governance reused → model optionality → deployment →
+ * Order: promise → governance reused (the cost argument) → comparison with
+ * the SaaS delivery model → model optionality → deployment →
  * use cases → proof → how it is delivered → under the hood → CTA. The
  * components (feature grid, graph explorer) are the evidence, not the pitch.
  *
@@ -49,6 +50,14 @@ interface Copy {
     subtitle: string;
     items: { title: string; tech: string; body: string }[];
     steps: { label: string; body: string }[];
+  };
+  /** Nexus against the typical SaaS delivery model; no vendor is named. */
+  comparison: {
+    eyebrow: string;
+    title: string;
+    columns: [string, string, string];
+    rows: { aspect: string; nexus: string; saas: string }[];
+    note: string;
   };
   models: { eyebrow: string; title: string; body: string[] };
   deployment: {
@@ -87,8 +96,8 @@ interface Copy {
 const EN: Copy = {
   hero: {
     eyebrow: "Nexus MDS Core · proprietary platform",
-    title: "Build AI governance once. Run every use case on it — inside your perimeter.",
-    subtitle: `Nexus MDS Core is the operating layer for AI in regulated organisations: identity, approval steps and an audit of every model call are set up once, and each new use case inherits them. ${NEXUS_INFERENCE_EN}`,
+    title: "The AI layer that stays inside your perimeter — and can prove it.",
+    subtitle: `${NEXUS_INFERENCE_EN} Every model call, local or external, is recorded in a hash-chained audit log that you can verify yourself.`,
     badges: [
       "GDPR controls mapped",
       "AI Act controls mapped",
@@ -100,9 +109,9 @@ const EN: Copy = {
   },
   governance: {
     eyebrow: "Governance built once, reused everywhere",
-    title: "The second use case starts where the first one finished",
+    title: "The second use case costs less than the first",
     subtitle:
-      "In most AI projects governance is rebuilt for every use case, or skipped. On Nexus it is infrastructure: configured once, inherited by everything that runs on the platform.",
+      "In most AI projects governance is rebuilt — and paid for — with every use case, or skipped. On Nexus it is infrastructure: identity, approval steps, audit and personal-data filtering are configured once, and each new use case inherits them instead of paying for them again.",
     items: [
       {
         title: "Identity",
@@ -128,13 +137,45 @@ const EN: Copy = {
     steps: [
       {
         label: "Use case one",
-        body: "Realm, roles, approval steps, audit routes, ingestion pipeline and the first workflow. Most of the governance work happens here, once.",
+        body: "Realm, roles, approval steps, audit routes, ingestion pipeline and the first workflow. Most of the governance work — and its cost — sits here, once.",
       },
       {
         label: "Use case two",
-        body: "A new document collection, a new workflow, new roles inside the existing realm. Identity, approval steps, audit and personal-data filtering are already there: the work is the use case itself.",
+        body: "A new document collection, a new workflow, new roles inside the existing realm. Identity, approval steps, audit and personal-data filtering are inherited, not rebuilt: the budget goes to the use case itself.",
       },
     ],
+  },
+  comparison: {
+    eyebrow: "Compared",
+    title: "Nexus MDS Core vs AI platforms delivered as SaaS",
+    columns: ["", "Nexus MDS Core", "AI platform delivered as SaaS"],
+    rows: [
+      {
+        aspect: "Where indexing runs",
+        nexus:
+          "Inside your perimeter: documents are extracted, embedded and indexed on your servers or on a dedicated server in an EU datacentre.",
+        saas: "Typically in the vendor’s cloud: documents are uploaded so they can be indexed there.",
+      },
+      {
+        aspect: "Who holds the keys",
+        nexus:
+          "You do. Keycloak, the platform secrets and the encryption of the audit log sit inside your perimeter.",
+        saas: "Typically the vendor: identity, secrets and encryption keys are managed in its cloud, at most with an option for a customer-managed key.",
+      },
+      {
+        aspect: "Can you verify the audit log yourself?",
+        nexus:
+          "Yes. Records are hash-chained; a verification endpoint inside the installation and a separate command-line tool check the chain without relying on the running service.",
+        saas: "Typically the log stays with the vendor: you see what its console or export shows, with fuller access on request.",
+      },
+      {
+        aspect: "If the provider shuts down",
+        nexus:
+          "The installation stays on your servers and keeps running: Docker, open-source components such as Keycloak, APISIX, Weaviate, PostgreSQL and llama.cpp, and a generation step you can move to another endpoint or a local model.",
+        saas: "Typically the service switches off with the vendor; exporting data and indexes has to be negotiated, often against a deadline.",
+      },
+    ],
+    note: "Comparison with the typical SaaS delivery model, not with any specific vendor.",
   },
   models: {
     eyebrow: "Model optionality",
@@ -220,6 +261,7 @@ const EN: Copy = {
         summary:
           "Reads public hospital data — PNE-AGENAS, SDO/NSIS, Ministry of Health open data — and, given a condition, helps patients find the facilities that measure best on quality and efficiency.",
         metrics: ["Public data only", "No usage tracking, by design"],
+        href: "/case-studies/curesicure",
       },
       {
         sector: "Legacy modernisation",
@@ -308,8 +350,8 @@ const EN: Copy = {
 const IT: Copy = {
   hero: {
     eyebrow: "Nexus MDS Core · piattaforma proprietaria",
-    title: "Costruisci la governance dell’AI una volta. Ogni caso d’uso ci gira sopra, dentro il tuo perimetro.",
-    subtitle: `Nexus MDS Core è lo strato operativo dell’AI per le organizzazioni regolate: identità, passaggi di approvazione e audit di ogni chiamata al modello si configurano una volta, e ogni nuovo caso d’uso li eredita. ${NEXUS_INFERENCE_IT}`,
+    title: "Lo strato AI che resta nel tuo perimetro, e lo può dimostrare.",
+    subtitle: `${NEXUS_INFERENCE_IT} Ogni chiamata al modello, locale o esterna, finisce in un registro di audit a catena hash che puoi verificare da te.`,
     badges: [
       "Controlli mappati sul GDPR",
       "Controlli mappati sull’AI Act",
@@ -321,9 +363,9 @@ const IT: Copy = {
   },
   governance: {
     eyebrow: "Governance costruita una volta, riusata ovunque",
-    title: "Il secondo caso d’uso parte da dove è finito il primo",
+    title: "Il secondo caso d’uso costa meno del primo",
     subtitle:
-      "Nella maggior parte dei progetti AI la governance si rifà a ogni caso d’uso, oppure si salta. Su Nexus è infrastruttura: si configura una volta e la eredita tutto ciò che gira sulla piattaforma.",
+      "Nella maggior parte dei progetti AI la governance si rifà, e si ripaga, a ogni caso d’uso, oppure si salta. Su Nexus è infrastruttura: identità, passaggi di approvazione, audit e filtro dei dati personali si configurano una volta, e ogni nuovo caso d’uso li eredita invece di pagarli di nuovo.",
     items: [
       {
         title: "Identità",
@@ -349,13 +391,45 @@ const IT: Copy = {
     steps: [
       {
         label: "Primo caso d’uso",
-        body: "Realm, ruoli, passaggi di approvazione, route di audit, pipeline di acquisizione e il primo workflow. Qui si concentra il lavoro di governance, una volta sola.",
+        body: "Realm, ruoli, passaggi di approvazione, route di audit, pipeline di acquisizione e il primo workflow. Qui si concentra il lavoro di governance, e il suo costo, una volta sola.",
       },
       {
         label: "Secondo caso d’uso",
-        body: "Una nuova raccolta di documenti, un nuovo workflow, nuovi ruoli dentro il realm esistente. Identità, approvazioni, audit e filtro dei dati personali ci sono già: il lavoro è il caso d’uso.",
+        body: "Una nuova raccolta di documenti, un nuovo workflow, nuovi ruoli dentro il realm esistente. Identità, approvazioni, audit e filtro dei dati personali si ereditano, non si ricostruiscono: il budget va al caso d’uso.",
       },
     ],
+  },
+  comparison: {
+    eyebrow: "Il confronto",
+    title: "Nexus MDS Core e le piattaforme AI in SaaS",
+    columns: ["", "Nexus MDS Core", "Piattaforma AI in SaaS"],
+    rows: [
+      {
+        aspect: "Dove gira l’indicizzazione",
+        nexus:
+          "Nel tuo perimetro: i documenti vengono estratti, trasformati in embedding e indicizzati sui tuoi server o su un server dedicato in un datacenter UE.",
+        saas: "Di norma nel cloud del fornitore: i documenti vengono caricati lì per essere indicizzati.",
+      },
+      {
+        aspect: "Chi tiene le chiavi",
+        nexus:
+          "Tu. Keycloak, i segreti della piattaforma e la cifratura del registro di audit stanno nel tuo perimetro.",
+        saas: "Di norma il fornitore: identità, segreti e chiavi di cifratura sono gestiti nel suo cloud, al più con l’opzione di una chiave gestita dal cliente.",
+      },
+      {
+        aspect: "Il registro di audit lo puoi verificare tu?",
+        nexus:
+          "Sì. I record sono concatenati via hash; un endpoint di verifica dentro l’installazione e uno strumento a riga di comando separato controllano la catena senza fidarsi del servizio in esecuzione.",
+        saas: "Di norma il registro resta al fornitore: vedi quello che mostrano la sua console o il suo export, con un accesso più ampio su richiesta.",
+      },
+      {
+        aspect: "Se il fornitore chiude",
+        nexus:
+          "L’installazione resta sui tuoi server e continua a girare: Docker, componenti open source come Keycloak, APISIX, Weaviate, PostgreSQL e llama.cpp, e una generazione che puoi spostare su un altro endpoint o su un modello locale.",
+        saas: "Di norma il servizio si spegne con il fornitore; l’export di dati e indici va negoziato, spesso con una scadenza.",
+      },
+    ],
+    note: "Confronto con il modello tipico di erogazione in SaaS, non con un fornitore specifico.",
   },
   models: {
     eyebrow: "Scelta del modello",
@@ -442,6 +516,8 @@ const IT: Copy = {
         summary:
           "Legge i dati pubblici degli ospedali (PNE-AGENAS, SDO/NSIS, open data del Ministero della Salute) e, data una patologia, aiuta il paziente a trovare le strutture che misurano meglio per qualità ed efficienza.",
         metrics: ["Solo dati pubblici", "Nessun tracciamento, per scelta"],
+        href: "/it/case-studies/curesicure",
+        linkLabel: "Leggi il case study →",
       },
       {
         sector: "Modernizzazione legacy",
@@ -589,8 +665,53 @@ export function NexusPlatformBody({ locale = "en" }: { locale?: "en" | "it" }) {
         </div>
       </section>
 
-      {/* Model optionality */}
+      {/* Comparison with the typical SaaS delivery model */}
       <section className="py-20 md:py-28 bg-[#0D1117]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <SectionHeader eyebrow={c.comparison.eyebrow} title={c.comparison.title} />
+          </div>
+          <div className="overflow-x-auto rounded-xl border border-[#30363D]">
+            <table className="w-full min-w-[640px] text-left text-sm border-collapse">
+              <caption className="caption-bottom text-[#7D8FA3] text-xs text-left px-6 py-4 border-t border-[#30363D]">
+                {c.comparison.note}
+              </caption>
+              <thead className="bg-[#161B22]">
+                <tr>
+                  {c.comparison.columns.map((col, i) => (
+                    <th
+                      key={i}
+                      scope="col"
+                      className={`px-6 py-4 font-dm font-semibold align-bottom ${
+                        i === 1 ? "text-[#00B4D8]" : "text-[#E6EDF3]"
+                      }`}
+                    >
+                      {col}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {c.comparison.rows.map((row) => (
+                  <tr key={row.aspect} className="border-t border-[#30363D] align-top">
+                    <th
+                      scope="row"
+                      className="px-6 py-5 font-dm font-semibold text-[#E6EDF3] w-[22%]"
+                    >
+                      {row.aspect}
+                    </th>
+                    <td className="px-6 py-5 text-[#E6EDF3]/90 leading-relaxed">{row.nexus}</td>
+                    <td className="px-6 py-5 text-[#7D8FA3] leading-relaxed">{row.saas}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Model optionality */}
+      <section className="py-20 md:py-28 bg-[#0D1117] border-t border-[#30363D]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader eyebrow={c.models.eyebrow} title={c.models.title} />
           <div className="mt-6 text-[#7D8FA3] text-lg leading-relaxed space-y-4">

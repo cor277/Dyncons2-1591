@@ -58,24 +58,18 @@ are defined at /answers/private-ai-vs-sovereign-ai.
 - [Compliance-Epistemic Project Framework (CEPF)](${BASE_URL}/cepf): Regulatory crossing catalogue, version 7, snapshot July 2026 — 19 frameworks mapped onto their operational obligations and their overlaps, 247 requirements, 24 cross-framework overlap groups, 695 document templates. Calibra, the software built on CEPF, is described on its own page and carries the interactive demo.
 - [Calibra](${BASE_URL}/calibra): The software built on CEPF — the regulatory catalogue plus risk, scheduling, operational flow, Gantt and milestones. Proprietary to Dynamics Consulting, used inside engagements. The page carries a reduced demonstration instance: nine of the nineteen frameworks in CEPF v7 and a subset of the planning functions, interface in Italian.
 - [Trust](${BASE_URL}/trust): What can be checked and how. No certifications held by Dynamics Consulting or Nexus MDS Core; controls mapped with CEPF; the sub-processors of this website and the external components of a Nexus installation; how the hash-chained audit record is verified. Italian: ${BASE_URL}/it/trust
-- [Technical capabilities](${BASE_URL}/capabilities): The engineering underneath the service lines — applied AI, data platforms, Kubernetes, integration, Dynamics 365, automation, blockchain. Competences, not separate offerings.
+- [Technical capabilities](${BASE_URL}/capabilities): The engineering underneath the service lines, on one page — applied AI and agentic workflows, data platforms and RAG, cloud and Kubernetes, enterprise integration (Dynamics 365 included), process automation. Competences, not separate offerings. Italian: ${BASE_URL}/it/competenze
 
 ## Services
 
 - [AI Governance & Compliance Advisory](${BASE_URL}/services/governance-advisory): AI consulting for regulated organisations. Regulatory positioning of the system under the EU AI Act, GDPR, PLD 2024, NIS2, DORA, the Cyber Resilience Act and ISO/IEC 27001:2022; architecture review with documented technical accountability; governance design; remediation sequence; implementation. Runs on CEPF and Calibra. Italian counterpart: /it/consulenza-ai-governance-compliance.
 - [Fractional AI CTO](${BASE_URL}/services/fractional-cto): A part-time CTO mandate with the decision rights of a permanent one: AI architecture, AI governance, vendor assessment, deployment model selection and programme leadership. Typically 2-4 days a month for advisory, 8-12 for operational engagements, opening with a two-to-three week technology assessment. Italian counterpart, written for the Milan mid-market rather than translated: /it/fractional-cto-milano.
-- [Applied AI & Agentic Workflows](${BASE_URL}/services/applied-ai)
-- [Data Platforms & RAG Architecture](${BASE_URL}/services/data-platforms)
-- [Cloud & Kubernetes Architecture](${BASE_URL}/services/cloud-kubernetes)
-- [Enterprise Integration & Modernisation](${BASE_URL}/services/enterprise-integration)
-- [Microsoft Dynamics 365](${BASE_URL}/services/microsoft-dynamics)
-- [Intelligent Automation](${BASE_URL}/services/automation)
-- [Blockchain & Web3](${BASE_URL}/services/blockchain)
 
 ## Case studies
 
 - [Federfarma Lombarda — Nexus MDS Core in production](${BASE_URL}/case-studies/federfarma): Regulatory assistant for 1,000+ pharmacies across the provinces of Milan, Lodi and Monza Brianza, around 2,000 queries a day. Explicit document version chains so answers cite what is in force rather than what is merely relevant; personal data excluded at ingestion; tamper-evident audit log. The most detailed account of how the architecture actually works.
-- [HumanIA Care — AI Senior Companion](${BASE_URL}/case-studies/humania-care)
+- [CureSicure — public hospital data for patients](${BASE_URL}/case-studies/curesicure): Pro bono service in production on Nexus MDS Core. Reads public hospital data (PNE-AGENAS, SDO/NSIS, Ministry of Health open data) and, given a condition, helps a patient find the facilities that measure best on quality and efficiency. By design it keeps no usage metrics and tracks nobody, so the case study publishes no usage figures.
+- [HumanIA Care — AI Senior Companion](${BASE_URL}/case-studies/humania-care): Controlled pilot, not yet in public rollout.
 - [IATP — AI-Driven Legacy Reverse Engineering](${BASE_URL}/case-studies/iatp)
 - [LogiTrack — RFID & AI Logistics Traceability](${BASE_URL}/case-studies/logitrack)
 - [Dynamics 365 F&O + Unified Data Platform](${BASE_URL}/case-studies/dynamics-data)

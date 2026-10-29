@@ -216,7 +216,7 @@ export default function EventSourcingArticleIt() {
                 l&apos;event sourcing non è solo un pattern tecnico. È un investimento
                 architetturale nella preparazione normativa. Per capire come applichiamo i pattern
                 event-driven nelle integrazioni enterprise, guarda il nostro servizio di{" "}
-                <Link href="/it/servizi/integrazione-enterprise" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/competenze#integrazione-enterprise" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   integrazione enterprise
                 </Link>.
               </p>

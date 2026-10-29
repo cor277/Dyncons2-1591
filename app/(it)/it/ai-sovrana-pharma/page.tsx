@@ -493,7 +493,7 @@ export default function AiSovranaPharmaPage() {
                 L&apos;adozione di una piattaforma AI sovrana nel pharma non è
                 un progetto big-bang. È un percorso strutturato che{" "}
                 <Link
-                  href="/it/servizi/ai-applicata"
+                  href="/it/competenze#ai-applicata"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Dynamics Consulting

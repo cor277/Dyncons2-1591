@@ -438,7 +438,7 @@ export default function SovereignAiPharmaPage() {
                 Adopting a sovereign AI platform in pharma is not a big-bang project. It is a
                 structured path that{" "}
                 <Link
-                  href="/services/applied-ai"
+                  href="/capabilities#applied-ai"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Dynamics Consulting

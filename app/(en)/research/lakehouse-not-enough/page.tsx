@@ -194,7 +194,7 @@ export default function LakehouseArticle() {
                 regulated industries where data governance is non-negotiable, this explicit
                 separation is not over-engineering. It is the minimum viable architecture. For
                 more on how we implement this in practice, see our{" "}
-                <Link href="/services/data-platforms" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/capabilities#data-platforms" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Modern Data Platforms
                 </Link>{" "}
                 service or explore the{" "}

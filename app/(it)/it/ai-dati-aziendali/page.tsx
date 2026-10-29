@@ -139,7 +139,7 @@ export default function AiDatiAziendaliPage() {
                 <span className="text-[#7D8FA3]"> — catene di versione e intervalli di validità.</span>
               </li>
               <li>
-                <Link href="/it/servizi/data-platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/competenze#data-platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Data platform e architetture RAG
                 </Link>
                 <span className="text-[#7D8FA3]"> — la linea di servizio.</span>

@@ -10,9 +10,9 @@ import { NexusPlatformBody } from "@/components/sections/NexusPlatformBody";
 
 const EN_URL = "https://www.dynamicsconsulting.it/platform";
 const IT_URL = "https://www.dynamicsconsulting.it/it/piattaforma-nexus";
-const TITLE = "Nexus MDS Core — the AI operating layer for regulated perimeters";
+const TITLE = "Nexus MDS Core — the AI layer that stays inside your perimeter";
 const DESCRIPTION =
-  "Build AI governance once and run every use case on it: identity, approval steps and an audit of every model call, inherited by each new use case. Indexing, retrieval and audit inside your perimeter; generation on a local model or a replaceable EU endpoint.";
+  "Indexing, retrieval, identity and audit inside your perimeter; every model call recorded in a hash-chained audit log you can verify; generation on a local model or a replaceable EU endpoint. Governance set up once, so each new use case costs less.";
 
 export const metadata: Metadata = {
   title: TITLE,

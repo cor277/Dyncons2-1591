@@ -369,14 +369,14 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 la verifica, regola per regola, che la business logic passi intatta nella transizione. Questa
                 pipeline &egrave; parte integrante dei nostri servizi di{" "}
                 <Link
-                  href="/it/servizi/integrazione-enterprise"
+                  href="/it/competenze#integrazione-enterprise"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   enterprise integration
                 </Link>{" "}
                 e{" "}
                 <Link
-                  href="/it/servizi/ai-applicata"
+                  href="/it/competenze#ai-applicata"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   applied AI

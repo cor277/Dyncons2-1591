@@ -86,7 +86,7 @@ export default function DataActPage() {
         },
         {
           label: "Cloud e Kubernetes",
-          href: "/it/servizi/cloud-kubernetes",
+          href: "/it/competenze#cloud-kubernetes",
           note: "architetture progettate per poter cambiare fornitore",
         },
         {

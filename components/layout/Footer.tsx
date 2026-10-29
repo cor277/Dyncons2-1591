@@ -23,17 +23,6 @@ const advisoryServices: FooterLink[] = [
   { label: "On-premise AI for healthcare", it: "AI on-premise per la sanità", href: "/ai-on-premise-healthcare" },
 ];
 
-const deliveryServices: FooterLink[] = [
-  { label: "Technical capabilities", it: "Competenze tecniche", href: "/capabilities" },
-  { label: "Applied AI & Agentic Workflows", it: "AI applicata e workflow agentici", href: "/services/applied-ai" },
-  { label: "Cloud & Kubernetes", it: "Cloud e Kubernetes", href: "/services/cloud-kubernetes" },
-  { label: "Modern Data Platforms & RAG", it: "Data platform moderne e RAG", href: "/services/data-platforms" },
-  { label: "Enterprise Integration & API", it: "Integrazione enterprise e API", href: "/services/enterprise-integration" },
-  { label: "Microsoft & Dynamics 365", it: "Microsoft e Dynamics 365", href: "/services/microsoft-dynamics" },
-  { label: "Process & Hyper-Automation", it: "Automazione dei processi e hyper-automation", href: "/services/automation" },
-  { label: "Blockchain & Web3", it: "Blockchain e Web3", href: "/services/blockchain" },
-];
-
 const legal: FooterLink[] = [
   { label: "Nexus MDS Core", it: "Nexus MDS Core", href: "/platform" },
   { label: "CEPF Methodology", it: "Metodologia CEPF", href: "/cepf" },
@@ -53,7 +42,6 @@ const T = {
     tagline: "Sovereign AI Infrastructure for Regulated Industries · Italy",
     services: "Services",
     advisory: "Advisory & Strategy",
-    capabilities: "Capabilities",
     company: "Company",
     contact: "Contact",
     preferred: "SMS / WhatsApp preferred",
@@ -65,7 +53,6 @@ const T = {
     tagline: "Infrastruttura AI sovrana per settori regolamentati · Italia",
     services: "Servizi",
     advisory: "Consulenza e strategia",
-    capabilities: "Competenze",
     company: "Azienda",
     contact: "Contatti",
     preferred: "Preferibilmente SMS / WhatsApp",
@@ -120,23 +107,8 @@ export function Footer() {
             <p className="text-[#00B4D8] text-[10px] font-mono tracking-widest uppercase mb-2">
               {t.advisory}
             </p>
-            <ul className="space-y-2 mb-5">
-              {advisoryServices.map((s) => (
-                <li key={s.href}>
-                  <Link
-                    href={href(s.href)}
-                    className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200"
-                  >
-                    {label(s)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <p className="text-[#00B4D8] text-[10px] font-mono tracking-widest uppercase mb-2">
-              {t.capabilities}
-            </p>
             <ul className="space-y-2">
-              {deliveryServices.map((s) => (
+              {advisoryServices.map((s) => (
                 <li key={s.href}>
                   <Link
                     href={href(s.href)}

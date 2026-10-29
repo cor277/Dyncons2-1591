@@ -34,16 +34,10 @@ export const ROUTE_PAIRS: Record<string, string> = {
   // Services
   "/services/governance-advisory": "/it/consulenza-ai-governance-compliance",
   "/services/fractional-cto": "/it/servizi/fractional-cto",
-  "/services/applied-ai": "/it/servizi/ai-applicata",
-  "/services/automation": "/it/servizi/automazione",
-  "/services/blockchain": "/it/servizi/blockchain",
-  "/services/cloud-kubernetes": "/it/servizi/cloud-kubernetes",
-  "/services/data-platforms": "/it/servizi/data-platform",
-  "/services/enterprise-integration": "/it/servizi/integrazione-enterprise",
-  "/services/microsoft-dynamics": "/it/servizi/microsoft-dynamics",
 
   // Case studies (same slugs in both languages)
   "/case-studies": "/it/case-studies",
+  "/case-studies/curesicure": "/it/case-studies/curesicure",
   "/case-studies/dynamics-crm": "/it/case-studies/dynamics-crm",
   "/case-studies/dynamics-data": "/it/case-studies/dynamics-data",
   "/case-studies/federfarma": "/it/case-studies/federfarma",

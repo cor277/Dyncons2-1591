@@ -71,11 +71,6 @@ const EN_NAV: NavLink[] = [
         href: "/legacy-modernisation-ai",
         desc: "AI-assisted reverse engineering and paying down technical debt",
       },
-      {
-        label: "Technical capabilities",
-        href: "/capabilities",
-        desc: "Data platforms, Kubernetes, integration, Dynamics 365, automation",
-      },
     ],
   },
   {
@@ -195,11 +190,6 @@ const IT_NAV: NavLink[] = [
         label: "Modernizzazione legacy con AI",
         href: "/it/modernizzazione-sistemi-legacy-ai",
         desc: "Reverse engineering assistito e rientro del debito tecnico",
-      },
-      {
-        label: "Competenze tecniche",
-        href: "/it/competenze",
-        desc: "Data platform, Kubernetes, integrazione, Dynamics 365, automazione",
       },
     ],
   },

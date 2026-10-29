@@ -197,6 +197,21 @@ export default function AboutPage() {
               </Link>{" "}
               and the engineering that implements it sit in the same practice.
             </p>
+            <p className="text-[#7D8FA3] leading-relaxed text-lg mt-5">
+              Integration with ERP and CRM systems, Dynamics 365 included, remains part of the
+              engineering — Dynamics Consulting is a Microsoft Cloud Partner: see the{" "}
+              <Link href="/case-studies/dynamics-data" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Dynamics 365 F&amp;O and data platform
+              </Link>{" "}
+              and{" "}
+              <Link href="/case-studies/dynamics-crm" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Dynamics 365 CRM
+              </Link>{" "}
+              case studies.{" "}
+              <Link href="/capabilities" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Technical capabilities →
+              </Link>
+            </p>
           </div>
         </section>
 

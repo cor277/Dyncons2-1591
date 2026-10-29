@@ -432,7 +432,10 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
               <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
                 Nexus MDS Core
               </Link>
-              .
+              . L’ingegneria che sta sotto è descritta nelle{" "}
+              <Link href="/it/competenze" className="text-[#00B4D8] hover:text-[#E6EDF3] underline">
+                Competenze tecniche →
+              </Link>
             </p>
           </div>
         </section>

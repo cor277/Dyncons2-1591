@@ -14,20 +14,18 @@ export const metadata: Metadata = {
   alternates: alternatesFor("/case-studies"),
 };
 
-const cases = [
-  {
-    slug: "logitrack",
-    client: "LogiTrack",
-    tag: "Logistics · RFID · AI · Traceability",
-    headline: "RFID & AI-powered traceability for warehouse, production and shipping",
-    summary:
-      "Cloud-native platform combining RFID UHF for real-time warehouse and production tracking with NFC for post-sale authentication. AI anomaly detection, blockchain certification, edge computing, and deep SAP/Power Platform integration.",
-    metrics: [
-      { value: "99.5%", label: "Shipping error reduction" },
-      { value: "20×", label: "Faster inventories" },
-      { value: "End-to-end", label: "Item-level traceability" },
-    ],
-  },
+type CaseCard = {
+  slug: string;
+  client: string;
+  tag: string;
+  headline: string;
+  summary: string;
+  metrics: { value: string; label: string }[];
+  /** Shown with a pilot badge rather than as production work. */
+  pilot?: boolean;
+};
+
+const aiCases: CaseCard[] = [
   {
     slug: "federfarma",
     client: "Federfarma Lombarda",
@@ -42,29 +40,16 @@ const cases = [
     ],
   },
   {
-    slug: "sorgenia",
-    client: "Sorgenia",
-    tag: "Energy · CRM · Marketing Automation",
-    headline: "Dynamics 365 Marketing for Sorgenia, an Italian energy provider",
+    slug: "curesicure",
+    client: "CureSicure",
+    tag: "Healthcare · Pro bono · Nexus MDS Core",
+    headline: "Public hospital data, read for patients — a pro bono service in production",
     summary:
-      "Customer journey orchestration and multi-channel campaign automation for 200k+ contacts. Real-time event triggers from billing and consumption data integrated with Dynamics CRM.",
+      "Reads public hospital data (PNE-AGENAS, SDO/NSIS, Ministry of Health open data) and, given a condition, helps a patient find the facilities that measure best on quality and efficiency. Runs on Nexus MDS Core. By design it keeps no usage metrics and tracks nobody.",
     metrics: [
-      { value: "200k+", label: "Contacts managed" },
-      { value: "Multi-channel", label: "Journey orchestration" },
-      { value: "Real-time", label: "Event-driven triggers" },
-    ],
-  },
-  {
-    slug: "nespresso",
-    client: "Nespresso (via ATOS)",
-    tag: "FMCG · Enterprise Programme · IoT",
-    headline: "Nespresso Intervallo — multi-stream enterprise programme",
-    summary:
-      "Programme leadership across Dynamics F&O, custom backend services, and IoT-enabled frontend for Nespresso's Italian B2B operations. ~40-person delivery managed across three parallel workstreams.",
-    metrics: [
-      { value: "~40", label: "People managed" },
-      { value: "3 streams", label: "Parallel workstreams" },
-      { value: "F&O + IoT", label: "Technology scope" },
+      { value: "Pro bono", label: "In production" },
+      { value: "Public", label: "Hospital data only" },
+      { value: "None", label: "Usage tracking, by design" },
     ],
   },
   {
@@ -82,6 +67,7 @@ const cases = [
   },
   {
     slug: "humania-care",
+    pilot: true,
     client: "HumanIA Care",
     tag: "Applied AI · Healthcare",
     headline: "AI companion architecture for elderly patients — privacy-first, sovereign deployment",
@@ -91,6 +77,48 @@ const cases = [
       { value: "< 800 ms", label: "p99 response latency" },
       { value: "Multi-agent", label: "RAG + Voice + Memory" },
       { value: "At ingestion", label: "Personal data anonymised" },
+    ],
+  },
+];
+
+const enterpriseCases: CaseCard[] = [
+  {
+    slug: "nespresso",
+    client: "Nespresso (via ATOS)",
+    tag: "FMCG · Enterprise Programme · IoT",
+    headline: "Nespresso Intervallo — multi-stream enterprise programme",
+    summary:
+      "Programme leadership across Dynamics F&O, custom backend services, and IoT-enabled frontend for Nespresso's Italian B2B operations. ~40-person delivery managed across three parallel workstreams.",
+    metrics: [
+      { value: "~40", label: "People managed" },
+      { value: "3 streams", label: "Parallel workstreams" },
+      { value: "F&O + IoT", label: "Technology scope" },
+    ],
+  },
+  {
+    slug: "sorgenia",
+    client: "Sorgenia",
+    tag: "Energy · CRM · Marketing Automation",
+    headline: "Dynamics 365 Marketing for Sorgenia, an Italian energy provider",
+    summary:
+      "Customer journey orchestration and multi-channel campaign automation for 200k+ contacts. Real-time event triggers from billing and consumption data integrated with Dynamics CRM.",
+    metrics: [
+      { value: "200k+", label: "Contacts managed" },
+      { value: "Multi-channel", label: "Journey orchestration" },
+      { value: "Real-time", label: "Event-driven triggers" },
+    ],
+  },
+  {
+    slug: "dynamics-crm",
+    client: "Banking & Insurance CRM",
+    tag: "Multi-sector · CRM · Customer Engagement",
+    headline: "Dynamics 365 CRM — banking, insurance & enterprise",
+    summary:
+      "Multiple Dynamics 365 Sales and Customer Service rollouts for Banca Mediolanum, Unipol, illimity, and industrial clients. Sector-specific workflows, compliance integration, and enterprise scale.",
+    metrics: [
+      { value: "5+", label: "CRM implementations" },
+      { value: "Banking & Insurance", label: "Core sectors" },
+      { value: "Enterprise", label: "Scale" },
     ],
   },
   {
@@ -107,16 +135,16 @@ const cases = [
     ],
   },
   {
-    slug: "dynamics-crm",
-    client: "Banking & Insurance CRM",
-    tag: "Multi-sector · CRM · Customer Engagement",
-    headline: "Dynamics 365 CRM — banking, insurance & enterprise",
+    slug: "logitrack",
+    client: "LogiTrack",
+    tag: "Logistics · RFID · AI · Traceability",
+    headline: "RFID & AI-powered traceability for warehouse, production and shipping",
     summary:
-      "Multiple Dynamics 365 Sales and Customer Service rollouts for Banca Mediolanum, Unipol, illimity, and industrial clients. Sector-specific workflows, compliance integration, and enterprise scale.",
+      "Cloud-native platform combining RFID UHF for real-time warehouse and production tracking with NFC for post-sale authentication. AI anomaly detection, blockchain certification, edge computing, and deep SAP/Power Platform integration.",
     metrics: [
-      { value: "5+", label: "CRM implementations" },
-      { value: "Banking & Insurance", label: "Core sectors" },
-      { value: "Enterprise", label: "Scale" },
+      { value: "99.5%", label: "Shipping error reduction" },
+      { value: "20×", label: "Faster inventories" },
+      { value: "End-to-end", label: "Item-level traceability" },
     ],
   },
 ];
@@ -125,6 +153,48 @@ const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/case-studies"
   { name: "Home", path: "/" },
   { name: "Case studies" },
 ]);
+
+function CaseList({ cases }: { cases: CaseCard[] }) {
+  return (
+    <div className="space-y-10">
+      {cases.map((c) => (
+        <Link
+          key={c.slug}
+          href={`/case-studies/${c.slug}`}
+          className="group block rounded-2xl border border-[#30363D] hover:border-[#00B4D8] bg-[#161B22] p-8 md:p-10 transition-all shadow-sm hover:shadow-[0_0_30px_rgba(0,180,216,0.1)]"
+        >
+          <div className="flex flex-col md:flex-row md:items-start gap-8">
+            <div className="flex-1">
+              <span className="text-xs font-semibold uppercase tracking-widest text-[#00B4D8]">
+                {c.tag}
+              </span>
+              {c.pilot && (
+                <span className="ml-3 inline-block align-middle rounded-full border border-[#D29922] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-[#D29922]">
+                  Controlled pilot
+                </span>
+              )}
+              <h3 className="mt-2 text-2xl font-bold text-[#E6EDF3] group-hover:text-[#00B4D8] transition-colors">
+                {c.headline}
+              </h3>
+              <p className="mt-3 text-[#7D8FA3] leading-relaxed">{c.summary}</p>
+              <span className="mt-4 inline-flex items-center text-sm font-semibold text-[#00B4D8]">
+                Read case study →
+              </span>
+            </div>
+            <div className="flex md:flex-col gap-6 md:gap-4 md:min-w-[140px]">
+              {c.metrics.map((m) => (
+                <div key={m.label} className="text-center md:text-right">
+                  <div className="text-2xl font-bold text-[#E6EDF3]">{m.value}</div>
+                  <div className="text-xs text-[#7D8FA3] mt-0.5">{m.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 export default function CaseStudiesPage() {
   return (
@@ -149,38 +219,23 @@ export default function CaseStudiesPage() {
         </section>
 
         {/* Cards */}
-        <section className="py-20 px-6">
-          <div className="max-w-5xl mx-auto space-y-10">
-            {cases.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/case-studies/${c.slug}`}
-                className="group block rounded-2xl border border-[#30363D] hover:border-[#00B4D8] bg-[#161B22] p-8 md:p-10 transition-all shadow-sm hover:shadow-[0_0_30px_rgba(0,180,216,0.1)]"
-              >
-                <div className="flex flex-col md:flex-row md:items-start gap-8">
-                  <div className="flex-1">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-[#00B4D8]">
-                      {c.tag}
-                    </span>
-                    <h2 className="mt-2 text-2xl font-bold text-[#E6EDF3] group-hover:text-[#00B4D8] transition-colors">
-                      {c.headline}
-                    </h2>
-                    <p className="mt-3 text-[#7D8FA3] leading-relaxed">{c.summary}</p>
-                    <span className="mt-4 inline-flex items-center text-sm font-semibold text-[#00B4D8]">
-                      Read case study →
-                    </span>
-                  </div>
-                  <div className="flex md:flex-col gap-6 md:gap-4 md:min-w-[140px]">
-                    {c.metrics.map((m) => (
-                      <div key={m.label} className="text-center md:text-right">
-                        <div className="text-2xl font-bold text-[#E6EDF3]">{m.value}</div>
-                        <div className="text-xs text-[#7D8FA3] mt-0.5">{m.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            ))}
+        <section className="pt-20 pb-10 px-6">
+          <div className="max-w-5xl mx-auto">
+            <h2 id="ai" className="scroll-mt-24 text-2xl md:text-3xl font-bold text-[#E6EDF3] mb-2">
+              AI in production and pilots
+            </h2>
+            <p className="text-[#7D8FA3] mb-8">Work built on Nexus MDS Core. HumanIA Care is a controlled pilot, not yet in public rollout.</p>
+            <CaseList cases={aiCases} />
+          </div>
+        </section>
+
+        <section className="pt-10 pb-20 px-6">
+          <div className="max-w-5xl mx-auto">
+            <h2 id="enterprise" className="scroll-mt-24 text-2xl md:text-3xl font-bold text-[#E6EDF3] mb-2">
+              Earlier enterprise programmes
+            </h2>
+            <p className="text-[#7D8FA3] mb-8">Programmes on Dynamics 365, data platforms and logistics.</p>
+            <CaseList cases={enterpriseCases} />
           </div>
         </section>
 

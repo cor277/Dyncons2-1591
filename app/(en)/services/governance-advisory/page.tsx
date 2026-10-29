@@ -476,9 +476,8 @@ export default function GovernanceAdvisoryPage() {
                 href="/capabilities"
                 className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
               >
-                technical capabilities
+                Technical capabilities →
               </Link>
-              .
             </p>
           </div>
         </div>

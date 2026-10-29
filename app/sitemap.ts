@@ -31,7 +31,7 @@ const routes: Route[] = [
   { path: "/platform", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-10-29" },
   { path: "/cepf", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/calibra", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/capabilities", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-08-03" },
+  { path: "/capabilities", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-29" },
 
   // Advisory
   { path: "/services/governance-advisory", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
@@ -42,19 +42,11 @@ const routes: Route[] = [
   { path: "/it/assessment", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/it/cra-11-settembre", priority: 0.9, changeFrequency: "weekly", lastModified: "2026-10-29" },
 
-  // Delivery service lines
-  { path: "/services/applied-ai", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/services/data-platforms", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/services/cloud-kubernetes", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/services/enterprise-integration", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/services/microsoft-dynamics", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/services/automation", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-  { path: "/services/blockchain", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-09" },
-
   // Case studies
-  { path: "/case-studies", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
+  { path: "/case-studies", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-29" },
   { path: "/case-studies/federfarma", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
   { path: "/it/case-studies/federfarma", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-09" },
+  { path: "/case-studies/curesicure", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-29" },
   { path: "/case-studies/humania-care", priority: 0.7, changeFrequency: "yearly", lastModified: "2026-09-06" },
   { path: "/case-studies/iatp", priority: 0.7, changeFrequency: "yearly", lastModified: "2026-08-03" },
   { path: "/case-studies/logitrack", priority: 0.7, changeFrequency: "yearly", lastModified: "2026-08-03" },

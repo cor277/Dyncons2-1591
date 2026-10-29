@@ -489,7 +489,7 @@ export default function AiOnPremiseHealthcarePage() {
                 impact and data sensitivity, assess GPU procurement options, and map regulatory
                 obligations. Produce a Data Protection Impact Assessment for the planned AI
                 processing activities. Engage{" "}
-                <Link href="/services/applied-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/capabilities#applied-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   applied AI specialists
                 </Link>{" "}
                 who understand both the clinical domain and the infrastructure requirements.
@@ -646,7 +646,7 @@ export default function AiOnPremiseHealthcarePage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/applied-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                  <Link href="/capabilities#applied-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                     Applied AI & Agentic Workflows services
                   </Link>
                 </li>

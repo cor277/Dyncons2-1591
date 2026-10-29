@@ -44,6 +44,14 @@ const caseStudies = [
     href: "/case-studies/federfarma",
   },
   {
+    sector: "Healthcare / Pro bono",
+    title: "CureSicure",
+    summary:
+      "Reads public hospital data — PNE-AGENAS, SDO/NSIS, Ministry of Health open data — and, given a condition, helps patients find the facilities that measure best on quality and efficiency. Runs on Nexus MDS Core.",
+    metrics: ["In production", "Public data only", "No usage tracking, by design"],
+    href: "/case-studies/curesicure",
+  },
+  {
     sector: "Energy / CRM",
     title: "Sorgenia — Dynamics Marketing",
     summary:

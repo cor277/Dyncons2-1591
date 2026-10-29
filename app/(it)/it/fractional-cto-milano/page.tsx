@@ -198,7 +198,7 @@ export default function FractionalCtoMilanoPage() {
                 </Link>. Questo include la definizione di policy per l&apos;uso dell&apos;AI generativa
                 da parte dei dipendenti, la selezione degli strumenti e il monitoraggio
                 degli output attraverso pipeline di{" "}
-                <Link href="/it/servizi/ai-applicata" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/competenze#ai-applicata" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Applied AI
                 </Link>{" "}
                 governabili.
@@ -209,11 +209,11 @@ export default function FractionalCtoMilanoPage() {
                 microservizi, event-driven, data mesh/lakehouse. Selezione dello stack
                 tecnologico. Definizione di standard di sviluppo, CI/CD, observability.
                 Per le aziende che necessitano di{" "}
-                <Link href="/it/servizi/data-platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/competenze#data-platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   data platform
                 </Link>{" "}
                 moderne o di{" "}
-                <Link href="/it/servizi/integrazione-enterprise" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/competenze#integrazione-enterprise" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   integrazione enterprise
                 </Link>, il Fractional CTO progetta l&apos;architettura complessiva e ne supervisiona
                 l&apos;implementazione.

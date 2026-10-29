@@ -195,7 +195,7 @@ export default function EventSourcingArticle() {
                 technical pattern. It is an architectural investment in regulatory readiness.
                 For more on how we apply event-driven patterns in enterprise integrations,
                 see our{" "}
-                <Link href="/services/enterprise-integration" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/capabilities#enterprise-integration" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Enterprise Integration
                 </Link>{" "}
                 service.

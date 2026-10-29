@@ -58,6 +58,14 @@ const caseStudies = [
     href: "/it/case-studies/federfarma",
   },
   {
+    sector: "Sanità / Pro bono",
+    title: "CureSicure",
+    summary:
+      "Legge i dati pubblici degli ospedali (PNE-AGENAS, SDO/NSIS, open data del Ministero della Salute) e, data una patologia, aiuta i pazienti a trovare le strutture che misurano meglio per qualità ed efficienza. Gira su Nexus MDS Core.",
+    metrics: ["In produzione", "Solo dati pubblici", "Nessun tracciamento d’uso, per scelta"],
+    href: "/it/case-studies/curesicure",
+  },
+  {
     sector: "Energia / CRM",
     title: "Sorgenia — Dynamics Marketing",
     summary:
@@ -156,44 +164,6 @@ const RESOURCE_GROUPS: { heading: string; items: Resource[] }[] = [
         title: "Competenze tecniche",
         blurb:
           "L’ingegneria sotto le linee di servizio. Competenze, non offerte separate: l’indice delle pagine qui sotto.",
-      },
-      {
-        href: "/it/servizi/ai-applicata",
-        title: "AI applicata e workflow agentici",
-        blurb: "Sistemi multi-agente, pipeline RAG, Voice AI e governance dell’AI.",
-      },
-      {
-        href: "/it/servizi/data-platform",
-        title: "Data platform e architettura RAG",
-        blurb:
-          "Lakehouse con Apache Iceberg, virtualizzazione dei dati con Dremio, pipeline RAG su Weaviate. Zero-ETL.",
-      },
-      {
-        href: "/it/servizi/cloud-kubernetes",
-        title: "Architettura cloud e Kubernetes",
-        blurb:
-          "Cluster Kubernetes CPU/GPU, API Gateway in ottica Zero-Trust, deployment di LLM self-hosted.",
-      },
-      {
-        href: "/it/servizi/integrazione-enterprise",
-        title: "Integrazione enterprise e modernizzazione",
-        blurb: "Migrazione da ESB, event sourcing, microservizi, modernizzazione dei sistemi legacy.",
-      },
-      {
-        href: "/it/servizi/microsoft-dynamics",
-        title: "Microsoft Dynamics 365",
-        blurb:
-          "Finance & Operations, Sales, Customer Engagement e Power Platform: implementazione, personalizzazione, supporto.",
-      },
-      {
-        href: "/it/servizi/automazione",
-        title: "Automazione intelligente",
-        blurb: "RPA, process mining e automazione potenziata dall’AI.",
-      },
-      {
-        href: "/it/servizi/blockchain",
-        title: "Blockchain e Web3",
-        blurb: "Smart contract, tokenizzazione e tracciabilità della filiera.",
       },
       {
         href: "/it/modernizzazione-sistemi-legacy-ai",
