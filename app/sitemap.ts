@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { ANSWER_LIST } from "./answers";
 import { RESEARCH_ARTICLES } from "./research-articles";
 import { getImportedArticles, isoDay } from "@/lib/imported-articles";
+import { ROUTE_PAIRS, IT_ONLY_PATHS, counterpartOf } from "@/lib/i18n-routes";
 
 const BASE_URL = "https://www.dynamicsconsulting.it";
 
@@ -86,7 +87,8 @@ const routes: Route[] = [
 
 /** Research article slugs come from the registry; all eight were revised on 2026-09-09. */
 const researchRoutes: Route[] = Object.values(RESEARCH_ARTICLES).map((a) => ({
-  path: `/research/${a.slug}`,
+  /* Articles written in Italian live in the Italian section. */
+  path: a.inLanguage === "it" ? `/it/ricerca/${a.slug}` : `/research/${a.slug}`,
   priority: 0.7,
   changeFrequency: "yearly",
   lastModified: "2026-09-09",
@@ -94,7 +96,7 @@ const researchRoutes: Route[] = Object.values(RESEARCH_ARTICLES).map((a) => ({
 
 /** The PLD series, imported from LinkedIn: lastmod is the article's own date. */
 const importedRoutes: Route[] = getImportedArticles().map((a) => ({
-  path: `/research/${a.slug}`,
+  path: a.lang === "it" ? `/it/ricerca/${a.slug}` : `/research/${a.slug}`,
   priority: 0.7,
   changeFrequency: "yearly",
   lastModified: isoDay(a.dateModified ?? a.datePublished),
@@ -107,11 +109,46 @@ const answerRoutes: Route[] = ANSWER_LIST.map((a) => ({
   lastModified: "2026-09-09",
 }));
 
+/**
+ * Every page in the EN/IT table that is not dated above. A counterpart takes
+ * the priority of the page it translates; the date is the day the bilingual
+ * site went live, which is when these pages last changed.
+ */
+const BILINGUAL_LAUNCH = "2026-10-29";
+
+function pairedRoutes(known: Route[]): Route[] {
+  const byPath = new Map(known.map((r) => [r.path, r]));
+  const all = [...Object.keys(ROUTE_PAIRS), ...Object.values(ROUTE_PAIRS), ...IT_ONLY_PATHS];
+  const extra: Route[] = [];
+  for (const path of all) {
+    if (byPath.has(path)) continue;
+    const twin = byPath.get(counterpartOf(path) ?? "");
+    const route: Route = {
+      path,
+      priority: twin?.priority ?? 0.7,
+      changeFrequency: twin?.changeFrequency ?? "monthly",
+      lastModified: BILINGUAL_LAUNCH,
+    };
+    byPath.set(path, route);
+    extra.push(route);
+  }
+  return extra;
+}
+
+const abs = (path: string) => (path === "/" ? `${BASE_URL}/` : `${BASE_URL}${path}`);
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [...routes, ...researchRoutes, ...importedRoutes, ...answerRoutes].map((route) => ({
-    url: route.path === "/" ? `${BASE_URL}/` : `${BASE_URL}${route.path}`,
-    lastModified: new Date(route.lastModified),
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
-  }));
+  const known = [...routes, ...researchRoutes, ...importedRoutes, ...answerRoutes];
+  return [...known, ...pairedRoutes(known)].map((route) => {
+    const other = counterpartOf(route.path);
+    const it = other && ROUTE_PAIRS[route.path] ? other : route.path;
+    const en = other && ROUTE_PAIRS[route.path] ? route.path : other;
+    return {
+      url: abs(route.path),
+      lastModified: new Date(route.lastModified),
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
+      ...(other && en ? { alternates: { languages: { en: abs(en), it: abs(it) } } } : {}),
+    };
+  });
 }

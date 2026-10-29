@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { ORG_ID, WEBSITE_ID, NEXUS_ID, CEPF_ID, CALIBRA_ID } from "@/app/schema-org";
@@ -29,10 +30,7 @@ export const metadata: Metadata = {
     "CEPF",
     "ISO 27001",
   ],
-  alternates: {
-    canonical: EN_URL,
-    languages: { en: EN_URL, it: IT_URL, "x-default": EN_URL },
-  },
+  alternates: alternatesFor("/services/governance-advisory"),
   openGraph: {
     images: OG_IMAGE,
     title: "AI Governance & Compliance Advisory — Dynamics Consulting",

@@ -2,12 +2,14 @@
 import { useState, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { isItalianPath } from "@/lib/i18n-routes";
 
 /* Landing pages that must expose a single action — the form. No floating widget. */
 const SUPPRESSED_PATHS = ["/assessment", "/it/assessment"];
 
 export function ChatbotWidget() {
   const pathname = usePathname();
+  const isItalian = isItalianPath(pathname);
   const [isOpen, setIsOpen] = useState(false);
   const [showBadge, setShowBadge] = useState(false);
 
@@ -63,14 +65,14 @@ export function ChatbotWidget() {
             onClick={() => { setShowBadge(false); openChat(); }}
             className="chatbot-badge-enter bg-[#161B22] border border-[#00B4D8] text-[#E6EDF3] text-xs font-medium px-3 py-1.5 rounded-full shadow-lg cursor-pointer hover:bg-[#1C2333] transition-colors"
           >
-            Ask Nexus →
+            {isItalian ? "Chiedi a Nexus →" : "Ask Nexus →"}
           </button>
         )}
 
         {/* FAB with pulse ring */}
         <button
           onClick={openChat}
-          aria-label="Talk to Nexus"
+          aria-label={isItalian ? "Parla con Nexus" : "Talk to Nexus"}
           className="group relative w-14 h-14 rounded-full bg-[#00B4D8] text-[#0D1117] flex items-center justify-center shadow-[0_0_20px_rgba(0,180,216,0.4)] hover:scale-[1.08] transition-transform duration-200"
         >
           {/* Pulse ring */}
@@ -81,7 +83,7 @@ export function ChatbotWidget() {
           </svg>
           {/* Tooltip */}
           <span className="absolute bottom-full mb-2 right-0 bg-[#161B22] border border-[#30363D] text-[#E6EDF3] text-xs px-2.5 py-1 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-            Talk to Nexus
+            {isItalian ? "Parla con Nexus" : "Talk to Nexus"}
           </span>
         </button>
       </div>
@@ -110,13 +112,13 @@ export function ChatbotWidget() {
                     Nexus Digital Twin
                   </p>
                   <p className="text-[#7D8FA3] text-[10px] leading-tight">
-                    Powered by Nexus MDS Core
+                    {isItalian ? "Basato su Nexus MDS Core" : "Powered by Nexus MDS Core"}
                   </p>
                 </div>
               </div>
               <button
                 onClick={closeChat}
-                aria-label="Close chat"
+                aria-label={isItalian ? "Chiudi la chat" : "Close chat"}
                 className="text-[#7D8FA3] hover:text-[#E6EDF3] transition-colors p-1"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -1,20 +1,32 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 
-const stats = [
-  { value: 16, suffix: "+", label: "Docker Services in Nexus MDS Core" },
-  { value: 10000, suffix: "+", label: "Enterprise documents processed" },
-  { value: 19, suffix: "", label: "Frameworks mapped in CEPF v7" },
-  { value: 8, suffix: "+", label: "Regulated sectors served" },
-  { value: 3, suffix: "+", label: "Production deployments" },
-];
+type Locale = "en" | "it";
 
-function formatNumber(n: number) {
-  return n.toLocaleString("en-US");
+const STATS = {
+  en: [
+    { value: NEXUS_SERVICE_COUNT, suffix: "", label: "Containerised services in Nexus MDS Core" },
+    { value: 10000, suffix: "+", label: "Enterprise documents processed" },
+    { value: 19, suffix: "", label: "Frameworks mapped in CEPF v7" },
+    { value: 8, suffix: "+", label: "Regulated sectors served" },
+    { value: 3, suffix: "+", label: "Production deployments" },
+  ],
+  it: [
+    { value: NEXUS_SERVICE_COUNT, suffix: "", label: "Servizi containerizzati in Nexus MDS Core" },
+    { value: 10000, suffix: "+", label: "Documenti aziendali elaborati" },
+    { value: 19, suffix: "", label: "Framework mappati in CEPF v7" },
+    { value: 8, suffix: "+", label: "Settori regolamentati serviti" },
+    { value: 3, suffix: "+", label: "Deployment in produzione" },
+  ],
+};
+
+function formatNumber(n: number, locale: Locale) {
+  return n.toLocaleString(locale === "it" ? "it-IT" : "en-US");
 }
 
-function Counter({ target, suffix }: { target: number; suffix: string }) {
+function Counter({ target, suffix, locale }: { target: number; suffix: string; locale: Locale }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
   const [count, setCount] = useState(0);
@@ -40,13 +52,14 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
   return (
     <span ref={ref}>
-      {formatNumber(inView ? count : target)}
+      {formatNumber(inView ? count : target, locale)}
       {suffix}
     </span>
   );
 }
 
-export function Stats() {
+export function Stats({ locale = "en" }: { locale?: Locale }) {
+  const stats = STATS[locale];
   return (
     <section className="py-20 md:py-28 bg-[#0D1117]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +74,7 @@ export function Stats() {
               className="text-center"
             >
               <div className="font-syne text-4xl md:text-5xl font-extrabold text-[#00B4D8] mb-2">
-                <Counter target={s.value} suffix={s.suffix} />
+                <Counter target={s.value} suffix={s.suffix} locale={locale} />
               </div>
               <p className="text-[#7D8FA3] text-sm leading-tight">{s.label}</p>
             </motion.div>

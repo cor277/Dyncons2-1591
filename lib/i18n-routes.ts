@@ -30,7 +30,7 @@ export const ROUTE_PAIRS: Record<string, string> = {
 
   // Services
   "/services/governance-advisory": "/it/consulenza-ai-governance-compliance",
-  "/services/fractional-cto": "/fractional-cto-milano",
+  "/services/fractional-cto": "/it/servizi/fractional-cto",
   "/services/applied-ai": "/it/servizi/ai-applicata",
   "/services/automation": "/it/servizi/automazione",
   "/services/blockchain": "/it/servizi/blockchain",
@@ -90,8 +90,13 @@ export const ROUTE_PAIRS: Record<string, string> = {
   "/legacy-modernisation-ai": "/modernizzazione-sistemi-legacy-ai",
 };
 
-/** Italian pages with no English counterpart, by decision. */
-export const IT_ONLY_PATHS = ["/cra-11-settembre"];
+/**
+ * Italian pages with no English counterpart, by decision: /cra-11-settembre is
+ * the landing of an Italian LinkedIn series; /fractional-cto-milano argues a
+ * different case for the Milan mid-market and is not a translation of
+ * /services/fractional-cto (which has its own Italian version).
+ */
+export const IT_ONLY_PATHS = ["/cra-11-settembre", "/fractional-cto-milano"];
 
 const IT_TO_EN: Record<string, string> = Object.fromEntries(
   Object.entries(ROUTE_PAIRS).map(([en, it]) => [it, en])

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,9 +12,7 @@ export const metadata: Metadata = {
     "AI Sovrana per il Pharma Italiano",
   description:
     "Sovereign AI per il pharma italiano: infrastruttura AI on-premise progettata sui requisiti di AI Act, GDPR, Legge 132/2025 e NIS2. Nexus MDS Core — piattaforma sovrana per farmacovigilanza, clinical trials e supply chain farmaceutica.",
-  alternates: {
-    canonical: "https://www.dynamicsconsulting.it/sovereign-ai-pharma-italia",
-  },
+  alternates: alternatesFor("/sovereign-ai-pharma-italia"),
 };
 
 const schema = {
@@ -113,8 +112,8 @@ export default function SovereignAiPharmaItaliaPage() {
               richiede protezione assoluta. L&apos;intelligenza artificiale
               rappresenta un&apos;opportunità trasformativa per il pharma — ma
               solo se implementata con un&apos;infrastruttura sovrana che
-              garantisca residenza dei dati, trasparenza algoritmica e piena
-              conformità normativa. Questa pagina spiega come costruire
+              assicuri residenza dei dati e trasparenza algoritmica, e che sia
+              progettata sui requisiti normativi del settore. Questa pagina spiega come costruire
               un&apos;infrastruttura AI on-premise per il farmaceutico, progettata sui
               requisiti di AI Act, GDPR, Legge 132/2025 e NIS2.
             </p>
@@ -415,7 +414,7 @@ export default function SovereignAiPharmaItaliaPage() {
               <p>
                 Il progetto realizzato per{" "}
                 <Link
-                  href="/case-studies/federfarma"
+                  href="/it/case-studies/federfarma"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Federfarma Lombarda
@@ -426,7 +425,7 @@ export default function SovereignAiPharmaItaliaPage() {
                 aveva l&apos;esigenza di modernizzare i propri sistemi
                 informativi integrando capacità AI per l&apos;analisi
                 documentale e l&apos;automazione dei processi associativi,
-                mantenendo la piena conformità normativa.
+                nel rispetto dei propri obblighi normativi.
               </p>
               <p>
                 <strong className="text-[#E6EDF3]">Dynamics Consulting</strong>{" "}
@@ -458,7 +457,7 @@ export default function SovereignAiPharmaItaliaPage() {
                 L&apos;adozione di una piattaforma AI sovrana nel pharma non è
                 un progetto big-bang. È un percorso strutturato che{" "}
                 <Link
-                  href="/services/applied-ai"
+                  href="/it/servizi/ai-applicata"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Dynamics Consulting
@@ -502,7 +501,7 @@ export default function SovereignAiPharmaItaliaPage() {
                 fondatore, Corrado Patierno, segue personalmente ogni progetto
                 pharma dal primo giorno.{" "}
                 <Link
-                  href="/contact"
+                  href="/it/contatti"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Contattaci

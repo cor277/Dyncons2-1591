@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "LogiTrack — RFID & AI Logistics Traceability",
   description:
     "End-to-end logistics traceability with RFID UHF, NFC, AI anomaly detection, blockchain certification, and real-time analytics. Cloud-native, edge-ready, integrated with SAP and Power Platform.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/logitrack" },
+  alternates: alternatesFor("/case-studies/logitrack"),
 };
 
 const tech = [

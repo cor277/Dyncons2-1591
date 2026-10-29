@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: "Sovereign AI Italia — Infrastruttura AI Governabile",
   description:
     "Sovereign AI per le organizzazioni italiane in settori regolamentati. AI Act, GDPR, NIS2. Nexus MDS Core — piattaforma AI on-premise per healthcare, pharma e industrie regolamentate.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/it/sovereign-ai-italia" },
+  alternates: alternatesFor("/it/sovereign-ai-italia"),
   openGraph: {
     images: OG_IMAGE,
     title: "Sovereign AI Italia — Infrastruttura AI Governabile",
@@ -131,7 +132,7 @@ export default function SovereignAiItaliaPage() {
               sistemi enterprise.
             </p>
             <div className="pt-6">
-              <CTAButton label="Richiedi una demo di Nexus →" href="/contact" variant="primary" />
+              <CTAButton label="Richiedi una demo di Nexus →" href="/it/contatti" variant="primary" />
             </div>
           </div>
         </section>
@@ -184,12 +185,12 @@ export default function SovereignAiItaliaPage() {
               i dati personali non devono entrare nell&apos;indice. La versione estesa di questa
               distinzione è in{" "}
               <Link
-                href="/answers/private-ai-vs-sovereign-ai"
+                href="/it/risposte/ai-privata-vs-ai-sovrana"
                 className="text-[#00B4D8] hover:text-[#E6EDF3]"
               >
-                private AI vs sovereign AI
-              </Link>{" "}
-              (in inglese).
+                AI privata e AI sovrana
+              </Link>
+              .
             </p>
           </div>
         </section>
@@ -248,7 +249,7 @@ export default function SovereignAiItaliaPage() {
                 <span className="text-[#7D8FA3]"> — cosa cambia, in concreto.</span>
               </li>
               <li>
-                <Link href="/cepf" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/cepf" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   CEPF
                 </Link>
                 <span className="text-[#7D8FA3]">

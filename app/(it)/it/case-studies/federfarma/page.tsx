@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { NEXUS_ID, ORG_ID } from "@/app/schema-org";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -16,14 +17,7 @@ export const metadata: Metadata = {
   title: "Federfarma Lombarda — Nexus MDS Core in produzione",
   description:
     "Assistente normativo per oltre 1.000 farmacie delle province di Milano, Lodi e Monza Brianza. Catena di versioni esplicita, dati personali mai indicizzati, registro inalterabile.",
-  alternates: {
-    canonical: IT_URL,
-    languages: {
-      it: IT_URL,
-      en: EN_URL,
-      "x-default": EN_URL,
-    },
-  },
+  alternates: alternatesFor("/it/case-studies/federfarma"),
   openGraph: {
     images: OG_IMAGE,
     title: "Federfarma Lombarda — Nexus MDS Core in produzione",
@@ -135,7 +129,7 @@ export default function FederfarmaCaseStudyIt() {
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
           <div className="max-w-3xl mx-auto">
             <Link
-              href="/case-studies"
+              href="/it/case-studies"
               className="text-sm text-[#00B4D8] hover:text-[#00C8F0] mb-6 inline-flex items-center gap-1"
             >
               ← Tutti i case study
@@ -168,7 +162,7 @@ export default function FederfarmaCaseStudyIt() {
               <div>
                 <dt className="inline font-semibold text-[#E6EDF3]">Autore: </dt>
                 <dd className="inline">
-                  <Link href="/about" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                  <Link href="/it/chi-siamo" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                     Corrado Patierno
                   </Link>
                 </dd>

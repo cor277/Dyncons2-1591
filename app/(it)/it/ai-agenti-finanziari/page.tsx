@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
 import { breadcrumbSchema } from "@/app/seo";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Agenti AI per finanza e compliance | Nexus MDS Core",
   description:
     "Governance agenti AI per banche e asset manager: approval gate, audit log a prova di manomissione, RBAC, logging LLM. Architettura progettata sui requisiti DORA, MiFID II e AI Act.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-agenti-finanziari" },
+  alternates: alternatesFor("/it/ai-agenti-finanziari"),
   openGraph: {
     images: OG_IMAGE,
     title: "Agenti AI per finanza e compliance | Nexus MDS Core",
@@ -114,11 +115,11 @@ export default function AiAgentiFinanziariPage() {
             <p>
               L&apos;infrastruttura è basata su <strong className="text-[#E6EDF3]">Nexus MDS Core</strong>:
               deployment on-premise, Keycloak per RBAC, n8n per workflow di approvazione,
-              Postgres per audit trail. Nessun lock-in da hyperscaler. Data residency EU
-              garantita dall&apos;architettura.
+              Postgres per audit trail. Nessun lock-in da hyperscaler. Residenza dei dati
+              in UE per scelta architetturale.
             </p>
             <div className="pt-6">
-              <CTAButton label="Parliamo del tuo progetto →" href="/contact" variant="primary" />
+              <CTAButton label="Parliamo del tuo progetto →" href="/it/contatti" variant="primary" />
             </div>
           </div>
         </section>
@@ -134,16 +135,16 @@ export default function AiAgentiFinanziariPage() {
                 <span className="text-[#7D8FA3]"> — AI Act, DORA, NIS2 sulla stessa architettura.</span>
               </li>
               <li>
-                <Link href="/answers/rag-audit-trail" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/risposte/audit-trail-rag" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   RAG con audit trail
                 </Link>
-                <span className="text-[#7D8FA3]"> — il record che rende una risposta ricostruibile (in inglese).</span>
+                <span className="text-[#7D8FA3]"> — il record che rende una risposta ricostruibile.</span>
               </li>
               <li>
-                <Link href="/research/governing-ai-outputs" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/ricerca/governare-output-ai" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Governare gli output AI in settori regolamentati
                 </Link>
-                <span className="text-[#7D8FA3]"> — il playbook tecnico (in inglese).</span>
+                <span className="text-[#7D8FA3]"> — il playbook tecnico.</span>
               </li>
               <li>
                 <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] hover:text-[#E6EDF3]">

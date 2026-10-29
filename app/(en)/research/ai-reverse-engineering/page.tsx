@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "AI Reverse Engineering of Legacy Platforms",
   description:
     "Applying RAG and multi-agent workflows to reconstruct functional and architectural knowledge from large legacy codebases. What works, what does not, and traceability requirements.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/ai-reverse-engineering" },
+  alternates: alternatesFor("/research/ai-reverse-engineering"),
 };
 
 const article = RESEARCH_ARTICLES["ai-reverse-engineering"];
@@ -192,7 +193,7 @@ export default function AiReverseEngineeringArticle() {
                 verifiable: every functional specification traced back to specific code, and the
                 development team could validate claims against the source in minutes rather than
                 days. This is now a repeatable methodology in our{" "}
-                <Link href="/modernizzazione-sistemi-legacy-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/legacy-modernisation-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   legacy modernisation practice
                 </Link>.
               </p>

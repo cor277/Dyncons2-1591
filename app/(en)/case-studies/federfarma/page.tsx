@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { NEXUS_ID, ORG_ID } from "@/app/schema-org";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -16,14 +17,7 @@ export const metadata: Metadata = {
   title: "Federfarma Lombarda — Nexus MDS Core in production",
   description:
     "Regulatory assistant for 1,000+ pharmacies across Milan, Lodi and Monza Brianza. Explicit version chains, personal data never indexed, tamper-evident audit log. Sovereign by architecture.",
-  alternates: {
-    canonical: EN_URL,
-    languages: {
-      en: EN_URL,
-      it: IT_URL,
-      "x-default": EN_URL,
-    },
-  },
+  alternates: alternatesFor("/case-studies/federfarma"),
   openGraph: {
     images: OG_IMAGE,
     title: "Federfarma Lombarda — Nexus MDS Core in production",

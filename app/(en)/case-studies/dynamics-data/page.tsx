@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Dynamics 365 F&O + Unified Data Platform",
   description:
     "ERP migration to Dynamics 365 Finance & Operations and a cloud data lakehouse for a multi-site manufacturer — 4 sites unified, 60% reporting time saved, 12-week go-live.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/dynamics-data" },
+  alternates: alternatesFor("/case-studies/dynamics-data"),
 };
 
 const tech = [

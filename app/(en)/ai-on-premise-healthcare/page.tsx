@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import Link from "next/link";
@@ -23,14 +24,7 @@ export const metadata: Metadata = {
     "on-premise LLM healthcare",
     "NIS2 healthcare AI",
   ],
-  alternates: {
-    canonical: "https://www.dynamicsconsulting.it/ai-on-premise-healthcare",
-    languages: {
-      en: "https://www.dynamicsconsulting.it/ai-on-premise-healthcare",
-      it: "https://www.dynamicsconsulting.it/it/ai-sanitaria-on-premise",
-      "x-default": "https://www.dynamicsconsulting.it/ai-on-premise-healthcare",
-    },
-  },
+  alternates: alternatesFor("/ai-on-premise-healthcare"),
   openGraph: {
     images: OG_IMAGE,
     title: "On-Premise AI for Healthcare | Dynamics Consulting",

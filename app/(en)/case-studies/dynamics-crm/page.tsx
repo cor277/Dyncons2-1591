@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Dynamics 365 CRM — Banking & Insurance",
   description:
     "Dynamics 365 CRM implementations for Banca Mediolanum, illimity, and Unipol. Compliance-aware data architecture, core banking integration, audit trails.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/dynamics-crm" },
+  alternates: alternatesFor("/case-studies/dynamics-crm"),
 };
 
 const tech = [

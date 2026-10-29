@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -14,14 +15,7 @@ export const metadata: Metadata = {
   title: "Exposure assessment — PLD 2024 and the AI Act",
   description:
     "The revised European product liability directive includes software among products and applies to products placed on the market or put into service from 9 December 2026. Three days of work to establish where your supplier’s liability stops and yours begins.",
-  alternates: {
-    canonical: EN_URL,
-    languages: {
-      en: EN_URL,
-      it: IT_URL,
-      "x-default": EN_URL,
-    },
-  },
+  alternates: alternatesFor("/assessment"),
   openGraph: {
     images: OG_IMAGE,
     title: "Exposure assessment — PLD 2024 and the AI Act",

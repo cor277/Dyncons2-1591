@@ -22,6 +22,8 @@ export type Block =
 export interface ImportedArticle {
   slug: string;
   lang: string;
+  /** On a translation: the slug of the original article it was translated from. */
+  translationOf?: string;
   title: string;
   /** The author's own standfirst, as published. Also the first body block. */
   standfirst: string;

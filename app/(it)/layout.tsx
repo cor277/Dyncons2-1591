@@ -5,6 +5,7 @@ import { schemaOrg } from "../schema-org";
 import "../globals.css";
 import { PrivacyBanner } from "@/components/ui/PrivacyBanner";
 import { ChatbotWidget } from "@/components/ChatbotWidget";
+import { LanguageSuggest } from "@/components/ui/LanguageSuggest";
 
 /**
  * Italian root layout.
@@ -59,6 +60,7 @@ export default function ItalianRootLayout({
       </head>
       <body className="font-dm bg-[#0D1117] text-[#E6EDF3] antialiased">
         {children}
+        <LanguageSuggest />
         <ChatbotWidget />
         <PrivacyBanner />
       </body>

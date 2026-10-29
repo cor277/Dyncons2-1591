@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Event Sourcing in Practice",
   description:
     "Event sourcing promises auditability and temporal querying. In practice, projection management, schema evolution, and snapshot strategy are where most implementations struggle.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/event-sourcing" },
+  alternates: alternatesFor("/research/event-sourcing"),
 };
 
 const article = RESEARCH_ARTICLES["event-sourcing"];
@@ -146,7 +147,7 @@ export default function EventSourcingArticle() {
                 maps directly to event sourcing&apos;s core guarantee: nothing is lost, nothing is
                 overwritten, and the full history is always available. Organisations that have
                 already adopted event sourcing for their core business processes have a structural
-                advantage when deploying compliant AI systems.
+                advantage when deploying AI systems that have to meet these requirements.
               </p>
             </div>
 

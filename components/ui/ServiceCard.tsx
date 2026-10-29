@@ -14,6 +14,7 @@ import {
   Compass,
 } from "lucide-react";
 import { TechBadge } from "./TechBadge";
+import { useIsItalian } from "@/lib/use-is-italian";
 
 const ICON_MAP: Record<string, React.ElementType> = {
   Brain,
@@ -46,6 +47,7 @@ export function ServiceCard({
   subdued = false,
 }: ServiceCardProps) {
   const Icon = ICON_MAP[iconName] ?? Search;
+  const isItalian = useIsItalian();
 
   return (
     <motion.div
@@ -71,10 +73,10 @@ export function ServiceCard({
       )}
       <Link
         href={ctaHref}
-        aria-label={`Learn more about ${title}`}
+        aria-label={isItalian ? `Scopri di più: ${title}` : `Learn more about ${title}`}
         className="text-[#00B4D8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200"
       >
-        Learn more →
+        {isItalian ? "Scopri di più →" : "Learn more →"}
       </Link>
     </motion.div>
   );

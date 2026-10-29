@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { OG_IMAGE } from "@/app/og";
 import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,10 +12,7 @@ export const metadata: Metadata = {
     "Modernizzazione Sistemi Legacy con AI",
   description:
     "Modernizzazione sistemi legacy con intelligenza artificiale: reverse engineering AI-driven, analisi automatizzata del codice, pipeline RAG e multi-agent per riscrittura guidata. Dynamics Consulting, specialisti in legacy modernisation per il mid-market italiano.",
-  alternates: {
-    canonical:
-      "https://www.dynamicsconsulting.it/modernizzazione-sistemi-legacy-ai",
-  },
+  alternates: alternatesFor("/modernizzazione-sistemi-legacy-ai"),
   openGraph: {
     images: OG_IMAGE,
     title:
@@ -193,7 +191,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 impiegherebbe mesi a produrre, generata in settimane con un livello di dettaglio
                 superiore. Per un approfondimento tecnico, si veda il nostro articolo di ricerca su{" "}
                 <Link
-                  href="/research/ai-reverse-engineering"
+                  href="/it/ricerca/reverse-engineering-ai"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   AI-driven reverse engineering
@@ -319,7 +317,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 la coesistenza del vecchio e del nuovo sistema durante la transizione. Il caso di
                 studio completo &egrave; disponibile nella pagina dedicata a{" "}
                 <Link
-                  href="/case-studies/iatp"
+                  href="/it/case-studies/iatp"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   IATP &mdash; reverse engineering AI-driven
@@ -329,7 +327,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 Un approccio simile, applicato al settore farmaceutico, ha guidato il progetto di
                 modernizzazione per{" "}
                 <Link
-                  href="/case-studies/federfarma"
+                  href="/it/case-studies/federfarma"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   Federfarma
@@ -372,14 +370,14 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 la garanzia che nessuna regola di business venga persa nella transizione. Questa
                 pipeline &egrave; parte integrante dei nostri servizi di{" "}
                 <Link
-                  href="/services/enterprise-integration"
+                  href="/it/servizi/integrazione-enterprise"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   enterprise integration
                 </Link>{" "}
                 e{" "}
                 <Link
-                  href="/services/applied-ai"
+                  href="/it/servizi/ai-applicata"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   applied AI
@@ -428,7 +426,7 @@ export default function ModernizzazioneSistemiLegacyAiPage() {
                 Per le organizzazioni che vogliono approfondire il nostro approccio, &egrave;
                 disponibile una{" "}
                 <Link
-                  href="/contact"
+                  href="/it/contatti"
                   className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
                 >
                   consulenza iniziale gratuita

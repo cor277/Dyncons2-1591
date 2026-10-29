@@ -22,16 +22,10 @@ interface NavLink {
 }
 
 /**
- * Two navigation trees, one per language.
- *
- * The Italian pages used to render the English menu, which meant that from an
- * Italian page every menu item led back out of Italian. They are a section of
- * the site, not a translation of it, so they get their own tree.
- *
- * Where an Italian reader's next step only exists in English — the platform
- * pages, the answers — the item is listed anyway and marked, because hiding it
- * would be worse than sending someone to a page in the wrong language they can
- * still read. Marked, not silent.
+ * Two navigation trees, one per language, with the same shape: every item in
+ * the English tree has its Italian counterpart in the Italian one (the pairs
+ * are in lib/i18n-routes.ts). The only extra Italian items are the CRA page,
+ * which exists in Italian only by decision, and the Italian index.
  */
 const EN_NAV: NavLink[] = [
   {
@@ -73,14 +67,54 @@ const EN_NAV: NavLink[] = [
         desc: "Fixed-scope engagement on PLD 2024 and the AI Act",
       },
       {
-        label: "On-premise AI for healthcare",
-        href: "/ai-on-premise-healthcare",
-        desc: "Hospitals, pharma and clinical research",
+        label: "Legacy modernisation with AI",
+        href: "/legacy-modernisation-ai",
+        desc: "AI-assisted reverse engineering and paying down technical debt",
       },
       {
         label: "Technical capabilities",
         href: "/capabilities",
         desc: "Data platforms, Kubernetes, integration, Dynamics 365, automation",
+      },
+    ],
+  },
+  {
+    label: "Sectors",
+    children: [
+      {
+        label: "On-premise AI for healthcare",
+        href: "/ai-on-premise-healthcare",
+        desc: "Hospitals, pharma and clinical research",
+      },
+      {
+        label: "AI consulting for pharma",
+        href: "/ai-consulting-pharma",
+        desc: "Pharmaceutical distribution and industry",
+      },
+      {
+        label: "Sovereign AI for pharma",
+        href: "/sovereign-ai-pharma",
+        desc: "The pharmaceutical vertical, in full",
+      },
+      {
+        label: "Sovereign AI",
+        href: "/sovereign-ai",
+        desc: "The three deployment models, and how to choose",
+      },
+      {
+        label: "AI on company data",
+        href: "/ai-on-company-data",
+        desc: "Retrieval over the documents you already have",
+      },
+      {
+        label: "AI for technical standards and engineering",
+        href: "/ai-technical-standards",
+        desc: "Standards, revisions, professional traceability",
+      },
+      {
+        label: "AI agents for finance and compliance",
+        href: "/ai-agents-finance",
+        desc: "DORA, MiFID II, traceable decisions",
       },
     ],
   },
@@ -101,7 +135,12 @@ const EN_NAV: NavLink[] = [
       {
         label: "Editorial series — PLD 2024",
         href: "/research/editorial-series",
-        desc: "Six articles on the product liability directive, in Italian",
+        desc: "Six articles on the product liability directive",
+      },
+      {
+        label: "Law 132/2025 and AI in healthcare",
+        href: "/research/law-132-2025",
+        desc: "What changes for hospitals, pharmacies and pharma companies",
       },
       {
         label: "EU Tech Sovereignty & CADA",
@@ -124,13 +163,13 @@ const IT_NAV: NavLink[] = [
       },
       {
         label: "Metodologia CEPF",
-        href: "/cepf",
-        desc: "Compliance-Epistemic Project Framework · in inglese",
+        href: "/it/cepf",
+        desc: "Compliance-Epistemic Project Framework",
       },
       {
         label: "Calibra",
-        href: "/calibra",
-        desc: "Il software costruito su CEPF · in inglese",
+        href: "/it/calibra",
+        desc: "Il software costruito su CEPF",
       },
     ],
   },
@@ -143,9 +182,9 @@ const IT_NAV: NavLink[] = [
         desc: "AI Act, GDPR, PLD 2024, NIS2, DORA, ISO 27001",
       },
       {
-        label: "Assessment di esposizione",
-        href: "/it/assessment",
-        desc: "Perimetro e prezzo fissi, deliverable firmato",
+        label: "Fractional AI CTO",
+        href: "/it/servizi/fractional-cto",
+        desc: "Leadership tecnica AI a tempo parziale",
       },
       {
         label: "Fractional CTO a Milano",
@@ -153,9 +192,19 @@ const IT_NAV: NavLink[] = [
         desc: "Leadership tecnologica per PMI e mid-market",
       },
       {
+        label: "Assessment di esposizione",
+        href: "/it/assessment",
+        desc: "Perimetro e prezzo fissi, deliverable firmato",
+      },
+      {
         label: "Modernizzazione legacy con AI",
         href: "/modernizzazione-sistemi-legacy-ai",
         desc: "Reverse engineering assistito e rientro del debito tecnico",
+      },
+      {
+        label: "Competenze tecniche",
+        href: "/it/competenze",
+        desc: "Data platform, Kubernetes, integrazione, Dynamics 365, automazione",
       },
     ],
   },
@@ -199,28 +248,24 @@ const IT_NAV: NavLink[] = [
       },
     ],
   },
-  {
-    label: "Casi studio",
-    children: [
-      {
-        label: "Federfarma Lombarda",
-        href: "/it/case-studies/federfarma",
-        desc: "Nexus MDS Core in produzione, oltre 1.000 farmacie",
-      },
-      {
-        label: "Tutti i casi studio",
-        href: "/case-studies",
-        desc: "L'elenco completo · in inglese",
-      },
-    ],
-  },
+  { label: "Case study", href: "/it/case-studies" },
   {
     label: "Ricerca",
     children: [
       {
-        label: "Serie PLD 2024",
-        href: "/research/editorial-series",
-        desc: "Sei articoli sulla direttiva, in italiano",
+        label: "Ricerca e analisi",
+        href: "/it/ricerca",
+        desc: "Approfondimenti tecnici e normativi, per esteso",
+      },
+      {
+        label: "Risposte dirette",
+        href: "/it/risposte",
+        desc: "Una domanda per pagina, con la risposta nel primo blocco",
+      },
+      {
+        label: "Serie editoriale — PLD 2024",
+        href: "/it/ricerca/serie-editoriale",
+        desc: "Sei articoli sulla direttiva sulla responsabilità da prodotto",
       },
       {
         label: "Legge 132/2025 e AI in sanità",
@@ -233,24 +278,20 @@ const IT_NAV: NavLink[] = [
         desc: "Articolo 14 del Reg. (UE) 2024/2847",
       },
       {
-        label: "Ricerca e analisi",
-        href: "/research",
-        desc: "L'archivio completo · in gran parte in inglese",
-      },
-      {
-        label: "Risposte dirette",
-        href: "/answers",
-        desc: "Una domanda per pagina · in inglese",
+        label: "Sovranità tecnologica UE e CADA",
+        href: "/it/sovranita-tecnologica",
+        desc: "I quattro livelli di garanzia dell’Unione, analizzati",
       },
     ],
   },
-  { label: "Chi siamo", href: "/about" },
+  { label: "Chi siamo", href: "/it/chi-siamo" },
   { label: "Tutto in italiano", href: "/it" },
 ];
 
 export function NavBar() {
   const pathname = usePathname();
-  const navLinks = isItalianPath(pathname) ? IT_NAV : EN_NAV;
+  const isItalian = isItalianPath(pathname);
+  const navLinks = isItalian ? IT_NAV : EN_NAV;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -274,11 +315,11 @@ export function NavBar() {
       <nav className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href={isItalian ? "/it" : "/"} className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded overflow-hidden flex-shrink-0">
               <Image
                 src="/logo.jpg"
-                alt="Dynamics Consulting logo"
+                alt={isItalian ? "Logo Dynamics Consulting" : "Dynamics Consulting logo"}
                 width={36}
                 height={36}
                 className="object-contain"
@@ -380,7 +421,7 @@ export function NavBar() {
             <button
               className="text-[#7D8FA3] hover:text-[#E6EDF3]"
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
+              aria-label={isItalian ? "Apri o chiudi il menu" : "Toggle menu"}
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

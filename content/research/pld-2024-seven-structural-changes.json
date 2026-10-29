@@ -1,0 +1,346 @@
+{
+  "slug": "pld-2024-seven-structural-changes",
+  "lang": "en",
+  "translationOf": "pld-2024-sette-cambi-strutturali",
+  "title": "PLD 2024: the seven structural changes that redefine the software house business",
+  "standfirst": "The first article in the series. In the articles that follow we will analyse the five software development scenarios and the exposure each carries, the mechanism of joint and several liability, vulnerability management, international configurations, essential contract clauses, operational transformations, and the stratification of senior Solution Architects' market value after the PLD.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-04-28T07:34:42.000+00:00",
+  "dateModified": "2026-04-28T07:35:09.000+00:00",
+  "series": "Article I · The seven structural shifts",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/pld-2024-i-sette-cambi-strutturali-che-ridefiniscono-il-patierno-avhrf"
+  },
+  "importedAt": "2026-09-09",
+  "words": 3305,
+  "blocks": [
+    {
+      "type": "p",
+      "text": "The first article in the series. In the articles that follow we will analyse the five software development scenarios and the exposure each carries, the mechanism of joint and several liability, vulnerability management, international configurations, essential contract clauses, operational transformations, and the stratification of senior Solution Architects' market value after the PLD."
+    },
+    {
+      "type": "p",
+      "text": "Yesterday I published a blunt post: small Italian software houses, one-person development businesses, outfits relying on uncontrolled offshore teams, start-ups built on “vibe coding” are already dead. They just don't know it yet."
+    },
+    {
+      "type": "p",
+      "text": "It was a provocative statement, but one backed by precise technical analysis. This article opens the series that will set out the full argument. We start with the seven structural changes introduced by EU Directive 2024/2853, because they are the foundation for everything that follows."
+    },
+    {
+      "type": "p",
+      "text": "Every later article in the series will rest on these seven changes. Understanding them is the starting point for reading the rest."
+    },
+    {
+      "type": "p",
+      "text": "This is not theory. It is analysis I am applying in real projects for regulated clients in healthcare and pharma, and it is changing the way I contract my own professional engagements."
+    },
+    {
+      "type": "quote",
+      "text": "Epistemic note: this is a reconstruction of the directive's text applied to the operating models typical of software houses. It is not legal advice. Concrete applications require specialist counsel."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The essential legal framework"
+    },
+    {
+      "type": "p",
+      "text": "EU Directive 2024/2853 (the Product Liability Directive, PLD 2024) was published in the Official Journal of the EU on 18 November 2024. It replaces Directive 85/374/EEC, which governed the field for forty years."
+    },
+    {
+      "type": "p",
+      "text": "Three dates matter. Entry into force for the Member States: 8 December 2024. Deadline for transposition into national law: 9 December 2026. Application: to products placed on the market or put into service after that date."
+    },
+    {
+      "type": "p",
+      "text": "Italian transposition is eight months away."
+    },
+    {
+      "type": "p",
+      "text": "The directive is a maximum-harmonisation instrument (Art. 3): Member States may neither fall below nor go beyond the protections it sets. The substantive level of liability will be uniform across the European Union. For Cypriot, French, Dutch, German and Italian software houses alike, the regime will be essentially equivalent."
+    },
+    {
+      "type": "p",
+      "text": "Six articles and three recitals of the directive are particularly decisive for software, and I will refer to them specifically across the seven structural changes. Article 4 (definition of product), Article 8 (component manufacturers), Article 11 (safety obligations over the product's lifetime), Article 12 (joint and several liability), Article 14 (recourse along the value chain), Article 15 (no derogation towards the injured party), Article 17 (limitation periods). Recital 13 (explicit inclusion of software and AI systems), Recitals 50 and 52 (post-market obligations)."
+    },
+    {
+      "type": "p",
+      "text": "Let's look in detail at what changes."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The seven structural changes"
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Change 1 — A product is a product, even when it is custom"
+    },
+    {
+      "type": "p",
+      "text": "Article 4 of the directive defines a product as explicitly including software in all its forms: apps, operating systems, AI systems, firmware, embedded software. Recital 13 makes clear that the software developer, including the provider of AI systems within the meaning of EU Regulation 2024/1689 (the AI Act), is treated as a manufacturer for the purposes of the directive."
+    },
+    {
+      "type": "p",
+      "text": "There is no longer any ambiguity about applicability. Software is a product. The directive does not distinguish between off-the-shelf and custom software. An app built for a specific client is a product placed on the market when it is put into service, exactly like a standard commercial product."
+    },
+    {
+      "type": "p",
+      "text": "This changes how traditional software houses see themselves. Many think of themselves as providers of development services, not as manufacturers of products. Their mental model is the contract for work: you do the job, you hand over the result, you close the project. The PLD overturns that view: every release of a custom software system to a client is the placing of a product on the market, subject to the product liability regime."
+    },
+    {
+      "type": "quote",
+      "text": "Small software houses that only build custom projects for specific clients fall fully within the regime too. So does software generated with LLM assistance. So does the “project” that is never sold as a commercial product but that the client will use in operation. So do client-specific customisations of base products."
+    },
+    {
+      "type": "p",
+      "text": "The first mental shift every software house has to make is easy to state and hard to accept. You are not selling development services. You are placing products on the market."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Change 2 — Ten-year liability towards third parties cannot be limited by contract"
+    },
+    {
+      "type": "p",
+      "text": "Article 15 provides that the manufacturer's liability towards an injured third party cannot be limited or excluded by contract. Article 17 provides that liability lasts ten years from placing on the market, extendable to twenty-five for latent personal injury."
+    },
+    {
+      "type": "p",
+      "text": "This is the most disruptive change compared with the previous model. Software houses' established practice was to protect themselves through contract clauses with the client — liability caps, exclusion of indirect damage, “total disclaimer of liability” — on the assumption that these clauses covered every scenario."
+    },
+    {
+      "type": "p",
+      "text": "Towards the client, the clauses keep working within the limits of the Italian Civil Code, in particular Art. 1341 c.c. on onerous clauses requiring a second signature. They govern the contractual relationship between the parties and may allow internal recourse."
+    },
+    {
+      "type": "p",
+      "text": "Towards an injured third party harmed by the product, they cannot be relied on. Full stop. The “total disclaimer of liability” clauses that circulate in Italian contracts become worthless paper when an end user, a patient or a data subject is harmed by the software."
+    },
+    {
+      "type": "p",
+      "text": "A few examples:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "A worker whose performance is assessed by automated systems without the union agreement required by Art. 4 of the Workers' Statute, and who suffers adverse HR decisions as a result.",
+        "A customer of a company whose data is indirectly exfiltrated through a data breach at the software house's client.",
+        "An end user who suffers physical harm through the use of an LLM (for example, an AI system in healthcare not properly governed as the AI Act requires).",
+        "Management decisions driven by an LLM or by incorrect, non-compliant reporting, which affect employees.",
+        "Prolonged system outages caused by a lack of technical diligence, with operational damage to the client or to end users.",
+        "An end customer who suffers economic or discriminatory harm because of the software deployed."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "For regulated clients this is especially relevant: their end users (patients of a health system, customers of a bank, policyholders of an insurer, citizens dealing with a public administration) are exactly the third parties the PLD protects. A software house selling to a regulated client must know that its risk does not end with the client contract — it extends to the millions of end users who will use the product."
+    },
+    {
+      "type": "p",
+      "text": "The notion of technical diligence extends to compliance diligence as a whole and, since the injured party's claim cannot be defeated by clauses agreed with the client, a further diligence with a legal dimension comes into play, which some authors are starting to call the “manufacturer's ethical diligence”. If a software house builds for multinational client X a piece of software that uses data to “decide”, or to steer management's decisions about employees, without any union agreement in place, and has carried out no due diligence on the client to identify the gaps, knowingly delivering “unlawful” software, it can be held liable. “The client asked for it” no longer works."
+    },
+    {
+      "type": "p",
+      "text": "Ten years of exposure towards an undefined audience, which no contract can limit. For many software houses this is a reality that changes the economics of every engagement."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Change 3 — The commercial warranty does not close PLD liability"
+    },
+    {
+      "type": "p",
+      "text": "The commercial warranty (six to twelve months) is a contractual instrument between software house and client. PLD liability lasts ten years from placing on the market."
+    },
+    {
+      "type": "p",
+      "text": "These are two parallel regimes that coexist without overlapping. The commercial warranty is a service: if bugs in the delivered product emerge in the first N months, the software house fixes them free of charge. It is governed by the contract, limited in time, and covers the bilateral relationship between software house and client."
+    },
+    {
+      "type": "p",
+      "text": "PLD liability is a statutory regime: the law provides that the manufacturer is liable for ten years for defects in a product placed on the market. It is not a service the manufacturer offers; it is a legal obligation that applies regardless of what the parties want. It applies towards the injured party (third party or client), covers defects that emerge within ten years, and cannot be excluded by contract."
+    },
+    {
+      "type": "p",
+      "text": "The two regimes coexist. During the commercial warranty, the client is entitled to free bug fixes as a commercial service. Throughout the ten years of PLD liability, anyone who is harmed is entitled to compensation under the directive. They are two separate planes."
+    },
+    {
+      "type": "quote",
+      "text": "Even after the warranty ends, the software house remains liable for product defects for ten years. A product delivered in 2027 generates potential liability until 2037. Software houses must plan their operations on that time horizon, which is radically different from the old logic of “six months' warranty and then it's the client's problem”."
+    },
+    {
+      "type": "p",
+      "text": "The distinction is easy to state: the warranty is a commercial commitment the software house offers. PLD liability is a legal regime the software house is subject to. Confusing the two is a common but costly mistake."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Change 4 — Maintenance is not optional where security is concerned"
+    },
+    {
+      "type": "p",
+      "text": "Recitals 50 and 52, supported by Article 11, provide that the manufacturer remains liable after placing on the market if it retains the ability to supply updates. This is reinforced by the Cyber Resilience Act (EU Regulation 2024/2847), which complements the PLD."
+    },
+    {
+      "type": "p",
+      "text": "For significant security defects (critical CVEs, exploitable vulnerabilities), the manufacturer is obliged to notify the risk to the client running the deployed product, to make the patch available (for a fee, if there is no active AM contract), and to retain the technical capability to intervene throughout the product's lifetime."
+    },
+    {
+      "type": "p",
+      "text": "Maintenance is no longer “an optional service the client buys if it wants to”. Security becomes the manufacturer's obligation for the product's whole lifetime. The client can choose whether to apply the patches (and at that point takes on the operational risk of not applying them), but the software house is obliged to make them available."
+    },
+    {
+      "type": "p",
+      "text": "In operational terms, software houses will need to set up a post-market surveillance system that monitors the CVEs applicable to the products deployed at each client, issues timely notifications, and handles vulnerabilities with SLAs proportionate to criticality. That requires technical and process infrastructure that many software houses do not have today."
+    },
+    {
+      "type": "quote",
+      "text": "The commercial model changes accordingly. Security maintenance becomes all but mandatory at a structural level, while evolutionary maintenance remains optional. Software houses need to restructure AM into tiers (security only, standard with bug fixes, premium with enhancements), offer them to the client systematically, and have the client explicitly sign off on its choice. We will cover the contractual reshaping of AM in a dedicated article in the series."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Change 5 — Customisations as “new placings on the market”"
+    },
+    {
+      "type": "p",
+      "text": "Article 8(2) defines as a “substantial modification” an update that significantly changes the product, in which case it counts as a “new placing on the market”."
+    },
+    {
+      "type": "p",
+      "text": "For software this includes significant architectural upgrades (a change of architectural pattern, restructuring of core components), the addition of major new features that change the functional scope, changes to core components (a new authentication engine, a different LLM in a RAG system, replacement of a critical framework), and verticalisations that significantly alter the base product."
+    },
+    {
+      "type": "p",
+      "text": "Software houses often run a base product that is customised for different clients. Each client has its own version, with specific configuration, custom integrations, and possibly additional modules built ad hoc. Before the PLD, these customisations were treated as variations of the same product. After the PLD, each substantial customisation may be a “new placing on the market” with its own liability timeline."
+    },
+    {
+      "type": "quote",
+      "text": "The line between a “minor modification” (incremental updates, bug fixes, configuration) and a “substantial modification” (changes to security, core functionality or architecture) will be settled by case law. Until it is clear, the prudent practice is to classify every release as potentially substantial and to manage the supporting evidence accordingly."
+    },
+    {
+      "type": "p",
+      "text": "For every substantial modification, the ten years of PLD liability start again for the modified version. A software house that customises and evolves its product for different clients creates N distinct versions, each with its own timeline. It needs asset management tools for deployed products, with traceability of versions and life cycles per client."
+    },
+    {
+      "type": "p",
+      "text": "For many Italian software houses this is a significant change in their operational data model. “We sell the same product to 50 clients” becomes “we have 50 distinct products, each with its own liability timeline”."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Change 6 — The individual liability of technical contributors"
+    },
+    {
+      "type": "p",
+      "text": "Article 8 of the directive defines the “manufacturer of a component” as liable separately from the manufacturer of the final product. For software, this translates into the identification of individual technical responsibilities."
+    },
+    {
+      "type": "quote",
+      "text": "The senior architect who signs off the product's architecture is the manufacturer of an architectural component. The tech lead who signs off security choices is the manufacturer of a security component. External consultants who produce identifiable modules are component manufacturers. The developers who wrote specific parts of the code can be identified as manufacturers of the components they built."
+    },
+    {
+      "type": "p",
+      "text": "This profoundly changes the dynamics of liability. Before the PLD, liability was organisational: the employer answered for its employees (Art. 2049 of the Italian Civil Code), the software house answered for the product. After PLD 2024, liability is distributed: the software house remains liable as manufacturer, but individual technical contributors can be identified separately as component manufacturers."
+    },
+    {
+      "type": "p",
+      "text": "The employee's case is less problematic, because Art. 2049 c.c. still makes the employer liable for its employees. An employee who makes a mistake in the ordinary course is covered by the company, except for wilful misconduct or gross negligence. The freelancer, the external architect, the consultant are far more exposed: there is no employer to shield them, and the professional answers personally as a component manufacturer."
+    },
+    {
+      "type": "quote",
+      "text": "A senior architect who signs off an architectural decision answers for it personally for ten years. The liability does not end when the consulting contract ends, cannot be limited by clauses towards third parties, and does not pass automatically to the commissioning company."
+    },
+    {
+      "type": "p",
+      "text": "Organisations that want to attract senior architects after 2026 will need to put binding technical-autonomy protocols in place: an effective right of veto over security and compliance decisions, recorded dissent without retaliation, escalation to an internal CTO/CISO for significant technical disagreements. It is the model that has worked for decades for structural engineers, doctors and DPOs, and it is now reaching software. We will cover what this change means for technical professionals, the contract clauses it requires, and post-PLD market value in the coming articles of the series."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Change 7 — The value chain requires formal traceability"
+    },
+    {
+      "type": "p",
+      "text": "Article 14 governs recourse along the value chain: the manufacturer of the final product can seek recourse against the manufacturer of the defective component, but only if it has formal traceability of who produced what."
+    },
+    {
+      "type": "p",
+      "text": "Without formal traceability, recourse fails. If the product causes harm, the manufacturer pays and cannot recover from the component manufacturers, because it has no evidence of who produced what. The loss stays with the manufacturer."
+    },
+    {
+      "type": "p",
+      "text": "The software house must keep a register of external suppliers with full traceability. Open source components with versions, sources, licences, advisory feeds, release frequency, presence of a security policy, community size, and any commercial sponsor. Third-party cloud services with provider, region used, the provider's sub-processors (the whole chain, including your provider's sub-processors, which can change over time), DPAs in place, security certifications. Third-party proprietary components with vendor, licence, support SLA, availability of security patches, EOL policy. Any external consultants or developers, with identification, period of engagement, scope of responsibility, insurance cover, signed ADRs."
+    },
+    {
+      "type": "quote",
+      "text": "This is a compliance supplier register, distinct from the commercial supplier register that many software houses already keep in their management system. The first is mandatory after the PLD in order to manage recourse; the second is an administrative tool that many SHs already have."
+    },
+    {
+      "type": "p",
+      "text": "The operational challenge is significant. For most Italian software houses, building a solid compliance supplier register takes 60–90 days of structured work, plus ongoing maintenance. Without it, every potential recourse claim is compromised from the outset."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The overall picture: what it means over the next 18 months"
+    },
+    {
+      "type": "p",
+      "text": "Seven structural changes, applied simultaneously to the operating model of Italian software houses, produce system-wide effects."
+    },
+    {
+      "type": "quote",
+      "text": "Traditional software houses have to rethink how they place products on the market (Change 1), how they manage liability towards third parties (Change 2), how they distinguish the commercial warranty from PLD liability (Change 3), how they structure mandatory security maintenance (Change 4), how they track customisations as new versions (Change 5), how they manage the individual liability of technical contributors (Change 6), and how they document the supply chain for recourse (Change 7)."
+    },
+    {
+      "type": "p",
+      "text": "These are deep changes, not marginal adjustments. They require investment in internal governance, supporting evidence, insurance cover and contract structuring. They often require specialist legal advice, tech-aware insurance brokers, and possibly structured technical governance roles (internal or fractional Chief Architects)."
+    },
+    {
+      "type": "p",
+      "text": "The cost of these investments is significant. For a mid-tier Italian software house I estimate, as a rough guide, €50–150k one-off for the initial adjustment, plus €30–80k a year in additional recurring costs (governance, documentation, insurance policies, monitoring). They are recovered in the prices charged to clients, but they require a managed transition."
+    },
+    {
+      "type": "quote",
+      "text": "For technical professionals (architects, tech leads, freelancers), the investments are different but just as structural: a professional indemnity policy with adequate limits and run-off cover, specific contract clauses, a documented professional dossier, and possibly specialisation in high-value niches."
+    },
+    {
+      "type": "p",
+      "text": "The windows are narrow. Transposition is eight months away. Software houses that start adjusting in the next three months will reach 9 December 2026 with a structured organisation. Those that start in September 2026 will be in a rushed transition. Those that start after transposition will be in reactive mode."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What comes next in the series"
+    },
+    {
+      "type": "p",
+      "text": "This is the first article in the series. In the coming articles we will go into the operational detail of each of the seven structural changes and their practical consequences."
+    },
+    {
+      "type": "p",
+      "text": "The next article will analyse the five software development scenarios that Italian software houses commonly use — from systems built on commercial products with delegated customisation through to open source forks with custom plugins — and show where each sits in the PLD exposure regime. For senior architects, it is the decision framework for judging which engagements to accept, and at what rate, after the PLD."
+    },
+    {
+      "type": "p",
+      "text": "In later articles we will cover the mechanism of joint and several liability (Art. 12), with a focus on the scenario of the software house going bankrupt; vulnerability management and CVE handling after the PLD; international configurations (EU client + non-EU software house + EU architect) and why “jurisdictional escapes” through non-EU companies do not work; essential contract clauses (twenty clauses organised by type of relationship); the eight operational transformations software houses need; and the stratification of senior Solution Architects' market value after the PLD."
+    },
+    {
+      "type": "p",
+      "text": "If you would like to receive the articles, you can follow me here. If you are dealing with specific problems of adapting to the PLD regime in your own organisation, you can contact me privately to go into your particular case."
+    },
+    {
+      "type": "p",
+      "text": "One last thought. The PLD 2024 regime is not an obstacle to remove or a constraint to work around. It is a regulatory evolution that brings software to the level of maturity other industrial sectors reached decades ago. For software houses and technical professionals who approach it with adequate structure, it is an opportunity for competitive consolidation. For those who ignore it, it is a transition that will turn into market selection over the next 18–24 months."
+    },
+    {
+      "type": "p",
+      "text": "Eight months to transposition. The time to prepare is limited, and it shrinks every week."
+    }
+  ]
+}

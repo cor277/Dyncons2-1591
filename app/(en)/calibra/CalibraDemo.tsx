@@ -1,6 +1,14 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import { usePathname } from 'next/navigation'
+import { isItalianPath } from '@/lib/i18n-routes'
+
+/* Shown on /calibra and /it/calibra; the demo itself is in Italian. */
+function LoadingLabel() {
+  const it = isItalianPath(usePathname())
+  return <span>{it ? 'Caricamento della demo di Calibra…' : 'Loading the Calibra demo…'}</span>
+}
 
 /**
  * The demo is client-only (heavy interactive state, no server data).
@@ -39,7 +47,7 @@ const ComplianceUI = dynamic(() => import('./ComplianceUI'), {
         }}
       />
       <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
-      <span>Loading the Calibra demo…</span>
+      <LoadingLabel />
     </div>
   ),
 })

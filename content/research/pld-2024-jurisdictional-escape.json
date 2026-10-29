@@ -1,0 +1,255 @@
+{
+  "slug": "pld-2024-jurisdictional-escape",
+  "lang": "en",
+  "translationOf": "pld-2024-fuga-giurisdizionale",
+  "title": "The jurisdictional escape, and why it does not exist",
+  "standfirst": "The jurisdictional escape, and why it does not exist. EU client, non-EU software house, EU architect: how three European regulations make it structurally impossible to offshore PLD risk.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-05-27T09:47:42.000+00:00",
+  "dateModified": "2026-05-27T09:48:13.000+00:00",
+  "series": "Article V · International configurations",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/la-fuga-giurisdizionale-e-perch%C3%A9-non-esiste-corrado-patierno-vmlnf"
+  },
+  "importedAt": "2026-09-09",
+  "words": 3045,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The jurisdictional escape, and why it does not exist. EU client, non-EU software house, EU architect: how three European regulations make it structurally impossible to offshore PLD risk."
+    },
+    {
+      "type": "p",
+      "text": "Fifth article in the series on the PLD 2024 and Italian software houses."
+    },
+    {
+      "type": "p",
+      "text": "Epistemic note: a reconstruction of the text of the directive and the regulations, applied to typical operating models. It is not legal advice."
+    },
+    {
+      "type": "p",
+      "text": "The idea comes up in meetings of Italian GMs with by now predictable regularity. \"I'll open an LTD in the UK.\" \"A company in Delaware.\" \"A structure in Cyprus that invoices the Italian clients.\" \"I'll move all the PLD risk onto the foreign entity, and the Italian one just does management.\""
+    },
+    {
+      "type": "p",
+      "text": "It is an idea that has been going round since the PLD 2024 entered public discussion. It is also a structurally wrong idea, and this article explains why."
+    },
+    {
+      "type": "p",
+      "text": "The premise needs to be stated plainly: for the defective-product liability regime towards injured persons in the EU, jurisdiction and governing law are not a matter of choice. They are determined by three European regulations that work in convergence — Brussels I bis, Rome II, and the PLD 2024 itself. The seat of the selling entity, the country where the software house is registered, the interposed corporate structure are variables the system treats as secondary, after it has determined forum and law on the basis of other coordinates. Coordinates the GM does not control, and which the European judge applies regardless of the corporate design."
+    },
+    {
+      "type": "p",
+      "text": "Understanding this point changes how you approach the PLD regime. You do not leave the jurisdiction: you enter a liability structure whose real geometry you need to know."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Three regulations that decide before the corporate design does"
+    },
+    {
+      "type": "p",
+      "text": "The first is Regulation (EU) 1215/2012, known as Brussels I bis. It governs jurisdiction in civil and commercial matters in the European Union. The general principle is that the defendant must be sued in the country where it is domiciled, but there are special forums that derogate from this principle. Two are relevant to the PLD."
+    },
+    {
+      "type": "p",
+      "text": "The first special forum is the consumer's: an EU consumer who suffers damage can sue the counterparty before the court of their own domicile, regardless of where the counterparty is registered. This is not a negotiable option: it is a mandatory regime for consumer contracts. A contractual forum clause that derogates from it is void."
+    },
+    {
+      "type": "p",
+      "text": "The second special forum is that of the harmful event: in matters of non-contractual liability, the injured person can choose the forum of the place where the damage occurred or the place of the event that gave rise to it. For product liability, this means the court of the injured person's country has jurisdiction, and this jurisdiction is not excluded by the fact that the manufacturer is elsewhere."
+    },
+    {
+      "type": "p",
+      "text": "Applied to the Italian GM: if he opens an LTD in the UK and sells software to Italian clients who deploy it on systems that harm Italian consumers, the Italian court has jurisdiction. The fact that the LTD is English changes nothing. The forum follows the injured person."
+    },
+    {
+      "type": "p",
+      "text": "The second is Regulation (EC) 864/2007, known as Rome II. It governs the law applicable to non-contractual obligations. Article 5 contains a specific regime for defective-product liability. The rule is a cascade of criteria that generally leads to applying the law of the country where the injured person is habitually resident, if the product was marketed in that country. Failing that, the law of the country where the product was acquired, or of the country where the damage occurred."
+    },
+    {
+      "type": "p",
+      "text": "In other words: even if the forum were English (it is not, but suppose it were), the governing law would remain Italian. The judge would apply the PLD as transposed in Italy. The legal structure of the English LTD would become irrelevant: it is not English law that decides whether the product is defective, it is Italian law."
+    },
+    {
+      "type": "p",
+      "text": "The third reference is the PLD 2024 itself — Directive (EU) 2024/2853. Article 8 governs the liable economic operators. Paragraph (2) provides that if the manufacturer is established outside the European Union, liability is borne by the manufacturer's authorised representative in the EU, or by the EU importer. There is no space in which the product is \"non-EU\": if it enters the EU market, someone in the EU answers for it, and that someone is determined by the regulatory system, not by the will of the parties."
+    },
+    {
+      "type": "p",
+      "text": "Article 4(10)(b) extends the definition of manufacturer further: anyone who presents the product to the market by putting their own name or trademark on it is considered a manufacturer, even if they did not physically produce it. This is the \"rebrander\" clause that closes the space for formal interposition structures."
+    },
+    {
+      "type": "p",
+      "text": "The three regulations work together. Brussels I bis decides the forum. Rome II decides the law. The PLD 2024 decides who is liable. All three apply automatically, on objective criteria the GM does not control. Designing a corporate structure that ignores this convergence does not move the risk: it concentrates it at different points in the chain, sometimes in a worse way than without interposition."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 1 — EU client, non-EU software house, EU architect"
+    },
+    {
+      "type": "p",
+      "text": "The scenario is common in the Italian market. An Italian software house has an enterprise client operating at European scale. To optimise development costs, it outsources part of the software production to a non-EU company — typically in India, Pakistan, Ukraine, Belarus, the Balkans. The project is designed by an EU architect (Italian, or from another European country), who signs the technical specifications and supervises the integration. The final product is sold to the EU client, which uses it in its own systems serving EU end users."
+    },
+    {
+      "type": "p",
+      "text": "At first sight, the structure looks optimal: the higher costs (the EU architect) limited to a fraction of the project, bulk development costs offshored. The GM thinks the \"technical\" responsibility is shared: the non-EU software house develops, the EU architect designs, the EU client integrates."
+    },
+    {
+      "type": "p",
+      "text": "Under the PLD 2024 the structure behaves differently."
+    },
+    {
+      "type": "p",
+      "text": "Once the product has been integrated and placed on the EU market by the client, the client itself may qualify as importer or distributor under the PLD if it puts its brand on it or if it is the first EU party in the chain of placing on the market. The client becomes, despite itself, a point of direct liability towards the injured person. If the defect derives from a component developed by the non-EU software house, the EU client answers first, and can then seek contractual recourse against the non-EU software house — with all the difficulties cross-border recourse involves: enforcing judgments in countries not party to Brussels I bis, asymmetries in insurance cover, multiple litigation costs, timescales measured in years."
+    },
+    {
+      "type": "p",
+      "text": "The EU architect, for their part, remains under the jurisdiction of their country of residence for their own duty-of-care position. If they signed the technical design, they qualify as a component of the manufacturing chain under the PLD, and in the event of an offence (negligent injury, negligent homicide from a defective product) they are subject to Italian criminal jurisdiction under Art. 27 of the Constitution, regardless of where they invoice."
+    },
+    {
+      "type": "p",
+      "text": "The net result: \"offshoring\" the supplier does not move the EU risk. It concentrates it on the EU client and the EU architect, while the non-EU software house is hard to reach contractually from the EU. It is an asymmetry that justifies, on the EU architect's side, a premium rate that many professionals in the segment have not yet priced in. Whoever signs the technical design in a multi-jurisdictional chain with a non-EU link carries exposure that the non-EU supplier does not. The rate must reflect this asymmetry, or you are working under-priced relative to the real risk."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 2 — The jurisdictional escape that does not work"
+    },
+    {
+      "type": "p",
+      "text": "This is the scenario most often requested in meetings with corporate advisers in 2025-2026. The Italian GM sets up a foreign corporate structure — an LTD in the UK, an LLC in Delaware, an FZE in the Emirates, a company in Cyprus — and formally moves the invoicing of Italian clients there. The idea is that PLD litigation will follow the company's seat, and that the Italian individual is protected by the foreign corporate veil."
+    },
+    {
+      "type": "p",
+      "text": "Three independent mechanisms bring liability back to Italy."
+    },
+    {
+      "type": "p",
+      "text": "The first is the EU importer as de facto manufacturer. If the UK LTD sells to Italian clients, someone has to physically place the product on the EU market. That someone — whether it is the client acquiring it, an EU party acting as intermediary, or an EU individual operating on behalf of the LTD — becomes a manufacturer under Art. 8(2) PLD. The Italian GM who is director of the UK LTD and is at the same time present in some way on the Italian market (even just as commercial contact, salesperson, or consultant working in Italy) finds themselves exposed as an EU economic operator for the same product. There is no effective separation between the LTD and the individual who represents it on Italian territory: the Italian judge recognises this."
+    },
+    {
+      "type": "p",
+      "text": "The second is piercing the corporate veil in the Italian jurisdiction. Faced with a foreign corporate structure that appears built to circumvent mandatory rules — and the PLD is a mandatory rule for the protection of the injured person — the Italian judge applies the principle of substance over form. It is settled case law in tax, anti-money-laundering and civil liability matters. The formal structure is \"cut through\" and the individual who controls it is called to answer directly. It is not an automatic outcome, but it is a frequent one when the judge considers that the structure has no autonomous economic substance — the classic case of an LTD with an Italian director, no real employees in the country of registration, no operating office, set up shortly before contracting with an Italian client."
+    },
+    {
+      "type": "p",
+      "text": "The third, and most definitive, is the personal nature of criminal liability. Art. 27 of the Italian Constitution establishes that criminal liability is personal. In the event of an offence connected with the product defect — negligent injury, negligent homicide, criminal offences relating to the processing of personal data, offences relating to workplace safety — Italian criminal jurisdiction prosecutes the individual who committed the act, regardless of the interposed corporate structure. A UK LTD does not protect an Italian citizen from criminal proceedings in Italy. The corporate veil does not exist in criminal law."
+    },
+    {
+      "type": "p",
+      "text": "Adding up the three mechanisms: the jurisdictional escape via a foreign company is effective, perhaps, for ordinary commercial risk, where piercing the veil is not easy. It is structurally ineffective for product liability towards EU injured persons, and completely ineffective for criminal liability."
+    },
+    {
+      "type": "p",
+      "text": "There is an additional cost that is often ignored. The foreign structure requires: documented economic substance in the country of registration (so as not to be classed as a sham foreign residence for tax purposes), local administration, multiple compliance costs, duplicate insurance policies in both jurisdictions, and litigation that can be triggered in parallel. The net annual cost of such a structure is often higher than that of an Italian tier 1 policy that adequately covers PLD + cyber + AI liability. You pay more to be less protected."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 3 — The multi-jurisdictional chain"
+    },
+    {
+      "type": "p",
+      "text": "The most complex scenario, and the most common in enterprise projects: a chain with four or more jurisdictions contributing to the same product. A cloud provider in the United States for infrastructure hosting. Offshore development in India for the backend modules. An EU architect (Italian, French, German) for design and integration. An EU client that acquires, integrates further, and deploys to EU end users."
+    },
+    {
+      "type": "p",
+      "text": "In this scenario the PLD 2024 is distributed along the chain asymmetrically. Each link carries its own exposure, and the asymmetry is governed by who physically places the product on the EU market."
+    },
+    {
+      "type": "p",
+      "text": "The US cloud provider is not, as a rule, the manufacturer of the software placed on the market. It is an infrastructure supplier. But if the product defect derives from a failure of the cloud infrastructure that the manufacturer could not reasonably foresee or mitigate, a possible avenue of contractual recourse opens for the manufacturer against the cloud provider, governed by the cloud contract (typically US or Californian law) and the liability limits it contains. The EU manufacturer pays the injured person first, then attempts recourse: the amounts it manages to recover are often a minimal fraction of the total damage, and the timescales are measured in years."
+    },
+    {
+      "type": "p",
+      "text": "The offshore developer in India is a component manufacturer under Art. 8 PLD if it developed specific components of the product. But taking legal action against it from the EU is practically impossible: India is not party to Brussels I bis, enforcing Italian judgments in India requires slow and expensive recognition procedures, and the final result is almost always symbolic. Contractually, an indemnification can be provided for, but its effectiveness depends on the Indian supplier's financial strength and on the insurance cover it has (or does not have) — information the commissioning software house rarely checks when contracting."
+    },
+    {
+      "type": "p",
+      "text": "The EU architect is the figure the PLD system reaches most directly and immediately. They are resident in the EU, subject to EU jurisdiction, have signed the technical design, and can be classed as a component of the manufacturing chain. Recourse against them is effective, quick, and complete."
+    },
+    {
+      "type": "p",
+      "text": "The EU client that integrates and deploys is importer, distributor or manufacturer depending on how it has positioned itself contractually in the chain. Its exposure depends on the contract, but it is structurally high because it is the point where the final product is placed on the market."
+    },
+    {
+      "type": "p",
+      "text": "The net outcome of the chain: in the event of damage, the EU injured person acts against the EU client and the EU architect. Both are fully exposed, and must then try to recover contractually from the non-EU upstream links. Recovery is statistically partial, slow, and expensive."
+    },
+    {
+      "type": "p",
+      "text": "The model that works — not to eliminate the risk, but to allocate it realistically — is not offshoring. It is contractual and insurance allocation consistent with the chain's real geography."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What would really be needed — allocation, not escape"
+    },
+    {
+      "type": "p",
+      "text": "The GM who wants to manage PLD risk structurally does not move companies. He moves clauses, and he moves insurance cover."
+    },
+    {
+      "type": "p",
+      "text": "The first step is mapping the real chain. For each component integrated into the product, identify: the supplier, its registered and operating office, the jurisdiction applicable to the contract, the declared insurance cover. It is an exercise most Italian software houses have never done systematically. Without this map, risk allocation is blind."
+    },
+    {
+      "type": "p",
+      "text": "The second is contractually designating the EU authorised representative for each relevant non-EU supplier. The PLD 2024 requires it, but in practice it is rarely done. Without an authorised representative, the non-EU supplier is in practice liable only through the EU importer — which is often the Italian software house itself, without knowing it."
+    },
+    {
+      "type": "p",
+      "text": "The third is mutual indemnification with verified cover. An indemnification clause without a policy to back it is a symbolic clause. The software house must require from the non-EU supplier evidence of actual insurance cover, with a named beneficiary, and with limits adequate to the risk of the component supplied. If the supplier has no cover, the indemnification is paper worth exactly as much as the signatory's solvency."
+    },
+    {
+      "type": "p",
+      "text": "The fourth is your own policy, consistent with the real geography. Italian tier 1 policies (Marsh, Aon, WTW) negotiate cover that explicitly includes exposure from multi-jurisdictional chains, the costs of cross-border recourse, and AI/algorithmic liability. It is the kind of cover that costs €7,000-14,000 a year for individual professional profiles, and orders of magnitude more for company structures. It is the real cost of the PLD regime for those operating in the regulated market."
+    },
+    {
+      "type": "p",
+      "text": "The fifth, which sums up the rest, is contractual transparency towards the EU client. If the Italian software house integrates non-EU components, the client has the right to know, to assess the risk, and to agree how it is shared contractually. A software house that does not declare it operates under an information asymmetry that, in the event of damage, becomes an aggravating factor in court."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Three questions for the GM"
+    },
+    {
+      "type": "p",
+      "text": "First question: have you mapped who the EU importer is for each non-EU component you integrate into your systems? If the answer is no, the importer is probably you, and you don't know it."
+    },
+    {
+      "type": "p",
+      "text": "Second question: do your clauses with non-EU suppliers include indemnification with verified insurance cover and an obligation to designate an EU authorised representative? If the answer is no, the indemnification is symbolic and liability under Art. 8(2) PLD falls on you or on your client."
+    },
+    {
+      "type": "p",
+      "text": "Third question: if tomorrow an EU client were harmed by your product, would the jurisdiction triggered be the one you had in mind when you designed the structure? If the answer is \"I don't know\" or \"we'll see\", the structure is badly designed. Jurisdiction is decided now, not afterwards."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Closing thought"
+    },
+    {
+      "type": "p",
+      "text": "The jurisdictional escape via a non-EU company is a retrospective illusion. You think you have done it, until the first real lawsuit. Three European regulations — Brussels I bis, Rome II, PLD 2024 — converge in making the escape ineffective for the product liability regime towards EU injured persons. The corporate veil does not protect against the injured person's forum, does not move the governing law, does not interrupt the chain of liability under Art. 8 PLD, and is worth nothing in Italian criminal jurisdiction."
+    },
+    {
+      "type": "p",
+      "text": "Software houses that prepare for the PLD regime do not do it by opening companies abroad. They do it by mapping their own value chain, allocating risks contractually, taking out insurance cover consistent with the real geography, and transparently pricing the asymmetry of exposure that each link carries."
+    },
+    {
+      "type": "p",
+      "text": "The difference between the two strategies is not cosmetic. It is structural. One is evasion, and it does not stand up in court. The other is allocation, and it stands up because it is honest."
+    },
+    {
+      "type": "p",
+      "text": "The next article in the series addresses the essential post-PLD contract clauses: an organised review of twenty clauses, grouped by type of contractual relationship, that Italian software houses should introduce into their standard contracts before 9 December 2026."
+    }
+  ]
+}

@@ -1,0 +1,506 @@
+{
+  "slug": "pld-2024-five-plus-one-scenarios",
+  "lang": "en",
+  "translationOf": "pld-2024-cinque-piu-uno-scenari",
+  "title": "PLD 2024: the 5 + 1 software development scenarios and the exposure they create for software houses, employees and external consultants",
+  "standfirst": "The second article in the series on PLD 2024 and Italian software houses. Epistemic note: a reconstruction of the directive's text applied to typical operating models.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-05-05T07:00:02.000+00:00",
+  "dateModified": "2026-05-05T07:00:32.000+00:00",
+  "series": "Article II · Five-plus-one development scenarios",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/pld-2024-i-5-1-scenari-di-sviluppo-software-e-le-che-per-patierno-ffvue"
+  },
+  "importedAt": "2026-09-09",
+  "words": 6297,
+  "blocks": [
+    {
+      "type": "p",
+      "text": "The second article in the series on PLD 2024 and Italian software houses."
+    },
+    {
+      "type": "p",
+      "text": "Epistemic note: a reconstruction of the directive's text applied to typical operating models. It is not legal advice."
+    },
+    {
+      "type": "p",
+      "text": "In the previous article in this series I described the seven structural changes PLD 2024 brings to the business of Italian software houses. That picture is general: it says what changes for the sector. This article tackles the question every software house, every tech lead, every senior Solution Architect and every freelancer should ask before signing the next engagement: which development scenario does this work put me in, and how is PLD exposure distributed between the software house (SH) as an entity, its employees, and the external consultants or freelancers working inside it?"
+    },
+    {
+      "type": "p",
+      "text": "The answer is not uniform. Directive 2024/2853 brought software as a whole within the scope of strict liability (Art. 4), but the way the different roles are exposed depends on one precise variable: how “close to the code” each of them is. The more code, containers, forks and plugins of your own you produce, the more you are an identifiable component manufacturer. The less you produce, and the more you stay at the level of pure architecture on mature commercial products, the less exposed you are."
+    },
+    {
+      "type": "p",
+      "text": "Six typical scenarios, in order of increasing exposure, illustrate the principle. For each: the operational set-up, the PLD position of the SH as an entity, the position of employees, the position of external consultants and freelancers, what needs documenting, and the overall exposure."
+    },
+    {
+      "type": "p",
+      "text": "After the six scenarios, three sections deal with cross-cutting operational situations that arise in all of them: how liability works when the client directs the customisation closely, what happens when a CVE is published and has to be handled, what happens if the client refuses a patch, and what happens if an open source component is abandoned."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The essential legal framework"
+    },
+    {
+      "type": "p",
+      "text": "Three articles of the directive govern the map."
+    },
+    {
+      "type": "p",
+      "text": "Article 4 defines “product” as including all movables, electricity, digital manufacturing files, raw materials and software, regardless of distribution channel. An integrated software system delivered to the client is a PLD product in every respect. So is a WordPress site with e-commerce, a custom container, a plugin, a fork."
+    },
+    {
+      "type": "p",
+      "text": "Article 8 distinguishes between the manufacturer of the product (whoever develops the finished product or places it on the market under its own name) and the manufacturer of a component (whoever produces a component integrated into or interconnected with the product, under the manufacturer's control). The injured party can sue both. Paragraph 2 extends manufacturer status to anyone who substantially modifies a product outside the original manufacturer's control — and that is the rule behind the case of the client who becomes a manufacturer, covered in its own section further on."
+    },
+    {
+      "type": "p",
+      "text": "Article 12 establishes joint and several liability between co-obligors. When two or more economic operators are liable for the same damage, the injured party chooses whom to sue. Typically the most solvent, the most reachable, or both. Internal recourse between co-obligors exists, but it comes after the injured party has been paid."
+    },
+    {
+      "type": "p",
+      "text": "One structural point is worth restating before we get into the scenarios. The PLD addresses economic operators. The SH as a legal person is an economic operator, and it is the main target of the injured party's PLD claim. The SH's employees are not normally direct targets of a PLD claim: they answer to their employer under Art. 2104 of the Italian Civil Code, and towards an injured third party liability lies with the SH as an entity under Art. 2049 c.c. (liability for the acts of auxiliaries). External consultants and freelancers are different: they are independent economic operators producing identifiable components, and as component manufacturers they are jointly and severally liable with the commissioning SH towards the injured party. Not having signed the main contract with the end client does not protect them."
+    },
+    {
+      "type": "p",
+      "text": "These three articles, and this structural distinction, decide where you sit across the six scenarios."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 0 — Micro-businesses and web agencies on WordPress, Joomla and similar CMSs"
+    },
+    {
+      "type": "p",
+      "text": "Set-up: a small software house — often a micro-business or one-person studio, sometimes an established web agency — builds websites and lightweight applications for clients of all kinds. The typical stack is WordPress (or Joomla, Drupal and the like) with a commercial or custom theme, commercial and community plugins, and possibly WooCommerce modules for e-commerce."
+    },
+    {
+      "type": "p",
+      "text": "It is the largest segment of the Italian software development market. It is also the one with the lowest PLD awareness, because the size of the jobs and the “lightweight” nature of the work make the regulatory regime feel remote. That perception is wrong."
+    },
+    {
+      "type": "quote",
+      "text": "PLD position of the SH as an entity. WordPress, community plugins and free themes are open source distributed as non-commercial projects. Their maintainers are covered by the exclusion in Article 2(2) of the directive. But when the SH integrates these components into a site or application delivered commercially to the client, it becomes the manufacturer of the integrated product. The fact that the base software is free does not change the SH's position: the integrated product is sold, it is a commercial product, it is within the PLD."
+    },
+    {
+      "type": "p",
+      "text": "Exposure varies a great deal depending on what the site actually does. A brochure site with a contact form collects little personal data, usually a name and an email address. A data breach of the contact form is GDPR exposure, but the compensable PLD damage (Art. 6) is materially limited. A WooCommerce e-commerce site handles customer records, payment data, addresses, order history, user profiles. A data breach of an e-commerce site is full PLD exposure, because corrupted or exposed personal data causes direct compensable harm to the end consumer. A headless WordPress application, or one with a custom backend handling health, financial or biometric data, is a high-exposure scenario, however “lightweight” the technology."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Position of the SH's employees. Internally they answer to their employer for the diligence they exercised (Art. 2104 c.c.). Towards an injured third party, liability falls on the SH as an entity under Art. 2049 c.c. Employees are not direct targets of the injured party's PLD claim, except in residual cases of their own tort liability under Art. 2043 c.c. for wilful or grossly negligent conduct.",
+        "Position of external consultants and freelancers engaged. A consultant or freelancer who produces an identifiable component of the site (developing custom plugins, writing custom theme code, specific security configuration, integrations with third-party systems) is a component manufacturer under the PLD. They are jointly and severally liable with the SH towards the injured party. Not having signed the main contract with the client does not protect them, the RACI does not protect them, having worked under the commissioning SH's direction does not protect them. If they contributed materially to the defective part, they are in."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What to document: the site's SBOM (WordPress version, plugins with versions, themes, JS libraries), the technical rationale for plugin choices (due diligence on a component's maturity is part of diligence), explicit allocation of CVE monitoring, and the patching procedure."
+    },
+    {
+      "type": "p",
+      "text": "Overall exposure: from low (a pure brochure site) to high (e-commerce with personal data, applications with sensitive data). The critical point for this market segment is that most operators do not distinguish between the two and apply the same pricing, the same contract and the same documentation to every project. After the PLD, that uniformity does not hold."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 1 — SH on commercial software with delegated customisation"
+    },
+    {
+      "type": "p",
+      "text": "Set-up: the SH designs and implements a system built on mature commercial products (enterprise CRM, BPM platforms, low-code platforms from commercial vendors — SAP, Salesforce, Microsoft, ServiceNow). Customisation is delegated to in-house seniors, dedicated development teams, or external consultants. The CVEs that emerge mostly concern the base product, not the customisations."
+    },
+    {
+      "type": "quote",
+      "text": "PLD position of the SH as an entity. Under the directive, the product is the complete system put into service at the client, not the base software on its own. The supplier of the base product (Microsoft, Salesforce, SAP) is the PLD manufacturer for its own defects — it answers to the injured party for the CVEs in its own software. The SH is the manufacturer of the integrated product (the custom system). It bears PLD liability for the system as a whole placed on the market."
+    },
+    {
+      "type": "p",
+      "text": "When a CVE in the base product emerges, primary liability lies with the commercial vendor. But the SH has its own post-market surveillance and vulnerability handling obligations. If the CVE is published and the SH does not notify the client, does not make the patch available, and does not handle the vulnerability within reasonable SLAs, the SH is liable for the defect in its own integrated system — which is now defective because it contains an unpatched vulnerable component."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Position of the SH's employees. The in-house architect, the employed developers configuring the base product, the project managers running delivery: all act as auxiliaries of the SH. Liability towards the injured party lies with the SH under Art. 2049 c.c. They cannot be targeted directly under the PLD. Towards their employer they answer for the diligence they exercised (Art. 2104 c.c.).",
+        "Position of external consultants and freelancers engaged. Here the position depends on what they actually produce. An external senior Solution Architect who designs the integration architecture is the manufacturer of an architectural component (trust boundary choices, security decisions, the structure of the data flow). An external consultant who configures the base product is the manufacturer of a configuration component. An external developer who writes specific parts of the code (custom connectors, integration libraries) is the manufacturer of a code component. All are jointly and severally liable with the SH towards the injured party for their own components."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "An individual external consultant's exposure is low if the CVE that emerges concerns the base product rather than their components, and if their components are carefully documented (ADRs, tests, tracked code reviews)."
+    },
+    {
+      "type": "p",
+      "text": "What to document: an ADR on the choice of base product with its technical rationale, an initial SBOM and one for every subsequent release, explicit allocation of CVE monitoring to the SH, the definition of the trust boundary between base product and customisations, and formal identification of the manufacturers of each customisation component."
+    },
+    {
+      "type": "p",
+      "text": "Overall exposure: low for the SH (primary liability lies with the base product's vendor), low for employees, low for external consultants whose components are well documented. It is the most favourable scenario."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 2 — SH that writes parts of the code"
+    },
+    {
+      "type": "p",
+      "text": "Set-up: as in Scenario 1, but the SH (or a specific architect, or an external consultant) does not only configure: it writes parts of the code. Typically the most critical parts, or those requiring specific expertise — custom connectors, integration libraries, security modules, pseudonymisation layers."
+    },
+    {
+      "type": "p",
+      "text": "Exposure changes significantly. Whoever wrote the code becomes the manufacturer of an identifiable code component."
+    },
+    {
+      "type": "quote",
+      "text": "PLD position of the SH as an entity. The SH is the manufacturer of the integrated product, as in Scenario 1, and is also the manufacturer of the code components produced in-house. If the CVE emerges in a part of the code written by the SH's teams, the SH answers directly as manufacturer of that component. Concrete examples of risk: the SSO integration library written in-house with an authentication bug that causes a data breach; the custom connector with an SQL injection bug; the pseudonymisation module with a bug that exposes data."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Position of the SH's employees. They continue to act as auxiliaries. The fact that they wrote the defective code does not expose them directly under the PLD towards the injured party — the SH answers under Art. 2049 c.c. Towards their employer they answer for diligence, and possibly for specific wilful misconduct or gross negligence.",
+        "Position of external consultants and freelancers engaged. This changes dramatically compared with Scenario 1. An external consultant who writes code is, identifiably, the manufacturer of a code component. Jointly and severally liable with the SH towards the injured party. Three serious operational consequences."
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "They should sign their commits with traceable personal identification (Git signed commits with a personal key). It is an operational burden, but it is also evidence in litigation: it shows exactly what they wrote and what they did not. Without traceability, in a lawsuit five years later, reconstructing who wrote the code will be difficult.",
+        "The code must have documented unit tests, formal code review, and specific security testing (SAST, DAST). Without documented diligence, they risk being judged a “component manufacturer who failed to exercise reasonable diligence” — a threshold that under the PLD regime is objectively low.",
+        "The rate for a consultant who writes code is structurally higher than for one who only does architecture, because they are taking on additional individual liability. An SH that proposes “do a bit of coding too” to save costs is proposing a shift of PLD exposure that has to be priced."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What to document: everything in Scenario 1, plus Git signed commits, tracked formal code reviews, documented security testing, and formal identification of the manufacturers of each piece of code."
+    },
+    {
+      "type": "p",
+      "text": "Overall exposure: medium for the SH (it exposes its own code as well as the integrated system), medium for external consultants who write code (jointly liable for their own components), low for employees who write code (the SH answers for them)."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 3 — SH on open source with custom configuration"
+    },
+    {
+      "type": "p",
+      "text": "Set-up: the SH builds a system on open source components (for example Budibase, Keycloak, n8n, Weaviate, Mautic, Strapi). On top of them sits configuration customisation — a new app, custom workflows, security configuration, a data schema. Not code development: configuration."
+    },
+    {
+      "type": "quote",
+      "text": "PLD position of the SH as an entity. The PLD has an important open source exception in Article 2(2): the directive does not apply to free and open-source software developed or supplied outside the course of a commercial activity. The maintainers of community open source components who distribute their projects as non-commercial are NOT liable under the PLD towards the injured party."
+    },
+    {
+      "type": "p",
+      "text": "When the SH integrates those components into a custom system put into commercial service at a client, PLD liability attaches to the integrated system. The SH is the manufacturer of the system. The open source components remain free, but the system that integrates them and is supplied to the client for a fee is a commercial product subject to the PLD."
+    },
+    {
+      "type": "p",
+      "text": "Three precise consequences."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "the maintainers of community open source components are NOT subject to recourse by the SH. If a CVE emerges that causes harm, there is no recovery from whoever maintains the component. Exception: if commercial enterprise editions of the components are used, the commercial supplier is subject to the PLD for the commercial part. Community open source and paid enterprise editions are different regimes.",
+        "liability for the integrated system towards the injured party rests entirely with the SH. There is no one to pass the buck to. If a component has a critical CVE that causes a data breach in the integrated system supplied to the client, the SH answers for the defective product, even if the defect is “in” a component it did not produce.",
+        "CVE monitoring falls entirely on the SH. With commercial products, the supplier sends advisories automatically. With community open source, the SH has to monitor the public security feeds (NVD, GitHub Security Advisories, OSV.dev, each project's mailing lists)."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "There is a further nuance: choosing open source is an architectural decision that becomes an element of diligence. If it later emerges that a notoriously abandoned open source component was chosen, one with poor maintenance and a history of ignored vulnerabilities, the architectural choice may in itself be considered defective. Due diligence on components — a complete SBOM, an assessment of the project's maturity, release frequency, presence of a security policy, community size, any commercial sponsor — is evidence in the event of litigation."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Position of the SH's employees. They act as auxiliaries. The configuration they write is attributed to the SH. They cannot be targeted directly under the PLD.",
+        "Position of external consultants and freelancers engaged. An external consultant who carries out the due diligence on the choice of components, or who writes the custom configuration, is the manufacturer of an architectural or configuration component. Jointly and severally liable for their own component. Custom configuration (workflows, data schemas, security rules) is still an artefact that can be defective: a workflow that exposes sensitive data in unprotected logs is a defective component produced by whoever wrote it."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What to document: a complete SBOM with the rationale for choosing each component, ADRs on the due diligence, active CVE monitoring with configured feeds, tested configuration quality, and identification of the manufacturers of each configuration component."
+    },
+    {
+      "type": "p",
+      "text": "Overall exposure: medium-low for the SH if due diligence and monitoring are robust; medium-low for external consultants whose components are well documented."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 4 — SH that builds custom containers on open source"
+    },
+    {
+      "type": "p",
+      "text": "Set-up: as in Scenario 3, but with the addition of custom containers (typically Python, Node.js, Go) that slot into the architecture. Examples: a container that pre-processes data before Budibase, a container that orchestrates LLM calls, custom utility containers, proprietary microservices."
+    },
+    {
+      "type": "p",
+      "text": "Exposure rises significantly. Custom containers are software products developed by the SH (or by the external consultant who builds them). They are 100% identifiable components."
+    },
+    {
+      "type": "quote",
+      "text": "PLD position of the SH as an entity. The SH is the manufacturer of the integrated product and 100% the manufacturer of the custom containers. For the injured party, the containers are the clearest target, because there is an identifiable author, the code exists and can be inspected in litigation, code bugs are easier to prove than abstract architectural flaws, and the containers have their own SBOM (the libraries used become sub-components the SH is liable for)."
+    },
+    {
+      "type": "p",
+      "text": "A concrete example: the SH builds a Python container that pseudonymises health data before passing it to an LLM. It uses a common Python library for hashing. A bug in the library causes data to be exposed. The library is community open source and is not liable. The SH chose to use that library, integrated the container into the system, and delivered it. It is the manufacturer of a defective component."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Position of the SH's employees. The employed developer who writes the container is an auxiliary of the SH. Towards the injured party, the SH answers. Towards their employer, they answer for the diligence they exercised.",
+        "Position of external consultants and freelancers engaged. A consultant or freelancer who builds custom containers is unambiguously the manufacturer of a code component. Jointly and severally liable. Five concrete considerations."
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Every custom container must have a detailed SBOM of its dependencies (pip freeze, container scanning with Trivy or Snyk, an inventory of versions). Without an SBOM it is impossible to prove what state the container was in at the time of delivery.",
+        "Continuous vulnerability scanning of containers. If the container is in production at the client and a library develops a critical CVE, the container's manufacturer must be notified and must decide whether to patch and redistribute.",
+        "Tagging container versions with unique identifiers. You need to know exactly which version is installed at which client, when it was installed, and what its dependencies are.",
+        "Code signing of containers. Images should be digitally signed (cosign, Notary v2) as evidence of authorship and integrity. In litigation it proves that the installed version is the one produced, not a tampered one.",
+        "The rate for external consultants who build custom containers is structurally higher. They are producing software with its own SBOM, its own life cycle, its own support. It is a Senior Developer + Architect position, and pricing reflects that combination."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What to document: everything in Scenario 3, plus container SBOMs, continuous vulnerability scanning, versioning, code signing, and formal identification of the manufacturers of each container."
+    },
+    {
+      "type": "p",
+      "text": "Overall exposure: medium-high for an SH that builds in-house; medium-high for external consultants who build containers."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Scenario 5 — SH that forks open source or develops plugins"
+    },
+    {
+      "type": "p",
+      "text": "Set-up: the SH (or one of its external consultants) takes an open source project (for example Keycloak, Camunda) and forks it to change specific behaviour. Or it writes plugins to extend an open source project (Budibase plugins, custom n8n nodes, custom connectors for an integration platform)."
+    },
+    {
+      "type": "quote",
+      "text": "PLD position of the SH as an entity. When you fork an open source project, the forked version is a product distinct from the original project for PLD purposes. The SH is the manufacturer of its own version. The original project's community is not liable for the changes, and the SH no longer automatically receives their security advisories."
+    },
+    {
+      "type": "p",
+      "text": "Three very heavy consequences."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "you are the manufacturer of the entire fork. When the SH produces a forked version of Keycloak, it is the manufacturer not only of its own changes but of the whole forked version. Keycloak CVEs affecting parts that were not modified, but that exist in the forked version, concern the SH as manufacturer of its own product. The injured party does not distinguish between “this part of the Keycloak fork was original” and “this part is custom”. For them there is only the forked product that caused the harm.",
+        "you have to maintain your forked version. If the Keycloak community releases security patches in the unmodified parts, you have to backport them into the fork. That means a structured process for monitoring changes to the upstream project, assessing which patches apply, backporting with tests, and releasing new versions of the fork to clients. It is a significant operational commitment. A single person maintaining a fork typically cannot keep pace with an active upstream project over the medium term. It takes a team or automated processes.",
+        "for plugins the situation is slightly different but not resolved. Plugins for open source are your own products that depend on the upstream host. You are the manufacturer of the plugin, but the plugin runs in the context of a host you do not control. Defects in the plugin (badly written) and changes in the host (which alters its API) can create incompatibilities that show up as anomalous behaviour in the integrated system."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Position of the SH's employees. The employed developer working on the fork is an auxiliary. The SH answers for them. Towards their employer, they answer for diligence."
+    },
+    {
+      "type": "p",
+      "text": "Position of external consultants and freelancers engaged. A consultant who writes the fork or the plugin is fully the manufacturer of the custom product or custom component. Jointly and severally liable with the SH for ten years. Four serious considerations."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Forking an open source project is a significant strategic decision, not a shortcut for getting things done fast. If you decide to do it, you have to plan maintenance of the fork for the product's whole lifetime at the client. The ten years of PLD liability are the reference period for the hidden cost. The cost of a fork is enormous.",
+        "Before forking, always assess whether you can contribute to the upstream project instead. A pull request with the change you need, accepted by the project, lets you stay on the community version, which the community maintains. When it is possible, it is always the better choice.",
+        "Plugins are less problematic than forks, but they still have to be treated as your own product with its own life cycle. SBOM, versioning, CVE monitoring of the plugin's dependencies, support for the host versions the plugin is compatible with.",
+        "The rate for projects that require forks or custom plugins is the highest of all the scenarios, because you are taking on the responsibility of a product manager for a small software product for ten years or more."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What to document: everything in Scenario 4, plus a maintenance plan for the fork, a process for backporting upstream patches, a documented ten-year life cycle, and formal identification of the manufacturers of the fork and the plugins."
+    },
+    {
+      "type": "p",
+      "text": "Overall exposure: high for the SH; high for external consultants who produce forks or plugins."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "When the client becomes the manufacturer"
+    },
+    {
+      "type": "p",
+      "text": "The six scenarios described so far place the SH in the position of manufacturer of the integrated product and its external consultants in the position of component manufacturers. But there is a situation, increasingly common in highly complex enterprise projects, in which the client too slides into the PLD perimeter as a manufacturer. It is the case covered by Art. 8(2) of the directive: anyone who substantially modifies a product outside the original manufacturer's control is treated as the manufacturer of the modified product."
+    },
+    {
+      "type": "quote",
+      "text": "The typical scenario is the client company — a bank, an insurer, a utility, a large manufacturer — that engages an SH to build a custom system, but has in-house PMs, architects, product owners and security managers who direct the customisation closely. They specify detailed requirements, propose technical changes, reject configurations proposed by the SH, authorise exceptions, set priorities. The SH works under the client's technical direction."
+    },
+    {
+      "type": "p",
+      "text": "In this set-up, the client's reviews and change proposals are no longer “client feedback” — they are technical direction of the modification. The more the client directs, the closer it comes to being a substantial modifier under Art. 8(2). The records of approvals, change requests and accepted exceptions become evidence of that technical direction."
+    },
+    {
+      "type": "p",
+      "text": "For the client, this means PLD exposure of its own on the modified product. For the SH, it means internal recourse against the client becomes stronger in litigation: “the defect was introduced at the request of the client, who directed the modification; here are the records”. For the client's employees who directed the customisation, personal exposure is still filtered by the employer as a legal person (Art. 2049 c.c.), but the records of their decisions become part of the case file."
+    },
+    {
+      "type": "p",
+      "text": "The operational point is that “substantial modifier” status is not the client's choice — it emerges from behaviour. A client that wants to avoid sliding into the PLD as a manufacturer has two opposite options: either it leaves the SH full technical autonomy and confines itself to defining functional requirements (less exposure of its own, but less control too); or it knowingly accepts the status and manages accordingly (takes out its own insurance cover, sets up reciprocal indemnity clauses with the SH, and allocates the costs of ten-year liability correctly)."
+    },
+    {
+      "type": "p",
+      "text": "What does not work after the PLD is today's middle position, in which the client directs the customisation closely without taking on the corresponding formal exposure. It is where many enterprise projects sit today, and it is precisely the position case law will have to clarify in the years ahead."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What happens when a CVE emerges"
+    },
+    {
+      "type": "p",
+      "text": "In all six scenarios, when a CVE is published that affects a component of the integrated system delivered to the client, the manufacturer (the SH) has handling obligations of its own. It is worth distinguishing rigorously between what is owed and what is a separate service, because that boundary is exactly where SHs' margins are won or lost."
+    },
+    {
+      "type": "p",
+      "text": "What is owed as reasonable diligence under the PLD is a precise sequence: active monitoring of the security feeds relevant to the system's components; timely assessment of the CVE's relevance to the client's specific system; formal notification to the client describing the specific risk, its severity, and the expected window for the patch to become available; and making the patch or mitigation instructions available when they exist. All of this is PLD-relevant performance. An SH that fails to do it, if harm is caused by the unpatched CVE, is exposed as a manufacturer that did not exercise reasonable diligence."
+    },
+    {
+      "type": "p",
+      "text": "What is a separate service is the work of actually applying the patch to the client's system: deployment, testing in the client environment, rollback if the patch introduces regressions, structured communication with the client's end users. This work is chargeable unless it is already covered by an active maintenance contract."
+    },
+    {
+      "type": "p",
+      "text": "The distinction matters because the current practice of many Italian SHs blurs the two. The SH notifies the client of the CVE in a generic email, offers a “patching intervention” as an additional paid service, and when the client objects (“I've already paid for the system, why should I pay for the patch?”) finds itself negotiating defensively."
+    },
+    {
+      "type": "p",
+      "text": "Handling it properly separates the two from the start. The initial contract should distinguish clearly: the SH guarantees CVE monitoring and notification for the ten years of liability (included, part of diligence); the SH guarantees to make the patch available when the vendor releases it or the SH can produce it (included, part of diligence); the SH offers the service of applying the patch to the client environment as a separate service, with defined pricing (under a maintenance contract or on call)."
+    },
+    {
+      "type": "p",
+      "text": "Without that contractual distinction up front, every CVE becomes a confrontational negotiation. With it, the client knows what is owed and what is chargeable, and the SH is not forced to choose between supplying the patch for free (a loss) or not supplying it (PLD exposure)."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What happens if the client refuses the patch"
+    },
+    {
+      "type": "p",
+      "text": "A particular and growing case: the SH has done everything it owes (monitoring, notification, making the patch available), but the client — to avoid paying for the application work, for internal compatibility reasons, or out of inertia — decides not to apply the patch. The system remains vulnerable. If harm caused by the unpatched CVE occurs in the meantime, who is liable?"
+    },
+    {
+      "type": "p",
+      "text": "The directive (Recital 50 and Art. 11) provides exemptions from liability for the manufacturer when the defectiveness is due to factors arising after placing on the market that are not attributable to it. A client refusing the patch may amount to one of those factors. But the defence only works if the SH can show, with documents, that it did its part and that the client's refusal was explicit and informed."
+    },
+    {
+      "type": "quote",
+      "text": "In practice this means putting the whole sequence in writing. Notification of the CVE describing the specific risk, its severity and the potential consequences of not patching — not a generic email, but a formal communication with a precise reference. Availability of the patch or mitigation instructions, with timescales and costs if the patch requires separate application work. Formal record of the client's decision not to apply it, with reasons. Ideally, the client's countersignature accepting the risk knowingly."
+    },
+    {
+      "type": "p",
+      "text": "Without that documentary trail, the SH cannot prove in court that it is exempt. The judge looks at what the record shows: if there is no evidence that the client knowingly refused, the default position is that the SH did not handle the CVE with the required diligence."
+    },
+    {
+      "type": "p",
+      "text": "This is an area where contractual performance becomes PLD-relevant performance. SHs that handle CVE communication as an informal exchange (a call to the client, a verbal confirmation, a decision taken “between ourselves”) are building their own exposure without realising it. Proper handling requires formal protocols, even when the relationship with the client is long-standing and built on trust."
+    },
+    {
+      "type": "p",
+      "text": "A note of calibration. The client's refusal may be legitimate for reasons that cannot be challenged (incompatibility with third-party systems, maintenance windows constrained by sector regulation, migration plans already scheduled). The point is not to judge the refusal — it is to document it. The SH is not the arbiter of the client's decisions; it is a manufacturer that has to prove it did its part."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What happens if an open source component is abandoned"
+    },
+    {
+      "type": "p",
+      "text": "An increasingly real scenario: two or three years ago the SH chose a mature open source component, frequently updated, with an active community. It integrated the component into the custom system delivered to the client. After two years in service, the upstream project dies. The lead maintainer leaves, the community dissolves, releases stop. The component no longer receives security patches. Any new vulnerabilities will not be fixed by the upstream project."
+    },
+    {
+      "type": "p",
+      "text": "What should the SH do? There are three real options."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "fork the component and maintain it in-house. That means entering Scenario 5 with everything it entails — becoming the manufacturer of the fork, maintaining your own version for the remaining years of liability, backporting patches from public sources where there are any, and bearing the significant cost of maintenance. For most Italian SHs, this option is not economically viable.",
+        "replace the component with an alternative. Identify a mature replacement, rewrite the parts of the integrated system that depended on the abandoned component, test, redeploy. It is significant work, often close to a new development. Who pays? The client, because the work is not a patch (correcting a pre-existing defect in the product) but an evolutionary adaptation of the product made necessary by an external event (upstream abandonment). The SH cannot offload onto the client, for free, the replacement of a component it chose itself, but nor can it bear for free, for ten years, the replacement of components that die in the market. The point of balance is contractual.",
+        "leave the abandoned component in production and accept the growing risk. This is the worst. It means the integrated system at the client is progressively becoming defective in the PLD sense, because its security can no longer be maintained. When the first unpatchable CVE emerges, the SH will be exposed as a manufacturer that delivered a product whose security cannot be sustained for the duration of liability."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Proper handling is structural and contractual. The SH should include in its contracts a component replacement clause that explicitly governs upstream abandonment: the type of trigger (a component that has received no security updates for X months, a component formally archived, a component with an unresolved public security advisory), predefined pricing or a calculation method for the replacement work, the time window within which replacement must be completed, and the consequences if the client refuses to pay for the replacement (termination of liability for the integrated system, with formal notice)."
+    },
+    {
+      "type": "p",
+      "text": "Without that clause, every abandoned component becomes a confrontational negotiation at the moment of the event, under pressure. The SH risks losing the argument (and having to replace for free), or losing the client (who refuses to pay and replaces the SH itself with another supplier), or accumulating PLD exposure (by leaving the component in production)."
+    },
+    {
+      "type": "p",
+      "text": "The systemic point: the PLD has extended the expected life of a software product to ten years of liability. But many of the open source components on which Italian SHs have built systems in recent years do not live ten years as active projects. The mismatch between the length of the manufacturer's liability and the length of maintenance of the components the manufacturer relied on is a zone of structural exposure that needs specific contractual handling."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Summary table"
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Strategic considerations"
+    },
+    {
+      "type": "p",
+      "text": "What emerges from the six scenarios is that PLD position depends on how “close to the code” you are and on who actually produces the components. The SH as a legal entity always answers as manufacturer of the integrated product, but exposure is distributed asymmetrically between employees and external consultants: employees are filtered by the SH (Art. 2049 c.c.), external consultants are jointly and severally liable for their own components."
+    },
+    {
+      "type": "quote",
+      "text": "This changes how Italian SHs should structure their projects, and how external consultants should accept engagements. For the SH, the decision to produce components in-house or to outsource them is no longer just a question of cost or resource availability — it is a question of how PLD risk is distributed. For the external consultant, accepting an engagement means working out which of the six scenarios it falls into and what rate is consistent with the exposure."
+    },
+    {
+      "type": "p",
+      "text": "Three questions to ask yourself before signing the next engagement."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "For the SH: which of the six scenarios are we in? Are the contract structure with the client, the rate charged, the documentation we produce and the insurance cover we hold consistent with that scenario? And are the three cross-cutting operational situations — CVE handling, the client refusing a patch, abandoned components — dealt with in the contract in a structured way, or left to case-by-case negotiation?",
+        "For the external consultant: which of the six scenarios does this engagement put me in? Which components will I actually produce, and with what level of traceability? Is the proposed rate consistent with the level of exposure? Does the contract with the commissioning SH provide for reciprocal indemnity clauses, formal identification of the scope of components I produce, insurance cover, and what happens if the commissioning SH goes bankrupt during the ten years of liability?",
+        "For the client: does my organisation closely direct the customisation through its own PMs, architects and product owners? If so, am I aware of my own exposure as a potential substantial modifier under Art. 8(2)? Do my clauses with the SH and my insurance cover reflect it?"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What changes compared with the pre-PLD world is that the answers to these questions can no longer be uniform. The same software house does not warrant the same pricing, the same contract or the same exposure regardless of scenario. The same external consultant does not warrant the same rate regardless of the component they produce. The same client does not carry the same exposure regardless of how much it directs."
+    },
+    {
+      "type": "p",
+      "text": "Italian software houses that keep presenting flat pricing, uniform contracts and minimal documentation are telling the market they have not yet absorbed the PLD. It is one of the first things a careful client should check when assessing a supplier. And one of the first things an external consultant should check when assessing a client."
+    },
+    {
+      "type": "p",
+      "text": "In the next article in the series I will cover the mechanism of joint and several liability (Art. 12) and the specific scenario of the software house going bankrupt during the ten years of PLD liability, with a focus on how insurance run-off cover becomes a structural element of the external technical professional's contract."
+    },
+    {
+      "type": "p",
+      "text": "The full outline of the series is in the first article: the seven structural changes PLD 2024 brings to the software house business."
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
@@ -16,10 +17,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: {
-    canonical: EN_URL,
-    languages: { en: EN_URL, it: IT_URL, "x-default": EN_URL },
-  },
+  alternates: alternatesFor("/platform"),
   openGraph: {
     images: OG_IMAGE,
     title: TITLE,

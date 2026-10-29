@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { BASE_URL } from "@/app/schema-org";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   formatDate,
@@ -12,18 +13,27 @@ import {
   isoDay,
   readingMinutes,
   type Block,
+  type ImportedArticle,
 } from "@/lib/imported-articles";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 import { TechBadge } from "@/components/ui/TechBadge";
 
-/* Only the slugs that exist in content/research resolve here; anything else is
-   a 404 rather than a page rendered on demand. */
+/* The series was written in Italian; the originals are served at
+   /it/ricerca/<slug>. This route serves only the English translations, so an
+   Italian slug here is a 404 rather than a page rendered on demand. */
 export const dynamicParams = false;
 
+const englishArticles = () => getImportedArticles().filter((a) => a.lang === "en");
+
+function englishArticle(slug: string): ImportedArticle | null {
+  const article = getImportedArticle(slug);
+  return article && article.lang === "en" ? article : null;
+}
+
 export function generateStaticParams() {
-  return getImportedArticles().map((a) => ({ slug: a.slug }));
+  return englishArticles().map((a) => ({ slug: a.slug }));
 }
 
 /* Next 16 hands `params` to a page as a promise; awaiting it is not optional —
@@ -34,21 +44,21 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = getImportedArticle(slug);
+  const article = englishArticle(slug);
   if (!article) return {};
   const url = `${BASE_URL}/research/${article.slug}`;
   const description = article.standfirst.slice(0, 300);
   return {
     title: article.title,
     description,
-    alternates: { canonical: url },
+    alternates: alternatesFor(`/research/${article.slug}`),
     openGraph: {
       images: OG_IMAGE,
       title: article.title,
       description,
       url,
       type: "article",
-      locale: article.lang === "it" ? "it_IT" : "en_US",
+      locale: "en_US",
       publishedTime: article.datePublished,
       modifiedTime: article.dateModified ?? article.datePublished,
       authors: [`${BASE_URL}/about`],
@@ -138,28 +148,40 @@ export default async function ImportedArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = getImportedArticle(slug);
+  const article = englishArticle(slug);
   if (!article) notFound();
 
-  const all = getImportedArticles();
+  const all = englishArticles();
   const index = all.findIndex((a) => a.slug === article.slug);
   const previous = index > 0 ? all[index - 1] : null;
   const next = index >= 0 && index < all.length - 1 ? all[index + 1] : null;
   const url = `${BASE_URL}/research/${article.slug}`;
-  const isItalian = article.lang === "it";
+  const originalPath = article.translationOf ? `/it/ricerca/${article.translationOf}` : null;
 
   const schema = [
-    articleSchema({
-      url,
-      type: "Article",
-      headline: article.title,
-      description: article.standfirst.slice(0, 300),
-      datePublished: isoDay(article.datePublished),
-      dateModified: isoDay(article.dateModified ?? article.datePublished),
-      inLanguage: article.lang,
-      articleSection: "PLD 2024 & AI governance",
-      keywords: ["PLD 2024", "product liability", "software liability", "AI governance"],
-    }),
+    {
+      ...articleSchema({
+        url,
+        type: "Article",
+        headline: article.title,
+        description: article.standfirst.slice(0, 300),
+        datePublished: isoDay(article.datePublished),
+        dateModified: isoDay(article.dateModified ?? article.datePublished),
+        inLanguage: "en",
+        articleSection: "PLD 2024 & AI governance",
+        keywords: ["PLD 2024", "product liability", "software liability", "AI governance"],
+      }),
+      ...(originalPath
+        ? {
+            translationOfWork: {
+              "@type": "Article",
+              "@id": `${BASE_URL}${originalPath}#article`,
+              url: `${BASE_URL}${originalPath}`,
+              inLanguage: "it",
+            },
+          }
+        : {}),
+    },
     breadcrumbSchema(url, [
       { name: "Home", path: "/" },
       { name: "Research", path: "/research" },
@@ -173,13 +195,12 @@ export default async function ImportedArticlePage({
       <JsonLd data={schema} />
       <NavBar />
       <main className="bg-[#0D1117] min-h-screen">
-        <article lang={article.lang}>
+        <article lang="en">
           <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
             <div className="max-w-3xl mx-auto">
               <Link
                 href="/research/editorial-series"
                 className="text-sm text-[#00B4D8] hover:text-[#00C8F0] mb-6 inline-flex items-center gap-1"
-                lang="en"
               >
                 ← Editorial series
               </Link>
@@ -196,22 +217,28 @@ export default async function ImportedArticlePage({
                 {article.title}
               </h1>
               <p className="text-sm text-[#7D8FA3]">
-                <span lang="en">By</span>{" "}
+                By{" "}
                 <Link href="/about" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   {article.author}
                 </Link>
               </p>
+              {originalPath && (
+                <p className="mt-2 text-sm text-[#7D8FA3]">
+                  <Link href={originalPath} className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                    Translated from the Italian original
+                  </Link>
+                </p>
+              )}
               <p className="mt-6 text-sm text-[#7D8FA3] border border-[#30363D] rounded-lg px-4 py-3 bg-[#161B22]">
-                {isItalian
-                  ? "Pubblicato originariamente su LinkedIn. Questa è la versione integrale, ospitata qui perché resti raggiungibile e citabile: "
-                  : "Originally published on LinkedIn. This is the full version, hosted here so that it stays reachable and citable: "}
+                Written in Italian and first published on LinkedIn. This is the full English
+                translation, hosted here so that it stays reachable and citable; the source is{" "}
                 <a
                   href={article.source.url}
                   rel="noopener noreferrer"
                   target="_blank"
                   className="text-[#00B4D8] hover:text-[#E6EDF3] underline"
                 >
-                  {isItalian ? "l’originale su LinkedIn" : "the original on LinkedIn"}
+                  the Italian original on LinkedIn
                 </a>
                 .
               </p>
@@ -265,7 +292,6 @@ export default async function ImportedArticlePage({
                   <Link
                     href={`/research/${previous.slug}`}
                     className="text-[#00B4D8] hover:text-[#E6EDF3]"
-                    lang={previous.lang}
                   >
                     {previous.title}
                   </Link>
@@ -277,7 +303,6 @@ export default async function ImportedArticlePage({
                   <Link
                     href={`/research/${next.slug}`}
                     className="text-[#00B4D8] hover:text-[#E6EDF3]"
-                    lang={next.lang}
                   >
                     {next.title}
                   </Link>
@@ -290,7 +315,7 @@ export default async function ImportedArticlePage({
                 >
                   The whole series
                 </Link>
-                <span className="text-[#7D8FA3]"> — six articles on PLD 2024, in order.</span>
+                <span className="text-[#7D8FA3]"> — six articles on PLD 2024, in order, in English translation.</span>
               </li>
               <li>
                 <Link href="/assessment" className="text-[#00B4D8] hover:text-[#E6EDF3]">

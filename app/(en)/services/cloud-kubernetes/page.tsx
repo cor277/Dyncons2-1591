@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
@@ -15,9 +16,7 @@ export const metadata: Metadata = {
     "self-hosted LLM",
     "Zero-Trust Kubernetes",
   ],
-  alternates: {
-    canonical: "https://www.dynamicsconsulting.it/services/cloud-kubernetes",
-  },
+  alternates: alternatesFor("/services/cloud-kubernetes"),
   openGraph: {
     images: OG_IMAGE,
     title: "Cloud & Kubernetes Architecture | Dynamics Consulting",

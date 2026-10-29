@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
 import { breadcrumbSchema } from "@/app/seo";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "AI per norme tecniche e ingegneria | Nexus MDS Core",
   description:
     "RAG su ISO, UNI, EN, capitolati e revisioni per studi di ingegneria. Risposte citate con norma e revisione corretta. Traceabilità per responsabilità professionale.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-ingegneria-tecnica" },
+  alternates: alternatesFor("/it/ai-ingegneria-tecnica"),
   openGraph: {
     images: OG_IMAGE,
     title: "AI per norme tecniche e ingegneria | Nexus MDS Core",
@@ -105,7 +106,7 @@ export default function AiIngegneriaTecnicaPage() {
               completa della norma, vector search con Weaviate. Documenti e indici restano nel perimetro dello studio. Controlli GDPR mappati per design.
             </p>
             <div className="pt-6">
-              <CTAButton label="Parliamo del tuo progetto →" href="/contact" variant="primary" />
+              <CTAButton label="Parliamo del tuo progetto →" href="/it/contatti" variant="primary" />
             </div>
           </div>
         </section>
@@ -115,22 +116,22 @@ export default function AiIngegneriaTecnicaPage() {
             <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Approfondimenti</h2>
             <ul className="space-y-3 text-base">
               <li>
-                <Link href="/answers/superseded-documents-rag" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/risposte/documenti-superati-rag" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Documenti superati in un sistema RAG
                 </Link>
-                <span className="text-[#7D8FA3]"> — come si distingue una norma vigente da una revocata (in inglese).</span>
+                <span className="text-[#7D8FA3]"> — come si distingue una norma vigente da una revocata.</span>
               </li>
               <li>
-                <Link href="/answers/rag-audit-trail" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/risposte/audit-trail-rag" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   RAG con audit trail
                 </Link>
-                <span className="text-[#7D8FA3]"> — cosa registrare perché una risposta sia ricostruibile (in inglese).</span>
+                <span className="text-[#7D8FA3]"> — cosa registrare perché una risposta sia ricostruibile.</span>
               </li>
               <li>
-                <Link href="/research/rag-enterprise-data" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/ricerca/rag-dati-aziendali" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Implementare RAG sui dati aziendali
                 </Link>
-                <span className="text-[#7D8FA3]"> — le decisioni che contano (in inglese).</span>
+                <span className="text-[#7D8FA3]"> — le decisioni che contano.</span>
               </li>
               <li>
                 <Link href="/it/piattaforma-nexus" className="text-[#00B4D8] hover:text-[#E6EDF3]">

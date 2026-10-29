@@ -4,6 +4,7 @@ import { BASE_URL } from "@/app/schema-org";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { formatDate, getImportedArticles, isoDay, readingMinutes } from "@/lib/imported-articles";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
@@ -21,48 +22,48 @@ export const metadata: Metadata = {
     "software liability",
     "regulatory analysis",
   ],
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/editorial-series" },
+  alternates: alternatesFor("/research/editorial-series"),
 };
 
 /**
- * The series lives on this domain now: the six articles were imported in full
- * from LinkedIn (scripts/import-linkedin-articles.mjs) and are served from
- * /research/<slug>, with the LinkedIn original linked as the place they first
- * appeared. The English framing of each piece is kept here — the articles
- * themselves are in Italian, as written.
+ * The six articles were written in Italian for LinkedIn and imported in full
+ * (scripts/import-linkedin-articles.mjs). The Italian originals are served at
+ * /it/ricerca/<slug>; this page lists the English translations, served at
+ * /research/<slug>. The short framing of each piece is kept here, keyed by the
+ * English slug.
  */
 const framing: Record<string, { category: string; title: string; subtitle: string }> = {
-  "pld-2024-sette-cambi-strutturali": {
+  "pld-2024-seven-structural-changes": {
     category: "Article I · The seven structural shifts",
     title: "PLD 2024 — the seven structural changes that redefine the sector",
     subtitle:
-      "Software as a product, software updates as a producer obligation, ten-year liability, defect presumptions, evidence asymmetry, joint liability, and component liability.",
+      "Software as a product even when custom, ten-year liability no contract can limit, warranty versus liability, mandatory security maintenance, customisations as new placings on the market, the individual liability of technical contributors, and supply-chain traceability.",
   },
-  "pld-2024-cinque-piu-uno-scenari": {
+  "pld-2024-five-plus-one-scenarios": {
     category: "Article II · Five-plus-one development scenarios",
     title: "The 5+1 scenarios and the exposures each one generates",
     subtitle:
-      "Bespoke build, SaaS, custom integration, IP licensing, open source, embedded systems — and what each means for the software house, its employees and its external consultants.",
+      "From WordPress agencies to open-source forks and plugins: six scenarios, in order of exposure, and what each means for the software house, its employees and its external consultants.",
   },
-  "pld-2024-decennio-responsabilita": {
+  "pld-2024-a-decade-of-liability": {
     category: "Article III · The decade that changes everything",
     title: "Joint liability, insolvency, and why run-off cover becomes structural",
     subtitle:
       "How the directive restructures the ten-year horizon of producer responsibility for software products.",
   },
-  "pld-2024-vulnerability-management-cve": {
+  "pld-2024-vulnerability-management": {
     category: "Article IV · Vulnerability management",
     title: "Reasonable diligence and defensible timelines under PLD 2024",
     subtitle:
       "CVE classification, patching windows, and the limit Article 15 places on transferring liability by contract.",
   },
-  "pld-2024-fuga-giurisdizionale": {
+  "pld-2024-jurisdictional-escape": {
     category: "Article V · International configurations",
     title: "Jurisdictional flight, and why it does not exist",
     subtitle:
       "Brussels I bis, Rome II, corporate veil piercing, and criminal liability under Article 27 of the Italian Constitution.",
   },
-  "pld-2024-contratti-e-polizza": {
+  "pld-2024-contracts-and-insurance": {
     category: "Article VI · Contracts & insurance",
     title: "Twenty clauses and the policy, seen from three sides",
     subtitle:
@@ -70,11 +71,13 @@ const framing: Record<string, { category: string; title: string; subtitle: strin
   },
 };
 
-const articles = getImportedArticles().map((a) => ({
+const articles = getImportedArticles()
+  .filter((a) => a.lang === "en")
+  .map((a) => ({
   ...a,
-  ...(framing[a.slug] ?? { category: a.series ?? "", title: a.title, subtitle: a.standfirst }),
-  href: `/research/${a.slug}`,
-}));
+    ...(framing[a.slug] ?? { category: a.series ?? "", title: a.title, subtitle: a.standfirst }),
+    href: `/research/${a.slug}`,
+  }));
 
 const crumbs = breadcrumbSchema(`${BASE_URL}/research/editorial-series`, [
   { name: "Home", path: "/" },
@@ -147,7 +150,7 @@ export default function EditorialSeriesPage() {
                   <time dateTime={isoDay(a.datePublished)}>
                     {formatDate(a.datePublished, "en")}
                   </time>{" "}
-                  · {readingMinutes(a.words)} min · in Italian
+                  · {readingMinutes(a.words)} min · translated from Italian
                 </p>
                 <span className="text-[#00B4D8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
                   Read the article →
@@ -157,9 +160,13 @@ export default function EditorialSeriesPage() {
           </div>
 
           <p className="mt-12 text-[#7D8FA3] text-sm leading-relaxed max-w-2xl">
-            The six articles are published here in full, in the Italian they were written in. Each
-            one first appeared on LinkedIn and links back to that original; this domain is the
-            archive of record, and the canonical version of every piece is the one on this site.
+            The six articles were written in Italian and first appeared on LinkedIn. They are
+            published here in full in English translation; each one links back to its LinkedIn
+            source and to the Italian original, which is also hosted on this site in the{" "}
+            <Link href="/it/ricerca/serie-editoriale" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+              Italian edition of the series
+            </Link>{" "}
+            (in Italian). This domain is the archive of record for both languages.
           </p>
         </div>
       </section>

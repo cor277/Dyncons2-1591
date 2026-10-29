@@ -102,6 +102,20 @@ export const RESEARCH_ARTICLES: Record<string, ResearchArticle> = {
     inLanguage: "it",
     keywords: ["Legge 132/2025", "AI sanità", "governance", "data residency"],
   },
+  /* English translation of "legge-132-2025", which was written in Italian. */
+  "law-132-2025": {
+    slug: "law-132-2025",
+    type: "Article",
+    headline:
+      "Law 132/2025 and AI in healthcare: what changes for hospitals, pharmacies and pharmaceutical companies",
+    description:
+      "Italy's first comprehensive law on artificial intelligence and the obligations it introduces for healthcare and pharmaceutical organisations on governance, data residency and secondary use of data.",
+    datePublished: "2025-10",
+    dateLabel: "October 2025",
+    section: "AI Governance",
+    inLanguage: "en",
+    keywords: ["Law 132/2025", "Italy AI law", "healthcare AI", "governance", "data residency"],
+  },
   "event-sourcing": {
     slug: "event-sourcing",
     type: "TechArticle",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Sorgenia — Dynamics 365 Marketing | Case Studies",
   description:
     "Dynamics 365 Marketing implementation for Sorgenia, Italy's leading green energy provider. Customer journey orchestration, campaign automation, and multi-channel engagement at scale.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/sorgenia" },
+  alternates: alternatesFor("/case-studies/sorgenia"),
 };
 
 const tech = [

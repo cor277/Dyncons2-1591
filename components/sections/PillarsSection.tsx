@@ -2,25 +2,45 @@
 import { motion } from "framer-motion";
 import { Brain, Cloud, Database } from "lucide-react";
 
-const pillars = [
-  {
-    icon: Brain,
-    title: "AI Systems",
-    desc: "Agents, RAG, Voice AI. Memory, orchestration, governance.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & Kubernetes",
-    desc: "GPU clusters, Zero-Trust, self-hosted LLM in production.",
-  },
-  {
-    icon: Database,
-    title: "Data Platforms",
-    desc: "From ERP silos to ACID data lakehouse. Zero-ETL. Real-time.",
-  },
-];
+const PILLARS = {
+  en: [
+    {
+      icon: Brain,
+      title: "AI Systems",
+      desc: "Agents, RAG, Voice AI. Memory, orchestration, governance.",
+    },
+    {
+      icon: Cloud,
+      title: "Cloud & Kubernetes",
+      desc: "GPU clusters, Zero-Trust, self-hosted LLM in production.",
+    },
+    {
+      icon: Database,
+      title: "Data Platforms",
+      desc: "From ERP silos to ACID data lakehouse. Zero-ETL. Real-time.",
+    },
+  ],
+  it: [
+    {
+      icon: Brain,
+      title: "Sistemi AI",
+      desc: "Agenti, RAG, Voice AI. Memoria, orchestrazione, governance.",
+    },
+    {
+      icon: Cloud,
+      title: "Cloud e Kubernetes",
+      desc: "Cluster GPU, Zero-Trust, LLM self-hosted in produzione.",
+    },
+    {
+      icon: Database,
+      title: "Data platform",
+      desc: "Dai silos dell’ERP al data lakehouse ACID. Zero-ETL. In tempo reale.",
+    },
+  ],
+};
 
-export function PillarsSection() {
+export function PillarsSection({ locale = "en" }: { locale?: "en" | "it" }) {
+  const pillars = PILLARS[locale];
   return (
     <section className="bg-[#161B22] py-16 border-y border-[#30363D]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">

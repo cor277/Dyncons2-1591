@@ -274,11 +274,6 @@
       ]
     },
     {
-      "type": "h",
-      "level": 2,
-      "text": "Consigliati da LinkedIn"
-    },
-    {
       "type": "p",
       "text": "Cosa documentare: tutto quello dello Scenario 3, più SBOM container, vulnerability scanning continuo, versioning, code signing, identificazione formale dei produttori di ogni container."
     },

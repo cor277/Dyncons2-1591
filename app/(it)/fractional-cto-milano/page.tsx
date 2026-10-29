@@ -197,7 +197,7 @@ export default function FractionalCtoMilanoPage() {
                 </Link>. Questo include la definizione di policy per l&apos;uso dell&apos;AI generativa
                 da parte dei dipendenti, la selezione degli strumenti e il monitoraggio
                 degli output attraverso pipeline di{" "}
-                <Link href="/services/applied-ai" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/servizi/ai-applicata" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Applied AI
                 </Link>{" "}
                 governabili.
@@ -208,11 +208,11 @@ export default function FractionalCtoMilanoPage() {
                 microservizi, event-driven, data mesh/lakehouse. Selezione dello stack
                 tecnologico. Definizione di standard di sviluppo, CI/CD, observability.
                 Per le aziende che necessitano di{" "}
-                <Link href="/services/data-platforms" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/servizi/data-platform" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   data platform
                 </Link>{" "}
                 moderne o di{" "}
-                <Link href="/services/enterprise-integration" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/servizi/integrazione-enterprise" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   integrazione enterprise
                 </Link>, il Fractional CTO progetta l&apos;architettura complessiva e ne supervisiona
                 l&apos;implementazione.
@@ -269,7 +269,7 @@ export default function FractionalCtoMilanoPage() {
                 energetiche e sanitarie che costituiscono il tessuto produttivo lombardo.
                 Per approfondire il background e la filosofia dell&apos;azienda, visita la
                 pagina{" "}
-                <Link href="/about" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/chi-siamo" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   Chi siamo
                 </Link>.
               </p>
@@ -368,7 +368,7 @@ export default function FractionalCtoMilanoPage() {
                 della documentazione tecnica e la definizione di un piano di migrazione
                 verso un&apos;architettura moderna e manutenibile. Il caso completo &egrave;
                 documentato nel{" "}
-                <Link href="/case-studies/iatp" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/case-studies/iatp" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   case study IATP
                 </Link>.
               </p>
@@ -380,7 +380,7 @@ export default function FractionalCtoMilanoPage() {
                 L&apos;intervento ha incluso la progettazione dell&apos;architettura dati, la
                 selezione dello stack tecnologico e la supervisione dell&apos;implementazione.
                 Dettagli nel{" "}
-                <Link href="/case-studies/federfarma" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/case-studies/federfarma" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   case study Federfarma
                 </Link>.
               </p>
@@ -392,7 +392,7 @@ export default function FractionalCtoMilanoPage() {
                 L&apos;intervento ha coperto la definizione dell&apos;architettura di integrazione,
                 la governance dei flussi dati e l&apos;allineamento tra IT e business.
                 Approfondisci nel{" "}
-                <Link href="/case-studies/sorgenia" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
+                <Link href="/it/case-studies/sorgenia" className="text-[#00B4D8] underline hover:text-[#E6EDF3]">
                   case study Sorgenia
                 </Link>.
               </p>

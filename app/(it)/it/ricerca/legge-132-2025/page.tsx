@@ -31,8 +31,8 @@ const schema = [
     keywords: article.keywords,
   }),
   breadcrumbSchema(ARTICLE_URL, [
-    { name: "Home", path: "/" },
-    { name: "Research", path: "/research" },
+    { name: "Risorse in italiano", path: "/it" },
+    { name: "Ricerca", path: "/it/ricerca" },
     { name: article.headline },
   ]),
 ];
@@ -46,8 +46,8 @@ export default function Legge132Article() {
         <article>
         <section className="py-24 px-6 bg-gradient-to-b from-[#0D1117] to-[#161B22]">
           <div className="max-w-3xl mx-auto">
-            <Link href="/research" className="text-sm text-[#00B4D8] hover:text-[#00C8F0] mb-6 inline-flex items-center gap-1">
-              ← All articles
+            <Link href="/it/ricerca" className="text-sm text-[#00B4D8] hover:text-[#00C8F0] mb-6 inline-flex items-center gap-1">
+              ← Tutti gli articoli
             </Link>
             <div className="flex items-center gap-3 mb-4">
               <TechBadge label="AI Governance" variant="cyan" />
@@ -66,8 +66,8 @@ export default function Legge132Article() {
               sta pianificando o ha già avviato progetti AI.
             </p>
             <p className="text-sm text-[#7D8FA3] mt-4">
-              By{" "}
-              <Link href="/about" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+              Di{" "}
+              <Link href="/it/chi-siamo" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                 Corrado Patierno
               </Link>
             </p>
@@ -252,10 +252,10 @@ export default function Legge132Article() {
         </section>
 
         <CTASection
-          title="Vuoi capire come conformare il tuo progetto AI?"
-          subtitle="Parliamo di come Nexus MDS Core può supportare la tua organizzazione nel rispetto della normativa."
-          ctaLabel="Request a Nexus demo →"
-          ctaHref="/contact"
+          title="Cosa cambia per il tuo progetto AI?"
+          subtitle="Parliamo di cosa chiede la norma al tuo sistema, e di come Nexus MDS Core regge i controlli che ne derivano."
+          ctaLabel="Richiedi una demo di Nexus →"
+          ctaHref="/it/contatti"
         />
         </article>
       </main>

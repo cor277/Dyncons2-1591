@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { Shield, X, ChevronDown, ChevronUp, Bot } from "lucide-react";
+import { useIsItalian } from "@/lib/use-is-italian";
 
 /* ─── Consent configuration ──────────────────────────────── */
 
@@ -43,9 +44,71 @@ export function hasConsent(category: keyof ConsentCategories): boolean {
   return record.categories[category];
 }
 
+/* ─── Copy, per language ─────────────────────────────────── */
+
+const COPY = {
+  en: {
+    dialog: "Privacy consent",
+    title: "Your Privacy",
+    close: "Decline non-essential and close",
+    body: "We respect your privacy. This site uses only essential cookies required for basic functionality. No tracking, no ads, no third-party profiling. Please choose which optional features you'd like to enable. Read our",
+    policy: "Privacy Policy",
+    policyHref: "/privacy",
+    after: "for full details.",
+    hide: "Hide details",
+    manage: "Manage preferences",
+    essential: "Essential",
+    essentialDesc:
+      "Session cookies and consent preferences. Required for the site to function. No personal data is collected.",
+    alwaysOn: "Always on",
+    analytics: "Analytics",
+    analyticsDesc:
+      "Anonymous, aggregated page-visit statistics. No individual tracking, no cookies set for this purpose.",
+    assistant: "AI Assistant",
+    assistantDesc: "AI-powered chatbot that answers questions about our services.",
+    assistantAi: " This is an artificial intelligence system",
+    assistantAfter:
+      ", not a human. Your conversation messages are processed to generate responses. No data is used for model training.",
+    controller: "Data controller",
+    declineAll: "Decline all",
+    save: "Save preferences",
+    essentialOnly: "Essential only",
+    acceptAll: "Accept all",
+  },
+  it: {
+    dialog: "Consenso privacy",
+    title: "La tua privacy",
+    close: "Rifiuta i non essenziali e chiudi",
+    body: "Rispettiamo la tua privacy. Questo sito usa solo i cookie essenziali al funzionamento di base. Nessun tracciamento, nessuna pubblicità, nessuna profilazione di terze parti. Scegli quali funzioni facoltative attivare. Leggi la nostra",
+    policy: "Informativa privacy",
+    policyHref: "/it/privacy",
+    after: "per tutti i dettagli.",
+    hide: "Nascondi i dettagli",
+    manage: "Gestisci le preferenze",
+    essential: "Essenziali",
+    essentialDesc:
+      "Cookie di sessione e preferenze di consenso. Necessari al funzionamento del sito. Nessun dato personale raccolto.",
+    alwaysOn: "Sempre attivi",
+    analytics: "Statistiche",
+    analyticsDesc:
+      "Statistiche anonime e aggregate sulle visite alle pagine. Nessun tracciamento individuale, nessun cookie impostato a questo scopo.",
+    assistant: "Assistente AI",
+    assistantDesc: "Chatbot basato sull’AI che risponde alle domande sui nostri servizi.",
+    assistantAi: " È un sistema di intelligenza artificiale",
+    assistantAfter:
+      ", non una persona. I messaggi della conversazione vengono elaborati per generare le risposte. Nessun dato viene usato per addestrare modelli.",
+    controller: "Titolare del trattamento",
+    declineAll: "Rifiuta tutto",
+    save: "Salva le preferenze",
+    essentialOnly: "Solo essenziali",
+    acceptAll: "Accetta tutto",
+  },
+};
+
 /* ─── Component ──────────────────────────────────────────── */
 
 export function PrivacyBanner() {
+  const t = useIsItalian() ? COPY.it : COPY.en;
   const [visible, setVisible] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [categories, setCategories] = useState<ConsentCategories>({
@@ -120,7 +183,7 @@ export function PrivacyBanner() {
       {/* Banner — bottom-left, leaves bottom-right free for chatbot */}
       <div
         role="dialog"
-        aria-label="Privacy consent"
+        aria-label={t.dialog}
         aria-modal="false"
         className={`fixed z-[999] transition-all duration-500 ease-out ${
           visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
@@ -134,13 +197,13 @@ export function PrivacyBanner() {
                 <Shield size={16} className="text-[#00B4D8]" />
               </div>
               <h3 className="font-dm font-semibold text-[#E6EDF3] text-sm">
-                Your Privacy
+                {t.title}
               </h3>
             </div>
             <button
               onClick={handleDecline}
               className="text-[#7D8FA3] hover:text-[#E6EDF3] transition-colors p-1"
-              aria-label="Decline non-essential and close"
+              aria-label={t.close}
             >
               <X size={16} />
             </button>
@@ -149,18 +212,15 @@ export function PrivacyBanner() {
           {/* Body */}
           <div className="px-5 pb-2">
             <p className="text-[#7D8FA3] text-xs leading-relaxed">
-              We respect your privacy. This site uses only essential cookies required
-              for basic functionality. No tracking, no ads, no third-party profiling.
-              Please choose which optional features you&apos;d like to enable.
-              Read our{" "}
+              {t.body}{" "}
               <Link
-                href="/privacy"
+                href={t.policyHref}
                 target="_blank"
                 className="text-[#00B4D8] underline hover:text-[#E6EDF3]"
               >
-                Privacy Policy
+                {t.policy}
               </Link>{" "}
-              for full details.
+              {t.after}
             </p>
 
             {/* Expandable consent categories */}
@@ -169,7 +229,7 @@ export function PrivacyBanner() {
               className="flex items-center gap-1 text-[#00B4D8] text-xs font-medium mt-3 hover:underline"
             >
               {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-              {expanded ? "Hide details" : "Manage preferences"}
+              {expanded ? t.hide : t.manage}
             </button>
 
             {expanded && (
@@ -177,24 +237,22 @@ export function PrivacyBanner() {
                 {/* Essential — always on */}
                 <div className="flex items-center justify-between p-3 bg-[#0D1117] rounded-lg border border-[#30363D]">
                   <div className="flex-1 pr-3">
-                    <p className="text-[#E6EDF3] text-xs font-semibold">Essential</p>
+                    <p className="text-[#E6EDF3] text-xs font-semibold">{t.essential}</p>
                     <p className="text-[#7D8FA3] text-[11px] leading-relaxed mt-0.5">
-                      Session cookies and consent preferences. Required for the site
-                      to function. No personal data is collected.
+                      {t.essentialDesc}
                     </p>
                   </div>
                   <span className="text-[#7D8FA3] text-[10px] font-mono uppercase shrink-0">
-                    Always on
+                    {t.alwaysOn}
                   </span>
                 </div>
 
                 {/* Analytics */}
                 <label className="flex items-center justify-between p-3 bg-[#0D1117] rounded-lg border border-[#30363D] cursor-pointer group">
                   <div className="flex-1 pr-3">
-                    <p className="text-[#E6EDF3] text-xs font-semibold">Analytics</p>
+                    <p className="text-[#E6EDF3] text-xs font-semibold">{t.analytics}</p>
                     <p className="text-[#7D8FA3] text-[11px] leading-relaxed mt-0.5">
-                      Anonymous, aggregated page-visit statistics. No individual
-                      tracking, no cookies set for this purpose.
+                      {t.analyticsDesc}
                     </p>
                   </div>
                   <input
@@ -211,14 +269,13 @@ export function PrivacyBanner() {
                 <label className="flex items-center justify-between p-3 bg-[#0D1117] rounded-lg border border-[#30363D] cursor-pointer group">
                   <div className="flex-1 pr-3">
                     <div className="flex items-center gap-1.5">
-                      <p className="text-[#E6EDF3] text-xs font-semibold">AI Assistant</p>
+                      <p className="text-[#E6EDF3] text-xs font-semibold">{t.assistant}</p>
                       <Bot size={12} className="text-[#00B4D8]" />
                     </div>
                     <p className="text-[#7D8FA3] text-[11px] leading-relaxed mt-0.5">
-                      AI-powered chatbot that answers questions about our services.
-                      <strong className="text-[#E6EDF3]"> This is an artificial intelligence system</strong>,
-                      not a human. Your conversation messages are processed to generate
-                      responses. No data is used for model training.
+                      {t.assistantDesc}
+                      <strong className="text-[#E6EDF3]">{t.assistantAi}</strong>
+                      {t.assistantAfter}
                     </p>
                   </div>
                   <input
@@ -233,7 +290,7 @@ export function PrivacyBanner() {
 
                 {/* Data controller */}
                 <p className="text-[#7D8FA3] text-[10px] px-1 pt-1">
-                  Data controller: Dynamics Consulting — Corrado Patierno ·{" "}
+                  {t.controller}: Dynamics Consulting — Corrado Patierno ·{" "}
                   <a
                     href="mailto:privacy@dynamicsconsulting.it"
                     className="text-[#00B4D8] underline"
@@ -253,13 +310,13 @@ export function PrivacyBanner() {
                   onClick={handleDecline}
                   className="flex-1 px-4 py-2.5 rounded-lg border border-[#30363D] text-[#7D8FA3] hover:text-[#E6EDF3] hover:border-[#E6EDF3] text-xs font-semibold transition-all duration-200"
                 >
-                  Decline all
+                  {t.declineAll}
                 </button>
                 <button
                   onClick={handleSavePreferences}
                   className="flex-1 px-4 py-2.5 rounded-lg border border-[#00B4D8] text-[#00B4D8] hover:bg-[#00B4D8]/10 text-xs font-semibold transition-all duration-200"
                 >
-                  Save preferences
+                  {t.save}
                 </button>
               </div>
             ) : (
@@ -268,13 +325,13 @@ export function PrivacyBanner() {
                   onClick={handleDecline}
                   className="flex-1 px-4 py-2.5 rounded-lg border border-[#30363D] text-[#7D8FA3] hover:text-[#E6EDF3] hover:border-[#E6EDF3] text-xs font-semibold transition-all duration-200"
                 >
-                  Essential only
+                  {t.essentialOnly}
                 </button>
                 <button
                   onClick={handleAcceptAll}
                   className="flex-1 px-4 py-2.5 rounded-lg bg-[#00B4D8] text-[#0D1117] hover:bg-[#00C8F0] text-xs font-semibold transition-all duration-200 shadow-[0_0_16px_rgba(0,180,216,0.3)]"
                 >
-                  Accept all
+                  {t.acceptAll}
                 </button>
               </div>
             )}

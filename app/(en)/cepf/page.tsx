@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
@@ -31,7 +32,7 @@ const pageSchema = [
 export const metadata: Metadata = {
   title: "CEPF — AI and Regulatory Compliance Framework",
   description: DESCRIPTION,
-  alternates: { canonical: URL },
+  alternates: alternatesFor("/cepf"),
   openGraph: {
     images: OG_IMAGE,
     title: "Compliance-Epistemic Project Framework (CEPF)",

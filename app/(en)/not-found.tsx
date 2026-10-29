@@ -4,7 +4,7 @@ import { NavBar } from '@/components/layout/NavBar';
 import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Page not found | Dynamics Consulting',
+  title: 'Page not found',
   description: 'The page you are looking for does not exist.',
   robots: { index: false, follow: false },
 };

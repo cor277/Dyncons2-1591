@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "IATP — AI-Driven Legacy Reverse Engineering",
   description:
     "AI-assisted reverse engineering of a legacy platform with RAG-based analysis document generation via Nexus, and a full AI-driven development pipeline with Antigravity, Trae, MCP servers, and Comet testing.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/iatp" },
+  alternates: alternatesFor("/case-studies/iatp"),
 };
 
 const tech = [

@@ -104,32 +104,30 @@ One question per page, answered in the opening block, with primary sources
 - [The Lakehouse Is Not Enough](${BASE_URL}/research/lakehouse-not-enough)
 - [AI Reverse Engineering of Legacy Platforms](${BASE_URL}/research/ai-reverse-engineering)
 - [Event Sourcing in Practice](${BASE_URL}/research/event-sourcing)
-- [Legge 132/2025 e AI in Sanità: cosa cambia](${BASE_URL}/research/legge-132-2025): In Italian.
-- [Editorial series — PLD 2024 & AI governance](${BASE_URL}/research/editorial-series): Six articles on the revised product liability directive, written by Corrado Patierno and published here in full, in Italian. They first appeared on LinkedIn; this domain is the archive of record and carries the canonical version.
-- [PLD 2024: i sette cambi strutturali](${BASE_URL}/research/pld-2024-sette-cambi-strutturali): Article I — software as a product, ten-year liability, security maintenance, customisations as new releases, individual technical accountability, supply chain traceability.
-- [PLD 2024: i 5+1 scenari di sviluppo software](${BASE_URL}/research/pld-2024-cinque-piu-uno-scenari): Article II — the exposure each development model generates for the software house, its employees and its external consultants.
-- [PLD 2024: il decennio che cambia tutto](${BASE_URL}/research/pld-2024-decennio-responsabilita): Article III — joint liability, insolvency of the producer, and run-off cover.
-- [PLD 2024: vulnerability management e gestione CVE](${BASE_URL}/research/pld-2024-vulnerability-management-cve): Article IV — reasonable diligence, patching windows, and the limit Article 15 places on transferring liability by contract.
-- [La fuga giurisdizionale, e perché non esiste](${BASE_URL}/research/pld-2024-fuga-giurisdizionale): Article V — Brussels I bis, Rome II, corporate veil, criminal liability.
-- [Contratti e polizza nel regime PLD 2024](${BASE_URL}/research/pld-2024-contratti-e-polizza): Article VI — twenty contract clauses and the insurance policy, read from the client's, the software house's and the signing professional's side.
+- [Law 132/2025 and AI in healthcare](${BASE_URL}/research/law-132-2025): Italy's AI law and what it changes for hospitals, pharmacies and pharmaceutical companies. Translated from the Italian original.
+- [Editorial series — PLD 2024 & AI governance](${BASE_URL}/research/editorial-series): Six articles on the revised product liability directive by Corrado Patierno, written in Italian (first published on LinkedIn) and published here in full English translation.
+- [PLD 2024: seven structural changes](${BASE_URL}/research/pld-2024-seven-structural-changes): Article I — software as a product, ten-year liability, security maintenance, customisations as new releases, individual technical accountability, supply chain traceability.
+- [PLD 2024: the 5+1 software development scenarios](${BASE_URL}/research/pld-2024-five-plus-one-scenarios): Article II — the exposure each development model generates for the software house, its employees and its external consultants.
+- [PLD 2024: a decade of liability](${BASE_URL}/research/pld-2024-a-decade-of-liability): Article III — joint liability, insolvency of the producer, and run-off cover.
+- [PLD 2024: vulnerability management and CVEs](${BASE_URL}/research/pld-2024-vulnerability-management): Article IV — reasonable diligence, patching windows, and the limit Article 15 places on transferring liability by contract.
+- [The jurisdictional escape, and why it does not exist](${BASE_URL}/research/pld-2024-jurisdictional-escape): Article V — Brussels I bis, Rome II, corporate veil, criminal liability.
+- [Contracts and insurance under PLD 2024](${BASE_URL}/research/pld-2024-contracts-and-insurance): Article VI — twenty contract clauses and the insurance policy, read from the client's, the software house's and the signing professional's side.
 - [EU Cloud and AI Development Act (CADA) — the four Union assurance levels](${BASE_URL}/tech-sovereignty): Analysis of COM(2026) 502 final of 3 June 2026: what Annex II asks at each assurance level, who must procure which level, the software supply chain criteria it shares with the CRA and PLD 2024, and how it sits beside the AI Act. It is a proposal, not adopted law, and the page says so.
 - [Research index](${BASE_URL}/research)
 
 ## Italiano
 
-- [Risorse in italiano — indice](${BASE_URL}/it): Entry point for every Italian-language page.
-- [Consulenza AI, governance e compliance](${BASE_URL}/it/consulenza-ai-governance-compliance): The Italian counterpart of the governance advisory service — written for Italian decision-makers, not a translation of record.
+Every page of this site exists in Italian too; the Italian address of each English page is declared with hreflang. The main entry points:
+
+- [Home in italiano](${BASE_URL}/it): Consulenza AI, governance e compliance; infrastruttura AI sovrana. Ends with the full list of Italian pages.
+- [Nexus MDS Core — piattaforma](${BASE_URL}/it/piattaforma-nexus)
+- [Consulenza AI, governance e compliance](${BASE_URL}/it/consulenza-ai-governance-compliance)
 - [Assessment di esposizione — PLD 2024 e AI Act](${BASE_URL}/it/assessment)
-- [Federfarma Lombarda — Nexus MDS Core in produzione](${BASE_URL}/it/case-studies/federfarma)
-- [AI On-Premise per la Sanità Italiana](${BASE_URL}/it/ai-sanitaria-on-premise)
-- [Consulenza AI per il Farmaceutico](${BASE_URL}/it/consulenza-ai-farmaceutico)
-- [Sovereign AI Italia — infrastruttura AI governabile](${BASE_URL}/it/sovereign-ai-italia)
-- [Implementare AI sui dati aziendali](${BASE_URL}/it/ai-dati-aziendali)
-- [AI per norme tecniche e ingegneria](${BASE_URL}/it/ai-ingegneria-tecnica)
-- [Agenti AI per finanza e compliance](${BASE_URL}/it/ai-agenti-finanziari)
-- [AI Sovrana per il Pharma Italiano](${BASE_URL}/sovereign-ai-pharma-italia)
-- [Modernizzazione sistemi legacy con AI](${BASE_URL}/modernizzazione-sistemi-legacy-ai)
-- [Fractional CTO Milano](${BASE_URL}/fractional-cto-milano)
+- [Case study](${BASE_URL}/it/case-studies)
+- [Risposte](${BASE_URL}/it/risposte)
+- [Ricerca](${BASE_URL}/it/ricerca): including the original Italian texts of the PLD 2024 series and of the Law 132/2025 article.
+- [Fractional CTO Milano](${BASE_URL}/fractional-cto-milano): Written for the Milan mid-market; Italian only.
+- [CRA: segnalazione in 24 ore](${BASE_URL}/cra-11-settembre): Article 14 of Regulation (EU) 2024/2847; Italian only.
 
 ## Optional
 

@@ -6,6 +6,8 @@ import { CTASection } from "@/components/sections/CTASection";
 const LABELS = {
   en: {
     indexHref: "/answers",
+    ctaLabel: "Start the conversation →",
+    contactHref: "/contact",
     aboutHref: "/about",
     all: "← All answers",
     by: "By",
@@ -19,6 +21,8 @@ const LABELS = {
   },
   it: {
     indexHref: "/it/risposte",
+    ctaLabel: "Inizia la conversazione →",
+    contactHref: "/it/contatti",
     aboutHref: "/it/chi-siamo",
     all: "← Tutte le risposte",
     by: "Di",
@@ -162,7 +166,12 @@ export function AnswerPageLayout({
           </section>
         </article>
 
-        <CTASection title={ctaTitle} subtitle={ctaSubtitle} />
+        <CTASection
+          title={ctaTitle}
+          subtitle={ctaSubtitle}
+          ctaLabel={L.ctaLabel}
+          ctaHref={L.contactHref}
+        />
       </main>
       <Footer />
     </>

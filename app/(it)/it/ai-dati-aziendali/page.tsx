@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: "Implementare AI sui dati aziendali | Nexus MDS Core",
   description:
     "Percorso strutturato per PMI: discovery, MVP RAG, validazione. AI on-premise con Nexus MDS Core, controlli mappati sul GDPR, dati nel perimetro.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/it/ai-dati-aziendali" },
+  alternates: alternatesFor("/it/ai-dati-aziendali"),
   openGraph: {
     images: OG_IMAGE,
     title: "Implementare AI sui dati aziendali | Nexus MDS Core",
@@ -116,7 +117,7 @@ export default function AiDatiAziendaliPage() {
               un progetto aperto che cresce senza controllo.
             </p>
             <div className="pt-6">
-              <CTAButton label="Parliamo del tuo progetto →" href="/contact" variant="primary" />
+              <CTAButton label="Parliamo del tuo progetto →" href="/it/contatti" variant="primary" />
             </div>
           </div>
         </section>
@@ -126,19 +127,19 @@ export default function AiDatiAziendaliPage() {
             <h2 className="text-2xl font-bold text-[#E6EDF3] mb-4">Approfondimenti</h2>
             <ul className="space-y-3 text-base">
               <li>
-                <Link href="/research/rag-enterprise-data" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/ricerca/rag-dati-aziendali" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Implementare RAG sui dati aziendali: la guida onesta
                 </Link>
-                <span className="text-[#7D8FA3]"> — discovery, chunking, valutazione del retrieval (in inglese).</span>
+                <span className="text-[#7D8FA3]"> — discovery, chunking, valutazione del retrieval.</span>
               </li>
               <li>
-                <Link href="/answers/superseded-documents-rag" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/risposte/documenti-superati-rag" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Documenti normativi superati in un sistema RAG
                 </Link>
-                <span className="text-[#7D8FA3]"> — catene di versione e intervalli di validità (in inglese).</span>
+                <span className="text-[#7D8FA3]"> — catene di versione e intervalli di validità.</span>
               </li>
               <li>
-                <Link href="/services/data-platforms" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/servizi/data-platform" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Data platform e architetture RAG
                 </Link>
                 <span className="text-[#7D8FA3]"> — la linea di servizio.</span>

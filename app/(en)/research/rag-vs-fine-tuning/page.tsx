@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "RAG vs Fine-Tuning: Enterprise AI Guide",
   description:
     "A decision framework for choosing between retrieval-augmented generation and fine-tuning based on data freshness, cost, latency, and risk profile. From production experience.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/rag-vs-fine-tuning" },
+  alternates: alternatesFor("/research/rag-vs-fine-tuning"),
 };
 
 const article = RESEARCH_ARTICLES["rag-vs-fine-tuning"];

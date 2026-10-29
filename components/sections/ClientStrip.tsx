@@ -1,3 +1,6 @@
+"use client";
+import { useIsItalian } from "@/lib/use-is-italian";
+
 /**
  * Two lists, deliberately separate.
  *
@@ -45,12 +48,13 @@ function Marquee({ items }: { items: string[] }) {
 }
 
 export function ClientStrip() {
+  const isItalian = useIsItalian();
   return (
     <section className="py-12 bg-[#161B22] border-y border-[#30363D] overflow-hidden">
       {directClients.length > 0 && (
         <>
           <p className="text-center text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mb-8">
-            Clients
+            {isItalian ? "Clienti" : "Clients"}
           </p>
           <Marquee items={directClients} />
         </>
@@ -59,7 +63,7 @@ export function ClientStrip() {
       {experienceWith.length > 0 && (
         <>
           <p className="text-center text-[#7D8FA3] text-xs font-mono uppercase tracking-[0.15em] mb-8 mt-12">
-            Experience gained at
+            {isItalian ? "Esperienza maturata presso" : "Experience gained at"}
           </p>
           <Marquee items={experienceWith} />
         </>

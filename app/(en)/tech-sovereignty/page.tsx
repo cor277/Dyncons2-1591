@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { SOURCES } from "@/app/primary-sources";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     "cloud procurement NIS2",
     "sovereignty assessment",
   ],
-  alternates: { canonical: URL },
+  alternates: alternatesFor("/tech-sovereignty"),
   openGraph: {
     images: OG_IMAGE,
     title: "EU Cloud and AI Development Act (CADA): the four Union assurance levels",

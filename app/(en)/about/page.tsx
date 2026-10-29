@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "About — Corrado Patierno, AI consulting and engineering",
   description:
     "Dynamics Consulting is an independent Italian AI consulting and engineering practice led by Corrado Patierno: AI governance and compliance, enterprise AI architecture, sovereign infrastructure. 25+ years in enterprise systems, MISE Innovation Manager, author of Logistica Fluida.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/about" },
+  alternates: alternatesFor("/about"),
 };
 
 const values = [

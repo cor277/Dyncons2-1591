@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Governing AI Outputs in Regulated Industries",
   description:
     "Audit logging, output validation, human-in-the-loop patterns, and model card requirements from production AI deployments in healthcare, pharma, and public sector.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/governing-ai-outputs" },
+  alternates: alternatesFor("/research/governing-ai-outputs"),
 };
 
 const article = RESEARCH_ARTICLES["governing-ai-outputs"];

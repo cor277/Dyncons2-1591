@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { CalibraDemo } from "./CalibraDemo";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: "Calibra — the software built on CEPF",
   description: DESCRIPTION,
   keywords: ["Calibra", "CEPF software", "compliance programme management", "AI governance tooling"],
-  alternates: { canonical: URL },
+  alternates: alternatesFor("/calibra"),
   openGraph: {
     images: OG_IMAGE,
     title: "Calibra — the software built on CEPF",

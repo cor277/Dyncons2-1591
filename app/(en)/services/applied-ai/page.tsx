@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { OG_IMAGE } from "@/app/og";
 import { ServicePageLayout, type Capability } from "@/components/sections/ServicePageLayout";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   title: "Applied AI & Agentic Workflows",
   description: "Multi-agent systems, RAG pipelines, Voice AI and AI governance for organisations in regulated industries. GDPR and AI Act compliance by design.",
   keywords: ["agentic AI", "multi-agent systems", "RAG architecture enterprise", "voice AI", "GDPR AI compliance", "AI Act"],
-  alternates: { canonical: "https://www.dynamicsconsulting.it/services/applied-ai" },
+  alternates: alternatesFor("/services/applied-ai"),
   openGraph: {
     images: OG_IMAGE,
     title: "Applied AI & Agentic Workflows | Dynamics Consulting",

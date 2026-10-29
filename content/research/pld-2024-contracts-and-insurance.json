@@ -1,0 +1,808 @@
+{
+  "slug": "pld-2024-contracts-and-insurance",
+  "lang": "en",
+  "translationOf": "pld-2024-contratti-e-polizza",
+  "title": "Contracts and insurance under the PLD 2024 regime. Twenty clauses, three perspectives, one shortcut not to sign.",
+  "standfirst": "The twenty clauses and the insurance policy, seen from all three sides. Client, software house, signing professional: contract and insurance cover in an asymmetric balance of power, before 9 December 2026.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-06-03T17:43:54.000+00:00",
+  "dateModified": "2026-06-03T17:44:25.000+00:00",
+  "series": "Article VI · Contracts & insurance",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/contratti-e-polizza-nel-regime-pld-2024-venti-tre-una-patierno-pucxf"
+  },
+  "importedAt": "2026-09-09",
+  "words": 7092,
+  "blocks": [
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The twenty clauses and the insurance policy, seen from all three sides. Client, software house, signing professional: contract and insurance cover in an asymmetric balance of power, before 9 December 2026."
+    },
+    {
+      "type": "p",
+      "text": "Sixth article in the series on the PLD 2024 and Italian software houses."
+    },
+    {
+      "type": "p",
+      "text": "Epistemic note: each clause comes with a rationale and a structural example. The structural example is not ready-to-use contract wording: it is the skeleton of a clause, with trigger, scope, parameters and exclusions, to be handed to your own IT lawyer for formal drafting. The same applies to the insurance specifications, which must be calibrated with a qualified broker on the specific profile."
+    },
+    {
+      "type": "p",
+      "text": "The same contract, read by people who sign it from different positions, is a different contract. For the client buying software, it is a tool to protect the purchase and — when the product affects third parties — its own future exposure. For the software house selling it, it is a tool for allocating the ten-year risk under the PLD 2024, simultaneously towards the client and towards the professional who signs off technically. For the signing professional, it is a tool of personal protection inside a structurally unbalanced relationship, where formal reciprocity does not exist and the counterparty's cover should be assumed inadequate until proven otherwise."
+    },
+    {
+      "type": "p",
+      "text": "The twenty clauses needed in post-PLD contracts for regulated software are not a neutral list. They are the same contractual object seen from three sides with opposing interests and different protection strategies. The clauses alone are not enough: they must be accompanied by insurance cover consistent with the ten-year regime, which also takes three distinct forms depending on who insures what."
+    },
+    {
+      "type": "p",
+      "text": "A methodological premise. Contractual parity is an abstraction. In Italy, in the vast majority of cases, there are three structural asymmetries of power. The enterprise client has leverage over the software house. The software house has leverage over the freelance professional. The professional has no symmetrical leverage over either of them. Recognising these asymmetries changes everything: whoever is at the top demands, whoever is at the bottom equips themselves on the assumption that the cover above them will not be enough."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "I. From the commissioning client's point of view"
+    },
+    {
+      "type": "p",
+      "text": "The client is the party in the position of strength. Its problem is twofold: protecting the purchase, and avoiding signing clauses that turn it into a manufacturer under the PLD 2024 without realising it."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What the client must demand from the software house"
+    },
+    {
+      "type": "p",
+      "text": "Clause 1 — Software Bill of Materials on delivery."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Without an SBOM, the client does not know what it has integrated. In court it has no way of reconstructing the chain of liability, and it is exposed to culpa in eligendo for failing to verify the state of the art of the product it bought (as referenced by NIS2 and ISO 27001:2022 control A.8.8). Demanding the SBOM is an act of buyer diligence that documents the client's own conduct."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Subject: a complete SBOM of the product delivered by the software house to the client.",
+        "Format: CycloneDX or SPDX, machine-readable.",
+        "Minimum content: identification of each integrated software component, version, licence, upstream supplier, integrity hash.",
+        "Timing: SBOM delivered at the initial release and updated at every major release or within 30 days of integrating new components.",
+        "Transmission: a traceable documentary channel, with both parties retaining it for the entire decade after placing on the market.",
+        "Consequences of non-delivery: suspension of payments for the release until the situation is regularised."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 2 — A structured CVE process."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Vulnerability notification cannot be \"we'll let you know when it happens\". Without a contractual process, the client learns about CVEs by chance, cannot document its diligence, and the supplier can claim to have informed it even when it did not do so in any useful way. For the client it is evidence of its own diligence; for the supplier it is proof of performance."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Severity classes: Class 1 (CVSS ≥ 9.0 or CISA-KEV flag); Class 2 (CVSS 7.0-8.9); Class 3 (CVSS 4.0-6.9); Class 4 (CVSS < 4.0).",
+        "Notification times: Class 1 within 48h of CVE publication; Class 2 within 5 working days; Class 3 within 15 days; Class 4 in the regular monthly cycle.",
+        "Mandatory content of the notification: CVE identifier, description of the specific risk in the context of the product, window of vulnerability, available mitigation (workaround), patch (timing).",
+        "Channel: a dedicated portal or PEC (Italian certified email), with date/time tracking.",
+        "Consequences of delay: a predefined penalty scaled to the severity class, without prejudice to the right to compensation for further damage."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 3 — Declared useful life and scope of ten-year support."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. The PLD 2024 establishes a ten-year liability regime for the manufacturer. Without an explicit statement of what is covered, the supplier will argue that many activities are \"paid enhancements\" while the client will assume they are \"included maintenance\". The clause aligns expectations with the PLD regime."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Declared useful life of the product: N years (typically 7-10 for regulated enterprise software).",
+        "Scope of included ten-year support: (a) corrective maintenance (bug fixes); (b) vulnerability management (security patches for Class 1 and 2 CVEs); (c) replacement of components abandoned upstream (see Clause 4); (d) compatibility maintenance against supported versions of OS / runtime / database.",
+        "Excluded scope (separately remunerated): new functionality, integrations with unforeseen third-party systems, migrations to a major version of the product.",
+        "Start date: from the date the production release is accepted.",
+        "Extension beyond the decade: optional, under an offer to be made in the 24 months before expiry."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 4 — Replacement of components abandoned upstream."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Third-party open-source components can be abandoned upstream, declared EOL, or carry critical CVEs that cannot be patched. Without a predefined mechanism, each event becomes a confrontational negotiation at the moment of need, while the software house's PLD exposure under Art. 8 remains in place. The clause moves the event from the unforeseen to a contractually defined scenario."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Activation triggers: (a) component no longer maintained upstream for > 90 days; (b) EOL declaration of the component; (c) critical CVE (CVSS ≥ 7.0 + KEV) with no upstream patch within 30 days.",
+        "Scope of the software house's service: identification of an equivalent replacement component, integration, regression testing, re-documentation.",
+        "Timing: preliminary analysis within 15 working days of the trigger; replacement plan within 30 days; execution within the Tier (see below).",
+        "Pricing tiers: Tier A (critical component, execution in 60 days, [rate agreed in the commercial annex]); Tier B (significant, 90 days, [agreed rate]); Tier C (non-critical, 120 days, [agreed rate]).",
+        "Exclusions: replacements requested for the client's aesthetic or non-functional preference; replacements resulting from choices imposed by the client against the software house's recommendation (see Clause 8)."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 5 — Proof of the software house's insurance cover."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. A supplier's indemnification without adequate insurance cover is a bare promise — with nothing behind it at the moment of need. The client in the position of strength is entitled to require annual proof of a policy with the minimum parameters of the PLD regime. A supplier's refusal to show the policy is in itself a signal of commercial risk."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Documentation that can be required: certificate of cover issued by the insurer, stating limits, period, retroactive cover, extended reporting period, beneficiaries, and confirmation that the current premium has been paid.",
+        "Minimum parameters: limit per claim ≥ €2M; annual aggregate ≥ €4M; full retroactive cover; ten-year extended reporting period; explicit cover for software product liability, AI/algorithmic and cyber; defence costs outside the limit.",
+        "Frequency: shown within 30 days of signing and thereafter within 30 days of each policy renewal.",
+        "Consequences of failure to show it, or of cover below the minimums: the client's right to suspend payments related to new releases, without prejudice to the supplier's maintenance obligations."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What the client must avoid signing"
+    },
+    {
+      "type": "p",
+      "text": "Clause 6 — Rejecting clauses that offload the manufacturer's acts onto the client."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Clauses such as \"CVE monitoring is the client's responsibility\" transfer the manufacturer's structural acts. Against the end consumer they cannot be relied upon under Art. 15 PLD; between the parties, however, the client that signs them takes on an unfair burden and may end up being treated as a co-manufacturer."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Example wording to reject: \"The Client is responsible for monitoring vulnerabilities published on the components integrated into the Product and for assessing their relevance for security purposes.\"",
+        "The client's defensive rewording: \"The Supplier is responsible for CVE monitoring of the Product's components and for notifying the Client according to the process in Clause [2]. The Client is required only to receive the notification, assess its applicability to its own systems, and decide whether to apply the proposed patches.\"",
+        "Point of attention: any reversal of the burden for the manufacturer's structural acts should be rejected outright, not merely limited."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 7 — Beware of \"imposed specifications\"."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. When the client imposes technical choices against the supplier's recommendation, it may be treated as a co-manufacturer under Art. 8 PLD for the resulting defect. This is not about giving up the right to impose — it is about doing so with documentary awareness, so that responsibility for the choice is traced."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Procedure the client can trigger: a client that intends to impose a technical choice differing from the supplier's recommendation asks the supplier for a written technical note describing: (a) the supplier's recommendation; (b) the technical risks of the imposed choice; (c) possible mitigations; (d) consequences for the scope of PLD liability.",
+        "Client's act of acceptance: having received the technical note, the client may proceed by signing a formal act of informed acceptance of the risk.",
+        "Effect: between the parties, the act serves as proof that the choice belongs to the client, while it still cannot be relied upon against the end consumer under Art. 15 PLD.",
+        "Exclusions: choices at the level of execution or standard customisation that do not affect security or architecture fall outside the procedure."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "II. From the software house's point of view"
+    },
+    {
+      "type": "p",
+      "text": "The software house is the hub: it has primary exposure as manufacturer under Art. 8 PLD, and must equip itself simultaneously towards the client, towards the professional who signs off technically, and towards non-EU suppliers."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Towards the client"
+    },
+    {
+      "type": "p",
+      "text": "Clause 8 — Audit trail of architectural decisions imposed by the client."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. When the client imposes choices against the supplier's recommendation, the software house must be able to prove in court that the choice was not its own. Without a formal audit trail, in an ex post reconstruction liability concentrates on the technical signatory and it is the software house that pays. The clause institutionalises the record and shifts the burden of proof."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Trigger: any request by the client amounting to an architectural, security or component choice that differs from the supplier's technical recommendation.",
+        "Documentation produced by the supplier: a technical note with (a) a description of the client's request; (b) the alternative recommendation; (c) the technical risks of the client's choice; (d) the impact on the PLD scope.",
+        "Client's act of acceptance: qualified electronic signature or PEC.",
+        "Retention: the supplier's document system, with ten-year retention, accessible to the client on request.",
+        "Contractual consequence: between the parties, the imposed choice is classed as a \"client's choice\" for the internal allocation of liability."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 9 — Client refusal of a patch and assumption of risk."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. When the client refuses a recommended patch, the software house remains exposed towards the end consumer but has no way of mitigating the risk. The clause institutionalises a formal refusal process, so that liability for the unpatched defect shifts contractually to the client."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Procedure: the supplier notifies the patch under Clause 2; the client's refusal is formalised by PEC within 15 days of the notification.",
+        "Content of the refusal: the client's statement that it does not wish to apply the patch and assumes the residual risk for the window without the patch.",
+        "Software house countersignature: acknowledgement of the refusal and quantification of the residual exposure, communicated to the client within 5 days.",
+        "Effect: for the window without the patch, internal liability for the defect related to the unpatched vulnerability rests with the client, while it still cannot be relied upon against the end consumer under Art. 15 PLD.",
+        "Tracking: a documentary count of refusals, which triggers Clause 10 above a threshold."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 10 — Ending active maintenance after repeated refusals."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. A software house that remains responsible for maintaining a system where the client systematically refuses patches stays exposed to PLD liability with no tools for mitigation. The clause allows the supplier to leave the regime of active responsibility, formalising the move of the system to a \"no maintenance, full risk on customer\" regime."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Trigger: 3 formal refusals of Class 1 or 2 patches in the preceding 12 months, on the same system.",
+        "Supplier's notice: formal communication to the client, with 30 days' notice, of the intention to end active maintenance.",
+        "Post-termination regime: system in \"no maintenance, full risk on customer\" status; supplier released from corrective maintenance and vulnerability management obligations; client assumes the full risk of the system.",
+        "Tracking: a formal statement of the status, retained by both parties.",
+        "Effect towards third parties: the release operates between the parties and in the internal recourse regime; the fact that it cannot be relied upon against the end consumer under Art. 15 PLD remains."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 11 — Changes in production as a contract variation."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Technical changes requested by the client on systems already in production, if absorbed into the fee as \"small tweaks\", end up inside the supplier's PLD scope with no re-documentation and no new price. The clause classes them as a formal variation, with separate remuneration and — where significant — re-documentation and a new technical sign-off."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Definition of a change in production: any alteration of the product already accepted into production, excluding Class 1 and 2 bug fixes (which are maintenance).",
+        "Procedure: formal request from the client; supplier's quotation with estimated costs, timing, and impact on security and on the PLD scope; client acceptance; execution and re-documentation.",
+        "Threshold for a new technical sign-off: changes affecting security components, personal data handling, or the product's architecture require a new technical signature from the signing professional and an SBOM update.",
+        "Remuneration: per the commercial annex, separate from the maintenance fee.",
+        "Effect on the PLD regime: the decade of liability for the change runs from the date the variation is accepted, separately from the decade of the original product."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 12 — Limitation of liability with an explicit reference to Art. 15 PLD."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Liability caps agreed between the parties have room within contractual freedom, but they cannot be relied upon against the end consumer under Art. 15 PLD. A clause that does not say so explicitly creates interpretive ambiguity. Stating the limit is contractual honesty that protects you in court."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Limitation between the parties: the software house's liability cap towards the client is set at [N times the annual contract value] per event and at an annual aggregate of [M times the annual value].",
+        "Exclusions from the cap: wilful misconduct, gross negligence, GDPR breaches, and any item for which the law excludes contractual limitation.",
+        "Reference to Art. 15 PLD: \"The parties expressly acknowledge that, under Article 15 of Directive (EU) 2024/2853 and the corresponding Italian transposing legislation, any limitation of the manufacturer's liability towards the injured person is unenforceable and void. This clause operates solely in the internal relationship between Supplier and Client, and does not affect the liability of either party towards injured third parties.\"",
+        "Effect: internal recourse between the parties operates within the cap; direct actions by the injured person are not affected."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Towards the signing professional"
+    },
+    {
+      "type": "p",
+      "text": "Clause 13 — Defining the signed scope."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Without an explicit distinction between what the professional signs off technically and what they configure under instruction, the professional answers for everything and — on recourse — the software house finds itself exposed to the professional's claims for choices that were not theirs. The clause distinguishes the duty-of-care position under Art. 40(2) of the Italian Criminal Code from mere execution, and it is in both parties' interest."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Acts signed by the professional: architectural design, security choices (encryption, authentication, secrets management, permission models), integration and component-dependency decisions, approval of release to production.",
+        "Acts carried out under instruction (not signed): technical implementation of choices already signed, configuration of operational parameters, deployment to non-production environments, minor non-structural changes.",
+        "Documentation of the signature: an internal technical register at the software house that records, for each signed act, the signatory's identity, date, the signed design document, and the outcome of the security review.",
+        "Consequences for the PLD regime: the signatory's duty-of-care position extends only to the signed acts; acts carried out under instruction remain the responsibility of whoever gave the instruction."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 14 — Recognising the right and duty of written dissent."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Without documented dissent, in court liability concentrates on the technical executor and the software house has no way to show that the defect derives from a client or management choice. It looks contrary to the software house's interest; in reality it protects it in PLD litigation and in its dealings with the insurer."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The professional's right: to express written dissent on technical choices imposed by the software house or the client that they consider to present significant risks to security, regulatory compliance, or product integrity.",
+        "The professional's duty: to produce dissent when they identify such risks, in traceable documentary form (PEC, company email, internal document system).",
+        "Minimum content of the dissent: description of the contested choice; description of the risk; alternative recommendation; the statement \"I am proceeding as instructed under the responsibility of [software house / client]\".",
+        "The software house's commitments: not to penalise the professional for dissent produced; to retain dissents in the document system for the PLD decade; to make them available to the professional even after the relationship ends.",
+        "Effect on the PLD regime: written dissent shifts the duty-of-care position under Art. 40(2) of the Italian Criminal Code from the executor to the recipient of the dissent who failed to act on it."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 15 — Showing the professional's indemnity policy."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. The software house, in the position of strength, can require annual proof of the professional's policy. Without an adequate policy on the professional's side, the supplier's contractual recourse (in the event of exposure arising from a technical choice of the professional) is ineffective."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Documentation that can be required: the professional's certificate of cover, with limits, period, retroactive cover, extended reporting period, beneficiaries, confirmation of payment.",
+        "Minimum parameters: limit per claim ≥ €1.5M; annual aggregate ≥ €3M; full retroactive cover; ten-year extended reporting period; explicit cover for AI/algorithmic, the signatory's acts, and the duty-of-care position.",
+        "Frequency: shown at the start of the relationship and thereafter within 30 days of each renewal.",
+        "Consequences of failure to show it, or of cover below the minimums: suspension of assigning new signed acts to the professional until the situation is regularised; this is not in itself grounds for termination."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Towards non-EU suppliers"
+    },
+    {
+      "type": "p",
+      "text": "Clause 16 — Mandatory appointment of an EU authorised representative."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. If the non-EU supplier has not appointed an EU authorised representative under Art. 8 PLD, the EU importer of the component is in practice the commissioning Italian software house — often without knowing it. The clause requires the non-EU supplier to appoint a representative and make it known."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Obligation: the non-EU supplier undertakes to appoint, and maintain throughout the contractual relationship, an authorised representative established in the European Union under the PLD legislation in force.",
+        "Required documentation: the act of appointment, identification of the representative (name, EU registered office, contacts), the representative's acceptance.",
+        "Frequency: the appointment is communicated to the commissioning software house within 30 days of signing the contract and updated in case of change.",
+        "Consequences of non-performance: suspension of the contract and related payments until the situation is regularised; the commissioning software house may withdraw after 60 days of continued non-performance."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 17 — Indemnification with verified proof of cover."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Towards a non-EU party, indemnification without demonstrated insurance cover is a bare promise. Recovery after litigation is statistically partial, slow, and often unenforceable. The clause makes the indemnification conditional on cover existing and being shown."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Supplier's indemnity: the non-EU supplier undertakes to hold the commissioning software house harmless from any third-party claim arising from a defect in the supplied component, within the limits of the applicable PLD regime.",
+        "Condition of effectiveness: the indemnification is effective and can be invoked only if the supplier maintains an insurance policy with limits consistent with the component's exposure (minimum parameters in the annex), naming the commissioning software house as beneficiary, and provides annual proof of it.",
+        "Documentation: certificate of cover, a sworn Italian translation if in a foreign language, validation by the supplier's EU broker.",
+        "Consequences of failing to maintain the policy: suspension of the contract, activation of the financial guarantee in Clause 18."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 18 — EU forum, Italian law, financial guarantee."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. An Italian judgment against a non-EU supplier is often a dead letter, unless there are specific international agreements on enforceability. The clause secures Italian jurisdiction, Italian law, and a financial guarantee paid up front that makes recourse effective."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Competent court: the Italian court of the place where the commissioning software house has its registered office, exclusively, for any dispute.",
+        "Governing law: Italian law.",
+        "Financial guarantee: at the parties' choice, one of: (a) an escrow account at an EU institution with a deposit of [X% of the annual contract value]; (b) an EU bank guarantee of the same amount; (c) a security deposit with the commissioning software house of the same amount.",
+        "Release: the guarantee is released when the relationship ends and the decade after the component was placed on the market has elapsed, unless claims have been activated.",
+        "Enforcement: the commissioning software house may call on the guarantee directly if an Italian judgment against the supplier is not honoured within 60 days."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "III. From the signing professional's point of view"
+    },
+    {
+      "type": "p",
+      "text": "The professional is the structurally weakest party, and this changes everything. The clauses the other parties can demand — showing policies, proof of cover, financial guarantees — the professional almost never obtains from the software house. In a real PLD event, the software house's cover should be assumed inadequate until proven otherwise."
+    },
+    {
+      "type": "p",
+      "text": "The professional's protections are therefore internal to their own personal conduct, not external in clauses demanded of the counterparty. They equip themselves, because they lack the leverage to make the software house do so."
+    },
+    {
+      "type": "p",
+      "text": "Clause 19 — Limiting the signed scope and systematic written dissent."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. The professional signs only what they have actually designed; for everything else they produce systematic written dissent. In court, the paper trail shifts the duty-of-care position under Art. 40(2) of the Italian Criminal Code from the executor to the recipient who failed to act. It is the most powerful operational protection, because it does not depend on the counterparty's goodwill: it depends on your own documentary discipline."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Signed acts: only acts of technical design, security, integration and release approval that the professional actually produced and whose choices they share.",
+        "Acts refused for signature: any act containing choices imposed against the professional's recommendation, unreviewed designs, management decisions they do not share.",
+        "Dissent procedure: PEC from the professional to the commissioning software house (or to the client, if in a direct relationship), with the subject \"Technical dissent — [project reference/date]\"; content: description of the choice, description of the risk, alternative recommendation, the wording \"I am proceeding as instructed under your responsibility\".",
+        "Personal retention: a copy on the professional's personal email (not on the software house's systems), archived for the PLD decade after the project.",
+        "Frequency: every time a risk is identified, regardless of the counterparty's expected or past reaction."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Clause 20 — Your own professional indemnity policy, taken out for yourself."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. The professional's policy does not depend on whether the software house's policy exists or is adequate. You take it out for yourself, with parameters suited to the PLD regime. If the software house asks to see it, you show it (that is legitimate), but you do not wait for reciprocity. The policy is the only financial protection that shields the professional's personal assets in a ten-year event."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Type: individual professional indemnity policy, taken out by the professional in their own name.",
+        "Minimum parameters: limit per claim ≥ €1.5M; annual aggregate ≥ €3M; full retroactive cover from the date professional activity began; ten-year extended reporting period after the policy ends; explicit cover for the signatory's acts, AI/algorithmic, the duty-of-care position, and criminal exposure under Arts. 589-590 of the Italian Criminal Code and Art. 167 of the Italian Privacy Code; defence costs outside the limit.",
+        "Unacceptable exclusions: exclusion of software products, AI, consulting, or acts signed as technical lead.",
+        "Broker: preferably an Italian tier 1 broker (Marsh, Aon, WTW) for access to specialised wording.",
+        "Indicative premium: €7,000-14,000 a year for individual profiles in regulated sectors. Below €4,000 the policy is inadequate; above €20,000 it is over-priced — compare three quotes."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "One clause the professional can try to obtain — knowing they often won't get it."
+    },
+    {
+      "type": "p",
+      "text": "Rationale. The asymmetry of power means the professional rarely obtains formal commitments from the software house. Still, asking for a written indemnification commitment costs little and may pay off: if the software house accepts, there is a document to produce on recourse; if it refuses, that is a significant signal for assessing the relationship."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Subject of the request: a written commitment from the software house to indemnify the professional for financial or legal exposure arising from management, commercial, or architectural-compromise decisions imposed against a documented recommendation.",
+        "Form: a contract clause or a cover letter to the contract, signed by the software house's legal representative.",
+        "Effect if accepted: an enforceable document on recourse, although it does not guarantee that the software house actually has the assets or insurance to pay.",
+        "Effect if refused: the professional assesses whether to continue the relationship without the commitment, treating the refusal as part of the commissioning party's risk profile."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "A shortcut many believe solves everything — the \"B2B with no personal data\" case"
+    },
+    {
+      "type": "quote",
+      "text": "The GM: \"I've put in the contract that the client can't enter personal data. The software is pure B2B. So the PLD doesn't apply, neither does the AI Act, and a basic professional indemnity policy is enough. I'm covered.\""
+    },
+    {
+      "type": "p",
+      "text": "It is one of the most widespread beliefs among Italian software houses at this stage. It is partly true and partly false, and the difference between the two parts is what separates a legitimate clause from a shortcut that does not work. It is worth a section of its own, because anyone who uses it thinking it defuses the PLD is exactly as exposed as before — except that they have also paid a lawyer to write a clause that does not protect them."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Where the clause does NOT work"
+    },
+    {
+      "type": "p",
+      "text": "Rationale. Art. 6 of the PLD 2024 defines compensable damage and includes: death or personal injury (including medically recognised psychological harm); damage to or destruction of the consumer's property; destruction or corruption of personal and non-personal data, except data used exclusively for professional purposes. The \"no personal data\" clause therefore touches only part of the scope of damage covered by the PLD."
+    },
+    {
+      "type": "p",
+      "text": "The points where the clause deactivates nothing:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Injury to natural persons. If B2B software malfunctions in a way that causes injury, death, or psychological harm — including to people other than the direct client (operators, the client's end users, third parties) — the PLD applies in full. One example: a B2B warehouse management system that, because of a defect, brings down a shelving unit and injures a warehouse worker. PLD triggered, regardless of the clause.",
+        "Damage to property. B2B software that runs industrial plant and, because of a defect, damages machinery or products — damage to property compensable under Art. 6.",
+        "Personal data present anyway. In a \"pure\" B2B system personal data gets in anyway: names of operator users, access logs, business email addresses (which are personal data under the GDPR when they can be traced to a natural person), session metadata, support tickets, conversations in integrated chat. The clause can prohibit the client from entering end consumers' personal data — it cannot prohibit the personal data that is structural to the system's operation.",
+        "AI Act. If the system is high-risk under Annex III of the AI Act (worker management, access to essential services, assessment of people), it is so because of its function, not because the direct client is a business. An AI system that assesses the client's employees is high-risk even if the data stays \"internal\" to the client.",
+        "Towards the injured person, Art. 15 PLD closes the gap. When the injured person acts directly, the internal clauses between supplier and client do not concern them.",
+        "The underwriter gives no discount for the clause. No Italian tier 1 broker prices the policy lower because there is a \"B2B no personal data\" clause in the client-supplier contract. They price the software's actual exposure (what it does, where it runs, who uses it, what can go wrong), and that exposure remains structural to the product."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Where the clause DOES work — if well drafted"
+    },
+    {
+      "type": "p",
+      "text": "Rationale. A B2B intended-use clause that prohibits entering consumer data, while it does not deactivate the PLD, has three real effects that are useful and enforceable between the parties. It classes the product as intended for professional use (relevant to Art. 6(c) on data used for professional purposes). It shifts liability between the parties if the client uses the product improperly — if the client breaches the clause and enters consumers' personal data, and damage results from that improper use, indemnification between the parties applies. It documents the supplier's diligence in limiting the scope, which is useful in defence."
+    },
+    {
+      "type": "p",
+      "text": "Structural example (a well-drafted clause)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Intended use: the Product is designed and supplied for exclusively B2B use in the relationships between the Client and its professional counterparties. It expressly excludes the processing of personal data of consumers, meaning natural persons acting outside their trade, business, craft or profession.",
+        "Client's obligation: the Client undertakes not to use the Product to process consumers' personal data and not to enter personal data of that kind into the system.",
+        "Client's indemnification of the Supplier: improper use constitutes a contractual breach by the Client and triggers the Client's full indemnification of the Supplier for any related third-party claim, without prejudice to the Client's obligation to maintain adequate insurance cover.",
+        "Declared hard limit: \"The parties expressly acknowledge that this intended-use clause operates solely in the internal relationship between Supplier and Client and does not affect the manufacturer's liability towards injured persons under Article 15 of Directive (EU) 2024/2853 and the corresponding Italian transposing legislation. Furthermore, this clause does not reduce the Supplier's liability for harm to persons, damage to consumer property, or use of the Product in scenarios covered by the AI Act legislation in force.\"",
+        "Consequences: the clause operates between the parties in the event of improper use by the Client; it does not operate towards injured third parties and does not reduce the parties' insurance requirements under the applicable PLD regime."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The consequence for anyone hoping to save on insurance"
+    },
+    {
+      "type": "p",
+      "text": "The B2B clause does not reduce the insurance premium of the software house or of the signing professional. The policy remains the one suited to the PLD regime, because the exposure remains. What the clause reduces is the probability of a certain subset of scenarios (use of the software for consumers' personal data), and that enters marginally into the underwriter's risk assessment — it is not a discount, it is a profile factor."
+    },
+    {
+      "type": "p",
+      "text": "Whoever sold the GM the story \"put in the B2B clause and save on insurance\" sold him a shortcut that does not work. A well-drafted B2B clause is a useful tool between the parties. Insurance cover suited to the PLD regime is a separate and necessary tool. You need both, and neither removes the need for the other."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "IV. Insurance cover — the other half of the work"
+    },
+    {
+      "type": "p",
+      "text": "The twenty clauses are the visible layer of protection. The policy is the layer that pays when the clauses are not enough. For the PLD 2024 regime, the standard professional policy on the Italian IT market is not adequate: it is built for ordinary commercial risk, not for the ten-year defective-product regime."
+    },
+    {
+      "type": "p",
+      "text": "This part sets out what to demand from the cover, from each of the three positions. It is not a template policy: it is the technical specification you take to the broker to obtain comparable quotes."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Methodological premise — the broker matters more than the insurer"
+    },
+    {
+      "type": "p",
+      "text": "A policy suited to the PLD regime is negotiated, not bought off the shelf. The Italian tier 1 brokers — Marsh, Aon, WTW — have specialised wording for software and the market volume to negotiate terms that smaller brokers cannot obtain. For individual professional profiles and for mid-sized software houses, the qualitative jump between a retail policy and one placed by a tier 1 broker is structural."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "A. The software house's policy"
+    },
+    {
+      "type": "p",
+      "text": "Rationale. The software house has primary exposure as manufacturer under Art. 8 PLD for ten years after the product is placed on the market, with joint and several liability along the chain. Without adequate cover, the first event is existential. The standard Italian professional policy is not enough: it needs a specialised construction with buy-backs of the relevant exclusions and targeted extensions."
+    },
+    {
+      "type": "p",
+      "text": "Structural example (technical specification to take to the broker)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Type: professional indemnity + product liability, a single integrated policy or coordinated policies with no gaps.",
+        "Limits: per claim ≥ €2M (standard for regulated mid-market); ≥ €5M for mission-critical enterprise projects (healthcare, aviation, finance); annual aggregate ≥ 2x the per-claim limit.",
+        "Retroactive cover: full, from the date the software house began trading or from the first placing of a product on the market.",
+        "Extended reporting period: ten years from the end of the policy, for claims notified in the following ten years relating to events that occurred during the cover.",
+        "Explicit extensions (buy-back): software product liability; AI / algorithmic liability with a contractual definition of \"AI system\" consistent with the AI Act; cyber liability (data breach, malfunction caused by an attack); bodily injury arising from software malfunction (relevant in healthcare/aviation/automotive).",
+        "Defence costs: outside the limit (in addition to it, not deducted from it).",
+        "Insurance forum: Italian.",
+        "Acceptable exclusions: wilful misconduct, criminal offences established by a final judgment, direct administrative penalties.",
+        "Exclusions to reject and bring back as buy-backs: software, AI, cyber, product placed on the market, consulting activity, errors or omissions, data contamination.",
+        "Indicative premium: €15,000-40,000 a year for a regulated mid-market software house (5-20 employees, €1-5M turnover, regulated exposure). For a non-regulated, ordinary B2B software house of the same size: €6,000-15,000 a year. Below €10,000 regulated or below €4,000 non-regulated, structural under-insurance is almost certain; above €50,000 probably over-priced — ask three brokers for quotes."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "B. The signing professional's policy"
+    },
+    {
+      "type": "p",
+      "text": "Rationale. The professional holds a duty-of-care position under Art. 40(2) of the Italian Criminal Code for the acts they sign, PLD exposure as a component manufacturer (if they are a component in the directive's extended sense), GDPR liability for the processing they design, and personal criminal exposure under Art. 27 of the Italian Constitution. The policy covers all this only if built with the right parameters: the standard Italian professional policy does not have them by default."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Type: individual professional indemnity, with extensions targeted at the role of technical signatory in regulated sectors.",
+        "Limits: per claim ≥ €1.5M; annual aggregate ≥ €3M. For more exposed profiles (fractional CTO, principal architect on mission-critical projects), ≥ €2M / €4M.",
+        "Retroactive cover: full, from the date professional activity began.",
+        "Extended reporting period: ten years after the policy ends. Critical: without it, a professional who stops working (retirement, career change) remains uncovered for the following decade with their personal assets exposed.",
+        "Explicit extensions: the signatory's acts / duty-of-care position; explicit AI / algorithmic liability; cyber liability; criminal defence for Arts. 589-590 of the Italian Criminal Code (negligent injury / manslaughter) and Arts. 167 et seq. of the Italian Privacy Code; consulting in regulated sectors.",
+        "Defence costs: outside the limit.",
+        "Unacceptable exclusions: software products, AI, acts signed as technical lead, consulting activity.",
+        "Indicative premium: €7,000-14,000 a year for individual profiles in regulated sectors (Principal Architect, Fractional CTO, Senior AI Architect, Innovation Manager with sign-off on systems). For individual non-regulated, ordinary B2B profiles: €3,000-7,000 a year. Below €4,000 regulated or below €2,000 non-regulated, the policy is inadequate; above €20,000 for individual profiles it is over-priced — compare three quotes."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "C. The special case — when the software house and the professional are the same"
+    },
+    {
+      "type": "p",
+      "text": "Rationale. This is the case of the professional who is also sole director (and sole shareholder) of their own operating SRL (Italian limited company), of the employee who is also a working partner in the software house, or of the freelancer operating through a single-member SRL. It is the most common case in Italy in the mid-market consulting segment. Combining roles wipes out the effectiveness of internal indemnification clauses — you cannot indemnify yourself — and in court the veil of a single-member SRL is pierced more easily. The protection strategy changes: less internal contracting, heavier insurance cover."
+    },
+    {
+      "type": "p",
+      "text": "Structural example."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Type: a single policy that simultaneously covers the company's activity (the software house as manufacturer under Art. 8 PLD) and the natural person as signing professional (duty-of-care position under Art. 40(2) of the Italian Criminal Code).",
+        "Critical wording: explicit identification of both roles in the policy text, with a definition of \"Insured\" that includes both the company and the natural person in their respective roles, without mutual exclusions.",
+        "Limits: sized for the combination, not for the single profile. Per claim ≥ €3M; annual aggregate ≥ €6M. For profiles with enterprise exposure, ≥ €5M / €10M.",
+        "D&O (Directors & Officers) extension: cover for the sole director's liability under Art. 2476 of the Italian Civil Code towards third parties and company creditors. This extension is not included in the standard professional policy and has to be negotiated.",
+        "Audit trail separating the acts in the records: even though it is the same natural person, acts as \"software house\" (company signature, management decisions, invoicing) and acts as \"signing professional\" (technical signature, security audit, release acceptance) must remain separate in the internal records. Without separation, in court the veil is pierced and the two roles become indistinguishable.",
+        "Unacceptable exclusions: all those in points A and B, plus \"acts of the sole shareholder\" and \"acts of the sole director\" as residual categories.",
+        "Indicative premium: €20,000-35,000 a year for the combined case with a regulated profile, depending on turnover (€1-3M) and exposure. For the combined non-regulated, ordinary B2B case: €8,000-18,000 a year. Below €15,000 regulated or below €6,000 non-regulated, structural under-insurance; above €50,000 over-priced for mid-market profiles — compare three quotes."
+      ]
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The limit common to clauses and policy"
+    },
+    {
+      "type": "p",
+      "text": "Between the parties — client, software house, professional — contractual freedom has significant room. The policy covers what the clauses have allocated. Towards the injured person, the PLD 2024 closes the gap through Art. 15: the manufacturer's liability cannot be limited or excluded by contract, and any clause to that effect is void."
+    },
+    {
+      "type": "p",
+      "text": "None of the twenty clauses and no policy extension, whether seen by the client, the software house or the professional, stops the injured person's direct litigation. All of them govern how the parties share the cost among themselves. The policy pays what each party has to pay under its own obligations and allocations. Neither structure, even perfectly built, avoids litigation."
+    },
+    {
+      "type": "p",
+      "text": "What the two structures together do is make the PLD decade sustainable for those in the chain. When the event comes — and in ten years it comes, in some form — there is a contractual structure that allocates, and there is financial cover that pays. Without one of the two, the other is not enough. Without either, the event is existential for the person or company hit."
+    },
+    {
+      "type": "p",
+      "text": "Recognising this limit is the first clause, the one of intellectual honesty. Anyone selling \"bulletproof contract templates\" or \"policies that cover everything\" is selling the illusion that the law is not there. The winning combination is something else: well-written internal clauses + adequate insurance cover + a documented operational process + each of the three parties equipping itself in a way consistent with its position of power in the chain."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Three questions, one for each perspective"
+    },
+    {
+      "type": "p",
+      "text": "For the client. Have you mapped which clauses you are signing without noticing, and do you require annual proof of the supplier's professional policy with the minimum parameters of the PLD regime?"
+    },
+    {
+      "type": "p",
+      "text": "For the software house. Are your standard contract templates towards client, professional and non-EU supplier aligned with the ten-year regime? And does your policy cover the extensions in Part IV-A, with a premium in the order of magnitude indicated?"
+    },
+    {
+      "type": "p",
+      "text": "For the professional. Are you acting as if the software house's policy covers you, or as if it did not exist? The difference is made by your own policy, taken out for yourself with the parameters in Part IV-B, and by a personal audit trail kept outside the counterparty's systems."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Closing thought"
+    },
+    {
+      "type": "p",
+      "text": "The twenty clauses and the policy, seen from the three sides, are not the same object. They are the same text and the same cover, which protect you or bind you depending on where you sit in the chain. The strong client imposes, the software house allocates, the professional equips themselves inside an asymmetry the law does not correct."
+    },
+    {
+      "type": "p",
+      "text": "The operational level covered in this article is the contractual and insurance level. There is an adjacent level — the architectural level, meaning how systems are designed so that the clauses are sustainable in production — which is a separate matter and which other voices in the European debate address specifically. The two levels meet in real projects: the architecture creates the conditions under which the clauses can be honoured, the clauses set the economic and legal boundaries, the policy pays when the clauses are not enough. Take away one of the three, and the other two are not enough."
+    },
+    {
+      "type": "p",
+      "text": "The next article in the series addresses the RACI as an internal governance tool for the software house: how much formally assigning responsibility to roles really protects in PLD litigation, and how much is instead formalism that dissolves at the judge's first ex post reconstruction."
+    }
+  ]
+}

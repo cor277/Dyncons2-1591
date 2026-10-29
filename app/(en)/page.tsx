@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { TextLink } from "@/components/ui/TextLink";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -22,14 +23,7 @@ export const metadata: Metadata = {
   title: { absolute: "Sovereign AI, AI Governance & Compliance | Dynamics Consulting" },
   description:
     "AI consulting, architecture, governance and compliance for regulated industries in Italy and the EU. We design and deploy sovereign, on-premise AI systems — Nexus MDS Core, GDPR controls mapped, architected for AI Act and PLD 2024 requirements.",
-  alternates: {
-    canonical: "https://www.dynamicsconsulting.it",
-    languages: {
-      en: "https://www.dynamicsconsulting.it",
-      it: "https://www.dynamicsconsulting.it/it",
-      "x-default": "https://www.dynamicsconsulting.it",
-    },
-  },
+  alternates: alternatesFor("/"),
 };
 
 const caseStudies = [
@@ -78,7 +72,7 @@ const caseStudies = [
     title: "HumanIA Care — AI Senior Companion",
     summary:
       "AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core.",
-    metrics: ["Multi-agent RAG + Voice", "On-premise, GDPR controls mapped", "16 Nexus services"],
+    metrics: ["Multi-agent RAG + Voice", "On-premise, GDPR controls mapped", "Runs on Nexus MDS Core"],
     href: "/case-studies/humania-care",
   },
   {

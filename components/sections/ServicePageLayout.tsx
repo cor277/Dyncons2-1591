@@ -72,6 +72,8 @@ const LABELS = {
   en: {
     eyebrow: "Services",
     cta: "Let's discuss your project →",
+    contactHref: "/contact",
+    finalCta: "Start the conversation →",
     capabilities: "Capabilities",
     whatWeBuild: "What we build",
     faq: "FAQ",
@@ -80,6 +82,8 @@ const LABELS = {
   it: {
     eyebrow: "Servizi",
     cta: "Parliamo del tuo progetto →",
+    contactHref: "/it/contatti",
+    finalCta: "Parliamone →",
     capabilities: "Competenze",
     whatWeBuild: "Cosa costruiamo",
     faq: "Domande frequenti",
@@ -173,7 +177,7 @@ export function ServicePageLayout({
                 <TechBadge key={t} label={t} />
               ))}
             </div>
-            <CTAButton label={L.cta} href="/contact" variant="primary" />
+            <CTAButton label={L.cta} href={L.contactHref} variant="primary" />
           </motion.div>
         </div>
       </section>
@@ -225,7 +229,12 @@ export function ServicePageLayout({
       </section>
 
       </main>
-      <CTASection title={ctaTitle} subtitle={ctaSubtitle} />
+      <CTASection
+        title={ctaTitle}
+        subtitle={ctaSubtitle}
+        ctaLabel={L.finalCta}
+        ctaHref={L.contactHref}
+      />
       <Footer />
     </>
   );

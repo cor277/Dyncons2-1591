@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
+import { useIsItalian } from "@/lib/use-is-italian";
 
 interface CTASectionProps {
   title?: string;
@@ -11,13 +12,37 @@ interface CTASectionProps {
   secondary?: { label: string; href: string };
 }
 
+/** Defaults, in the language of the page; explicit props always win. */
+const DEFAULTS = {
+  en: {
+    title: "Let's talk about your project",
+    subtitle:
+      "AI infrastructure to build, a legacy system to modernise, or an ERP to connect to the future? Get in touch.",
+    ctaLabel: "Start the conversation →",
+    ctaHref: "/contact",
+  },
+  it: {
+    title: "Parliamo del tuo progetto",
+    subtitle:
+      "Un’infrastruttura AI da costruire, un sistema legacy da modernizzare o un ERP da collegare al futuro? Scrivici.",
+    ctaLabel: "Inizia la conversazione →",
+    ctaHref: "/it/contatti",
+  },
+};
+
 export function CTASection({
-  title = "Let's talk about your project",
-  subtitle = "AI infrastructure to build, a legacy system to modernise, or an ERP to connect to the future? Get in touch.",
-  ctaLabel = "Start the conversation →",
-  ctaHref = "/contact",
+  title,
+  subtitle,
+  ctaLabel,
+  ctaHref,
   secondary,
 }: CTASectionProps) {
+  const d = useIsItalian() ? DEFAULTS.it : DEFAULTS.en;
+  title ??= d.title;
+  subtitle ??= d.subtitle;
+  ctaLabel ??= d.ctaLabel;
+  ctaHref ??= d.ctaHref;
+
   return (
     <section className="py-20 md:py-28 bg-[#0D1117]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">

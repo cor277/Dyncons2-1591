@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Nespresso Intervallo Programme — ATOS",
   description:
     "Multi-stream enterprise programme for Nespresso at ATOS. Dynamics F&O, custom backend, IoT frontend. ~40-person delivery across three parallel workstreams.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/nespresso" },
+  alternates: alternatesFor("/case-studies/nespresso"),
 };
 
 const tech = [

@@ -6,12 +6,13 @@ import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 import { formatDate, getImportedArticles } from "@/lib/imported-articles";
+import { alternatesFor } from "@/lib/i18n-routes";
 
 export const metadata: Metadata = {
   title: "Research & Insights",
   description:
     "Thought leadership, technical deep-dives, and original research from Corrado Patierno on sovereign AI, on-premise infrastructure, RAG architectures, and enterprise modernisation for healthcare and pharma.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research" },
+  alternates: alternatesFor("/research"),
 };
 
 const posts = [
@@ -67,9 +68,9 @@ const posts = [
     slug: "/research/law-132-2025",
     date: "October 2025",
     tag: "AI Governance",
-    title: "Legge 132/2025 e AI in sanità: cosa cambia per ospedali, farmacie e aziende farmaceutiche",
+    title: "Law 132/2025 and AI in healthcare: what changes for hospitals, pharmacies and pharmaceutical companies",
     summary:
-      "La Legge n. 132 del 23 settembre 2025 è la prima normativa organica italiana sull'intelligenza artificiale. Per le organizzazioni in ambito sanitario e farmaceutico, introduce obblighi specifici su governance, data residency e uso secondario dei dati.",
+      "Law no. 132 of 23 September 2025 is Italy's first comprehensive law on artificial intelligence. For healthcare and pharmaceutical organisations it introduces specific obligations on governance, data residency and secondary use of data. Translated from the Italian original.",
   },
   {
     slug: "/research/event-sourcing",
@@ -87,18 +88,21 @@ const crumbs = breadcrumbSchema("https://www.dynamicsconsulting.it/research", [
 ]);
 
 /**
- * The PLD series was written for LinkedIn and imported here in full; the index
- * lists those pieces alongside the ones written for the site, newest first, so
- * the archive is one archive rather than two.
+ * The PLD series was written in Italian for LinkedIn and imported here in full;
+ * the index lists the English translations alongside the pieces written for the
+ * site, newest first, so the archive is one archive rather than two. The Italian
+ * originals are listed on /it/ricerca.
  */
-const imported = getImportedArticles().map((a) => ({
-  slug: `/research/${a.slug}`,
-  date: formatDate(a.datePublished, "en"),
-  sortKey: a.datePublished.slice(0, 10),
-  tag: "PLD 2024 · in Italian",
-  title: a.title,
-  summary: a.standfirst,
-}));
+const imported = getImportedArticles()
+  .filter((a) => a.lang === "en")
+  .map((a) => ({
+    slug: `/research/${a.slug}`,
+    date: formatDate(a.datePublished, "en"),
+    sortKey: a.datePublished.slice(0, 10),
+    tag: "PLD 2024 · translated from Italian",
+    title: a.title,
+    summary: a.standfirst,
+  }));
 
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
@@ -166,7 +170,7 @@ export default function ResearchPage() {
                 An ongoing public series on the structural implications of the new EU regulatory
                 regime — Product Liability Directive 2024, AI Act, Tech Sovereignty Package —
                 for software houses and technical professionals in regulated industries. Six
-                articles, published here in full and in Italian.
+                articles, written in Italian and published here in full in English translation.
               </p>
               <span className="mt-4 inline-flex items-center text-sm font-semibold text-[#00B4D8]">
                 View all articles →

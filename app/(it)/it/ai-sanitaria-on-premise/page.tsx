@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
@@ -13,14 +14,7 @@ export const metadata: Metadata = {
   title: "AI On-Premise per la Sanità Italiana",
   description:
     "Infrastruttura AI on-premise per la sanità italiana. GDPR, AI Act, Legge 132/2025. Nexus MDS Core — piattaforma sovrana per ospedali, farmacie e aziende farmaceutiche.",
-  alternates: {
-    canonical: "https://www.dynamicsconsulting.it/it/ai-sanitaria-on-premise",
-    languages: {
-      it: "https://www.dynamicsconsulting.it/it/ai-sanitaria-on-premise",
-      en: "https://www.dynamicsconsulting.it/ai-on-premise-healthcare",
-      "x-default": "https://www.dynamicsconsulting.it/ai-on-premise-healthcare",
-    },
-  },
+  alternates: alternatesFor("/it/ai-sanitaria-on-premise"),
   openGraph: {
     images: OG_IMAGE,
     title: "AI On-Premise per la Sanità Italiana",
@@ -123,10 +117,10 @@ export default function AiSanitariaPage() {
                 <span className="text-[#7D8FA3]"> — come funziona davvero, in un sistema vivo.</span>
               </li>
               <li>
-                <Link href="/answers/llm-on-premise-hospital" className="text-[#00B4D8] hover:text-[#E6EDF3]">
+                <Link href="/it/risposte/llm-on-premise-ospedale" className="text-[#00B4D8] hover:text-[#E6EDF3]">
                   Implementare un LLM on-premise in ospedale
                 </Link>
-                <span className="text-[#7D8FA3]"> — sequenza, confine dei dati e linea normativa (in inglese).</span>
+                <span className="text-[#7D8FA3]"> — sequenza, confine dei dati e linea normativa.</span>
               </li>
               <li>
                 <Link href="/it/ricerca/legge-132-2025" className="text-[#00B4D8] hover:text-[#E6EDF3]">

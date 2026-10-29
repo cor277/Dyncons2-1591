@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: "Why on-premise AI is not a step backward",
   description:
     "The architectural and governance case for sovereign, on-premise AI infrastructure in healthcare, pharma, and regulated industries. Why cloud-native does not always mean modern.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/on-premise-ai" },
+  alternates: alternatesFor("/research/on-premise-ai"),
 };
 
 const article = RESEARCH_ARTICLES["on-premise-ai"];

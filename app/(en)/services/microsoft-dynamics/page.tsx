@@ -1,4 +1,5 @@
 import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
+import { alternatesFor } from "@/lib/i18n-routes";
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/app/seo";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Microsoft Dynamics 365",
   description:
     "Implementation, customisation, and managed support for Microsoft Dynamics 365 Finance & Operations, Sales, Customer Engagement, and Power Platform. Certified Microsoft partner.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/services/microsoft-dynamics" },
+  alternates: alternatesFor("/services/microsoft-dynamics"),
 };
 
 const faqSchema = {

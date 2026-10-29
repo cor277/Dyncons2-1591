@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "How to implement RAG on enterprise data",
   description:
     "An honest guide to RAG on enterprise data: discovery sprints, chunking strategy, retrieval evaluation, and governance. No tutorials — real implementation decisions.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/rag-enterprise-data" },
+  alternates: alternatesFor("/research/rag-enterprise-data"),
 };
 
 const article = RESEARCH_ARTICLES["rag-enterprise-data"];

@@ -1,4 +1,5 @@
 import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
+import { alternatesFor } from "@/lib/i18n-routes";
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/app/seo";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Intelligent Automation",
   description:
     "RPA, process mining, and AI-augmented automation that eliminates manual work, reduces errors, and frees your teams to focus on high-value decisions.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/services/automation" },
+  alternates: alternatesFor("/services/automation"),
 };
 
 const faqSchema = {

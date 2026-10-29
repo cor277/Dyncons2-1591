@@ -153,7 +153,7 @@ export default function CraSettembrePage() {
       <header className="border-b border-[#21262D]">
         <div className="max-w-2xl mx-auto px-6 py-6">
           <Link
-            href="/"
+            href="/it"
             aria-label="Dynamics Consulting — home"
             className="inline-flex items-center gap-3 group"
           >
@@ -410,7 +410,7 @@ export default function CraSettembrePage() {
               <div className="mt-8">
                 <CTAButton
                   label="Scrivimi dal modulo →"
-                  href="/contact"
+                  href="/it/contatti"
                   variant="primary"
                 />
               </div>
@@ -459,10 +459,10 @@ export default function CraSettembrePage() {
             <Link href="/it" className="hover:text-[#00B4D8] transition-colors underline">
               Risorse in italiano
             </Link>
-            <Link href="/contact" className="hover:text-[#00B4D8] transition-colors underline">
+            <Link href="/it/contatti" className="hover:text-[#00B4D8] transition-colors underline">
               Contatti
             </Link>
-            <Link href="/privacy" className="hover:text-[#00B4D8] transition-colors underline">
+            <Link href="/it/privacy" className="hover:text-[#00B4D8] transition-colors underline">
               Informativa privacy
             </Link>
           </p>

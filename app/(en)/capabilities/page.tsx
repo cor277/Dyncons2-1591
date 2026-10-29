@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { OG_IMAGE } from "@/app/og";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: "Technical capabilities",
   description:
     "The engineering underneath the service lines: applied AI, data platforms, Kubernetes, enterprise integration, Dynamics 365, automation, blockchain. Competences, not separate offerings.",
-  alternates: { canonical: URL },
+  alternates: alternatesFor("/capabilities"),
   openGraph: {
     images: OG_IMAGE,
     title: "Technical capabilities | Dynamics Consulting",

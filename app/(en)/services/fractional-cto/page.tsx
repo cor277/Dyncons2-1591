@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { ORG_ID, PERSON_ID, WEBSITE_ID, NEXUS_ID, CEPF_ID } from "@/app/schema-org";
@@ -31,8 +32,9 @@ export const metadata: Metadata = {
   ],
   /* /fractional-cto-milano is not an hreflang alternate of this page: it is a
      different argument written for the Italian mid-market, and declaring the
-     two as translations of each other would be false. Linked as related. */
-  alternates: { canonical: EN_URL },
+     two as translations of each other would be false. Linked as related.
+     The Italian translation of this page is /it/servizi/fractional-cto. */
+  alternates: alternatesFor("/services/fractional-cto"),
   openGraph: {
     images: OG_IMAGE,
     title: "Fractional AI CTO for Regulated European Enterprises",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import Image from "next/image";
@@ -12,14 +13,7 @@ export const metadata: Metadata = {
   title: "Assessment di esposizione — PLD 2024 e AI Act",
   description:
     "La direttiva europea sulla responsabilità da prodotto include il software fra i prodotti e si applica a quelli immessi sul mercato o messi in servizio dal 9 dicembre 2026. Tre giornate per stabilire dove si ferma la responsabilità del fornitore e dove comincia la tua.",
-  alternates: {
-    canonical: IT_URL,
-    languages: {
-      it: IT_URL,
-      en: EN_URL,
-      "x-default": EN_URL,
-    },
-  },
+  alternates: alternatesFor("/it/assessment"),
   openGraph: {
     images: OG_IMAGE,
     title: "Assessment di esposizione — PLD 2024 e AI Act",
@@ -68,7 +62,7 @@ export default function AssessmentItPage() {
       <header className="border-b border-[#21262D]">
         <div className="max-w-2xl mx-auto px-6 py-6">
           <Link
-            href="/"
+            href="/it"
             aria-label="Dynamics Consulting — home"
             className="inline-flex items-center gap-3 group"
           >
@@ -293,7 +287,7 @@ export default function AssessmentItPage() {
           </p>
           <p className="pt-3">
             <a
-              href="/privacy"
+              href="/it/privacy"
               target="_blank"
               rel="noopener"
               className="hover:text-[#00B4D8] transition-colors underline"

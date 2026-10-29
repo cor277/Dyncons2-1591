@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NEXUS_SERVICE_COUNT } from "@/lib/nexus";
 import { OG_IMAGE } from "@/app/og";
 import { ORG_ID, NEXUS_ID, WEBSITE_ID } from "@/app/schema-org";
@@ -12,13 +13,13 @@ import { CTAButton } from "@/components/ui/CTAButton";
 export const metadata: Metadata = {
   title: "Consulenza AI per il Farmaceutico | Nexus MDS Core",
   description:
-    "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, conformità Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/it/consulenza-ai-farmaceutico" },
+    "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, architettura progettata sui requisiti di Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",
+  alternates: alternatesFor("/it/consulenza-ai-farmaceutico"),
   openGraph: {
     images: OG_IMAGE,
     title: "Consulenza AI per il Farmaceutico | Nexus MDS Core",
     description:
-      "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, conformità Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",
+      "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, architettura progettata sui requisiti di Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",
     url: "https://www.dynamicsconsulting.it/it/consulenza-ai-farmaceutico",
     type: "website",
     locale: "it_IT",
@@ -34,7 +35,7 @@ const schema = [
     "@id": `${PAGE_URL}#webpage`,
     url: PAGE_URL,
     name: "Consulenza AI per il Farmaceutico",
-    description: "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, conformità Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",
+    description: "Consulenza AI per il settore farmaceutico e pharma mid-market. RAG su documenti, workflow agentici, architettura progettata sui requisiti di Legge 132/2025 e GDPR. Alternativa sovrana agli hyperscaler.",
     inLanguage: "it",
     isPartOf: { "@id": WEBSITE_ID },
     about: [{ "@id": ORG_ID }, { "@id": NEXUS_ID }],
@@ -100,7 +101,7 @@ export default function ConsulenzaAiFarmaceuticoPage() {
               Zero-Trust.
             </p>
             <div className="pt-6">
-              <CTAButton label="Parliamo del tuo progetto →" href="/contact" variant="primary" />
+              <CTAButton label="Parliamo del tuo progetto →" href="/it/contatti" variant="primary" />
             </div>
           </div>
         </section>

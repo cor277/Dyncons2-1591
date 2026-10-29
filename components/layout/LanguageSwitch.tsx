@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { counterpartOf, isItalianPath } from "@/lib/i18n-routes";
+import { rememberLanguage } from "@/components/ui/LanguageSuggest";
 
 /**
  * Explicit language selector. There is deliberately NO Accept-Language redirect:
@@ -41,6 +42,7 @@ export function LanguageSwitch({ className = "" }: { className?: string }) {
     <Link
       href={href}
       hrefLang={isItalian ? "en" : "it"}
+      onClick={() => rememberLanguage(isItalian ? "en" : "it")}
       lang={isItalian ? "en" : "it"}
       aria-label={ariaLabel}
       title={ariaLabel}

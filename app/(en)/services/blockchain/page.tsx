@@ -1,4 +1,5 @@
 import { ServicePageLayout } from "@/components/sections/ServicePageLayout";
+import { alternatesFor } from "@/lib/i18n-routes";
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/app/seo";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Blockchain & Web3",
   description:
     "Smart contracts, tokenisation, supply-chain traceability, and enterprise blockchain solutions on Ethereum, Hyperledger, and Polygon. Pragmatic Web3 for real business problems.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/services/blockchain" },
+  alternates: alternatesFor("/services/blockchain"),
 };
 
 const faqSchema = {

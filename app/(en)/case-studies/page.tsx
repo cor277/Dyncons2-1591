@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: "Case Studies",
   description:
     "Real outcomes from real engagements. Explore how Dynamics Consulting has helped organisations transform their technology and achieve measurable business results.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies" },
+  alternates: alternatesFor("/case-studies"),
 };
 
 const cases = [

@@ -1,7 +1,21 @@
 "use client";
 import { motion } from "framer-motion";
 
-export function BookCallout() {
+const COPY = {
+  en: {
+    eyebrow: "THOUGHT LEADERSHIP",
+    body: "A conceptual and operational framework for adaptive logistics systems, focused on flow-based decision-making, resilience, and continuous reconfiguration of supply chains. The book bridges logistics operations, information systems, and organisational design, and serves as a foundation for decision-support and AI-assisted operational reasoning in complex environments.",
+    buy: "Buy on Amazon →",
+  },
+  it: {
+    eyebrow: "THOUGHT LEADERSHIP",
+    body: "Un framework concettuale e operativo per sistemi logistici adattivi, centrato sulle decisioni guidate dai flussi, sulla resilienza e sulla riconfigurazione continua delle supply chain. Il libro tiene insieme operazioni logistiche, sistemi informativi e disegno organizzativo, ed è la base per il supporto alle decisioni e per il ragionamento operativo assistito dall’AI in ambienti complessi.",
+    buy: "Acquista su Amazon →",
+  },
+};
+
+export function BookCallout({ locale = "en" }: { locale?: "en" | "it" }) {
+  const t = COPY[locale];
   return (
     <section className="py-20 md:py-28 bg-[#161B22]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,17 +45,13 @@ export function BookCallout() {
 
           <div>
             <p className="text-[#00B4D8] text-xs font-mono font-medium tracking-[0.15em] uppercase mb-3">
-              THOUGHT LEADERSHIP
+              {t.eyebrow}
             </p>
             <h2 className="font-syne text-3xl font-extrabold text-[#E6EDF3] mb-4">
               Logistica Fluida
             </h2>
             <p className="text-[#7D8FA3] text-base leading-relaxed mb-6 max-w-xl">
-              A conceptual and operational framework for adaptive logistics systems, focused on
-              flow-based decision-making, resilience, and continuous reconfiguration of supply chains.
-              The book bridges logistics operations, information systems, and organisational design,
-              and serves as a foundation for decision-support and AI-assisted operational reasoning
-              in complex environments.
+              {t.body}
             </p>
             <a
               href="https://amzn.eu/d/06ZlECJe"
@@ -49,7 +59,7 @@ export function BookCallout() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-[#00B4D8] hover:text-[#E6EDF3] text-sm font-medium underline underline-offset-4 decoration-[#00B4D8]/40 hover:decoration-[#E6EDF3] transition-colors duration-200"
             >
-              Buy on Amazon →
+              {t.buy}
             </a>
           </div>
         </motion.div>

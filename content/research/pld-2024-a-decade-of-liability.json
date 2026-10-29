@@ -1,0 +1,356 @@
+{
+  "slug": "pld-2024-a-decade-of-liability",
+  "lang": "en",
+  "translationOf": "pld-2024-decennio-responsabilita",
+  "title": "PLD 2024: the decade that changes everything. Joint and several liability, software house insolvency, and why run-off cover becomes a structural element",
+  "standfirst": "The third article in the series on PLD 2024 and Italian software houses. Epistemic note: a reconstruction of the directive's text applied to typical operating models.",
+  "author": "Corrado Patierno",
+  "datePublished": "2026-05-12T06:50:35.000+00:00",
+  "dateModified": "2026-05-12T06:50:49.000+00:00",
+  "series": "Article III · The decade that changes everything",
+  "source": {
+    "platform": "LinkedIn",
+    "url": "https://it.linkedin.com/pulse/pld-2024-il-decennio-che-cambia-tutto-responsabilit%C3%A0-della-patierno-mwe1f"
+  },
+  "importedAt": "2026-09-09",
+  "words": 3177,
+  "blocks": [
+    {
+      "type": "p",
+      "text": "The third article in the series on PLD 2024 and Italian software houses."
+    },
+    {
+      "type": "p",
+      "text": "Epistemic note: a reconstruction of the directive's text applied to typical operating models. It is not legal advice."
+    },
+    {
+      "type": "p",
+      "text": "In the first two articles of the series I mapped the seven structural changes PLD 2024 introduces and the six software development scenarios with their respective exposures. That was about positioning: where you stand, what changes for you, how liability is distributed between software houses, employees and external consultants."
+    },
+    {
+      "type": "p",
+      "text": "This article deals with three issues that only appear when you stop looking at the still photograph and start watching the film. Three issues that share a ten-year time axis and that produce concrete exposures, calculable in figures, which the Italian software development market today almost entirely fails to manage."
+    },
+    {
+      "type": "p",
+      "text": "The first is joint and several liability (Art. 12 of the directive). What it means in practice when the manufacturer and the component manufacturer are jointly and severally liable towards the injured party. Who pays, how much, in what order. What happens when one co-obligor is insolvent and the exposure concentrates on the other."
+    },
+    {
+      "type": "p",
+      "text": "The second is the software house going bankrupt during the ten years of liability. The SH closes, goes bankrupt or ceases trading while the product is still in production at the client. What happens to the architects, developers and external consultants who are co-obligors. Spoiler: liability does not die with the SH."
+    },
+    {
+      "type": "p",
+      "text": "The third is insurance run-off cover, something almost no Italian professional indemnity policy incorporates properly today, and which becomes a structural requirement of the external technical professional's contract after the PLD."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Joint and several liability: how it actually works"
+    },
+    {
+      "type": "p",
+      "text": "Art. 12 of Directive 2024/2853 sets out the principle: when two or more economic operators are liable for the same damage under the directive, their liability is joint and several. The injured party can bring a claim against any one of them for full compensation."
+    },
+    {
+      "type": "p",
+      "text": "The principle is simple. Its practical consequences are harsh."
+    },
+    {
+      "type": "p",
+      "text": "The injured party chooses whom to sue. There is no hierarchy among co-obligors that the injured party has to follow. It does not have to “exhaust” the manufacturer first before it can act against the component manufacturer. It chooses freely. The injured party's rational choice is driven by three competing criteria: who is most solvent, who is most reachable, and who is easiest to attack on the evidence."
+    },
+    {
+      "type": "p",
+      "text": "In cases of significant damage, where the expected compensation can reach hundreds of thousands or millions of euros, the injured party's assessment will be carried out by specialist lawyers who will first analyse the co-obligors' assets. They will sue whoever has capital, insurance and assets that can be enforced against. Not whoever is “technically most responsible”."
+    },
+    {
+      "type": "quote",
+      "text": "Internal recourse comes afterwards. Once a co-obligor has paid the injured party, it can seek recourse against the other co-obligors within the limits of their respective internal shares of liability. But recourse comes after payment, it is a separate action with its own timescales and litigation costs, and it requires the other co-obligors to be genuinely solvent at the time of recourse."
+    },
+    {
+      "type": "p",
+      "text": "In the worst cases, the co-obligor who pays the injured party recovers nothing from the others because in the meantime they have gone bankrupt, ceased trading or become untraceable. That is exactly the scenario the ten years of liability make structurally likely, given their length."
+    },
+    {
+      "type": "p",
+      "text": "The “internally responsible” party is not the same as the “externally liable” party. Between the manufacturer (the SH) and the component manufacturer (the freelance external consultant), there may be a contractual agreement that assigns internal liability to one of them, or that provides for reciprocal indemnities. That agreement governs the relationship between them; it does not operate towards the injured party. The injured party sues whomever it wants, and internal recourse between the parties comes later."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Three concrete recourse scenarios"
+    },
+    {
+      "type": "p",
+      "text": "It is worth setting this out with real cases."
+    },
+    {
+      "type": "p",
+      "text": "Scenario one: SH solvent, freelancer solvent."
+    },
+    {
+      "type": "p",
+      "text": "A data breach causes €400,000 of damage to an injured third party (for example, a consumer association gathering several affected users). The SH has share capital of €100,000, annual revenue of €2 million, and a professional indemnity policy with a €2 million limit. The freelance external consultant who built the vulnerable container has a professional indemnity policy with a €1.5 million limit."
+    },
+    {
+      "type": "p",
+      "text": "The injured party sues the SH. The SH pays the injured party €400,000 through its policy. The SH then seeks recourse against the consultant for the internal share of liability attributable to the component the consultant produced. If the contractual agreement between SH and consultant provides for balanced reciprocal indemnities, the SH might recover 30–50% (depending on the technical assessment of how far the specific component caused the overall damage)."
+    },
+    {
+      "type": "p",
+      "text": "The consultant survives: the policy pays, a reciprocal indemnity may apply, the exposure is manageable. The scenario works because both co-obligors have adequate insurance and are solvent."
+    },
+    {
+      "type": "p",
+      "text": "Scenario two: SH insolvent, freelancer solvent."
+    },
+    {
+      "type": "p",
+      "text": "Same damage, same technical scenario. But three years after the product was delivered, the SH has gone bankrupt. The SH's liquidator has distributed the remaining assets to the preferential creditors. The SH's professional indemnity policy is no longer in force (it was paid up to the bankruptcy; afterwards there is no one left to renew it). The SH's claims-made policy has closed."
+    },
+    {
+      "type": "p",
+      "text": "The injured party can get nothing from the SH. It sues the freelance external consultant directly, as a jointly and severally liable co-obligor. The consultant can no longer “pass the ball” to an SH that has disappeared."
+    },
+    {
+      "type": "p",
+      "text": "The consultant pays the injured party €400,000 through their policy. They attempt recourse against the SH's bankruptcy estate for the internal share of liability. Estimated recovery: zero, or tiny fractions (PLD creditors are not preferential in the insolvency proceedings and rank behind the preferential creditors, who have already consumed the assets)."
+    },
+    {
+      "type": "p",
+      "text": "In this scenario, the consultant has borne the entire weight of compensation simply for still being alive and solvent after the manufacturer's bankruptcy. It is exactly the asymmetric risk scenario the PLD structurally produces."
+    },
+    {
+      "type": "p",
+      "text": "Scenario three: SH solvent, freelancer insolvent or untraceable."
+    },
+    {
+      "type": "p",
+      "text": "Four years after delivery, the external consultant has closed their VAT registration, moved abroad without a forwarding address, or died and their heirs have renounced the estate. The injured party sues the SH, which is still trading and solvent. The SH pays. It seeks recourse against the consultant: it finds someone untraceable, a closed tax position, heirs who have renounced. Recovery: zero."
+    },
+    {
+      "type": "p",
+      "text": "The SH has borne the entire weight of compensation, including the internal share of liability attributable to the consultant's component."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What it means for how contracts are structured"
+    },
+    {
+      "type": "p",
+      "text": "The three scenarios above lead to an important operational conclusion: no co-obligor can reasonably rely on internal recourse as a protection mechanism. Recourse may work, but it may also fail. Whether it works depends on factors that neither co-obligor controls individually (the other's future solvency, how long they actually stay in business, how they manage assets and insurance)."
+    },
+    {
+      "type": "quote",
+      "text": "In practice, every co-obligor has to be structured to withstand the worst case: paying 100% of the compensation, with no recovery through recourse. It is disproportionate to their internal share of liability, but it is a realistic scenario."
+    },
+    {
+      "type": "p",
+      "text": "Three consequences for contracts."
+    },
+    {
+      "type": "p",
+      "text": "One. Each co-obligor's insurance cover must be sized to the aggregate risk, not to its internal share of liability. The external consultant with a €500,000 policy who thought “the SH has its €2 million policy anyway” is exposed, because if the SH goes bankrupt their policy is the only one available and may be insufficient."
+    },
+    {
+      "type": "p",
+      "text": "Two. Contractual reciprocal indemnities must provide for escrow mechanisms or additional guarantees that still work if the counterparty becomes insolvent. An indemnity agreement with a partner that might go bankrupt in five years is not a guarantee; it is a contingent promise."
+    },
+    {
+      "type": "p",
+      "text": "Three. Keeping an eye on the partner's financial position becomes a concrete activity on both sides. The external consultant has a legitimate interest in knowing whether the commissioning SH is maintaining adequate insurance year after year. The SH has an interest in knowing whether the external consultant is maintaining theirs. It is not common in Italian contracts today, but it will become standard."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The software house goes bankrupt: what happens to the co-obligors"
+    },
+    {
+      "type": "p",
+      "text": "The bankruptcy of a limited company is a routine procedure in the Italian business system. Statistics from recent years show that most Italian SMEs have a survival rate below 50% over ten years. For the IT sector specifically, the figure is slightly better but still significant: the average lifespan of a small Italian SH is shorter than the ten years of PLD liability."
+    },
+    {
+      "type": "p",
+      "text": "In other words: from 9 December 2026, every product delivered by an Italian SH enters a decade during which it is statistically likely that the SH will cease trading or go bankrupt before the liability period ends."
+    },
+    {
+      "type": "p",
+      "text": "What happens to the co-obligors when that happens? Four dynamics."
+    },
+    {
+      "type": "p",
+      "text": "One. The SH's liability does not automatically end with bankruptcy. The SH's obligations pass to the bankruptcy proceedings. PLD creditors (the injured parties who have suffered harm and want compensation) are unsecured creditors in the proceedings, not preferential ones. They rank behind the preferential creditors (employees, the tax authorities, preferential suppliers). Typically they recover nothing, or tiny fractions."
+    },
+    {
+      "type": "p",
+      "text": "In practice, the SH's bankruptcy means the injured parties effectively lose access to the SH's assets. They have to turn to the other co-obligors: component manufacturers, employees to the extent they answer personally (limited, given Art. 2049 c.c.), and any substantial modifiers."
+    },
+    {
+      "type": "p",
+      "text": "Two. The SH's professional indemnity policy stops operating. Claims-made policies require the claim to be notified while the policy is in force. If the SH goes bankrupt and the policy is not renewed (because no one renews it: bankruptcy proceedings do not renew policies that produce no assets for creditors), claims that emerge after the bankruptcy are uncovered."
+    },
+    {
+      "type": "p",
+      "text": "There is an exception: some policies include an extended reporting period clause (in Italian, “postuma”), which keeps cover in place for claims notified within a certain number of years after the policy ends, provided the event occurred while it was in force. The standard extended reporting period is 1–2 years, rarely 5–10. For the ten-year PLD regime, the standard extended reporting period is structurally insufficient."
+    },
+    {
+      "type": "p",
+      "text": "Three. The freelance external consultant remains jointly and severally liable towards the injured party. The commissioning SH's bankruptcy does not release the consultant. If anything, paradoxically, it exposes them more, because it removes one of the jointly liable co-obligors the injured party could otherwise have turned to first."
+    },
+    {
+      "type": "p",
+      "text": "If the SH goes bankrupt, the consultant effectively becomes the injured party's main target. If their policy is not adequate, their personal assets can be enforced against."
+    },
+    {
+      "type": "p",
+      "text": "Four. Recourse against the bankruptcy estate is marginal. The consultant who pays the injured party and seeks recourse against the SH's bankruptcy estate recovers almost nothing. It is recourse in theory, not in substance."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Run-off cover: what it is and why it becomes a structural requirement"
+    },
+    {
+      "type": "p",
+      "text": "Most professional indemnity policies in Italy operate on a “claims-made” basis. That means a claim is covered if it is notified while the policy is in force. When the policy ends (non-renewal, ceasing trading, bankruptcy, the professional's death), claims notified afterwards are not covered, even if the event occurred while the policy was in force."
+    },
+    {
+      "type": "p",
+      "text": "This regime, acceptable for professions with short exposure, is structurally incompatible with the ten years of PLD liability. An external consultant who produces a component in 2027 and stops trading in 2030 may be sued by an injured party in 2035 for a defect in the component that materialised in 2034. Between 2030 (policy ends) and 2035 (claim notified), the standard policy does not respond. The consultant pays out of their own pocket, or their heirs do."
+    },
+    {
+      "type": "p",
+      "text": "Run-off cover (also called an “Extended Reporting Period”, or extended ERP) is the insurance mechanism that solves this problem. It is a clause that extends cover for a number of years after the policy ends, during which claims relating to events that occurred while the policy was in force can be notified."
+    },
+    {
+      "type": "p",
+      "text": "For the PLD decade, ten-year run-off cover is the structural minimum. Even if the professional stops trading three years after delivering the component, ten-year run-off cover from the delivery date keeps cover in place until PLD liability expires."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What to look for in an adequate post-PLD policy"
+    },
+    {
+      "type": "p",
+      "text": "The standard professional indemnity policies the Italian market offers today are rarely adequate for the revised PLD regime. Five elements are essential and must be checked explicitly before taking out or renewing a policy."
+    },
+    {
+      "type": "p",
+      "text": "Limit per claim. Typically €1.5–2.5 million for senior profiles producing components in regulated industries. Limits below one million are structurally undersized for PLD claims over significant data breaches."
+    },
+    {
+      "type": "p",
+      "text": "Annual aggregate limit. Not just per claim but in total over the year. Policies with a low aggregate limit (e.g. 2x the per-claim limit) are exhausted quickly by two or three claims."
+    },
+    {
+      "type": "p",
+      "text": "Ten-year run-off cover. An extension of cover after the policy ends of at least ten years. Some tier-1 policies (brokers Marsh, Aon, WTW) offer this as an optional extra. Check the cost: typically 10–25% additional premium on top of the base policy."
+    },
+    {
+      "type": "p",
+      "text": "Post-mortem cover. An extension of cover to the professional's heirs in the event of death, for the remaining years of liability. It is a specific clause that many policies do not include as standard."
+    },
+    {
+      "type": "p",
+      "text": "Specific cover for liability for defective software products. Generic professional indemnity is not enough: an explicit extension to product liability under Directive 2024/2853 is needed. Some pre-PLD policies explicitly exclude liability for defective products; those must be supplemented or replaced."
+    },
+    {
+      "type": "p",
+      "text": "Cyber and data breach cover. An extension to liability for cybersecurity incidents, especially relevant given the PLD–GDPR convergence on data breaches. It is often a separate insurance product (cyber liability) but can be built into the professional policy."
+    },
+    {
+      "type": "p",
+      "text": "Legal defence. Defence costs, both pre-litigation and in court. This is a substantial part of the policy's value because, even when exempt under Art. 11 of the directive, the professional has to bear defence costs that can reach €50,000–150,000 for an average case. Legal defence can be “inside the limits” (it consumes the limit) or “outside the limits” (in addition to the limit); the second is structurally better."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "The order of magnitude of the cost"
+    },
+    {
+      "type": "p",
+      "text": "To give readers concrete figures, here is the typical order of magnitude of an adequate policy for a senior technical profile (architect, principal developer, fractional CTO) working in regulated industries:"
+    },
+    {
+      "type": "p",
+      "text": "Base annual premium: €4,000–7,000 for €1.5–2 million limits and basic run-off (1–2 years). Adding ten-year run-off: +15–25%, so €5,000–9,000 a year. Adding cyber + data breach cover: +€1,500–3,000 a year. Adding post-mortem cover: +€500–1,500 a year."
+    },
+    {
+      "type": "p",
+      "text": "A realistic total for a complete policy adequate for the PLD regime: €7,000–14,000 a year for a senior professional. Significantly above standard pre-PLD policies (which typically cost €1,500–3,000 a year, with lower limits and no ten-year extensions)."
+    },
+    {
+      "type": "p",
+      "text": "This cost has to be built into the professional rate. For a consultant working 200 effective days a year, the cost of an adequate policy alone adds €35–70 to the base hourly cost, or €280–560 a day just for the policy. The pre-PLD rate of €400–500 a day becomes mathematically unsustainable."
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "What to do now, before December 2026"
+    },
+    {
+      "type": "p",
+      "text": "For Italian software houses:"
+    },
+    {
+      "type": "p",
+      "text": "— Map your asset exposure to PLD risk across all products currently in production at clients, with an estimate of the probability of significant claims over the remaining years — Check your existing professional and product liability policy for adequate PLD cover, and start a gap analysis with a tier-1 broker — Draw up new standard contracts that include clauses on maintainable lifetime, vulnerability handling, and reciprocal indemnities with external consultants — Map the inventory of external component manufacturers who contributed to products in production, with formal identification and traceability"
+    },
+    {
+      "type": "p",
+      "text": "For freelance external technical consultants:"
+    },
+    {
+      "type": "p",
+      "text": "— Take out an adequate professional indemnity policy with ten-year run-off cover, specific cover for liability for defective software products, cyber cover, and legal defence outside the limits — Draw up standard contracts with commissioning software houses that include an explicit PLD characterisation of the relationship, reciprocal indemnities, and formal identification of the scope of components you produce — Implement a formal audit trail of your own work: Git signed commits, signed ADRs, SBOMs of the components you produce, CVE monitoring of dependencies — Set your rates so that they incorporate the cost of an adequate policy, ten-year monitoring, and availability for maintenance"
+    },
+    {
+      "type": "p",
+      "text": "For enterprise clients:"
+    },
+    {
+      "type": "p",
+      "text": "— Map your asset exposure to custom systems in production, assessing the risk of concentration on individual suppliers that could go bankrupt during the decade — Structure contracts with suppliers that include assisted technical takeover clauses, source code escrow, and continuity guarantees for the ten years of liability — Assess your own risk profile as a potential substantial modifier under Art. 8(2), depending on the degree of technical direction you exercise over suppliers"
+    },
+    {
+      "type": "h",
+      "level": 2,
+      "text": "Strategic considerations"
+    },
+    {
+      "type": "p",
+      "text": "The ten years of PLD liability have three systemic consequences that will shape the Italian software development market in the years ahead."
+    },
+    {
+      "type": "p",
+      "text": "One. Risk concentrates on the strongest players. Injured parties will go after whoever has capital and insurance. The large enterprise consultancies (Accenture, Deloitte, Capgemini, Avanade) will be targeted out of proportion to their market share, because they are more solvent. Small SHs and freelancers will be able to share the load as co-obligors only if they survive ten years with adequate insurance."
+    },
+    {
+      "type": "p",
+      "text": "Two. The market restructures towards larger operators. The structural cost of operating properly under the PLD (policies, processes, documentation, audit trail) has economies of scale. Software development SMEs that do not get organised for the PLD will leave the market. Those that do will grow larger to spread the cost. It is a process of consolidation in the sector that is already beginning and that the PLD accelerates."
+    },
+    {
+      "type": "p",
+      "text": "Three. The technical freelancer turns into a structured operator. The traditional Italian external consultant, working as a sole trader without a structured professional policy and on standard market rates, is not economically sustainable after the PLD. The answer is not “stop working as a freelancer” — the answer is “work as a freelancer with adequate structure”: insurance, structured contracts, consistent rates, and possibly a professional limited company (SRL) for additional asset protection."
+    },
+    {
+      "type": "p",
+      "text": "The ten years of PLD liability are not an obstacle to shrug off. Managed with the right tools, the regime can also become a source of commercial value: a structured professional is worth more than an unstructured one, and can charge rates to match."
+    },
+    {
+      "type": "quote",
+      "text": "For Italian software houses and independent technical professionals, the time to get equipped is now. December 2026 is seven months away."
+    },
+    {
+      "type": "p",
+      "text": "In the next article in the series I will cover the stratification of liability in projects involving senior Solution Architects, with a focus on how “component manufacturer” status applies to those who design the architecture without physically writing the code."
+    },
+    {
+      "type": "p",
+      "text": "The full series so far: the seven structural changes (Article I), the six software development scenarios (Article II), joint and several liability and the decade (Article III)."
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { RESEARCH_ARTICLES } from "@/app/research-articles";
 import { articleSchema, breadcrumbSchema } from "@/app/seo";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "The Lakehouse Is Not Enough",
   description:
     "Lakehouses excel at analytical workloads but struggle with transactional guarantees and schema evolution. How to architect for both without rebuilding everything.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/research/lakehouse-not-enough" },
+  alternates: alternatesFor("/research/lakehouse-not-enough"),
 };
 
 const article = RESEARCH_ARTICLES["lakehouse-not-enough"];

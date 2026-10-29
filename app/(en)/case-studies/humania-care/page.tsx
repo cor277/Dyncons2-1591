@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { breadcrumbSchema } from "@/app/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NavBar } from "@/components/layout/NavBar";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "HumanIA Care — AI Senior Companion",
   description:
     "An AI companion architecture for elderly patients, purpose-built for privacy-first deployment in regulated care environments. Built on Nexus MDS Core. Multi-agent RAG + Voice + Memory architecture.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/case-studies/humania-care" },
+  alternates: alternatesFor("/case-studies/humania-care"),
 };
 
 const tech = [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy policy for dynamicsconsulting.it — how we collect, use, and protect your personal data under the GDPR and the EU AI Act.",
-  alternates: { canonical: "https://www.dynamicsconsulting.it/privacy" },
+  alternates: alternatesFor("/privacy"),
 };
 
 export default function PrivacyPage() {

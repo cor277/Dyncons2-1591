@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
 import { ORG_ID, WEBSITE_ID, NEXUS_ID, CEPF_ID, CALIBRA_ID } from "@/app/schema-org";
@@ -28,10 +29,7 @@ export const metadata: Metadata = {
     "consulenza AI on-premise",
     "AI compliance Italia",
   ],
-  alternates: {
-    canonical: IT_URL,
-    languages: { it: IT_URL, en: EN_URL, "x-default": EN_URL },
-  },
+  alternates: alternatesFor("/it/consulenza-ai-governance-compliance"),
   openGraph: {
     images: OG_IMAGE,
     title: "Consulenza AI, Governance e Compliance | Dynamics Consulting",
@@ -363,7 +361,7 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
                   stesso controllo. Versione 7, snapshot luglio 2026 — 19 framework, 247 requisiti,
                   24 gruppi di sovrapposizione, 695 template documentali.
                 </p>
-                <TextLink label="CEPF in dettaglio →" href="/cepf" />
+                <TextLink label="CEPF in dettaglio →" href="/it/cepf" />
               </div>
               <div className="rounded-lg border border-[#21262D] bg-[#11161D] p-6">
                 <h3 className="font-dm font-bold text-[#E6EDF3] text-lg mb-3">
@@ -375,7 +373,7 @@ export default function ConsulenzaAiGovernanceCompliancePage() {
                   un programma con date e responsabili. Sulla pagina CEPF gira una demo ridotta, in
                   italiano.
                 </p>
-                <TextLink label="Che cos’è Calibra →" href="/calibra" />
+                <TextLink label="Che cos’è Calibra →" href="/it/calibra" />
               </div>
               <div className="rounded-lg border border-[#21262D] bg-[#11161D] p-6">
                 <h3 className="font-dm font-bold text-[#E6EDF3] text-lg mb-3">

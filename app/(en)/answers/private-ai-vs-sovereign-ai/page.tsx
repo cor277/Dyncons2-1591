@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { ANSWERS } from "@/app/answers";
 import { OG_IMAGE, TWITTER_IMAGE } from "@/app/og";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   title: answer.title,
   description: answer.description,
   keywords: answer.keywords,
-  alternates: { canonical: URL },
+  alternates: alternatesFor("/answers/private-ai-vs-sovereign-ai"),
   openGraph: {
     images: OG_IMAGE,
     title: answer.title,
