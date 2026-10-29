@@ -190,7 +190,7 @@ export default function CraSettembrePage() {
             </h1>
             <div className="space-y-5 text-[#9BA8B9] text-lg leading-relaxed">
               <p>
-                L’11 settembre 2026 si applica l’articolo 14 del Cyber Resilience Act. Da quel
+                Dall’11 settembre 2026 si applica l’articolo 14 del Cyber Resilience Act. Da quel
                 giorno, il fabbricante di un prodotto con elementi digitali ha ventiquattro ore per
                 lanciare l’allarme quando viene a conoscenza di una vulnerabilità attivamente
                 sfruttata o di un incidente grave. Non ventiquattro ore per risolvere: ventiquattro
@@ -276,9 +276,9 @@ export default function CraSettembrePage() {
               <p>
                 La distinta base del software non è un adempimento di settembre. L’obbligo di
                 inserirla nella documentazione tecnica arriva l’11 dicembre 2027, quindici mesi
-                dopo. Le due scadenze vanno tenute separate: a settembre scatta l’obbligo di
-                segnalare, a dicembre 2027 quello di documentare. Chi le sovrappone arriva a
-                settembre con il lavoro sbagliato in mano.
+                dopo. Le due scadenze vanno tenute separate: da settembre 2026 vale l’obbligo di
+                segnalare, da dicembre 2027 quello di documentare. Chi le sovrappone lavora sulla
+                documentazione mentre l’obbligo già in vigore è la segnalazione.
               </p>
               <p>
                 Gli obblighi di segnalazione riguardano anche i prodotti già immessi sul mercato

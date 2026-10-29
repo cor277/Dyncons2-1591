@@ -320,7 +320,7 @@ export default function TechSovereigntyPage() {
                 <p>
                   The practical consequence for a buyer is that a supplier who cannot produce an SBOM
                   today is not merely unprepared for CADA. They are unprepared for the CRA reporting
-                  obligations that start applying on 11 September 2026, and they will be an awkward
+                  obligations that have applied since 11 September 2026, and they will be an awkward
                   conversation once Member States have transposed the product liability directive by
                   9 December 2026 &mdash; the subject of the{" "}
                   <Link href="/assessment" className="text-[#00B4D8] hover:text-[#E6EDF3]">

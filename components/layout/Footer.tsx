@@ -209,7 +209,7 @@ export function Footer() {
               Serie PLD 2024 — sei articoli
             </Link>
             <Link href="/cra-11-settembre" hrefLang="it" className="text-[#7D8FA3] hover:text-[#00B4D8] text-sm transition-colors duration-200">
-              Scadenza CRA — 11 settembre
+              CRA: segnalazione in 24 ore
             </Link>
           </div>
         </div>

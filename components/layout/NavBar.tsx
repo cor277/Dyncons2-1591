@@ -228,7 +228,7 @@ const IT_NAV: NavLink[] = [
         desc: "Cosa cambia per ospedali, farmacie e aziende farmaceutiche",
       },
       {
-        label: "Scadenza CRA — 11 settembre",
+        label: "CRA: segnalazione in 24 ore",
         href: "/cra-11-settembre",
         desc: "Articolo 14 del Reg. (UE) 2024/2847",
       },

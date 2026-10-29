@@ -180,7 +180,7 @@ export default function ItalianIndexPage() {
         <section className="px-6 py-16 border-t border-[#21262D]">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-[#E6EDF3] mb-4">
-              Scadenza dell&apos;11 settembre 2026
+              Dall&apos;11 settembre 2026: 24 ore per segnalare
             </h2>
             <p className="text-[#7D8FA3] text-lg leading-relaxed mb-6">
               Si applica l&apos;articolo 14 del Cyber Resilience Act: ventiquattro ore per lanciare

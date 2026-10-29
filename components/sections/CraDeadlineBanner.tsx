@@ -8,7 +8,7 @@ import Link from "next/link";
  * strip disappears from every page that renders it. Deleting this file and its
  * single use in app/(en)/page.tsx is the tidier follow-up, not the urgent one.
  */
-const SHOW = true;
+const SHOW = false;
 
 export function CraDeadlineBanner() {
   if (!SHOW) return null;
